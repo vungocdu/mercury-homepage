@@ -1,93 +1,183 @@
-# Mercury Solution Homepage
+# Mercury Solutions Homepage
 
+Landing page tối ưu SEO cho công ty Mercury Solutions - chuyên về Data Analysis và công nghệ sáng tạo.
 
+## Giới thiệu
 
-## Getting started
+Mercury Solutions là công ty chuyên về:
+- **Data Analysis**: Computer vision và data visualization
+- **Web Development**: Ứng dụng công nghệ tiên tiến cho doanh nghiệp
+- **Mobile Development**: Phát triển ứng dụng di động iOS/Android
+- **AI & Machine Learning**: Giải pháp trí tuệ nhân tạo
+- **DevOps & Cloud**: Hạ tầng và triển khai ứng dụng
+- **Testing/QA**: Đảm bảo chất lượng phần mềm
+- **TVC & Digital Art**: Dịch vụ sản xuất quảng cáo truyền hình và nghệ thuật số
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## Công nghệ sử dụng
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+- **Frontend**: Next.js 14, React 18, TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Animations**: Framer Motion
+- **Deployment**: Vercel (recommended)
 
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
+## Cấu trúc dự án
 
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/ngoc_du_89/mercury-solution-homepage.git
-git branch -M main
-git push -uf origin main
+mercury-solution-homepage/
+├── app/
+│   ├── layout.tsx          # Layout chính với SEO metadata
+│   ├── page.tsx            # Trang chủ
+│   ├── tvc/
+│   │   └── page.tsx        # Trang TVC Services
+│   ├── sitemap.ts          # Sitemap tự động
+│   ├── robots.ts           # Robots.txt
+│   └── globals.css         # CSS toàn cục
+├── components/
+│   ├── Header.tsx          # Navigation header
+│   ├── Hero.tsx            # Hero section
+│   ├── Services.tsx        # Dịch vụ chính
+│   ├── TechnologyStack.tsx # Stack công nghệ
+│   ├── Process.tsx         # Quy trình làm việc
+│   ├── Projects.tsx        # Dự án tiêu biểu
+│   ├── Contact.tsx         # Form liên hệ
+│   └── Footer.tsx          # Footer
+├── public/                 # Static assets
+└── package.json           # Dependencies
 ```
 
-## Integrate with your tools
+## Tính năng SEO
 
-- [ ] [Set up project integrations](https://gitlab.com/ngoc_du_89/mercury-solution-homepage/-/settings/integrations)
+- ✅ Metadata tối ưu cho search engines
+- ✅ Open Graph tags cho social media
+- ✅ Structured data markup
+- ✅ Semantic HTML structure
+- ✅ Fast loading với Next.js
+- ✅ Mobile responsive
+- ✅ Accessibility features
+- ✅ Sitemap tự động với trang TVC
 
-## Collaborate with your team
+## Trang TVC Services
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
+Trang `/tvc` cung cấp thông tin chi tiết về:
+- **Video Production**: Sản xuất video chuyên nghiệp
+- **Motion Graphics**: Hiệu ứng đồ họa chuyển động
+- **Digital Art**: Nghệ thuật số và thiết kế đồ họa
+- **Content Creation**: Tạo nội dung từ concept đến delivery
 
-## Test and Deploy
+### Tính năng trang TVC:
+- ✅ Hero section với thống kê ấn tượng
+- ✅ Services showcase với icons và features
+- ✅ Creative process workflow
+- ✅ Portfolio showcase
+- ✅ CTA sections
+- ✅ SEO optimized với metadata riêng
 
-Use the built-in continuous integration in GitLab.
+## Cài đặt và chạy
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+1. **Cài đặt dependencies:**
+```bash
+npm install
+# hoặc
+yarn install
+# hoặc
+pnpm install
+```
 
-***
+2. **Chạy development server:**
+```bash
+npm run dev
+# hoặc
+yarn dev
+# hoặc
+pnpm dev
+```
 
-# Editing this README
+3. **Build cho production:**
+```bash
+npm run build
+npm start
+```
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+## Cấu hình
 
-## Suggestions for a good README
+### Environment Variables
+Tạo file `.env.local`:
+```env
+NEXT_PUBLIC_SITE_URL=https://mercury-solutions.minova.vn
+NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your-ga-id
+```
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+### SEO Configuration
+Cập nhật metadata trong `app/layout.tsx`:
+- Title và description
+- Open Graph images
+- Google verification code
+- Social media links
 
-## Name
-Choose a self-explaining name for your project.
+## Deployment
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+### Vercel (Recommended)
+1. Push code lên Git repository
+2. Connect với Vercel
+3. Deploy tự động
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+### Manual Deployment
+```bash
+npm run build
+npm start
+```
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+## Tùy chỉnh
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+### Colors
+Cập nhật color scheme trong `tailwind.config.js`:
+```javascript
+colors: {
+  mercury: {
+    50: '#f0f9ff',
+    // ... các shades khác
+  }
+}
+```
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+### Content
+- Cập nhật thông tin công ty trong các components
+- Thêm/sửa projects trong `Projects.tsx`
+- Cập nhật contact info trong `Contact.tsx`
+- Tùy chỉnh nội dung TVC trong `app/tvc/page.tsx`
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+## Performance
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+- ✅ Lazy loading components
+- ✅ Optimized images
+- ✅ Minified CSS/JS
+- ✅ CDN ready
+- ✅ Caching strategies
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers
 
 ## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+1. Fork repository
+2. Tạo feature branch
+3. Commit changes
+4. Push to branch
+5. Tạo Pull Request
 
 ## License
-For open source projects, say how it is licensed.
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+© 2024 Mercury Solutions. All rights reserved.
+
+## Contact
+
+- **Email**: info@mercury-solutions.vn
+- **Phone**: +84 24 1234 5678
+- **Address**: 33 Ng. 41 P. Thai Ha, Trung Liet, Dong Da, Hanoi, Vietnam
+- **Working Hours**: Mon-Fri 8-4 (Closed Sat-Sun and Public Holidays)
