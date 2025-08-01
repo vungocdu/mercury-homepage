@@ -1,12 +1,89 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { Menu, X } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useLanguage } from '@/contexts/LanguageContext'
 import LanguageSelector from './LanguageSelector'
+import ClientOnly from './ClientOnly'
+
+// Mercury Logo SVG Component
+const MercuryLogo = ({ className = "w-8 h-8" }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 320 367" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clipPath="url(#clip0_737_345)">
+      <path fillRule="evenodd" clipRule="evenodd" d="M228.408 114.204C228.408 177.277 177.277 228.408 114.204 228.408C51.1309 228.408 0 177.277 0 114.204C0 51.1309 51.1309 0 114.204 0C177.277 0 228.408 51.1309 228.408 114.204ZM114.204 205.567C164.663 205.567 205.567 164.663 205.567 114.204C205.567 63.7456 164.663 22.8408 114.204 22.8408C63.7456 22.8408 22.8408 63.7456 22.8408 114.204C22.8408 164.663 63.7456 205.567 114.204 205.567Z" fill="#2E5BFF"/>
+      <path d="M320 114.433C320 152.276 289.321 182.955 251.478 182.955C213.634 182.955 182.955 152.276 182.955 114.433C182.955 76.5886 213.634 45.9101 251.478 45.9101C289.321 45.9101 320 76.5886 320 114.433Z" fill="#2E5BFF"/>
+      <path d="M228.427 104.358L245.99 86.7951L274.09 114.895L256.527 132.458L245.971 142.871L228.408 125.308L238.84 114.77L228.427 104.358Z" fill="white"/>
+      <path d="M137.026 104.358L119.463 86.7951L91.3633 114.895L108.926 132.458L119.482 142.871L137.045 125.308L126.613 114.77L137.026 104.358Z" fill="#2E5BFF"/>
+      <path d="M9.80005 318.94H17.7179V287.429L32.0731 306.724H33.2318L47.4582 287.241V318.94H55.3117V275.087H47.8445L33.1674 295.573L17.7823 275.087H9.80005V318.94Z" fill="#2E5BFF"/>
+      <path d="M67.8237 318.94H94.5385V311.735H75.7416V300.396H91.9636V293.192H75.7416V282.292H93.8948V275.087H67.8237V318.94Z" fill="#2E5BFF"/>
+      <path d="M112.769 318.94V302.526H118.305L130.729 318.94H140.32L126.223 301.023C129.956 299.77 134.913 296.011 134.913 288.494C134.913 280.913 130.857 274.962 118.562 274.962C117.275 274.962 107.361 275.087 104.851 275.087V318.94H112.769ZM118.176 282.166C124.613 282.166 126.544 285.111 126.544 288.556C126.544 293.067 122.489 295.322 117.918 295.322H112.769V282.292C114.893 282.229 116.695 282.166 118.176 282.166Z" fill="#2E5BFF"/>
+      <path d="M176.621 308.916C173.531 311.234 169.733 312.424 165.935 312.424C156.729 312.424 150.356 306.16 150.356 297.013C150.356 287.491 156.665 281.603 165.033 281.603C169.54 281.603 172.501 282.793 175.204 284.547L178.745 278.846C175.784 276.215 170.891 274.398 165.033 274.398C150.163 274.398 141.988 284.422 141.988 297.013C141.988 310.67 151.451 319.629 165.227 319.629C171.085 319.629 176.814 317.624 179.646 314.68L176.621 308.916Z" fill="#2E5BFF"/>
+      <path d="M223.952 275.087H216.099V299.206C216.099 307.726 212.88 312.424 206.057 312.424C198.268 312.424 194.791 306.912 194.791 298.705V275.087H186.874V300.334C186.874 313.176 194.856 319.629 206.057 319.629C215.519 319.629 223.952 314.179 223.952 300.772V275.087Z" fill="#2E5BFF"/>
+      <path d="M243.778 318.94V302.526H249.314L261.738 318.94H271.329L257.232 301.023C260.965 299.77 265.922 296.011 265.922 288.494C265.922 280.913 261.866 274.962 249.571 274.962C248.284 274.962 238.37 275.087 235.86 275.087V318.94H243.778ZM249.185 282.166C255.622 282.166 257.553 285.111 257.553 288.556C257.553 293.067 253.498 295.322 248.928 295.322H243.778V282.292C245.902 282.229 247.704 282.166 249.185 282.166Z" fill="#2E5BFF"/>
+      <path d="M309.829 275.087H301.267L290.195 293.443L278.994 275.087H269.982L285.882 300.647V318.94H293.8V300.647L309.829 275.087Z" fill="#2E5BFF"/>
+      <path d="M156.426 359.785C156.426 361.556 154.981 362.525 153.076 362.525C151.303 362.525 149.136 361.656 147.79 359.885L145.491 362.692C146.608 365.064 150.056 366.367 153.011 366.367C157.312 366.367 160.694 363.694 160.694 359.751C160.694 351.967 150.285 353.504 150.285 348.659C150.285 347.122 151.5 346.086 153.503 346.086C155.342 346.086 156.458 346.721 157.575 347.824L159.742 344.75C158.363 343.213 155.999 342.244 153.175 342.244C148.709 342.244 146.017 345.184 146.017 348.692C146.017 356.31 156.426 355.174 156.426 359.785Z" fill="#2E5BFF"/>
+      <path d="M163.276 354.305C163.276 361.589 168.398 366.367 175.228 366.367C182.058 366.367 187.213 361.322 187.213 354.305C187.213 347.022 182.058 342.244 175.228 342.244C168.169 342.244 163.276 347.523 163.276 354.305ZM167.545 354.305C167.545 349.461 170.828 346.086 175.228 346.086C179.562 346.086 182.944 349.461 182.944 354.305C182.944 358.916 180.055 362.525 175.228 362.525C170.927 362.525 167.545 358.983 167.545 354.305Z" fill="#2E5BFF"/>
+      <path d="M191.522 365.999H205.904V362.157H195.561V342.611H191.522V365.999Z" fill="#2E5BFF"/>
+      <path d="M227.699 342.611H223.693V355.475C223.693 360.019 222.051 362.525 218.571 362.525C214.598 362.525 212.825 359.584 212.825 355.208V342.611H208.786V356.076C208.786 362.926 212.858 366.367 218.571 366.367C223.398 366.367 227.699 363.46 227.699 356.31V342.611Z" fill="#2E5BFF"/>
+      <path d="M230.552 346.454H238.005V365.999H242.044V346.454H249.498V342.611H230.552V346.454Z" fill="#2E5BFF"/>
+      <path d="M253.129 365.999H257.167V342.611H253.129V365.999Z" fill="#2E5BFF"/>
+      <path d="M261.948 354.305C261.948 361.589 267.07 366.367 273.899 366.367C280.729 366.367 285.884 361.322 285.884 354.305C285.884 347.022 280.729 342.244 273.899 342.244C266.84 342.244 261.948 347.523 261.948 354.305ZM266.216 354.305C266.216 349.461 269.5 346.086 273.899 346.086C278.234 346.086 281.616 349.461 281.616 354.305C281.616 358.916 278.726 362.525 273.899 362.525C269.598 362.525 266.216 358.983 266.216 354.305Z" fill="#2E5BFF"/>
+      <path d="M309.829 365.999V342.611H306.053V358.883L293.411 342.611H290.194V365.999H293.97V349.795L306.611 365.999H309.829Z" fill="#2E5BFF"/>
+    </g>
+    <defs>
+      <clipPath id="clip0_737_345">
+        <rect width="320" height="367" fill="white"/>
+      </clipPath>
+    </defs>
+  </svg>
+)
+
+// Tab Select Navigation Component
+const TabSelectNavigation = ({ navigation, activeTab, setActiveTab }: {
+  navigation: Array<{ name: string; href: string }>
+  activeTab: string
+  setActiveTab: (tab: string) => void
+}) => {
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  return (
+    <div ref={containerRef} className="relative">
+      <div className="flex items-center space-x-1 p-1 rounded-xl" 
+           style={{ backgroundColor: 'hsl(var(--bg-secondary))' }}>
+        {navigation.map((item) => {
+          const isActive = activeTab === item.name
+          return (
+            <button
+              key={item.name}
+              onClick={() => setActiveTab(item.name)}
+              className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
+                isActive ? 'text-white' : 'text-gray-600 hover:text-gray-900'
+              }`}
+              style={{
+                color: isActive ? 'white' : 'hsl(var(--text-secondary))'
+              }}
+            >
+              {isActive && (
+                <motion.div
+                  layoutId="activeTab"
+                  className="absolute inset-0 rounded-lg"
+                  style={{ backgroundColor: 'hsl(var(--link-primary))' }}
+                  transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                />
+              )}
+              <span className="relative z-10">{item.name}</span>
+            </button>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [activeTab, setActiveTab] = useState('Home')
   const { translations } = useLanguage()
 
   const navigation = [
@@ -20,33 +97,49 @@ export default function Header() {
   ]
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="header-bg fixed top-0 left-0 right-0 z-40">
+      <div className="container-custom">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#home" className="flex items-center">
-              <span className="text-2xl font-bold text-primary">Mercury Solutions</span>
+            <a href="#home" className="flex items-center space-x-3">
+              <MercuryLogo className="w-10 h-12 sm:w-12 sm:h-14" />
+              <span className="text-xl sm:text-2xl font-bold" style={{ color: 'hsl(var(--text-primary))' }}>
+                Solutions
+              </span>
             </a>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-sm uppercase tracking-wider text-foreground hover:text-primary hover:shadow-glow transition-all duration-300"
-              >
-                {item.name}
-              </a>
-            ))}
+          {/* Desktop Navigation with Tab Select */}
+          <nav className="hidden md:block">
+            <TabSelectNavigation 
+              navigation={navigation}
+              activeTab={activeTab}
+              setActiveTab={setActiveTab}
+            />
           </nav>
 
           {/* Language Selector & CTA */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-6">
             <LanguageSelector />
-            <a href="#contact" className="btn-primary">
+            <a 
+              href="#contact" 
+              className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2"
+              style={{
+                backgroundColor: 'hsl(var(--link-primary))',
+                color: 'white',
+                boxShadow: '0 4px 14px 0 rgba(46, 91, 255, 0.25)',
+                border: '1px solid transparent'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = 'hsl(var(--link-hover))';
+                e.currentTarget.style.boxShadow = '0 6px 20px 0 rgba(30, 58, 138, 0.35)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = 'hsl(var(--link-primary))';
+                e.currentTarget.style.boxShadow = '0 4px 14px 0 rgba(46, 91, 255, 0.25)';
+              }}
+            >
               {translations.common.getStarted}
             </a>
           </div>
@@ -56,39 +149,85 @@ export default function Header() {
             <LanguageSelector />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-foreground hover:text-primary p-2"
+              className="nav-link p-2"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-card border-t border-border">
-              {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-foreground hover:text-primary block px-3 py-2 text-base font-medium transition-colors duration-200"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
-              ))}
-              <div className="pt-4">
-                <a 
-                  href="#contact" 
-                  className="btn-primary block text-center" 
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {translations.common.getStarted}
-                </a>
+        {/* Mobile Navigation with Tab Select */}
+        <ClientOnly>
+          <AnimatePresence>
+            {isMenuOpen && (
+              <motion.div 
+                className="md:hidden"
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+              >
+              <div className="professional-card px-4 pt-4 pb-6 space-y-4 border-t">
+                {/* Mobile Tab Select */}
+                <div className="mb-4">
+                  <TabSelectNavigation 
+                    navigation={navigation}
+                    activeTab={activeTab}
+                    setActiveTab={setActiveTab}
+                  />
+                </div>
+                
+                {/* Mobile Navigation Links */}
+                <div className="space-y-2">
+                  {navigation.map((item) => (
+                    <motion.a
+                      key={item.name}
+                      href={item.href}
+                      className="nav-link block px-3 py-3 text-sm font-medium transition-colors duration-200 border-l-2 border-transparent hover:border-l-2"
+                      style={{ 
+                        borderLeftColor: 'hsl(var(--link-primary))',
+                        borderLeftWidth: '2px'
+                      }}
+                      onClick={() => setIsMenuOpen(false)}
+                      whileHover={{ x: 4 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {item.name}
+                    </motion.a>
+                  ))}
+                </div>
+                
+                {/* Mobile CTA Button */}
+                <div className="pt-4">
+                  <motion.a 
+                    href="#contact" 
+                    className="inline-flex items-center justify-center w-full px-6 py-3 text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2"
+                    style={{
+                      backgroundColor: 'hsl(var(--link-primary))',
+                      color: 'white',
+                      boxShadow: '0 4px 14px 0 rgba(46, 91, 255, 0.25)',
+                      border: '1px solid transparent'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = 'hsl(var(--link-hover))';
+                      e.currentTarget.style.boxShadow = '0 6px 20px 0 rgba(30, 58, 138, 0.35)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = 'hsl(var(--link-primary))';
+                      e.currentTarget.style.boxShadow = '0 4px 14px 0 rgba(46, 91, 255, 0.25)';
+                    }}
+                    onClick={() => setIsMenuOpen(false)}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {translations.common.getStarted}
+                  </motion.a>
+                </div>
               </div>
-            </div>
-          </div>
-        )}
+            </motion.div>
+          )}
+        </AnimatePresence>
+        </ClientOnly>
       </div>
     </header>
   )

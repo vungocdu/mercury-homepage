@@ -6,15 +6,17 @@ import Projects from '@/components/Projects'
 import Contact from '@/components/Contact'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import TickerScroll from '@/components/TickerScroll'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen professional-bg">
       <Header />
       <Hero />
       <Services />
       <TechnologyStack />
       <Process />
+      <TickerScroll />
       <Projects />
       <Contact />
       <Footer />

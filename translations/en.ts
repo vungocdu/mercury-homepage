@@ -75,6 +75,8 @@ export const en = {
       }
     },
     services: {
+      title: "What We Do",
+      subtitle: "We specialize in creating strategic TVC content that enhances your brand image and attracts top talent. Our comprehensive approach combines cutting-edge technology with creative excellence.",
       consultation: {
         title: "Collaborative Consultation",
         description: "We begin with in-depth consultation to understand your business objectives, target audience, and brand positioning."
@@ -131,6 +133,32 @@ export const en = {
           description: "Professional event documentation and promotional content."
         }
       }
+    },
+    cta: {
+      title: "Ready to Transform Your Business with Strategic TVCs?",
+      subtitle: "Let's discuss your project requirements and bring your creative vision to life with our professional TVC production services that deliver measurable business results.",
+      getStarted: "Get Started Today",
+      contactUs: "Contact Us"
+    },
+    faq: {
+      title: "Frequently Asked Questions",
+      subtitle: "Get answers to common questions about our TVC production services and process.",
+      stillHaveQuestions: "Still Have Questions?",
+      contactTeam: "Our team is here to help you understand our TVC production process and answer any questions you may have."
+    },
+    features: {
+      consultation: ["Brand Analysis", "Strategic Planning", "Expert Guidance", "Vision Alignment"],
+      concept: ["Brand DNA Analysis", "Narrative Crafting", "Marketing Alignment", "Action-Driven Content"],
+      production: ["4K/6K Quality", "Professional Equipment", "Expert Crew", "Cinematic Vision"],
+      postProduction: ["Professional Editing", "Color Grading", "Sound Design", "Davinci Resolve"],
+      motionGraphics: ["2D/3D Animation", "Visual Effects", "Logo Animation", "Infographics"],
+      distribution: ["Media Planning", "Audience Targeting", "Multi-platform Distribution", "ROI Optimization"]
+    },
+    descriptions: {
+      consultation: "We start with understanding your brand, target audience, and objectives. We work closely with you, listening attentively to your needs and offering expert guidance.",
+      concept: "We develop compelling TVC concepts that go beyond mere scripts. We delve into your brand's DNA to craft narratives that align with your marketing objectives.",
+      production: "We combine technical expertise with artistic vision, utilizing state-of-the-art equipment (4K, 6K, Full HD) and experienced professionals.",
+      postProduction: "Our in-house team of editors, colorists, and sound designers meticulously refine every detail using industry-leading software like Davinci Resolve."
     }
   },
 
@@ -217,6 +245,22 @@ export const en = {
       difference: {
         question: "What Makes Mercury Solutions Different from Other TVC Production Companies?",
         answer: "Our unique combination of technical expertise, creative excellence, and strategic business understanding sets us apart. We don't just create beautiful videos - we create strategic content that drives business results and enhances your brand positioning."
+      },
+      budget: {
+        question: "What is the typical budget range for TVC projects?",
+        answer: "TVC project budgets vary significantly based on scope, complexity, and production requirements. Simple corporate videos typically range from $5,000-$15,000, while high-end TVC productions can range from $20,000-$100,000+. We provide detailed cost breakdowns during consultation to ensure transparency and value."
+      },
+      revisions: {
+        question: "How many revisions are included in your TVC services?",
+        answer: "We include 2-3 rounds of revisions in our standard TVC packages to ensure your complete satisfaction. Additional revisions are available at reasonable rates. We believe in collaborative feedback to achieve the perfect final product that meets your vision and objectives."
+      },
+      delivery: {
+        question: "What formats do you deliver the final TVC in?",
+        answer: "We deliver final TVC projects in multiple formats including broadcast-ready HD/4K files, web-optimized versions, social media formats, and mobile-friendly versions. We ensure compatibility across all platforms and provide detailed specifications for each delivery format."
+      },
+      rights: {
+        question: "Who owns the rights to the TVC content after production?",
+        answer: "Upon full payment, you own all rights to the final TVC content. We retain rights only to showcase the work in our portfolio. We provide clear licensing agreements and can discuss exclusive rights or extended usage terms based on your specific needs."
       }
     }
   },

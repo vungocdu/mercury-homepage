@@ -75,6 +75,8 @@ export const vi = {
       }
     },
     services: {
+      title: "Chúng tôi làm gì",
+      subtitle: "Chúng tôi chuyên tạo nội dung TVC chiến lược nâng tầm hình ảnh thương hiệu và thu hút nhân tài hàng đầu. Phương pháp toàn diện kết hợp công nghệ tiên tiến với sự xuất sắc sáng tạo.",
       consultation: {
         title: "Tư vấn hợp tác",
         description: "Chúng tôi bắt đầu với tư vấn chuyên sâu để hiểu mục tiêu kinh doanh, đối tượng mục tiêu và định vị thương hiệu của bạn."
@@ -131,6 +133,32 @@ export const vi = {
           description: "Tài liệu sự kiện chuyên nghiệp và nội dung quảng bá."
         }
       }
+    },
+    cta: {
+      title: "Sẵn sàng chuyển đổi doanh nghiệp với TVC chiến lược?",
+      subtitle: "Hãy thảo luận yêu cầu dự án và biến tầm nhìn sáng tạo thành hiện thực với dịch vụ sản xuất TVC chuyên nghiệp mang lại kết quả kinh doanh đo lường được.",
+      getStarted: "Bắt đầu ngay",
+      contactUs: "Liên hệ chúng tôi"
+    },
+    faq: {
+      title: "Câu hỏi thường gặp",
+      subtitle: "Nhận câu trả lời cho các câu hỏi phổ biến về dịch vụ và quy trình sản xuất TVC của chúng tôi.",
+      stillHaveQuestions: "Vẫn còn câu hỏi?",
+      contactTeam: "Đội ngũ của chúng tôi sẵn sàng giúp bạn hiểu quy trình sản xuất TVC và trả lời mọi câu hỏi."
+    },
+    features: {
+      consultation: ["Phân tích thương hiệu", "Lập kế hoạch chiến lược", "Hướng dẫn chuyên môn", "Định hướng tầm nhìn"],
+      concept: ["Phân tích DNA thương hiệu", "Xây dựng câu chuyện", "Liên kết marketing", "Nội dung thúc đẩy hành động"],
+      production: ["Chất lượng 4K/6K", "Thiết bị chuyên nghiệp", "Đội ngũ có kinh nghiệm", "Tầm nhìn điện ảnh"],
+      postProduction: ["Chỉnh sửa chuyên nghiệp", "Chỉnh màu", "Thiết kế âm thanh", "Davinci Resolve"],
+      motionGraphics: ["Hoạt ảnh 2D/3D", "Hiệu ứng hình ảnh", "Hoạt ảnh logo", "Infographics"],
+      distribution: ["Lập kế hoạch truyền thông", "Nhắm đối tượng", "Phân phối đa nền tảng", "Tối ưu ROI"]
+    },
+    descriptions: {
+      consultation: "Chúng tôi bắt đầu với việc hiểu thương hiệu, đối tượng mục tiêu và mục tiêu của bạn. Chúng tôi làm việc chặt chẽ với bạn, lắng nghe chăm chú nhu cầu và đưa ra hướng dẫn chuyên môn.",
+      concept: "Chúng tôi phát triển các khái niệm TVC hấp dẫn vượt xa kịch bản đơn thuần. Chúng tôi đi sâu vào DNA thương hiệu để tạo ra câu chuyện phù hợp với mục tiêu marketing.",
+      production: "Chúng tôi kết hợp chuyên môn kỹ thuật với tầm nhìn nghệ thuật, sử dụng thiết bị tiên tiến (4K, 6K, Full HD) và chuyên gia có kinh nghiệm.",
+      postProduction: "Đội ngũ nội bộ của chúng tôi gồm biên tập viên, chỉnh màu và thiết kế âm thanh tinh chỉnh mọi chi tiết sử dụng phần mềm hàng đầu như Davinci Resolve."
     }
   },
 
@@ -217,6 +245,22 @@ export const vi = {
       difference: {
         question: "Điều gì làm cho Mercury Solutions khác biệt với các công ty sản xuất TVC khác?",
         answer: "Sự kết hợp độc đáo giữa chuyên môn kỹ thuật, xuất sắc sáng tạo và hiểu biết kinh doanh chiến lược làm chúng tôi nổi bật. Chúng tôi không chỉ tạo video đẹp - chúng tôi tạo nội dung chiến lược thúc đẩy kết quả kinh doanh và tăng cường định vị thương hiệu."
+      },
+      budget: {
+        question: "Phạm vi ngân sách điển hình cho dự án TVC là bao nhiêu?",
+        answer: "Ngân sách dự án TVC thay đổi đáng kể dựa trên phạm vi, độ phức tạp và yêu cầu sản xuất. Video doanh nghiệp đơn giản thường từ $5,000-$15,000, trong khi sản xuất TVC cao cấp có thể từ $20,000-$100,000+. Chúng tôi cung cấp chi tiết chi phí trong quá trình tư vấn để đảm bảo minh bạch và giá trị."
+      },
+      revisions: {
+        question: "Bao nhiêu lần chỉnh sửa được bao gồm trong dịch vụ TVC của bạn?",
+        answer: "Chúng tôi bao gồm 2-3 vòng chỉnh sửa trong gói TVC tiêu chuẩn để đảm bảo sự hài lòng hoàn toàn của bạn. Chỉnh sửa bổ sung có sẵn với mức giá hợp lý. Chúng tôi tin vào phản hồi hợp tác để đạt được sản phẩm cuối cùng hoàn hảo đáp ứng tầm nhìn và mục tiêu của bạn."
+      },
+      delivery: {
+        question: "Bạn giao nội dung TVC cuối cùng ở định dạng nào?",
+        answer: "Chúng tôi giao dự án TVC cuối cùng ở nhiều định dạng bao gồm file HD/4K sẵn sàng phát sóng, phiên bản tối ưu cho web, định dạng mạng xã hội và phiên bản thân thiện với thiết bị di động. Chúng tôi đảm bảo tương thích trên tất cả nền tảng và cung cấp thông số kỹ thuật chi tiết cho mỗi định dạng giao hàng."
+      },
+      rights: {
+        question: "Ai sở hữu quyền đối với nội dung TVC sau khi sản xuất?",
+        answer: "Sau khi thanh toán đầy đủ, bạn sở hữu tất cả quyền đối với nội dung TVC cuối cùng. Chúng tôi chỉ giữ quyền để trưng bày công việc trong portfolio của chúng tôi. Chúng tôi cung cấp thỏa thuận cấp phép rõ ràng và có thể thảo luận quyền độc quyền hoặc điều khoản sử dụng mở rộng dựa trên nhu cầu cụ thể của bạn."
       }
     }
   },

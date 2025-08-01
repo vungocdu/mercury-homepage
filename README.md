@@ -104,7 +104,7 @@ npm start
 ### Environment Variables
 Tạo file `.env.local`:
 ```env
-NEXT_PUBLIC_SITE_URL=https://mercury-solutions.minova.vn
+NEXT_PUBLIC_SITE_URL=https://www.mercurysolutions.vn
 NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your-ga-id
 ```
 

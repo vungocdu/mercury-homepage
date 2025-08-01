@@ -54,13 +54,13 @@ export default function Contact() {
   ]
 
   return (
-    <section id="contact" className="section-padding bg-white">
+    <section id="contact" className="section-white">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>
             Let's discuss it!
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl max-w-3xl mx-auto" style={{ color: 'hsl(var(--text-secondary))' }}>
             Thinking of applying digital transformation to your business? 
             Fill out the form below and we'll get right back to you.
           </p>
@@ -68,15 +68,15 @@ export default function Contact() {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+          <div className="contact-form">
+            <h3 className="text-2xl font-semibold mb-6" style={{ color: 'hsl(var(--text-primary))' }}>
               Get in Touch
             </h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="firstName" className="block text-sm font-medium mb-2" style={{ color: 'hsl(var(--text-primary))' }}>
                     First name *
                   </label>
                   <input
@@ -86,13 +86,13 @@ export default function Contact() {
                     value={formData.firstName}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mercury-500 focus:border-transparent transition-colors duration-200"
+                    className="form-input w-full"
                     placeholder="Your first name"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="lastName" className="block text-sm font-medium mb-2" style={{ color: 'hsl(var(--text-primary))' }}>
                     Last name *
                   </label>
                   <input
@@ -102,14 +102,14 @@ export default function Contact() {
                     value={formData.lastName}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mercury-500 focus:border-transparent transition-colors duration-200"
+                    className="form-input w-full"
                     placeholder="Your last name"
                   />
                 </div>
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium mb-2" style={{ color: 'hsl(var(--text-primary))' }}>
                   Email *
                 </label>
                 <input
@@ -119,13 +119,13 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mercury-500 focus:border-transparent transition-colors duration-200"
+                  className="form-input w-full"
                   placeholder="your.email@example.com"
                 />
               </div>
               
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="phone" className="block text-sm font-medium mb-2" style={{ color: 'hsl(var(--text-primary))' }}>
                   Phone number
                 </label>
                 <input
@@ -134,13 +134,13 @@ export default function Contact() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mercury-500 focus:border-transparent transition-colors duration-200"
+                  className="form-input w-full"
                   placeholder="+84 123 456 789"
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium mb-2" style={{ color: 'hsl(var(--text-primary))' }}>
                   Your message *
                 </label>
                 <textarea
@@ -150,7 +150,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mercury-500 focus:border-transparent transition-colors duration-200 resize-none"
+                  className="form-input w-full resize-none"
                   placeholder="Tell us about your project requirements..."
                 />
               </div>
@@ -168,21 +168,21 @@ export default function Contact() {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+              <h3 className="text-2xl font-semibold mb-6" style={{ color: 'hsl(var(--text-primary))' }}>
                 Contact Information
               </h3>
               
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-mercury-100 rounded-lg flex items-center justify-center">
-                      <info.icon className="w-6 h-6 text-mercury-600" />
+                    <div className="flex-shrink-0 w-12 h-12 professional-card rounded-lg flex items-center justify-center">
+                      <info.icon className="w-6 h-6" style={{ color: 'hsl(var(--link-primary))' }} />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">{info.title}</h4>
+                      <h4 className="font-semibold mb-2" style={{ color: 'hsl(var(--text-primary))' }}>{info.title}</h4>
                       <div className="space-y-1">
                         {info.details.map((detail, detailIndex) => (
-                          <p key={detailIndex} className="text-gray-600">{detail}</p>
+                          <p key={detailIndex} style={{ color: 'hsl(var(--text-secondary))' }}>{detail}</p>
                         ))}
                       </div>
                     </div>
@@ -192,27 +192,30 @@ export default function Contact() {
             </div>
 
             {/* Social Profiles */}
-            <div className="bg-gradient-to-r from-mercury-50 to-blue-50 rounded-xl p-6">
-              <h4 className="font-semibold text-gray-900 mb-4">Social profiles</h4>
+            <div className="professional-card p-6">
+              <h4 className="font-semibold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>Social profiles</h4>
               <div className="flex space-x-4">
-                <a href="#" className="w-10 h-10 bg-mercury-600 rounded-lg flex items-center justify-center text-white hover:bg-mercury-700 transition-colors duration-200">
+                <a href="#" className="w-10 h-10 rounded-lg flex items-center justify-center text-white transition-colors duration-200" 
+                   style={{ backgroundColor: 'hsl(var(--link-primary))' }}>
                   <span className="text-sm font-semibold">LI</span>
                 </a>
-                <a href="#" className="w-10 h-10 bg-mercury-600 rounded-lg flex items-center justify-center text-white hover:bg-mercury-700 transition-colors duration-200">
+                <a href="#" className="w-10 h-10 rounded-lg flex items-center justify-center text-white transition-colors duration-200" 
+                   style={{ backgroundColor: 'hsl(var(--link-primary))' }}>
                   <span className="text-sm font-semibold">FB</span>
                 </a>
-                <a href="#" className="w-10 h-10 bg-mercury-600 rounded-lg flex items-center justify-center text-white hover:bg-mercury-700 transition-colors duration-200">
+                <a href="#" className="w-10 h-10 rounded-lg flex items-center justify-center text-white transition-colors duration-200" 
+                   style={{ backgroundColor: 'hsl(var(--link-primary))' }}>
                   <span className="text-sm font-semibold">TW</span>
                 </a>
               </div>
             </div>
 
             {/* Map Placeholder */}
-            <div className="bg-gray-100 rounded-xl p-6 h-48 flex items-center justify-center">
+            <div className="professional-card p-6 h-48 flex items-center justify-center">
               <div className="text-center">
-                <MapPin className="w-12 h-12 text-gray-400 mx-auto mb-2" />
-                <p className="text-gray-600">Interactive Map</p>
-                <p className="text-sm text-gray-500">33 Ng. 41 P. Thai Ha, Hanoi</p>
+                <MapPin className="w-12 h-12 mx-auto mb-2" style={{ color: 'hsl(var(--text-secondary))' }} />
+                <p style={{ color: 'hsl(var(--text-secondary))' }}>Interactive Map</p>
+                <p className="text-sm" style={{ color: 'hsl(var(--text-secondary))' }}>33 Ng. 41 P. Thai Ha, Hanoi</p>
               </div>
             </div>
           </div>

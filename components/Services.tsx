@@ -1,169 +1,227 @@
-import { Brain, Video, Palette, Globe, Bot, Eye, Zap, Target, Sparkles, Film } from 'lucide-react'
+'use client'
+
+import { useLanguage } from '@/contexts/LanguageContext'
+import { 
+  Brain, 
+  Bot, 
+  Eye, 
+  Network, 
+  Zap, 
+  Globe, 
+  Shield, 
+  Cpu, 
+  Target, 
+  TrendingUp, 
+  Users, 
+  Award,
+  CheckCircle,
+  Clock,
+  Star
+} from 'lucide-react'
+import { motion } from 'framer-motion'
+import TextReveal from './TextReveal'
+import ClientOnly from './ClientOnly'
 
 export default function Services() {
+  const { translations } = useLanguage()
+
   const services = [
     {
       icon: Brain,
-      title: 'AI Intelligence Solutions',
-      description: 'Advanced artificial intelligence systems powered by machine learning, neural networks, and deep learning algorithms for intelligent automation.',
-      features: ['Machine Learning Models', 'Neural Networks', 'Predictive Analytics', 'AI Automation'],
-      gradient: 'from-cyan-400 to-purple-600',
-      category: 'AI Technology'
-    },
-    {
-      icon: Video,
-      title: 'TVC Professional Services',
-      description: 'Premium television commercial production, creative content development, and digital marketing solutions for professional brand representation.',
-      features: ['TV Commercial Production', 'Brand Video Content', 'Digital Marketing', 'Creative Direction'],
-      gradient: 'from-purple-400 to-pink-600',
-      category: 'Media Production'
-    },
-    {
-      icon: Eye,
-      title: 'Computer Vision & Analytics',
-      description: 'Real-time image processing, object detection, facial recognition, and visual data analysis using advanced computer vision technologies.',
-      features: ['Object Detection', 'Facial Recognition', 'Image Processing', 'Visual Analytics'],
-      gradient: 'from-green-400 to-cyan-600',
-      category: 'Vision Technology'
+      title: translations.services.ai.title,
+      description: translations.services.ai.description,
+      features: translations.services.ai.features,
+      color: 'hsl(var(--link-primary))'
     },
     {
       icon: Bot,
-      title: 'Intelligent Automation',
-      description: 'Smart process automation, robotic process automation (RPA), and AI-powered workflow optimization for business efficiency.',
-      features: ['Process Automation', 'RPA Solutions', 'Workflow Optimization', 'Smart Systems'],
-      gradient: 'from-orange-400 to-red-600',
-      category: 'Automation'
+      title: translations.services.automation.title,
+      description: translations.services.automation.description,
+      features: translations.services.automation.features,
+      color: 'hsl(var(--success-color))'
     },
     {
-      icon: Globe,
-      title: 'Digital Transformation',
-      description: 'Comprehensive digital ecosystem development with modern web technologies, cloud integration, and scalable architecture solutions.',
-      features: ['Web Applications', 'Cloud Integration', 'Digital Ecosystems', 'Scalable Architecture'],
-      gradient: 'from-blue-400 to-cyan-600',
-      category: 'Digital Solutions'
+      icon: Eye,
+      title: translations.services.vision.title,
+      description: translations.services.vision.description,
+      features: translations.services.vision.features,
+      color: 'hsl(var(--warning-color))'
     },
     {
-      icon: Film,
-      title: 'Creative AI Content',
-      description: 'AI-powered content creation, motion graphics, digital art generation, and automated creative production workflows.',
-      features: ['AI Content Creation', 'Motion Graphics', 'Digital Art', 'Creative Automation'],
-      gradient: 'from-pink-400 to-purple-600',
-      category: 'Creative Technology'
+      icon: Network,
+      title: translations.services.integration.title,
+      description: translations.services.integration.description,
+      features: translations.services.integration.features,
+      color: 'hsl(var(--link-primary))'
+    },
+    {
+      icon: Shield,
+      title: translations.services.security.title,
+      description: translations.services.security.description,
+      features: translations.services.security.features,
+      color: 'hsl(var(--success-color))'
+    },
+    {
+      icon: Cpu,
+      title: translations.services.optimization.title,
+      description: translations.services.optimization.description,
+      features: translations.services.optimization.features,
+      color: 'hsl(var(--warning-color))'
     }
   ]
 
+  const stats = [
+    { icon: TrendingUp, number: '150+', label: 'Projects Completed' },
+    { icon: Users, number: '50+', label: 'Happy Clients' },
+    { icon: Award, number: '25+', label: 'Industry Awards' },
+    { icon: Clock, number: '24/7', label: 'Support Available' }
+  ]
+
   return (
-    <section id="services" className="section-padding tvc-professional relative">
-      <div className="container-custom relative z-10">
-        <div className="text-center mb-16 fade-in-up">
-          <div className="inline-flex items-center space-x-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-200 mb-6">
-            <Sparkles className="w-4 h-4 text-primary animate-pulse" />
-            <span className="text-sm font-medium text-gray-800">Professional AI & TVC Services</span>
-          </div>
-          
-          <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-            <span className="text-white">Our</span>{' '}
-            <span className="bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent font-extrabold">
-              Digital Solutions
-            </span>
-          </h2>
-          
-          <p className="text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
-            Cutting-edge AI technology and professional TVC services that transform businesses 
-            through intelligent automation, computer vision, and premium content creation.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {services.map((service, index) => (
-            <div 
-              key={index} 
-              className="group digital-card p-8 hover:scale-105 transition-all duration-500 fade-in-scale relative overflow-hidden"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {/* Category Badge */}
-              <div className="absolute top-4 right-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full border border-gray-200">
-                <span className="text-xs font-medium text-gray-700">{service.category}</span>
-              </div>
-              
-              {/* Icon */}
-              <div className={`w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-2xl flex items-center justify-center mb-6`}>
-                <service.icon className="w-8 h-8 text-white" />
-              </div>
-              
-              {/* Content */}
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
-                {service.title}
-              </h3>
-              
-              <p className="text-gray-200 mb-6 leading-relaxed">
-                {service.description}
-              </p>
-              
-              {/* Features */}
-              <ul className="space-y-3">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-sm text-gray-300 group-hover:text-gray-100 transition-colors">
-                    <div className="w-2 h-2 bg-gradient-to-r from-primary to-accent rounded-full mr-3 animate-pulse"></div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-
-              {/* Hover effect overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+    <section id="services" className="section-light relative">
+      <div className="container-custom">
+        <ClientOnly>
+          <TextReveal className="text-center mb-16">
+            <div className="inline-flex items-center space-x-2 professional-card px-4 py-2 rounded-full mb-6">
+              <Zap className="w-4 h-4" style={{ color: 'hsl(var(--link-primary))' }} />
+              <span className="text-sm font-medium" style={{ color: 'hsl(var(--text-primary))' }}>
+                Professional AI & TVC Services
+              </span>
             </div>
+            
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>
+              <span style={{ color: 'hsl(var(--text-primary))' }}>Digital</span>{' '}
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+                Solutions
+              </span>{' '}
+              <span style={{ color: 'hsl(var(--text-primary))' }}>That Drive Growth</span>
+            </h2>
+            
+            <p className="text-xl max-w-3xl mx-auto" style={{ color: 'hsl(var(--text-secondary))' }}>
+              {translations.services.subtitle}
+            </p>
+          </TextReveal>
+        </ClientOnly>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <ClientOnly key={index}>
+              <TextReveal delay={index * 0.1}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group service-card p-8 hover:scale-105 transition-all duration-500 fade-in-scale relative overflow-hidden"
+              >
+                {/* Category Badge */}
+                <div className="flex items-center justify-between mb-6">
+                  <span className="px-3 py-1 text-xs rounded-full professional-card" style={{ color: 'hsl(var(--text-secondary))' }}>
+                    {service.title.split(' ')[0]}
+                  </span>
+                </div>
+
+                {/* Service Icon */}
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
+                     style={{ backgroundColor: service.color }}>
+                  <service.icon className="w-8 h-8 text-white" />
+                </div>
+
+                {/* Service Content */}
+                <h3 className="text-xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>
+                  {service.title}
+                </h3>
+                
+                <p className="text-gray-600 mb-6 leading-relaxed" style={{ color: 'hsl(var(--text-secondary))' }}>
+                  {service.description}
+                </p>
+
+                {/* Features List */}
+                <ul className="space-y-3">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm group-hover:text-gray-100 transition-colors duration-200" style={{ color: 'hsl(var(--text-secondary))' }}>
+                      <div className="w-1.5 h-1.5 rounded-full mr-3 flex-shrink-0" style={{ backgroundColor: service.color }}></div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Hover Effect Overlay */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"
+                     style={{ backgroundColor: `${service.color}10` }}>                </div>
+              </motion.div>
+            </TextReveal>
+            </ClientOnly>
           ))}
         </div>
 
         {/* Enhanced Stats Section */}
-        <div className="relative">
-          <div className="ai-gradient-bg rounded-3xl p-8 lg:p-12 relative overflow-hidden">
-            <div className="relative z-10">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
-                  Powering Innovation Across Industries
-                </h3>
-                <p className="text-white/80 max-w-2xl mx-auto">
-                  Our AI and TVC solutions deliver measurable results for businesses worldwide
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-4 gap-8 text-center">
-                <div className="group">
-                  <div className="text-4xl lg:text-5xl font-bold text-white mb-2 cyber-glow group-hover:scale-110 transition-transform">
-                    99.8%
-                  </div>
-                  <div className="text-white/80">AI Accuracy Rate</div>
-                </div>
-                <div className="group">
-                  <div className="text-4xl lg:text-5xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">
-                    150+
-                  </div>
-                  <div className="text-white/80">TVC Productions</div>
-                </div>
-                <div className="group">
-                  <div className="text-4xl lg:text-5xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">
-                    24/7
-                  </div>
-                  <div className="text-white/80">AI Processing</div>
-                </div>
-                <div className="group">
-                  <div className="text-4xl lg:text-5xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">
-                    ∞
-                  </div>
-                  <div className="text-white/80">Scalability</div>
-                </div>
-              </div>
-            </div>
+        <ClientOnly>
+          <TextReveal className="mt-20" delay={0.5}>
+            <div className="professional-card p-8 rounded-2xl">
+              <ClientOnly>
+                <TextReveal delay={0.6}>
+                  <h3 className="text-2xl font-bold text-center mb-8" style={{ color: 'hsl(var(--text-primary))' }}>
+                    Why Choose Mercury Solutions?
+                  </h3>
+                </TextReveal>
+              </ClientOnly>
             
-            {/* Floating particles */}
-            <div className="absolute top-10 left-10 w-4 h-4 bg-white/20 rounded-full animate-float"></div>
-            <div className="absolute top-20 right-20 w-6 h-6 bg-white/10 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
-            <div className="absolute bottom-20 left-20 w-3 h-3 bg-white/30 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <ClientOnly key={index}>
+                  <TextReveal delay={0.7 + index * 0.1}>
+                  <div className="text-center group">
+                    <div className="w-16 h-16 professional-card rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <stat.icon className="w-8 h-8" style={{ color: 'hsl(var(--link-primary))' }} />
+                    </div>
+                    <div className="text-3xl font-bold mb-2" style={{ color: 'hsl(var(--link-primary))' }}>
+                      {stat.number}
+                    </div>
+                    <div className="text-sm" style={{ color: 'hsl(var(--text-secondary))' }}>
+                      {stat.label}
+                    </div>
+                  </div>
+                </TextReveal>
+                </ClientOnly>
+              ))}
+            </div>
+
+            {/* Additional Benefits */}
+            <div className="grid md:grid-cols-3 gap-6 mt-12">
+              <ClientOnly>
+                <TextReveal delay={1.1}>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-6 h-6" style={{ color: 'hsl(var(--success-color))' }} />
+                    <span style={{ color: 'hsl(var(--text-primary))' }}>Proven Track Record</span>
+                  </div>
+                </TextReveal>
+              </ClientOnly>
+              <ClientOnly>
+                <TextReveal delay={1.2}>
+                  <div className="flex items-center space-x-3">
+                    <Clock className="w-6 h-6" style={{ color: 'hsl(var(--link-primary))' }} />
+                    <span style={{ color: 'hsl(var(--text-primary))' }}>Fast Delivery</span>
+                  </div>
+                </TextReveal>
+              </ClientOnly>
+              <ClientOnly>
+                <TextReveal delay={1.3}>
+                  <div className="flex items-center space-x-3">
+                    <Star className="w-6 h-6" style={{ color: 'hsl(var(--warning-color))' }} />
+                    <span style={{ color: 'hsl(var(--text-primary))' }}>Premium Quality</span>
+                  </div>
+                </TextReveal>
+              </ClientOnly>
+            </div>
           </div>
-        </div>
+        </TextReveal>
+        </ClientOnly>
       </div>
+
+      {/* Floating Particles */}
+      <div className="absolute top-20 left-10 w-4 h-4 rounded-full opacity-20 animate-float" style={{ backgroundColor: 'hsl(var(--link-primary) / 0.2)' }}></div>
+      <div className="absolute top-40 right-20 w-6 h-6 rounded-full opacity-20 animate-float" style={{ animationDelay: '1s', backgroundColor: 'hsl(var(--link-primary) / 0.2)' }}></div>
+      <div className="absolute bottom-20 left-1/4 w-3 h-3 rounded-full opacity-20 animate-float" style={{ animationDelay: '2s', backgroundColor: 'hsl(var(--link-primary) / 0.2)' }}></div>
     </section>
   )
 } 

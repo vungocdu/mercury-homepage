@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://mercury-solutions.minova.vn/sitemap.xml',
+    sitemap: 'https://www.mercurysolutions.vn/sitemap.xml',
   }
 } 

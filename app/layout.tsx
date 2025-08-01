@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import ScrollIndicator from '@/components/ScrollIndicator'
 import { LanguageProvider } from '@/contexts/LanguageContext'
+import Analytics from '@/components/Analytics'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -36,14 +37,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://mercury-solutions.minova.vn'),
+  metadataBase: new URL('https://www.mercurysolutions.vn'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://mercury-solutions.minova.vn',
+    url: 'https://www.mercurysolutions.vn',
     title: 'Mercury Solutions - Data Analysis & Innovative Technologies',
     description: 'Mercury Solutions specializes in Data Analysis, Computer Vision, Web Development, Mobile App Development, and innovative technologies.',
     siteName: 'Mercury Solutions',
@@ -91,13 +92,14 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#0ea5e9" />
+        <meta name="theme-color" content="#2047F4" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
       </head>
       <body className={`${inter.className} bg-background text-foreground`}>
         <LanguageProvider>
+          <Analytics />
           <ScrollIndicator />
           {children}
         </LanguageProvider>

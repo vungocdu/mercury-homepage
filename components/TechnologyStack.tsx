@@ -1,4 +1,3 @@
-import InteractiveBackground from './InteractiveBackground'
 import { Cpu, Zap } from 'lucide-react'
 
 export default function TechnologyStack() {
@@ -104,9 +103,6 @@ export default function TechnologyStack() {
 
   return (
     <section id="technology" className="section-padding relative overflow-hidden">
-      {/* Interactive Dots Background */}
-      <InteractiveBackground effect="dots" />
-      
       <div className="container-custom relative z-10">
         <div className="text-center mb-16 fade-in-up">
           <div className="inline-flex items-center space-x-2 bg-card/50 backdrop-blur-sm px-4 py-2 rounded-full border border-border/20 mb-6">
@@ -198,11 +194,6 @@ export default function TechnologyStack() {
                 ))}
               </div>
             </div>
-            
-            {/* Floating tech particles */}
-            <div className="absolute top-8 left-8 w-4 h-4 bg-white/20 rounded-full animate-float"></div>
-            <div className="absolute top-16 right-16 w-6 h-6 bg-white/10 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
-            <div className="absolute bottom-16 left-16 w-3 h-3 bg-white/30 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
           </div>
         </div>
       </div>

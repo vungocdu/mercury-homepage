@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://mercury-solutions.minova.vn'
+  const baseUrl = 'https://www.mercurysolutions.vn'
   
   return [
     {

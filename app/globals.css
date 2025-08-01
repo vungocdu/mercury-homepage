@@ -1,352 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 221 39% 11%;
-    --foreground: 210 40% 98%;
+:root {
+  /* Mercury Solutions Pantone Color Palette */
+  --background: 210 20% 98% /* #F8F9FA - Clean White (Cool Gray 1 C) */
+  --foreground: 210 9% 46% /* #6C757D - Professional Gray (Cool Gray 9 C) */
+  --card: 0 0% 100% /* #FFFFFF - Pure White */
+  --card-foreground: 210 9% 46% /* #6C757D - Professional Gray */
+  --popover: 0 0% 100% /* #FFFFFF - Pure White */
+  --popover-foreground: 210 9% 46% /* #6C757D - Professional Gray */
+  --primary: 220 100% 60% /* #2E5BFF - Mercury Blue (2925 C) */
+  --primary-foreground: 0 0% 100% /* #FFFFFF - White text on Mercury Blue */
+  --secondary: 210 20% 98% /* #F8F9FA - Clean White */
+  --secondary-foreground: 210 9% 46% /* #6C757D - Professional Gray */
+  --muted: 210 20% 98% /* #F8F9FA - Clean White */
+  --muted-foreground: 210 9% 46% /* #6C757D - Professional Gray */
+  --accent: 210 20% 98% /* #F8F9FA - Clean White */
+  --accent-foreground: 210 9% 46% /* #6C757D - Professional Gray */
+  --destructive: 0 84% 60% /* #EF4444 - Error Red */
+  --destructive-foreground: 0 0% 100% /* #FFFFFF - White text on error */
+  --success: 142 76% 36% /* #16A34A - Success Green */
+  --success-foreground: 0 0% 100% /* #FFFFFF - White text on success */
+  --border: 210 9% 46% /* #6C757D - Professional Gray borders */
+  --input: 210 9% 46% /* #6C757D - Professional Gray inputs */
+  --ring: 220 100% 60% /* #2E5BFF - Mercury Blue focus ring */
+  --radius: 0.5rem;
 
-    --card: 224 37% 15%;
-    --card-foreground: 210 40% 98%;
+  /* Mercury Solutions Brand Colors */
+  --bg-primary: 210 20% 98% /* #F8F9FA - Clean White (Cool Gray 1 C) */
+  --bg-secondary: 0 0% 100% /* #FFFFFF - Pure White */
+  --text-primary: 210 9% 46% /* #6C757D - Professional Gray (Cool Gray 9 C) */
+  --text-secondary: 210 9% 46% /* #6C757D - Professional Gray */
+  --text-muted: 210 9% 46% /* #6C757D - Professional Gray muted */
+  --link-primary: 220 100% 60% /* #2E5BFF - Mercury Blue (2925 C) */
+  --link-hover: 220 100% 50% /* #1E3A8A - Deep Mercury (7461 C) */
+  --success-color: 142 76% 36% /* #16A34A - Success Green */
+  --error-color: 0 84% 60% /* #EF4444 - Error Red */
+  --warning-color: 45 93% 47% /* #FFD60A - Mercury Gold (116 C) */
+  --card-bg: 0 0% 100% /* #FFFFFF - Pure White */
+  --card-border: 210 9% 46% /* #6C757D - Professional Gray */
+  --card-shadow: 0 1px 3px 0 rgb(108 117 125 / 0.1), 0 1px 2px -1px rgb(108 117 125 / 0.1);
 
-    --popover: 224 37% 15%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 193 76% 52%;
-    --primary-foreground: 220 40% 5%;
-
-    --secondary: 282 85% 60%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 215 27% 32%;
-    --muted-foreground: 217 32% 72%;
-
-    --accent: 157 76% 56%;
-    --accent-foreground: 220 40% 5%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 215 27% 32%;
-    --input: 215 27% 32%;
-    --ring: 193 76% 52%;
-
-    --radius: 0.5rem;
-    --font-public-sans: var(--font-public-sans), sans-serif;
-
-    /* AI/Digital Technology Colors */
-    --cyber-blue: 193 76% 52%;
-    --electric-purple: 282 85% 60%;
-    --neon-green: 157 76% 56%;
-    --matrix-green: 120 100% 25%;
-    --tech-orange: 25 95% 53%;
-    
-    /* Mercury Solutions Enhanced Brand Colors */
-    --mercury-50: 210 40% 98%;
-    --mercury-100: 210 40% 96%;
-    --mercury-200: 214 32% 91%;
-    --mercury-300: 213 27% 84%;
-    --mercury-400: 215 20% 65%;
-    --mercury-500: 215 16% 47%;
-    --mercury-600: 193 76% 52%;
-    --mercury-700: 221 39% 25%;
-    --mercury-800: 221 39% 18%;
-    --mercury-900: 221 39% 11%;
-    --mercury-950: 220 40% 5%;
-    
-    /* AI Technology Gradients */
-    --ai-gradient-1: linear-gradient(135deg, hsl(193 76% 52%) 0%, hsl(282 85% 60%) 100%);
-    --ai-gradient-2: linear-gradient(135deg, hsl(157 76% 56%) 0%, hsl(193 76% 52%) 100%);
-    --ai-gradient-3: linear-gradient(135deg, hsl(282 85% 60%) 0%, hsl(25 95% 53%) 100%);
-    --digital-glow: 0 0 20px hsl(193 76% 52% / 0.3), 0 0 40px hsl(193 76% 52% / 0.2);
-  }
-
-  .dark {
-    --background: 0 0% 14%;
-    --foreground: 0 0% 100%;
-
-    --card: 0 0% 14%;
-    --card-foreground: 0 0% 100%;
-
-    --popover: 0 0% 14%;
-    --popover-foreground: 0 0% 100%;
-
-    --primary: 21 95% 57%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 267 95% 57%;
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 0 0% 59%;
-    --muted-foreground: 0 0% 100%;
-
-    --accent: 21 95% 57%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 0 0% 59%;
-    --input: 0 0% 59%;
-    --ring: 21 95% 57%;
-  }
+  /* Mercury Solutions Specific Colors */
+  --mercury-blue: 220 100% 60% /* #2E5BFF - Mercury Blue (2925 C) */
+  --mercury-blue-rgb: 46 91 255 /* RGB values for Mercury Blue */
+  --clean-white: 210 20% 98% /* #F8F9FA - Clean White (Cool Gray 1 C) */
+  --clean-white-rgb: 248 249 250 /* RGB values for Clean White */
+  --professional-gray: 210 9% 46% /* #6C757D - Professional Gray (Cool Gray 9 C) */
+  --professional-gray-rgb: 108 117 125 /* RGB values for Professional Gray */
+  --deep-mercury: 220 100% 50% /* #1E3A8A - Deep Mercury (7461 C) */
+  --deep-mercury-rgb: 30 58 138 /* RGB values for Deep Mercury */
+  --mercury-gold: 45 93% 47% /* #FFD60A - Mercury Gold (116 C) */
+  --mercury-gold-rgb: 255 214 10 /* RGB values for Mercury Gold */
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground leading-relaxed;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-sans font-bold tracking-tight text-foreground;
-  }
-  h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl mb-6;
-  }
-  h2 {
-    @apply text-3xl sm:text-4xl md:text-5xl mb-5;
-  }
-  h3 {
-    @apply text-2xl sm:text-3xl md:text-4xl mb-4;
-  }
-  h4 {
-    @apply text-xl sm:text-2xl md:text-3xl mb-3;
-  }
-  h5 {
-    @apply text-lg sm:text-xl md:text-2xl mb-2;
-  }
-  h6 {
-    @apply text-base sm:text-lg md:text-xl mb-2;
-  }
-  p {
-    @apply text-base sm:text-lg mb-4;
-  }
-  a {
-    @apply text-primary hover:text-primary-foreground transition-colors duration-200;
-  }
+.dark {
+  --background: 210 9% 46% /* #6C757D - Professional Gray */
+  --foreground: 210 20% 98% /* #F8F9FA - Clean White */
+  --card: 210 9% 46% /* #6C757D - Professional Gray */
+  --card-foreground: 210 20% 98% /* #F8F9FA - Clean White */
+  --popover: 210 9% 46% /* #6C757D - Professional Gray */
+  --popover-foreground: 210 20% 98% /* #F8F9FA - Clean White */
+  --primary: 220 100% 60% /* #2E5BFF - Mercury Blue (2925 C) */
+  --primary-foreground: 0 0% 100% /* #FFFFFF - White text on Mercury Blue */
+  --secondary: 210 9% 46% /* #6C757D - Professional Gray */
+  --secondary-foreground: 210 20% 98% /* #F8F9FA - Clean White */
+  --muted: 210 9% 46% /* #6C757D - Professional Gray */
+  --muted-foreground: 210 20% 98% /* #F8F9FA - Clean White */
+  --accent: 210 9% 46% /* #6C757D - Professional Gray */
+  --accent-foreground: 210 20% 98% /* #F8F9FA - Clean White */
+  --destructive: 0 84% 60% /* #EF4444 - Error Red */
+  --destructive-foreground: 0 0% 100% /* #FFFFFF - White text on error */
+  --success: 142 76% 36% /* #16A34A - Success Green */
+  --success-foreground: 0 0% 100% /* #FFFFFF - White text on success */
+  --border: 210 9% 46% /* #6C757D - Professional Gray */
+  --input: 210 9% 46% /* #6C757D - Professional Gray */
+  --ring: 220 100% 60% /* #2E5BFF - Mercury Blue focus ring */
 }
 
-@layer components {
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  color: hsl(var(--foreground));
+  background: hsl(var(--background));
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Scale - IBM Plex Sans */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  line-height: 1.2;
+  color: hsl(var(--text-primary));
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+h5 {
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+h6 {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+p {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  line-height: 1.6;
+  color: hsl(var(--text-secondary));
+  margin-bottom: 1rem;
+}
+
+a {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  color: hsl(var(--link-primary));
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: hsl(var(--link-hover));
+}
+
+/* Font Weight Classes */
+.font-thin {
+  font-weight: 100;
+}
+
+.font-extralight {
+  font-weight: 200;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+/* Mercury Solutions Component Classes */
+.professional-bg {
+  background-color: hsl(var(--bg-primary));
+}
+
+.professional-bg-white {
+  background-color: hsl(var(--bg-secondary));
+}
+
+.professional-card {
+  background-color: hsl(var(--card-bg));
+  border: 1px solid hsl(var(--card-border));
+  border-radius: 0.75rem;
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+}
+
+.service-card {
+  background-color: hsl(var(--card-bg));
+  border: 1px solid hsl(var(--card-border));
+  border-radius: 1rem;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 4px 6px -1px rgb(108 117 125 / 0.1), 0 2px 4px -2px rgb(108 117 125 / 0.1);
+  transform: translateY(-2px);
+}
+
+.professional-link {
+  color: hsl(var(--link-primary));
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.professional-link:hover {
+  color: hsl(var(--link-hover));
+}
+
+.status-success {
+  color: hsl(var(--success-color));
+}
+
+.status-error {
+  color: hsl(var(--error-color));
+}
+
+.status-warning {
+  color: hsl(var(--warning-color));
+}
+
+.highlight {
+  color: hsl(var(--warning-color));
+  font-weight: 600;
+}
+
+.section-white {
+  background-color: hsl(var(--bg-secondary));
+  padding: 4rem 0;
+}
+
+.section-light {
+  background-color: hsl(var(--bg-primary));
+  padding: 4rem 0;
+}
+
+.btn-primary {
+  background-color: hsl(var(--link-primary));
+  color: white;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:hover {
+  background-color: hsl(var(--link-hover));
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: hsl(var(--text-primary));
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(var(--border));
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-secondary:hover {
+  background-color: hsl(var(--bg-primary));
+  border-color: hsl(var(--link-primary));
+}
+
+.form-input {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  padding: 0.75rem 1rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  background-color: hsl(var(--bg-secondary));
+  color: hsl(var(--text-primary));
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: hsl(var(--link-primary));
+  box-shadow: 0 0 0 3px hsl(var(--link-primary) / 0.1);
+}
+
+.nav-link {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  color: hsl(var(--text-primary));
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: hsl(var(--link-primary));
+}
+
+.nav-link-active {
+  color: hsl(var(--link-primary));
+}
+
+.footer-bg {
+  background-color: hsl(var(--foreground));
+  color: hsl(var(--background));
+}
+
+.header-bg {
+  background-color: hsl(var(--bg-secondary));
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.hero-bg {
+  background-color: hsl(var(--bg-primary));
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.contact-form {
+  background-color: hsl(var(--card-bg));
+  border: 1px solid hsl(var(--card-border));
+  border-radius: 1rem;
+  box-shadow: var(--card-shadow);
+  padding: 2rem;
+}
+
+.testimonial-card {
+  background-color: hsl(var(--card-bg));
+  border: 1px solid hsl(var(--card-border));
+  border-radius: 1rem;
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+}
+
+.pricing-card {
+  background-color: hsl(var(--card-bg));
+  border: 1px solid hsl(var(--card-border));
+  border-radius: 1rem;
+  box-shadow: var(--card-shadow);
+  padding: 2rem;
+}
+
+.faq-item {
+  background-color: hsl(var(--card-bg));
+  border: 1px solid hsl(var(--card-border));
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.blog-card {
+  background-color: hsl(var(--card-bg));
+  border: 1px solid hsl(var(--card-border));
+  border-radius: 1rem;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+.team-card {
+  background-color: hsl(var(--card-bg));
+  border: 1px solid hsl(var(--card-border));
+  border-radius: 1rem;
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.project-card {
+  background-color: hsl(var(--card-bg));
+  border: 1px solid hsl(var(--card-border));
+  border-radius: 1rem;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+.tech-stack-item {
+  background-color: hsl(var(--card-bg));
+  border: 1px solid hsl(var(--card-border));
+  border-radius: 0.75rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.process-step {
+  background-color: hsl(var(--card-bg));
+  border: 1px solid hsl(var(--card-border));
+  border-radius: 1rem;
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+  position: relative;
+}
+
+.analytics-card {
+  background-color: hsl(var(--card-bg));
+  border: 1px solid hsl(var(--card-border));
+  border-radius: 1rem;
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+}
+
+.tvc-section {
+  background-color: hsl(var(--bg-primary));
+  padding: 4rem 0;
+}
+
+.tvc-card {
+  background-color: hsl(var(--card-bg));
+  border: 1px solid hsl(var(--card-border));
+  border-radius: 1rem;
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+}
+
+/* Mercury Solutions Brand Color Classes */
+.mercury-blue {
+  color: hsl(var(--mercury-blue));
+}
+
+.mercury-blue-bg {
+  background-color: hsl(var(--mercury-blue));
+}
+
+.clean-white {
+  color: hsl(var(--clean-white));
+}
+
+.clean-white-bg {
+  background-color: hsl(var(--clean-white));
+}
+
+.professional-gray {
+  color: hsl(var(--professional-gray));
+}
+
+.professional-gray-bg {
+  background-color: hsl(var(--professional-gray));
+}
+
+.deep-mercury {
+  color: hsl(var(--deep-mercury));
+}
+
+.deep-mercury-bg {
+  background-color: hsl(var(--deep-mercury));
+}
+
+.mercury-gold {
+  color: hsl(var(--mercury-gold));
+}
+
+.mercury-gold-bg {
+  background-color: hsl(var(--mercury-gold));
+}
+
+/* Container */
+.container-custom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
   .container-custom {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-  }
-
-  .btn-primary {
-    @apply bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 px-6 rounded-lg transition-colors duration-200;
-  }
-
-  .btn-secondary {
-    @apply bg-transparent hover:bg-primary/10 text-primary border border-primary font-semibold py-3 px-6 rounded-lg transition-colors duration-200;
-  }
-
-  .section-padding {
-    @apply py-16 lg:py-24;
-  }
-
-  .gradient-bg {
-    background: radial-gradient(ellipse at top, hsl(var(--mercury-800)) 0%, hsl(var(--background)) 50%);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .gradient-bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: conic-gradient(from 0deg at 50% 50%, 
-      hsl(var(--cyber-blue) / 0.1) 0deg,
-      hsl(var(--electric-purple) / 0.1) 120deg,
-      hsl(var(--neon-green) / 0.1) 240deg,
-      hsl(var(--cyber-blue) / 0.1) 360deg);
-    animation: rotate 20s linear infinite;
-  }
-
-  /* AI Technology Effects */
-  .ai-gradient-bg {
-    background: var(--ai-gradient-1);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .ai-gradient-bg::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: conic-gradient(from 0deg, 
-      transparent, 
-      hsl(var(--cyber-blue) / 0.1), 
-      transparent,
-      hsl(var(--electric-purple) / 0.1),
-      transparent);
-    animation: rotate 30s linear infinite;
-  }
-
-  .digital-card {
-    @apply bg-card/50 backdrop-blur-xl border border-border/20 rounded-xl;
-    box-shadow: 
-      0 0 20px hsl(var(--cyber-blue) / 0.1),
-      inset 0 1px 0 hsl(var(--foreground) / 0.1);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .digital-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, 
-      transparent, 
-      hsl(var(--cyber-blue) / 0.1), 
-      transparent);
-    animation: shimmer 3s ease-in-out infinite;
-  }
-
-  .cyber-glow {
-    box-shadow: var(--digital-glow);
-    text-shadow: 0 0 10px hsl(var(--cyber-blue) / 0.5);
-  }
-
-  .neural-network-bg {
-    position: relative;
-    background: radial-gradient(circle at 25% 25%, hsl(var(--cyber-blue) / 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 75% 75%, hsl(var(--electric-purple) / 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 50% 50%, hsl(var(--neon-green) / 0.1) 0%, transparent 50%);
-  }
-
-  /* Enhanced Animation Classes */
-  .fade-in {
-    animation: fadeIn 0.8s ease-out;
-  }
-
-  .fade-in-up {
-    animation: fadeInUp 0.8s ease-out;
-  }
-
-  .fade-in-scale {
-    animation: fadeInScale 0.8s ease-out;
-  }
-
-  .animate-gradient-x {
-    animation: gradient-x 15s ease infinite;
-    background-size: 400% 400%;
-  }
-
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  .animate-pulse-glow {
-    animation: pulseGlow 2s ease-in-out infinite;
-  }
-
-  .matrix-rain {
-    animation: matrixRain 20s linear infinite;
-  }
-
-  .tech-border {
-    position: relative;
-    border: 1px solid hsl(var(--border));
-  }
-
-  .tech-border::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: inherit;
-    padding: 1px;
-    background: conic-gradient(from 0deg, 
-      hsl(var(--cyber-blue)), 
-      hsl(var(--electric-purple)), 
-      hsl(var(--neon-green)),
-      hsl(var(--cyber-blue)));
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: xor;
-    animation: borderRotate 3s linear infinite;
-  }
-
-  /* Web3 Glow Effect */
-  .web3-glow {
-    text-shadow: 0 0 5px hsl(var(--primary) / 0.3), 0 0 10px hsl(var(--primary) / 0.3), 0 0 15px hsl(var(--primary) / 0.3);
-    animation: web3Glow 3s ease-in-out infinite alternate;
-  }
-
-  /* TVC Professional Service Styles */
-  .tvc-professional {
-    @apply bg-gradient-to-br from-mercury-900 via-mercury-800 to-background;
-    position: relative;
-  }
-
-  .tvc-professional::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-      radial-gradient(circle at 20% 80%, hsl(var(--cyber-blue) / 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(var(--electric-purple) / 0.1) 0%, transparent 50%);
-    pointer-events: none;
-  }
-
-  .ai-chip {
-    background: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--mercury-800)) 100%);
-    border: 1px solid hsl(var(--cyber-blue) / 0.3);
-    box-shadow: 
-      0 4px 15px hsl(var(--cyber-blue) / 0.1),
-      inset 0 1px 0 hsl(var(--foreground) / 0.1);
-  }
-
-  /* Scroll indicator styles */
-  .scroll-indicator {
-    @apply fixed top-1/2 -translate-y-1/2 h-[80vh] pointer-events-none z-50;
-  }
-
-  /* Language Selector */
-  .language-selector {
-    @apply relative inline-block;
-  }
-
-  .language-dropdown {
-    @apply absolute right-0 mt-2 w-48 bg-card border border-border rounded-lg shadow-lg z-50;
-  }
-
-  .language-option {
-    @apply block w-full text-left px-4 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-colors duration-200;
+    padding: 0 2rem;
   }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+@media (min-width: 1024px) {
+  .container-custom {
+    padding: 0 3rem;
   }
 }
 
+/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -378,62 +548,8 @@
   }
 }
 
-@keyframes pulseGlow {
-  0%, 100% {
-    box-shadow: 0 0 5px hsl(var(--cyber-blue) / 0.3);
-  }
-  50% {
-    box-shadow: 0 0 20px hsl(var(--cyber-blue) / 0.6), 0 0 30px hsl(var(--cyber-blue) / 0.4);
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes shimmer {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
-@keyframes borderRotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes matrixRain {
-  0% {
-    transform: translateY(-100vh);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(100vh);
-    opacity: 0;
-  }
-}
-
 @keyframes gradient-x {
-  0%,
-  100% {
+  0%, 100% {
     background-position: 0% 50%;
   }
   50% {
@@ -441,27 +557,164 @@
   }
 }
 
-@keyframes web3Glow {
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px hsl(var(--mercury-blue) / 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px hsl(var(--mercury-blue) / 0.8);
+  }
+}
+
+@keyframes slideIn {
   from {
-    text-shadow: 0 0 5px hsl(var(--primary) / 0.3), 0 0 10px hsl(var(--primary) / 0.3), 0 0 15px
-      hsl(var(--primary) / 0.3);
+    opacity: 0;
+    transform: translateX(-30px);
   }
   to {
-    text-shadow: 0 0 7px hsl(var(--primary) / 0.4), 0 0 14px hsl(var(--primary) / 0.4), 0 0 21px
-      hsl(var(--primary) / 0.4);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
-html {
-  scroll-behavior: smooth;
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
 }
 
-body.menu-open {
-  @apply overflow-hidden;
+.fade-in-scale {
+  animation: fadeInScale 0.6s ease-out;
 }
 
-@media (min-width: 1024px) {
-  main {
-    padding-left: 5rem;
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-gradient-x {
+  animation: gradient-x 3s ease infinite;
+  background-size: 200% 200%;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Focus and Selection Styles */
+*:focus {
+  outline: 2px solid hsl(var(--mercury-blue));
+  outline-offset: 2px;
+}
+
+::selection {
+  background-color: hsl(var(--mercury-blue) / 0.2);
+  color: hsl(var(--text-primary));
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--bg-primary));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--professional-gray));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--text-muted));
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .container-custom {
+    padding: 0 1rem;
+  }
+  
+  h1 {
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+  }
+  
+  h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+  
+  h3 {
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
+  }
+  
+  p {
+    font-size: clamp(0.875rem, 2vw, 1rem);
+  }
+  
+  .professional-card,
+  .service-card,
+  .contact-form,
+  .testimonial-card,
+  .pricing-card,
+  .faq-item,
+  .blog-card,
+  .team-card,
+  .project-card,
+  .tech-stack-item,
+  .process-step,
+  .analytics-card,
+  .tvc-card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  .section-white,
+  .section-light,
+  .tvc-section {
+    padding: 2rem 0;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+  }
+  
+  .form-input {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Tablet Optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container-custom {
+    padding: 0 2rem;
+  }
+  
+  h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+  
+  h2 {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+  }
+  
+  h3 {
+    font-size: clamp(1.5rem, 3vw, 1.875rem);
+  }
+  
+  .professional-card,
+  .service-card,
+  .contact-form,
+  .testimonial-card,
+  .pricing-card,
+  .faq-item,
+  .blog-card,
+  .team-card,
+  .project-card,
+  .tech-stack-item,
+  .process-step,
+  .analytics-card,
+  .tvc-card {
+    padding: 1.25rem;
   }
 } 
