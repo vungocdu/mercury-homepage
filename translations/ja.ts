@@ -251,6 +251,8 @@ export const ja = {
   faq: {
     title: "よくある質問",
     subtitle: "私たちのサービスとプロセスに関する一般的な質問への回答",
+    stillHaveQuestions: "まだ質問がありますか？",
+    contactTeam: "私たちのチームは、TVC制作プロセスを理解し、ご質問にお答えするお手伝いをします。",
     questions: {
       tvcTypes: {
         question: "Mercury SolutionsはどのようなタイプのTVCプロジェクトに特化していますか？",

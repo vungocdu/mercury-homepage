@@ -251,6 +251,8 @@ export const ko = {
   faq: {
     title: "자주 묻는 질문",
     subtitle: "우리의 서비스와 프로세스에 대한 일반적인 질문에 대한 답변",
+    stillHaveQuestions: "아직 질문이 있으신가요?",
+    contactTeam: "우리 팀은 TVC 제작 프로세스를 이해하고 질문에 답변하는 데 도움을 드릴 준비가 되어 있습니다.",
     questions: {
       tvcTypes: {
         question: "Mercury Solutions는 어떤 유형의 TVC 프로젝트에 특화되어 있나요?",
