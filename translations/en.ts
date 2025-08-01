@@ -26,6 +26,11 @@ export const en = {
   services: {
     title: "Our Services",
     subtitle: "We provide comprehensive technology solutions to help businesses achieve digital transformation and operational excellence.",
+    ai: {
+      title: "AI & Machine Learning",
+      description: "Advanced artificial intelligence and machine learning solutions to automate processes and gain insights from data.",
+      features: ["Predictive Analytics", "Natural Language Processing", "Computer Vision", "Automated Decision Making"]
+    },
     design: {
       title: "Design & Concept",
       description: "Experience maps, user journeys and user flows. Information Architecture. UX Wireframes. Interactive Mockups. Assets.",
@@ -55,6 +60,31 @@ export const en = {
       title: "Backend Development",
       description: "Frameworks based development. Integration with third-party services. Working with databases. High-load architecture and design.",
       features: ["API Development", "Database Design", "Microservices", "System Architecture"]
+    },
+    automation: {
+      title: "Process Automation",
+      description: "Streamline business operations with intelligent automation solutions that reduce manual work and increase efficiency.",
+      features: ["Workflow Automation", "RPA Implementation", "Business Process Optimization", "Integration Services"]
+    },
+    vision: {
+      title: "Computer Vision",
+      description: "Advanced computer vision solutions for image recognition, object detection, and visual data analysis.",
+      features: ["Image Recognition", "Object Detection", "Facial Recognition", "Visual Analytics"]
+    },
+    integration: {
+      title: "System Integration",
+      description: "Seamless integration of disparate systems and applications to create unified business solutions.",
+      features: ["API Integration", "Data Synchronization", "Legacy System Migration", "Real-time Connectivity"]
+    },
+    security: {
+      title: "Cybersecurity",
+      description: "Comprehensive security solutions to protect your digital assets and ensure data privacy compliance.",
+      features: ["Threat Detection", "Data Encryption", "Access Control", "Security Auditing"]
+    },
+    optimization: {
+      title: "Performance Optimization",
+      description: "Optimize system performance, database efficiency, and application speed for better user experience.",
+      features: ["Database Optimization", "Code Performance", "Load Balancing", "Caching Strategies"]
     },
     tvc: {
       title: "TVC & Digital Art",
@@ -221,6 +251,8 @@ export const en = {
   faq: {
     title: "Frequently Asked Questions",
     subtitle: "Get answers to common questions about our services and process",
+    stillHaveQuestions: "Still Have Questions?",
+    contactTeam: "Our team is here to help you understand our process and answer any questions you may have.",
     questions: {
       tvcTypes: {
         question: "What Types of TVC Projects Does Mercury Solutions Specialize In?",

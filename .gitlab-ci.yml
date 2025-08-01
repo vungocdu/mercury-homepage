@@ -17,9 +17,10 @@ build:
   image: node:18-alpine
   only:
     - main
-  script:
+  before_script:
     # Install dependencies
-    - npm ci --only=production
+    - npm ci
+  script:
     # Build the Next.js app with static export
     - npm run build
   artifacts:

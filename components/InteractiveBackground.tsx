@@ -44,7 +44,7 @@ export default function InteractiveBackground({
                 scaleMobile: 1.00,
                 color: 0x3b82f6,
                 color2: 0x8b5cf6,
-                backgroundColor: 0x0f0f23,
+                backgroundColor: 0xffffff,
                 size: 1.00,
                 spacing: 15.00
               })
@@ -61,7 +61,7 @@ export default function InteractiveBackground({
                   scale: 1.00,
                   scaleMobile: 1.00,
                   color: 0x3b82f6,
-                  backgroundColor: 0x0f0f23,
+                  backgroundColor: 0xffffff,
                   points: 8.00,
                   maxDistance: 25.00,
                   spacing: 20.00
@@ -99,7 +99,7 @@ export default function InteractiveBackground({
                   scaleMobile: 1.00,
                   color: 0x3b82f6,
                   color2: 0x8b5cf6,
-                  backgroundColor: 0x0f0f23,
+                  backgroundColor: 0xffffff,
                   size: 3.00,
                   spacing: 30.00,
                   showLines: true
@@ -145,7 +145,7 @@ export default function InteractiveBackground({
       ref={vantaRef}
       className={`absolute inset-0 z-0 ${className}`}
       style={{
-        background: 'linear-gradient(135deg, #0f0f23 0%, #1e1e3a 50%, #0f0f23 100%)'
+        background: 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%)'
       }}
     />
   )

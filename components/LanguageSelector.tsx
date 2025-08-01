@@ -35,12 +35,11 @@ export default function LanguageSelector() {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 px-3 py-2 text-sm text-foreground hover:text-primary transition-colors duration-200"
+        className="flex items-center justify-center w-10 h-10 rounded-lg text-foreground hover:text-primary hover:bg-accent transition-all duration-200"
+        title={`Current language: ${currentLanguage?.name}`}
       >
-        <Globe className="w-4 h-4" />
-        <span className="hidden sm:inline">{currentLanguage?.flag}</span>
-        <span className="hidden md:inline">{currentLanguage?.name}</span>
-        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+        <Globe className="w-5 h-5" />
+        <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 
       {isOpen && (

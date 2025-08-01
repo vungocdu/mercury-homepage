@@ -102,22 +102,22 @@ export default function TechnologyStack() {
   }
 
   return (
-    <section id="technology" className="section-padding relative overflow-hidden">
+    <section id="technology" className="section-white relative overflow-hidden">
       <div className="container-custom relative z-10">
         <div className="text-center mb-16 fade-in-up">
-          <div className="inline-flex items-center space-x-2 bg-card/50 backdrop-blur-sm px-4 py-2 rounded-full border border-border/20 mb-6">
-            <Cpu className="w-4 h-4 text-primary animate-pulse" />
-            <span className="text-sm font-medium text-foreground">Advanced Technology Stack</span>
+          <div className="inline-flex items-center space-x-2 professional-card px-4 py-2 rounded-full mb-6">
+            <Cpu className="w-4 h-4" style={{ color: 'hsl(var(--link-primary))' }} />
+            <span className="text-sm font-medium" style={{ color: 'hsl(var(--text-primary))' }}>Advanced Technology Stack</span>
           </div>
           
           <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-            <span className="text-foreground">Our</span>{' '}
-            <span className="cyber-glow bg-gradient-to-r from-cyan-400 via-purple-500 to-green-400 bg-clip-text text-transparent">
+            <span style={{ color: 'hsl(var(--text-primary))' }}>Our</span>{' '}
+            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
               Technology Stack
             </span>
           </h2>
           
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: 'hsl(var(--text-secondary))' }}>
             Cutting-edge technologies and frameworks that power our AI solutions and digital innovations. 
             Always evolving, always improving.
           </p>
@@ -127,45 +127,58 @@ export default function TechnologyStack() {
           {techStacks.map((stack, index) => (
             <div 
               key={index} 
-              className="digital-card p-6 hover:scale-105 transition-all duration-500 fade-in-scale relative overflow-hidden"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:scale-105"
+              style={{
+                backgroundColor: 'hsl(var(--card-bg))',
+                border: '1px solid hsl(var(--card-border))',
+                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                animationDelay: `${index * 0.1}s`
+              }}
             >
-              {/* Category Icon */}
-              <div className="flex items-center mb-6">
-                <div className={`w-12 h-12 bg-gradient-to-br ${getIconGradient(stack.category)} rounded-xl flex items-center justify-center animate-float mr-4`} style={{ animationDelay: `${index * 0.3}s` }}>
-                  <Zap className="w-6 h-6 text-white" />
+              <div className="p-6 relative z-10">
+                {/* Category Icon */}
+                <div className="flex items-center mb-6">
+                  <div className={`w-12 h-12 bg-gradient-to-br ${getIconGradient(stack.category)} rounded-xl flex items-center justify-center animate-float mr-4`} style={{ animationDelay: `${index * 0.3}s` }}>
+                    <Zap className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold" style={{ color: 'hsl(var(--text-primary))' }}>
+                    {stack.category}
+                  </h3>
                 </div>
-                <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
-                  {stack.category}
-                </h3>
-              </div>
-              
-              <div className="flex flex-wrap gap-2">
-                {stack.items.map((item, itemIndex) => (
-                  <span
-                    key={itemIndex}
-                    className={`px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 ${getTypeColor(item.type)}`}
-                  >
-                    {item.name}
-                  </span>
-                ))}
+                
+                <div className="flex flex-wrap gap-2">
+                  {stack.items.map((item, itemIndex) => (
+                    <span
+                      key={itemIndex}
+                      className={`px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 ${getTypeColor(item.type)}`}
+                      style={{ color: 'hsl(var(--text-primary))' }}
+                    >
+                      {item.name}
+                    </span>
+                  ))}
+                </div>
               </div>
               
               {/* Hover effect overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
             </div>
           ))}
         </div>
 
         {/* Enhanced Additional Technologies */}
         <div className="mt-16 relative">
-          <div className="ai-gradient-bg rounded-3xl p-8 lg:p-12 relative overflow-hidden">
+          <div className="rounded-3xl p-8 lg:p-12 relative overflow-hidden"
+               style={{
+                 backgroundColor: 'hsl(var(--card-bg))',
+                 border: '1px solid hsl(var(--card-border))',
+                 boxShadow: '0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
+               }}>
             <div className="relative z-10">
               <div className="text-center mb-8">
-                <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
+                <h3 className="text-2xl lg:text-3xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>
                   Additional Technologies & Innovation Tools
                 </h3>
-                <p className="text-white/80 max-w-2xl mx-auto">
+                <p className="max-w-2xl mx-auto" style={{ color: 'hsl(var(--text-secondary))' }}>
                   Advanced monitoring, testing, and integration solutions that ensure optimal performance
                 </p>
               </div>
@@ -178,14 +191,14 @@ export default function TechnologyStack() {
                   { category: 'Integration', tools: ['RabbitMQ', 'OpenAPI', 'REST APIs'] }
                 ].map((section, index) => (
                   <div key={index} className="group">
-                    <h4 className="font-semibold text-white mb-3 flex items-center">
-                      <div className="w-2 h-2 bg-white/60 rounded-full mr-2 animate-pulse"></div>
+                    <h4 className="font-semibold mb-3 flex items-center" style={{ color: 'hsl(var(--text-primary))' }}>
+                      <div className="w-2 h-2 rounded-full mr-2 animate-pulse" style={{ backgroundColor: 'hsl(var(--link-primary))' }}></div>
                       {section.category}
                     </h4>
                     <div className="space-y-2">
                       {section.tools.map((tool, toolIndex) => (
-                        <div key={toolIndex} className="text-sm text-white/80 hover:text-white transition-colors duration-200 flex items-center">
-                          <div className="w-1 h-1 bg-white/40 rounded-full mr-2"></div>
+                        <div key={toolIndex} className="text-sm hover:text-primary transition-colors duration-200 flex items-center" style={{ color: 'hsl(var(--text-secondary))' }}>
+                          <div className="w-1 h-1 rounded-full mr-2" style={{ backgroundColor: 'hsl(var(--text-secondary))' }}></div>
                           {tool}
                         </div>
                       ))}

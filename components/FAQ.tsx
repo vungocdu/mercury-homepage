@@ -1,17 +1,16 @@
 'use client'
 
 import { useState } from 'react'
-import { Plus, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Plus, X } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import TextReveal from './TextReveal'
 import ClientOnly from './ClientOnly'
 
 export default function FAQ() {
+  const [openIndex, setOpenIndex] = useState(-1)
   const { translations } = useLanguage()
-  const [openIndex, setOpenIndex] = useState(0)
 
-  // Get FAQ data from translations
   const faqs = [
     {
       question: translations.faq.questions.tvcTypes.question,
@@ -123,14 +122,14 @@ export default function FAQ() {
               <ClientOnly>
                 <TextReveal delay={0.6}>
                   <h3 className="text-2xl font-bold mb-4 text-white">
-                    {translations.tvc?.faq?.stillHaveQuestions || "Still Have Questions?"}
+                    {translations.faq.stillHaveQuestions || "Still Have Questions?"}
                   </h3>
                 </TextReveal>
               </ClientOnly>
               <ClientOnly>
                 <TextReveal delay={0.7}>
                   <p className="text-lg mb-6 opacity-90 text-white">
-                    {translations.tvc?.faq?.contactTeam || "Our team is here to help you understand our TVC production process and answer any questions you may have."}
+                    {translations.faq.contactTeam || "Our team is here to help you understand our process and answer any questions you may have."}
                   </p>
                 </TextReveal>
               </ClientOnly>

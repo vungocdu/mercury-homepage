@@ -32,7 +32,7 @@ export default function Hero() {
   ]
 
   return (
-    <section id="home" className="hero-bg pt-16 min-h-screen relative overflow-hidden">
+    <section id="home" className="hero-bg-white pt-16 min-h-screen relative overflow-hidden">
       {/* Interactive 3D Background */}
       <InteractiveBackground effect="globe" />
       

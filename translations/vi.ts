@@ -26,6 +26,11 @@ export const vi = {
   services: {
     title: "Dịch vụ của chúng tôi",
     subtitle: "Chúng tôi cung cấp giải pháp công nghệ toàn diện để giúp doanh nghiệp đạt được chuyển đổi số và xuất sắc vận hành.",
+    ai: {
+      title: "AI & Học máy",
+      description: "Giải pháp trí tuệ nhân tạo và học máy tiên tiến để tự động hóa quy trình và thu thập thông tin từ dữ liệu.",
+      features: ["Phân tích dự đoán", "Xử lý ngôn ngữ tự nhiên", "Thị giác máy tính", "Ra quyết định tự động"]
+    },
     design: {
       title: "Thiết kế & Khái niệm",
       description: "Bản đồ trải nghiệm, hành trình người dùng và luồng người dùng. Kiến trúc thông tin. Wireframe UX. Mockup tương tác. Tài sản.",
@@ -55,6 +60,31 @@ export const vi = {
       title: "Phát triển Backend",
       description: "Phát triển dựa trên framework. Tích hợp với dịch vụ bên thứ ba. Làm việc với cơ sở dữ liệu. Kiến trúc và thiết kế tải cao.",
       features: ["Phát triển API", "Thiết kế cơ sở dữ liệu", "Microservices", "Kiến trúc hệ thống"]
+    },
+    automation: {
+      title: "Tự động hóa quy trình",
+      description: "Tối ưu hóa hoạt động kinh doanh với giải pháp tự động hóa thông minh giảm công việc thủ công và tăng hiệu quả.",
+      features: ["Tự động hóa quy trình", "Triển khai RPA", "Tối ưu hóa quy trình kinh doanh", "Dịch vụ tích hợp"]
+    },
+    vision: {
+      title: "Thị giác máy tính",
+      description: "Giải pháp thị giác máy tính tiên tiến cho nhận dạng hình ảnh, phát hiện đối tượng và phân tích dữ liệu hình ảnh.",
+      features: ["Nhận dạng hình ảnh", "Phát hiện đối tượng", "Nhận dạng khuôn mặt", "Phân tích hình ảnh"]
+    },
+    integration: {
+      title: "Tích hợp hệ thống",
+      description: "Tích hợp liền mạch các hệ thống và ứng dụng khác nhau để tạo giải pháp kinh doanh thống nhất.",
+      features: ["Tích hợp API", "Đồng bộ hóa dữ liệu", "Di chuyển hệ thống cũ", "Kết nối thời gian thực"]
+    },
+    security: {
+      title: "Bảo mật mạng",
+      description: "Giải pháp bảo mật toàn diện để bảo vệ tài sản số và đảm bảo tuân thủ quyền riêng tư dữ liệu.",
+      features: ["Phát hiện mối đe dọa", "Mã hóa dữ liệu", "Kiểm soát truy cập", "Kiểm toán bảo mật"]
+    },
+    optimization: {
+      title: "Tối ưu hóa hiệu suất",
+      description: "Tối ưu hóa hiệu suất hệ thống, hiệu quả cơ sở dữ liệu và tốc độ ứng dụng để trải nghiệm người dùng tốt hơn.",
+      features: ["Tối ưu hóa cơ sở dữ liệu", "Hiệu suất mã", "Cân bằng tải", "Chiến lược cache"]
     },
     tvc: {
       title: "TVC & Nghệ thuật số",
@@ -221,46 +251,48 @@ export const vi = {
   faq: {
     title: "Câu hỏi thường gặp",
     subtitle: "Nhận câu trả lời cho các câu hỏi phổ biến về dịch vụ và quy trình của chúng tôi",
+    stillHaveQuestions: "Vẫn còn câu hỏi?",
+    contactTeam: "Đội ngũ của chúng tôi sẵn sàng giúp bạn hiểu quy trình và trả lời mọi câu hỏi.",
     questions: {
       tvcTypes: {
-        question: "Mercury Solutions chuyên về những loại dự án TVC nào?",
-        answer: "Mercury Solutions chuyên về nhiều loại dự án TVC bao gồm video thương hiệu doanh nghiệp, truyền thông nội bộ, ra mắt sản phẩm và ghi hình sự kiện. Chúng tôi làm việc trên nhiều ngành công nghiệp, tạo nội dung hấp dẫn thúc đẩy kết quả cho các phòng ban HR, Admin và Purchasing."
+        question: "Mercury Solutions Chuyên Về Các Loại Dự Án TVC Nào?",
+        answer: "Mercury Solutions chuyên về nhiều loại dự án TVC bao gồm video thương hiệu doanh nghiệp, truyền thông nội bộ, ra mắt sản phẩm và ghi hình sự kiện. Chúng tôi làm việc trên nhiều ngành công nghiệp, tạo ra nội dung hấp dẫn mang lại kết quả cho các phòng ban HR, Admin và Purchasing."
       },
       approach: {
-        question: "Mercury Solutions tiếp cận sản xuất TVC như thế nào?",
-        answer: "Chúng tôi áp dụng cách tiếp cận chiến lược, hợp tác trong sản xuất TVC. Bắt đầu với tư vấn chuyên sâu, chúng tôi phát triển khái niệm phù hợp với mục tiêu, thực hiện với xuất sắc kỹ thuật và đảm bảo hậu kỳ chất lượng cao. Mọi dự án đều được hưởng lợi từ chuyên môn end-to-end của chúng tôi."
+        question: "Mercury Solutions Tiếp Cận Sản Xuất TVC Như Thế Nào?",
+        answer: "Chúng tôi áp dụng phương pháp chiến lược, hợp tác trong sản xuất TVC. Bắt đầu với tư vấn chuyên sâu, chúng tôi phát triển các khái niệm phù hợp với mục tiêu, thực hiện với kỹ thuật xuất sắc và đảm bảo hậu kỳ chất lượng cao. Mọi dự án đều được hưởng lợi từ chuyên môn end-to-end của chúng tôi."
       },
       custom: {
-        question: "Mercury Solutions có thể xử lý giải pháp TVC tùy chỉnh không?",
-        answer: "Chúng tôi tự hào tạo ra giải pháp TVC tùy chỉnh đáp ứng nhu cầu cụ thể của bạn. Dù bạn cần một loạt video đào tạo, phim thương hiệu doanh nghiệp hay trưng bày sản phẩm, chúng tôi điều chỉnh cách tiếp cận để cung cấp chính xác những gì bạn cần."
+        question: "Mercury Solutions Có Thể Xử Lý Các Giải Pháp TVC Tùy Chỉnh Không?",
+        answer: "Chúng tôi tự hào tạo ra các giải pháp TVC tùy chỉnh đáp ứng nhu cầu cụ thể của bạn. Dù bạn cần một loạt video đào tạo, phim thương hiệu doanh nghiệp hay trưng bày sản phẩm, chúng tôi điều chỉnh phương pháp để mang lại chính xác những gì bạn cần."
       },
       equipment: {
-        question: "Mercury Solutions sử dụng thiết bị và công nghệ gì?",
-        answer: "Chúng tôi sử dụng thiết bị tiên tiến bao gồm camera 4K và 6K, hệ thống ánh sáng nâng cao và phần mềm hậu kỳ hàng đầu như Davinci Resolve. Khả năng kỹ thuật của chúng tôi đảm bảo đầu ra chất lượng cao nhất cho dự án TVC của bạn."
+        question: "Mercury Solutions Sử Dụng Thiết Bị Và Công Nghệ Gì?",
+        answer: "Chúng tôi sử dụng thiết bị tiên tiến bao gồm camera 4K và 6K, hệ thống ánh sáng nâng cao và phần mềm hậu kỳ hàng đầu như Davinci Resolve. Khả năng kỹ thuật của chúng tôi đảm bảo chất lượng đầu ra cao nhất cho các dự án TVC của bạn."
       },
       timeline: {
-        question: "Một dự án TVC điển hình mất bao lâu?",
-        answer: "Thời gian dự án thay đổi tùy thuộc vào độ phức tạp và phạm vi. Một video doanh nghiệp đơn giản có thể mất 2-3 tuần, trong khi TVC phức tạp với nhiều địa điểm và hiệu ứng hậu kỳ có thể mất 6-8 tuần. Chúng tôi cung cấp thời gian chi tiết trong giai đoạn tư vấn."
+        question: "Một Dự Án TVC Điển Hình Mất Bao Lâu?",
+        answer: "Thời gian dự án thay đổi tùy thuộc vào độ phức tạp và phạm vi. Video doanh nghiệp đơn giản có thể mất 2-3 tuần, trong khi TVC phức tạp với nhiều địa điểm và hiệu ứng hậu kỳ có thể mất 6-8 tuần. Chúng tôi cung cấp lịch trình chi tiết trong giai đoạn tư vấn."
       },
       difference: {
-        question: "Điều gì làm cho Mercury Solutions khác biệt với các công ty sản xuất TVC khác?",
-        answer: "Sự kết hợp độc đáo giữa chuyên môn kỹ thuật, xuất sắc sáng tạo và hiểu biết kinh doanh chiến lược làm chúng tôi nổi bật. Chúng tôi không chỉ tạo video đẹp - chúng tôi tạo nội dung chiến lược thúc đẩy kết quả kinh doanh và tăng cường định vị thương hiệu."
+        question: "Điều Gì Làm Cho Mercury Solutions Khác Biệt So Với Các Công Ty Sản Xuất TVC Khác?",
+        answer: "Sự kết hợp độc đáo giữa chuyên môn kỹ thuật, sự xuất sắc sáng tạo và hiểu biết kinh doanh chiến lược làm cho chúng tôi khác biệt. Chúng tôi không chỉ tạo ra những video đẹp - chúng tôi tạo ra nội dung chiến lược thúc đẩy kết quả kinh doanh và nâng tầm định vị thương hiệu."
       },
       budget: {
-        question: "Phạm vi ngân sách điển hình cho dự án TVC là bao nhiêu?",
+        question: "Phạm vi ngân sách điển hình cho các dự án TVC là gì?",
         answer: "Ngân sách dự án TVC thay đổi đáng kể dựa trên phạm vi, độ phức tạp và yêu cầu sản xuất. Video doanh nghiệp đơn giản thường từ $5,000-$15,000, trong khi sản xuất TVC cao cấp có thể từ $20,000-$100,000+. Chúng tôi cung cấp chi tiết chi phí trong quá trình tư vấn để đảm bảo minh bạch và giá trị."
       },
       revisions: {
         question: "Bao nhiêu lần chỉnh sửa được bao gồm trong dịch vụ TVC của bạn?",
-        answer: "Chúng tôi bao gồm 2-3 vòng chỉnh sửa trong gói TVC tiêu chuẩn để đảm bảo sự hài lòng hoàn toàn của bạn. Chỉnh sửa bổ sung có sẵn với mức giá hợp lý. Chúng tôi tin vào phản hồi hợp tác để đạt được sản phẩm cuối cùng hoàn hảo đáp ứng tầm nhìn và mục tiêu của bạn."
+        answer: "Chúng tôi bao gồm 2-3 vòng chỉnh sửa trong các gói TVC tiêu chuẩn để đảm bảo sự hài lòng hoàn toàn. Chỉnh sửa bổ sung có sẵn với tỷ lệ hợp lý. Chúng tôi tin vào phản hồi hợp tác để đạt được sản phẩm cuối cùng hoàn hảo đáp ứng tầm nhìn và mục tiêu của bạn."
       },
       delivery: {
-        question: "Bạn giao nội dung TVC cuối cùng ở định dạng nào?",
-        answer: "Chúng tôi giao dự án TVC cuối cùng ở nhiều định dạng bao gồm file HD/4K sẵn sàng phát sóng, phiên bản tối ưu cho web, định dạng mạng xã hội và phiên bản thân thiện với thiết bị di động. Chúng tôi đảm bảo tương thích trên tất cả nền tảng và cung cấp thông số kỹ thuật chi tiết cho mỗi định dạng giao hàng."
+        question: "Bạn giao TVC cuối cùng ở định dạng nào?",
+        answer: "Chúng tôi giao các dự án TVC cuối cùng ở nhiều định dạng bao gồm file HD/4K sẵn sàng phát sóng, phiên bản tối ưu web, định dạng mạng xã hội và phiên bản thân thiện di động. Chúng tôi đảm bảo tương thích trên tất cả nền tảng và cung cấp thông số kỹ thuật chi tiết cho mỗi định dạng giao hàng."
       },
       rights: {
         question: "Ai sở hữu quyền đối với nội dung TVC sau khi sản xuất?",
-        answer: "Sau khi thanh toán đầy đủ, bạn sở hữu tất cả quyền đối với nội dung TVC cuối cùng. Chúng tôi chỉ giữ quyền để trưng bày công việc trong portfolio của chúng tôi. Chúng tôi cung cấp thỏa thuận cấp phép rõ ràng và có thể thảo luận quyền độc quyền hoặc điều khoản sử dụng mở rộng dựa trên nhu cầu cụ thể của bạn."
+        answer: "Sau khi thanh toán đầy đủ, bạn sở hữu tất cả quyền đối với nội dung TVC cuối cùng. Chúng tôi chỉ giữ quyền để trưng bày công việc trong portfolio. Chúng tôi cung cấp thỏa thuận cấp phép rõ ràng và có thể thảo luận quyền độc quyền hoặc điều khoản sử dụng mở rộng dựa trên nhu cầu cụ thể của bạn."
       }
     }
   },

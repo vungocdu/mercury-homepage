@@ -49,8 +49,7 @@ const TabSelectNavigation = ({ navigation, activeTab, setActiveTab }: {
 
   return (
     <div ref={containerRef} className="relative">
-      <div className="flex items-center space-x-1 p-1 rounded-xl" 
-           style={{ backgroundColor: 'hsl(var(--bg-secondary))' }}>
+      <div className="flex items-center space-x-1 p-1 rounded-xl bg-gray-100/50">
         {navigation.map((item) => {
           const isActive = activeTab === item.name
           return (
@@ -60,15 +59,11 @@ const TabSelectNavigation = ({ navigation, activeTab, setActiveTab }: {
               className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
                 isActive ? 'text-white' : 'text-gray-600 hover:text-gray-900'
               }`}
-              style={{
-                color: isActive ? 'white' : 'hsl(var(--text-secondary))'
-              }}
             >
               {isActive && (
                 <motion.div
                   layoutId="activeTab"
-                  className="absolute inset-0 rounded-lg"
-                  style={{ backgroundColor: 'hsl(var(--link-primary))' }}
+                  className="absolute inset-0 rounded-lg bg-mercury-blue-600 active-tab-shadow"
                   transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                 />
               )}
@@ -102,11 +97,8 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#home" className="flex items-center space-x-3">
+            <a href="#home" className="flex items-center">
               <MercuryLogo className="w-10 h-12 sm:w-12 sm:h-14" />
-              <span className="text-xl sm:text-2xl font-bold" style={{ color: 'hsl(var(--text-primary))' }}>
-                Solutions
-              </span>
             </a>
           </div>
 
@@ -120,25 +112,11 @@ export default function Header() {
           </nav>
 
           {/* Language Selector & CTA */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-4">
             <LanguageSelector />
             <a 
               href="#contact" 
-              className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2"
-              style={{
-                backgroundColor: 'hsl(var(--link-primary))',
-                color: 'white',
-                boxShadow: '0 4px 14px 0 rgba(46, 91, 255, 0.25)',
-                border: '1px solid transparent'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = 'hsl(var(--link-hover))';
-                e.currentTarget.style.boxShadow = '0 6px 20px 0 rgba(30, 58, 138, 0.35)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'hsl(var(--link-primary))';
-                e.currentTarget.style.boxShadow = '0 4px 14px 0 rgba(46, 91, 255, 0.25)';
-              }}
+              className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-mercury-blue-600 hover:bg-mercury-blue-700 text-white btn-shadow"
             >
               {translations.common.getStarted}
             </a>
@@ -147,86 +125,108 @@ export default function Header() {
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
             <LanguageSelector />
-            <button
+            <motion.button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="nav-link p-2"
+              className="mobile-menu-btn p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-all duration-200"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+              <AnimatePresence mode="wait">
+                {isMenuOpen ? (
+                  <motion.div
+                    key="close"
+                    initial={{ rotate: -90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: 90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <X size={24} />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="menu"
+                    initial={{ rotate: 90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: -90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Menu size={24} />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.button>
           </div>
         </div>
 
-        {/* Mobile Navigation with Tab Select */}
+        {/* Mobile Navigation */}
         <ClientOnly>
           <AnimatePresence>
             {isMenuOpen && (
-              <motion.div 
-                className="md:hidden"
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-              >
-              <div className="professional-card px-4 pt-4 pb-6 space-y-4 border-t">
-                {/* Mobile Tab Select */}
-                <div className="mb-4">
-                  <TabSelectNavigation 
-                    navigation={navigation}
-                    activeTab={activeTab}
-                    setActiveTab={setActiveTab}
-                  />
-                </div>
-                
-                {/* Mobile Navigation Links */}
-                <div className="space-y-2">
-                  {navigation.map((item) => (
-                    <motion.a
-                      key={item.name}
-                      href={item.href}
-                      className="nav-link block px-3 py-3 text-sm font-medium transition-colors duration-200 border-l-2 border-transparent hover:border-l-2"
-                      style={{ 
-                        borderLeftColor: 'hsl(var(--link-primary))',
-                        borderLeftWidth: '2px'
-                      }}
+              <>
+                {/* Overlay */}
+                <motion.div
+                  className="md:hidden mobile-menu-overlay"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  onClick={() => setIsMenuOpen(false)}
+                />
+                {/* Menu Content */}
+                <motion.div 
+                  className="md:hidden mobile-menu-content"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
+                >
+                <div className="px-4 py-6 space-y-4">
+                  {/* Mobile Navigation Links */}
+                  <div className="space-y-1">
+                    {navigation.map((item) => (
+                      <motion.a
+                        key={item.name}
+                        href={item.href}
+                        className={`mobile-nav-item block px-4 py-3 text-sm font-medium transition-all duration-200 rounded-lg relative ${
+                          activeTab === item.name ? 'text-white' : 'text-gray-700 hover:text-gray-900'
+                        }`}
+                        onClick={() => {
+                          setActiveTab(item.name)
+                          setIsMenuOpen(false)
+                        }}
+                        whileHover={{ x: 4 }}
+                        whileTap={{ scale: 0.98 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        {activeTab === item.name && (
+                          <motion.div
+                            layoutId="mobileActiveTab"
+                            className="absolute inset-0 rounded-lg bg-mercury-blue-600 active-tab-shadow"
+                            transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                          />
+                        )}
+                        <span className="relative z-10">{item.name}</span>
+                      </motion.a>
+                    ))}
+                  </div>
+                  
+                  {/* Mobile CTA Button */}
+                  <div className="pt-4 border-t border-gray-100">
+                    <motion.a 
+                      href="#contact" 
+                      className="inline-flex items-center justify-center w-full px-4 py-3 text-sm font-medium rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-mercury-blue-600 hover:bg-mercury-blue-700 text-white btn-shadow"
                       onClick={() => setIsMenuOpen(false)}
-                      whileHover={{ x: 4 }}
-                      transition={{ duration: 0.2 }}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
                     >
-                      {item.name}
+                      {translations.common.getStarted}
                     </motion.a>
-                  ))}
+                  </div>
                 </div>
-                
-                {/* Mobile CTA Button */}
-                <div className="pt-4">
-                  <motion.a 
-                    href="#contact" 
-                    className="inline-flex items-center justify-center w-full px-6 py-3 text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2"
-                    style={{
-                      backgroundColor: 'hsl(var(--link-primary))',
-                      color: 'white',
-                      boxShadow: '0 4px 14px 0 rgba(46, 91, 255, 0.25)',
-                      border: '1px solid transparent'
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = 'hsl(var(--link-hover))';
-                      e.currentTarget.style.boxShadow = '0 6px 20px 0 rgba(30, 58, 138, 0.35)';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = 'hsl(var(--link-primary))';
-                      e.currentTarget.style.boxShadow = '0 4px 14px 0 rgba(46, 91, 255, 0.25)';
-                    }}
-                    onClick={() => setIsMenuOpen(false)}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    {translations.common.getStarted}
-                  </motion.a>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+              </motion.div>
+              </>
+            )}
+          </AnimatePresence>
         </ClientOnly>
       </div>
     </header>

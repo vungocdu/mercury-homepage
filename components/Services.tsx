@@ -111,43 +111,64 @@ export default function Services() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group service-card p-8 hover:scale-105 transition-all duration-500 fade-in-scale relative overflow-hidden"
+                className="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:scale-105"
+                style={{
+                  backgroundColor: 'hsl(var(--card-bg))',
+                  border: '1px solid hsl(var(--card-border))',
+                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+                }}
               >
-                {/* Category Badge */}
-                <div className="flex items-center justify-between mb-6">
-                  <span className="px-3 py-1 text-xs rounded-full professional-card" style={{ color: 'hsl(var(--text-secondary))' }}>
-                    {service.title.split(' ')[0]}
-                  </span>
+                {/* Service Card Content */}
+                <div className="p-8 relative z-10">
+                  {/* Category Badge */}
+                  <div className="flex items-center justify-between mb-6">
+                    <span className="px-3 py-1 text-xs rounded-full font-medium" 
+                          style={{ 
+                            backgroundColor: 'hsl(var(--bg-primary))',
+                            color: 'hsl(var(--text-secondary))'
+                          }}>
+                      {service.title.split(' ')[0]}
+                    </span>
+                  </div>
+
+                  {/* Service Icon */}
+                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
+                       style={{ backgroundColor: service.color }}>
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+
+                  {/* Service Content */}
+                  <h3 className="text-xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>
+                    {service.title}
+                  </h3>
+                  
+                  <p className="mb-6 leading-relaxed" style={{ color: 'hsl(var(--text-secondary))' }}>
+                    {service.description}
+                  </p>
+
+                  {/* Features List */}
+                  <ul className="space-y-3">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm transition-colors duration-200" style={{ color: 'hsl(var(--text-secondary))' }}>
+                        <div className="w-1.5 h-1.5 rounded-full mr-3 flex-shrink-0" style={{ backgroundColor: service.color }}></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-
-                {/* Service Icon */}
-                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
-                     style={{ backgroundColor: service.color }}>
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
-
-                {/* Service Content */}
-                <h3 className="text-xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>
-                  {service.title}
-                </h3>
-                
-                <p className="text-gray-600 mb-6 leading-relaxed" style={{ color: 'hsl(var(--text-secondary))' }}>
-                  {service.description}
-                </p>
-
-                {/* Features List */}
-                <ul className="space-y-3">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm group-hover:text-gray-100 transition-colors duration-200" style={{ color: 'hsl(var(--text-secondary))' }}>
-                      <div className="w-1.5 h-1.5 rounded-full mr-3 flex-shrink-0" style={{ backgroundColor: service.color }}></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
 
                 {/* Hover Effect Overlay */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"
-                     style={{ backgroundColor: `${service.color}10` }}>                </div>
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"
+                     style={{ 
+                       background: `linear-gradient(135deg, ${service.color}08 0%, ${service.color}04 100%)`
+                     }}></div>
+                
+                {/* Subtle border glow on hover */}
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                     style={{ 
+                       border: `1px solid ${service.color}20`,
+                       boxShadow: `0 0 0 1px ${service.color}10`
+                     }}></div>
               </motion.div>
             </TextReveal>
             </ClientOnly>
@@ -157,7 +178,12 @@ export default function Services() {
         {/* Enhanced Stats Section */}
         <ClientOnly>
           <TextReveal className="mt-20" delay={0.5}>
-            <div className="professional-card p-8 rounded-2xl">
+            <div className="rounded-3xl p-8 lg:p-12 relative overflow-hidden"
+                 style={{
+                   backgroundColor: 'hsl(var(--card-bg))',
+                   border: '1px solid hsl(var(--card-border))',
+                   boxShadow: '0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
+                 }}>
               <ClientOnly>
                 <TextReveal delay={0.6}>
                   <h3 className="text-2xl font-bold text-center mb-8" style={{ color: 'hsl(var(--text-primary))' }}>
@@ -171,7 +197,11 @@ export default function Services() {
                 <ClientOnly key={index}>
                   <TextReveal delay={0.7 + index * 0.1}>
                   <div className="text-center group">
-                    <div className="w-16 h-16 professional-card rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"
+                         style={{
+                           backgroundColor: 'hsl(var(--bg-primary))',
+                           border: '1px solid hsl(var(--card-border))'
+                         }}>
                       <stat.icon className="w-8 h-8" style={{ color: 'hsl(var(--link-primary))' }} />
                     </div>
                     <div className="text-3xl font-bold mb-2" style={{ color: 'hsl(var(--link-primary))' }}>

@@ -9,7 +9,7 @@ The `.gitlab-ci.yml` file contains two stages:
 
 ### 1. Build Stage
 - Uses Node.js 18 Alpine image
-- Installs production dependencies
+- Installs all dependencies (including devDependencies for build)
 - Builds the Next.js app with static export
 - Creates artifacts in the `out/` directory
 
@@ -26,6 +26,7 @@ The `.gitlab-ci.yml` file contains two stages:
 output: 'export',        // Enables static export
 trailingSlash: true,     // Required for static hosting
 images: {
+  domains: ['minova.vn'],
   unoptimized: true,     // Required for static export
 }
 ```

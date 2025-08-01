@@ -9,9 +9,9 @@ const ScrollLine = ({ isActive, isGlowing }: { isActive: boolean; isGlowing: boo
     <motion.div
       className={`transition-all duration-300 ease-out h-px ${
         isGlowing 
-          ? "w-3 bg-mercury-600/70 shadow-[0_0_3px_rgba(14,165,233,0.5)]" 
+          ? "w-3 bg-mercury-blue-500/70 shadow-[0_0_3px_rgba(46,91,255,0.5)]" 
           : isActive 
-            ? "w-2.5 bg-gray-400/80" 
+            ? "w-2.5 bg-mercury-blue-400/80" 
             : "w-1.5 bg-gray-400/30"
       }`}
     />
@@ -37,8 +37,6 @@ export default function ScrollIndicator() {
       } else {
         setIsVisible(false)
       }
-      
-
     }
 
     // Initial calculation

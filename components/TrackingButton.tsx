@@ -8,6 +8,7 @@ interface TrackingButtonProps {
   href?: string;
   onClick?: () => void;
   className?: string;
+  style?: React.CSSProperties;
   trackingAction: 'click_cta' | 'view_portfolio' | 'contact_form' | 'view_tvc_page';
   trackingLabel?: string;
   conversionType?: 'lead' | 'contact' | 'portfolio_view';
@@ -19,6 +20,7 @@ export default function TrackingButton({
   href,
   onClick,
   className = '',
+  style,
   trackingAction,
   trackingLabel,
   conversionType,
@@ -47,6 +49,7 @@ export default function TrackingButton({
       <a 
         href={href} 
         className={className}
+        style={style}
         onClick={handleClick}
       >
         {children}
@@ -57,6 +60,7 @@ export default function TrackingButton({
   return (
     <button 
       className={className}
+      style={style}
       onClick={handleClick}
     >
       {children}

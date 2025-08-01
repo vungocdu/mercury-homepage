@@ -1,5 +1,118 @@
 # Memory Log
 
+## 2024-12-19 - TVC Page Redesign with Dynamic Mercury Colors
+
+### Work Done
+- **Redesigned TVC page** with vibrant and dynamic color scheme using Mercury Solutions Pantone colors
+- **Enhanced visual appeal** with gradient backgrounds, animations, and modern UI elements
+- **Implemented Framer Motion animations** for smooth scroll-triggered effects
+- **Added comprehensive Mercury color system** with all Pantone variations
+
+### Technical Implementation
+- **Mercury Color Palette Integration**: 
+  - Mercury Blue (2925 C): #2E5BFF - Primary brand color
+  - Mercury Gold (116 C): #FFD60A - Accent color
+  - Deep Mercury (7461 C): #1E3A8A - Deep brand color
+  - Clean White (Cool Gray 1 C): #F8F9FA - Background color
+  - Professional Gray (Cool Gray 9 C): #6C757D - Text color
+
+- **Enhanced Visual Effects**:
+  - Animated gradient backgrounds with floating elements
+  - Backdrop blur effects with Safari compatibility
+  - Smooth hover animations and transitions
+  - Gradient text effects for headings
+  - Enhanced shadow and border effects
+
+- **Framer Motion Integration**:
+  - Scroll-triggered animations for all sections
+  - Staggered animations for service cards
+  - Hover effects with scale and transform animations
+  - Progressive reveal animations for content
+
+### Configuration Files Created/Modified
+1. **`app/tvc/TVCPageClient.tsx`** - Complete redesign:
+   - Added dynamic animated backgrounds with floating elements
+   - Implemented gradient color schemes for all sections
+   - Enhanced service cards with gradient icons and hover effects
+   - Added motion animations for all interactive elements
+   - Improved CTA sections with vibrant color schemes
+   - Added Sparkles, Star, ArrowRight, Phone icons for enhanced UX
+
+2. **`app/globals.css`** - Added comprehensive Mercury color system:
+   - Complete Mercury Blue color palette (50-900)
+   - Complete Mercury Gold color palette (50-900)
+   - Gradient classes for all Mercury color combinations
+   - Enhanced animation classes with pulse effects
+   - Backdrop blur with Safari compatibility (-webkit-backdrop-filter)
+   - Enhanced shadow, border, and transition classes
+   - Responsive design classes for all screen sizes
+
+### Key Visual Enhancements
+- **Hero Section**: 
+  - Animated gradient background with floating elements
+  - Gradient text effects for main heading
+  - Enhanced stats with gradient icons
+  - Improved visual card with backdrop blur
+
+- **Services Section**:
+  - Gradient service cards with hover animations
+  - Enhanced icons with gradient backgrounds
+  - Improved typography and spacing
+  - Staggered scroll animations
+
+- **Process Section**:
+  - Gradient process cards with alternating colors
+  - Enhanced step indicators with icons
+  - Improved visual hierarchy
+  - Smooth scroll animations
+
+- **Portfolio Section**:
+  - Gradient project cards with hover effects
+  - Enhanced visual placeholders
+  - Improved category badges
+  - Better responsive design
+
+- **CTA Section**:
+  - Dynamic gradient background
+  - Enhanced button designs with hover effects
+  - Improved visual hierarchy
+  - Better call-to-action elements
+
+### Color System Implementation
+- **Mercury Blue Variations**: 50-900 with proper contrast ratios
+- **Mercury Gold Variations**: 50-900 with accessibility considerations
+- **Gradient Combinations**: Blue-to-Gold, Gold-to-Blue, and monochromatic gradients
+- **Text Gradients**: Applied to headings for visual impact
+- **Border and Shadow**: Enhanced with Mercury color palette
+
+### Animation System
+- **Scroll-triggered Animations**: All sections animate on scroll
+- **Hover Effects**: Scale, rotate, and translate transforms
+- **Staggered Animations**: Service and portfolio cards animate in sequence
+- **Pulse Effects**: Background elements with subtle animations
+- **Smooth Transitions**: All interactive elements have smooth transitions
+
+### Browser Compatibility
+- **Safari Support**: Added -webkit-backdrop-filter for backdrop blur
+- **Cross-browser Gradients**: Proper gradient implementation
+- **Responsive Design**: All animations work on mobile devices
+- **Performance Optimized**: Efficient animations with proper timing
+
+### Build Status
+✅ **Design Implementation Complete** - All visual enhancements applied
+✅ **Color System Integrated** - Complete Mercury Pantone color palette
+✅ **Animations Working** - Framer Motion animations functional
+✅ **Browser Compatibility** - Safari and cross-browser support
+✅ **Responsive Design** - Mobile and desktop optimized
+
+### Next Steps
+- Test performance on various devices
+- Consider adding more interactive elements
+- Optimize animations for better performance
+- Add more portfolio content with actual images
+
+---
+
 ## 2024-12-19 - GitLab CI/CD Pages Setup
 
 ### Work Done
@@ -20,11 +133,27 @@
    - Pages stage for GitLab Pages deployment
    - Cache configuration for faster builds
    - Artifacts management for deployment
+   - Fixed to install all dependencies (including devDependencies)
 
 2. **`next.config.js`** - Updated for static export:
    - Added `output: 'export'` for static generation
    - Added `trailingSlash: true` for hosting compatibility
    - Added `unoptimized: true` for images in static export
+   - Removed deprecated `experimental.appDir` and `headers` config
+
+3. **`app/tvc/TVCPageClient.tsx`** - Fixed import paths:
+   - Changed from `@/` alias to relative paths for GitLab CI compatibility
+   - Updated all component imports to use `../../components/` format
+
+4. **`components/TrackingButton.tsx`** - Added style prop support:
+   - Added `style?: React.CSSProperties` to interface
+   - Updated component to accept and pass through style prop
+   - Fixed TypeScript errors in TVCPageClient.tsx
+
+5. **Translation files** - Added missing services:
+   - Added `ai`, `automation`, `vision`, `integration`, `security`, `optimization` services
+   - Updated all language files (en.ts, vi.ts, ja.ts, ko.ts)
+   - Fixed TypeScript errors in Services.tsx
 
 3. **`docs/gitlab-pages-setup.md`** - Comprehensive setup guide:
    - Pipeline explanation and configuration details
@@ -34,7 +163,7 @@
 ### Pipeline Stages
 1. **Build Stage**:
    - Uses Node.js 18 Alpine image
-   - Installs production dependencies with `npm ci --only=production`
+   - Installs all dependencies with `npm ci` (including devDependencies)
    - Builds Next.js app with static export
    - Creates artifacts in `out/` directory
 
@@ -57,8 +186,14 @@ After successful deployment, site will be available at:
 https://[username].gitlab.io/[project-name]
 ```
 
+### Build Status
+✅ **Build successful** - All TypeScript errors resolved
+✅ **Static export working** - Next.js generates static files correctly
+✅ **Translation files updated** - All missing services added to all languages
+✅ **Component fixes applied** - TrackingButton supports style prop
+
 ### Next Steps
-- Test pipeline with first push to main branch
+- Push to main branch to test GitLab CI/CD pipeline
 - Monitor build times and optimize if needed
 - Consider adding custom domain configuration
 - Set up monitoring for deployment status
@@ -272,3 +407,108 @@ https://[username].gitlab.io/[project-name]
 - Verify accessibility compliance
 - Consider adding more interactive elements
 - Optimize for performance 
+
+---
+
+## 2024-12-19 - Hero Section Styling Update
+
+### Technical Implementation
+- Updated hero section background to white (`hero-bg-white`)
+- Modified `InteractiveBackground.tsx` for white background compatibility
+- Updated all component text colors for better readability on white background
+- Ensured consistent font family usage across all components
+
+### Configuration Files Modified
+- `components/Hero.tsx` - Changed background class to `hero-bg-white`
+- `app/globals.css` - Added `hero-bg-white` class
+- `components/InteractiveBackground.tsx` - Updated background colors to white
+- `components/TechnologyStack.tsx` - Updated styling for white background
+- `components/Process.tsx` - Updated styling for consistency
+- `components/Projects.tsx` - Updated styling for consistency
+
+### Key Changes
+1. **Hero Section Background**: Changed from dark to white background
+2. **Interactive Effects**: Updated Vanta.js effects for white background
+3. **Text Colors**: Ensured all text is readable on white background
+4. **Component Consistency**: Updated all sections to use consistent color scheme
+5. **Font Family**: Maintained IBM Plex Sans throughout
+
+### Color Scheme Updates
+- Primary text: `hsl(var(--text-primary))` - Professional gray
+- Secondary text: `hsl(var(--text-secondary))` - Professional gray
+- Primary links: `hsl(var(--link-primary))` - Mercury blue
+- Success colors: `hsl(var(--success-color))` - Green
+- Warning colors: `hsl(var(--warning-color))` - Gold
+- Background: `hsl(var(--bg-secondary))` - Pure white
+
+### Build Status
+- ✅ Build successful with `npm run build`
+- ✅ All styling changes applied consistently
+- ✅ Text readability optimized for white background
+- ✅ Interactive effects properly configured
+- ✅ Font family consistency maintained
+
+### Design System Compliance
+- All components now follow the established design system
+- Consistent use of CSS custom properties
+- Proper contrast ratios for accessibility
+- Professional appearance maintained across all sections 
+
+---
+
+## 2024-12-19 - UI/UX Design Improvements
+
+### Technical Implementation
+- Removed "Solutions" text from header logo for cleaner design
+- Redesigned CTA button in header with smaller, more elegant styling
+- Modernized card design across all components with enhanced shadows and spacing
+- Improved visual hierarchy and typography in card components
+
+### Configuration Files Modified
+- `components/Header.tsx` - Removed "Solutions" text, redesigned CTA button
+- `components/Services.tsx` - Modernized card design with better shadows and hover effects
+- `components/TechnologyStack.tsx` - Enhanced card styling with improved visual hierarchy
+- `components/Projects.tsx` - Updated card design with modern styling
+- `components/Process.tsx` - Improved card design with better spacing and shadows
+
+### Key Improvements
+1. **Header Design**: 
+   - Removed unnecessary "Solutions" text for cleaner logo
+   - Reduced CTA button size from `px-6 py-3` to `px-4 py-2`
+   - Decreased shadow intensity for more subtle appearance
+   - Reduced spacing between elements for better balance
+
+2. **Card Design Enhancements**:
+   - Modern rounded corners (`rounded-2xl` for cards, `rounded-3xl` for sections)
+   - Enhanced shadows with better depth perception
+   - Improved hover effects with subtle overlays
+   - Better spacing and padding for improved readability
+   - Consistent border styling across all components
+
+3. **Visual Hierarchy**:
+   - Better typography scaling
+   - Improved color contrast
+   - Enhanced spacing between elements
+   - More sophisticated hover animations
+
+### Design System Updates
+- **Shadows**: 
+  - Cards: `0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)`
+  - Sections: `0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)`
+- **Borders**: Consistent `1px solid hsl(var(--card-border))`
+- **Hover Effects**: Subtle overlays with gradient backgrounds
+- **CTA Button**: Smaller, more elegant design with reduced shadows
+
+### Build Status
+- ✅ Build successful with `npm run build`
+- ✅ All design improvements applied consistently
+- ✅ Enhanced visual hierarchy implemented
+- ✅ Modern card design across all components
+- ✅ Improved user experience with better spacing and interactions
+
+### Professional UI/UX Standards
+- Clean, minimal header design
+- Consistent card styling across all sections
+- Enhanced visual feedback on interactions
+- Better accessibility with improved contrast
+- Modern, professional appearance maintained 
