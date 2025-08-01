@@ -367,6 +367,7 @@ a:hover {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .contact-form {
@@ -1348,6 +1349,24 @@ a:hover {
 }
 .btn-shadow:hover {
   box-shadow: 0 8px 12px -2px rgba(46, 91, 255, 0.3), 0 4px 6px -1px rgba(46, 91, 255, 0.2);
+}
+
+/* Hero Interactive Logo */
+.hero-interactive-logo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.hero-interactive-logo canvas {
+  border-radius: 1rem;
+}
+
+.hero-overlay {
+  background: linear-gradient(135deg, rgba(46, 91, 255, 0.05) 0%, rgba(30, 58, 138, 0.05) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 /* Mobile menu enhancements */
