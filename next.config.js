@@ -3,8 +3,11 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
+  output: 'export',
+  trailingSlash: true,
   images: {
     domains: ['minova.vn'],
+    unoptimized: true,
   },
   async headers() {
     return [

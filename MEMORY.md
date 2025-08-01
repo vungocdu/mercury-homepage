@@ -1,5 +1,70 @@
 # Memory Log
 
+## 2024-12-19 - GitLab CI/CD Pages Setup
+
+### Work Done
+- **Configured GitLab CI/CD pipeline** for automatic deployment to GitLab Pages
+- **Set up Next.js static export** for GitLab Pages hosting
+- **Created optimized build process** with Node.js 18 Alpine image
+- **Added comprehensive documentation** for deployment process
+
+### Technical Implementation
+- **GitLab CI/CD Pipeline**: Two-stage process (build + deploy)
+- **Static Export Configuration**: Updated next.config.js for static hosting
+- **Optimized Build Process**: Uses lightweight Alpine images and caching
+- **Automatic Deployment**: Triggers on main branch pushes
+
+### Configuration Files Created/Modified
+1. **`.gitlab-ci.yml`** - Main CI/CD configuration:
+   - Build stage with Node.js 18 Alpine
+   - Pages stage for GitLab Pages deployment
+   - Cache configuration for faster builds
+   - Artifacts management for deployment
+
+2. **`next.config.js`** - Updated for static export:
+   - Added `output: 'export'` for static generation
+   - Added `trailingSlash: true` for hosting compatibility
+   - Added `unoptimized: true` for images in static export
+
+3. **`docs/gitlab-pages-setup.md`** - Comprehensive setup guide:
+   - Pipeline explanation and configuration details
+   - Troubleshooting guide for common issues
+   - Deployment URL information and manual deployment steps
+
+### Pipeline Stages
+1. **Build Stage**:
+   - Uses Node.js 18 Alpine image
+   - Installs production dependencies with `npm ci --only=production`
+   - Builds Next.js app with static export
+   - Creates artifacts in `out/` directory
+
+2. **Deploy Stage (Pages)**:
+   - Uses Alpine Linux image
+   - Copies built files to `public/` directory
+   - Creates artifacts for GitLab Pages serving
+   - Sets up production environment
+
+### Key Features
+- **Main Branch Only**: Pipeline triggers only on main branch pushes
+- **No Testing Stage**: As requested, only build and deploy stages
+- **Optimized Performance**: Uses caching and lightweight images
+- **Automatic Deployment**: No manual intervention required
+- **Static Hosting**: Fully static site for optimal performance
+
+### Deployment URL
+After successful deployment, site will be available at:
+```
+https://[username].gitlab.io/[project-name]
+```
+
+### Next Steps
+- Test pipeline with first push to main branch
+- Monitor build times and optimize if needed
+- Consider adding custom domain configuration
+- Set up monitoring for deployment status
+
+---
+
 ## 2024-12-19 - TextReveal Animation Integration
 
 ### Work Done

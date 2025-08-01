@@ -1,0 +1,47 @@
+# GitLab CI/CD configuration for Next.js app deployment to GitLab Pages
+# This pipeline builds the Next.js app and deploys it to GitLab Pages
+
+# Define stages
+stages:
+  - build
+  - deploy
+
+# Cache node_modules for faster builds
+cache:
+  paths:
+    - node_modules/
+
+# Build stage
+build:
+  stage: build
+  image: node:18-alpine
+  only:
+    - main
+  script:
+    # Install dependencies
+    - npm ci --only=production
+    # Build the Next.js app with static export
+    - npm run build
+  artifacts:
+    paths:
+      - out/
+    expire_in: 1 hour
+
+# Deploy to GitLab Pages
+pages:
+  stage: deploy
+  image: alpine:latest
+  only:
+    - main
+  dependencies:
+    - build
+  script:
+    # Copy built files to public directory for GitLab Pages
+    - cp -r out/* public/
+  artifacts:
+    paths:
+      - public/
+    expire_in: 1 hour
+  environment:
+    name: production
+    url: https://$CI_PROJECT_PATH_SLUG.gitlab.io/$CI_PROJECT_NAME 
