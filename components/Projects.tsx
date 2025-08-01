@@ -1,5 +1,4 @@
 import { ExternalLink, Smartphone, Globe, Zap } from 'lucide-react'
-import InteractiveBackground from './InteractiveBackground'
 
 export default function Projects() {
   const projects = [
@@ -85,9 +84,6 @@ export default function Projects() {
 
   return (
     <section id="projects" className="section-white relative overflow-hidden">
-      {/* Interactive Dots Background */}
-      <InteractiveBackground effect="dots" />
-      
       <div className="container-custom relative z-10">
         <div className="text-center mb-16 fade-in-up">
           <div className="inline-flex items-center space-x-2 professional-card px-4 py-2 rounded-full mb-6">
@@ -115,8 +111,8 @@ export default function Projects() {
               className="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:scale-105"
               style={{
                 backgroundColor: 'hsl(var(--card-bg))',
-                border: '1px solid hsl(var(--card-border))',
-                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                border: '2px solid hsl(var(--card-border))',
+                boxShadow: '0 4px 6px -1px rgb(30 58 138 / 0.1), 0 2px 4px -1px rgb(30 58 138 / 0.06)',
                 animationDelay: `${index * 0.1}s`
               }}
             >
@@ -196,8 +192,8 @@ export default function Projects() {
           <div className="rounded-3xl p-8 relative overflow-hidden"
                style={{
                  backgroundColor: 'hsl(var(--card-bg))',
-                 border: '1px solid hsl(var(--card-border))',
-                 boxShadow: '0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
+                 border: '2px solid hsl(var(--card-border))',
+                 boxShadow: '0 4px 6px -1px rgb(30 58 138 / 0.1), 0 2px 4px -1px rgb(30 58 138 / 0.06)'
                }}>
             <div className="relative z-10">
               <h3 className="text-2xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>

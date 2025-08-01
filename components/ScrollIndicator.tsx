@@ -12,7 +12,7 @@ const ScrollLine = ({ isActive, isGlowing }: { isActive: boolean; isGlowing: boo
           ? "w-3 bg-mercury-blue-500/70 shadow-[0_0_3px_rgba(46,91,255,0.5)]" 
           : isActive 
             ? "w-2.5 bg-mercury-blue-400/80" 
-            : "w-1.5 bg-gray-400/30"
+            : "w-1.5 bg-gray-400/60"
       }`}
     />
   )
@@ -21,8 +21,8 @@ const ScrollLine = ({ isActive, isGlowing }: { isActive: boolean; isGlowing: boo
 export default function ScrollIndicator() {
   const [scrollProgress, setScrollProgress] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
-  const totalLines = 40
-  const activeLines = 4
+  const totalLines = 25 // Giảm số lượng lines để tăng khoảng cách
+  const activeLines = 3 // Giảm số lượng active lines
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,7 +58,7 @@ export default function ScrollIndicator() {
   return (
     <ClientOnly>
       <div className={`scroll-indicator scroll-indicator-left flex items-center ${isVisible ? 'visible' : ''}`}>
-        <div className="scroll-indicator-tight w-6 h-full flex flex-col justify-between">
+        <div className="scroll-indicator-tight w-6 h-full flex flex-col justify-between py-4">
           {Array.from({ length: totalLines }, (_, i) => {
             const { isActive, isGlowing } = getLineStatus(i)
             return <ScrollLine key={i} isActive={isActive} isGlowing={isGlowing} />

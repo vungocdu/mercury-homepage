@@ -3,6 +3,7 @@ import Services from '@/components/Services'
 import TechnologyStack from '@/components/TechnologyStack'
 import Process from '@/components/Process'
 import Projects from '@/components/Projects'
+import WhyChoose from '@/components/WhyChoose'
 import Contact from '@/components/Contact'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -13,11 +14,12 @@ export default function Home() {
     <main className="min-h-screen professional-bg">
       <Header />
       <Hero />
+      <Projects />
+      <WhyChoose />
       <Services />
       <TechnologyStack />
       <Process />
       <TickerScroll />
-      <Projects />
       <Contact />
       <Footer />
     </main>

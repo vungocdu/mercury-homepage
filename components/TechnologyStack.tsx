@@ -79,134 +79,156 @@ export default function TechnologyStack() {
 
   const getTypeColor = (type: string) => {
     switch (type) {
-      case 'language': return 'bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-foreground border border-blue-500/30'
-      case 'framework': return 'bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-foreground border border-green-500/30'
-      case 'database': return 'bg-gradient-to-r from-purple-500/20 to-violet-500/20 text-foreground border border-purple-500/30'
-      case 'tool': return 'bg-gradient-to-r from-orange-500/20 to-amber-500/20 text-foreground border border-orange-500/30'
-      case 'cloud': return 'bg-gradient-to-r from-indigo-500/20 to-blue-500/20 text-foreground border border-indigo-500/30'
-      case 'library': return 'bg-gradient-to-r from-pink-500/20 to-rose-500/20 text-foreground border border-pink-500/30'
-      default: return 'bg-gradient-to-r from-gray-500/20 to-slate-500/20 text-foreground border border-gray-500/30'
+      case 'language': 
+        return 'bg-mercury-blue-50 text-mercury-blue-700 border border-mercury-blue-200 hover:bg-mercury-blue-100'
+      case 'framework': 
+        return 'bg-mercury-blue-100 text-mercury-blue-800 border border-mercury-blue-300 hover:bg-mercury-blue-200'
+      case 'database': 
+        return 'bg-mercury-blue-200 text-mercury-blue-900 border border-mercury-blue-400 hover:bg-mercury-blue-300'
+      case 'tool': 
+        return 'bg-mercury-gold-50 text-mercury-gold-700 border border-mercury-gold-200 hover:bg-mercury-gold-100'
+      case 'cloud': 
+        return 'bg-mercury-blue-150 text-mercury-blue-800 border border-mercury-blue-250 hover:bg-mercury-blue-250'
+      case 'library': 
+        return 'bg-mercury-gold-100 text-mercury-gold-800 border border-mercury-gold-300 hover:bg-mercury-gold-200'
+      default: 
+        return 'bg-gray-50 text-gray-700 border border-gray-200 hover:bg-gray-100'
     }
   }
 
   const getIconGradient = (category: string) => {
     switch (category) {
-      case 'Frontend': return 'from-blue-400 to-cyan-600'
-      case 'Backend': return 'from-green-400 to-emerald-600'
-      case 'Database': return 'from-purple-400 to-violet-600'
-      case 'DevOps': return 'from-orange-400 to-amber-600'
-      case 'Mobile': return 'from-indigo-400 to-blue-600'
-      case 'AI & ML': return 'from-pink-400 to-rose-600'
-      default: return 'from-gray-400 to-slate-600'
+      case 'Frontend':
+        return 'from-blue-500 to-blue-600'
+      case 'Backend':
+        return 'from-green-500 to-green-600'
+      case 'Database':
+        return 'from-purple-500 to-purple-600'
+      case 'DevOps':
+        return 'from-orange-500 to-orange-600'
+      case 'Mobile':
+        return 'from-pink-500 to-pink-600'
+      case 'AI & ML':
+        return 'from-red-500 to-red-600'
+      default:
+        return 'from-gray-500 to-gray-600'
+    }
+  }
+
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case 'Frontend':
+        return 'text-mercury-blue-700'
+      case 'Backend':
+        return 'text-mercury-blue-800'
+      case 'Database':
+        return 'text-mercury-blue-900'
+      case 'DevOps':
+        return 'text-mercury-gold-700'
+      case 'Mobile':
+        return 'text-mercury-gold-800'
+      case 'AI & ML':
+        return 'text-mercury-gold-900'
+      default:
+        return 'text-gray-700'
     }
   }
 
   return (
-    <section id="technology" className="section-white relative overflow-hidden">
-      <div className="container-custom relative z-10">
-        <div className="text-center mb-16 fade-in-up">
-          <div className="inline-flex items-center space-x-2 professional-card px-4 py-2 rounded-full mb-6">
-            <Cpu className="w-4 h-4" style={{ color: 'hsl(var(--link-primary))' }} />
-            <span className="text-sm font-medium" style={{ color: 'hsl(var(--text-primary))' }}>Advanced Technology Stack</span>
+    <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50">
+      <div className="container mx-auto px-4 max-w-7xl">
+        {/* Header */}
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-mercury-blue-100 to-mercury-gold-100 text-mercury-blue-700 font-semibold text-sm mb-6">
+            <Cpu className="w-4 h-4 mr-2" />
+            Advanced Technology Stack
           </div>
-          
-          <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-            <span style={{ color: 'hsl(var(--text-primary))' }}>Our</span>{' '}
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
-              Technology Stack
-            </span>
+          <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-800 bg-clip-text text-transparent mb-6">
+            Our Technology Stack
           </h2>
-          
-          <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: 'hsl(var(--text-secondary))' }}>
-            Cutting-edge technologies and frameworks that power our AI solutions and digital innovations. 
-            Always evolving, always improving.
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            Cutting-edge technologies and frameworks that power our AI solutions and digital innovations. Always evolving, always improving.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Technology Categories */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {techStacks.map((stack, index) => (
-            <div 
-              key={index} 
-              className="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:scale-105"
-              style={{
-                backgroundColor: 'hsl(var(--card-bg))',
-                border: '1px solid hsl(var(--card-border))',
-                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-                animationDelay: `${index * 0.1}s`
-              }}
+            <div
+              key={stack.category}
+              className="bg-white rounded-2xl p-8 shadow-lg border-2 border-transparent hover:border-mercury-blue-200 transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1"
             >
-              <div className="p-6 relative z-10">
-                {/* Category Icon */}
-                <div className="flex items-center mb-6">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${getIconGradient(stack.category)} rounded-xl flex items-center justify-center animate-float mr-4`} style={{ animationDelay: `${index * 0.3}s` }}>
-                    <Zap className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold" style={{ color: 'hsl(var(--text-primary))' }}>
-                    {stack.category}
-                  </h3>
+              {/* Category Header */}
+              <div className="flex items-center mb-6">
+                <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${getIconGradient(stack.category)} flex items-center justify-center shadow-lg mr-4`}>
+                  <Zap className="w-6 h-6 text-white" />
                 </div>
-                
-                <div className="flex flex-wrap gap-2">
-                  {stack.items.map((item, itemIndex) => (
-                    <span
-                      key={itemIndex}
-                      className={`px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 ${getTypeColor(item.type)}`}
-                      style={{ color: 'hsl(var(--text-primary))' }}
-                    >
-                      {item.name}
-                    </span>
-                  ))}
-                </div>
+                <h3 className={`text-xl font-bold ${getCategoryColor(stack.category)}`}>
+                  {stack.category}
+                </h3>
               </div>
-              
-              {/* Hover effect overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+
+              {/* Technology Items */}
+              <div className="flex flex-wrap gap-3">
+                {stack.items.map((item, itemIndex) => (
+                  <span
+                    key={itemIndex}
+                    className={`px-3 py-1.5 rounded-lg text-sm font-medium shadow-sm transition-all duration-200 ${getTypeColor(item.type)}`}
+                  >
+                    {item.name}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>
 
-        {/* Enhanced Additional Technologies */}
-        <div className="mt-16 relative">
-          <div className="rounded-3xl p-8 lg:p-12 relative overflow-hidden"
-               style={{
-                 backgroundColor: 'hsl(var(--card-bg))',
-                 border: '1px solid hsl(var(--card-border))',
-                 boxShadow: '0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
-               }}>
-            <div className="relative z-10">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl lg:text-3xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>
-                  Additional Technologies & Innovation Tools
-                </h3>
-                <p className="max-w-2xl mx-auto" style={{ color: 'hsl(var(--text-secondary))' }}>
-                  Advanced monitoring, testing, and integration solutions that ensure optimal performance
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {[
-                  { category: 'Monitoring', tools: ['Prometheus', 'Grafana'] },
-                  { category: 'Log Management', tools: ['ELK Stack', 'Graylog'] },
-                  { category: 'Testing', tools: ['Selenium', 'Appium', 'JMeter'] },
-                  { category: 'Integration', tools: ['RabbitMQ', 'OpenAPI', 'REST APIs'] }
-                ].map((section, index) => (
-                  <div key={index} className="group">
-                    <h4 className="font-semibold mb-3 flex items-center" style={{ color: 'hsl(var(--text-primary))' }}>
-                      <div className="w-2 h-2 rounded-full mr-2 animate-pulse" style={{ backgroundColor: 'hsl(var(--link-primary))' }}></div>
-                      {section.category}
-                    </h4>
-                    <div className="space-y-2">
-                      {section.tools.map((tool, toolIndex) => (
-                        <div key={toolIndex} className="text-sm hover:text-primary transition-colors duration-200 flex items-center" style={{ color: 'hsl(var(--text-secondary))' }}>
-                          <div className="w-1 h-1 rounded-full mr-2" style={{ backgroundColor: 'hsl(var(--text-secondary))' }}></div>
-                          {tool}
-                        </div>
-                      ))}
+        {/* Additional Technologies Section */}
+        <div className="bg-gradient-to-r from-mercury-blue-50 to-mercury-gold-50 rounded-3xl p-12 border border-mercury-blue-100">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+              Additional Technologies & Innovation Tools
+            </h3>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Advanced monitoring, testing, and integration solutions that ensure optimal performance
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                title: 'Monitoring',
+                items: ['Prometheus', 'Grafana', 'New Relic', 'Datadog', 'Sentry']
+              },
+              {
+                title: 'Log Management',
+                items: ['ELK Stack', 'Fluentd', 'Logstash', 'Splunk', 'Papertrail']
+              },
+              {
+                title: 'Testing',
+                items: ['Jest', 'Cypress', 'Selenium', 'JUnit', 'Pytest']
+              },
+              {
+                title: 'Integration',
+                items: ['Zapier', 'IFTTT', 'Webhooks', 'API Gateway', 'Kong']
+              }
+            ].map((section, index) => (
+              <div key={index} className="bg-white rounded-xl p-6 shadow-md">
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">
+                  {section.title}
+                </h4>
+                <div className="space-y-2">
+                  {section.items.map((item, itemIndex) => (
+                    <div
+                      key={itemIndex}
+                      className="text-sm text-gray-600 hover:text-mercury-blue-600 transition-colors duration-200 cursor-pointer"
+                    >
+                      • {item}
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

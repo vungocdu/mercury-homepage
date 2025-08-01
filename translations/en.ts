@@ -22,6 +22,38 @@ export const en = {
     learnMore: "Learn More",
   },
 
+  // Why Choose Mercury Solutions
+  whyChoose: {
+    title: "Why Choose Mercury Solutions",
+    subtitle: "We excel in building high load mobile and web applications with cutting-edge technologies and proven methodologies",
+    advantages: {
+      expertise: {
+        title: "Technical Expertise",
+        description: "Our team of experienced developers and engineers bring deep technical knowledge across multiple platforms and technologies."
+      },
+      innovation: {
+        title: "Innovation Focus",
+        description: "We stay ahead of technology trends and implement the latest solutions to give your business a competitive edge."
+      },
+      quality: {
+        title: "Quality Assurance",
+        description: "Rigorous testing and quality control processes ensure reliable, scalable, and maintainable solutions."
+      },
+      support: {
+        title: "24/7 Support",
+        description: "Round-the-clock technical support and maintenance services to keep your systems running smoothly."
+      },
+      scalability: {
+        title: "Scalable Solutions",
+        description: "Our architectures are designed to grow with your business, handling increased load and expanding requirements."
+      },
+      security: {
+        title: "Security First",
+        description: "Enterprise-grade security measures protect your data and ensure compliance with industry standards."
+      }
+    }
+  },
+
   // Services
   services: {
     title: "Our Services",
@@ -90,6 +122,31 @@ export const en = {
       title: "TVC & Digital Art",
       description: "Professional television commercial production, digital art, and creative content services for brands and businesses.",
       features: ["Video Production", "Motion Graphics", "Digital Art", "Content Creation"]
+    }
+  },
+
+  // Technology Stack
+  technology: {
+    title: "Our Technology Stack",
+    subtitle: "Cutting-edge technologies and frameworks that power our AI solutions and digital innovations. Always evolving, always improving.",
+    badge: "Advanced Technology Stack",
+    categories: {
+      frontend: "Frontend",
+      backend: "Backend",
+      database: "Database",
+      devops: "DevOps",
+      mobile: "Mobile",
+      ai: "AI & ML"
+    },
+    additional: {
+      title: "Additional Technologies & Innovation Tools",
+      subtitle: "Advanced monitoring, testing, and integration solutions that ensure optimal performance",
+      sections: {
+        monitoring: "Monitoring",
+        logManagement: "Log Management",
+        testing: "Testing",
+        integration: "Integration"
+      }
     }
   },
 
@@ -192,30 +249,25 @@ export const en = {
     }
   },
 
-  // Technology Stack
-  technology: {
-    title: "Technology Stack",
-    subtitle: "We leverage cutting-edge technologies to deliver innovative solutions",
-    categories: {
-      frontend: "Frontend",
-      backend: "Backend",
-      mobile: "Mobile",
-      ai: "AI & ML",
-      devops: "DevOps",
-      database: "Database"
-    }
-  },
-
   // Process
   process: {
     title: "Our Process",
-    subtitle: "A proven methodology that ensures successful project delivery",
-    steps: {
-      discovery: "Discovery",
-      planning: "Planning",
-      development: "Development",
-      testing: "Testing",
-      deployment: "Deployment"
+    subtitle: "We follow a proven methodology to deliver high-quality solutions that meet your business requirements and exceed expectations.",
+    benefits: {
+      title: "Why Choose Our Process?",
+      subtitle: "Our systematic approach ensures transparency, quality, and timely delivery of your projects while maintaining clear communication throughout.",
+      transparency: {
+        title: "Transparent Communication",
+        description: "Regular updates and clear communication at every stage of development."
+      },
+      agile: {
+        title: "Agile Methodology",
+        description: "Flexible development approach with iterative improvements and quick feedback."
+      },
+      quality: {
+        title: "Quality Assurance",
+        description: "Comprehensive testing and quality checks to ensure robust and reliable solutions."
+      }
     }
   },
 
@@ -306,6 +358,32 @@ export const en = {
     privacy: "Privacy Policy",
     terms: "Terms of Service",
     cookies: "Cookie Policy"
+  },
+
+  // Map
+  map: {
+    title: "Find Us",
+    subtitle: "Visit our office in the heart of Hanoi's technology district",
+    officeAddress: {
+      title: "Office Address",
+      address: "33/41 Thái Hà, Đống Đa, Hà Nội, Việt Nam",
+      description: "Located in the heart of Hanoi's technology district"
+    },
+    contact: {
+      phone: "Phone",
+      email: "Email",
+      businessHours: "Business Hours",
+      weekdays: "Mon - Fri: 8:00 AM - 6:00 PM",
+      saturday: "Sat: 9:00 AM - 1:00 PM"
+    },
+    directions: {
+      title: "How to Get Here",
+      bus: "By Bus: Take bus routes 01, 02, or 03 to Thái Hà station",
+      taxi: "By Taxi: Tell driver \"33/41 Thái Hà, Đống Đa\"",
+      motorbike: "By Motorbike: 10 minutes from Hoàn Kiếm Lake",
+      parking: "Parking: Available on-site and nearby"
+    },
+    loading: "Loading map..."
   },
 
   // Common

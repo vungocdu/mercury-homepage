@@ -1,84 +1,148 @@
+"use client"
+
 import { Mail, Phone, MapPin } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Footer() {
+  const { t } = useLanguage()
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-mercury-blue-700 text-white">
-      <div className="container-custom py-12">
-        <div className="grid md:grid-cols-4 gap-8">
+    <footer className="bg-gradient-to-br from-mercury-blue-700 via-mercury-blue-800 to-mercury-blue-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-7xl mx-auto">
           {/* Company Info */}
-          <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4 text-white">
+          <div className="lg:col-span-2">
+            <h3 className="text-3xl font-bold mb-6 text-white">
               Mercury Solutions
             </h3>
-            <p className="mb-6 leading-relaxed text-gray-200">
-              At Mercury Solutions, we focus on computer vision and data visualization 
-              implementation to provide better management solutions for businesses 
-              from SMEs to MNCs.
+            <p className="mb-8 leading-relaxed text-gray-200 text-lg">
+              {t.footer.description}
             </p>
             
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-mercury-gold-400" />
+            <div className="space-y-4">
+              <div className="flex items-center space-x-4">
+                <div className="w-10 h-10 rounded-lg bg-mercury-gold-500/20 flex items-center justify-center">
+                  <MapPin className="w-5 h-5 text-mercury-gold-400" />
+                </div>
                 <span className="text-gray-200">
-                  33 Ng. 41 P. Thai Ha, Trung Liet, Dong Da, Hanoi, Vietnam
+                  {t.contact.info.address}
                 </span>
               </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-mercury-gold-400" />
-                <span className="text-gray-200">+84 24 1234 5678</span>
+              <div className="flex items-center space-x-4">
+                <div className="w-10 h-10 rounded-lg bg-mercury-gold-500/20 flex items-center justify-center">
+                  <Phone className="w-5 h-5 text-mercury-gold-400" />
+                </div>
+                <span className="text-gray-200">
+                  {t.contact.info.phone}
+                </span>
               </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-mercury-gold-400" />
-                <span className="text-gray-200">info@mercury-solutions.vn</span>
+              <div className="flex items-center space-x-4">
+                <div className="w-10 h-10 rounded-lg bg-mercury-gold-500/20 flex items-center justify-center">
+                  <Mail className="w-5 h-5 text-mercury-gold-400" />
+                </div>
+                <span className="text-gray-200">
+                  {t.contact.info.email}
+                </span>
               </div>
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-white">Services</h4>
-            <ul className="space-y-2">
-              <li><a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-200">Data Analysis</a></li>
-              <li><a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-200">Web Development</a></li>
-              <li><a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-200">Mobile Development</a></li>
-              <li><a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-200">AI & Machine Learning</a></li>
-              <li><a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-200">DevOps & Cloud</a></li>
-              <li><a href="/tvc" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-200">TVC & Digital Art</a></li>
+            <h4 className="text-xl font-semibold mb-6 text-white">
+              {t.footer.services}
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
+                  {t.services.ai.title}
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
+                  {t.services.web.title}
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
+                  {t.services.mobile.title}
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
+                  {t.services.vision.title}
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
+                  {t.services.devops.title}
+                </a>
+              </li>
+              <li>
+                <a href="/tvc" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
+                  {t.services.tvc.title}
+                </a>
+              </li>
             </ul>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-white">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><a href="#home" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-200">Home</a></li>
-              <li><a href="#projects" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-200">Projects</a></li>
-              <li><a href="#technology" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-200">Technology</a></li>
-              <li><a href="#process" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-200">Process</a></li>
-              <li><a href="/tvc" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-200">TVC Services</a></li>
-              <li><a href="#contact" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-200">Contact</a></li>
+            <h4 className="text-xl font-semibold mb-6 text-white">
+              {t.footer.quickLinks}
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <a href="#home" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
+                  {t.nav.home}
+                </a>
+              </li>
+              <li>
+                <a href="#projects" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
+                  {t.nav.projects}
+                </a>
+              </li>
+              <li>
+                <a href="#technology" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
+                  {t.nav.technology}
+                </a>
+              </li>
+              <li>
+                <a href="#process" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
+                  {t.nav.process}
+                </a>
+              </li>
+              <li>
+                <a href="/tvc" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
+                  {t.nav.tvcServices}
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
+                  {t.nav.contact}
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-600 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-600 mt-16 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-gray-300">
-              © {currentYear} Mercury Solutions. All rights reserved.
+              {t.footer.copyright.replace('{year}', currentYear.toString())}
             </p>
             
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-300 hover:text-mercury-gold-400 transition-colors duration-200">
-                Privacy Policy
+            <div className="flex space-x-8">
+              <a href="#" className="text-gray-300 hover:text-mercury-gold-400 transition-colors duration-300 text-sm">
+                {t.footer.privacy}
               </a>
-              <a href="#" className="text-gray-300 hover:text-mercury-gold-400 transition-colors duration-200">
-                Terms of Service
+              <a href="#" className="text-gray-300 hover:text-mercury-gold-400 transition-colors duration-300 text-sm">
+                {t.footer.terms}
               </a>
-              <a href="#" className="text-gray-300 hover:text-mercury-gold-400 transition-colors duration-200">
-                Cookie Policy
+              <a href="#" className="text-gray-300 hover:text-mercury-gold-400 transition-colors duration-300 text-sm">
+                {t.footer.cookies}
               </a>
             </div>
           </div>

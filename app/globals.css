@@ -23,7 +23,7 @@
   --destructive-foreground: 0 0% 100% /* #FFFFFF - White text on error */
   --success: 142 76% 36% /* #16A34A - Success Green */
   --success-foreground: 0 0% 100% /* #FFFFFF - White text on success */
-  --border: 210 9% 46% /* #6C757D - Professional Gray borders */
+  --border: 220 100% 50% /* #1E3A8A - Deep Mercury Blue borders */
   --input: 210 9% 46% /* #6C757D - Professional Gray inputs */
   --ring: 220 100% 60% /* #2E5BFF - Mercury Blue focus ring */
   --radius: 0.5rem;
@@ -40,8 +40,8 @@
   --error-color: 0 84% 60% /* #EF4444 - Error Red */
   --warning-color: 45 93% 47% /* #FFD60A - Mercury Gold (116 C) */
   --card-bg: 0 0% 100% /* #FFFFFF - Pure White */
-  --card-border: 210 9% 46% /* #6C757D - Professional Gray */
-  --card-shadow: 0 1px 3px 0 rgb(108 117 125 / 0.1), 0 1px 2px -1px rgb(108 117 125 / 0.1);
+  --card-border: 220 100% 50% /* #1E3A8A - Deep Mercury Blue */
+  --card-shadow: 0 1px 3px 0 rgb(30 58 138 / 0.1), 0 1px 2px -1px rgb(30 58 138 / 0.1);
 
   /* Mercury Solutions Specific Colors */
   --mercury-blue: 220 100% 60% /* #2E5BFF - Mercury Blue (2925 C) */
@@ -212,7 +212,7 @@ a:hover {
 
 .professional-card {
   background-color: hsl(var(--card-bg));
-  border: 1px solid hsl(var(--card-border));
+  border: 2px solid hsl(var(--card-border));
   border-radius: 0.75rem;
   box-shadow: var(--card-shadow);
   padding: 1.5rem;
@@ -220,15 +220,16 @@ a:hover {
 
 .service-card {
   background-color: hsl(var(--card-bg));
-  border: 1px solid hsl(var(--card-border));
+  border: 2px solid hsl(var(--card-border));
   border-radius: 1rem;
   box-shadow: var(--card-shadow);
   transition: all 0.3s ease;
 }
 
 .service-card:hover {
-  box-shadow: 0 4px 6px -1px rgb(108 117 125 / 0.1), 0 2px 4px -2px rgb(108 117 125 / 0.1);
+  box-shadow: 0 4px 6px -1px rgb(30 58 138 / 0.15), 0 2px 4px -2px rgb(30 58 138 / 0.1);
   transform: translateY(-2px);
+  border-color: hsl(var(--mercury-blue));
 }
 
 .professional-link {
@@ -396,14 +397,14 @@ a:hover {
 
 .faq-item {
   background-color: hsl(var(--card-bg));
-  border: 1px solid hsl(var(--card-border));
+  border: 2px solid hsl(var(--card-border));
   border-radius: 0.75rem;
   overflow: hidden;
 }
 
 .blog-card {
   background-color: hsl(var(--card-bg));
-  border: 1px solid hsl(var(--card-border));
+  border: 2px solid hsl(var(--card-border));
   border-radius: 1rem;
   box-shadow: var(--card-shadow);
   overflow: hidden;
@@ -411,7 +412,7 @@ a:hover {
 
 .team-card {
   background-color: hsl(var(--card-bg));
-  border: 1px solid hsl(var(--card-border));
+  border: 2px solid hsl(var(--card-border));
   border-radius: 1rem;
   box-shadow: var(--card-shadow);
   padding: 1.5rem;
@@ -420,7 +421,7 @@ a:hover {
 
 .project-card {
   background-color: hsl(var(--card-bg));
-  border: 1px solid hsl(var(--card-border));
+  border: 2px solid hsl(var(--card-border));
   border-radius: 1rem;
   box-shadow: var(--card-shadow);
   overflow: hidden;
@@ -428,7 +429,7 @@ a:hover {
 
 .tech-stack-item {
   background-color: hsl(var(--card-bg));
-  border: 1px solid hsl(var(--card-border));
+  border: 2px solid hsl(var(--card-border));
   border-radius: 0.75rem;
   padding: 1rem;
   text-align: center;
@@ -436,7 +437,7 @@ a:hover {
 
 .process-step {
   background-color: hsl(var(--card-bg));
-  border: 1px solid hsl(var(--card-border));
+  border: 2px solid hsl(var(--card-border));
   border-radius: 1rem;
   box-shadow: var(--card-shadow);
   padding: 1.5rem;
@@ -445,7 +446,7 @@ a:hover {
 
 .analytics-card {
   background-color: hsl(var(--card-bg));
-  border: 1px solid hsl(var(--card-border));
+  border: 2px solid hsl(var(--card-border));
   border-radius: 1rem;
   box-shadow: var(--card-shadow);
   padding: 1.5rem;
@@ -458,7 +459,7 @@ a:hover {
 
 .tvc-card {
   background-color: hsl(var(--card-bg));
-  border: 1px solid hsl(var(--card-border));
+  border: 2px solid hsl(var(--card-border));
   border-radius: 1rem;
   box-shadow: var(--card-shadow);
   padding: 1.5rem;
@@ -472,6 +473,78 @@ a:hover {
 .mercury-blue-bg {
   background-color: hsl(var(--mercury-blue));
 }
+
+.mercury-blue-50 { background-color: #E6F0FF; }
+.mercury-blue-100 { background-color: #CCE1FF; }
+.mercury-blue-150 { background-color: #B3D2FF; }
+.mercury-blue-200 { background-color: #99C3FF; }
+.mercury-blue-250 { background-color: #80B4FF; }
+.mercury-blue-300 { background-color: #66A5FF; }
+.mercury-blue-400 { background-color: #3387FF; }
+.mercury-blue-500 { background-color: #2E5BFF; }
+.mercury-blue-600 { background-color: #1E3A8A; }
+.mercury-blue-700 { background-color: #1A2E6B; }
+.mercury-blue-800 { background-color: #16234C; }
+.mercury-blue-900 { background-color: #11182D; }
+
+.text-mercury-blue-50 { color: #E6F0FF; }
+.text-mercury-blue-100 { color: #CCE1FF; }
+.text-mercury-blue-150 { color: #B3D2FF; }
+.text-mercury-blue-200 { color: #99C3FF; }
+.text-mercury-blue-250 { color: #80B4FF; }
+.text-mercury-blue-300 { color: #66A5FF; }
+.text-mercury-blue-400 { color: #3387FF; }
+.text-mercury-blue-500 { color: #2E5BFF; }
+.text-mercury-blue-600 { color: #1E3A8A; }
+.text-mercury-blue-700 { color: #1A2E6B; }
+.text-mercury-blue-800 { color: #16234C; }
+.text-mercury-blue-900 { color: #11182D; }
+
+.border-mercury-blue-50 { border-color: #E6F0FF; }
+.border-mercury-blue-100 { border-color: #CCE1FF; }
+.border-mercury-blue-150 { border-color: #B3D2FF; }
+.border-mercury-blue-200 { border-color: #99C3FF; }
+.border-mercury-blue-250 { border-color: #80B4FF; }
+.border-mercury-blue-300 { border-color: #66A5FF; }
+.border-mercury-blue-400 { border-color: #3387FF; }
+.border-mercury-blue-500 { border-color: #2E5BFF; }
+.border-mercury-blue-600 { border-color: #1E3A8A; }
+.border-mercury-blue-700 { border-color: #1A2E6B; }
+.border-mercury-blue-800 { border-color: #16234C; }
+.border-mercury-blue-900 { border-color: #11182D; }
+
+.mercury-gold-50 { background-color: #FFF9E6; }
+.mercury-gold-100 { background-color: #FFF3CC; }
+.mercury-gold-200 { background-color: #FFE799; }
+.mercury-gold-300 { background-color: #FFDB66; }
+.mercury-gold-400 { background-color: #FFCF33; }
+.mercury-gold-500 { background-color: #FFD60A; }
+.mercury-gold-600 { background-color: #E6C100; }
+.mercury-gold-700 { background-color: #CCAD00; }
+.mercury-gold-800 { background-color: #B39900; }
+.mercury-gold-900 { background-color: #998500; }
+
+.text-mercury-gold-50 { color: #FFF9E6; }
+.text-mercury-gold-100 { color: #FFF3CC; }
+.text-mercury-gold-200 { color: #FFE799; }
+.text-mercury-gold-300 { color: #FFDB66; }
+.text-mercury-gold-400 { color: #FFCF33; }
+.text-mercury-gold-500 { color: #FFD60A; }
+.text-mercury-gold-600 { color: #E6C100; }
+.text-mercury-gold-700 { color: #CCAD00; }
+.text-mercury-gold-800 { color: #B39900; }
+.text-mercury-gold-900 { color: #998500; }
+
+.border-mercury-gold-50 { border-color: #FFF9E6; }
+.border-mercury-gold-100 { border-color: #FFF3CC; }
+.border-mercury-gold-200 { border-color: #FFE799; }
+.border-mercury-gold-300 { border-color: #FFDB66; }
+.border-mercury-gold-400 { border-color: #FFCF33; }
+.border-mercury-gold-500 { border-color: #FFD60A; }
+.border-mercury-gold-600 { border-color: #E6C100; }
+.border-mercury-gold-700 { border-color: #CCAD00; }
+.border-mercury-gold-800 { border-color: #B39900; }
+.border-mercury-gold-900 { border-color: #998500; }
 
 .clean-white {
   color: hsl(var(--clean-white));
@@ -1289,11 +1362,12 @@ a:hover {
 
 .scroll-indicator-tight {
   width: 24px;
-  height: 200px;
+  height: 300px; /* Tăng chiều cao để có khoảng cách lớn hơn */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  gap: 8px; /* Thêm khoảng cách giữa các lines */
 }
 
 /* Responsive adjustments for scroll indicator */
@@ -1304,7 +1378,8 @@ a:hover {
   
   .scroll-indicator-tight {
     width: 20px;
-    height: 150px;
+    height: 250px; /* Tăng chiều cao cho mobile */
+    gap: 6px; /* Khoảng cách nhỏ hơn cho mobile */
   }
 }
 
@@ -1315,7 +1390,8 @@ a:hover {
   
   .scroll-indicator-tight {
     width: 16px;
-    height: 120px;
+    height: 200px; /* Tăng chiều cao cho mobile nhỏ */
+    gap: 4px; /* Khoảng cách nhỏ hơn cho mobile nhỏ */
   }
 }
 
