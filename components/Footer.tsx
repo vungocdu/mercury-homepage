@@ -17,7 +17,7 @@ export default function Footer() {
               Mercury Solutions
             </h3>
             <p className="mb-8 leading-relaxed text-gray-200 text-lg">
-              {t.footer.description}
+              {t('footer.description')}
             </p>
             
             <div className="space-y-4">
@@ -26,7 +26,7 @@ export default function Footer() {
                   <MapPin className="w-5 h-5 text-mercury-gold-400" />
                 </div>
                 <span className="text-gray-200">
-                  {t.contact.info.address}
+                  {t('contact.info.address')}
                 </span>
               </div>
               <div className="flex items-center space-x-4">
@@ -34,7 +34,7 @@ export default function Footer() {
                   <Phone className="w-5 h-5 text-mercury-gold-400" />
                 </div>
                 <span className="text-gray-200">
-                  {t.contact.info.phone}
+                  {t('contact.info.phone')}
                 </span>
               </div>
               <div className="flex items-center space-x-4">
@@ -42,7 +42,7 @@ export default function Footer() {
                   <Mail className="w-5 h-5 text-mercury-gold-400" />
                 </div>
                 <span className="text-gray-200">
-                  {t.contact.info.email}
+                  {t('contact.info.email')}
                 </span>
               </div>
             </div>
@@ -51,37 +51,37 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h4 className="text-xl font-semibold mb-6 text-white">
-              {t.footer.services}
+              {t('footer.services')}
             </h4>
             <ul className="space-y-3">
               <li>
                 <a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {t.services.ai.title}
+                  {t('services.ai.title')}
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {t.services.web.title}
+                  {t('services.web.title')}
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {t.services.mobile.title}
+                  {t('services.mobile.title')}
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {t.services.vision.title}
+                  {t('services.vision.title')}
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {t.services.devops.title}
+                  {t('services.devops.title')}
                 </a>
               </li>
               <li>
                 <a href="/tvc" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {t.services.tvc.title}
+                  {t('services.tvc.title')}
                 </a>
               </li>
             </ul>
@@ -90,37 +90,37 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h4 className="text-xl font-semibold mb-6 text-white">
-              {t.footer.quickLinks}
+              {t('footer.quickLinks')}
             </h4>
             <ul className="space-y-3">
               <li>
                 <a href="#home" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {t.nav.home}
+                  {t('nav.home')}
                 </a>
               </li>
               <li>
                 <a href="#projects" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {t.nav.projects}
+                  {t('nav.projects')}
                 </a>
               </li>
               <li>
                 <a href="#technology" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {t.nav.technology}
+                  {t('nav.technology')}
                 </a>
               </li>
               <li>
                 <a href="#process" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {t.nav.process}
+                  {t('nav.process')}
                 </a>
               </li>
               <li>
                 <a href="/tvc" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {t.nav.tvcServices}
+                  {t('nav.tvcServices')}
                 </a>
               </li>
               <li>
                 <a href="#contact" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {t.nav.contact}
+                  {t('nav.contact')}
                 </a>
               </li>
             </ul>
@@ -131,18 +131,18 @@ export default function Footer() {
         <div className="border-t border-gray-600 mt-16 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-gray-300">
-              {t.footer.copyright.replace('{year}', currentYear.toString())}
+              {t('footer.copyright').replace('{year}', currentYear.toString())}
             </p>
             
             <div className="flex space-x-8">
               <a href="#" className="text-gray-300 hover:text-mercury-gold-400 transition-colors duration-300 text-sm">
-                {t.footer.privacy}
+                {t('footer.privacy')}
               </a>
               <a href="#" className="text-gray-300 hover:text-mercury-gold-400 transition-colors duration-300 text-sm">
-                {t.footer.terms}
+                {t('footer.terms')}
               </a>
               <a href="#" className="text-gray-300 hover:text-mercury-gold-400 transition-colors duration-300 text-sm">
-                {t.footer.cookies}
+                {t('footer.cookies')}
               </a>
             </div>
           </div>

@@ -285,17 +285,41 @@ export const en = {
     title: "Get In Touch",
     subtitle: "Ready to start your project? Let's discuss how we can help you achieve your goals.",
     form: {
-      name: "Name",
-      email: "Email",
+      title: "Send Message",
+      subtitle: "Tell us about your project",
+      firstName: "First Name",
+      firstNamePlaceholder: "Your first name",
+      lastName: "Last Name",
+      lastNamePlaceholder: "Your last name",
       company: "Company",
-      phone: "Phone (Optional)",
-      message: "Tell us about your project",
-      submit: "Send Message"
+      companyPlaceholder: "Company name (optional)",
+      email: "Email",
+      emailPlaceholder: "email@example.com",
+      phone: "Phone",
+      phonePlaceholder: "+84 123 456 789",
+      message: "Message",
+      messagePlaceholder: "Tell us about your project...",
+      submit: "Send Message",
+      sending: "Sending...",
+      sent: "Sent!"
     },
     info: {
-      address: "33 Ng. 41 P. Thai Ha, Trung Liet, Dong Da, Hanoi, Vietnam",
-      phone: "+84 24 1234 5678",
-      email: "info@mercury-solutions.vn"
+      title: "Contact Information",
+      subtitle: "Get in touch with us through these channels",
+      address: "Address",
+      phone: "Phone & Email",
+      businessHours: "Business Hours",
+      weekdays: "Mon - Fri: 8:00 AM - 6:00 PM",
+      weekend: "Sat: 9:00 AM - 1:00 PM, Sun: Closed"
+    },
+    social: {
+      title: "Social Media",
+      subtitle: "Follow us on social platforms",
+      followUs: "Follow us for the latest updates"
+    },
+    quick: {
+      title: "Quick Contact",
+      subtitle: "Need immediate support? Call us"
     }
   },
 

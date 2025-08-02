@@ -285,17 +285,41 @@ export const vi = {
     title: "Liên hệ",
     subtitle: "Sẵn sàng bắt đầu dự án? Hãy thảo luận cách chúng tôi có thể giúp bạn đạt được mục tiêu.",
     form: {
-      name: "Tên",
-      email: "Email",
+      title: "Gửi tin nhắn",
+      subtitle: "Hãy cho chúng tôi biết về dự án của bạn",
+      firstName: "Tên",
+      firstNamePlaceholder: "Tên của bạn",
+      lastName: "Họ",
+      lastNamePlaceholder: "Họ của bạn",
       company: "Công ty",
-      phone: "Điện thoại (Tùy chọn)",
-      message: "Kể cho chúng tôi về dự án của bạn",
-      submit: "Gửi tin nhắn"
+      companyPlaceholder: "Tên công ty (tùy chọn)",
+      email: "Email",
+      emailPlaceholder: "email@example.com",
+      phone: "Điện thoại",
+      phonePlaceholder: "+84 123 456 789",
+      message: "Tin nhắn",
+      messagePlaceholder: "Kể cho chúng tôi về dự án của bạn...",
+      submit: "Gửi tin nhắn",
+      sending: "Đang gửi...",
+      sent: "Đã gửi!"
     },
     info: {
-      address: "33 Ng. 41 P. Thai Ha, Trung Liet, Dong Da, Hanoi, Vietnam",
-      phone: "+84 24 1234 5678",
-      email: "info@mercury-solutions.vn"
+      title: "Thông tin liên hệ",
+      subtitle: "Liên hệ với chúng tôi qua các kênh sau",
+      address: "Địa chỉ",
+      phone: "Điện thoại & Email",
+      businessHours: "Giờ làm việc",
+      weekdays: "Thứ 2 - Thứ 6: 8:00 - 18:00",
+      weekend: "Thứ 7: 9:00 - 13:00, Chủ nhật: Nghỉ"
+    },
+    social: {
+      title: "Mạng xã hội",
+      subtitle: "Theo dõi chúng tôi trên các nền tảng",
+      followUs: "Theo dõi chúng tôi để cập nhật tin tức mới nhất"
+    },
+    quick: {
+      title: "Liên hệ nhanh",
+      subtitle: "Cần hỗ trợ ngay? Gọi cho chúng tôi"
     }
   },
 

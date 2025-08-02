@@ -285,17 +285,41 @@ export const ja = {
     title: "お問い合わせ",
     subtitle: "プロジェクトを始める準備はできていますか？目標達成をサポートする方法について話し合いましょう。",
     form: {
-      name: "名前",
-      email: "メール",
+      title: "メッセージを送信",
+      subtitle: "プロジェクトについて教えてください",
+      firstName: "名",
+      firstNamePlaceholder: "お名前",
+      lastName: "姓",
+      lastNamePlaceholder: "お姓",
       company: "会社",
-      phone: "電話（任意）",
-      message: "プロジェクトについて教えてください",
-      submit: "メッセージを送信"
+      companyPlaceholder: "会社名（任意）",
+      email: "メール",
+      emailPlaceholder: "email@example.com",
+      phone: "電話",
+      phonePlaceholder: "+84 123 456 789",
+      message: "メッセージ",
+      messagePlaceholder: "プロジェクトについて教えてください...",
+      submit: "メッセージを送信",
+      sending: "送信中...",
+      sent: "送信完了！"
     },
     info: {
-      address: "33 Ng. 41 P. Thai Ha, Trung Liet, Dong Da, Hanoi, Vietnam",
-      phone: "+84 24 1234 5678",
-      email: "info@mercury-solutions.vn"
+      title: "連絡先情報",
+      subtitle: "以下のチャンネルでお問い合わせください",
+      address: "住所",
+      phone: "電話 & メール",
+      businessHours: "営業時間",
+      weekdays: "月-金: 8:00-18:00",
+      weekend: "土: 9:00-13:00, 日: 休業"
+    },
+    social: {
+      title: "ソーシャルメディア",
+      subtitle: "ソーシャルプラットフォームでフォローしてください",
+      followUs: "最新情報をフォローしてください"
+    },
+    quick: {
+      title: "クイック連絡",
+      subtitle: "即座のサポートが必要ですか？お電話ください"
     }
   },
 

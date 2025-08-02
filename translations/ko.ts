@@ -285,17 +285,41 @@ export const ko = {
     title: "연락처",
     subtitle: "프로젝트를 시작할 준비가 되셨나요? 목표 달성을 도울 수 있는 방법에 대해 논의해 보겠습니다.",
     form: {
-      name: "이름",
-      email: "이메일",
+      title: "메시지 보내기",
+      subtitle: "프로젝트에 대해 알려주세요",
+      firstName: "이름",
+      firstNamePlaceholder: "이름을 입력하세요",
+      lastName: "성",
+      lastNamePlaceholder: "성을 입력하세요",
       company: "회사",
-      phone: "전화 (선택사항)",
-      message: "프로젝트에 대해 알려주세요",
-      submit: "메시지 보내기"
+      companyPlaceholder: "회사명 (선택사항)",
+      email: "이메일",
+      emailPlaceholder: "email@example.com",
+      phone: "전화",
+      phonePlaceholder: "+84 123 456 789",
+      message: "메시지",
+      messagePlaceholder: "프로젝트에 대해 알려주세요...",
+      submit: "메시지 보내기",
+      sending: "전송 중...",
+      sent: "전송 완료!"
     },
     info: {
-      address: "33 Ng. 41 P. Thai Ha, Trung Liet, Dong Da, Hanoi, Vietnam",
-      phone: "+84 24 1234 5678",
-      email: "info@mercury-solutions.vn"
+      title: "연락처 정보",
+      subtitle: "다음 채널을 통해 연락해 주세요",
+      address: "주소",
+      phone: "전화 & 이메일",
+      businessHours: "영업시간",
+      weekdays: "월-금: 8:00-18:00",
+      weekend: "토: 9:00-13:00, 일: 휴무"
+    },
+    social: {
+      title: "소셜 미디어",
+      subtitle: "소셜 플랫폼에서 팔로우하세요",
+      followUs: "최신 업데이트를 팔로우하세요"
+    },
+    quick: {
+      title: "빠른 연락",
+      subtitle: "즉시 지원이 필요하신가요? 전화해 주세요"
     }
   },
 

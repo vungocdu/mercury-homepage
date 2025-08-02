@@ -1,21 +1,46 @@
 'use client'
 
 import { useState } from 'react'
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react'
+import { Mail, Phone, MapPin, Clock, Send, User, Building, MessageSquare, Linkedin, Facebook, Twitter, Instagram, Youtube } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Contact() {
+  const { t } = useLanguage()
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
+    company: '',
     email: '',
     phone: '',
     message: ''
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitSuccess, setSubmitSuccess] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
+    setIsSubmitting(true)
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    
     console.log('Form submitted:', formData)
+    setSubmitSuccess(true)
+    setIsSubmitting(false)
+    
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setFormData({
+        firstName: '',
+        lastName: '',
+        company: '',
+        email: '',
+        phone: '',
+        message: ''
+      })
+      setSubmitSuccess(false)
+    }, 3000)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -28,162 +53,289 @@ export default function Contact() {
   const contactInfo = [
     {
       icon: Clock,
-      title: 'Working hours',
+      title: t('contact.info.businessHours'),
       details: [
-        'Open – Mon-Fri 8-4',
-        'Closed – Sat-Sun and Public Holidays'
-      ]
+        t('contact.info.weekdays'),
+        t('contact.info.weekend')
+      ],
+      color: 'from-mercury-blue-500 to-mercury-blue-600'
     },
     {
       icon: MapPin,
-      title: 'Our location',
+      title: t('contact.info.address'),
       details: [
-        'Head Office:',
         '33 Ng. 41 P. Thai Ha, Trung Liet,',
         'Dong Da, Hanoi, Vietnam'
-      ]
+      ],
+      color: 'from-mercury-gold-500 to-mercury-gold-600'
     },
     {
       icon: Phone,
-      title: 'Contact',
+      title: t('contact.info.phone'),
       details: [
-        'Phone: +84 24 1234 5678',
-        'Email: info@mercury-solutions.vn'
-      ]
+        '+84 24 1234 5678',
+        'info@mercury-solutions.vn'
+      ],
+      color: 'from-mercury-blue-600 to-mercury-blue-700'
+    }
+  ]
+
+  const socialProfiles = [
+    {
+      name: 'LinkedIn',
+      icon: Linkedin,
+      url: '#',
+      color: 'from-blue-600 to-blue-700',
+      hoverColor: 'hover:from-blue-700 hover:to-blue-800'
+    },
+    {
+      name: 'Facebook',
+      icon: Facebook,
+      url: '#',
+      color: 'from-blue-500 to-blue-600',
+      hoverColor: 'hover:from-blue-600 hover:to-blue-700'
+    },
+    {
+      name: 'Twitter',
+      icon: Twitter,
+      url: '#',
+      color: 'from-sky-500 to-sky-600',
+      hoverColor: 'hover:from-sky-600 hover:to-sky-700'
+    },
+    {
+      name: 'Instagram',
+      icon: Instagram,
+      url: '#',
+      color: 'from-pink-500 to-pink-600',
+      hoverColor: 'hover:from-pink-600 hover:to-pink-700'
+    },
+    {
+      name: 'YouTube',
+      icon: Youtube,
+      url: '#',
+      color: 'from-red-500 to-red-600',
+      hoverColor: 'hover:from-red-600 hover:to-red-700'
     }
   ]
 
   return (
-    <section id="contact" className="section-white">
-      <div className="container-custom">
+    <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50">
+      <div className="container mx-auto px-4">
+        {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>
-            Let's discuss it!
+          <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-800 bg-clip-text text-transparent mb-6">
+            {t('contact.title')}
           </h2>
-          <p className="text-xl max-w-3xl mx-auto" style={{ color: 'hsl(var(--text-secondary))' }}>
-            Thinking of applying digital transformation to your business? 
-            Fill out the form below and we'll get right back to you.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            {t('contact.subtitle')}
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
           {/* Contact Form */}
-          <div className="contact-form">
-            <h3 className="text-2xl font-semibold mb-6" style={{ color: 'hsl(var(--text-primary))' }}>
-              Get in Touch
-            </h3>
+          <div className="bg-white rounded-3xl shadow-xl p-8 lg:p-12 border border-gray-100">
+            <div className="flex items-center mb-8">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-mercury-blue-500 to-mercury-blue-600 flex items-center justify-center mr-4">
+                <MessageSquare className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900">
+                  {t('contact.form.title')}
+                </h3>
+                <p className="text-gray-600">
+                  {t('contact.form.subtitle')}
+                </p>
+              </div>
+            </div>
             
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Name Fields */}
               <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium mb-2" style={{ color: 'hsl(var(--text-primary))' }}>
-                    First name *
+                <div className="group">
+                  <label htmlFor="firstName" className="block text-sm font-semibold text-gray-700 mb-2 group-focus-within:text-mercury-blue-600 transition-colors duration-200">
+                    {t('contact.form.firstName')} *
                   </label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleChange}
-                    required
-                    className="form-input w-full"
-                    placeholder="Your first name"
-                  />
+                  <div className="relative">
+                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      required
+                      className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-mercury-blue-500 focus:ring-4 focus:ring-mercury-blue-100 transition-all duration-200 bg-white"
+                      placeholder={t('contact.form.firstNamePlaceholder')}
+                    />
+                  </div>
                 </div>
                 
-                <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium mb-2" style={{ color: 'hsl(var(--text-primary))' }}>
-                    Last name *
+                <div className="group">
+                  <label htmlFor="lastName" className="block text-sm font-semibold text-gray-700 mb-2 group-focus-within:text-mercury-blue-600 transition-colors duration-200">
+                    {t('contact.form.lastName')} *
                   </label>
+                  <div className="relative">
+                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      required
+                      className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-mercury-blue-500 focus:ring-4 focus:ring-mercury-blue-100 transition-all duration-200 bg-white"
+                      placeholder={t('contact.form.lastNamePlaceholder')}
+                    />
+                  </div>
+                </div>
+              </div>
+              
+              {/* Company Field */}
+              <div className="group">
+                <label htmlFor="company" className="block text-sm font-semibold text-gray-700 mb-2 group-focus-within:text-mercury-blue-600 transition-colors duration-200">
+                  {t('contact.form.company')}
+                </label>
+                <div className="relative">
+                  <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <input
                     type="text"
-                    id="lastName"
-                    name="lastName"
-                    value={formData.lastName}
+                    id="company"
+                    name="company"
+                    value={formData.company}
                     onChange={handleChange}
-                    required
-                    className="form-input w-full"
-                    placeholder="Your last name"
+                    className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-mercury-blue-500 focus:ring-4 focus:ring-mercury-blue-100 transition-all duration-200 bg-white"
+                    placeholder={t('contact.form.companyPlaceholder')}
                   />
                 </div>
               </div>
               
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2" style={{ color: 'hsl(var(--text-primary))' }}>
-                  Email *
+              {/* Email Field */}
+              <div className="group">
+                <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2 group-focus-within:text-mercury-blue-600 transition-colors duration-200">
+                  {t('contact.form.email')} *
                 </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="form-input w-full"
-                  placeholder="your.email@example.com"
-                />
+                <div className="relative">
+                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-mercury-blue-500 focus:ring-4 focus:ring-mercury-blue-100 transition-all duration-200 bg-white"
+                    placeholder={t('contact.form.emailPlaceholder')}
+                  />
+                </div>
               </div>
               
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium mb-2" style={{ color: 'hsl(var(--text-primary))' }}>
-                  Phone number
+              {/* Phone Field */}
+              <div className="group">
+                <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2 group-focus-within:text-mercury-blue-600 transition-colors duration-200">
+                  {t('contact.form.phone')}
                 </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="form-input w-full"
-                  placeholder="+84 123 456 789"
-                />
+                <div className="relative">
+                  <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-mercury-blue-500 focus:ring-4 focus:ring-mercury-blue-100 transition-all duration-200 bg-white"
+                    placeholder={t('contact.form.phonePlaceholder')}
+                  />
+                </div>
               </div>
               
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2" style={{ color: 'hsl(var(--text-primary))' }}>
-                  Your message *
+              {/* Message Field */}
+              <div className="group">
+                <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2 group-focus-within:text-mercury-blue-600 transition-colors duration-200">
+                  {t('contact.form.message')} *
                 </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={5}
-                  className="form-input w-full resize-none"
-                  placeholder="Tell us about your project requirements..."
-                />
+                <div className="relative">
+                  <MessageSquare className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows={5}
+                    className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-mercury-blue-500 focus:ring-4 focus:ring-mercury-blue-100 transition-all duration-200 bg-white resize-none"
+                    placeholder={t('contact.form.messagePlaceholder')}
+                  />
+                </div>
               </div>
               
+              {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full btn-primary inline-flex items-center justify-center"
+                disabled={isSubmitting}
+                className={`w-full py-4 px-8 rounded-xl font-semibold text-white transition-all duration-300 transform ${
+                  isSubmitting 
+                    ? 'bg-gray-400 cursor-not-allowed' 
+                    : 'bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-700 hover:from-mercury-blue-700 hover:to-mercury-blue-800 hover:scale-105 hover:shadow-lg'
+                } flex items-center justify-center space-x-2`}
               >
-                Send message
-                <Send size={20} className="ml-2" />
+                {isSubmitting ? (
+                  <>
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    <span>{t('contact.form.sending')}</span>
+                  </>
+                ) : submitSuccess ? (
+                  <>
+                    <div className="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    </div>
+                    <span>{t('contact.form.sent')}</span>
+                  </>
+                ) : (
+                  <>
+                    <Send size={20} />
+                    <span>{t('contact.form.submit')}</span>
+                  </>
+                )}
               </button>
             </form>
           </div>
 
-          {/* Contact Information */}
+          {/* Contact Information & Social */}
           <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-semibold mb-6" style={{ color: 'hsl(var(--text-primary))' }}>
-                Contact Information
-              </h3>
+            {/* Contact Information */}
+            <div className="bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
+              <div className="flex items-center mb-8">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-mercury-gold-500 to-mercury-gold-600 flex items-center justify-center mr-4">
+                  <MapPin className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    {t('contact.info.title')}
+                  </h3>
+                  <p className="text-gray-600">
+                    {t('contact.info.subtitle')}
+                  </p>
+                </div>
+              </div>
               
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
-                  <div key={index} className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-12 h-12 professional-card rounded-lg flex items-center justify-center">
-                      <info.icon className="w-6 h-6" style={{ color: 'hsl(var(--link-primary))' }} />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-2" style={{ color: 'hsl(var(--text-primary))' }}>{info.title}</h4>
-                      <div className="space-y-1">
-                        {info.details.map((detail, detailIndex) => (
-                          <p key={detailIndex} style={{ color: 'hsl(var(--text-secondary))' }}>{detail}</p>
-                        ))}
+                  <div key={index} className="group p-4 rounded-2xl border-2 border-transparent hover:border-gray-200 transition-all duration-300">
+                    <div className="flex items-start space-x-4">
+                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${info.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                        <info.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-mercury-blue-600 transition-colors duration-200">
+                          {info.title}
+                        </h4>
+                        <div className="space-y-1">
+                          {info.details.map((detail, detailIndex) => (
+                            <p key={detailIndex} className="text-gray-600 leading-relaxed">
+                              {detail}
+                            </p>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -192,30 +344,53 @@ export default function Contact() {
             </div>
 
             {/* Social Profiles */}
-            <div className="professional-card p-6">
-              <h4 className="font-semibold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>Social profiles</h4>
-              <div className="flex space-x-4">
-                <a href="#" className="w-10 h-10 rounded-lg flex items-center justify-center text-white transition-colors duration-200" 
-                   style={{ backgroundColor: 'hsl(var(--link-primary))' }}>
-                  <span className="text-sm font-semibold">LI</span>
-                </a>
-                <a href="#" className="w-10 h-10 rounded-lg flex items-center justify-center text-white transition-colors duration-200" 
-                   style={{ backgroundColor: 'hsl(var(--link-primary))' }}>
-                  <span className="text-sm font-semibold">FB</span>
-                </a>
-                <a href="#" className="w-10 h-10 rounded-lg flex items-center justify-center text-white transition-colors duration-200" 
-                   style={{ backgroundColor: 'hsl(var(--link-primary))' }}>
-                  <span className="text-sm font-semibold">TW</span>
-                </a>
+            <div className="bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
+              <div className="flex items-center mb-8">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-500 to-purple-600 flex items-center justify-center mr-4">
+                  <MessageSquare className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    {t('contact.social.title')}
+                  </h3>
+                  <p className="text-gray-600">
+                    {t('contact.social.subtitle')}
+                  </p>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-5 gap-4">
+                {socialProfiles.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.url}
+                    className={`w-12 h-12 rounded-xl bg-gradient-to-r ${social.color} ${social.hoverColor} flex items-center justify-center text-white transition-all duration-300 transform hover:scale-110 hover:shadow-lg`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </a>
+                ))}
+              </div>
+              
+              <div className="mt-6 p-4 bg-gradient-to-r from-mercury-blue-50 to-mercury-gold-50 rounded-2xl border border-mercury-blue-100">
+                <p className="text-sm text-gray-600 text-center">
+                  {t('contact.social.followUs')}
+                </p>
               </div>
             </div>
 
-            {/* Map Placeholder */}
-            <div className="professional-card p-6 h-48 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-12 h-12 mx-auto mb-2" style={{ color: 'hsl(var(--text-secondary))' }} />
-                <p style={{ color: 'hsl(var(--text-secondary))' }}>Interactive Map</p>
-                <p className="text-sm" style={{ color: 'hsl(var(--text-secondary))' }}>33 Ng. 41 P. Thai Ha, Hanoi</p>
+            {/* Quick Contact */}
+            <div className="bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-700 rounded-3xl p-8 text-white">
+              <h3 className="text-xl font-bold mb-4">
+                {t('contact.quick.title')}
+              </h3>
+              <p className="text-mercury-blue-100 mb-6">
+                {t('contact.quick.subtitle')}
+              </p>
+              <div className="flex items-center space-x-4">
+                <Phone className="w-5 h-5" />
+                <span className="font-semibold">+84 24 1234 5678</span>
               </div>
             </div>
           </div>

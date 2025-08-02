@@ -80,10 +80,10 @@ const WhyChoose = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-800 bg-clip-text text-transparent mb-6">
-            {t.whyChoose.title}
+            {t('whyChoose.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            {t.whyChoose.subtitle}
+            {t('whyChoose.subtitle')}
           </p>
         </motion.div>
 
@@ -110,10 +110,10 @@ const WhyChoose = () => {
                 {/* Content */}
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-mercury-blue-600 transition-colors duration-300">
-                    {t.whyChoose.advantages[advantage.key as keyof typeof t.whyChoose.advantages].title}
+                    {t(`whyChoose.advantages.${advantage.key}.title`)}
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
-                    {t.whyChoose.advantages[advantage.key as keyof typeof t.whyChoose.advantages].description}
+                    {t(`whyChoose.advantages.${advantage.key}.description`)}
                   </p>
                 </div>
 
