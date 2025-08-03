@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Download, Filter, Calendar } from 'lucide-react'
-import AnalyticsDashboard from '@/components/AnalyticsDashboard'
+import AnalyticsDashboard from '../../../components/AnalyticsDashboard'
 
 export const metadata: Metadata = {
   title: 'Analytics Dashboard - Mercury Solutions',

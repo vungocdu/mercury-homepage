@@ -2,7 +2,7 @@
 
 ## Current Sprint
 
-### [WIP] TVC Landing Page Content Update
+### [done] TVC Landing Page Content Update
 - [x] Cập nhật metadata SEO cho trang TVC theo tvc-landing-page-content.md
 - [x] Tích hợp nội dung Hero Section mới với pain points và value proposition
 - [x] Cập nhật Services Section với focus vào nhà máy và doanh nghiệp sản xuất
@@ -15,6 +15,8 @@
 - [x] Cập nhật FAQ với 8 câu hỏi chi tiết cho tất cả ngôn ngữ
 - [x] Test responsive design và performance
 - [x] Fix TypeScript errors và build issues
+- [x] Fix translation keys mismatch in TVC page
+- [x] Fix import path for AnalyticsDashboard component
 
 ### [WIP] TVC Services Integration
 - [x] Tích hợp hiệu ứng thanh cuộn (ScrollIndicator) vào layout chính
@@ -77,6 +79,13 @@
 - [ ] Add input validation
 
 ## Recently Completed
+
+### [done] 2024-12-19: TVC Page Update and Build Fix
+- [x] Fixed TVC page translation keys mismatch
+- [x] Updated process section to use correct translation structure
+- [x] Fixed AnalyticsDashboard import path error
+- [x] Ensured all TVC page sections display correctly
+- [x] Resolved build errors and compilation issues
 
 ### [done] 2024-12-19: Navigation Menu Fix and Smooth Scroll Implementation
 - [x] Fixed navigation menu functionality - all menu items now properly scroll to sections

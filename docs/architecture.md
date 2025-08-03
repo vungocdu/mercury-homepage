@@ -67,7 +67,7 @@ mercury-solution-homepage/
 
 ### Page Components
 - **HomePage**: Landing page với tất cả sections
-- **TVCPage**: Dedicated TVC services page
+- **TVCPage**: Dedicated TVC services page với đầy đủ sections (Hero, Pain Points, Solution, Portfolio, Process, Why Us, CTA, FAQ)
 
 ### Feature Components
 - **Hero**: Main value proposition và CTA
@@ -107,6 +107,7 @@ const navigation = [
 - Project portfolio data
 - Contact information
 - FAQ content
+- TVC services content với đầy đủ translation keys
 
 ### Dynamic Content (Future)
 - CMS integration cho content management

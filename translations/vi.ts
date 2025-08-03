@@ -204,6 +204,7 @@ export const vi = {
     portfolio: {
       title: "Portfolio của chúng tôi",
       subtitle: "Thể hiện chuyên môn của chúng tôi trên nhiều ngành và loại dự án",
+      description: "Khám phá portfolio các dự án thành công thể hiện chuyên môn của chúng tôi trong việc cung cấp giải pháp sáng tạo trên nhiều ngành với công nghệ tiên tiến.",
       projects: {
         corporate: {
           title: "Phim thương hiệu doanh nghiệp",
@@ -220,17 +221,40 @@ export const vi = {
         events: {
           title: "Ghi hình sự kiện & Điểm nổi bật",
           description: "Tài liệu sự kiện chuyên nghiệp và nội dung quảng bá."
-        }
+        },
+        videoPreview: "Xem trước dự án",
+        platform: "Nền tảng"
       }
     },
     process: {
       title: "Quy trình chiến lược của chúng tôi",
       subtitle: "Phương pháp đã được chứng minh đảm bảo mọi dự án mang lại kết quả xuất sắc",
+      description: "Chúng tôi chuyên tạo nội dung TVC chiến lược nâng cao hình ảnh thương hiệu và thu hút nhân tài hàng đầu. Cách tiếp cận toàn diện kết hợp công nghệ tiên tiến với sự xuất sắc sáng tạo.",
       steps: {
-        consultation: "Tư vấn hợp tác",
-        concept: "Phát triển ý tưởng chiến lược",
-        production: "Sản xuất điện ảnh",
-        postProduction: "Hậu kỳ xuất sắc"
+        consultation: {
+          title: "Tư vấn hợp tác",
+          description: "Phân tích nhu cầu, mục tiêu và đối tượng mục tiêu để xây dựng chiến lược nội dung phù hợp."
+        },
+        concept: {
+          title: "Phát triển ý tưởng chiến lược",
+          description: "Sáng tạo ý tưởng độc đáo và kịch bản chi tiết thể hiện thông điệp thương hiệu."
+        },
+        production: {
+          title: "Sản xuất điện ảnh",
+          description: "Thực hiện quay phim chuyên nghiệp với thiết bị cao cấp và đội ngũ giàu kinh nghiệm."
+        },
+        postProduction: {
+          title: "Hậu kỳ xuất sắc",
+          description: "Dựng phim, chỉnh màu, hiệu ứng và hoàn thiện sản phẩm cuối cùng."
+        },
+        timeline: "Thời gian"
+      },
+      summary: {
+        title: "Tổng quan quy trình",
+        subtitle: "Cam kết chất lượng và thời gian",
+        weeks: "Tuần",
+        satisfaction: "Hài lòng",
+        quality: "Chất lượng"
       }
     },
     whyUs: {

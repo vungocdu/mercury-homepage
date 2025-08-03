@@ -204,6 +204,7 @@ export const ja = {
     portfolio: {
       title: "私たちのポートフォリオ",
       subtitle: "様々な業界とプロジェクトタイプでの専門性を紹介",
+      description: "最先端技術による革新的ソリューションを様々な業界に提供する専門性を示す成功プロジェクトのポートフォリオをご覧ください。",
       projects: {
         corporate: {
           title: "コーポレートブランドフィルム",
@@ -220,17 +221,40 @@ export const ja = {
         events: {
           title: "イベントカバレッジ & ハイライト",
           description: "プロフェッショナルなイベント記録とプロモーションコンテンツ。"
-        }
+        },
+        videoPreview: "プロジェクトプレビュー",
+        platform: "プラットフォーム"
       }
     },
     process: {
       title: "私たちの戦略的プロセス",
       subtitle: "すべてのプロジェクトが卓越した結果を提供することを保証する実証された方法論",
+      description: "ブランドイメージを向上させ、トップ人材を引き付ける戦略的TVCコンテンツ制作に特化しています。私たちの包括的アプローチは最先端技術とクリエイティブエクセレンスを組み合わせます。",
       steps: {
-        consultation: "協力的コンサルテーション",
-        concept: "戦略的コンセプト開発",
-        production: "シネマティック制作",
-        postProduction: "卓越したポストプロダクション"
+        consultation: {
+          title: "協力的コンサルテーション",
+          description: "ニーズ、目標、ターゲットオーディエンスを分析して、適切なコンテンツ戦略を構築します。"
+        },
+        concept: {
+          title: "戦略的コンセプト開発",
+          description: "ブランドメッセージを伝えるユニークなアイデアと詳細なスクリプトを作成します。"
+        },
+        production: {
+          title: "シネマティック制作",
+          description: "高級機器と経験豊富なチームによる専門的な撮影。"
+        },
+        postProduction: {
+          title: "卓越したポストプロダクション",
+          description: "編集、カラーグレーディング、エフェクト、最終製品の完成。"
+        },
+        timeline: "タイムライン"
+      },
+      summary: {
+        title: "プロセス概要",
+        subtitle: "品質とタイムラインの約束",
+        weeks: "週間",
+        satisfaction: "満足度",
+        quality: "品質"
       }
     },
     whyUs: {

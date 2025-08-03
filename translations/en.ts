@@ -203,34 +203,58 @@ export const en = {
     },
     portfolio: {
       title: "Our Portfolio",
-      subtitle: "Showcasing our expertise across various industries and project types",
+      subtitle: "Showcasing our expertise across industries and project types",
+      description: "Explore our portfolio of successful projects that demonstrate our expertise in delivering innovative solutions across various industries with cutting-edge technology.",
       projects: {
         corporate: {
-          title: "Corporate Brand Film",
+          title: "Corporate Brand Films",
           description: "Comprehensive brand storytelling for corporate identity and market positioning."
         },
         product: {
-          title: "Product Launch Campaign",
+          title: "Product Launch Campaigns",
           description: "Dynamic product showcases that drive sales and market awareness."
         },
         internal: {
           title: "Internal Communications",
-          description: "Employee engagement and training content that strengthens company culture."
+          description: "Interactive employee content and training that strengthens company culture."
         },
         events: {
           title: "Event Coverage & Highlights",
           description: "Professional event documentation and promotional content."
-        }
+        },
+        videoPreview: "Project Preview",
+        platform: "Platform"
       }
     },
     process: {
       title: "Our Strategic Process",
-      subtitle: "A proven methodology that ensures every project delivers exceptional results",
+      subtitle: "Proven methodology ensuring every project delivers exceptional results",
+      description: "We specialize in creating strategic TVC content that enhances your brand image and attracts top talent. Our comprehensive approach combines cutting-edge technology with creative excellence.",
       steps: {
-        consultation: "Collaborative Consultation",
-        concept: "Strategic Concept Development",
-        production: "Cinematic Production",
-        postProduction: "Masterful Post-Production"
+        consultation: {
+          title: "Collaborative Consultation",
+          description: "Analyze needs, goals, and target audience to build appropriate content strategy."
+        },
+        concept: {
+          title: "Strategic Concept Development",
+          description: "Create unique ideas and detailed scripts that convey brand messages."
+        },
+        production: {
+          title: "Cinematic Production",
+          description: "Professional filming with high-end equipment and experienced team."
+        },
+        postProduction: {
+          title: "Excellence in Post-Production",
+          description: "Editing, color grading, effects and final product completion."
+        },
+        timeline: "Timeline"
+      },
+      summary: {
+        title: "Process Overview",
+        subtitle: "Quality and timeline commitment",
+        weeks: "Weeks",
+        satisfaction: "Satisfaction",
+        quality: "Quality"
       }
     },
     whyUs: {

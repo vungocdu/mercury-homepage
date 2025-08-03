@@ -204,6 +204,7 @@ export const ko = {
     portfolio: {
       title: "우리의 포트폴리오",
       subtitle: "다양한 산업과 프로젝트 유형에서의 전문성을 보여줍니다",
+      description: "최첨단 기술로 다양한 산업에 혁신적인 솔루션을 제공하는 전문성을 보여주는 성공적인 프로젝트 포트폴리오를 살펴보세요.",
       projects: {
         corporate: {
           title: "기업 브랜드 필름",
@@ -220,17 +221,40 @@ export const ko = {
         events: {
           title: "이벤트 커버리지 & 하이라이트",
           description: "전문적인 이벤트 문서화 및 프로모션 콘텐츠."
-        }
+        },
+        videoPreview: "프로젝트 미리보기",
+        platform: "플랫폼"
       }
     },
     process: {
       title: "우리의 전략적 프로세스",
       subtitle: "모든 프로젝트가 탁월한 결과를 제공하도록 보장하는 검증된 방법론",
+      description: "브랜드 이미지를 향상시키고 최고 인재를 끌어들이는 전략적 TVC 콘텐츠 제작에 특화되어 있습니다. 우리의 포괄적인 접근 방식은 최첨단 기술과 창의적 우수성을 결합합니다.",
       steps: {
-        consultation: "협력적 컨설팅",
-        concept: "전략적 컨셉 개발",
-        production: "시네마틱 제작",
-        postProduction: "숙련된 포스트 프로덕션"
+        consultation: {
+          title: "협력적 컨설팅",
+          description: "요구사항, 목표, 타겟 오디언스를 분석하여 적절한 콘텐츠 전략을 구축합니다."
+        },
+        concept: {
+          title: "전략적 컨셉 개발",
+          description: "브랜드 메시지를 전달하는 독특한 아이디어와 상세한 스크립트를 만듭니다."
+        },
+        production: {
+          title: "시네마틱 제작",
+          description: "고급 장비와 경험丰富的한 팀의 전문적인 촬영."
+        },
+        postProduction: {
+          title: "숙련된 포스트 프로덕션",
+          description: "편집, 컬러 그레이딩, 효과 및 최종 제품 완성."
+        },
+        timeline: "타임라인"
+      },
+      summary: {
+        title: "프로세스 개요",
+        subtitle: "품질과 타임라인 약속",
+        weeks: "주",
+        satisfaction: "만족도",
+        quality: "품질"
       }
     },
     whyUs: {

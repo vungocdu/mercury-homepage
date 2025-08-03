@@ -41,29 +41,29 @@ export default function TVCPageClient() {
   const process = [
     {
       step: '01',
-      title: translations.tvc.process.steps.consultation,
-      description: translations.tvc.descriptions.consultation,
+      title: translations.tvc.process.steps.consultation.title,
+      description: translations.tvc.process.steps.consultation.description,
       icon: Lightbulb,
       color: 'mercury-blue'
     },
     {
       step: '02',
-      title: translations.tvc.process.steps.concept,
-      description: translations.tvc.descriptions.concept,
+      title: translations.tvc.process.steps.concept.title,
+      description: translations.tvc.process.steps.concept.description,
       icon: Target,
       color: 'mercury-blue'
     },
     {
       step: '03',
-      title: translations.tvc.process.steps.production,
-      description: translations.tvc.descriptions.production,
+      title: translations.tvc.process.steps.production.title,
+      description: translations.tvc.process.steps.production.description,
       icon: Camera,
       color: 'mercury-blue'
     },
     {
       step: '04',
-      title: translations.tvc.process.steps.postProduction,
-      description: translations.tvc.descriptions.postProduction,
+      title: translations.tvc.process.steps.postProduction.title,
+      description: translations.tvc.process.steps.postProduction.description,
       icon: Edit3,
       color: 'mercury-blue'
     }
@@ -357,7 +357,7 @@ export default function TVCPageClient() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {services.map((service, index) => (
               <motion.div 
                 key={index} 
@@ -368,15 +368,15 @@ export default function TVCPageClient() {
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
               >
-                <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group-hover:border-mercury-blue-200 h-full flex flex-col">
+                <div className="bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group-hover:border-mercury-blue-200 h-full flex flex-col">
                   <div className="flex items-center mb-6">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
-                      <service.icon className="w-8 h-8 text-white" />
+                    <div className={`w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br ${service.gradient} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
+                      <service.icon className="w-7 h-7 lg:w-8 lg:h-8 text-white" />
                     </div>
-                    <h3 className="ml-4 text-lg font-bold text-gray-800">{service.title}</h3>
+                    <h3 className="ml-4 text-base lg:text-lg font-bold text-gray-800">{service.title}</h3>
                   </div>
                   
-                  <p className="leading-relaxed text-gray-600 flex-grow">
+                  <p className="leading-relaxed text-gray-600 flex-grow text-sm lg:text-base">
                     {service.description}
                   </p>
                 </div>
@@ -398,17 +398,17 @@ export default function TVCPageClient() {
           >
             <div className="flex items-center justify-center space-x-2 mb-4">
               <Video className="w-6 h-6 text-mercury-gold-500" />
-              <span className="text-mercury-blue-600 font-semibold">Our Portfolio</span>
+              <span className="text-mercury-blue-600 font-semibold">{translations.tvc.portfolio.subtitle}</span>
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-800 bg-clip-text text-transparent">
               {translations.tvc.portfolio.title}
             </h2>
             <p className="text-xl max-w-3xl mx-auto text-gray-700">
-              {translations.tvc.portfolio.subtitle}
+              {translations.tvc.portfolio.description}
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
             {portfolio.map((project, index) => (
               <motion.div 
                 key={index} 
@@ -421,37 +421,37 @@ export default function TVCPageClient() {
               >
                 <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group-hover:border-mercury-blue-200 h-full flex flex-col">
                   {/* Project Image Placeholder */}
-                  <div className={`h-48 flex items-center justify-center bg-gradient-to-br ${project.gradient} relative overflow-hidden flex-shrink-0`}>
+                  <div className={`h-40 lg:h-48 flex items-center justify-center bg-gradient-to-br ${project.gradient} relative overflow-hidden flex-shrink-0`}>
                     <div className="absolute inset-0 bg-black/20"></div>
                     <div className="text-center relative z-10">
-                      <Play className="w-12 h-12 mx-auto mb-2 text-white" />
-                      <p className="text-sm text-white font-medium">Project Video</p>
+                      <Play className="w-10 h-10 lg:w-12 lg:h-12 mx-auto mb-2 text-white" />
+                      <p className="text-xs lg:text-sm text-white font-medium">{translations.tvc.portfolio.projects.videoPreview}</p>
                     </div>
                     <div className="absolute top-4 right-4">
-                      <div className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                        <ArrowRight className="w-4 h-4 text-white" />
+                      <div className="w-6 h-6 lg:w-8 lg:h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                        <ArrowRight className="w-3 h-3 lg:w-4 lg:h-4 text-white" />
                       </div>
                     </div>
                   </div>
                   
-                  <div className="p-6 flex flex-col flex-grow">
+                  <div className="p-4 lg:p-6 flex flex-col flex-grow">
                     <div className="flex items-center justify-between mb-3">
-                      <span className="px-3 py-1 text-xs rounded-full bg-gradient-to-r from-mercury-blue-500 to-mercury-blue-600 text-white font-medium flex-shrink-0">
+                      <span className="px-2 lg:px-3 py-1 text-xs rounded-full bg-gradient-to-r from-mercury-blue-500 to-mercury-blue-600 text-white font-medium flex-shrink-0">
                         {project.category}
                       </span>
-                      <span className="text-sm text-gray-600 font-medium flex-shrink-0">{project.duration}</span>
+                      <span className="text-xs lg:text-sm text-gray-600 font-medium flex-shrink-0">{project.duration}</span>
                     </div>
                     
-                    <h3 className="text-lg font-bold mb-3 text-gray-800 group-hover:text-mercury-blue-600 transition-colors duration-200">
+                    <h3 className="text-base lg:text-lg font-bold mb-3 text-gray-800 group-hover:text-mercury-blue-600 transition-colors duration-200">
                       {project.title}
                     </h3>
                     
-                    <p className="text-sm mb-4 text-gray-600 leading-relaxed flex-grow">
+                    <p className="text-xs lg:text-sm mb-4 text-gray-600 leading-relaxed flex-grow">
                       {project.description}
                     </p>
                     
                     <div className="text-xs text-gray-500 font-medium mt-auto">
-                      Platform: {project.platform}
+                      {translations.tvc.portfolio.projects.platform}: {project.platform}
                     </div>
                   </div>
                 </div>
@@ -461,7 +461,7 @@ export default function TVCPageClient() {
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* What We Do Section - Enhanced with Visual Process Cards */}
       <section className="py-20 bg-gradient-to-br from-mercury-blue-50 to-mercury-blue-100">
         <div className="container-custom">
           <motion.div 
@@ -473,17 +473,18 @@ export default function TVCPageClient() {
           >
             <div className="flex items-center justify-center space-x-2 mb-4">
               <Target className="w-6 h-6 text-mercury-blue-500" />
-              <span className="text-mercury-blue-600 font-semibold">Our Process</span>
+              <span className="text-mercury-blue-600 font-semibold">{translations.tvc.process.subtitle}</span>
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-800 bg-clip-text text-transparent">
               {translations.tvc.process.title}
             </h2>
-            <p className="text-xl max-w-3xl mx-auto text-gray-700">
-              {translations.tvc.process.subtitle}
+            <p className="text-xl max-w-4xl mx-auto text-gray-700 leading-relaxed">
+              {translations.tvc.process.description}
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+          {/* Enhanced Process Cards with Visual Steps */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {process.map((step, index) => (
               <motion.div 
                 key={index} 
@@ -493,30 +494,93 @@ export default function TVCPageClient() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
+                {/* Connection Line */}
                 {index < process.length - 1 && (
                   <div className="hidden lg:block absolute top-16 left-full w-full h-1 z-0 bg-gradient-to-r from-mercury-blue-200 to-mercury-blue-300" 
                        style={{ width: 'calc(100% - 2rem)' }}></div>
                 )}
                 
-                <div className="relative z-10 bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group h-full flex flex-col">
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-mercury-blue-500 to-mercury-blue-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                      <step.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="text-3xl font-bold bg-gradient-to-r from-mercury-blue-500 to-mercury-blue-600 bg-clip-text text-transparent flex-shrink-0">{step.step}</div>
+                <div className="relative z-10 bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group h-full flex flex-col">
+                  {/* Step Number Badge */}
+                  <div className="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-br from-mercury-gold-500 to-mercury-gold-600 rounded-full flex items-center justify-center shadow-lg">
+                    <span className="text-white font-bold text-lg">{step.step}</span>
                   </div>
                   
-                  <h3 className="text-lg font-bold mb-4 text-gray-800">
-                    {step.title}
-                  </h3>
+                  {/* Icon and Title */}
+                  <div className="flex items-center mb-6">
+                    <div className="w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-mercury-blue-500 to-mercury-blue-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                      <step.icon className="w-7 h-7 lg:w-8 lg:h-8 text-white" />
+                    </div>
+                    <h3 className="ml-4 text-base lg:text-lg font-bold text-gray-800">
+                      {step.title}
+                    </h3>
+                  </div>
                   
-                  <p className="leading-relaxed text-gray-600 flex-grow">
+                  {/* Description */}
+                  <p className="leading-relaxed text-gray-600 flex-grow text-sm lg:text-base">
                     {step.description}
                   </p>
+                  
+                  {/* Visual Timeline Indicator */}
+                  <div className="mt-6 pt-4 border-t border-gray-100">
+                    <div className="flex items-center justify-between text-xs text-gray-500">
+                      <span>{translations.tvc.process.steps.timeline}</span>
+                      <span className="font-semibold text-mercury-blue-600">
+                        {index === 0 && '1-2 days'}
+                        {index === 1 && '2-3 days'}
+                        {index === 2 && '3-5 days'}
+                        {index === 3 && '2-3 days'}
+                      </span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+                      <div 
+                        className="h-2 rounded-full bg-gradient-to-r from-mercury-blue-500 to-mercury-blue-600 transition-all duration-500"
+                        style={{ 
+                          width: `${(index + 1) * 25}%`,
+                          animationDelay: `${index * 0.2}s`
+                        }}
+                      ></div>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             ))}
           </div>
+
+          {/* Process Summary */}
+          <motion.div 
+            className="mt-16 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 max-w-4xl mx-auto">
+              <div className="flex items-center justify-center space-x-4 mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-mercury-gold-500 to-mercury-gold-600 rounded-full flex items-center justify-center">
+                  <Clock className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-800">{translations.tvc.process.summary.title}</h3>
+                  <p className="text-gray-600">{translations.tvc.process.summary.subtitle}</p>
+                </div>
+              </div>
+              <div className="grid sm:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-mercury-blue-600 mb-2">1-2</div>
+                  <div className="text-sm text-gray-600">{translations.tvc.process.summary.weeks}</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-mercury-gold-600 mb-2">100%</div>
+                  <div className="text-sm text-gray-600">{translations.tvc.process.summary.satisfaction}</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-mercury-blue-600 mb-2">4K</div>
+                  <div className="text-sm text-gray-600">{translations.tvc.process.summary.quality}</div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -535,7 +599,7 @@ export default function TVCPageClient() {
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {whyUsFeatures.map((feature, index) => (
               <motion.div 
                 key={index} 
@@ -546,15 +610,15 @@ export default function TVCPageClient() {
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
               >
-                <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group-hover:border-mercury-blue-200 h-full flex flex-col">
+                <div className="bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group-hover:border-mercury-blue-200 h-full flex flex-col">
                   <div className="flex items-center mb-6">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
-                      <feature.icon className="w-8 h-8 text-white" />
+                    <div className={`w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
+                      <feature.icon className="w-7 h-7 lg:w-8 lg:h-8 text-white" />
                     </div>
-                    <h3 className="ml-4 text-xl font-bold text-gray-800">{feature.title}</h3>
+                    <h3 className="ml-4 text-lg lg:text-xl font-bold text-gray-800">{feature.title}</h3>
                   </div>
                   
-                  <p className="leading-relaxed text-gray-600 flex-grow">
+                  <p className="leading-relaxed text-gray-600 flex-grow text-sm lg:text-base">
                     {feature.description}
                   </p>
                 </div>
@@ -597,46 +661,46 @@ export default function TVCPageClient() {
             </p>
             
             {/* Contact Form */}
-            <div className="max-w-2xl mx-auto bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <form className="grid md:grid-cols-2 gap-6">
+            <div className="max-w-2xl mx-auto bg-white/10 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-white/20">
+              <form className="grid sm:grid-cols-2 gap-4 lg:gap-6">
                 <input 
                   type="text" 
                   placeholder={translations.tvc.cta.form.name}
-                  className="p-4 rounded-xl border border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-mercury-gold-500"
+                  className="p-3 lg:p-4 rounded-xl border border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-mercury-gold-500 text-sm lg:text-base"
                 />
                 <input 
                   type="email" 
                   placeholder={translations.tvc.cta.form.email}
-                  className="p-4 rounded-xl border border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-mercury-gold-500"
+                  className="p-3 lg:p-4 rounded-xl border border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-mercury-gold-500 text-sm lg:text-base"
                 />
                 <input 
                   type="tel" 
                   placeholder={translations.tvc.cta.form.phone}
-                  className="p-4 rounded-xl border border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-mercury-gold-500"
+                  className="p-3 lg:p-4 rounded-xl border border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-mercury-gold-500 text-sm lg:text-base"
                 />
                 <input 
                   type="text" 
                   placeholder={translations.tvc.cta.form.company}
-                  className="p-4 rounded-xl border border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-mercury-gold-500"
+                  className="p-3 lg:p-4 rounded-xl border border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-mercury-gold-500 text-sm lg:text-base"
                 />
-                <div className="md:col-span-2">
+                <div className="sm:col-span-2">
                   <textarea 
                     placeholder={translations.tvc.cta.form.requirements}
                     rows={4}
-                    className="w-full p-4 rounded-xl border border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-mercury-gold-500"
+                    className="w-full p-3 lg:p-4 rounded-xl border border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-mercury-gold-500 text-sm lg:text-base"
                   ></textarea>
                 </div>
-                <div className="md:col-span-2">
-                                     <TrackingButton 
-                     href="#" 
-                     className="w-full bg-gradient-to-r from-mercury-gold-500 to-mercury-gold-600 hover:from-mercury-gold-600 hover:to-mercury-gold-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center group"
-                     trackingAction="contact_form"
-                     trackingLabel="TVC Consultation Form"
-                     conversionType="lead"
-                     conversionValue={200}
-                   >
+                <div className="sm:col-span-2">
+                  <TrackingButton 
+                    href="#" 
+                    className="w-full bg-gradient-to-r from-mercury-gold-500 to-mercury-gold-600 hover:from-mercury-gold-600 hover:to-mercury-gold-700 text-white font-bold py-3 lg:py-4 px-6 lg:px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center group text-sm lg:text-base"
+                    trackingAction="contact_form"
+                    trackingLabel="TVC Consultation Form"
+                    conversionType="lead"
+                    conversionValue={200}
+                  >
                     {translations.tvc.cta.form.submit}
-                    <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
                   </TrackingButton>
                 </div>
               </form>
@@ -671,14 +735,14 @@ export default function TVCPageClient() {
                 viewport={{ once: true }}
               >
                 <details className="group">
-                  <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition-colors duration-200">
-                    <h3 className="text-lg font-semibold text-gray-800 pr-4">{faq.question}</h3>
+                  <summary className="flex items-center justify-between p-4 lg:p-6 cursor-pointer hover:bg-gray-50 transition-colors duration-200">
+                    <h3 className="text-base lg:text-lg font-semibold text-gray-800 pr-4">{faq.question}</h3>
                     <div className="w-6 h-6 bg-gradient-to-r from-mercury-blue-500 to-mercury-blue-600 rounded-full flex items-center justify-center flex-shrink-0 group-open:rotate-180 transition-transform duration-200">
                       <ArrowRight className="w-4 h-4 text-white" />
                     </div>
                   </summary>
-                  <div className="px-6 pb-6">
-                    <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                  <div className="px-4 lg:px-6 pb-4 lg:pb-6">
+                    <p className="text-gray-600 leading-relaxed text-sm lg:text-base">{faq.answer}</p>
                   </div>
                 </details>
               </motion.div>
