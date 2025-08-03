@@ -26,6 +26,11 @@ export const vi = {
   whyChoose: {
     title: "Tại sao chọn Mercury Solutions",
     subtitle: "Chúng tôi xuất sắc trong việc xây dựng các ứng dụng web và mobile có tải cao với công nghệ tiên tiến và phương pháp đã được chứng minh",
+    cta: {
+      title: "Sẵn sàng trải nghiệm sự khác biệt của Mercury?",
+      subtitle: "Tham gia cùng hàng trăm khách hàng hài lòng đã chuyển đổi doanh nghiệp với các giải pháp sáng tạo và chuyên môn đã được chứng minh của chúng tôi.",
+      button: "Bắt đầu ngay hôm nay"
+    },
     advantages: {
       expertise: {
         title: "Chuyên môn kỹ thuật",
@@ -275,9 +280,153 @@ export const vi = {
   projects: {
     title: "Dự án của chúng tôi",
     subtitle: "Thể hiện chuyên môn và triển khai thành công của chúng tôi",
+    header: {
+      badge: "Ứng dụng hiệu suất cao",
+      title: "Chúng tôi xuất sắc trong việc xây dựng",
+      subtitle: "ứng dụng mobile và web có tải cao",
+      description: "Khám phá portfolio các dự án thành công thể hiện chuyên môn của chúng tôi trong việc cung cấp giải pháp sáng tạo trên nhiều ngành với công nghệ tiên tiến."
+    },
     viewProject: "Xem dự án",
     technologies: "Công nghệ",
-    platforms: "Nền tảng"
+    platforms: "Nền tảng",
+    labels: {
+      features: "Tính năng chính:",
+      platforms: "Nền tảng:",
+      technologies: "Công nghệ:"
+    },
+    items: {
+      actiwell: {
+        title: "ACTIWELL Mobile & CMS",
+        description: "Với Actiwell, việc quản lý tập luyện và đặt lịch trở nên dễ dàng. Kiểm tra các slot có sẵn cho phòng gym hoặc trung tâm thể dục bất cứ lúc nào và nhanh chóng đặt sân Pickleball hoặc lớp Yoga.",
+        features: {
+          title: "Tính năng chính:",
+          items: [
+            "Lập lịch đơn giản hóa",
+            "Đặt lịch tự động",
+            "Quản lý khách hàng",
+            "Công cụ marketing"
+          ]
+        },
+        platforms: {
+          title: "Nền tảng:",
+          items: ["Ứng dụng Mobile", "Ứng dụng Web"]
+        },
+        technologies: {
+          title: "Công nghệ:",
+          items: ["Flutter", "React", "Laravel"]
+        }
+      },
+      timekeeping: {
+        title: "Hệ thống chấm công bằng AI Camera",
+        description: "Hệ thống quản lý chấm công cho nhà máy Fujikin Vietnam tích hợp camera AI để thu thập thông tin ra vào của nhân viên trong hệ thống.",
+        features: {
+          title: "Tính năng chính:",
+          items: [
+            "Tích hợp Camera AI",
+            "Quản lý chấm công",
+            "Tối ưu hóa HR",
+            "Giám sát thời gian thực"
+          ]
+        },
+        platforms: {
+          title: "Nền tảng:",
+          items: ["Ứng dụng Web"]
+        },
+        technologies: {
+          title: "Công nghệ:",
+          items: ["React", "Laravel", "AI/ML"]
+        }
+      },
+      myarm: {
+        title: "Ứng dụng Mobile myArm",
+        description: "MyArm là ứng dụng quản lý công việc và dự án giúp người dùng tổ chức nhiệm vụ hiệu quả và quản lý dự án thông minh.",
+        features: {
+          title: "Tính năng chính:",
+          items: [
+            "Quản lý dự án",
+            "Tổ chức nhiệm vụ",
+            "Cộng tác nhóm",
+            "Theo dõi deadline"
+          ]
+        },
+        platforms: {
+          title: "Nền tảng:",
+          items: ["Ứng dụng Mobile", "Ứng dụng Web"]
+        },
+        technologies: {
+          title: "Công nghệ:",
+          items: ["Flutter", "Laravel", "React"]
+        }
+      },
+      property: {
+        title: "Hệ thống Quản lý Bất động sản",
+        description: "Ứng dụng SaaS cho chủ khách sạn và doanh nhân quản lý khách sạn. Ứng dụng cung cấp quản lý chuỗi khách sạn đa chi nhánh và thời gian thực.",
+        features: {
+          title: "Tính năng chính:",
+          items: [
+            "Channel Manager",
+            "Room Control Unit",
+            "Tích hợp Camera AI",
+            "Quản lý đa chi nhánh"
+          ]
+        },
+        platforms: {
+          title: "Nền tảng:",
+          items: ["Ứng dụng Web", "Ứng dụng Mobile"]
+        },
+        technologies: {
+          title: "Công nghệ:",
+          items: ["React", "Node.js", "IoT"]
+        }
+      },
+      powerControl: {
+        title: "Nền tảng IoT Điều khiển Điện",
+        description: "Chúng tôi đã xây dựng nền tảng IoT thu thập trạng thái thiết bị IoT, phân tích dữ liệu tiêu thụ điện và điều khiển các thiết bị này qua cloud trong mili-giây.",
+        features: {
+          title: "Tính năng chính:",
+          items: [
+            "Tiết kiệm điện 30%",
+            "Điều khiển nhanh hơn 50%",
+            "Hỗ trợ 1M+ thiết bị",
+            "Phân tích thời gian thực"
+          ]
+        },
+        platforms: {
+          title: "Nền tảng:",
+          items: ["Nền tảng IoT", "Dashboard Web"]
+        },
+        technologies: {
+          title: "Công nghệ:",
+          items: ["IoT", "Cloud", "Analytics"]
+        }
+      },
+      airhub: {
+        title: "Airhub – Hướng dẫn địa phương của bạn",
+        description: "Ứng dụng web trực tuyến và được thiết kế tốt nhất cho webapp smartphone để cung cấp thông tin du lịch như bản đồ hướng dẫn địa phương, ưu đãi đặc biệt từ thương hiệu địa phương.",
+        features: {
+          title: "Tính năng chính:",
+          items: [
+            "Hướng dẫn địa phương",
+            "Virtual Frontdesk",
+            "Hỗ trợ AI",
+            "Ưu đãi địa phương"
+          ]
+        },
+        platforms: {
+          title: "Nền tảng:",
+          items: ["Ứng dụng Web", "Mobile Web"]
+        },
+        technologies: {
+          title: "Công nghệ:",
+          items: ["React", "AI/ML", "Maps API"]
+        }
+      }
+    },
+    cta: {
+      title: "Sẵn sàng bắt đầu dự án AI của bạn?",
+      description: "Hãy thảo luận cách chúng tôi có thể giúp bạn đạt được mục tiêu chuyển đổi số với các giải pháp AI và công nghệ tiên tiến của chúng tôi.",
+      button: "Khởi động dự án"
+    }
   },
 
   // Contact

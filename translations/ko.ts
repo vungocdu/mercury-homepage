@@ -25,15 +25,20 @@ export const ko = {
   // Why Choose Mercury Solutions
   whyChoose: {
     title: "Mercury Solutions를 선택하는 이유",
-    subtitle: "우리는 최첨단 기술과 검증된 방법론으로 고부하 모바일 및 웹 애플리케이션 구축에 뛰어납니다",
+    subtitle: "최첨단 기술과 검증된 방법론으로 고부하 모바일 및 웹 애플리케이션 구축에 뛰어납니다",
+    cta: {
+      title: "Mercury의 차이점을 경험할 준비가 되셨나요?",
+      subtitle: "혁신적인 솔루션과 검증된 전문 지식으로 비즈니스를 변화시킨 수백 명의 만족한 고객들과 함께하세요.",
+      button: "오늘 시작하기"
+    },
     advantages: {
       expertise: {
         title: "기술적 전문성",
-        description: "경험丰富的한 개발자와 엔지니어 팀이 여러 플랫폼과 기술에 걸친 깊은 기술 지식을 제공합니다."
+        description: "경험 많은 개발자와 엔지니어 팀이 다양한 플랫폼과 기술에 걸친 깊은 기술 지식을 제공합니다."
       },
       innovation: {
-        title: "혁신에 대한 집중",
-        description: "기술 트렌드의 최전선에 서서 최신 솔루션을 구현하여 비즈니스에 경쟁 우위를 제공합니다."
+        title: "혁신 중심",
+        description: "기술 트렌드의 선두에 서서 비즈니스에 경쟁 우위를 제공하는 최신 솔루션을 구현합니다."
       },
       quality: {
         title: "품질 보증",
@@ -41,11 +46,11 @@ export const ko = {
       },
       support: {
         title: "24/7 지원",
-        description: "시스템이 원활하게 운영되도록 24시간 기술 지원 및 유지보수 서비스."
+        description: "시스템이 원활하게 운영되도록 24시간 기술 지원 및 유지보수 서비스를 제공합니다."
       },
       scalability: {
         title: "확장 가능한 솔루션",
-        description: "우리의 아키텍처는 비즈니스와 함께 성장하도록 설계되어 부하 증가와 요구사항 확장을 처리합니다."
+        description: "우리의 아키텍처는 비즈니스와 함께 성장하도록 설계되어 증가하는 부하와 확장 요구사항을 처리합니다."
       },
       security: {
         title: "보안 우선",
@@ -275,9 +280,153 @@ export const ko = {
   projects: {
     title: "우리의 프로젝트",
     subtitle: "전문성과 성공적인 구현을 보여줍니다",
+    header: {
+      badge: "고성능 애플리케이션",
+      title: "우리는 구축에 뛰어납니다",
+      subtitle: "고부하 모바일 및 웹 애플리케이션",
+      description: "최첨단 기술로 다양한 산업에 혁신적인 솔루션을 제공하는 전문성을 보여주는 성공한 프로젝트 포트폴리오를 탐색해 보세요."
+    },
     viewProject: "프로젝트 보기",
     technologies: "기술",
-    platforms: "플랫폼"
+    platforms: "플랫폼",
+    labels: {
+      features: "주요 기능:",
+      platforms: "플랫폼:",
+      technologies: "기술:"
+    },
+    items: {
+      actiwell: {
+        title: "ACTIWELL 모바일 & CMS",
+        description: "Actiwell을 사용하면 운동 관리와 예약이 쉬워집니다. 언제든지 체육관이나 피트니스 센터의 가능한 시간을 확인하고 피클볼 코트나 요가 수업을 빠르게 예약할 수 있습니다.",
+        features: {
+          title: "주요 기능:",
+          items: [
+            "간소화된 스케줄링",
+            "자동 예약",
+            "고객 관리",
+            "마케팅 도구"
+          ]
+        },
+        platforms: {
+          title: "플랫폼:",
+          items: ["모바일 앱", "웹 앱"]
+        },
+        technologies: {
+          title: "기술:",
+          items: ["Flutter", "React", "Laravel"]
+        }
+      },
+      timekeeping: {
+        title: "AI 카메라를 통한 출퇴근 관리",
+        description: "후지킨 베트남 공장의 출근 관리 시스템은 AI 카메라를 통합하여 시스템 내 직원의 출입 정보를 수집합니다.",
+        features: {
+          title: "주요 기능:",
+          items: [
+            "AI 카메라 통합",
+            "출근 관리",
+            "HR 최적화",
+            "실시간 모니터링"
+          ]
+        },
+        platforms: {
+          title: "플랫폼:",
+          items: ["웹 앱"]
+        },
+        technologies: {
+          title: "기술:",
+          items: ["React", "Laravel", "AI/ML"]
+        }
+      },
+      myarm: {
+        title: "myArm 모바일 애플리케이션",
+        description: "MyArm은 사용자가 작업을 효율적으로 구성하고 프로젝트를 지능적으로 관리하는 것을 돕는 작업 및 프로젝트 관리 애플리케이션입니다.",
+        features: {
+          title: "주요 기능:",
+          items: [
+            "프로젝트 관리",
+            "작업 구성",
+            "팀 협업",
+            "마감일 추적"
+          ]
+        },
+        platforms: {
+          title: "플랫폼:",
+          items: ["모바일 앱", "웹 앱"]
+        },
+        technologies: {
+          title: "기술:",
+          items: ["Flutter", "Laravel", "React"]
+        }
+      },
+      property: {
+        title: "부동산 관리 시스템",
+        description: "호텔 소유자와 호텔 관리 기업가를 위한 SaaS 애플리케이션. 애플리케이션은 다중 지점 및 실시간 호텔 체인 관리를 제공합니다.",
+        features: {
+          title: "주요 기능:",
+          items: [
+            "채널 매니저",
+            "룸 컨트롤 유닛",
+            "카메라 AI 통합",
+            "다중 지점 관리"
+          ]
+        },
+        platforms: {
+          title: "플랫폼:",
+          items: ["웹 앱", "모바일 앱"]
+        },
+        technologies: {
+          title: "기술:",
+          items: ["React", "Node.js", "IoT"]
+        }
+      },
+      powerControl: {
+        title: "전력 제어 IoT 플랫폼",
+        description: "IoT 디바이스 상태를 수집하고 전력 소비 데이터를 분석하며 밀리초 단위로 클라우드를 통해 이러한 디바이스를 제어하는 IoT 플랫폼을 구축했습니다.",
+        features: {
+          title: "주요 기능:",
+          items: [
+            "30% 전력 절약",
+            "50% 빠른 제어",
+            "100만+ 디바이스 지원",
+            "실시간 분석"
+          ]
+        },
+        platforms: {
+          title: "플랫폼:",
+          items: ["IoT 플랫폼", "웹 대시보드"]
+        },
+        technologies: {
+          title: "기술:",
+          items: ["IoT", "Cloud", "Analytics"]
+        }
+      },
+      airhub: {
+        title: "Airhub – 당신의 로컬 가이드",
+        description: "온라인 웹 앱으로 스마트폰 웹앱에 최적화되어 로컬 가이드 맵, 로컬 브랜드의 특별한 제안 등 여행자 정보를 제공합니다.",
+        features: {
+          title: "주요 기능:",
+          items: [
+            "로컬 가이드",
+            "가상 프론트데스크",
+            "AI 지원",
+            "로컬 제안"
+          ]
+        },
+        platforms: {
+          title: "플랫폼:",
+          items: ["웹 앱", "모바일 웹"]
+        },
+        technologies: {
+          title: "기술:",
+          items: ["React", "AI/ML", "Maps API"]
+        }
+      }
+    },
+    cta: {
+      title: "AI 프로젝트를 시작할 준비가 되셨나요?",
+      description: "최첨단 AI와 기술 솔루션으로 디지털 변환 목표 달성을 돕는 방법에 대해 논의해 보겠습니다.",
+      button: "프로젝트 시작"
+    }
   },
 
   // Contact

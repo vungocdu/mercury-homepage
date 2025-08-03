@@ -25,19 +25,24 @@ export const ja = {
   // Why Choose Mercury Solutions
   whyChoose: {
     title: "Mercury Solutionsを選ぶ理由",
-    subtitle: "私たちは、最先端技術と実証された方法論で高負荷のモバイル・Webアプリケーション構築に優れています",
+    subtitle: "最先端技術と実証された方法論で高負荷モバイル・Webアプリケーションの構築に優れています",
+    cta: {
+      title: "Mercuryの違いを体験する準備はできていますか？",
+      subtitle: "革新的なソリューションと実証された専門知識でビジネスを変革した何百もの満足したクライアントに参加してください。",
+      button: "今日始める"
+    },
     advantages: {
       expertise: {
-        title: "技術的専門性",
+        title: "技術的専門知識",
         description: "経験豊富な開発者とエンジニアのチームが、複数のプラットフォームと技術にわたる深い技術知識を提供します。"
       },
       innovation: {
-        title: "革新への焦点",
-        description: "技術トレンドの最前線に立ち、最新のソリューションを実装して、ビジネスに競争優位をもたらします。"
+        title: "イノベーション重視",
+        description: "技術トレンドの先を行き、ビジネスに競争優位を与える最新ソリューションを実装します。"
       },
       quality: {
         title: "品質保証",
-        description: "厳格なテストと品質管理プロセスにより、信頼性、スケーラビリティ、保守性のあるソリューションを保証します。"
+        description: "厳格なテストと品質管理プロセスにより、信頼性が高く、スケーラブルで保守性の高いソリューションを保証します。"
       },
       support: {
         title: "24/7サポート",
@@ -45,11 +50,11 @@ export const ja = {
       },
       scalability: {
         title: "スケーラブルソリューション",
-        description: "私たちのアーキテクチャは、ビジネスの成長と共に拡張し、負荷の増加と要件の拡大に対応するよう設計されています。"
+        description: "私たちのアーキテクチャは、ビジネスと共に成長するように設計され、負荷の増加と拡張要件に対応します。"
       },
       security: {
         title: "セキュリティ第一",
-        description: "エンタープライズレベルのセキュリティ対策でデータを保護し、業界標準への準拠を確保します。"
+        description: "エンタープライズグレードのセキュリティ対策がデータを保護し、業界標準への準拠を保証します。"
       }
     }
   },
@@ -275,9 +280,153 @@ export const ja = {
   projects: {
     title: "私たちのプロジェクト",
     subtitle: "専門性と成功した実装を紹介",
+    header: {
+      badge: "高性能アプリケーション",
+      title: "私たちは構築に優れています",
+      subtitle: "高負荷モバイル・Webアプリケーション",
+      description: "最先端技術で様々な業界に革新的ソリューションを提供する専門知識を示す成功したプロジェクトのポートフォリオをご覧ください。"
+    },
     viewProject: "プロジェクトを見る",
     technologies: "技術",
-    platforms: "プラットフォーム"
+    platforms: "プラットフォーム",
+    labels: {
+      features: "主要機能:",
+      platforms: "プラットフォーム:",
+      technologies: "技術:"
+    },
+    items: {
+      actiwell: {
+        title: "ACTIWELL モバイル & CMS",
+        description: "Actiwellでは、ワークアウトの管理と予約が簡単になります。ジムやフィットネスセンターの空き時間をいつでもチェックし、ピクルボールコートやヨガクラスを素早く予約できます。",
+        features: {
+          title: "主要機能:",
+          items: [
+            "簡素化されたスケジューリング",
+            "自動予約",
+            "顧客管理",
+            "マーケティングツール"
+          ]
+        },
+        platforms: {
+          title: "プラットフォーム:",
+          items: ["モバイルアプリ", "Webアプリ"]
+        },
+        technologies: {
+          title: "技術:",
+          items: ["Flutter", "React", "Laravel"]
+        }
+      },
+      timekeeping: {
+        title: "AIカメラによる勤怠管理",
+        description: "フジキン・ベトナム工場の勤怠管理システムは、AIカメラを統合して従業員の入退室情報をシステム内で収集します。",
+        features: {
+          title: "主要機能:",
+          items: [
+            "AIカメラ統合",
+            "勤怠管理",
+            "HR最適化",
+            "リアルタイム監視"
+          ]
+        },
+        platforms: {
+          title: "プラットフォーム:",
+          items: ["Webアプリ"]
+        },
+        technologies: {
+          title: "技術:",
+          items: ["React", "Laravel", "AI/ML"]
+        }
+      },
+      myarm: {
+        title: "myArm モバイルアプリケーション",
+        description: "MyArmは、ユーザーがタスクを効率的に整理し、プロジェクトをインテリジェントに管理することを支援する作業・プロジェクト管理アプリケーションです。",
+        features: {
+          title: "主要機能:",
+          items: [
+            "プロジェクト管理",
+            "タスク整理",
+            "チーム協力",
+            "期限追跡"
+          ]
+        },
+        platforms: {
+          title: "プラットフォーム:",
+          items: ["モバイルアプリ", "Webアプリ"]
+        },
+        technologies: {
+          title: "技術:",
+          items: ["Flutter", "Laravel", "React"]
+        }
+      },
+      property: {
+        title: "不動産管理システム",
+        description: "ホテルオーナーとホテル管理起業家向けのSaaSアプリケーション。アプリケーションは複数支店とリアルタイムのホテルチェーン管理を提供します。",
+        features: {
+          title: "主要機能:",
+          items: [
+            "チャンネルマネージャー",
+            "ルームコントロールユニット",
+            "カメラAI統合",
+            "複数支店管理"
+          ]
+        },
+        platforms: {
+          title: "プラットフォーム:",
+          items: ["Webアプリ", "モバイルアプリ"]
+        },
+        technologies: {
+          title: "技術:",
+          items: ["React", "Node.js", "IoT"]
+        }
+      },
+      powerControl: {
+        title: "電力制御IoTプラットフォーム",
+        description: "IoTデバイスのステータスを収集し、電力消費データを分析し、これらのデバイスをクラウド上でミリ秒単位で制御するIoTプラットフォームを構築しました。",
+        features: {
+          title: "主要機能:",
+          items: [
+            "30%の電力節約",
+            "50%高速制御",
+            "100万+デバイスサポート",
+            "リアルタイム分析"
+          ]
+        },
+        platforms: {
+          title: "プラットフォーム:",
+          items: ["IoTプラットフォーム", "Webダッシュボード"]
+        },
+        technologies: {
+          title: "技術:",
+          items: ["IoT", "Cloud", "Analytics"]
+        }
+      },
+      airhub: {
+        title: "Airhub – あなたのローカルガイド",
+        description: "オンラインWebアプリで、スマートフォンWebアプリ用に最適設計され、ローカルガイドマップやローカルブランドからの特別オファーなどの旅行者情報を提供します。",
+        features: {
+          title: "主要機能:",
+          items: [
+            "ローカルガイド",
+            "バーチャルフロントデスク",
+            "AIアシスタンス",
+            "ローカルオファー"
+          ]
+        },
+        platforms: {
+          title: "プラットフォーム:",
+          items: ["Webアプリ", "モバイルWeb"]
+        },
+        technologies: {
+          title: "技術:",
+          items: ["React", "AI/ML", "Maps API"]
+        }
+      }
+    },
+    cta: {
+      title: "AIプロジェクトを始める準備はできていますか？",
+      description: "最先端のAIと技術ソリューションでデジタル変革の目標達成を支援する方法について話し合いましょう。",
+      button: "プロジェクトを開始"
+    }
   },
 
   // Contact

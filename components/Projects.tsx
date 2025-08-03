@@ -1,86 +1,35 @@
+"use client"
+
 import { ExternalLink, Smartphone, Globe, Zap } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Projects() {
-  const projects = [
-    {
-      title: 'ACTIWELL Mobile & CMS',
-      description: 'With Actiwell, managing workouts and booking is a breeze. Check available slots for gyms or fitness centers anytime and quickly book Pickleball courts or Yoga classes.',
+  const { t } = useLanguage()
+  
+  const projectKeys = ['actiwell', 'timekeeping', 'myarm', 'property', 'powerControl', 'airhub']
+  
+  const projects = projectKeys.map(key => {
+    return {
+      title: t(`projects.items.${key}.title`),
+      description: t(`projects.items.${key}.description`),
       features: [
-        'Simplified Scheduling',
-        'Automated Booking',
-        'Customer Management',
-        'Marketing Tools'
+        t(`projects.items.${key}.features.items.0`),
+        t(`projects.items.${key}.features.items.1`),
+        t(`projects.items.${key}.features.items.2`),
+        t(`projects.items.${key}.features.items.3`)
       ],
-      platforms: ['Mobile App', 'Web App'],
-      technologies: ['Flutter', 'React', 'Laravel'],
-      image: '/images/actiwell.jpg'
-    },
-    {
-      title: 'Timekeeping by AI Camera',
-      description: 'The attendance management system for Fujikin Vietnam\'s factory integrates AI cameras to collect entry and exit information of employees within the system.',
-      features: [
-        'AI Camera Integration',
-        'Attendance Management',
-        'HR Optimization',
-        'Real-time Monitoring'
-      ],
-      platforms: ['Web App'],
-      technologies: ['React', 'Laravel', 'AI/ML'],
-      image: '/images/timekeeping.jpg'
-    },
-    {
-      title: 'myArm Mobile Application',
-      description: 'MyArm is a work and project management application that helps users organize tasks efficiently and manage projects intelligently.',
-      features: [
-        'Project Management',
-        'Task Organization',
-        'Team Collaboration',
-        'Deadline Tracking'
-      ],
-      platforms: ['Mobile App', 'Web App'],
-      technologies: ['Flutter', 'Laravel', 'React'],
-      image: '/images/myarm.jpg'
-    },
-    {
-      title: 'Property Management System',
-      description: 'SaaS applications for hotel owner and hotel management entrepreneurs. Application offers multiple-branch and realtime hotels chain management.',
-      features: [
-        'Channel Manager',
-        'Room Control Unit',
-        'Camera AI Integration',
-        'Multi-branch Management'
-      ],
-      platforms: ['Web App', 'Mobile App'],
-      technologies: ['React', 'Node.js', 'IoT'],
-      image: '/images/property.jpg'
-    },
-    {
-      title: 'Power Control IoT Platform',
-      description: 'We have built an IoT platform that gathering IoT devices status, analyses electric consumption data and control these devices over cloud in mili-seconds.',
-      features: [
-        '30% Electricity Savings',
-        '50% Faster Control',
-        '1M+ Device Support',
-        'Real-time Analytics'
-      ],
-      platforms: ['IoT Platform', 'Web Dashboard'],
-      technologies: ['IoT', 'Cloud', 'Analytics'],
-      image: '/images/power-control.jpg'
-    },
-    {
-      title: 'Airhub – Your Local Guide',
-      description: 'Online web app and best designed for smartphone webapp to provide traveller informations such as local guides map, special offers from local brand.',
-      features: [
-        'Local Guide',
-        'Virtual Frontdesk',
-        'AI Assistance',
-        'Local Offers'
-      ],
-      platforms: ['Web App', 'Mobile Web'],
-      technologies: ['React', 'AI/ML', 'Maps API'],
-      image: '/images/airhub.jpg'
+      platforms: [
+        t(`projects.items.${key}.platforms.items.0`),
+        t(`projects.items.${key}.platforms.items.1`)
+      ].filter(Boolean),
+      technologies: [
+        t(`projects.items.${key}.technologies.items.0`),
+        t(`projects.items.${key}.technologies.items.1`),
+        t(`projects.items.${key}.technologies.items.2`)
+      ].filter(Boolean),
+      image: `/images/${key}.jpg`
     }
-  ]
+  })
 
   return (
     <section id="projects" className="section-white relative overflow-hidden">
@@ -88,19 +37,18 @@ export default function Projects() {
         <div className="text-center mb-16 fade-in-up">
           <div className="inline-flex items-center space-x-2 professional-card px-4 py-2 rounded-full mb-6">
             <Zap className="w-4 h-4" style={{ color: 'hsl(var(--link-primary))' }} />
-            <span className="text-sm font-medium" style={{ color: 'hsl(var(--text-primary))' }}>High-Performance Applications</span>
+            <span className="text-sm font-medium" style={{ color: 'hsl(var(--text-primary))' }}>{t('projects.header.badge')}</span>
           </div>
           
           <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-            <span style={{ color: 'hsl(var(--text-primary))' }}>We excel in building</span>{' '}
+            <span style={{ color: 'hsl(var(--text-primary))' }}>{t('projects.header.title')}</span>{' '}
             <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
-              high-load mobile and web applications
+              {t('projects.header.subtitle')}
             </span>
           </h2>
           
           <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: 'hsl(var(--text-secondary))' }}>
-            Explore our portfolio of successful projects that demonstrate our expertise 
-            in delivering innovative solutions across various industries with cutting-edge technology.
+            {t('projects.header.description')}
           </p>
         </div>
 
@@ -135,7 +83,7 @@ export default function Projects() {
                 
                 {/* Features */}
                 <div className="mb-4">
-                  <h4 className="font-semibold mb-2" style={{ color: 'hsl(var(--text-primary))' }}>Key Features:</h4>
+                  <h4 className="font-semibold mb-2" style={{ color: 'hsl(var(--text-primary))' }}>{t('projects.labels.features')}</h4>
                   <ul className="space-y-1">
                     {project.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm" style={{ color: 'hsl(var(--text-secondary))' }}>
@@ -151,7 +99,7 @@ export default function Projects() {
                   <div>
                     <h4 className="font-semibold mb-2 flex items-center" style={{ color: 'hsl(var(--text-primary))' }}>
                       <Smartphone className="w-4 h-4 mr-2" style={{ color: 'hsl(var(--link-primary))' }} />
-                      Platforms:
+                      {t('projects.labels.platforms')}
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {project.platforms.map((platform, platformIndex) => (
@@ -165,7 +113,7 @@ export default function Projects() {
                   <div>
                     <h4 className="font-semibold mb-2 flex items-center" style={{ color: 'hsl(var(--text-primary))' }}>
                       <Zap className="w-4 h-4 mr-2" style={{ color: 'hsl(var(--warning-color))' }} />
-                      Technologies:
+                      {t('projects.labels.technologies')}
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech, techIndex) => (
@@ -197,14 +145,13 @@ export default function Projects() {
                }}>
             <div className="relative z-10">
               <h3 className="text-2xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>
-                Ready to Start Your AI Project?
+                {t('projects.cta.title')}
               </h3>
               <p className="mb-6 max-w-2xl mx-auto" style={{ color: 'hsl(var(--text-secondary))' }}>
-                Let's discuss how we can help you achieve your digital transformation goals 
-                with our cutting-edge AI and technology solutions.
+                {t('projects.cta.description')}
               </p>
               <a href="#contact" className="group btn-primary inline-flex items-center transform hover:scale-105 shadow-lg hover:shadow-xl">
-                Launch Your Project
+                {t('projects.cta.button')}
                 <ExternalLink size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>

@@ -26,6 +26,11 @@ export const en = {
   whyChoose: {
     title: "Why Choose Mercury Solutions",
     subtitle: "We excel in building high load mobile and web applications with cutting-edge technologies and proven methodologies",
+    cta: {
+      title: "Ready to experience the Mercury difference?",
+      subtitle: "Join hundreds of satisfied clients who have transformed their businesses with our innovative solutions and proven expertise.",
+      button: "Get Started Today"
+    },
     advantages: {
       expertise: {
         title: "Technical Expertise",
@@ -275,9 +280,153 @@ export const en = {
   projects: {
     title: "Our Projects",
     subtitle: "Showcasing our expertise and successful implementations",
+    header: {
+      badge: "High-Performance Applications",
+      title: "We excel in building",
+      subtitle: "high-load mobile and web applications",
+      description: "Explore our portfolio of successful projects that demonstrate our expertise in delivering innovative solutions across various industries with cutting-edge technology."
+    },
     viewProject: "View Project",
     technologies: "Technologies",
-    platforms: "Platforms"
+    platforms: "Platforms",
+    labels: {
+      features: "Key Features:",
+      platforms: "Platforms:",
+      technologies: "Technologies:"
+    },
+    items: {
+      actiwell: {
+        title: "ACTIWELL Mobile & CMS",
+        description: "With Actiwell, managing workouts and booking is a breeze. Check available slots for gyms or fitness centers anytime and quickly book Pickleball courts or Yoga classes.",
+        features: {
+          title: "Key Features:",
+          items: [
+            "Simplified Scheduling",
+            "Automated Booking",
+            "Customer Management",
+            "Marketing Tools"
+          ]
+        },
+        platforms: {
+          title: "Platforms:",
+          items: ["Mobile App", "Web App"]
+        },
+        technologies: {
+          title: "Technologies:",
+          items: ["Flutter", "React", "Laravel"]
+        }
+      },
+      timekeeping: {
+        title: "Timekeeping by AI Camera",
+        description: "The attendance management system for Fujikin Vietnam's factory integrates AI cameras to collect entry and exit information of employees within the system.",
+        features: {
+          title: "Key Features:",
+          items: [
+            "AI Camera Integration",
+            "Attendance Management",
+            "HR Optimization",
+            "Real-time Monitoring"
+          ]
+        },
+        platforms: {
+          title: "Platforms:",
+          items: ["Web App"]
+        },
+        technologies: {
+          title: "Technologies:",
+          items: ["React", "Laravel", "AI/ML"]
+        }
+      },
+      myarm: {
+        title: "myArm Mobile Application",
+        description: "MyArm is a work and project management application that helps users organize tasks efficiently and manage projects intelligently.",
+        features: {
+          title: "Key Features:",
+          items: [
+            "Project Management",
+            "Task Organization",
+            "Team Collaboration",
+            "Deadline Tracking"
+          ]
+        },
+        platforms: {
+          title: "Platforms:",
+          items: ["Mobile App", "Web App"]
+        },
+        technologies: {
+          title: "Technologies:",
+          items: ["Flutter", "Laravel", "React"]
+        }
+      },
+      property: {
+        title: "Property Management System",
+        description: "SaaS applications for hotel owner and hotel management entrepreneurs. Application offers multiple-branch and realtime hotels chain management.",
+        features: {
+          title: "Key Features:",
+          items: [
+            "Channel Manager",
+            "Room Control Unit",
+            "Camera AI Integration",
+            "Multi-branch Management"
+          ]
+        },
+        platforms: {
+          title: "Platforms:",
+          items: ["Web App", "Mobile App"]
+        },
+        technologies: {
+          title: "Technologies:",
+          items: ["React", "Node.js", "IoT"]
+        }
+      },
+      powerControl: {
+        title: "Power Control IoT Platform",
+        description: "We have built an IoT platform that gathering IoT devices status, analyses electric consumption data and control these devices over cloud in mili-seconds.",
+        features: {
+          title: "Key Features:",
+          items: [
+            "30% Electricity Savings",
+            "50% Faster Control",
+            "1M+ Device Support",
+            "Real-time Analytics"
+          ]
+        },
+        platforms: {
+          title: "Platforms:",
+          items: ["IoT Platform", "Web Dashboard"]
+        },
+        technologies: {
+          title: "Technologies:",
+          items: ["IoT", "Cloud", "Analytics"]
+        }
+      },
+      airhub: {
+        title: "Airhub – Your Local Guide",
+        description: "Online web app and best designed for smartphone webapp to provide traveller informations such as local guides map, special offers from local brand.",
+        features: {
+          title: "Key Features:",
+          items: [
+            "Local Guide",
+            "Virtual Frontdesk",
+            "AI Assistance",
+            "Local Offers"
+          ]
+        },
+        platforms: {
+          title: "Platforms:",
+          items: ["Web App", "Mobile Web"]
+        },
+        technologies: {
+          title: "Technologies:",
+          items: ["React", "AI/ML", "Maps API"]
+        }
+      }
+    },
+    cta: {
+      title: "Ready to Start Your AI Project?",
+      description: "Let's discuss how we can help you achieve your digital transformation goals with our cutting-edge AI and technology solutions.",
+      button: "Launch Your Project"
+    }
   },
 
   // Contact

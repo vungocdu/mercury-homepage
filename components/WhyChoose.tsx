@@ -134,17 +134,17 @@ const WhyChoose = () => {
         >
           <div className="bg-gradient-to-r from-mercury-blue-50 to-mercury-gold-50 rounded-2xl p-8 border border-mercury-blue-100">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready to experience the Mercury difference?
+              {t('whyChoose.cta.title')}
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Join hundreds of satisfied clients who have transformed their businesses with our innovative solutions and proven expertise.
+              {t('whyChoose.cta.subtitle')}
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-700 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300"
             >
-              Get Started Today
+              {t('whyChoose.cta.button')}
             </motion.button>
           </div>
         </motion.div>
