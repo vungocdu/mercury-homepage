@@ -1,12 +1,27 @@
 "use client"
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useCallback } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 // Type declarations for Google Maps
 declare global {
   interface Window {
-    google: any
+    google: {
+      maps: {
+        Map: new (element: HTMLElement, options: Record<string, unknown>) => {
+          setCenter: (position: { lat: number; lng: number }) => void
+          setZoom: (zoom: number) => void
+        }
+        Marker: new (options: Record<string, unknown>) => {
+          addListener: (event: string, callback: () => void) => void
+        }
+        InfoWindow: new (options: Record<string, unknown>) => {
+          open: (map: unknown, marker: unknown) => void
+        }
+        Size: new (width: number, height: number) => unknown
+        Point: new (x: number, y: number) => unknown
+      }
+    }
   }
 }
 
@@ -16,32 +31,13 @@ const InteractiveMap = () => {
   const [isLoading, setIsLoading] = useState(true)
   const [loadError, setLoadError] = useState(false)
 
-  useEffect(() => {
-    // Load Google Maps API
-    const script = document.createElement('script')
-    script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places`
-    script.async = true
-    script.defer = true
-    script.onload = () => {
-      initializeMap()
-    }
-    script.onerror = () => {
-      setLoadError(true)
-      setIsLoading(false)
-    }
-    document.head.appendChild(script)
-
-    return () => {
-      if (document.head.contains(script)) {
-        document.head.removeChild(script)
-      }
-    }
-  }, [])
-
-  const initializeMap = () => {
+  const initializeMap = useCallback(() => {
     if (!mapRef.current || !window.google) return
 
-    const map = new window.google.maps.Map(document.getElementById('map'), {
+    const mapElement = document.getElementById('map')
+    if (!mapElement) return
+
+    const map = new window.google.maps.Map(mapElement, {
       center: { lat: 21.0285, lng: 105.8542 }, // Hanoi coordinates
       zoom: 15,
       styles: [
@@ -232,7 +228,29 @@ const InteractiveMap = () => {
     })
 
     setIsLoading(false)
-  }
+  }, [t])
+
+  useEffect(() => {
+    // Load Google Maps API
+    const script = document.createElement('script')
+    script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places`
+    script.async = true
+    script.defer = true
+    script.onload = () => {
+      initializeMap()
+    }
+    script.onerror = () => {
+      setLoadError(true)
+      setIsLoading(false)
+    }
+    document.head.appendChild(script)
+
+    return () => {
+      if (document.head.contains(script)) {
+        document.head.removeChild(script)
+      }
+    }
+  }, [initializeMap])
 
   if (loadError) {
     return (

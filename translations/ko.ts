@@ -16,10 +16,14 @@ export const ko = {
 
   // Hero Section
   hero: {
-    title: "데이터 분석 & 혁신 기술",
-    subtitle: "우리는 컴퓨터 비전과 데이터 시각화 구현을 전문으로 하여 SME부터 MNC까지 기업에 더 나은 관리 솔루션을 제공합니다.",
-    cta: "시작하기",
-    learnMore: "더 알아보기",
+    badge: "TVC Professional AI Agent",
+    title: {
+      part1: "Next-Gen",
+      part2: "AI Technology",
+      part3: "Solutions"
+    },
+    subtitle: "Mercury Solutions는 최첨단 AI와 디지털 변환 서비스를 제공합니다. 컴퓨터 비전부터 지능형 자동화까지, 혁신과 효율성을 촉진하는 고급 기술 솔루션으로 기업에 힘을 실어줍니다.",
+    cta: "솔루션 탐색"
   },
 
   // Why Choose Mercury Solutions
@@ -123,11 +127,7 @@ export const ko = {
       description: "시스템 성능, 데이터베이스 효율성, 애플리케이션 속도를 최적화하여 더 나은 사용자 경험 제공.",
       features: ["데이터베이스 최적화", "코드 성능", "로드 밸런싱", "캐싱 전략"]
     },
-    tvc: {
-      title: "TVC & 디지털 아트",
-      description: "브랜드와 기업을 위한 전문적인 TV 광고 제작, 디지털 아트, 크리에이티브 콘텐츠 서비스.",
-      features: ["비디오 제작", "모션 그래픽", "디지털 아트", "콘텐츠 제작"]
-    }
+
   },
 
   // Technology Stack
@@ -158,50 +158,47 @@ export const ko = {
   // TVC Services
   tvc: {
     hero: {
-      title: "전문적인 TVC 제작 서비스",
-      subtitle: "비즈니스 결과를 촉진하고 시장 포지셔닝을 강화하는 전략적 비디오 콘텐츠로 브랜드를 향상시킵니다.",
+      title: "공장 및 제조업체용 TVC 필름 제작 서비스",
+      subtitle: "당신의 기술과 규모를 돌파구가 되는 경쟁 우위로 전환",
+      description: "Mercury Solutions는 포괄적인 4K TVC 필름 제작 솔루션을 제공하여 브랜드 위상을 묘사하고, 파트너를 확보하며, 1-2주간의 구현으로 최고 인재를 끌어들이는 데 도움을 줍니다.",
+      cta: "상담 및 견적 지금 받기",
+      partners: "우리의 파트너:",
       stats: {
         projects: "완료된 TVC 프로젝트",
         clients: "만족한 고객",
-        support: "크리에이티브 지원"
+        support: "창의적 지원"
       }
     },
-    services: {
-      title: "우리가 하는 일",
-      subtitle: "브랜드 이미지를 향상시키고 최고 인재를 유치하는 전략적 TVC 콘텐츠 제작을 전문으로 합니다. 포괄적인 접근 방식은 최첨단 기술과 크리에이티브 우수성을 결합합니다.",
-      consultation: {
-        title: "협력적 컨설팅",
-        description: "비즈니스 목표, 타겟 오디언스, 브랜드 포지셔닝을 이해하기 위한 심층 컨설팅으로 시작합니다."
-      },
-      concept: {
-        title: "전략적 컨셉 개발",
-        description: "크리에이티브 팀이 비즈니스 목표에 부합하고 오디언스와 공감하는 매력적인 컨셉을 개발합니다."
-      },
-      production: {
-        title: "시네마틱 제작",
-        description: "최첨단 장비와 경험丰富的한 크루가 최고 품질의 제작 기준을 보장합니다."
-      },
-      postProduction: {
-        title: "숙련된 포스트 프로덕션",
-        description: "고급 편집, 컬러 그레이딩, 시각 효과로 세련되고 전문적인 콘텐츠를 만듭니다."
-      },
-      motionGraphics: {
-        title: "모션 그래픽 & VFX",
-        description: "메시지를 강화하고 오디언스를 매료시키는 맞춤형 애니메이션과 시각 효과."
-      },
-      distribution: {
-        title: "전략적 미디어 플래닝 & 배포",
-        description: "모든 플랫폼에서 도달도와 임팩트를 극대화하는 포괄적인 배포 전략."
-      }
+    painPoints: {
+      title: "당신의 공장은 매우 현대적이지만...",
+      points: [
+        "파트너가 카탈로그만으로 당신의 규모와 기술 투자를 충분히 보지 못하고 있나요?",
+        "고객이 생산 공정과 품질 관리의 기준을 시각화하기 어려운가요?",
+        "오래된 소개 영상이 현재의 위상과 기업 문화를 제대로 반영하지 못하고 있나요?",
+        "채용 브랜드가 희미하여 우수한 엔지니어와 인재를 끌어들이기 어려운가요?"
+      ],
+      conclusion: "시각으로 브랜드 스토리를 업그레이드할 때가 왔습니다."
     },
-    process: {
-      title: "우리의 전략적 프로세스",
-      subtitle: "모든 프로젝트가 탁월한 결과를 제공하도록 보장하는 검증된 방법론",
-      steps: {
-        consultation: "협력적 컨설팅",
-        concept: "전략적 컨셉 개발",
-        production: "시네마틱 제작",
-        postProduction: "숙련된 포스트 프로덕션"
+    solution: {
+      title: "MERCURY SOLUTIONS: 공장의 심장에서 위대한 스토리 전하기",
+      description: "우리는 단순히 촬영하는 것이 아닙니다. 복잡한 공정, 무기물 기계, 엄격한 기준을 감정적이고 설득력 있으며 프리미엄한 기업 영상으로 변환하는 전문가입니다.",
+      services: {
+        factory: {
+          title: "🎥 공장 및 산업단지 소개 촬영",
+          description: "포괄적인 규모, 인프라, 생산 잠재력을 보여줍니다."
+        },
+        process: {
+          title: "⚙️ TVC 생산 공정 촬영",
+          description: "원료에서 완제품까지의 각 단계를 시각적이고 생생하게 설명합니다."
+        },
+        technology: {
+          title: "🔬 기술 및 기계 영상",
+          description: "생산 라인, 로봇, 핵심 기술의 정확성과 현대성을 강조합니다."
+        },
+        culture: {
+          title: "🤝 기업 문화 영상 제작",
+          description: "회사의 강점을 구성하는 역사, 가치, 인간 정신을 전달합니다."
+        }
       }
     },
     portfolio: {
@@ -226,31 +223,124 @@ export const ko = {
         }
       }
     },
-    cta: {
-      title: "전략적 TVC로 비즈니스 변환할 준비가 되셨나요?",
-      subtitle: "프로젝트 요구사항을 논의하고 측정 가능한 비즈니스 결과를 제공하는 전문적인 TVC 제작 서비스로 크리에이티브 비전을 실현해 보세요.",
-      getStarted: "오늘 시작하기",
-      contactUs: "연락처"
+    process: {
+      title: "우리의 전략적 프로세스",
+      subtitle: "모든 프로젝트가 탁월한 결과를 제공하도록 보장하는 검증된 방법론",
+      steps: {
+        consultation: "협력적 컨설팅",
+        concept: "전략적 컨셉 개발",
+        production: "시네마틱 제작",
+        postProduction: "숙련된 포스트 프로덕션"
+      }
+    },
+    whyUs: {
+      title: "산업 분야를 위한 신뢰할 수 있는 영상 마케팅 파트너",
+      features: {
+        speed: {
+          title: "뛰어난 속도",
+          description: "효율화된 프로세스, 단 1-2주 만에 완전한 TVC 필름 전달. 시간 절약, 기업을 위한 최적화된 효율성."
+        },
+        quality: {
+          title: "시네마틱 품질",
+          description: "4K-6K RAW 품질, 진실한 색상, 선명한 이미지, 주요 브랜드에 걸맞은 약속."
+        },
+        technology: {
+          title: "선구적 기술",
+          description: "드론, FPV 드론, Ronin RS3 Pro 짐벌, Sony FX Cinema Line을 사용하여 돌파구가 되는 독특한 카메라 앵글을 만듭니다."
+        }
+      }
+    },
+    services: {
+      title: "우리가 하는 일",
+      subtitle: "브랜드 이미지를 향상시키고 최고 인재를 끌어들이는 전략적 TVC 콘텐츠 제작에 특화되어 있습니다. 우리의 포괄적인 접근 방식은 최첨단 기술과 창의적 우수성을 결합합니다.",
+      consultation: {
+        title: "협력적 컨설팅",
+        description: "비즈니스 목표, 타겟 오디언스, 브랜드 포지셔닝을 이해하기 위한 심층 컨설팅으로 시작합니다."
+      },
+      concept: {
+        title: "전략적 컨셉 개발",
+        description: "우리의 창의적 팀은 비즈니스 목표에 부합하고 오디언스와 공감하는 매력적인 컨셉을 개발합니다."
+      },
+      production: {
+        title: "시네마틱 제작",
+        description: "최신 장비와 경험 많은 크루가 최고 품질의 제작 기준을 보장합니다."
+      },
+      postProduction: {
+        title: "숙련된 포스트 프로덕션",
+        description: "정교한 전문 콘텐츠를 만들기 위한 고급 편집, 컬러 그레이딩, 시각 효과."
+      },
+      motionGraphics: {
+        title: "모션 그래픽 & VFX",
+        description: "메시지를 향상시키고 오디언스를 매료시키는 맞춤형 애니메이션과 시각 효과."
+      },
+      distribution: {
+        title: "전략적 미디어 계획 & 배포",
+        description: "모든 플랫폼에서 도달 범위와 영향력을 극대화하는 포괄적인 배포 전략."
+      }
     },
     faq: {
-      title: "자주 묻는 질문",
-      subtitle: "TVC 제작 서비스와 프로세스에 대한 일반적인 질문에 대한 답변",
-      stillHaveQuestions: "아직 질문이 있으신가요?",
-      contactTeam: "우리 팀은 TVC 제작 프로세스를 이해하고 질문에 답변하는 데 도움을 드릴 준비가 되어 있습니다."
+      title: "TVC 비디오 제작 서비스에 대한 자주 묻는 질문",
+      questions: {
+        timeline: {
+          question: "공장 TVC 제작에 얼마나 시간이 걸리나요?",
+          answer: "최적화된 프로세스로 Mercury Solutions는 전제작, 제작부터 후제작까지 프로젝트의 복잡성에 따라 1-2주 내에 최종 제품을 완성하고 납품할 수 있습니다."
+        },
+        cost: {
+          question: "기업 소개 영화 촬영 비용은 얼마인가요?",
+          answer: "비용은 많은 요인에 따라 다릅니다: 촬영 일수, 장비 요구사항(드론, FPV, 특수효과...), 스크립트 길이. 예산에 가장 적합한 상세한 견적을 받으시려면 문의해 주세요."
+        },
+        location: {
+          question: "Mercury Solutions는 다른 지방에서 촬영을 받아들이나요?",
+          answer: "물론입니다. 저희 팀은 유연하며 전국의 산업단지나 공장 어디든 이동하여 프로젝트를 실행할 준비가 되어 있습니다."
+        },
+        equipment: {
+          question: "Mercury Solutions는 촬영에 어떤 장비를 사용하나요?",
+          answer: "최고의 전문 장비를 사용합니다: Sony FX Cinema Line 카메라, FPV 드론, Ronin RS3 Pro 짐벌, 전문 조명 장비로 4K-6K RAW 품질을 보장합니다."
+        },
+        process: {
+          question: "Mercury Solutions의 작업 프로세스는 어떻게 되나요?",
+          answer: "5단계 프로세스를 따릅니다: 컨설팅 & 현장 조사 → 컨셉 개발 & 스크립팅 → 제작 & 촬영 → 후제작 & 편집 → 정제 & 최종 납품."
+        },
+        quality: {
+          question: "Mercury Solutions는 어떻게 품질을 보장하나요?",
+          answer: "전문 팀, 최신 장비, 엄격한 품질 관리 프로세스로 영화 품질을 약속합니다. 모든 프로젝트는 납품 전 승인됩니다."
+        },
+        revision: {
+          question: "완성 후 수정이 가능한가요?",
+          answer: "네, 클라이언트 요구사항에 따라 수정을 지원합니다. 최종 제품을 완성하기 전에 첫 번째 초안을 보내드려 검토와 피드백을 받겠습니다."
+        },
+        delivery: {
+          question: "Mercury Solutions는 어떤 형식으로 제품을 납품하나요?",
+          answer: "여러 적절한 형식으로 제품을 납품합니다: 웹/소셜미디어용 MP4, 프레젠테이션용 MOV, 특정 클라이언트 요구사항에 따른 기타 형식."
+        }
+      }
+    },
+    cta: {
+      title: "공장 브랜드를 향상시킬 준비가 되셨나요?",
+      subtitle: "당신의 기술과 사람들에 대한 스토리를 숨겨두지 마세요. 가장 인상적인 방법으로 그것들을 전하는 것을 도와드리겠습니다.",
+      description: "아래 양식에 정보를 입력하시면 Mercury Solutions 전문가가 무료로 상담하고 8영업시간 내에 상세한 견적을 보내드립니다!",
+      form: {
+        name: "성명*",
+        email: "이메일*",
+        phone: "전화번호*",
+        company: "회사명",
+        requirements: "귀하의 요구사항 (예: 5분 공장 소개 영상, 생산 공정 촬영...)",
+        submit: "상담 요청 보내기"
+      }
     },
     features: {
-      consultation: ["브랜드 분석", "전략적 플래닝", "전문가 가이던스", "비전 정렬"],
+      consultation: ["브랜드 분석", "전략적 계획", "전문가 가이던스", "비전 정렬"],
       concept: ["브랜드 DNA 분석", "내러티브 제작", "마케팅 정렬", "액션 중심 콘텐츠"],
       production: ["4K/6K 품질", "전문 장비", "전문 크루", "시네마틱 비전"],
       postProduction: ["전문 편집", "컬러 그레이딩", "사운드 디자인", "Davinci Resolve"],
       motionGraphics: ["2D/3D 애니메이션", "시각 효과", "로고 애니메이션", "인포그래픽"],
-      distribution: ["미디어 플래닝", "오디언스 타겟팅", "멀티 플랫폼 배포", "ROI 최적화"]
+      distribution: ["미디어 계획", "타겟 오디언스", "멀티플랫폼 배포", "ROI 최적화"]
     },
     descriptions: {
-      consultation: "브랜드, 타겟 오디언스, 목표를 이해하는 것부터 시작합니다. 긴밀히 협력하며, 요구사항을 주의 깊게 듣고 전문가 가이던스를 제공합니다.",
+      consultation: "브랜드, 타겟 오디언스, 목표를 이해하는 것부터 시작합니다. 밀접하게 협력하며, 요구사항을 주의 깊게 듣고 전문가 가이던스를 제공합니다.",
       concept: "단순한 스크립트를 넘어서는 매력적인 TVC 컨셉을 개발합니다. 브랜드의 DNA를 깊이 파고들어 마케팅 목표에 부합하는 내러티브를 제작합니다.",
-      production: "기술적 전문성과 예술적 비전을 결합하여 최첨단 장비(4K, 6K, Full HD)와 경험丰富的한 전문가를 활용합니다.",
-      postProduction: "편집자, 컬러리스트, 사운드 디자이너로 구성된 사내 팀이 Davinci Resolve와 같은 업계 선도 소프트웨어를 사용하여 모든 세부사항을 꼼꼼히 조정합니다."
+      production: "기술적 전문성과 예술적 비전을 결합하여 최신 장비(4K, 6K, Full HD)와 경험 많은 전문가를 활용합니다.",
+      postProduction: "Davinci Resolve와 같은 업계 선도 소프트웨어를 사용하여 편집자, 컬러리스트, 사운드 디자이너의 사내 팀이 세부사항까지 신중하게 조정합니다."
     }
   },
 
@@ -258,6 +348,28 @@ export const ko = {
   process: {
     title: "우리의 프로세스",
     subtitle: "비즈니스 요구사항을 충족하고 기대를 초과하는 고품질 솔루션을 제공하는 검증된 방법론을 따릅니다.",
+    steps: {
+      plan: {
+        title: "계획",
+        description: "클라이언트로부터 요구사항과 정보를 받고, IT 컨설팅을 포함하여 제안을 하고 기대에 맞는 프로젝트 견적을 개발합니다.",
+        imageAlt: "요구사항 수집과 프로젝트 견적을 포함한 계획 단계"
+      },
+      design: {
+        title: "설계 & 정의",
+        description: "요구사항 명세에 따라 프로젝트 문서를 준비하여 후속 단계에 도움이 됩니다. 전체 시스템 아키텍처와 기술 스택을 정의합니다.",
+        imageAlt: "와이어프레임과 시스템 아키텍처를 포함한 설계 단계"
+      },
+      build: {
+        title: "구축 & 테스트",
+        description: "우리의 전문가 팀은 선택된 프로그래밍 언어, 기술, 방법론을 사용하여 소프트웨어를 구축합니다. 소프트웨어 개발의 품질을 평가합니다.",
+        imageAlt: "코드 구현을 포함한 개발·테스트 단계"
+      },
+      deploy: {
+        title: "배포 & 유지보수",
+        description: "최종 소프트웨어 결과물이 릴리스되고 배포 문제가 있으면 확인됩니다. 서비스 수준 계약에 따라 지속적인 유지보수를 보장합니다.",
+        imageAlt: "지속적 모니터링을 포함한 배포·유지보수 단계"
+      }
+    },
     benefits: {
       title: "왜 우리의 프로세스를 선택하나요?",
       subtitle: "체계적인 접근 방식으로 투명성, 품질, 적시 배송을 보장하면서 명확한 커뮤니케이션을 유지합니다.",

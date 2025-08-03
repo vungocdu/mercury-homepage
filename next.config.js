@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // output: 'export', // Disabled for Next.js 15 compatibility
   trailingSlash: true,
   images: {
     domains: ['minova.vn'],

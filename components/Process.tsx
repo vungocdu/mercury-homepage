@@ -1,4 +1,7 @@
+"use client"
+
 import { ClipboardList, Palette, Code, Rocket } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 // SVG Component for Plan Diagram
 const PlanDiagram = () => (
@@ -107,39 +110,40 @@ const PlanDiagram = () => (
 )
 
 export default function Process() {
+  const { t } = useLanguage()
   const processes = [
     {
       icon: ClipboardList,
-      title: 'Plan',
-      description: 'Receive requirements and information from clients, include IT Consultancy to make suggestions and develop project estimations as per their expectations.',
+      title: t('process.steps.plan.title'),
+      description: t('process.steps.plan.description'),
       step: '01',
       image: '/images/process/plan.jpg',
-      imageAlt: 'Planning phase with requirements gathering and project estimation',
+      imageAlt: t('process.steps.plan.imageAlt'),
       customComponent: PlanDiagram
     },
     {
       icon: Palette,
-      title: 'Design & Define',
-      description: 'Based on the requirement specifications prepare project documents, which help in further stages. Define overall system architecture and technology stack.',
+      title: t('process.steps.design.title'),
+      description: t('process.steps.design.description'),
       step: '02',
       image: '/images/process/design.jpg',
-      imageAlt: 'Design phase with wireframes and system architecture'
+      imageAlt: t('process.steps.design.imageAlt')
     },
     {
       icon: Code,
-      title: 'Build & Test',
-      description: 'Our team of experts uses the chosen programming language, techniques, and methodologies to build the software. Evaluate the quality of software development.',
+      title: t('process.steps.build.title'),
+      description: t('process.steps.build.description'),
       step: '03',
       image: '/images/process/build.jpg',
-      imageAlt: 'Development and testing phase with code implementation'
+      imageAlt: t('process.steps.build.imageAlt')
     },
     {
       icon: Rocket,
-      title: 'Deploy & Maintenance',
-      description: 'The final software outcome is released and checked for deployment issues if any. According to the service level agreement, we ensure continuous maintenance.',
+      title: t('process.steps.deploy.title'),
+      description: t('process.steps.deploy.description'),
       step: '04',
       image: '/images/process/deploy.jpg',
-      imageAlt: 'Deployment and maintenance phase with continuous monitoring'
+      imageAlt: t('process.steps.deploy.imageAlt')
     }
   ]
 
@@ -148,11 +152,10 @@ export default function Process() {
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>
-            Our Process
+            {t('process.title')}
           </h2>
           <p className="text-xl max-w-3xl mx-auto" style={{ color: 'hsl(var(--text-secondary))' }}>
-            We follow a proven methodology to deliver high-quality solutions 
-            that meet your business requirements and exceed expectations.
+            {t('process.subtitle')}
           </p>
         </div>
 
@@ -231,11 +234,10 @@ export default function Process() {
              }}>
           <div className="text-center mb-12">
             <h3 className="text-2xl lg:text-3xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>
-              Why Choose Our Process?
+              {t('process.benefits.title')}
             </h3>
             <p className="text-lg max-w-2xl mx-auto" style={{ color: 'hsl(var(--text-secondary))' }}>
-              Our systematic approach ensures transparency, quality, and timely delivery 
-              of your projects while maintaining clear communication throughout.
+              {t('process.benefits.subtitle')}
             </p>
           </div>
 
@@ -244,24 +246,24 @@ export default function Process() {
               <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'hsl(var(--success-color))' }}>
                 <div className="text-2xl font-bold text-white">✓</div>
               </div>
-              <h4 className="text-lg font-semibold mb-2" style={{ color: 'hsl(var(--text-primary))' }}>Transparent Communication</h4>
-              <p style={{ color: 'hsl(var(--text-secondary))' }}>Regular updates and clear communication at every stage of development.</p>
+              <h4 className="text-lg font-semibold mb-2" style={{ color: 'hsl(var(--text-primary))' }}>{t('process.benefits.transparency.title')}</h4>
+              <p style={{ color: 'hsl(var(--text-secondary))' }}>{t('process.benefits.transparency.description')}</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'hsl(var(--link-primary))' }}>
                 <div className="text-2xl font-bold text-white">⚡</div>
               </div>
-              <h4 className="text-lg font-semibold mb-2" style={{ color: 'hsl(var(--text-primary))' }}>Agile Methodology</h4>
-              <p style={{ color: 'hsl(var(--text-secondary))' }}>Flexible development approach with iterative improvements and quick feedback.</p>
+              <h4 className="text-lg font-semibold mb-2" style={{ color: 'hsl(var(--text-primary))' }}>{t('process.benefits.agile.title')}</h4>
+              <p style={{ color: 'hsl(var(--text-secondary))' }}>{t('process.benefits.agile.description')}</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'hsl(var(--warning-color))' }}>
                 <div className="text-2xl font-bold text-white">🛡️</div>
               </div>
-              <h4 className="text-lg font-semibold mb-2" style={{ color: 'hsl(var(--text-primary))' }}>Quality Assurance</h4>
-              <p style={{ color: 'hsl(var(--text-secondary))' }}>Comprehensive testing and quality checks to ensure robust and reliable solutions.</p>
+              <h4 className="text-lg font-semibold mb-2" style={{ color: 'hsl(var(--text-primary))' }}>{t('process.benefits.quality.title')}</h4>
+              <p style={{ color: 'hsl(var(--text-secondary))' }}>{t('process.benefits.quality.description')}</p>
             </div>
           </div>
         </div>

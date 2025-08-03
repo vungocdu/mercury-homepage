@@ -1,5 +1,73 @@
 # Memory Log
 
+## 2024-12-19 - Navigation Menu Fix and Smooth Scroll Implementation
+
+### Work Done
+- **Fixed navigation menu functionality** - all menu items now properly scroll to sections
+- **Implemented smooth scroll utility** in `lib/utils.ts`
+- **Added missing ID** to TechnologyStack component (`id="technology"`)
+- **Updated Header component** to use smooth scroll for all navigation links
+- **Enhanced user experience** with proper scroll behavior for both desktop and mobile
+
+### Navigation Issues Identified
+- **Problem**: Menu items clicked but no scrolling occurred
+- **Root Cause**: Missing smooth scroll implementation and some sections lacked proper IDs
+- **Solution**: Created utility functions and updated all navigation handlers
+
+### Technical Implementation
+
+#### Smooth Scroll Utility (`lib/utils.ts`)
+```typescript
+export const smoothScrollTo = (elementId: string) => {
+  const element = document.getElementById(elementId)
+  if (element) {
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  }
+}
+
+export const handleNavigationClick = (href: string, e: React.MouseEvent) => {
+  e.preventDefault()
+  
+  if (href.startsWith('/')) {
+    // External route - navigate normally
+    window.location.href = href
+  } else if (href.startsWith('#')) {
+    // Internal anchor - smooth scroll
+    const elementId = href.substring(1)
+    smoothScrollTo(elementId)
+  }
+}
+```
+
+#### Header Component Updates
+- **Logo click**: Now scrolls to home section
+- **Desktop navigation**: TabSelectNavigation uses smooth scroll
+- **Mobile navigation**: All menu items use smooth scroll
+- **CTA buttons**: Both desktop and mobile CTAs use smooth scroll
+
+#### Section IDs Verified
+- ✅ `#home` - Hero component
+- ✅ `#services` - Services component  
+- ✅ `#technology` - TechnologyStack component (added)
+- ✅ `#process` - Process component
+- ✅ `#projects` - Projects component
+- ✅ `#contact` - Contact component
+- ✅ `/tvc` - External route (works normally)
+
+### User Experience Improvements
+- **Smooth scrolling**: All internal links now scroll smoothly
+- **External navigation**: TVC menu properly navigates to `/tvc` page
+- **Mobile friendly**: Navigation works on both desktop and mobile
+- **Visual feedback**: Active tab highlighting works correctly
+
+### Files Modified
+1. `lib/utils.ts` - Added smooth scroll utilities
+2. `components/Header.tsx` - Updated all navigation handlers
+3. `components/TechnologyStack.tsx` - Added missing `id="technology"`
+
 ## 2024-12-19 - Multilingual Enhancement for Key Marketing Messages
 
 ### Work Done
@@ -636,6 +704,43 @@ try {
 - **Scalable System**: Easy to expand with new content types
 - **Comprehensive Documentation**: Clear guidelines for content creators
 
+## 2024-12-19 - Additional Multilingual Fixes
+
+### Completed Tasks:
+- **Fixed Technology Categories Issue**: Resolved `technology.categories.aiml` error by implementing proper category key mapping
+- **Enhanced Hero Component**: Updated `components/Hero.tsx` to use translation keys for "Next-Gen AI Technology Solutions"
+- **Updated Translation Files**: Enhanced hero section translations across all languages
+
+### Technical Details:
+- **Category Key Mapping**: Created `getCategoryKey()` function to properly map "AI & ML" to "ai" key
+- **Hero Section Translation**: Implemented structured translation for hero title parts and content
+- **Translation Structure**: Updated hero section to support badge, title parts, subtitle, and CTA
+
+### Files Modified:
+- `components/TechnologyStack.tsx` - Added `getCategoryKey()` function for proper category mapping
+- `components/Hero.tsx` - Added translation support for all hero content
+- `translations/vi.ts` - Updated hero section with new structure
+- `translations/en.ts` - Updated hero section with new structure
+- `translations/ja.ts` - Updated hero section with new structure  
+- `translations/ko.ts` - Updated hero section with new structure
+
+## 2024-12-19 - Hero Component Error Fix
+
+### Work Done:
+- **Fixed Runtime Error**: Resolved `useLanguage()` hook error in `Hero.tsx` component
+- **Added ClientOnly Wrapper**: Wrapped Hero component content to prevent SSR issues
+- **Updated TODO Status**: Marked multilingual support as completed
+
+### Technical Details:
+- **Error Cause**: Hero component was trying to use `useLanguage()` during server-side rendering
+- **Solution**: Wrapped component content with `ClientOnly` to ensure client-side only rendering
+- **Context Issue**: Language context not properly initialized during SSR
+- **Fix Applied**: Used ClientOnly pattern to defer rendering until client-side hydration
+
+### Files Modified:
+- `components/Hero.tsx` - Added ClientOnly import and wrapper
+- `docs/todo.md` - Updated multilingual support status to completed
+
 ## 2024-12-19 - Plan Process Diagram Implementation
 
 ### Work Done
@@ -677,6 +782,89 @@ try {
 - **Project Flow Visualization**: Clear representation of planning process
 - **Brand Consistency**: Mercury Blue colors throughout
 - **Responsive Design**: SVG scales properly on all devices
+
+## 2024-12-19 - Multilingual Updates for Process and Technology Components
+
+### Work Done
+- **Updated Process component** to use multilingual translations for all text content
+- **Enhanced TechnologyStack component** to support multiple languages
+- **Added comprehensive translations** for process steps and benefits in all 4 languages
+- **Implemented consistent translation structure** across all components
+
+### Technical Implementation
+
+#### Process Component Updates (`components/Process.tsx`)
+- **Process Steps Translation**:
+  - Added `t('process.steps.plan.title')` for step titles
+  - Added `t('process.steps.plan.description')` for step descriptions
+  - Added `t('process.steps.plan.imageAlt')` for accessibility
+  - Applied to all 4 process steps (Plan, Design, Build, Deploy)
+
+- **Benefits Section Translation**:
+  - Updated transparency section with `t('process.benefits.transparency.title')`
+  - Updated agile methodology with `t('process.benefits.agile.title')`
+  - Updated quality assurance with `t('process.benefits.quality.title')`
+  - Added corresponding description translations
+
+#### TechnologyStack Component Updates (`components/TechnologyStack.tsx`)
+- **Header Section Translation**:
+  - Updated badge text with `t('technology.badge')`
+  - Updated title with `t('technology.title')`
+  - Updated subtitle with `t('technology.subtitle')`
+
+- **Category Translation**:
+  - Added dynamic category translation using `t('technology.categories.${category}')`
+  - Implemented category name transformation for translation keys
+  - Maintained existing color and styling logic
+
+### Translation Files Updated
+
+#### Vietnamese (`translations/vi.ts`)
+- **Added process.steps section** with 4 steps:
+  - `plan`: Lập kế hoạch
+  - `design`: Thiết kế & Định nghĩa
+  - `build`: Xây dựng & Kiểm thử
+  - `deploy`: Triển khai & Bảo trì
+
+- **Enhanced process.benefits section** with existing translations
+- **Maintained consistency** with existing translation patterns
+
+#### English (`translations/en.ts`)
+- **Added process.steps section** with 4 steps:
+  - `plan`: Plan
+  - `design`: Design & Define
+  - `build`: Build & Test
+  - `deploy`: Deploy & Maintenance
+
+- **Enhanced process.benefits section** with existing translations
+- **Maintained professional tone** throughout
+
+#### Japanese (`translations/ja.ts`)
+- **Added process.steps section** with 4 steps:
+  - `plan`: 計画
+  - `design`: 設計 & 定義
+  - `build`: 構築 & テスト
+  - `deploy`: 展開 & 保守
+
+- **Enhanced process.benefits section** with existing translations
+- **Ensured cultural appropriateness** for Japanese business context
+
+#### Korean (`translations/ko.ts`)
+- **Added process.steps section** with 4 steps:
+  - `plan`: 계획
+  - `design`: 설계 & 정의
+  - `build`: 구축 & 테스트
+  - `deploy`: 배포 & 유지보수
+
+- **Enhanced process.benefits section** with existing translations
+- **Maintained brand consistency** across all languages
+
+### Key Features
+- **Complete Multilingual Support**: All process and technology content now supports 4 languages
+- **Consistent Translation Structure**: Unified approach across all components
+- **Accessibility Enhancement**: Image alt text now supports multiple languages
+- **Professional Localization**: Culturally appropriate translations for each language
+- **Maintainable Code**: Centralized translation management
 - **Accessibility**: Proper contrast and readable text
 
 ### Diagram Structure
@@ -1714,3 +1902,100 @@ https://[username].gitlab.io/[project-name]
 - **Shadows**: 
   - Cards: `0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)`
   - Sections: `0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)`
+
+# Mercury Solutions - Memory Log
+
+## 2024-12-19: TVC Landing Page Content Update - COMPLETED
+
+### Work Completed:
+- ✅ Cập nhật metadata SEO cho trang TVC theo tvc-landing-page-content.md
+- ✅ Tích hợp nội dung Hero Section mới với pain points và value proposition
+- ✅ Cập nhật Services Section với focus vào nhà máy và doanh nghiệp sản xuất
+- ✅ Thêm Portfolio Section với case studies Fujikin và Jworld Vina
+- ✅ Tích hợp Production Process Section 5 bước chi tiết
+- ✅ Cập nhật Why Us Section với bảng so sánh 3 cột
+- ✅ Thêm FAQ Section với 8 câu hỏi chuyên sâu
+- ✅ Tạo Contact Form Section với CTA mạnh mẽ
+- ✅ Cập nhật đa ngôn ngữ cho tất cả nội dung mới
+- ✅ Cập nhật FAQ với 8 câu hỏi chi tiết cho tất cả ngôn ngữ (VI, EN, JA, KO)
+- ✅ Test responsive design và performance
+- ✅ Fix TypeScript errors và build issues
+
+### Key Features Added:
+1. **Enhanced FAQ Section**: Thêm 8 câu hỏi chi tiết bao gồm:
+   - Timeline và cost estimation
+   - Equipment và technical specifications
+   - Process và quality assurance
+   - Revision và delivery formats
+
+2. **Multi-language Support**: Cập nhật đầy đủ cho 4 ngôn ngữ:
+   - Vietnamese (VI)
+   - English (EN) 
+   - Japanese (JA)
+   - Korean (KO)
+
+3. **SEO Optimization**: 
+   - Meta titles và descriptions tối ưu
+   - Keywords targeting cho ngành công nghiệp
+   - Open Graph tags cho social sharing
+
+### Technical Implementation:
+- Sử dụng Framer Motion cho animations
+- Responsive design với Tailwind CSS
+- Tracking buttons cho analytics
+- Contact form với validation
+
+### Build Status:
+- ✅ TypeScript compilation successful
+- ✅ All translation files synchronized
+- ✅ Build process completed successfully
+- ✅ SSR compatibility issues resolved
+- ✅ Static export temporarily disabled for dynamic rendering
+- ✅ Updated to Next.js 15.4.5 and React 19.1.1
+- ✅ Fixed duplicate function declarations in LanguageContext
+- ✅ Development server running successfully on port 3002
+- ⚠️ Minor warnings about client-side rendering (expected for dynamic content)
+- ⚠️ Port 3000 in use, dev server auto-switched to port 3002
+
+### Next Steps:
+- Optimize images với Next.js Image component
+- Implement lazy loading cho components
+- Add structured data markup cho SEO
+- Optimize bundle size
+- Add loading states cho components
+
+### Challenges & Solutions:
+- **Challenge**: Duplicate properties trong translation files
+- **Solution**: Xóa các phần duplicate và maintain clean structure
+- **Challenge**: Đồng bộ nội dung across multiple languages
+- **Solution**: Systematic approach với consistent terminology
+- **Challenge**: TypeScript type mismatches
+- **Solution**: Đảm bảo cấu trúc translation files đồng nhất
+- **Challenge**: SSR compatibility với client-side components
+- **Solution**: Disable static export và use dynamic rendering
+- **Challenge**: TypeError trong build process
+- **Solution**: Proper window object checks và error handling
+- **Challenge**: useLanguage hook trong SSR context
+- **Solution**: Wrap language-dependent components trong ClientOnly
+- **Challenge**: Next.js 15 compatibility với React 19
+- **Solution**: Update dependencies và fix SSR issues
+- **Challenge**: Client-side hooks trong server-side rendering
+- **Solution**: Use static fallbacks cho SSR và dynamic content cho client
+- **Challenge**: Duplicate function declarations trong LanguageContext
+- **Solution**: Clean up duplicate functions và organize hooks properly
+- **Challenge**: Port conflicts và Firebase service worker requests
+- **Solution**: Dev server auto-switched to available port, clear browser cache
+
+### Files Modified:
+- `translations/vi.ts` - Updated FAQ và content structure
+- `translations/en.ts` - Enhanced FAQ section
+- `translations/ja.ts` - Added detailed FAQ questions và services section
+- `translations/ko.ts` - Updated FAQ content và added services section
+- `docs/todo.md` - Updated task status
+- `app/tvc/TVCPageClient.tsx` - Enhanced with complete content structure
+
+### Performance Notes:
+- Build successful với minor warnings
+- All pages rendering correctly
+- TypeScript errors resolved
+- Ready for production deployment

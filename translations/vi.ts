@@ -16,10 +16,14 @@ export const vi = {
 
   // Hero Section
   hero: {
-    title: "Phân tích dữ liệu & Công nghệ sáng tạo",
-    subtitle: "Chúng tôi chuyên về thị giác máy tính và triển khai trực quan hóa dữ liệu để cung cấp giải pháp quản lý tốt hơn cho doanh nghiệp từ SMEs đến MNCs.",
-    cta: "Bắt đầu",
-    learnMore: "Tìm hiểu thêm",
+    badge: "TVC Professional AI Agent",
+    title: {
+      part1: "Next-Gen",
+      part2: "AI Technology",
+      part3: "Solutions"
+    },
+    subtitle: "Mercury Solutions cung cấp dịch vụ AI và chuyển đổi số tiên tiến. Từ computer vision đến tự động hóa thông minh, chúng tôi trao quyền cho doanh nghiệp với các giải pháp công nghệ tiên tiến thúc đẩy đổi mới và hiệu quả.",
+    cta: "Khám phá giải pháp"
   },
 
   // Why Choose Mercury Solutions
@@ -123,11 +127,7 @@ export const vi = {
       description: "Tối ưu hóa hiệu suất hệ thống, hiệu quả database và tốc độ ứng dụng để trải nghiệm người dùng tốt hơn.",
       features: ["Database Optimization", "Code Performance", "Load Balancing", "Caching Strategies"]
     },
-    tvc: {
-      title: "TVC & Digital Art",
-      description: "Dịch vụ sản xuất quảng cáo truyền hình chuyên nghiệp, digital art và nội dung sáng tạo cho thương hiệu và doanh nghiệp.",
-      features: ["Video Production", "Motion Graphics", "Digital Art", "Content Creation"]
-    }
+
   },
 
   // Technology Stack
@@ -158,12 +158,146 @@ export const vi = {
   // TVC Services
   tvc: {
     hero: {
-      title: "Dịch vụ sản xuất TVC chuyên nghiệp",
-      subtitle: "Nâng tầm thương hiệu của bạn với nội dung video chiến lược mang lại kết quả kinh doanh và tăng cường vị thế thị trường.",
+      title: "DỊCH VỤ QUAY PHIM TVC NHÀ MÁY & DOANH NGHIỆP SẢN XUẤT",
+      subtitle: "BIẾN CÔNG NGHỆ & QUY MÔ CỦA BẠN THÀNH LỢI THẾ CẠNH TRANH ĐỘT PHÁ",
+      description: "Mercury Solutions mang đến giải pháp sản xuất TVC Film 4K chuyên sâu, giúp khắc họa tầm vóc thương hiệu, chinh phục đối tác và thu hút nhân tài chỉ trong 1-2 tuần triển khai.",
+      cta: "NHẬN TƯ VẤN & BÁO GIÁ NGAY",
+      partners: "Chúng tôi là đối tác của:",
       stats: {
         projects: "Dự án TVC đã hoàn thành",
         clients: "Khách hàng hài lòng",
         support: "Hỗ trợ sáng tạo"
+      }
+    },
+    painPoints: {
+      title: "NHÀ MÁY CỦA BẠN RẤT HIỆN ĐẠI, NHƯNG...",
+      points: [
+        "Đối tác chưa thấy hết quy mô và sự đầu tư công nghệ của bạn chỉ qua catalogue?",
+        "Khách hàng khó hình dung sự chuẩn mực trong quy trình sản xuất và kiểm soát chất lượng?",
+        "Phim giới thiệu cũ kỹ không còn phản ánh đúng tầm vóc và văn hóa doanh nghiệp hiện tại?",
+        "Thương hiệu tuyển dụng mờ nhạt, khó thu hút được các kỹ sư và nhân sự chất lượng cao?"
+      ],
+      conclusion: "Đã đến lúc nâng cấp câu chuyện thương hiệu của bạn bằng hình ảnh."
+    },
+    solution: {
+      title: "MERCURY SOLUTIONS: KỂ CÂU CHUYỆN VĨ ĐẠI TỪ TRÁI TIM NHÀ MÁY",
+      description: "Chúng tôi không chỉ quay phim. Chúng tôi là những chuyên gia chuyển hóa những quy trình phức tạp, những cỗ máy vô tri và những tiêu chuẩn khắt khe thành những thước phim doanh nghiệp đầy cảm xúc, thuyết phục và đẳng cấp.",
+      services: {
+        factory: {
+          title: "🎥 Quay phim giới thiệu nhà máy, khu công nghiệp",
+          description: "Thể hiện toàn cảnh quy mô, cơ sở hạ tầng và tiềm lực sản xuất."
+        },
+        process: {
+          title: "⚙️ Quay phim TVC quy trình sản xuất",
+          description: "Mô tả trực quan, sinh động từng công đoạn, từ nguyên liệu đến thành phẩm."
+        },
+        technology: {
+          title: "🔬 Làm phim về công nghệ & máy móc",
+          description: "Nhấn mạnh vào sự chính xác, hiện đại của dây chuyền, robot và công nghệ cốt lõi."
+        },
+        culture: {
+          title: "🤝 Sản xuất video văn hóa doanh nghiệp",
+          description: "Truyền tải lịch sử, giá trị, và tinh thần con người làm nên sức mạnh công ty."
+        }
+      }
+    },
+    portfolio: {
+      title: "Portfolio của chúng tôi",
+      subtitle: "Thể hiện chuyên môn của chúng tôi trên nhiều ngành và loại dự án",
+      projects: {
+        corporate: {
+          title: "Phim thương hiệu doanh nghiệp",
+          description: "Kể chuyện thương hiệu toàn diện cho bản sắc doanh nghiệp và định vị thị trường."
+        },
+        product: {
+          title: "Chiến dịch ra mắt sản phẩm",
+          description: "Trưng bày sản phẩm năng động thúc đẩy bán hàng và nhận thức thị trường."
+        },
+        internal: {
+          title: "Truyền thông nội bộ",
+          description: "Nội dung tương tác nhân viên và đào tạo tăng cường văn hóa công ty."
+        },
+        events: {
+          title: "Ghi hình sự kiện & Điểm nổi bật",
+          description: "Tài liệu sự kiện chuyên nghiệp và nội dung quảng bá."
+        }
+      }
+    },
+    process: {
+      title: "Quy trình chiến lược của chúng tôi",
+      subtitle: "Phương pháp đã được chứng minh đảm bảo mọi dự án mang lại kết quả xuất sắc",
+      steps: {
+        consultation: "Tư vấn hợp tác",
+        concept: "Phát triển ý tưởng chiến lược",
+        production: "Sản xuất điện ảnh",
+        postProduction: "Hậu kỳ xuất sắc"
+      }
+    },
+    whyUs: {
+      title: "ĐỐI TÁC SẢN XUẤT VIDEO MARKETING TIN CẬY CHO NGÀNH CÔNG NGHIỆP",
+      features: {
+        speed: {
+          title: "TỐC ĐỘ VƯỢT TRỘI",
+          description: "Quy trình tinh gọn, bàn giao TVC Film hoàn chỉnh chỉ sau 1-2 tuần. Tiết kiệm thời gian, tối ưu hiệu quả cho doanh nghiệp."
+        },
+        quality: {
+          title: "CHẤT LƯỢNG ĐIỆN ẢNH",
+          description: "Cam kết chất lượng 4K-6K RAW, màu sắc chân thực, hình ảnh sắc nét, xứng tầm thương hiệu lớn."
+        },
+        technology: {
+          title: "CÔNG NGHỆ TIÊN PHONG",
+          description: "Sử dụng Flycam, Drone FPV, Gimbal Ronin RS3 Pro, Sony FX Cinema Line để tạo ra những góc máy đột phá, khác biệt."
+        }
+      }
+    },
+    faq: {
+      title: "GIẢI ĐÁP THẮC MẮC VỀ DỊCH VỤ QUAY PHIM TVC",
+      questions: {
+        timeline: {
+          question: "Thời gian sản xuất một TVC nhà máy mất bao lâu?",
+          answer: "Với quy trình tối ưu, Mercury Solutions có thể hoàn thành toàn bộ quá trình từ tiền kỳ, sản xuất đến hậu kỳ và bàn giao sản phẩm cuối cùng trong vòng 1 đến 2 tuần, tùy thuộc vào độ phức tạp của dự án."
+        },
+        cost: {
+          question: "Chi phí để quay một phim giới thiệu doanh nghiệp là bao nhiêu?",
+          answer: "Chi phí phụ thuộc vào nhiều yếu tố: số ngày quay, yêu cầu về thiết bị (drone, FPV, kỹ xảo...), độ dài kịch bản. Hãy liên hệ với chúng tôi để nhận được báo giá chi tiết và phù hợp nhất với ngân sách của bạn."
+        },
+        location: {
+          question: "Mercury Solutions có nhận quay phim tại các tỉnh thành khác không?",
+          answer: "Chắc chắn có. Đội ngũ của chúng tôi linh hoạt và sẵn sàng di chuyển đến bất kỳ khu công nghiệp, nhà máy nào trên toàn quốc để thực hiện dự án."
+        },
+        equipment: {
+          question: "Mercury Solutions sử dụng thiết bị gì để quay phim?",
+          answer: "Chúng tôi sử dụng thiết bị chuyên nghiệp hàng đầu: máy quay Sony FX Cinema Line, drone FPV, gimbal Ronin RS3 Pro, thiết bị ánh sáng chuyên nghiệp để đảm bảo chất lượng 4K-6K RAW."
+        },
+        process: {
+          question: "Quy trình làm việc của Mercury Solutions như thế nào?",
+          answer: "Chúng tôi tuân theo quy trình 5 bước: Tư vấn & Khảo sát → Xây dựng ý tưởng & Kịch bản → Sản xuất & Ghi hình → Hậu kỳ & Dựng phim → Tinh chỉnh & Nghiệm thu."
+        },
+        quality: {
+          question: "Mercury Solutions đảm bảo chất lượng như thế nào?",
+          answer: "Chúng tôi cam kết chất lượng điện ảnh với đội ngũ chuyên nghiệp, thiết bị hiện đại, và quy trình kiểm soát chất lượng nghiêm ngặt. Mọi dự án đều được nghiệm thu trước khi bàn giao."
+        },
+        revision: {
+          question: "Có được chỉnh sửa sau khi hoàn thành không?",
+          answer: "Có, chúng tôi hỗ trợ chỉnh sửa theo yêu cầu của khách hàng. Chúng tôi sẽ gửi bản dựng đầu tiên để bạn xem và đưa ra phản hồi trước khi hoàn thiện sản phẩm cuối cùng."
+        },
+        delivery: {
+          question: "Mercury Solutions giao sản phẩm ở định dạng nào?",
+          answer: "Chúng tôi giao sản phẩm ở nhiều định dạng phù hợp: MP4 cho web/social media, MOV cho trình chiếu, và các định dạng khác theo yêu cầu cụ thể của khách hàng."
+        }
+      }
+    },
+    cta: {
+      title: "SẴN SÀNG NÂNG TẦM THƯƠNG HIỆU NHÀ MÁY CỦA BẠN?",
+      subtitle: "Đừng để những câu chuyện về công nghệ và con người của bạn bị ẩn giấu. Hãy để chúng tôi giúp bạn kể chúng một cách ấn tượng nhất.",
+      description: "Điền thông tin vào form dưới đây, chuyên gia của Mercury Solutions sẽ liên hệ tư vấn miễn phí và gửi báo giá chi tiết trong vòng 8 giờ làm việc!",
+      form: {
+        name: "Họ và Tên*",
+        email: "Email*",
+        phone: "Số điện thoại*",
+        company: "Tên công ty",
+        requirements: "Nhu cầu của bạn (ví dụ: quay phim giới thiệu nhà máy 5 phút, quay quy trình sản xuất...)",
+        submit: "GỬI YÊU CẦU TƯ VẤN"
       }
     },
     services: {
@@ -194,50 +328,6 @@ export const vi = {
         description: "Chiến lược phân phối toàn diện để tối đa hóa phạm vi tiếp cận và tác động trên tất cả nền tảng."
       }
     },
-    process: {
-      title: "Quy trình chiến lược của chúng tôi",
-      subtitle: "Phương pháp đã được chứng minh đảm bảo mọi dự án mang lại kết quả xuất sắc",
-      steps: {
-        consultation: "Tư vấn hợp tác",
-        concept: "Phát triển ý tưởng chiến lược",
-        production: "Sản xuất điện ảnh",
-        postProduction: "Hậu kỳ xuất sắc"
-      }
-    },
-    portfolio: {
-      title: "Portfolio của chúng tôi",
-      subtitle: "Thể hiện chuyên môn của chúng tôi trên nhiều ngành và loại dự án",
-      projects: {
-        corporate: {
-          title: "Phim thương hiệu doanh nghiệp",
-          description: "Kể chuyện thương hiệu toàn diện cho bản sắc doanh nghiệp và định vị thị trường."
-        },
-        product: {
-          title: "Chiến dịch ra mắt sản phẩm",
-          description: "Trưng bày sản phẩm năng động thúc đẩy bán hàng và nhận thức thị trường."
-        },
-        internal: {
-          title: "Truyền thông nội bộ",
-          description: "Nội dung tương tác nhân viên và đào tạo tăng cường văn hóa công ty."
-        },
-        events: {
-          title: "Ghi hình sự kiện & Điểm nổi bật",
-          description: "Tài liệu sự kiện chuyên nghiệp và nội dung quảng bá."
-        }
-      }
-    },
-    cta: {
-      title: "Sẵn sàng chuyển đổi doanh nghiệp với TVC chiến lược?",
-      subtitle: "Hãy thảo luận yêu cầu dự án và biến tầm nhìn sáng tạo thành hiện thực với dịch vụ sản xuất TVC chuyên nghiệp mang lại kết quả kinh doanh đo lường được.",
-      getStarted: "Bắt đầu ngay hôm nay",
-      contactUs: "Liên hệ chúng tôi"
-    },
-    faq: {
-      title: "Câu hỏi thường gặp",
-      subtitle: "Nhận câu trả lời cho các câu hỏi phổ biến về dịch vụ và quy trình sản xuất TVC của chúng tôi.",
-      stillHaveQuestions: "Vẫn còn câu hỏi?",
-      contactTeam: "Đội ngũ của chúng tôi sẵn sàng giúp bạn hiểu quy trình sản xuất TVC và trả lời mọi câu hỏi."
-    },
     features: {
       consultation: ["Phân tích thương hiệu", "Lập kế hoạch chiến lược", "Hướng dẫn chuyên gia", "Đồng bộ tầm nhìn"],
       concept: ["Phân tích DNA thương hiệu", "Tạo kể chuyện", "Đồng bộ marketing", "Nội dung hướng hành động"],
@@ -258,6 +348,28 @@ export const vi = {
   process: {
     title: "Quy trình của chúng tôi",
     subtitle: "Chúng tôi tuân theo phương pháp đã được chứng minh để cung cấp giải pháp chất lượng cao đáp ứng yêu cầu kinh doanh và vượt quá mong đợi.",
+    steps: {
+      plan: {
+        title: "Lập kế hoạch",
+        description: "Nhận yêu cầu và thông tin từ khách hàng, bao gồm tư vấn CNTT để đưa ra đề xuất và phát triển ước tính dự án theo mong đợi của họ.",
+        imageAlt: "Giai đoạn lập kế hoạch với thu thập yêu cầu và ước tính dự án"
+      },
+      design: {
+        title: "Thiết kế & Định nghĩa",
+        description: "Dựa trên đặc tả yêu cầu chuẩn bị tài liệu dự án, giúp ích cho các giai đoạn tiếp theo. Định nghĩa kiến trúc hệ thống tổng thể và công nghệ stack.",
+        imageAlt: "Giai đoạn thiết kế với wireframes và kiến trúc hệ thống"
+      },
+      build: {
+        title: "Xây dựng & Kiểm thử",
+        description: "Đội ngũ chuyên gia của chúng tôi sử dụng ngôn ngữ lập trình, kỹ thuật và phương pháp đã chọn để xây dựng phần mềm. Đánh giá chất lượng phát triển phần mềm.",
+        imageAlt: "Giai đoạn phát triển và kiểm thử với triển khai code"
+      },
+      deploy: {
+        title: "Triển khai & Bảo trì",
+        description: "Kết quả phần mềm cuối cùng được phát hành và kiểm tra các vấn đề triển khai nếu có. Theo thỏa thuận mức dịch vụ, chúng tôi đảm bảo bảo trì liên tục.",
+        imageAlt: "Giai đoạn triển khai và bảo trì với giám sát liên tục"
+      }
+    },
     benefits: {
       title: "Tại sao chọn quy trình của chúng tôi?",
       subtitle: "Cách tiếp cận có hệ thống đảm bảo minh bạch, chất lượng và giao hàng đúng hạn trong khi duy trì giao tiếp rõ ràng xuyên suốt.",

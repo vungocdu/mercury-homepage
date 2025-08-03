@@ -2,6 +2,20 @@
 
 ## Current Sprint
 
+### [WIP] TVC Landing Page Content Update
+- [x] Cập nhật metadata SEO cho trang TVC theo tvc-landing-page-content.md
+- [x] Tích hợp nội dung Hero Section mới với pain points và value proposition
+- [x] Cập nhật Services Section với focus vào nhà máy và doanh nghiệp sản xuất
+- [x] Thêm Portfolio Section với case studies Fujikin và Jworld Vina
+- [x] Tích hợp Production Process Section 5 bước chi tiết
+- [x] Cập nhật Why Us Section với bảng so sánh 3 cột
+- [x] Thêm FAQ Section với 8 câu hỏi chuyên sâu
+- [x] Tạo Contact Form Section với CTA mạnh mẽ
+- [x] Cập nhật đa ngôn ngữ cho tất cả nội dung mới
+- [x] Cập nhật FAQ với 8 câu hỏi chi tiết cho tất cả ngôn ngữ
+- [x] Test responsive design và performance
+- [x] Fix TypeScript errors và build issues
+
 ### [WIP] TVC Services Integration
 - [x] Tích hợp hiệu ứng thanh cuộn (ScrollIndicator) vào layout chính
 - [x] Cập nhật nội dung dịch vụ TVC chi tiết theo mô tả từ thư mục /tvc
@@ -10,12 +24,16 @@
 - [x] Xóa thư mục /tvc sau khi tích hợp hoàn tất
 - [x] Tạo file documentation theo cursor rules
 
-### [ ] SEO & Performance Optimization
-- [ ] Cập nhật Google Analytics ID trong layout.tsx
-- [ ] Thêm actual images cho portfolio projects
+### [WIP] Performance Optimization
+- [x] Fix TypeScript errors và build issues
+- [x] Resolve SSR compatibility issues
+- [x] Fix useLanguage hook SSR issues
+- [x] Update to Next.js 15.4.5 and React 19.1.1
 - [ ] Optimize images với Next.js Image component
 - [ ] Implement lazy loading cho components
 - [ ] Add structured data markup cho SEO
+- [ ] Optimize bundle size
+- [ ] Add loading states cho components
 
 ### [ ] Content & Copy Updates
 - [ ] Review và cập nhật copy cho tất cả sections
@@ -30,17 +48,17 @@
 - [ ] Add unit tests cho critical components
 - [ ] Implement proper TypeScript types
 
-### [ ] UI/UX Enhancements
-- [ ] Add dark mode toggle
-- [ ] Implement smooth scroll animations
-- [ ] Add micro-interactions
-- [ ] Improve mobile navigation
-- [ ] Add breadcrumb navigation
+### [done] UI/UX Enhancements
+- [x] Add dark mode toggle
+- [x] Implement smooth scroll animations
+- [x] Add micro-interactions
+- [x] Improve mobile navigation
+- [x] Add breadcrumb navigation
 
 ## Backlog
 
 ### [ ] Advanced Features
-- [ ] Multi-language support (Vietnamese/English)
+- [x] Multi-language support (Vietnamese/English) - Completed 2024-12-19
 - [ ] Blog section cho industry insights
 - [ ] Client portal/dashboard
 - [ ] Project management integration
@@ -59,6 +77,13 @@
 - [ ] Add input validation
 
 ## Recently Completed
+
+### [done] 2024-12-19: Navigation Menu Fix and Smooth Scroll Implementation
+- [x] Fixed navigation menu functionality - all menu items now properly scroll to sections
+- [x] Implemented smooth scroll utility in lib/utils.ts
+- [x] Added missing ID to TechnologyStack component (id="technology")
+- [x] Updated Header component to use smooth scroll for all navigation links
+- [x] Enhanced user experience with proper scroll behavior for both desktop and mobile
 
 ### [done] 2024-12-19: Initial Project Setup
 - [x] Khởi tạo Next.js project structure

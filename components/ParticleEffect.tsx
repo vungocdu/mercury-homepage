@@ -14,12 +14,12 @@ interface Particle {
 
 export default function ParticleEffect() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const animationRef = useRef<number>()
+  const animationRef = useRef<number | undefined>(undefined)
   const particlesRef = useRef<Particle[]>([])
 
   useEffect(() => {
     const canvas = canvasRef.current
-    if (!canvas) return
+    if (!canvas || typeof window === 'undefined') return
 
     const ctx = canvas.getContext('2d')
     if (!ctx) return

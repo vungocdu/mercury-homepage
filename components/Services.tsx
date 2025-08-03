@@ -7,15 +7,13 @@ import {
   Eye, 
   Network, 
   Zap, 
-  Globe, 
   Shield, 
   Cpu, 
-  Target, 
   TrendingUp, 
   Users, 
   Award,
-  CheckCircle,
   Clock,
+  CheckCircle,
   Star
 } from 'lucide-react'
 import { motion } from 'framer-motion'

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { BarChart3, Download, Filter, Calendar } from 'lucide-react'
+import { Download, Filter, Calendar } from 'lucide-react'
 import AnalyticsDashboard from '@/components/AnalyticsDashboard'
 
 export const metadata: Metadata = {

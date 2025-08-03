@@ -1,10 +1,9 @@
 'use client'
 
-import { Play, Camera, Edit3, Palette, Zap, Users, Award, Clock, Video, Mic, Lightbulb, Target, Sparkles, Star, ArrowRight, Phone } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { Play, Camera, Edit3, Zap, Users, Award, Clock, Video, Lightbulb, Target, Sparkles, Star, ArrowRight, Factory, Settings, Users2, Film } from 'lucide-react'
+import { motion } from 'framer-motion'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import FAQ from '../../components/FAQ'
 import TrackingButton from '../../components/TrackingButton'
 import TickerScroll from '../../components/TickerScroll'
 import { useLanguage } from '../../contexts/LanguageContext'
@@ -14,46 +13,28 @@ export default function TVCPageClient() {
   
   const services = [
     {
-      icon: Lightbulb,
-      title: translations.tvc.services.consultation.title,
-      description: translations.tvc.services.consultation.description,
-      features: translations.tvc.features.consultation,
+      icon: Factory,
+      title: translations.tvc.solution.services.factory.title,
+      description: translations.tvc.solution.services.factory.description,
       gradient: 'from-mercury-blue-500 to-mercury-blue-600'
     },
     {
-      icon: Target,
-      title: translations.tvc.services.concept.title,
-      description: translations.tvc.services.concept.description,
-      features: translations.tvc.features.concept,
+      icon: Settings,
+      title: translations.tvc.solution.services.process.title,
+      description: translations.tvc.solution.services.process.description,
       gradient: 'from-mercury-blue-600 to-mercury-blue-700'
     },
     {
-      icon: Camera,
-      title: translations.tvc.services.production.title,
-      description: translations.tvc.services.production.description,
-      features: translations.tvc.features.production,
+      icon: Lightbulb,
+      title: translations.tvc.solution.services.technology.title,
+      description: translations.tvc.solution.services.technology.description,
       gradient: 'from-mercury-blue-500 to-mercury-blue-700'
     },
     {
-      icon: Edit3,
-      title: translations.tvc.services.postProduction.title,
-      description: translations.tvc.services.postProduction.description,
-      features: translations.tvc.features.postProduction,
+      icon: Users2,
+      title: translations.tvc.solution.services.culture.title,
+      description: translations.tvc.solution.services.culture.description,
       gradient: 'from-mercury-blue-600 to-mercury-blue-800'
-    },
-    {
-      icon: Video,
-      title: translations.tvc.services.motionGraphics.title,
-      description: translations.tvc.services.motionGraphics.description,
-      features: translations.tvc.features.motionGraphics,
-      gradient: 'from-mercury-blue-500 to-mercury-blue-600'
-    },
-    {
-      icon: Mic,
-      title: translations.tvc.services.distribution.title,
-      description: translations.tvc.services.distribution.description,
-      features: translations.tvc.features.distribution,
-      gradient: 'from-mercury-blue-600 to-mercury-blue-700'
     }
   ]
 
@@ -93,8 +74,8 @@ export default function TVCPageClient() {
       title: translations.tvc.portfolio.projects.corporate.title,
       category: 'TVC',
       description: translations.tvc.portfolio.projects.corporate.description,
-      duration: '60s',
-      platform: 'Television & Digital',
+      duration: '3-5min',
+      platform: 'Corporate & Digital',
       gradient: 'from-mercury-blue-500 to-mercury-blue-700'
     },
     {
@@ -119,6 +100,27 @@ export default function TVCPageClient() {
       description: translations.tvc.portfolio.projects.events.description,
       duration: '2-3min',
       platform: 'Multi-platform Distribution',
+      gradient: 'from-mercury-blue-600 to-mercury-blue-700'
+    }
+  ]
+
+  const whyUsFeatures = [
+    {
+      icon: Zap,
+      title: translations.tvc.whyUs.features.speed.title,
+      description: translations.tvc.whyUs.features.speed.description,
+      gradient: 'from-mercury-blue-500 to-mercury-blue-600'
+    },
+    {
+      icon: Film,
+      title: translations.tvc.whyUs.features.quality.title,
+      description: translations.tvc.whyUs.features.quality.description,
+      gradient: 'from-mercury-gold-500 to-mercury-gold-600'
+    },
+    {
+      icon: Camera,
+      title: translations.tvc.whyUs.features.technology.title,
+      description: translations.tvc.whyUs.features.technology.description,
       gradient: 'from-mercury-blue-600 to-mercury-blue-700'
     }
   ]
@@ -168,6 +170,9 @@ export default function TVCPageClient() {
                 <p className="text-xl leading-relaxed text-gray-700">
                   {translations.tvc.hero.subtitle}
                 </p>
+                <p className="text-lg text-gray-600">
+                  {translations.tvc.hero.description}
+                </p>
               </motion.div>
 
               <motion.div 
@@ -180,11 +185,11 @@ export default function TVCPageClient() {
                   href="#contact" 
                   className="bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-700 hover:from-mercury-blue-700 hover:to-mercury-blue-800 text-white font-semibold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center group"
                   trackingAction="click_cta"
-                  trackingLabel="Start Your Project"
+                  trackingLabel="Get Consultation"
                   conversionType="lead"
                   conversionValue={100}
                 >
-                  {translations.common.getStarted}
+                  {translations.tvc.hero.cta}
                   <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </TrackingButton>
                 <TrackingButton 
@@ -198,12 +203,27 @@ export default function TVCPageClient() {
                 </TrackingButton>
               </motion.div>
 
+              {/* Partners */}
+              <motion.div 
+                className="pt-8"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
+                <p className="text-sm text-gray-600 mb-4">{translations.tvc.hero.partners}</p>
+                <div className="flex items-center space-x-6">
+                  <div className="w-24 h-12 bg-gray-200 rounded flex items-center justify-center text-xs text-gray-500">Fujikin</div>
+                  <div className="w-24 h-12 bg-gray-200 rounded flex items-center justify-center text-xs text-gray-500">Jworld Vina</div>
+                  <div className="w-24 h-12 bg-gray-200 rounded flex items-center justify-center text-xs text-gray-500">+ More</div>
+                </div>
+              </motion.div>
+
               {/* Enhanced Stats */}
               <motion.div 
                 className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
               >
                 {stats.map((stat, index) => (
                   <motion.div 
@@ -276,8 +296,8 @@ export default function TVCPageClient() {
         </div>
       </section>
 
-      {/* Enhanced Services Section */}
-      <section id="services" className="py-20 bg-gradient-to-br from-gray-50 to-white">
+      {/* Pain Points Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="container-custom">
           <motion.div 
             className="text-center mb-16"
@@ -286,19 +306,58 @@ export default function TVCPageClient() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-center justify-center space-x-2 mb-4">
-              <Sparkles className="w-6 h-6 text-mercury-gold-500" />
-              <span className="text-mercury-blue-600 font-semibold">Our Services</span>
-            </div>
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-800 bg-clip-text text-transparent">
-              {translations.tvc.services.title || 'What We Do'}
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-800 bg-clip-text text-transparent">
+              {translations.tvc.painPoints.title}
             </h2>
-            <p className="text-xl max-w-3xl mx-auto text-gray-700">
-              {translations.tvc.services.subtitle || 'We specialize in creating strategic TVC content that enhances your brand image and attracts top talent. Our comprehensive approach combines cutting-edge technology with creative excellence.'}
+            <div className="grid md:grid-cols-2 gap-8 mt-12">
+              {translations.tvc.painPoints.points.map((point, index) => (
+                <motion.div 
+                  key={index}
+                  className="flex items-start space-x-4 p-6 bg-white rounded-xl shadow-lg border border-gray-100"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white text-sm font-bold">!</span>
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">{point}</p>
+                </motion.div>
+              ))}
+            </div>
+            <motion.div 
+              className="mt-12 p-6 bg-gradient-to-r from-mercury-blue-500 to-mercury-blue-600 rounded-2xl text-white"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-xl font-semibold">{translations.tvc.painPoints.conclusion}</p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Solution Section */}
+      <section className="py-20 bg-gradient-to-br from-mercury-blue-50 to-mercury-blue-100">
+        <div className="container-custom">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-800 bg-clip-text text-transparent">
+              {translations.tvc.solution.title}
+            </h2>
+            <p className="text-xl max-w-4xl mx-auto text-gray-700 leading-relaxed">
+              {translations.tvc.solution.description}
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <motion.div 
                 key={index} 
@@ -314,79 +373,11 @@ export default function TVCPageClient() {
                     <div className={`w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="ml-4 text-xl font-bold text-gray-800">{service.title}</h3>
+                    <h3 className="ml-4 text-lg font-bold text-gray-800">{service.title}</h3>
                   </div>
-                  
-                  <p className="mb-6 leading-relaxed text-gray-600 flex-grow">
-                    {service.description}
-                  </p>
-                  
-                  <ul className="space-y-3">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-mercury-blue-500 to-mercury-blue-600 mr-3 flex-shrink-0"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Enhanced Process Section */}
-      <section className="py-20 bg-gradient-to-br from-mercury-blue-50 to-mercury-blue-100">
-        <div className="container-custom">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <div className="flex items-center justify-center space-x-2 mb-4">
-              <Target className="w-6 h-6 text-mercury-blue-500" />
-              <span className="text-mercury-blue-600 font-semibold">Our Process</span>
-            </div>
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-800 bg-clip-text text-transparent">
-              {translations.tvc.process.title}
-            </h2>
-            <p className="text-xl max-w-3xl mx-auto text-gray-700">
-              {translations.tvc.process.subtitle}
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {process.map((step, index) => (
-              <motion.div 
-                key={index} 
-                className="relative h-full"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                {index < process.length - 1 && (
-                  <div className="hidden lg:block absolute top-16 left-full w-full h-1 z-0 bg-gradient-to-r from-mercury-blue-200 to-mercury-blue-300" 
-                       style={{ width: 'calc(100% - 2rem)' }}></div>
-                )}
-                
-                <div className="relative z-10 bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group h-full flex flex-col">
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-mercury-blue-500 to-mercury-blue-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                      <step.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="text-3xl font-bold bg-gradient-to-r from-mercury-blue-500 to-mercury-blue-600 bg-clip-text text-transparent flex-shrink-0">{step.step}</div>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold mb-4 text-gray-800">
-                    {step.title}
-                  </h3>
                   
                   <p className="leading-relaxed text-gray-600 flex-grow">
-                    {step.description}
+                    {service.description}
                   </p>
                 </div>
               </motion.div>
@@ -395,10 +386,7 @@ export default function TVCPageClient() {
         </div>
       </section>
 
-      {/* Ticker Scroll Portfolio Section */}
-      <TickerScroll />
-
-      {/* Enhanced Portfolio Section */}
+      {/* Portfolio Section */}
       <section id="portfolio" className="py-20 bg-gradient-to-br from-white to-gray-50">
         <div className="container-custom">
           <motion.div 
@@ -420,7 +408,7 @@ export default function TVCPageClient() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {portfolio.map((project, index) => (
               <motion.div 
                 key={index} 
@@ -473,6 +461,112 @@ export default function TVCPageClient() {
         </div>
       </section>
 
+      {/* Process Section */}
+      <section className="py-20 bg-gradient-to-br from-mercury-blue-50 to-mercury-blue-100">
+        <div className="container-custom">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex items-center justify-center space-x-2 mb-4">
+              <Target className="w-6 h-6 text-mercury-blue-500" />
+              <span className="text-mercury-blue-600 font-semibold">Our Process</span>
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-800 bg-clip-text text-transparent">
+              {translations.tvc.process.title}
+            </h2>
+            <p className="text-xl max-w-3xl mx-auto text-gray-700">
+              {translations.tvc.process.subtitle}
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+            {process.map((step, index) => (
+              <motion.div 
+                key={index} 
+                className="relative h-full"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                {index < process.length - 1 && (
+                  <div className="hidden lg:block absolute top-16 left-full w-full h-1 z-0 bg-gradient-to-r from-mercury-blue-200 to-mercury-blue-300" 
+                       style={{ width: 'calc(100% - 2rem)' }}></div>
+                )}
+                
+                <div className="relative z-10 bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group h-full flex flex-col">
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-mercury-blue-500 to-mercury-blue-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                      <step.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="text-3xl font-bold bg-gradient-to-r from-mercury-blue-500 to-mercury-blue-600 bg-clip-text text-transparent flex-shrink-0">{step.step}</div>
+                  </div>
+                  
+                  <h3 className="text-lg font-bold mb-4 text-gray-800">
+                    {step.title}
+                  </h3>
+                  
+                  <p className="leading-relaxed text-gray-600 flex-grow">
+                    {step.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Us Section */}
+      <section className="py-20 bg-gradient-to-br from-white to-gray-50">
+        <div className="container-custom">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-800 bg-clip-text text-transparent">
+              {translations.tvc.whyUs.title}
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {whyUsFeatures.map((feature, index) => (
+              <motion.div 
+                key={index} 
+                className="group h-full"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+              >
+                <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group-hover:border-mercury-blue-200 h-full flex flex-col">
+                  <div className="flex items-center mb-6">
+                    <div className={`w-16 h-16 bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
+                      <feature.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="ml-4 text-xl font-bold text-gray-800">{feature.title}</h3>
+                  </div>
+                  
+                  <p className="leading-relaxed text-gray-600 flex-grow">
+                    {feature.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Ticker Scroll Portfolio Section */}
+      <TickerScroll />
+
       {/* Enhanced CTA Section */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-mercury-blue-600 via-mercury-blue-700 to-mercury-blue-800"></div>
@@ -498,35 +592,101 @@ export default function TVCPageClient() {
             <p className="text-xl mb-8 max-w-2xl mx-auto text-mercury-blue-100">
               {translations.tvc.cta.subtitle}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <TrackingButton 
-                href="#contact" 
-                className="bg-gradient-to-r from-mercury-gold-500 to-mercury-gold-600 hover:from-mercury-gold-600 hover:to-mercury-gold-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center group"
-                trackingAction="click_cta"
-                trackingLabel="Get Started Today"
-                conversionType="lead"
-                conversionValue={150}
-              >
-                {translations.tvc.cta.getStarted}
-                <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </TrackingButton>
-              <TrackingButton 
-                href="tel:+842412345678" 
-                className="border-2 border-mercury-gold-300 text-mercury-gold-300 hover:bg-mercury-gold-300 hover:text-mercury-blue-700 font-bold py-4 px-8 rounded-xl transition-all duration-300 group"
-                trackingAction="contact_form"
-                trackingLabel="Call Us Now"
-                conversionType="contact"
-                conversionValue={200}
-              >
-                {translations.tvc.cta.contactUs}
-                <Phone className="ml-2 group-hover:scale-110 transition-transform" />
-              </TrackingButton>
+            <p className="text-lg mb-8 max-w-3xl mx-auto text-mercury-blue-100">
+              {translations.tvc.cta.description}
+            </p>
+            
+            {/* Contact Form */}
+            <div className="max-w-2xl mx-auto bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <form className="grid md:grid-cols-2 gap-6">
+                <input 
+                  type="text" 
+                  placeholder={translations.tvc.cta.form.name}
+                  className="p-4 rounded-xl border border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-mercury-gold-500"
+                />
+                <input 
+                  type="email" 
+                  placeholder={translations.tvc.cta.form.email}
+                  className="p-4 rounded-xl border border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-mercury-gold-500"
+                />
+                <input 
+                  type="tel" 
+                  placeholder={translations.tvc.cta.form.phone}
+                  className="p-4 rounded-xl border border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-mercury-gold-500"
+                />
+                <input 
+                  type="text" 
+                  placeholder={translations.tvc.cta.form.company}
+                  className="p-4 rounded-xl border border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-mercury-gold-500"
+                />
+                <div className="md:col-span-2">
+                  <textarea 
+                    placeholder={translations.tvc.cta.form.requirements}
+                    rows={4}
+                    className="w-full p-4 rounded-xl border border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-mercury-gold-500"
+                  ></textarea>
+                </div>
+                <div className="md:col-span-2">
+                                     <TrackingButton 
+                     href="#" 
+                     className="w-full bg-gradient-to-r from-mercury-gold-500 to-mercury-gold-600 hover:from-mercury-gold-600 hover:to-mercury-gold-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center group"
+                     trackingAction="contact_form"
+                     trackingLabel="TVC Consultation Form"
+                     conversionType="lead"
+                     conversionValue={200}
+                   >
+                    {translations.tvc.cta.form.submit}
+                    <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  </TrackingButton>
+                </div>
+              </form>
             </div>
           </motion.div>
         </div>
       </section>
 
-      <FAQ />
+      {/* FAQ Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div className="container-custom">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-800 bg-clip-text text-transparent">
+              {translations.tvc.faq.title}
+            </h2>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto space-y-6">
+            {Object.entries(translations.tvc.faq.questions).map(([key, faq], index) => (
+              <motion.div 
+                key={key}
+                className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <details className="group">
+                  <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition-colors duration-200">
+                    <h3 className="text-lg font-semibold text-gray-800 pr-4">{faq.question}</h3>
+                    <div className="w-6 h-6 bg-gradient-to-r from-mercury-blue-500 to-mercury-blue-600 rounded-full flex items-center justify-center flex-shrink-0 group-open:rotate-180 transition-transform duration-200">
+                      <ArrowRight className="w-4 h-4 text-white" />
+                    </div>
+                  </summary>
+                  <div className="px-6 pb-6">
+                    <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                  </div>
+                </details>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </>
   )

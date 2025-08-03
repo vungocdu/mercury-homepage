@@ -45,7 +45,8 @@ mercury-solution-homepage/
 │   ├── FAQ.tsx                  # FAQ component
 │   └── ScrollIndicator.tsx      # Scroll progress indicator
 ├── lib/                         # Utility functions
-│   └── utils.ts                 # Helper functions
+│   ├── utils.ts                 # Helper functions & smooth scroll
+│   └── analytics.ts             # Analytics utilities
 ├── public/                      # Static assets
 │   ├── images/                  # Image assets
 │   ├── favicon.ico              # Favicon
@@ -61,7 +62,7 @@ mercury-solution-homepage/
 
 ### Layout Components
 - **RootLayout**: App-wide layout với metadata và ScrollIndicator
-- **Header**: Fixed navigation với mobile menu
+- **Header**: Fixed navigation với mobile menu và smooth scroll navigation
 - **Footer**: Site footer với links và contact info
 
 ### Page Components
@@ -77,6 +78,27 @@ mercury-solution-homepage/
 - **Contact**: Contact form và information
 - **FAQ**: Interactive FAQ section
 - **ScrollIndicator**: Visual scroll progress indicator
+
+## Navigation System
+
+### Smooth Scroll Implementation
+- **Utility Functions**: `smoothScrollTo()` và `handleNavigationClick()` trong `lib/utils.ts`
+- **Section IDs**: Tất cả sections có ID tương ứng với navigation menu
+- **Cross-platform**: Hoạt động trên cả desktop và mobile
+- **External Routes**: TVC menu navigates đến `/tvc` page
+
+### Navigation Structure
+```typescript
+const navigation = [
+  { name: 'Home', href: '#home' },
+  { name: 'Services', href: '#services' },
+  { name: 'Technology', href: '#technology' },
+  { name: 'Process', href: '#process' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'TVC Services', href: '/tvc' },
+  { name: 'Contact', href: '#contact' }
+]
+```
 
 ## Data Flow
 

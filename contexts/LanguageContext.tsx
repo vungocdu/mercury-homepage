@@ -6,6 +6,29 @@ import { vi } from '@/translations/vi'
 import { ja } from '@/translations/ja'
 import { ko } from '@/translations/ko'
 
+// Server-side fallback
+const serverFallback = {
+  language: 'en' as const,
+  setLanguage: () => {},
+  t: (key: string) => {
+    const keys = key.split('.')
+    let value: any = en
+
+    for (const k of keys) {
+      if (value && typeof value === 'object' && k in value) {
+        value = (value as any)[k]
+      } else {
+        // Fallback to English if translation not found
+        value = keys.reduce((obj: any, k) => obj?.[k], en)
+        break
+      }
+    }
+
+    return typeof value === 'string' ? value : key
+  },
+  translations: en,
+}
+
 type Language = 'en' | 'vi' | 'ja' | 'ko'
 
 interface LanguageContextType {
@@ -91,10 +114,32 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   )
 }
 
-export function useLanguage() {
+// Server-side version
+export function useLanguageServer() {
+  return serverFallback
+}
+
+// Client-side version
+export function useLanguageClient() {
   const context = useContext(LanguageContext)
   if (context === undefined) {
-    throw new Error('useLanguage must be used within a LanguageProvider')
+    // Return server-side fallback
+    return serverFallback
+  }
+  return context
+}
+
+// Main hook - uses server fallback for SSR
+export function useLanguage() {
+  // Check if we're on the server
+  if (typeof window === 'undefined') {
+    return serverFallback
+  }
+
+  const context = useContext(LanguageContext)
+  if (context === undefined) {
+    // Return server-side fallback
+    return serverFallback
   }
   return context
 } 

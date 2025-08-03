@@ -4,8 +4,13 @@ import { useEffect, useRef } from 'react'
 
 declare global {
   interface Window {
-    VANTA: any
-    THREE: any
+    VANTA: {
+      GLOBE: (config: Record<string, unknown>) => { destroy: () => void }
+      NET: (config: Record<string, unknown>) => { destroy: () => void }
+      WAVES: (config: Record<string, unknown>) => { destroy: () => void }
+      DOTS: (config: Record<string, unknown>) => { destroy: () => void }
+    }
+    THREE: Record<string, unknown>
   }
 }
 
@@ -19,35 +24,41 @@ export default function InteractiveBackground({
   className = '' 
 }: InteractiveBackgroundProps) {
   const vantaRef = useRef<HTMLDivElement>(null)
-  const vantaEffect = useRef<any>(null)
+  const vantaEffect = useRef<{ destroy: () => void } | null>(null)
 
   useEffect(() => {
-    if (!vantaRef.current) return
+    if (!vantaRef.current || typeof window === 'undefined') return
 
     const initVanta = () => {
-      if (window.VANTA && window.THREE) {
+      if (typeof window !== 'undefined' && window.VANTA && window.THREE) {
         if (vantaEffect.current) {
-          vantaEffect.current.destroy()
+          try {
+            vantaEffect.current.destroy()
+          } catch (error) {
+            console.warn('Error destroying previous Vanta effect:', error)
+          }
         }
 
         try {
           switch (effect) {
             case 'globe':
-              vantaEffect.current = window.VANTA.GLOBE({
-                el: vantaRef.current,
-                mouseControls: true,
-                touchControls: true,
-                gyroControls: false,
-                minHeight: 200.00,
-                minWidth: 200.00,
-                scale: 1.00,
-                scaleMobile: 1.00,
-                color: 0x3b82f6,
-                color2: 0x8b5cf6,
-                backgroundColor: 0xffffff,
-                size: 1.00,
-                spacing: 15.00
-              })
+              if (window.VANTA.GLOBE) {
+                vantaEffect.current = window.VANTA.GLOBE({
+                  el: vantaRef.current,
+                  mouseControls: true,
+                  touchControls: true,
+                  gyroControls: false,
+                  minHeight: 200.00,
+                  minWidth: 200.00,
+                  scale: 1.00,
+                  scaleMobile: 1.00,
+                  color: 0x3b82f6,
+                  color2: 0x8b5cf6,
+                  backgroundColor: 0xffffff,
+                  size: 1.00,
+                  spacing: 15.00
+                })
+              }
               break
             case 'net':
               if (window.VANTA.NET) {
@@ -114,19 +125,22 @@ export default function InteractiveBackground({
     }
 
     // Check if scripts are loaded
-    if (window.VANTA && window.THREE) {
+    if (typeof window !== 'undefined' && window.VANTA && window.THREE) {
       initVanta()
     } else {
       // Wait for scripts to load
       const checkLoaded = setInterval(() => {
-        if (window.VANTA && window.THREE) {
+        if (typeof window !== 'undefined' && window.VANTA && window.THREE) {
           clearInterval(checkLoaded)
           initVanta()
         }
       }, 100)
 
       // Cleanup interval after 10 seconds
-      setTimeout(() => clearInterval(checkLoaded), 10000)
+      setTimeout(() => {
+        clearInterval(checkLoaded)
+        console.warn('Vanta scripts failed to load within timeout')
+      }, 10000)
     }
 
     return () => {

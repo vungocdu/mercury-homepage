@@ -16,10 +16,14 @@ export const en = {
 
   // Hero Section
   hero: {
-    title: "Data Analysis & Innovative Technologies",
-    subtitle: "We specialize in computer vision and data visualization implementation to provide better management solutions for businesses from SMEs to MNCs.",
-    cta: "Get Started",
-    learnMore: "Learn More",
+    badge: "TVC Professional AI Agent",
+    title: {
+      part1: "Next-Gen",
+      part2: "AI Technology",
+      part3: "Solutions"
+    },
+    subtitle: "Mercury Solutions delivers cutting-edge AI and digital transformation services. From computer vision to intelligent automation, we empower businesses with advanced technology solutions that drive innovation and efficiency.",
+    cta: "Explore Solutions"
   },
 
   // Why Choose Mercury Solutions
@@ -123,11 +127,7 @@ export const en = {
       description: "Optimize system performance, database efficiency, and application speed for better user experience.",
       features: ["Database Optimization", "Code Performance", "Load Balancing", "Caching Strategies"]
     },
-    tvc: {
-      title: "TVC & Digital Art",
-      description: "Professional television commercial production, digital art, and creative content services for brands and businesses.",
-      features: ["Video Production", "Motion Graphics", "Digital Art", "Content Creation"]
-    }
+
   },
 
   // Technology Stack
@@ -158,12 +158,146 @@ export const en = {
   // TVC Services
   tvc: {
     hero: {
-      title: "Professional TVC Production Services",
-      subtitle: "Elevate your brand with strategic video content that drives business results and enhances your market positioning.",
+      title: "TVC FILM PRODUCTION SERVICES FOR FACTORIES & MANUFACTURING ENTERPRISES",
+      subtitle: "TRANSFORM YOUR TECHNOLOGY & SCALE INTO BREAKTHROUGH COMPETITIVE ADVANTAGES",
+      description: "Mercury Solutions delivers comprehensive 4K TVC Film production solutions, helping to portray your brand stature, win over partners, and attract top talent in just 1-2 weeks of implementation.",
+      cta: "GET CONSULTATION & QUOTE NOW",
+      partners: "We are partners of:",
       stats: {
         projects: "TVC Projects Completed",
         clients: "Satisfied Clients",
         support: "Creative Support"
+      }
+    },
+    painPoints: {
+      title: "YOUR FACTORY IS VERY MODERN, BUT...",
+      points: [
+        "Partners haven't fully seen your scale and technology investments just through catalogs?",
+        "Customers find it hard to visualize the standards in your production processes and quality control?",
+        "Old introduction films no longer reflect your current stature and corporate culture?",
+        "Recruitment brand is faint, making it difficult to attract quality engineers and personnel?"
+      ],
+      conclusion: "It's time to upgrade your brand story with visuals."
+    },
+    solution: {
+      title: "MERCURY SOLUTIONS: TELLING GREAT STORIES FROM THE HEART OF THE FACTORY",
+      description: "We don't just film. We are experts who transform complex processes, inanimate machines, and strict standards into emotional, persuasive, and premium corporate films.",
+      services: {
+        factory: {
+          title: "🎥 Factory & Industrial Park Introduction Filming",
+          description: "Showcasing comprehensive scale, infrastructure, and production potential."
+        },
+        process: {
+          title: "⚙️ TVC Production Process Filming",
+          description: "Visual, vivid description of each stage, from raw materials to finished products."
+        },
+        technology: {
+          title: "🔬 Technology & Machinery Films",
+          description: "Emphasizing the precision and modernity of production lines, robots, and core technology."
+        },
+        culture: {
+          title: "🤝 Corporate Culture Video Production",
+          description: "Conveying history, values, and the human spirit that makes up the company's strength."
+        }
+      }
+    },
+    portfolio: {
+      title: "Our Portfolio",
+      subtitle: "Showcasing our expertise across various industries and project types",
+      projects: {
+        corporate: {
+          title: "Corporate Brand Film",
+          description: "Comprehensive brand storytelling for corporate identity and market positioning."
+        },
+        product: {
+          title: "Product Launch Campaign",
+          description: "Dynamic product showcases that drive sales and market awareness."
+        },
+        internal: {
+          title: "Internal Communications",
+          description: "Employee engagement and training content that strengthens company culture."
+        },
+        events: {
+          title: "Event Coverage & Highlights",
+          description: "Professional event documentation and promotional content."
+        }
+      }
+    },
+    process: {
+      title: "Our Strategic Process",
+      subtitle: "A proven methodology that ensures every project delivers exceptional results",
+      steps: {
+        consultation: "Collaborative Consultation",
+        concept: "Strategic Concept Development",
+        production: "Cinematic Production",
+        postProduction: "Masterful Post-Production"
+      }
+    },
+    whyUs: {
+      title: "TRUSTED VIDEO MARKETING PARTNER FOR THE INDUSTRIAL SECTOR",
+      features: {
+        speed: {
+          title: "OUTSTANDING SPEED",
+          description: "Streamlined process, complete TVC Film delivery in just 1-2 weeks. Time-saving, optimized efficiency for enterprises."
+        },
+        quality: {
+          title: "CINEMATIC QUALITY",
+          description: "Commitment to 4K-6K RAW quality, authentic colors, sharp images, worthy of major brands."
+        },
+        technology: {
+          title: "PIONEERING TECHNOLOGY",
+          description: "Using Drone, FPV Drone, Ronin RS3 Pro Gimbal, Sony FX Cinema Line to create breakthrough, unique camera angles."
+        }
+      }
+    },
+    faq: {
+      title: "FREQUENTLY ASKED QUESTIONS ABOUT TVC VIDEO PRODUCTION SERVICES",
+      questions: {
+        timeline: {
+          question: "How long does it take to produce a factory TVC?",
+          answer: "With our optimized process, Mercury Solutions can complete the entire process from pre-production, production to post-production and deliver the final product within 1-2 weeks, depending on the complexity of the project."
+        },
+        cost: {
+          question: "How much does it cost to shoot a corporate introduction film?",
+          answer: "Cost depends on many factors: number of shooting days, equipment requirements (drone, FPV, special effects...), script length. Contact us to receive detailed and most suitable pricing for your budget."
+        },
+        location: {
+          question: "Does Mercury Solutions accept filming in other provinces?",
+          answer: "Absolutely yes. Our team is flexible and ready to travel to any industrial park or factory nationwide to execute projects."
+        },
+        equipment: {
+          question: "What equipment does Mercury Solutions use for filming?",
+          answer: "We use top professional equipment: Sony FX Cinema Line cameras, FPV drones, Ronin RS3 Pro gimbal, professional lighting equipment to ensure 4K-6K RAW quality."
+        },
+        process: {
+          question: "What is Mercury Solutions' working process?",
+          answer: "We follow a 5-step process: Consultation & Site Survey → Concept Development & Scripting → Production & Filming → Post-Production & Editing → Refinement & Final Delivery."
+        },
+        quality: {
+          question: "How does Mercury Solutions ensure quality?",
+          answer: "We commit to cinematic quality with professional teams, modern equipment, and strict quality control processes. All projects are approved before delivery."
+        },
+        revision: {
+          question: "Can revisions be made after completion?",
+          answer: "Yes, we support revisions according to client requirements. We will send the first draft for your review and feedback before finalizing the final product."
+        },
+        delivery: {
+          question: "In what formats does Mercury Solutions deliver products?",
+          answer: "We deliver products in multiple suitable formats: MP4 for web/social media, MOV for presentations, and other formats according to specific client requirements."
+        }
+      }
+    },
+    cta: {
+      title: "READY TO ELEVATE YOUR FACTORY BRAND?",
+      subtitle: "Don't let your stories about technology and people be hidden. Let us help you tell them in the most impressive way.",
+      description: "Fill in the form below, Mercury Solutions experts will contact you for free consultation and send detailed quotes within 8 working hours!",
+      form: {
+        name: "Full Name*",
+        email: "Email*",
+        phone: "Phone Number*",
+        company: "Company Name",
+        requirements: "Your requirements (e.g., 5-minute factory introduction film, production process filming...)",
+        submit: "SEND CONSULTATION REQUEST"
       }
     },
     services: {
@@ -194,50 +328,6 @@ export const en = {
         description: "Comprehensive distribution strategy to maximize reach and impact across all platforms."
       }
     },
-    process: {
-      title: "Our Strategic Process",
-      subtitle: "A proven methodology that ensures every project delivers exceptional results",
-      steps: {
-        consultation: "Collaborative Consultation",
-        concept: "Strategic Concept Development",
-        production: "Cinematic Production",
-        postProduction: "Masterful Post-Production"
-      }
-    },
-    portfolio: {
-      title: "Our Portfolio",
-      subtitle: "Showcasing our expertise across various industries and project types",
-      projects: {
-        corporate: {
-          title: "Corporate Brand Film",
-          description: "Comprehensive brand storytelling for corporate identity and market positioning."
-        },
-        product: {
-          title: "Product Launch Campaign",
-          description: "Dynamic product showcases that drive sales and market awareness."
-        },
-        internal: {
-          title: "Internal Communications",
-          description: "Employee engagement and training content that strengthens company culture."
-        },
-        events: {
-          title: "Event Coverage & Highlights",
-          description: "Professional event documentation and promotional content."
-        }
-      }
-    },
-    cta: {
-      title: "Ready to Transform Your Business with Strategic TVCs?",
-      subtitle: "Let's discuss your project requirements and bring your creative vision to life with our professional TVC production services that deliver measurable business results.",
-      getStarted: "Get Started Today",
-      contactUs: "Contact Us"
-    },
-    faq: {
-      title: "Frequently Asked Questions",
-      subtitle: "Get answers to common questions about our TVC production services and process.",
-      stillHaveQuestions: "Still Have Questions?",
-      contactTeam: "Our team is here to help you understand our TVC production process and answer any questions you may have."
-    },
     features: {
       consultation: ["Brand Analysis", "Strategic Planning", "Expert Guidance", "Vision Alignment"],
       concept: ["Brand DNA Analysis", "Narrative Crafting", "Marketing Alignment", "Action-Driven Content"],
@@ -258,6 +348,28 @@ export const en = {
   process: {
     title: "Our Process",
     subtitle: "We follow a proven methodology to deliver high-quality solutions that meet your business requirements and exceed expectations.",
+    steps: {
+      plan: {
+        title: "Plan",
+        description: "Receive requirements and information from clients, include IT Consultancy to make suggestions and develop project estimations as per their expectations.",
+        imageAlt: "Planning phase with requirements gathering and project estimation"
+      },
+      design: {
+        title: "Design & Define",
+        description: "Based on the requirement specifications prepare project documents, which help in further stages. Define overall system architecture and technology stack.",
+        imageAlt: "Design phase with wireframes and system architecture"
+      },
+      build: {
+        title: "Build & Test",
+        description: "Our team of experts uses the chosen programming language, techniques, and methodologies to build the software. Evaluate the quality of software development.",
+        imageAlt: "Development and testing phase with code implementation"
+      },
+      deploy: {
+        title: "Deploy & Maintenance",
+        description: "The final software outcome is released and checked for deployment issues if any. According to the service level agreement, we ensure continuous maintenance.",
+        imageAlt: "Deployment and maintenance phase with continuous monitoring"
+      }
+    },
     benefits: {
       title: "Why Choose Our Process?",
       subtitle: "Our systematic approach ensures transparency, quality, and timely delivery of your projects while maintaining clear communication throughout.",

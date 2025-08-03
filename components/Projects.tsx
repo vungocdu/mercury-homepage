@@ -2,6 +2,7 @@
 
 import { ExternalLink, Smartphone, Globe, Zap } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
+import ClientOnly from './ClientOnly'
 
 export default function Projects() {
   const { t } = useLanguage()
@@ -31,7 +32,7 @@ export default function Projects() {
     }
   })
 
-  return (
+  const ProjectsContent = () => (
     <section id="projects" className="section-white relative overflow-hidden">
       <div className="container-custom relative z-10">
         <div className="text-center mb-16 fade-in-up">
@@ -163,5 +164,33 @@ export default function Projects() {
         </div>
       </div>
     </section>
+  )
+
+  return (
+    <ClientOnly fallback={
+      <section id="projects" className="section-white relative overflow-hidden">
+        <div className="container-custom relative z-10">
+          <div className="text-center mb-16 fade-in-up">
+            <div className="inline-flex items-center space-x-2 professional-card px-4 py-2 rounded-full mb-6">
+              <Zap className="w-4 h-4" style={{ color: 'hsl(var(--link-primary))' }} />
+              <span className="text-sm font-medium" style={{ color: 'hsl(var(--text-primary))' }}>High-Performance Applications</span>
+            </div>
+            
+            <h2 className="text-3xl lg:text-5xl font-bold mb-6">
+              <span style={{ color: 'hsl(var(--text-primary))' }}>We excel in building</span>{' '}
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+                high-load mobile and web applications
+              </span>
+            </h2>
+            
+            <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: 'hsl(var(--text-secondary))' }}>
+              Explore our portfolio of successful projects that demonstrate our expertise in delivering innovative solutions across various industries with cutting-edge technology.
+            </p>
+          </div>
+        </div>
+      </section>
+    }>
+      <ProjectsContent />
+    </ClientOnly>
   )
 } 

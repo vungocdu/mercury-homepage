@@ -1,10 +1,22 @@
 import type { Metadata } from 'next'
 import TVCPageClient from './TVCPageClient'
 
+// Force dynamic rendering for Next.js 15 compatibility
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
-  title: 'TVC Services - Professional Digital Art & Video Production',
-  description: 'Mercury Solutions offers professional TVC (Television Commercial) services including digital art, video production, motion graphics, and creative content for brands and businesses.',
+  title: 'Dịch Vụ Quay Phim TVC Nhà Máy, Khu Công Nghiệp 4K | Mercury Solutions',
+  description: 'Mercury Solutions chuyên cung cấp dịch vụ quay phim, sản xuất TVC giới thiệu nhà máy, KCN chuyên nghiệp. Chất lượng 4K, flycam, FPV, hoàn thành trong 1-2 tuần. Nâng tầm thương hiệu sản xuất của bạn!',
   keywords: [
+    'dịch vụ quay phim nhà máy',
+    'sản xuất TVC doanh nghiệp',
+    'quay phim giới thiệu công ty sản xuất',
+    'quay phim khu công nghiệp',
+    'làm phim doanh nghiệp',
+    'quay phim flycam nhà xưởng',
+    'video quy trình sản xuất',
+    'phim tự giới thiệu doanh nghiệp 4K',
+    'công ty quay phim quảng cáo',
     'TVC services',
     'digital art',
     'video production',
@@ -16,9 +28,9 @@ export const metadata: Metadata = {
     'Vietnam video production'
   ],
   openGraph: {
-    title: 'TVC Services - Professional Digital Art & Video Production',
-    description: 'Professional TVC services including digital art, video production, motion graphics, and creative content.',
-    url: 'https://www.mercurysolutions.vn/tvc',
+    title: 'Dịch Vụ Quay Phim TVC Nhà Máy, Khu Công Nghiệp 4K | Mercury Solutions',
+    description: 'Mercury Solutions chuyên cung cấp dịch vụ quay phim, sản xuất TVC giới thiệu nhà máy, KCN chuyên nghiệp. Chất lượng 4K, flycam, FPV, hoàn thành trong 1-2 tuần.',
+    url: 'https://mercurysolutions.vn/dich-vu-quay-phim-tvc-nha-may-doanh-nghiep',
   },
 }
 
