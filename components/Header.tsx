@@ -86,12 +86,9 @@ export default function Header() {
   const { translations } = useLanguage()
 
   const navigation = [
-    { name: translations.nav.home, href: '#home' },
-    { name: translations.nav.services, href: '#services' },
-    { name: translations.nav.technology, href: '#technology' },
-    { name: translations.nav.process, href: '#process' },
-    { name: translations.nav.projects, href: '#projects' },
-    { name: translations.nav.tvcServices, href: '/tvc' },
+    { name: translations.nav.home, href: '/' },
+    { name: translations.nav.aiDigitalTransformation, href: '/ai-digital-transformation' },
+    { name: translations.nav.digitalMarketing, href: '/tvc' },
     { name: translations.nav.contact, href: '#contact' },
   ]
 
@@ -101,7 +98,12 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#home" onClick={(e) => handleNavigationClick('#home', e)} className="flex items-center">
+            <a 
+              href="#home" 
+              onClick={(e) => handleNavigationClick('#home', e)} 
+              className="flex items-center"
+              title="Mercury Solutions - Trang chủ"
+            >
               <MercuryLogo className="w-10 h-12 sm:w-12 sm:h-14" />
             </a>
           </div>

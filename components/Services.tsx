@@ -14,7 +14,16 @@ import {
   Award,
   Clock,
   CheckCircle,
-  Star
+  Star,
+  Database,
+  Building2,
+  Hotel,
+  Dumbbell,
+  Video,
+  Factory,
+  Globe,
+  Target,
+  BarChart3
 } from 'lucide-react'
 import { motion } from 'framer-motion'
 import TextReveal from './TextReveal'
@@ -23,48 +32,46 @@ import ClientOnly from './ClientOnly'
 export default function Services() {
   const { translations } = useLanguage()
 
-  const services = [
+  // Digital Transformation Solutions
+  const digitalTransformationSolutions = [
     {
-      icon: Brain,
-      title: translations.services.ai.title,
-      description: translations.services.ai.description,
-      features: translations.services.ai.features,
-      color: 'hsl(var(--link-primary))'
+      icon: Database,
+      title: translations.services.digitalTransformation.solutions.attendance.title,
+      description: translations.services.digitalTransformation.solutions.attendance.description,
+      color: 'hsl(var(--link-primary))',
+      partner: 'Fujikin Corporation (Japan)'
     },
     {
-      icon: Bot,
-      title: translations.services.automation.title,
-      description: translations.services.automation.description,
-      features: translations.services.automation.features,
-      color: 'hsl(var(--success-color))'
+      icon: Dumbbell,
+      title: translations.services.digitalTransformation.solutions.gym.title,
+      description: translations.services.digitalTransformation.solutions.gym.description,
+      color: 'hsl(var(--success-color))',
+      partner: 'Actiwell - AI Solution'
     },
     {
-      icon: Eye,
-      title: translations.services.vision.title,
-      description: translations.services.vision.description,
-      features: translations.services.vision.features,
-      color: 'hsl(var(--warning-color))'
+      icon: Hotel,
+      title: translations.services.digitalTransformation.solutions.hotel.title,
+      description: translations.services.digitalTransformation.solutions.hotel.description,
+      color: 'hsl(var(--warning-color))',
+      partner: 'Minova Hotel Group'
     },
     {
-      icon: Network,
-      title: translations.services.integration.title,
-      description: translations.services.integration.description,
-      features: translations.services.integration.features,
-      color: 'hsl(var(--link-primary))'
-    },
+      icon: Building2,
+      title: translations.services.digitalTransformation.solutions.enterprise.title,
+      description: translations.services.digitalTransformation.solutions.enterprise.description,
+      color: 'hsl(var(--link-primary))',
+      partner: 'MyArms (Japan)'
+    }
+  ]
+
+  // Digital Marketing Services
+  const digitalMarketingServices = [
     {
-      icon: Shield,
-      title: translations.services.security.title,
-      description: translations.services.security.description,
-      features: translations.services.security.features,
-      color: 'hsl(var(--success-color))'
-    },
-    {
-      icon: Cpu,
-      title: translations.services.optimization.title,
-      description: translations.services.optimization.description,
-      features: translations.services.optimization.features,
-      color: 'hsl(var(--warning-color))'
+      icon: Video,
+      title: translations.services.digitalMarketing.services.tvc.title,
+      description: translations.services.digitalMarketing.services.tvc.description,
+      color: 'hsl(var(--success-color))',
+      partners: ['Jworld Vina (Korea)', 'Fujikin Viet Nam']
     }
   ]
 
@@ -101,77 +108,165 @@ export default function Services() {
           </TextReveal>
         </ClientOnly>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <ClientOnly key={index}>
-              <TextReveal delay={index * 0.1}>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:scale-105"
-                style={{
-                  backgroundColor: 'hsl(var(--card-bg))',
-                  border: '2px solid hsl(var(--card-border))',
-                  boxShadow: '0 4px 6px -1px rgb(30 58 138 / 0.1), 0 2px 4px -1px rgb(30 58 138 / 0.06)'
-                }}
-              >
-                {/* Service Card Content */}
-                <div className="p-8 relative z-10">
-                  {/* Category Badge */}
-                  <div className="flex items-center justify-between mb-6">
-                    <span className="px-3 py-1 text-xs rounded-full font-medium" 
-                          style={{ 
-                            backgroundColor: 'hsl(var(--bg-primary))',
-                            color: 'hsl(var(--text-secondary))'
-                          }}>
-                      {service.title.split(' ')[0]}
-                    </span>
-                  </div>
+        {/* Digital Transformation Services Section */}
+        <ClientOnly>
+          <TextReveal className="mb-16">
+            <div className="text-center mb-12">
+              <h3 className="text-2xl lg:text-3xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>
+                {translations.services.digitalTransformation.title}
+              </h3>
+              <p className="text-lg mb-2" style={{ color: 'hsl(var(--link-primary))' }}>
+                {translations.services.digitalTransformation.subtitle}
+              </p>
+              <p className="text-base max-w-4xl mx-auto" style={{ color: 'hsl(var(--text-secondary))' }}>
+                {translations.services.digitalTransformation.description}
+              </p>
+            </div>
 
-                  {/* Service Icon */}
-                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
-                       style={{ backgroundColor: service.color }}>
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              {digitalTransformationSolutions.map((solution, index) => (
+                <ClientOnly key={index}>
+                  <TextReveal delay={index * 0.1}>
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      className="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:scale-105"
+                      style={{
+                        backgroundColor: 'hsl(var(--card-bg))',
+                        border: '2px solid hsl(var(--card-border))',
+                        boxShadow: '0 4px 6px -1px rgb(30 58 138 / 0.1), 0 2px 4px -1px rgb(30 58 138 / 0.06)'
+                      }}
+                    >
+                      <div className="p-8 relative z-10">
+                        {/* Partner Badge */}
+                        <div className="flex items-center justify-between mb-6">
+                          <span className="px-3 py-1 text-xs rounded-full font-medium" 
+                                style={{ 
+                                  backgroundColor: 'hsl(var(--bg-primary))',
+                                  color: 'hsl(var(--text-secondary))'
+                                }}>
+                            {solution.partner}
+                          </span>
+                        </div>
 
-                  {/* Service Content */}
-                  <h3 className="text-xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>
-                    {service.title}
-                  </h3>
-                  
-                  <p className="mb-6 leading-relaxed" style={{ color: 'hsl(var(--text-secondary))' }}>
-                    {service.description}
-                  </p>
+                        {/* Solution Icon */}
+                        <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
+                             style={{ backgroundColor: solution.color }}>
+                          <solution.icon className="w-8 h-8 text-white" />
+                        </div>
 
-                  {/* Features List */}
-                  <ul className="space-y-3">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm transition-colors duration-200" style={{ color: 'hsl(var(--text-secondary))' }}>
-                        <div className="w-1.5 h-1.5 rounded-full mr-3 flex-shrink-0" style={{ backgroundColor: service.color }}></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                        {/* Solution Content */}
+                        <h4 className="text-xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>
+                          {solution.title}
+                        </h4>
+                        
+                        <p className="leading-relaxed" style={{ color: 'hsl(var(--text-secondary))' }}>
+                          {solution.description}
+                        </p>
+                      </div>
 
-                {/* Hover Effect Overlay */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"
-                     style={{ 
-                       background: `linear-gradient(135deg, ${service.color}08 0%, ${service.color}04 100%)`
-                     }}></div>
-                
-                {/* Subtle border glow on hover */}
-                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                     style={{ 
-                       border: `1px solid ${service.color}20`,
-                       boxShadow: `0 0 0 1px ${service.color}10`
-                     }}></div>
-              </motion.div>
-            </TextReveal>
-            </ClientOnly>
-          ))}
-        </div>
+                      {/* Hover Effect Overlay */}
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"
+                           style={{ 
+                             background: `linear-gradient(135deg, ${solution.color}08 0%, ${solution.color}04 100%)`
+                           }}></div>
+                      
+                      {/* Subtle border glow on hover */}
+                      <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                           style={{ 
+                             border: `1px solid ${solution.color}20`,
+                             boxShadow: `0 0 0 1px ${solution.color}10`
+                           }}></div>
+                    </motion.div>
+                  </TextReveal>
+                </ClientOnly>
+              ))}
+            </div>
+          </TextReveal>
+        </ClientOnly>
+
+        {/* Digital Marketing Services Section */}
+        <ClientOnly>
+          <TextReveal className="mb-16">
+            <div className="text-center mb-12">
+              <h3 className="text-2xl lg:text-3xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>
+                {translations.services.digitalMarketing.title}
+              </h3>
+              <p className="text-lg mb-2" style={{ color: 'hsl(var(--link-primary))' }}>
+                {translations.services.digitalMarketing.subtitle}
+              </p>
+              <p className="text-base max-w-4xl mx-auto" style={{ color: 'hsl(var(--text-secondary))' }}>
+                {translations.services.digitalMarketing.description}
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-1 gap-8">
+              {digitalMarketingServices.map((service, index) => (
+                <ClientOnly key={index}>
+                  <TextReveal delay={index * 0.1}>
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      className="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:scale-105"
+                      style={{
+                        backgroundColor: 'hsl(var(--card-bg))',
+                        border: '2px solid hsl(var(--card-border))',
+                        boxShadow: '0 4px 6px -1px rgb(30 58 138 / 0.1), 0 2px 4px -1px rgb(30 58 138 / 0.06)'
+                      }}
+                    >
+                      <div className="p-8 relative z-10">
+                        {/* Partners Badge */}
+                        <div className="flex items-center justify-between mb-6">
+                          <div className="flex flex-wrap gap-2">
+                            {service.partners.map((partner, partnerIndex) => (
+                              <span key={partnerIndex} className="px-3 py-1 text-xs rounded-full font-medium" 
+                                    style={{ 
+                                      backgroundColor: 'hsl(var(--bg-primary))',
+                                      color: 'hsl(var(--text-secondary))'
+                                    }}>
+                                {partner}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Service Icon */}
+                        <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
+                             style={{ backgroundColor: service.color }}>
+                          <service.icon className="w-8 h-8 text-white" />
+                        </div>
+
+                        {/* Service Content */}
+                        <h4 className="text-xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>
+                          {service.title}
+                        </h4>
+                        
+                        <p className="leading-relaxed" style={{ color: 'hsl(var(--text-secondary))' }}>
+                          {service.description}
+                        </p>
+                      </div>
+
+                      {/* Hover Effect Overlay */}
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"
+                           style={{ 
+                             background: `linear-gradient(135deg, ${service.color}08 0%, ${service.color}04 100%)`
+                           }}></div>
+                      
+                      {/* Subtle border glow on hover */}
+                      <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                           style={{ 
+                             border: `1px solid ${service.color}20`,
+                             boxShadow: `0 0 0 1px ${service.color}10`
+                           }}></div>
+                    </motion.div>
+                  </TextReveal>
+                </ClientOnly>
+              ))}
+            </div>
+          </TextReveal>
+        </ClientOnly>
 
         {/* Enhanced Stats Section */}
         <ClientOnly>

@@ -14,12 +14,8 @@ export default function Home() {
     <main className="min-h-screen professional-bg">
       <Header />
       <Hero />
-      <Projects />
-      <WhyChoose />
       <Services />
-      <TechnologyStack />
-      <Process />
-      <TickerScroll />
+      <WhyChoose />
       <Contact />
       <Footer />
     </main>

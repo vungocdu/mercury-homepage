@@ -1,11 +1,12 @@
 'use client'
 
-import { Play, Camera, Edit3, Zap, Users, Award, Clock, Video, Lightbulb, Target, Sparkles, Star, ArrowRight, Factory, Settings, Users2, Film } from 'lucide-react'
+import { Play, Camera, Edit3, Zap, Clock, Video, Lightbulb, Target, Sparkles, Star, ArrowRight, Factory, Settings, Users2, Film, Globe } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import TrackingButton from '../../components/TrackingButton'
 import TickerScroll from '../../components/TickerScroll'
+import DigitalAudioParticles from '../../components/DigitalAudioParticles'
 import { useLanguage } from '../../contexts/LanguageContext'
 
 export default function TVCPageClient() {
@@ -125,26 +126,21 @@ export default function TVCPageClient() {
     }
   ]
 
-  const stats = [
-    { icon: Award, number: '50+', label: translations.tvc.hero.stats.projects, color: 'mercury-blue' },
-    { icon: Users, number: '25+', label: translations.tvc.hero.stats.clients, color: 'mercury-blue' },
-    { icon: Clock, number: '24/7', label: translations.tvc.hero.stats.support, color: 'mercury-blue' },
-    { icon: Zap, number: '100%', label: 'Quality Guarantee', color: 'mercury-blue' }
-  ]
+
 
   return (
     <>
       <Header />
       
-      {/* Hero Section with Dynamic Background */}
-      <section className="relative pt-16 overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-mercury-blue-50 via-white to-mercury-blue-100"></div>
+      {/* Hero Section with Digital Audio Particles */}
+      <section className="relative pt-16 overflow-hidden min-h-screen">
+        {/* Digital Audio Particles Background */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-mercury-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-mercury-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse" style={{animationDelay: '2s'}}></div>
-          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-mercury-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse" style={{animationDelay: '4s'}}></div>
+          <DigitalAudioParticles />
         </div>
+        
+        {/* Gradient Overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-mercury-blue-50/40"></div>
 
         <div className="container-custom py-20 relative z-10">
           <motion.div 
@@ -203,43 +199,9 @@ export default function TVCPageClient() {
                 </TrackingButton>
               </motion.div>
 
-              {/* Partners */}
-              <motion.div 
-                className="pt-8"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >
-                <p className="text-sm text-gray-600 mb-4">{translations.tvc.hero.partners}</p>
-                <div className="flex items-center space-x-6">
-                  <div className="w-24 h-12 bg-gray-200 rounded flex items-center justify-center text-xs text-gray-500">Fujikin</div>
-                  <div className="w-24 h-12 bg-gray-200 rounded flex items-center justify-center text-xs text-gray-500">Jworld Vina</div>
-                  <div className="w-24 h-12 bg-gray-200 rounded flex items-center justify-center text-xs text-gray-500">+ More</div>
-                </div>
-              </motion.div>
 
-              {/* Enhanced Stats */}
-              <motion.div 
-                className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-8"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-              >
-                {stats.map((stat, index) => (
-                  <motion.div 
-                    key={index} 
-                    className="text-center group"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-mercury-blue-500 to-mercury-blue-600 rounded-2xl mx-auto mb-3 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                      <stat.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="text-3xl font-bold bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-800 bg-clip-text text-transparent">{stat.number}</div>
-                    <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
-                  </motion.div>
-                ))}
-              </motion.div>
+
+
             </div>
 
             {/* Enhanced Visual */}
@@ -288,59 +250,307 @@ export default function TVCPageClient() {
                 </div>
               </div>
               
-              {/* Enhanced Background decoration */}
-              <div className="absolute -top-4 -right-4 w-72 h-72 rounded-full opacity-20 bg-gradient-to-br from-mercury-blue-400 to-mercury-blue-600 animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-48 h-48 rounded-full opacity-20 bg-gradient-to-br from-mercury-blue-500 to-mercury-blue-700 animate-pulse" style={{animationDelay: '2s'}}></div>
+
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Pain Points Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
-        <div className="container-custom">
+      {/* Pain Points Section - Enhanced Design */}
+      <section className="relative py-24 overflow-hidden">
+        {/* Dramatic Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-transparent via-red-900/10 to-transparent"></div>
+        
+        {/* Subtle Pattern Overlay */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-20 w-64 h-64 bg-red-500 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-64 h-64 bg-orange-500 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container-custom relative z-10">
           <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+            className="text-center mb-20"
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-800 bg-clip-text text-transparent">
-              {translations.tvc.painPoints.title}
+            {/* Dramatic Header */}
+            <motion.div
+              className="inline-flex items-center px-6 py-3 bg-red-500/20 backdrop-blur-sm border border-red-500/30 rounded-full mb-8"
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="w-3 h-3 bg-red-500 rounded-full mr-3 animate-pulse"></div>
+              <span className="text-red-400 font-semibold text-sm uppercase tracking-wider">Critical Challenges</span>
+            </motion.div>
+
+            <h2 className="text-4xl lg:text-6xl font-bold mb-8 text-white leading-tight">
+              <motion.span 
+                className="block"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                {translations.tvc.painPoints.title}
+              </motion.span>
             </h2>
-            <div className="grid md:grid-cols-2 gap-8 mt-12">
-              {translations.tvc.painPoints.points.map((point, index) => (
+          </motion.div>
+
+          {/* Enhanced Pain Points Grid */}
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            {translations.tvc.painPoints.points.map((point, index) => (
+              <motion.div 
+                key={index}
+                className="group relative"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.15 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="relative p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-500 group-hover:border-red-500/30">
+                  {/* Animated Warning Icon */}
+                  <motion.div 
+                    className="flex items-center mb-6"
+                    initial={{ rotate: 0 }}
+                    whileHover={{ rotate: 5 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <div className="relative w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-red-500/25 transition-all duration-300">
+                      <motion.div
+                        className="w-2 h-2 bg-white rounded-full"
+                        animate={{ scale: [1, 1.2, 1] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                      ></motion.div>
+                      <motion.div
+                        className="absolute w-1 h-4 bg-white rounded-full mt-1"
+                        initial={{ scaleY: 0 }}
+                        whileInView={{ scaleY: 1 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 + 0.5 }}
+                        viewport={{ once: true }}
+                      ></motion.div>
+                    </div>
+                    <div className="ml-4 w-8 h-[2px] bg-gradient-to-r from-red-500 to-transparent"></div>
+                  </motion.div>
+                  
+                  <p className="text-gray-300 leading-relaxed text-lg group-hover:text-white transition-colors duration-300">
+                    {point}
+                  </p>
+
+                  {/* Subtle Glow Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-orange-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Dramatic Conclusion */}
+          <motion.div 
+            className="relative max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="relative p-8 lg:p-12 bg-gradient-to-r from-red-600 via-red-500 to-orange-500 rounded-3xl shadow-2xl">
+              {/* Animated Background Pattern */}
+              <div className="absolute inset-0 rounded-3xl overflow-hidden">
                 <motion.div 
-                  key={index}
-                  className="flex items-start space-x-4 p-6 bg-white rounded-xl shadow-lg border border-gray-100"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-white/10 to-transparent"
+                  animate={{ x: ['-100%', '100%'] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                ></motion.div>
+              </div>
+              
+              <div className="relative z-10 text-center">
+                <motion.div
+                  className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6"
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
                 >
-                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white text-sm font-bold">!</span>
-                  </div>
-                  <p className="text-gray-700 leading-relaxed">{point}</p>
+                  <Lightbulb className="w-8 h-8 text-white" />
                 </motion.div>
-              ))}
+                
+                <p className="text-xl lg:text-2xl font-bold text-white leading-relaxed">
+                  {translations.tvc.painPoints.conclusion}
+                </p>
+              </div>
             </div>
-            <motion.div 
-              className="mt-12 p-6 bg-gradient-to-r from-mercury-blue-500 to-mercury-blue-600 rounded-2xl text-white"
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Solution Section - Enhanced Design */}
+      <section className="relative py-24 overflow-hidden">
+        {/* Bright, Optimistic Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-mercury-blue-50"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-mercury-blue-100/30 via-transparent to-mercury-gold-100/20"></div>
+        
+        {/* Floating Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <motion.div 
+            className="absolute top-20 left-20 w-32 h-32 bg-mercury-blue-200/30 rounded-full blur-2xl"
+            animate={{ x: [0, 30, 0], y: [0, -20, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          ></motion.div>
+          <motion.div 
+            className="absolute bottom-20 right-20 w-48 h-48 bg-mercury-gold-200/20 rounded-full blur-3xl"
+            animate={{ x: [0, -40, 0], y: [0, 30, 0] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          ></motion.div>
+        </div>
+
+        <div className="container-custom relative z-10">
+          <motion.div 
+            className="text-center mb-20"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            {/* Success Badge */}
+            <motion.div
+              className="inline-flex items-center px-6 py-3 bg-mercury-gold-100/80 backdrop-blur-sm border border-mercury-gold-300/50 rounded-full mb-8"
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <motion.div 
+                className="w-3 h-3 bg-mercury-gold-500 rounded-full mr-3"
+                animate={{ scale: [1, 1.3, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              ></motion.div>
+              <span className="text-mercury-blue-700 font-semibold text-sm uppercase tracking-wider">Our Solution</span>
+            </motion.div>
+
+            {/* Elegant Header */}
+            <h2 className="text-4xl lg:text-6xl font-bold mb-8 leading-tight">
+              <motion.span 
+                className="block bg-gradient-to-r from-mercury-blue-700 via-mercury-blue-600 to-mercury-blue-500 bg-clip-text text-transparent"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                {translations.tvc.solution.title}
+              </motion.span>
+            </h2>
+
+            <motion.p 
+              className="text-xl lg:text-2xl max-w-5xl mx-auto text-gray-700 leading-relaxed font-light"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <p className="text-xl font-semibold">{translations.tvc.painPoints.conclusion}</p>
-            </motion.div>
+              {translations.tvc.solution.description}
+            </motion.p>
+          </motion.div>
+
+          {/* Enhanced Service Cards */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (
+              <motion.div 
+                key={index} 
+                className="group relative"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.15 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -8, scale: 1.02 }}
+              >
+                {/* Card Background with Sophisticated Effects */}
+                <div className="relative h-full">
+                  {/* Glow Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-mercury-blue-200/20 to-mercury-gold-200/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500 scale-105"></div>
+                  
+                  {/* Main Card */}
+                  <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/50 group-hover:border-mercury-blue-300/50 h-full flex flex-col">
+                    {/* Floating Icon */}
+                    <motion.div 
+                      className="relative mb-8"
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className={`relative w-20 h-20 bg-gradient-to-br ${service.gradient} rounded-3xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}>
+                        <service.icon className="w-10 h-10 text-white relative z-10" />
+                        
+                        {/* Icon Glow */}
+                        <div className="absolute inset-0 bg-white/20 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
+                      
+                      {/* Floating Particles */}
+                      <motion.div
+                        className="absolute -top-2 -right-2 w-4 h-4 bg-mercury-gold-400 rounded-full opacity-60"
+                        animate={{ 
+                          scale: [1, 1.2, 1],
+                          opacity: [0.6, 1, 0.6]
+                        }}
+                        transition={{ 
+                          duration: 2, 
+                          repeat: Infinity,
+                          delay: index * 0.3
+                        }}
+                      ></motion.div>
+                    </motion.div>
+                    
+                    {/* Service Title */}
+                    <h3 className="text-xl font-bold text-gray-800 mb-4 leading-tight group-hover:text-mercury-blue-700 transition-colors duration-300">
+                      {service.title}
+                    </h3>
+                    
+                    {/* Service Description */}
+                    <p className="leading-relaxed text-gray-600 flex-grow text-base group-hover:text-gray-700 transition-colors duration-300">
+                      {service.description}
+                    </p>
+
+                    {/* Subtle Progress Bar */}
+                    <motion.div 
+                      className="mt-6 h-1 bg-gray-200 rounded-full overflow-hidden"
+                      initial={{ width: 0 }}
+                      whileInView={{ width: "100%" }}
+                      transition={{ duration: 1, delay: index * 0.2 + 0.5 }}
+                      viewport={{ once: true }}
+                    >
+                      <motion.div 
+                        className={`h-full bg-gradient-to-r ${service.gradient} rounded-full`}
+                        initial={{ x: "-100%" }}
+                        whileInView={{ x: "0%" }}
+                        transition={{ duration: 1.5, delay: index * 0.2 + 0.8 }}
+                        viewport={{ once: true }}
+                      ></motion.div>
+                    </motion.div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Call to Action Section */}
+          <motion.div 
+            className="mt-20 text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-mercury-blue-700 to-mercury-blue-500 rounded-full text-white font-semibold text-lg shadow-lg hover:shadow-xl hover:from-mercury-blue-600 hover:to-mercury-blue-400 transition-all duration-300 cursor-pointer group">
+              <Sparkles className="w-6 h-6 mr-3 group-hover:rotate-12 transition-transform duration-300" />
+              <span>Khám phá giải pháp của chúng tôi</span>
+              <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Solution Section */}
-      <section className="py-20 bg-gradient-to-br from-mercury-blue-50 to-mercury-blue-100">
+      {/* Strategic Partnerships Section */}
+      <section className="py-20 bg-gradient-to-br from-mercury-blue-50 to-white">
         <div className="container-custom">
           <motion.div 
             className="text-center mb-16"
@@ -349,36 +559,58 @@ export default function TVCPageClient() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-800 bg-clip-text text-transparent">
-              {translations.tvc.solution.title}
+            <div className="flex items-center justify-center space-x-2 mb-4">
+              <Globe className="w-6 h-6 text-mercury-blue-600" />
+              <span className="text-mercury-blue-600 font-semibold">Global Network</span>
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-800 bg-clip-text text-transparent">
+              {translations.tvc.hero.partnershipsDetails.title}
             </h2>
-            <p className="text-xl max-w-4xl mx-auto text-gray-700 leading-relaxed">
-              {translations.tvc.solution.description}
+            <p className="text-xl max-w-3xl mx-auto text-gray-700">
+              {translations.tvc.hero.partnershipsDetails.description}
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            {services.map((service, index) => (
-              <motion.div 
-                key={index} 
-                className="group h-full"
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {Object.entries(translations.tvc.hero.partnershipsDetails.companies).map(([key, company], index) => (
+              <motion.div
+                key={key}
+                className="bg-white/90 backdrop-blur-sm border-2 border-mercury-blue-200 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 group hover:border-mercury-blue-400"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5 }}
+                whileHover={{ scale: 1.02, y: -4 }}
               >
-                <div className="bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group-hover:border-mercury-blue-200 h-full flex flex-col">
-                  <div className="flex items-center mb-6">
-                    <div className={`w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br ${service.gradient} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
-                      <service.icon className="w-7 h-7 lg:w-8 lg:h-8 text-white" />
-                    </div>
-                    <h3 className="ml-4 text-base lg:text-lg font-bold text-gray-800">{service.title}</h3>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center">
+                    <Globe className="w-6 h-6 text-mercury-blue-600 mr-3" />
+                    <span className="text-sm text-mercury-blue-600 font-bold bg-mercury-blue-100 px-3 py-1 rounded-full">
+                      {company.country}
+                    </span>
                   </div>
-                  
-                  <p className="leading-relaxed text-gray-600 flex-grow text-sm lg:text-base">
-                    {service.description}
-                  </p>
+                </div>
+                
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-mercury-blue-600 transition-colors">
+                  {company.name}
+                </h3>
+                
+                <div className="mb-4">
+                  <span className="inline-block text-sm text-mercury-blue-700 bg-mercury-blue-50 px-3 py-1 rounded-lg font-medium">
+                    {company.field}
+                  </span>
+                </div>
+                
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  {company.description}
+                </p>
+                
+                {/* Partnership indicator */}
+                <div className="mt-4 pt-4 border-t border-gray-200">
+                  <div className="flex items-center text-mercury-blue-600">
+                    <div className="w-2 h-2 bg-mercury-blue-600 rounded-full mr-2"></div>
+                    <span className="text-xs font-medium">Strategic Partner</span>
+                  </div>
                 </div>
               </motion.div>
             ))}

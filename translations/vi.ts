@@ -2,12 +2,15 @@ export const vi = {
   // Navigation
   nav: {
     home: "Trang chủ",
+    aiDigitalTransformation: "AI Digital Transformation",
+    digitalMarketing: "Digital Marketing",
+    contact: "Liên hệ",
+    // Legacy navigation items (for backward compatibility)
     services: "Dịch vụ",
     technology: "Công nghệ",
     process: "Quy trình",
     projects: "Dự án",
     tvcServices: "Dịch vụ TVC",
-    contact: "Liên hệ",
     about: "Giới thiệu",
     portfolio: "Portfolio",
     ourAdvantage: "Lợi thế của chúng tôi",
@@ -16,13 +19,13 @@ export const vi = {
 
   // Hero Section
   hero: {
-    badge: "TVC Professional AI Agent",
+    badge: "Digital Innovation Leader",
     title: {
-      part1: "Next-Gen",
-      part2: "AI Technology",
-      part3: "Solutions"
+      part1: "Đột Phá Công Nghệ,",
+      part2: "Vững Vàng Thương Hiệu",
+      part3: ""
     },
-    subtitle: "Mercury Solutions cung cấp dịch vụ AI và chuyển đổi số tiên tiến. Từ computer vision đến tự động hóa thông minh, chúng tôi trao quyền cho doanh nghiệp với các giải pháp công nghệ tiên tiến thúc đẩy đổi mới và hiệu quả.",
+    subtitle: "Digital Solutions That Drive Growth - Bắt nguồn từ sự thấu hiểu sâu sắc những thách thức của doanh nghiệp trong kỷ nguyên số, Mercury Solutions ra đời với sứ mệnh trở thành đối tác tin cậy, đồng hành cùng bạn trên hành trình chuyển mình mạnh mẽ.",
     cta: "Khám phá giải pháp"
   },
 
@@ -67,6 +70,46 @@ export const vi = {
   services: {
     title: "Dịch vụ của chúng tôi",
     subtitle: "Chúng tôi cung cấp giải pháp công nghệ toàn diện để giúp doanh nghiệp đạt được chuyển đổi số và xuất sắc trong vận hành.",
+    
+    // Digital Transformation Services
+    digitalTransformation: {
+      title: "Giải pháp Chuyển đổi số toàn diện",
+      subtitle: "Tối ưu hóa quy trình, nâng tầm hiệu suất",
+      description: "Mercury Solutions cung cấp các giải pháp chuyển đổi số toàn diện, giúp doanh nghiệp số hóa và tự động hóa quy trình vận hành. Chúng tôi tự hào hợp tác với các đối tác hàng đầu để mang đến những giải pháp tối ưu nhất.",
+      solutions: {
+        attendance: {
+          title: "Hệ thống Chấm công và Tính lương",
+          description: "Giải pháp tự động hóa quy trình quản lý nhân sự, được đồng phát triển cùng Fujikin Corporation (Nhật Bản) cho các nhà máy quy mô lớn trên 2000 nhân sự. Hệ thống giúp giảm thiểu sai sót và nâng cao hiệu quả quản lý."
+        },
+        gym: {
+          title: "Hệ thống Quản trị chuỗi phòng gym",
+          description: "Nền tảng quản lý toàn diện được phát triển cùng đối tác Actiwell - AI Solution for gym & fitness, giúp chủ phòng gym dễ dàng kiểm soát hoạt động kinh doanh và cải thiện trải nghiệm khách hàng."
+        },
+        hotel: {
+          title: "Hệ thống Quản trị chuỗi khách sạn",
+          description: "Giải pháp quản lý vận hành được phát triển và tin dùng bởi Minova Hotel Group, giúp tối ưu hóa quy trình đặt phòng, quản lý dịch vụ và nâng cao sự hài lòng của khách hàng."
+        },
+        enterprise: {
+          title: "Giải pháp quản trị doanh nghiệp",
+          description: "Hệ thống quản lý toàn diện theo phong cách Nhật Bản, được phát triển với sự hợp tác của MyArms (Nhật Bản), giúp doanh nghiệp tối ưu hóa quy trình, tăng cường hiệu suất và thúc đẩy tăng trưởng bền vững."
+        }
+      }
+    },
+
+    // Digital Marketing Services
+    digitalMarketing: {
+      title: "Kiến tạo thương hiệu mạnh mẽ",
+      subtitle: "Tiếp cận khách hàng hiệu quả trong kỷ nguyên số",
+      description: "Mercury Solutions giúp doanh nghiệp xây dựng và phát triển thương hiệu thông qua các chiến lược digital marketing sáng tạo.",
+      services: {
+        tvc: {
+          title: "Dịch vụ Quay phim TVC",
+          description: "Chúng tôi chuyên sản xuất các TVC giới thiệu nhà máy và khu công nghiệp, tập trung vào việc làm nổi bật máy móc, công nghệ tiên tiến. Nổi bật là dự án hợp tác cùng Jworld Vina (Hàn Quốc) hay Fujikin Viet Nam, tạo ra những thước phim quảng bá ấn tượng và chuyên nghiệp."
+        }
+      }
+    },
+
+    // Legacy services for backward compatibility
     ai: {
       title: "AI & Machine Learning",
       description: "Giải pháp trí tuệ nhân tạo và machine learning tiên tiến để tự động hóa quy trình và thu thập insights từ dữ liệu.",
@@ -163,6 +206,36 @@ export const vi = {
       description: "Mercury Solutions mang đến giải pháp sản xuất TVC Film 4K chuyên sâu, giúp khắc họa tầm vóc thương hiệu, chinh phục đối tác và thu hút nhân tài chỉ trong 1-2 tuần triển khai.",
       cta: "NHẬN TƯ VẤN & BÁO GIÁ NGAY",
       partners: "Chúng tôi là đối tác của:",
+      partnershipsDetails: {
+        title: "Đối tác chiến lược",
+        description: "Mercury Solutions tự hào là đối tác của các tập đoàn hàng đầu trong lĩnh vực công nghệ và truyền thông",
+        companies: {
+          nakedInc: {
+            name: "Naked Inc",
+            country: "Nhật Bản", 
+            field: "Giải pháp trình chiếu tương tác",
+            description: "Đối tác triển khai công nghệ trình chiếu tương tác tiên tiến"
+          },
+          panasonic: {
+            name: "Panasonic",
+            country: "Việt Nam",
+            field: "Công nghệ điện tử",
+            description: "Đối tác chiến lược trong lĩnh vực giải pháp công nghệ"
+          },
+          fujikin: {
+            name: "Fujikin",
+            country: "Việt Nam", 
+            field: "Công nghệ sản xuất",
+            description: "Đối tác sản xuất TVC công nghệ cao"
+          },
+          jworld: {
+            name: "Jworld Vina",
+            country: "Hàn Quốc",
+            field: "Dịch vụ doanh nghiệp",
+            description: "Đối tác hợp tác trong dự án TVC doanh nghiệp"
+          }
+        }
+      },
       stats: {
         projects: "Dự án TVC đã hoàn thành",
         clients: "Khách hàng hài lòng",

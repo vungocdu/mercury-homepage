@@ -2,12 +2,15 @@ export const en = {
   // Navigation
   nav: {
     home: "Home",
+    aiDigitalTransformation: "AI Digital Transformation",
+    digitalMarketing: "Digital Marketing",
+    contact: "Contact",
+    // Legacy navigation items (for backward compatibility)
     services: "Services",
     technology: "Technology",
     process: "Process",
     projects: "Projects",
     tvcServices: "TVC Services",
-    contact: "Contact",
     about: "About",
     portfolio: "Portfolio",
     ourAdvantage: "Our Advantage",
@@ -16,13 +19,13 @@ export const en = {
 
   // Hero Section
   hero: {
-    badge: "TVC Professional AI Agent",
+    badge: "Digital Innovation Leader",
     title: {
-      part1: "Next-Gen",
-      part2: "AI Technology",
-      part3: "Solutions"
+      part1: "Technology Breakthrough,",
+      part2: "Brand Strength",
+      part3: ""
     },
-    subtitle: "Mercury Solutions delivers cutting-edge AI and digital transformation services. From computer vision to intelligent automation, we empower businesses with advanced technology solutions that drive innovation and efficiency.",
+    subtitle: "Digital Solutions That Drive Growth - Born from a deep understanding of business challenges in the digital era, Mercury Solutions emerges with a mission to become a trusted partner, accompanying you on your powerful transformation journey.",
     cta: "Explore Solutions"
   },
 
@@ -67,6 +70,46 @@ export const en = {
   services: {
     title: "Our Services",
     subtitle: "We provide comprehensive technology solutions to help businesses achieve digital transformation and operational excellence.",
+    
+    // Digital Transformation Services
+    digitalTransformation: {
+      title: "Comprehensive Digital Transformation Solutions",
+      subtitle: "Optimize processes, elevate performance",
+      description: "Mercury Solutions provides comprehensive digital transformation solutions, helping businesses digitize and automate operational processes. We are proud to partner with leading partners to deliver the most optimal solutions.",
+      solutions: {
+        attendance: {
+          title: "Attendance and Payroll Management System",
+          description: "Automated human resource management process solution, co-developed with Fujikin Corporation (Japan) for large-scale factories with over 2000 employees. The system helps minimize errors and improve management efficiency."
+        },
+        gym: {
+          title: "Gym Chain Management System",
+          description: "Comprehensive management platform developed with partner Actiwell - AI Solution for gym & fitness, helping gym owners easily control business operations and improve customer experience."
+        },
+        hotel: {
+          title: "Hotel Chain Management System",
+          description: "Operational management solution developed and trusted by Minova Hotel Group, helping optimize booking processes, service management and enhance customer satisfaction."
+        },
+        enterprise: {
+          title: "Enterprise Management Solution",
+          description: "Comprehensive management system in Japanese style, developed in collaboration with MyArms (Japan), helping businesses optimize processes, enhance efficiency and promote sustainable growth."
+        }
+      }
+    },
+
+    // Digital Marketing Services
+    digitalMarketing: {
+      title: "Building Strong Brands",
+      subtitle: "Effective customer engagement in the digital era",
+      description: "Mercury Solutions helps businesses build and develop brands through creative digital marketing strategies.",
+      services: {
+        tvc: {
+          title: "TVC Production Services",
+          description: "We specialize in producing TVCs introducing factories and industrial zones, focusing on highlighting machinery and advanced technology. Notable projects include collaborations with Jworld Vina (Korea) and Fujikin Viet Nam, creating impressive and professional promotional films."
+        }
+      }
+    },
+
+    // Legacy services for backward compatibility
     ai: {
       title: "AI & Machine Learning",
       description: "Advanced artificial intelligence and machine learning solutions to automate processes and gain insights from data.",
@@ -163,6 +206,36 @@ export const en = {
       description: "Mercury Solutions delivers comprehensive 4K TVC Film production solutions, helping to portray your brand stature, win over partners, and attract top talent in just 1-2 weeks of implementation.",
       cta: "GET CONSULTATION & QUOTE NOW",
       partners: "We are partners of:",
+      partnershipsDetails: {
+        title: "Strategic Partners",
+        description: "Mercury Solutions proudly partners with leading corporations in technology and media industries",
+        companies: {
+          nakedInc: {
+            name: "Naked Inc",
+            country: "Japan", 
+            field: "Interactive projection solutions",
+            description: "Strategic partner for advanced interactive projection technology deployment"
+          },
+          panasonic: {
+            name: "Panasonic",
+            country: "Vietnam",
+            field: "Electronics technology",
+            description: "Strategic partner in technology solutions sector"
+          },
+          fujikin: {
+            name: "Fujikin",
+            country: "Vietnam", 
+            field: "Manufacturing technology",
+            description: "Partner for high-tech TVC production"
+          },
+          jworld: {
+            name: "Jworld Vina",
+            country: "South Korea",
+            field: "Enterprise services",
+            description: "Collaborative partner in corporate TVC projects"
+          }
+        }
+      },
       stats: {
         projects: "TVC Projects Completed",
         clients: "Satisfied Clients",

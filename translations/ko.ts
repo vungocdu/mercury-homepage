@@ -2,12 +2,15 @@ export const ko = {
   // Navigation
   nav: {
     home: "홈",
+    aiDigitalTransformation: "AI 디지털 혁신",
+    digitalMarketing: "디지털 마케팅",
+    contact: "연락처",
+    // Legacy navigation items (for backward compatibility)
     services: "서비스",
     technology: "기술",
     process: "프로세스",
     projects: "프로젝트",
     tvcServices: "TVC 서비스",
-    contact: "연락처",
     about: "회사 소개",
     portfolio: "포트폴리오",
     ourAdvantage: "우리의 장점",
@@ -16,13 +19,13 @@ export const ko = {
 
   // Hero Section
   hero: {
-    badge: "TVC Professional AI Agent",
+    badge: "디지털 혁신 리더",
     title: {
-      part1: "Next-Gen",
-      part2: "AI Technology",
-      part3: "Solutions"
+      part1: "기술 혁신,",
+      part2: "브랜드 강화",
+      part3: ""
     },
-    subtitle: "Mercury Solutions는 최첨단 AI와 디지털 변환 서비스를 제공합니다. 컴퓨터 비전부터 지능형 자동화까지, 혁신과 효율성을 촉진하는 고급 기술 솔루션으로 기업에 힘을 실어줍니다.",
+    subtitle: "성장을 촉진하는 디지털 솔루션 - 디지털 시대의 비즈니스 과제에 대한 깊은 이해에서 태어나, Mercury Solutions는 신뢰할 수 있는 파트너가 되어 여러분의 강력한 변혁 여정에 동반하는 사명을 가지고 등장합니다.",
     cta: "솔루션 탐색"
   },
 
@@ -67,6 +70,46 @@ export const ko = {
   services: {
     title: "우리의 서비스",
     subtitle: "기업이 디지털 전환과 운영 우수성을 달성할 수 있도록 포괄적인 기술 솔루션을 제공합니다.",
+    
+    // Digital Transformation Services
+    digitalTransformation: {
+      title: "포괄적인 디지털 전환 솔루션",
+      subtitle: "프로세스 최적화, 성능 향상",
+      description: "Mercury Solutions는 포괄적인 디지털 전환 솔루션을 제공하여 기업이 운영 프로세스를 디지털화하고 자동화할 수 있도록 지원합니다. 우리는 최고의 솔루션을 제공하기 위해 주요 파트너와의 협력을 자랑스럽게 생각합니다.",
+      solutions: {
+        attendance: {
+          title: "근태 및 급여 관리 시스템",
+          description: "2000명 이상의 직원을 보유한 대규모 공장을 위해 Fujikin Corporation(일본)과 공동 개발한 인사 관리 프로세스 자동화 솔루션. 시스템은 오류를 최소화하고 관리 효율성을 향상시킵니다."
+        },
+        gym: {
+          title: "체육관 체인 관리 시스템",
+          description: "파트너 Actiwell - AI Solution for gym & fitness와 공동 개발한 포괄적 관리 플랫폼으로, 체육관 소유자가 비즈니스 운영을 쉽게 제어하고 고객 경험을 개선할 수 있습니다."
+        },
+        hotel: {
+          title: "호텔 체인 관리 시스템",
+          description: "Minova Hotel Group에서 개발하고 신뢰하는 운영 관리 솔루션으로, 예약 프로세스, 서비스 관리 최적화 및 고객 만족도 향상을 지원합니다."
+        },
+        enterprise: {
+          title: "기업 관리 솔루션",
+          description: "MyArms(일본)와의 협력으로 개발된 일본식 포괄적 관리 시스템으로, 기업이 프로세스를 최적화하고 효율성을 향상시키며 지속 가능한 성장을 촉진하도록 지원합니다."
+        }
+      }
+    },
+
+    // Digital Marketing Services
+    digitalMarketing: {
+      title: "강력한 브랜드 구축",
+      subtitle: "디지털 시대의 효과적인 고객 참여",
+      description: "Mercury Solutions는 창의적인 디지털 마케팅 전략을 통해 기업이 브랜드를 구축하고 발전시킬 수 있도록 지원합니다.",
+      services: {
+        tvc: {
+          title: "TVC 제작 서비스",
+          description: "우리는 공장과 산업단지를 소개하는 TVC 제작을 전문으로 하며, 기계와 첨단 기술을 강조하는 데 중점을 둡니다. 주목할 만한 프로젝트에는 Jworld Vina(한국) 및 Fujikin Viet Nam과의 협력이 있으며, 인상적이고 전문적인 홍보 영상을 제작합니다."
+        }
+      }
+    },
+
+    // Legacy services for backward compatibility
     ai: {
       title: "AI & 머신러닝",
       description: "프로세스를 자동화하고 데이터에서 인사이트를 얻기 위한 고급 인공지능 및 머신러닝 솔루션.",
@@ -163,6 +206,36 @@ export const ko = {
       description: "Mercury Solutions는 포괄적인 4K TVC 필름 제작 솔루션을 제공하여 브랜드 위상을 묘사하고, 파트너를 확보하며, 1-2주간의 구현으로 최고 인재를 끌어들이는 데 도움을 줍니다.",
       cta: "상담 및 견적 지금 받기",
       partners: "우리의 파트너:",
+      partnershipsDetails: {
+        title: "전략적 파트너",
+        description: "Mercury Solutions는 기술 및 미디어 업계의 선도적인 기업들과 자랑스럽게 파트너십을 맺고 있습니다",
+        companies: {
+          nakedInc: {
+            name: "Naked Inc",
+            country: "일본", 
+            field: "인터랙티브 프로젝션 솔루션",
+            description: "첨단 인터랙티브 프로젝션 기술 배포의 전략적 파트너"
+          },
+          panasonic: {
+            name: "Panasonic",
+            country: "베트남",
+            field: "전자 기술",
+            description: "기술 솔루션 분야의 전략적 파트너"
+          },
+          fujikin: {
+            name: "Fujikin",
+            country: "베트남", 
+            field: "제조 기술",
+            description: "하이테크 TVC 제작 파트너"
+          },
+          jworld: {
+            name: "Jworld Vina",
+            country: "한국",
+            field: "기업 서비스",
+            description: "기업 TVC 프로젝트의 협력 파트너"
+          }
+        }
+      },
       stats: {
         projects: "완료된 TVC 프로젝트",
         clients: "만족한 고객",

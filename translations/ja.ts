@@ -2,12 +2,15 @@ export const ja = {
   // Navigation
   nav: {
     home: "ホーム",
+    aiDigitalTransformation: "AI デジタル変革",
+    digitalMarketing: "デジタルマーケティング",
+    contact: "お問い合わせ",
+    // Legacy navigation items (for backward compatibility)
     services: "サービス",
     technology: "技術",
     process: "プロセス",
     projects: "プロジェクト",
     tvcServices: "TVCサービス",
-    contact: "お問い合わせ",
     about: "会社概要",
     portfolio: "ポートフォリオ",
     ourAdvantage: "私たちの強み",
@@ -16,13 +19,13 @@ export const ja = {
 
   // Hero Section
   hero: {
-    badge: "TVC Professional AI Agent",
+    badge: "デジタル革新リーダー",
     title: {
-      part1: "Next-Gen",
-      part2: "AI Technology",
-      part3: "Solutions"
+      part1: "技術革新、",
+      part2: "ブランド力強化",
+      part3: ""
     },
-    subtitle: "Mercury Solutionsは最先端のAIとデジタル変革サービスを提供します。コンピュータビジョンからインテリジェント自動化まで、イノベーションと効率を促進する高度な技術ソリューションで企業に力を与えます。",
+    subtitle: "成長を促進するデジタルソリューション - デジタル時代のビジネス課題への深い理解から生まれ、Mercury Solutionsは信頼できるパートナーとして、あなたの強力な変革の旅に同行する使命を持って登場します。",
     cta: "ソリューションを探索"
   },
 
@@ -67,6 +70,46 @@ export const ja = {
   services: {
     title: "私たちのサービス",
     subtitle: "企業がデジタル変革と運用卓越性を達成するための包括的な技術ソリューションを提供します。",
+    
+    // Digital Transformation Services
+    digitalTransformation: {
+      title: "包括的なデジタル変革ソリューション",
+      subtitle: "プロセスを最適化し、パフォーマンスを向上",
+      description: "Mercury Solutionsは包括的なデジタル変革ソリューションを提供し、企業が運用プロセスをデジタル化し自動化することを支援します。私たちは最高のソリューションを提供するために、主要なパートナーとの協力を誇りに思っています。",
+      solutions: {
+        attendance: {
+          title: "勤怠・給与管理システム",
+          description: "2000人以上の従業員を抱える大規模工場向けに、富士金株式会社（日本）と共同開発した人事管理プロセス自動化ソリューション。システムはエラーを最小限に抑え、管理効率を向上させます。"
+        },
+        gym: {
+          title: "ジムチェーン管理システム",
+          description: "パートナーActiwell - AI Solution for gym & fitnessと共同開発した包括的管理プラットフォームで、ジムオーナーがビジネス運営を簡単にコントロールし、顧客体験を向上させることができます。"
+        },
+        hotel: {
+          title: "ホテルチェーン管理システム",
+          description: "Minova Hotel Groupによって開発され信頼されている運営管理ソリューションで、予約プロセス、サービス管理の最適化と顧客満足度の向上を支援します。"
+        },
+        enterprise: {
+          title: "企業管理ソリューション",
+          description: "MyArms（日本）との協力で開発された日本式の包括的管理システムで、企業がプロセスを最適化し、効率を向上させ、持続可能な成長を促進することを支援します。"
+        }
+      }
+    },
+
+    // Digital Marketing Services
+    digitalMarketing: {
+      title: "強力なブランド構築",
+      subtitle: "デジタル時代の効果的な顧客エンゲージメント",
+      description: "Mercury Solutionsは創造的なデジタルマーケティング戦略を通じて企業がブランドを構築し発展させることを支援します。",
+      services: {
+        tvc: {
+          title: "TVC制作サービス",
+          description: "私たちは工場や工業団地を紹介するTVCの制作を専門としており、機械や先進技術を強調することに焦点を当てています。注目すべきプロジェクトには、Jworld Vina（韓国）やFujikin Viet Namとの協力があり、印象的でプロフェッショナルなプロモーション映像を作成しています。"
+        }
+      }
+    },
+
+    // Legacy services for backward compatibility
     ai: {
       title: "AI & 機械学習",
       description: "プロセスを自動化し、データから洞察を得るための高度な人工知能と機械学習ソリューション。",
@@ -163,6 +206,36 @@ export const ja = {
       description: "Mercury Solutionsは包括的な4K TVCフィルム制作ソリューションを提供し、ブランドの地位を描写し、パートナーを獲得し、トップ人材を1-2週間の実装で引き付けるお手伝いをします。",
       cta: "コンサルテーションと見積もりを今すぐ取得",
       partners: "私たちのパートナー：",
+      partnershipsDetails: {
+        title: "戦略的パートナー",
+        description: "Mercury Solutionsは、テクノロジーとメディア業界の主要企業と誇らしくパートナーシップを結んでいます",
+        companies: {
+          nakedInc: {
+            name: "Naked Inc",
+            country: "日本", 
+            field: "インタラクティブプロジェクションソリューション",
+            description: "先進的なインタラクティブプロジェクション技術展開の戦略的パートナー"
+          },
+          panasonic: {
+            name: "Panasonic",
+            country: "ベトナム",
+            field: "エレクトロニクス技術",
+            description: "テクノロジーソリューション分野の戦略的パートナー"
+          },
+          fujikin: {
+            name: "Fujikin",
+            country: "ベトナム", 
+            field: "製造技術",
+            description: "ハイテクTVC制作のパートナー"
+          },
+          jworld: {
+            name: "Jworld Vina",
+            country: "韓国",
+            field: "企業サービス",
+            description: "企業TVCプロジェクトの協力パートナー"
+          }
+        }
+      },
       stats: {
         projects: "完了したTVCプロジェクト",
         clients: "満足したクライアント",

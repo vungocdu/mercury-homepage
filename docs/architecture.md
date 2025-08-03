@@ -28,8 +28,12 @@ mercury-solution-homepage/
 ├── app/                          # Next.js App Router
 │   ├── layout.tsx               # Root layout với SEO metadata
 │   ├── page.tsx                 # Homepage
-│   ├── tvc/                     # TVC Services page
-│   │   └── page.tsx
+│   ├── ai-digital-transformation/ # AI Digital Transformation page
+│   │   ├── page.tsx
+│   │   └── AIDigitalTransformationClient.tsx
+│   ├── tvc/                     # Digital Marketing (TVC Services) page
+│   │   ├── page.tsx
+│   │   └── TVCPageClient.tsx
 │   ├── globals.css              # Global styles
 │   ├── sitemap.ts               # Dynamic sitemap
 │   └── robots.ts                # Robots.txt
@@ -66,8 +70,9 @@ mercury-solution-homepage/
 - **Footer**: Site footer với links và contact info
 
 ### Page Components
-- **HomePage**: Landing page với tất cả sections
-- **TVCPage**: Dedicated TVC services page với đầy đủ sections (Hero, Pain Points, Solution, Portfolio, Process, Why Us, CTA, FAQ)
+- **HomePage**: Landing page với Hero (Đột Phá Công Nghệ), Services (Digital Solutions), WhyChoose (Tại sao chọn Mercury), Contact (Liên hệ)
+- **AIDigitalTransformationPage**: AI Digital Transformation page với Excellence in apps, Technology, Process, và các sections chuyên sâu về AI
+- **TVCPage**: Digital Marketing page (TVC services) với đầy đủ sections (Hero, Pain Points, Solution, Portfolio, Process, Why Us, CTA, FAQ)
 
 ### Feature Components
 - **Hero**: Main value proposition và CTA
@@ -90,12 +95,9 @@ mercury-solution-homepage/
 ### Navigation Structure
 ```typescript
 const navigation = [
-  { name: 'Home', href: '#home' },
-  { name: 'Services', href: '#services' },
-  { name: 'Technology', href: '#technology' },
-  { name: 'Process', href: '#process' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'TVC Services', href: '/tvc' },
+  { name: 'Home', href: '/' },
+  { name: 'AI Digital Transformation', href: '/ai-digital-transformation' },
+  { name: 'Digital Marketing', href: '/tvc' },
   { name: 'Contact', href: '#contact' }
 ]
 ```
