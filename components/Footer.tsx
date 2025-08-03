@@ -120,7 +120,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#contact" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {t('nav.contact')}
+                  Liên hệ
                 </a>
               </li>
             </ul>
@@ -135,10 +135,10 @@ export default function Footer() {
             </p>
             
             <div className="flex space-x-8">
-              <a href="#" className="text-gray-300 hover:text-mercury-gold-400 transition-colors duration-300 text-sm">
+              <a href="/privacy" className="text-gray-300 hover:text-mercury-gold-400 transition-colors duration-300 text-sm">
                 {t('footer.privacy')}
               </a>
-              <a href="#" className="text-gray-300 hover:text-mercury-gold-400 transition-colors duration-300 text-sm">
+              <a href="/terms" className="text-gray-300 hover:text-mercury-gold-400 transition-colors duration-300 text-sm">
                 {t('footer.terms')}
               </a>
               <a href="#" className="text-gray-300 hover:text-mercury-gold-400 transition-colors duration-300 text-sm">

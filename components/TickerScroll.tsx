@@ -4,6 +4,7 @@ import { useRef, useEffect, useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Play, Camera, Edit3, Video, Mic, Award, Users, Clock } from 'lucide-react'
 import ClientOnly from './ClientOnly'
+import { useLanguage } from '../contexts/LanguageContext'
 
 interface TickerItem {
   id: string
@@ -16,6 +17,7 @@ interface TickerItem {
 }
 
 export default function TickerScroll() {
+  const { translations } = useLanguage()
   const containerRef = useRef<HTMLDivElement>(null)
   const [containerWidth, setContainerWidth] = useState(0)
   const [isClient, setIsClient] = useState(false)
@@ -123,10 +125,10 @@ export default function TickerScroll() {
       <div className="container-custom mb-12">
         <div className="text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>
-            Our TVC Portfolio
+            {translations.tvc.portfolio.ourTvcPortfolio}
           </h2>
           <p className="text-xl max-w-3xl mx-auto" style={{ color: 'hsl(var(--text-secondary))' }}>
-            Scroll to explore our diverse range of television commercial productions and video content
+            {translations.tvc.portfolio.scrollToExplore}
           </p>
         </div>
       </div>

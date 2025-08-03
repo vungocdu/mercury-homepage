@@ -4,14 +4,13 @@ export const ja = {
     home: "ホーム",
     aiDigitalTransformation: "AI デジタル変革",
     digitalMarketing: "デジタルマーケティング",
-    contact: "お問い合わせ",
+    about: "私たちについて",
     // Legacy navigation items (for backward compatibility)
     services: "サービス",
     technology: "技術",
     process: "プロセス",
     projects: "プロジェクト",
     tvcServices: "TVCサービス",
-    about: "会社概要",
     portfolio: "ポートフォリオ",
     ourAdvantage: "私たちの強み",
     softwareServices: "ソフトウェアサービス",
@@ -107,9 +106,191 @@ export const ja = {
           description: "私たちは工場や工業団地を紹介するTVCの制作を専門としており、機械や先進技術を強調することに焦点を当てています。注目すべきプロジェクトには、Jworld Vina（韓国）やFujikin Viet Namとの協力があり、印象的でプロフェッショナルなプロモーション映像を作成しています。"
         }
       }
-    },
+      },
 
-    // Legacy services for backward compatibility
+  // About Page
+  about: {
+    badge: "Mercury Solutionsについて",
+    hero: {
+      title: "私たちについて",
+      subtitle: "Mercury Solutionsは、技術の力を通じてすべての人により良い、より便利な生活を作りたいという願望から生まれました。私たちは継続的に革新し、企業とデジタル未来の間の堅固な橋となり、ブレークスルーソリューションと持続可能な価値をもたらします。"
+    },
+    company: {
+      title: "会社情報",
+      description: "私たちは、信頼できるパートナーとして、企業のデジタルトランスフォーメーションの旅に伴走することを誇りに思っています。スマート管理システムの開発、プロセス最適化から、インスピレーションに満ちたマーケティングキャンペーンの創造まで、私たちが構築するすべてのソリューションは最高の献身とプロフェッショナリズムで作られています。",
+      name: "会社名",
+      address: "住所",
+      taxCode: "税務コード",
+      phone: "電話番号",
+      email: "メールアドレス",
+      founded: "設立年"
+    },
+    mission: {
+      title: "ミッション",
+      description: "Mercury Solutionsの使命は、ブレークスルー技術ソリューションと創造的なマーケティングサービスを提供し、企業のパフォーマンス最適化、持続可能な発展を支援し、コミュニティにより便利でより良い生活の構築に貢献することです。",
+      details: {
+        title: "この使命を果たすため、私たちは以下に焦点を当てています：",
+        items: [
+          {
+            title: "技術革新",
+            description: "AI、IoT、デジタルプラットフォームなどの最新技術を継続的に研究・適用し、優れた製品を作り出します。"
+          },
+          {
+            title: "パートナーとの協力",
+            description: "常に顧客のニーズを聞き、理解し、最も適切で効果的なソリューションを一緒に構築します。"
+          },
+          {
+            title: "価値創造",
+            description: "企業に経済的利益をもたらすだけでなく、社会の一般的な発展に貢献し、生活の質を向上させます。"
+          }
+        ]
+      }
+    },
+    vision: {
+      title: "ビジョン",
+      description: "私たちのビジョンは、パイオニア技術企業となり、すべての個人と企業が最高の利便性を享受できる包括的なデジタルエコシステムを作ることです。私たちは、技術が強力なアシスタントとなり、人々を反復作業から解放し、それによってすべての人により多くの時間を創造、発展、生活を楽しむための時間を与える未来を想像しています。"
+    },
+    values: {
+      title: "コアバリュー",
+      description: "経験豊富な専門家チームと世界のリーディングパートナーとの戦略的パートナーシップにより、Mercury Solutionsは効果的で高い適用性を持つ製品とサービスを提供し、デジタル時代にあなたのビジネスをさらに遠くまで到達させることを約束します。",
+      sectionTitle: "ビジョン、ミッション、バリュー",
+      sectionDescription: "Mercury Solutionsの発展と顧客サービスの道のりを導く原則と方向性。"
+    },
+    cta: {
+      title: "Mercury Solutionsとのパートナーシップの準備はできていますか？",
+      description: "技術的なアイデアを実現し、ビジネスを新たな高みへと導くお手伝いをさせてください。",
+      button: "今すぐお問い合わせ"
+    }
+  },
+
+  // Privacy Policy Page
+  privacy: {
+    badge: "プライバシーポリシー",
+    hero: {
+      title: "プライバシーポリシー",
+      subtitle: "Mercury Solutionsは、最先端のセキュリティ対策でお客様のプライバシーと個人情報の保護をお約束します。"
+    },
+    lastUpdated: "最終更新",
+    generalPrinciples: {
+      title: "基本原則",
+      content: "Mercury Solutionsは、お客様の個人情報の絶対的な機密保持をお約束します。この方針は、私たちが情報をどのように収集、使用、保護するかを説明しています。"
+    },
+    dataCollection: {
+      title: "個人情報収集の範囲",
+      content: "ウェブサイトでサービスをご利用の際に、以下の情報を収集します：",
+      items: [
+        { title: "連絡先情報", description: "氏名、メール、電話番号、会社名、役職。" },
+        { title: "技術情報", description: "IPアドレス、ブラウザタイプ、OS、アクセス時間、閲覧ページなど。" },
+        { title: "その他の情報", description: "お問い合わせフォームやアンケートでご提供いただいた情報。" }
+      ]
+    },
+    dataUsage: {
+      title: "情報使用目的",
+      content: "個人情報は以下の目的で使用します：",
+      items: [
+        { title: "サービス提供", description: "コンサルティングサポート、お問い合わせ対応、サービス情報提供。" },
+        { title: "ウェブサイト管理", description: "ユーザー行動分析によるサイト最適化。" },
+        { title: "マーケティング", description: "ニュースレター送信（同意がある場合のみ）。" },
+        { title: "セキュリティ", description: "不正行為防止、システム保護。" }
+      ]
+    },
+    dataSecurity: {
+      title: "データセキュリティと保存",
+      content: "お客様の情報を保護するため、高度なセキュリティ対策を適用しています：",
+      items: [
+        { title: "データ暗号化", description: "最先端技術による個人情報の暗号化。" },
+        { title: "セキュアサーバー", description: "国際セキュリティ基準に準拠したサーバーでの保存。" },
+        { title: "アクセス制御", description: "厳格なアクセス制御とファイアウォール。" }
+      ]
+    },
+    dataSharing: {
+      title: "個人情報の共有",
+      content: "以下の場合を除き、第三者への個人情報の販売、貸与、交換は行いません：",
+      items: [
+        { title: "明確な同意", description: "お客様の明確な同意がある場合のみ。" },
+        { title: "信頼できるパートナー", description: "サービス契約完了のための必要最小限の共有。" },
+        { title: "法的要求", description: "法律に基づく政府機関からの要求。" }
+      ]
+    },
+    userRights: {
+      title: "ユーザーの権利",
+      content: "個人情報に関して以下の権利をお持ちです：",
+      items: [
+        { title: "アクセス・編集権", description: "個人情報の閲覧、編集、更新の要求。" },
+        { title: "削除権", description: "不要になった個人情報の削除要求。" },
+        { title: "拒否権", description: "マーケティング目的での情報処理の拒否。" }
+      ]
+    },
+    contact: {
+      title: "プライバシーポリシーに関するお問い合わせ",
+      description: "プライバシーポリシーに関するご質問や権利行使をご希望の場合は、お気軽にお問い合わせください："
+    }
+  },
+
+  // Terms of Service Page
+  terms: {
+    badge: "利用規約",
+    hero: {
+      title: "利用規約",
+      subtitle: "Mercury Solutionsサービスの利用規約と条件。権利、責任、サービス利用条件に関する規定。"
+    },
+    lastUpdated: "最終更新",
+    introduction: {
+      title: "紹介と規約の承諾",
+      content: "Mercury Solutionsの公式ウェブサイトへようこそ。当社のサービスへのアクセスと利用は、以下に記載されたすべての規約と条件を読み、理解し、遵守することに同意したことを意味します。"
+    },
+    services: {
+      title: "提供されるサービス",
+      content: "Mercury Solutionsは以下のコアサービスを提供します：",
+      items: [
+        { title: "デジタル変革サービス", description: "Web・モバイルアプリ開発、AI、機械学習、コンピュータビジョン、専門的な企業管理サービス。" },
+        { title: "デジタルマーケティングサービス", description: "TVC制作、企業紹介映像、Naked Inc（日本）やPanasonic Connectとのパートナーシップによるインタラクティブプレゼンテーションソリューション。" }
+      ]
+    },
+    customerRights: {
+      title: "お客様の権利と責任",
+      content: "お客様には以下の権利と責任があります：",
+      items: [
+        { title: "情報の正確性", description: "登録時やサービス利用時に提供する情報が正確で完全であることを保証する必要があります。" },
+        { title: "合法的使用", description: "違法目的、プライバシー侵害、他者への危害のためMercury Solutionsサービスを使用しないことを約束します。" },
+        { title: "アカウントセキュリティ", description: "アカウント情報の保護と不正アクセスの検出時の即座の通知が責任です。" }
+      ]
+    },
+    mercuryRights: {
+      title: "Mercury Solutionsの権利と責任",
+      content: "Mercury Solutionsには以下の権利と責任があります：",
+      items: [
+        { title: "サービス品質", description: "専門的な品質でのサービス提供を約束します。" },
+        { title: "サービス変更", description: "不可抗力やシステムメンテナンスの必要に応じて、事前通知なしでサービスの一時停止、変更、終了の権利があります。" },
+        { title: "責任制限", description: "規約違反やサービス製品の誤用による損害について責任を負いません。" }
+      ]
+    },
+    intellectualProperty: {
+      title: "知的財産権",
+      content: "知的財産権は以下のように規定されます：",
+      items: [
+        { title: "ウェブサイトコンテンツ", description: "すべてのコンテンツ、画像、動画はMercury Solutionsの所有物です。無断複製、配布、使用は禁止されています。" },
+        { title: "開発製品", description: "顧客向け開発製品の知的財産権は個別のサービス契約で詳細に規定されます。" }
+      ]
+    },
+    disputeResolution: {
+      title: "紛争解決",
+      content: "サービス利用中の紛争は協力的精神での交渉と調停を優先して解決します。合意に達しない場合、ベトナムの管轄裁判所に提訴する権利があります。"
+    },
+    changes: {
+      title: "規約変更",
+      content: "Mercury Solutionsはいつでも規約を調整・補完する権利があります。変更はウェブサイトに公開されます。変更発効後のサービス継続利用は新規約への同意とみなされます。"
+    },
+    contact: {
+      title: "利用規約に関するお問い合わせ",
+      description: "利用規約に関するご質問や規定の明確化が必要な場合は、お気軽にお問い合わせください："
+    }
+  },
+
+  // Legacy services for backward compatibility
+    tvc: {
+      title: "TVC撮影サービス"
+    },
     ai: {
       title: "AI & 機械学習",
       description: "プロセスを自動化し、データから洞察を得るための高度な人工知能と機械学習ソリューション。",
@@ -201,9 +382,10 @@ export const ja = {
   // TVC Services
   tvc: {
     hero: {
-      title: "工場・製造企業向けTVCフィルム制作サービス",
-      subtitle: "あなたの技術と規模を突破口となる競争優位性に変える",
-      description: "Mercury Solutionsは包括的な4K TVCフィルム制作ソリューションを提供し、ブランドの地位を描写し、パートナーを獲得し、トップ人材を1-2週間の実装で引き付けるお手伝いをします。",
+      badge: "ビデオプロダクションスタジオ",
+      badgeSubtitle: "プロフェッショナル機材＆クルー",
+      title: "あなたの技術と規模を突破口となる競争優位性に変える",
+      subtitle: "Mercury Solutionsは包括的なTVC制作ソリューションを提供し、映画的なフィルムを通じてブランドの地位、現代的なプロセス、コア技術を描写するお手伝いをします。私たちは単に撮影するだけでなく、あなたの会社の専門性と強みの物語を語り、パートナーを征服し、トップ人材を引き付けるお手伝いもします。",
       cta: "コンサルテーションと見積もりを今すぐ取得",
       partners: "私たちのパートナー：",
       partnershipsDetails: {
@@ -252,9 +434,10 @@ export const ja = {
       ],
       conclusion: "視覚でブランドストーリーをアップグレードする時が来ました。"
     },
-    solution: {
-      title: "MERCURY SOLUTIONS: 工場の心から素晴らしいストーリーを語る",
-      description: "私たちは単に撮影するだけではありません。複雑なプロセス、無機質な機械、厳格な基準を感情的で説得力があり、プレミアムな企業フィルムに変換する専門家です。",
+            solution: {
+          title: "プロセスを芸術作品に変える",
+          description: "Mercury Solutionsでは、すべての機械やプロセスをインスピレーションに満ちたビジュアルストーリーに変換し、ブランド価値を向上させます。",
+      exploreSolution: "ソリューションを探索する",
       services: {
         factory: {
           title: "🎥 工場・工業団地紹介撮影",
@@ -277,7 +460,9 @@ export const ja = {
     portfolio: {
       title: "私たちのポートフォリオ",
       subtitle: "様々な業界とプロジェクトタイプでの専門性を紹介",
-      description: "最先端技術による革新的ソリューションを様々な業界に提供する専門性を示す成功プロジェクトのポートフォリオをご覧ください。",
+      description: "最先端技術による革新的ソリューションを様々な業界に提供する専門知識を示す成功プロジェクトのポートフォリオをご覧ください。",
+      ourTvcPortfolio: "私たちのTVCポートフォリオ",
+      scrollToExplore: "多様なテレビコマーシャル制作とビデオコンテンツをスクロールして探索",
       projects: {
         corporate: {
           title: "コーポレートブランドフィルム",
@@ -297,6 +482,82 @@ export const ja = {
         },
         videoPreview: "プロジェクトプレビュー",
         platform: "プラットフォーム"
+      }
+    },
+    ecosystem: {
+      title: "⚙️ 当社の専門的制作エコシステム",
+      description: "スピードと品質を確保するため、Mercury Solutionsは包括的な制作エコシステムで運営しています：",
+      coreTeam: {
+        title: "コアチーム：",
+        roles: [
+          {
+            title: "ディレクター",
+            description: "産業生産に深い理解を持つ創造的思考。"
+          },
+          {
+            title: "撮影監督（D.O.P）",
+            description: "画質、照明、芸術的カメラアングルに責任を持つ。"
+          },
+          {
+            title: "カメラオペレーター",
+            description: "プロフェッショナルなカメラ操作で、滑らかな動きを作り出す。"
+          },
+          {
+            title: "ドローン/FPVパイロット",
+            description: "ドローン操縦の専門家で、パノラマ空撮と工場空間でのユニークなFPV（ファーストパーソンビュー）撮影を提供。"
+          },
+          {
+            title: "ガファー＆グリップ",
+            description: "照明と補助機器の専門家で、すべてのショットが基準を満たすことを保証。"
+          },
+          {
+            title: "エディター＆カラリスト",
+            description: "才能あるポストプロダクションチームで、生の映像を完成した作品に変える。"
+          }
+        ]
+      },
+      equipment: {
+        title: "現代的機器システム：",
+        categories: [
+          {
+            title: "カメラ",
+            description: "Sony FX6、FX3、Blackmagic Pocket Cinema Camera 6K Proなどのプロ用Cinema Lineカメラで4K RAW画質を実現。"
+          },
+          {
+            title: "レンズ",
+            description: "シネレンズセットとプレミアムG-Masterレンズで、鮮明さと芸術的ボケ効果を保証。"
+          },
+          {
+            title: "スタビライザー",
+            description: "DJI Ronin RS3 Proジンバル、Steadicamで滑らかで流れるような動きの撮影を実現。"
+          }
+        ]
+      },
+      droneEquipment: {
+        title: "フライカム＆ドローン：",
+        items: [
+          {
+            title: "DJI Mavic 3 Pro Cine",
+            description: "4K ProRes撮影で、工場や工業地帯のパノラマ空撮を提供。"
+          },
+          {
+            title: "ドローンFPV（ファーストパーソンビュー）",
+            description: "生産ラインを高速で縫うような撮影で、これまでにない視覚体験を創出。"
+          }
+        ]
+      },
+      auxiliaryEquipment: {
+        title: "補助機器：",
+        items: [
+          "プロ用照明システム（Aputure、Nanlite）。",
+          "スライダー、ドリー、ジブクレーンで多様なカメラ動きを実現。",
+          "プロ用現場録音・インタビューマイク（Sennheiser、Rode）。"
+        ]
+      },
+      callToAction: {
+        title: "🚀 あなたの工場の専門性と卓越性の物語を世界に知らしめる時が来ました。",
+        description: "Mercury Solutionsが、ただ見るだけでなく、誇りに思い、説得し、勝利するための企業TVC映画の創造をお手伝いします。",
+        buttonText: "詳細なコンサルテーションと見積もりについて今すぐお問い合わせください！"
       }
     },
     process: {

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useLanguage } from '@/contexts/LanguageContext'
@@ -40,11 +40,32 @@ const MercuryLogo = ({ className = "w-8 h-8" }: { className?: string }) => (
   </svg>
 )
 
+// Helper function to determine active route
+const getActiveHrefFromCurrentRoute = () => {
+  const currentPath = window.location.pathname
+  const currentHash = window.location.hash
+  
+  console.log('Determining active route - path:', currentPath, 'hash:', currentHash) // Debug log
+  
+  if (currentPath === '/' || currentPath === '') {
+    return '/'
+  } else if (currentPath === '/ai-digital-transformation' || currentPath.includes('/ai-digital-transformation')) {
+    return '/ai-digital-transformation'
+  } else if (currentPath === '/tvc' || currentPath.includes('/tvc')) {
+    return '/tvc'
+  } else if (currentPath === '/about' || currentPath.includes('/about')) {
+    return '/about'
+  }
+  
+  // Default to home if no match
+  return '/'
+}
+
 // Tab Select Navigation Component
-const TabSelectNavigation = ({ navigation, activeTab, setActiveTab }: {
+const TabSelectNavigation = ({ navigation, activeHref, setActiveHref }: {
   navigation: Array<{ name: string; href: string }>
-  activeTab: string
-  setActiveTab: (tab: string) => void
+  activeHref: string
+  setActiveHref: (href: string) => void
 }) => {
   const containerRef = useRef<HTMLDivElement>(null)
 
@@ -52,13 +73,22 @@ const TabSelectNavigation = ({ navigation, activeTab, setActiveTab }: {
     <div ref={containerRef} className="relative">
       <div className="flex items-center space-x-1 p-1 rounded-xl bg-gray-100/50">
         {navigation.map((item) => {
-          const isActive = activeTab === item.name
+          const isActive = activeHref === item.href
+          console.log(`Menu item: ${item.name}, href: ${item.href}, activeHref: ${activeHref}, isActive: ${isActive}`) // Debug log
           return (
             <button
               key={item.name}
               onClick={(e) => {
+                console.log(`Clicked navigation: ${item.name} -> ${item.href}`) // Debug log
                 handleNavigationClick(item.href, e)
-                setActiveTab(item.name)
+                setActiveHref(item.href)
+                
+                // Force update after navigation
+                setTimeout(() => {
+                  const newActiveHref = getActiveHrefFromCurrentRoute()
+                  console.log('After navigation, updating activeHref to:', newActiveHref) // Debug log
+                  setActiveHref(newActiveHref)
+                }, 100)
               }}
               className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
                 isActive ? 'text-white' : 'text-gray-600 hover:text-gray-900'
@@ -82,15 +112,54 @@ const TabSelectNavigation = ({ navigation, activeTab, setActiveTab }: {
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [activeTab, setActiveTab] = useState('Home')
+  const [activeHref, setActiveHref] = useState('/')
   const { translations } = useLanguage()
 
   const navigation = [
     { name: translations.nav.home, href: '/' },
     { name: translations.nav.aiDigitalTransformation, href: '/ai-digital-transformation' },
     { name: translations.nav.digitalMarketing, href: '/tvc' },
-    { name: translations.nav.contact, href: '#contact' },
+    { name: translations.nav.about, href: '/about' },
   ]
+
+
+
+  // Detect current route and set active tab
+  useEffect(() => {
+    const updateActiveRoute = () => {
+      const newActiveHref = getActiveHrefFromCurrentRoute()
+      console.log('Setting activeHref to:', newActiveHref) // Debug log
+      setActiveHref(newActiveHref)
+    }
+
+    // Set initial active route
+    updateActiveRoute()
+
+    // Listen for route changes
+    window.addEventListener('popstate', updateActiveRoute)
+    window.addEventListener('hashchange', updateActiveRoute)
+    
+    // Also listen for client-side navigation changes
+    const originalPushState = window.history.pushState
+    const originalReplaceState = window.history.replaceState
+    
+    window.history.pushState = function(...args) {
+      originalPushState.apply(window.history, args)
+      setTimeout(updateActiveRoute, 0)
+    }
+    
+    window.history.replaceState = function(...args) {
+      originalReplaceState.apply(window.history, args)
+      setTimeout(updateActiveRoute, 0)
+    }
+
+    return () => {
+      window.removeEventListener('popstate', updateActiveRoute)
+      window.removeEventListener('hashchange', updateActiveRoute)
+      window.history.pushState = originalPushState
+      window.history.replaceState = originalReplaceState
+    }
+  }, [])
 
   return (
     <header className="header-bg fixed top-0 left-0 right-0 z-40">
@@ -112,8 +181,8 @@ export default function Header() {
           <nav className="hidden md:block">
             <TabSelectNavigation 
               navigation={navigation}
-              activeTab={activeTab}
-              setActiveTab={setActiveTab}
+              activeHref={activeHref}
+              setActiveHref={setActiveHref}
             />
           </nav>
 
@@ -123,7 +192,7 @@ export default function Header() {
             <a 
               href="#contact" 
               onClick={(e) => handleNavigationClick('#contact', e)}
-              className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-mercury-blue-600 hover:bg-mercury-blue-700 text-white btn-shadow"
+              className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mercury-blue-500 bg-white border-2 border-mercury-blue-600 text-mercury-blue-600 hover:bg-mercury-blue-600 hover:text-white shadow-lg hover:shadow-xl"
             >
               {translations.common.getStarted}
             </a>
@@ -190,44 +259,56 @@ export default function Header() {
                 <div className="px-4 py-6 space-y-4">
                   {/* Mobile Navigation Links */}
                   <div className="space-y-1">
-                    {navigation.map((item) => (
-                      <motion.a
-                        key={item.name}
-                        href={item.href}
-                        className={`mobile-nav-item block px-4 py-3 text-sm font-medium transition-all duration-200 rounded-lg relative ${
-                          activeTab === item.name ? 'text-white' : 'text-gray-700 hover:text-gray-900'
-                        }`}
-                        onClick={(e) => {
-                          handleNavigationClick(item.href, e)
-                          setActiveTab(item.name)
-                          setIsMenuOpen(false)
-                        }}
-                        whileHover={{ x: 4 }}
-                        whileTap={{ scale: 0.98 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        {activeTab === item.name && (
-                          <motion.div
-                            layoutId="mobileActiveTab"
-                            className="absolute inset-0 rounded-lg bg-mercury-blue-600 active-tab-shadow"
-                            transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                          />
-                        )}
-                        <span className="relative z-10">{item.name}</span>
-                      </motion.a>
-                    ))}
+                    {navigation.map((item) => {
+                      const isActive = activeHref === item.href
+                      console.log(`Mobile menu item: ${item.name}, href: ${item.href}, activeHref: ${activeHref}, isActive: ${isActive}`) // Debug log
+                      return (
+                        <motion.a
+                          key={item.name}
+                          href={item.href}
+                          className={`mobile-nav-item block px-4 py-3 text-sm font-medium transition-all duration-200 rounded-lg relative ${
+                            isActive ? 'text-white' : 'text-gray-700 hover:text-gray-900'
+                          }`}
+                          onClick={(e) => {
+                            console.log(`Clicked mobile navigation: ${item.name} -> ${item.href}`) // Debug log
+                            handleNavigationClick(item.href, e)
+                            setActiveHref(item.href)
+                            setIsMenuOpen(false)
+                            
+                            // Force update after navigation
+                            setTimeout(() => {
+                              const newActiveHref = getActiveHrefFromCurrentRoute()
+                              console.log('After mobile navigation, updating activeHref to:', newActiveHref) // Debug log
+                              setActiveHref(newActiveHref)
+                            }, 100)
+                          }}
+                          whileHover={{ x: 4 }}
+                          whileTap={{ scale: 0.98 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          {isActive && (
+                            <motion.div
+                              layoutId="mobileActiveTab"
+                              className="absolute inset-0 rounded-lg bg-mercury-blue-600 active-tab-shadow"
+                              transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                            />
+                          )}
+                          <span className="relative z-10">{item.name}</span>
+                        </motion.a>
+                      )
+                    })}
                   </div>
                   
                   {/* Mobile CTA Button */}
                   <div className="pt-4 border-t border-gray-100">
                     <motion.a 
                       href="#contact" 
-                      className="inline-flex items-center justify-center w-full px-4 py-3 text-sm font-medium rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-mercury-blue-600 hover:bg-mercury-blue-700 text-white btn-shadow"
+                      className="inline-flex items-center justify-center w-full px-4 py-3 text-sm font-medium rounded-lg transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mercury-blue-500 bg-white border-2 border-mercury-blue-600 text-mercury-blue-600 hover:bg-mercury-blue-600 hover:text-white shadow-lg hover:shadow-xl"
                       onClick={(e) => {
                         handleNavigationClick('#contact', e)
                         setIsMenuOpen(false)
                       }}
-                      whileHover={{ scale: 1.02 }}
+                      whileHover={{ scale: 1.02, backgroundColor: '#2563eb', color: '#ffffff' }}
                       whileTap={{ scale: 0.98 }}
                     >
                       {translations.common.getStarted}

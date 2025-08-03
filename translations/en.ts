@@ -4,14 +4,13 @@ export const en = {
     home: "Home",
     aiDigitalTransformation: "AI Digital Transformation",
     digitalMarketing: "Digital Marketing",
-    contact: "Contact",
+    about: "About Us",
     // Legacy navigation items (for backward compatibility)
     services: "Services",
     technology: "Technology",
     process: "Process",
     projects: "Projects",
     tvcServices: "TVC Services",
-    about: "About",
     portfolio: "Portfolio",
     ourAdvantage: "Our Advantage",
     softwareServices: "Software Services",
@@ -107,9 +106,269 @@ export const en = {
           description: "We specialize in producing TVCs introducing factories and industrial zones, focusing on highlighting machinery and advanced technology. Notable projects include collaborations with Jworld Vina (Korea) and Fujikin Viet Nam, creating impressive and professional promotional films."
         }
       }
-    },
+      },
 
-    // Legacy services for backward compatibility
+  // About Page
+  about: {
+    badge: "About Mercury Solutions",
+    hero: {
+      title: "About Us",
+      subtitle: "Mercury Solutions was born from the aspiration to create a better and more convenient life for everyone through the power of technology. We continuously innovate to become a solid bridge between businesses and the digital future, bringing breakthrough solutions and sustainable value."
+    },
+    company: {
+      title: "Company Information",
+      description: "We are proud to be a trusted partner, accompanying businesses on their digital transformation journey. From developing smart management systems, optimizing processes, to creating inspiring marketing campaigns, every solution we build is crafted with the highest dedication and professionalism.",
+      name: "Company Name",
+      address: "Address",
+      taxCode: "Tax Code",
+      phone: "Phone",
+      email: "Email",
+      founded: "Founded Year"
+    },
+    mission: {
+      title: "Mission",
+      description: "Mercury Solutions' mission is to provide breakthrough technology solutions and creative marketing services, helping businesses optimize performance, develop sustainably and contribute to building a more convenient and better life for the community.",
+      details: {
+        title: "To fulfill this mission, we focus on:",
+        items: [
+          {
+            title: "Technology Innovation",
+            description: "Continuously researching and applying the latest technologies such as AI, IoT, and digital platforms to create outstanding products."
+          },
+          {
+            title: "Partner Collaboration",
+            description: "Always listening and understanding customer needs, working with them to build the most suitable and effective solutions."
+          },
+          {
+            title: "Value Creation",
+            description: "Not only bringing economic benefits to businesses but also contributing to the general development of society, improving quality of life."
+          }
+        ]
+      }
+    },
+    vision: {
+      title: "Vision",
+      description: "Our vision is to become a pioneering technology company, creating a comprehensive digital ecosystem where every individual and business can enjoy the best conveniences. We envision a future where technology becomes a powerful assistant, liberating people from repetitive work, thereby giving everyone more time to create, develop and enjoy life."
+    },
+    values: {
+      title: "Core Values",
+      description: "With a team of experienced experts and strategic partnerships with world-leading partners, Mercury Solutions is committed to delivering products and services that are not only effective but also highly applicable, helping your business reach further in the digital era.",
+      sectionTitle: "Vision, Mission & Values",
+      sectionDescription: "The principles and directions that guide Mercury Solutions in its development journey and customer service."
+    },
+    cta: {
+      title: "Ready to partner with Mercury Solutions?",
+      description: "Let us help you realize your technology ideas and take your business to new heights.",
+      button: "Contact Now"
+    }
+  },
+
+  // Privacy Policy Page
+  privacy: {
+    badge: "Privacy Policy",
+    hero: {
+      title: "PRIVACY POLICY",
+      subtitle: "Mercury Solutions is committed to protecting the privacy and personal information of our customers with the most advanced security measures."
+    },
+    lastUpdated: "Last updated",
+    generalPrinciples: {
+      title: "General Principles",
+      content: "Mercury Solutions is committed to absolute confidentiality of customer personal information. This policy describes how we collect, use and protect that information. By accessing and using the website, you agree to the terms of this policy."
+    },
+    dataCollection: {
+      title: "Scope of Personal Information Collection",
+      content: "We collect your information when you use services on our website, including but not limited to:",
+      items: [
+        {
+          title: "Contact Information",
+          description: "Full name, email, phone number, company name, position."
+        },
+        {
+          title: "Technical Information",
+          description: "IP address, browser type, operating system, access time, pages viewed, and other interaction data on the website."
+        },
+        {
+          title: "Other Information",
+          description: "Any information you provide in contact forms, consultation requests, or surveys."
+        }
+      ]
+    },
+    dataUsage: {
+      title: "Purpose of Information Use",
+      content: "We use your personal information for the following purposes:",
+      items: [
+        {
+          title: "Service Provision",
+          description: "Consultation support, answering requests and providing detailed information about Mercury Solutions services."
+        },
+        {
+          title: "Website Management",
+          description: "Analyzing user behavior to optimize experience, content and website interface."
+        },
+        {
+          title: "Marketing",
+          description: "Sending newsletters, information about promotions, events, new products and services (only with your consent)."
+        },
+        {
+          title: "Security",
+          description: "Preventing fraudulent activities, protecting system and user information security."
+        }
+      ]
+    },
+    dataSecurity: {
+      title: "Data Security and Storage Mechanisms",
+      content: "We apply advanced security measures to protect your information:",
+      items: [
+        {
+          title: "Data Encryption",
+          description: "Personal information is encrypted using the most advanced technologies to ensure absolute security."
+        },
+        {
+          title: "Secure Servers",
+          description: "Information is stored on secure servers that comply with international security standards."
+        },
+        {
+          title: "Access Control",
+          description: "Applying strict access control procedures and firewalls to prevent unauthorized access."
+        }
+      ]
+    },
+    dataSharing: {
+      title: "Personal Information Sharing",
+      content: "We are committed not to sell, rent or exchange your personal information to any third party, except in the following cases:",
+      items: [
+        {
+          title: "Clear Consent",
+          description: "Only share information when there is clear and specific consent from you."
+        },
+        {
+          title: "Trusted Partners",
+          description: "Share necessary information with trusted partners to complete service contracts, with strict confidentiality commitments."
+        },
+        {
+          title: "Legal Requirements",
+          description: "Comply with requests from competent state agencies according to legal regulations."
+        }
+      ]
+    },
+    userRights: {
+      title: "User Rights",
+      content: "You have the following rights regarding your personal information:",
+      items: [
+        {
+          title: "Access and Edit Rights",
+          description: "Request to view, edit or update your personal information at any time."
+        },
+        {
+          title: "Deletion Rights",
+          description: "Request deletion of personal information from our system when no longer necessary."
+        },
+        {
+          title: "Opt-out Rights",
+          description: "Refuse the processing of personal information for marketing or promotional purposes."
+        }
+      ]
+    },
+    contact: {
+      title: "Privacy Policy Contact",
+      description: "If you have any questions about our privacy policy or want to exercise your rights, please contact us:"
+    }
+  },
+
+  // Terms of Service Page
+  terms: {
+    badge: "Terms of Service",
+    hero: {
+      title: "TERMS OF SERVICE",
+      subtitle: "Terms and conditions for using Mercury Solutions services. Regulations on rights, responsibilities and conditions for using services."
+    },
+    lastUpdated: "Last updated",
+    introduction: {
+      title: "Introduction and Terms Acceptance",
+      content: "Welcome to the official website of Mercury Solutions. Accessing and using our services means you have read, understood and agreed to comply with all the terms and conditions stated below."
+    },
+    services: {
+      title: "Services Provided",
+      content: "Mercury Solutions provides the following core services:",
+      items: [
+        {
+          title: "Digital Transformation Services",
+          description: "Development of web and mobile applications (attendance systems, gym management, hotels...), AI solutions, Machine Learning, Computer Vision and specialized enterprise management services."
+        },
+        {
+          title: "Digital Marketing Services",
+          description: "TVC production, corporate introduction films and interactive presentation solutions in partnership with reputable partners such as Naked Inc (Japan) and Panasonic Connect."
+        }
+      ]
+    },
+    customerRights: {
+      title: "Customer Rights and Responsibilities",
+      content: "Customers have the following rights and responsibilities:",
+      items: [
+        {
+          title: "Accuracy of information",
+          description: "Customers must ensure that information provided when registering or using services is accurate and complete."
+        },
+        {
+          title: "Legal use",
+          description: "Customers commit not to use Mercury Solutions services for any illegal purposes, privacy violations, or harm to others."
+        },
+        {
+          title: "Account security",
+          description: "Customers are responsible for securing account information (if any) and notifying us immediately if any unauthorized access is detected."
+        }
+      ]
+    },
+    mercuryRights: {
+      title: "Mercury Solutions Rights and Responsibilities",
+      content: "Mercury Solutions has the following rights and responsibilities:",
+      items: [
+        {
+          title: "Service quality",
+          description: "Mercury Solutions commits to providing services with professional quality, in accordance with signed agreements and contracts."
+        },
+        {
+          title: "Service changes",
+          description: "We have the right to suspend, change or terminate part or all services without prior notice in case of force majeure or when necessary for system maintenance."
+        },
+        {
+          title: "Liability limitation",
+          description: "Mercury Solutions is not responsible for any damages arising from customer violations of these terms, or from misuse of service products."
+        }
+      ]
+    },
+    intellectualProperty: {
+      title: "Intellectual Property Rights",
+      content: "Intellectual property rights are regulated as follows:",
+      items: [
+        {
+          title: "Website content",
+          description: "All content, images, videos and other materials on the website are owned by Mercury Solutions. Any unauthorized copying, distribution or use is strictly prohibited."
+        },
+        {
+          title: "Developed products",
+          description: "For products developed for customers (e.g., software, applications, TVC), intellectual property rights will be detailed in specific service contracts."
+        }
+      ]
+    },
+    disputeResolution: {
+      title: "Dispute Resolution",
+      content: "All disputes arising during service use will be prioritized for resolution through negotiation and mediation in a cooperative spirit. If no agreement can be reached, either party has the right to bring the case to a competent court in Vietnam for resolution according to legal regulations."
+    },
+    changes: {
+      title: "Terms Changes",
+      content: "Mercury Solutions has the right to adjust and supplement these terms at any time. All changes will be publicly posted on the website. Your continued use of services after changes take effect is considered your agreement with the new terms."
+    },
+    contact: {
+      title: "Terms of Service Contact",
+      description: "If you have any questions about terms of service or need clarification of regulations, please contact us:"
+    }
+  },
+
+      // Legacy services for backward compatibility
+    tvc: {
+      title: "TVC Filming Services"
+    },
     ai: {
       title: "AI & Machine Learning",
       description: "Advanced artificial intelligence and machine learning solutions to automate processes and gain insights from data.",
@@ -169,8 +428,7 @@ export const en = {
       title: "Performance Optimization",
       description: "Optimize system performance, database efficiency, and application speed for better user experience.",
       features: ["Database Optimization", "Code Performance", "Load Balancing", "Caching Strategies"]
-    },
-
+    }
   },
 
   // Technology Stack
@@ -201,9 +459,10 @@ export const en = {
   // TVC Services
   tvc: {
     hero: {
-      title: "TVC FILM PRODUCTION SERVICES FOR FACTORIES & MANUFACTURING ENTERPRISES",
-      subtitle: "TRANSFORM YOUR TECHNOLOGY & SCALE INTO BREAKTHROUGH COMPETITIVE ADVANTAGES",
-      description: "Mercury Solutions delivers comprehensive 4K TVC Film production solutions, helping to portray your brand stature, win over partners, and attract top talent in just 1-2 weeks of implementation.",
+      badge: "Video Production Studio",
+      badgeSubtitle: "Professional equipment & crew",
+      title: "TRANSFORM YOUR TECHNOLOGY & SCALE INTO BREAKTHROUGH COMPETITIVE ADVANTAGES",
+      subtitle: "Mercury Solutions delivers comprehensive TVC production solutions, helping you portray your brand stature, modern processes, and core technology through cinematic films. We don't just film, but also help tell the story of your company's professionalism and strength, conquering partners and attracting top talent.",
       cta: "GET CONSULTATION & QUOTE NOW",
       partners: "We are partners of:",
       partnershipsDetails: {
@@ -252,9 +511,10 @@ export const en = {
       ],
       conclusion: "It's time to upgrade your brand story with visuals."
     },
-    solution: {
-      title: "MERCURY SOLUTIONS: TELLING GREAT STORIES FROM THE HEART OF THE FACTORY",
-      description: "We don't just film. We are experts who transform complex processes, inanimate machines, and strict standards into emotional, persuasive, and premium corporate films.",
+            solution: {
+          title: "Transform Processes Into Artistic Masterpieces",
+          description: "With Mercury Solutions, every machine or process is transformed into inspiring visual stories that elevate brand value.",
+      exploreSolution: "Explore Our Solutions",
       services: {
         factory: {
           title: "🎥 Factory & Industrial Park Introduction Filming",
@@ -278,6 +538,8 @@ export const en = {
       title: "Our Portfolio",
       subtitle: "Showcasing our expertise across industries and project types",
       description: "Explore our portfolio of successful projects that demonstrate our expertise in delivering innovative solutions across various industries with cutting-edge technology.",
+      ourTvcPortfolio: "Our TVC Portfolio",
+      scrollToExplore: "Scroll to explore our diverse range of television commercial productions and video content",
       projects: {
         corporate: {
           title: "Corporate Brand Films",
@@ -297,6 +559,82 @@ export const en = {
         },
         videoPreview: "Project Preview",
         platform: "Platform"
+      }
+    },
+    ecosystem: {
+      title: "⚙️ OUR PROFESSIONAL PRODUCTION ECOSYSTEM",
+      description: "To ensure speed and quality, Mercury Solutions operates with a comprehensive production ecosystem:",
+      coreTeam: {
+        title: "Core Team:",
+        roles: [
+          {
+            title: "Director",
+            description: "Creative thinking with deep understanding of industrial production."
+          },
+          {
+            title: "Director of Photography (D.O.P)",
+            description: "Responsible for image quality, lighting, and artistic camera angles."
+          },
+          {
+            title: "Camera Operator",
+            description: "Professional camera operation, creating smooth movements."
+          },
+          {
+            title: "Drone/FPV Pilot",
+            description: "Drone control specialist, bringing panoramic aerial shots and unique FPV (First Person View) shots in factory spaces."
+          },
+          {
+            title: "Gaffer & Grip",
+            description: "Lighting and auxiliary equipment specialists, ensuring all shots meet standards."
+          },
+          {
+            title: "Editor & Colorist",
+            description: "Talented post-production team, transforming raw footage into complete works of art."
+          }
+        ]
+      },
+      equipment: {
+        title: "Modern Equipment System:",
+        categories: [
+          {
+            title: "Cameras",
+            description: "Professional Cinema Line cameras like Sony FX6, FX3, Blackmagic Pocket Cinema Camera 6K Pro... for 4K RAW image quality."
+          },
+          {
+            title: "Lenses",
+            description: "Cine Lens sets and premium G-Master lenses, ensuring sharpness and artistic bokeh effects."
+          },
+          {
+            title: "Stabilizers",
+            description: "DJI Ronin RS3 Pro gimbal, Steadicam for smooth, flowing movement shots."
+          }
+        ]
+      },
+      droneEquipment: {
+        title: "Flycam & Drone:",
+        items: [
+          {
+            title: "DJI Mavic 3 Pro Cine",
+            description: "4K ProRes filming, bringing panoramic aerial views for factories and industrial zones."
+          },
+          {
+            title: "Drone FPV (First Person View)",
+            description: "Creating high-speed flight shots through production lines, delivering unprecedented visual experiences."
+          }
+        ]
+      },
+      auxiliaryEquipment: {
+        title: "Auxiliary Equipment:",
+        items: [
+          "Professional lighting systems (Aputure, Nanlite).",
+          "Sliders, Dollies, Jib Cranes for diverse camera movements.",
+          "Professional field recording and interview microphones (Sennheiser, Rode)."
+        ]
+      },
+      callToAction: {
+        title: "🚀 It's time for your factory's story of professionalism and excellence to be known worldwide.",
+        description: "Let Mercury Solutions help you create a corporate TVC film not just to watch, but to be proud of, to persuade, and to win.",
+        buttonText: "Contact us now for detailed consultation and quotation!"
       }
     },
     process: {

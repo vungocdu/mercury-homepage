@@ -1,5 +1,36 @@
 # Memory Log
 
+## 2024-12-19: Multilingual Text Updates for Solution Section - COMPLETED
+
+### **Changes Made:**
+- **Updated solution section title and description** across all four translation files:
+  - Vietnamese: "Biến Quy Trình Thành Tác Phẩm Nghệ Thuật"
+  - English: "Transform Processes Into Artistic Masterpieces" 
+  - Japanese: "プロセスを芸術作品に変える"
+  - Korean: "공정을 예술 작품으로 변환"
+- **Enhanced description content** with more sophisticated and artistic language
+- **Added highlight effects** using Mercury's color palette (blue and gold gradients)
+- **Implemented multilingual highlighting** for key terms across all languages
+
+### **Files Modified:**
+- `translations/vi.ts`, `translations/en.ts`, `translations/ja.ts`, `translations/ko.ts`
+- `app/tvc/TVCPageClient.tsx`
+
+### **Technical Details:**
+- Used `dangerouslySetInnerHTML` to apply gradient text effects
+- Applied Mercury blue gradient (`from-mercury-blue-600 to-mercury-blue-500`) for technical terms
+- Applied Mercury gold gradient (`from-mercury-gold-600 to-mercury-gold-500`) for artistic/creative terms
+- Highlighted terms: "Quy Trình/Processes/プロセス/공정", "Tác Phẩm Nghệ Thuật/Artistic Masterpieces/芸術作品/예술 작품"
+- Description highlights: "Mercury Solutions", "chuyên nghiệp/professional/専門的/전문적", "thuyết phục/persuasive/説得力/설득력", "nghệ thuật/artistic/芸術的/예술적", "đẳng cấp/premium/プレミアム/프리미엄", "tinh tế/sophisticated/洗練された/세련된", "lịch lãm/elegant/優雅/우아한"
+
+### **Visual Enhancement:**
+- Replaced solid gradient background with selective word highlighting
+- Maintained consistent font sizes and spacing
+- Applied highlight effects according to Mercury's brand color palette
+- Enhanced readability while maintaining visual appeal
+
+---
+
 ## 2024-12-19 - Pain Points & Solution Sections UI/UX Enhancement
 
 ### Work Done
@@ -126,6 +157,185 @@
 - **Visual harmony**: Eliminates jarring blue-gold transition
 - **Better UX**: Smooth hover transitions enhance interactivity
 
+### Active Menu Display Bug Fix
+
+#### Problem Identified
+- **Language mismatch**: `activeTab = 'Home'` (English) vs `item.name = 'Trang chủ'` (Vietnamese)
+- **Failed comparison**: `activeTab === item.name` never returns true
+- **No active state**: Menu items never show as selected/active
+- **Poor UX**: Users can't see which page they're currently on
+
+#### Root Cause Analysis
+- **Hardcoded English**: Initial `activeTab` set to `'Home'` regardless of language
+- **Dynamic translations**: `item.name` uses `translations.nav.home` which changes with language
+- **String comparison fails**: English 'Home' ≠ Vietnamese 'Trang chủ'
+- **No route detection**: No logic to detect current page from URL
+
+#### Solution Implemented
+- **Switched to href-based tracking**: Use `activeHref` instead of `activeTab`
+- **Route detection**: Added `useEffect` to detect current pathname and hash
+- **Event listeners**: Listen for `popstate` và `hashchange` events
+- **Language independent**: hrefs are stable across languages
+
+#### Technical Changes
+- **State change**: `useState('Home')` → `useState('/')`
+- **Comparison logic**: `activeTab === item.name` → `activeHref === item.href`
+- **TabSelectNavigation props**: Updated interface to use `activeHref`, `setActiveHref`
+- **Route detection logic**: Check pathname for `/`, `/ai-digital-transformation`, `/tvc` và hash for `#contact`
+- **Event handling**: Added cleanup for event listeners in useEffect
+
+#### Benefits
+- **Correct active state**: Menu now properly highlights current page
+- **Language independent**: Works regardless of selected language
+- **Real-time updates**: Responds to browser back/forward navigation
+- **Better UX**: Clear visual indication of current page location
+- **Consistent behavior**: Works on both desktop và mobile navigation
+
+### Enhanced Active Menu Route Detection
+
+#### User Request
+- **TVC page navigation**: Khi ở trang `/tvc` thì menu "Digital Marketing" phải active
+- **AI page navigation**: Khi ở trang `/ai-digital-transformation` thì menu "AI Digital Transformation" phải active
+- **Consistent behavior**: Active state phải work across all pages và languages
+
+#### Technical Implementation
+
+##### Helper Function Creation
+- **Shared logic**: Created `getActiveHrefFromCurrentRoute()` function outside component
+- **Route detection**: Enhanced logic với exact và includes path matching
+- **Fallback handling**: Default to home route nếu no match found
+- **Hash support**: Proper handling cho `#contact` hash fragments
+
+##### Enhanced Route Detection Logic
+```typescript
+const getActiveHrefFromCurrentRoute = () => {
+  const currentPath = window.location.pathname
+  const currentHash = window.location.hash
+  
+  if (currentHash === '#contact') {
+    return '#contact'
+  } else if (currentPath === '/' || currentPath === '') {
+    return '/'
+  } else if (currentPath === '/ai-digital-transformation' || currentPath.includes('/ai-digital-transformation')) {
+    return '/ai-digital-transformation'
+  } else if (currentPath === '/tvc' || currentPath.includes('/tvc')) {
+    return '/tvc'
+  }
+  
+  return '/'
+}
+```
+
+##### Event Handling Improvements
+- **popstate listener**: Browser back/forward navigation
+- **hashchange listener**: Hash fragment changes  
+- **history.pushState override**: Client-side navigation detection
+- **history.replaceState override**: Route replacement detection
+- **setTimeout updates**: Force re-evaluation after navigation
+
+##### Cross-Platform Consistency
+- **Desktop navigation**: Enhanced TabSelectNavigation component
+- **Mobile navigation**: Consistent logic trong mobile menu
+- **Shared helper**: Same route detection logic everywhere
+- **Debug logging**: Console logs để troubleshoot issues
+
+#### Route Mapping
+- **Home**: `/` → `nav.home` active
+- **AI Digital Transformation**: `/ai-digital-transformation` → `nav.aiDigitalTransformation` active  
+- **Digital Marketing (TVC)**: `/tvc` → `nav.digitalMarketing` active
+- **Contact**: `#contact` → `nav.contact` active
+
+#### Benefits
+- **Accurate detection**: Menu correctly highlights current page
+- **Language independent**: Works với tất cả translation languages
+- **Real-time updates**: Responds to all navigation methods
+- **Clean code**: DRY principle với shared helper function
+- **Debug support**: Console logging cho easy troubleshooting
+
+#### Testing Support
+- **Debug logs**: Route detection process visible trong console
+- **Click tracking**: Navigation clicks logged with target routes
+- **State monitoring**: Active state changes logged in real-time
+
+### TVC Background Interactive Update - Moving Dots Design
+
+#### User Request
+- **New interactive background**: Replace DigitalAudioParticles với MovingDotsBackground design
+- **Vanta DOTS inspired**: Professional particle system với mouse interactions
+- **Modern aesthetic**: Blue/violet color scheme với sophisticated effects
+
+#### New MovingDotsBackground Component Features
+
+##### Advanced Particle System
+- **120 interactive particles**: Optimized count cho smooth performance
+- **Dual color scheme**: Blue và violet particles (inspired by Vanta DOTS)
+- **Grid-based positioning**: Particles distributed in bottom half với proper spacing
+- **Mouse interaction**: Repulsion effects khi hover với smooth transitions
+
+##### Technical Implementation
+```typescript
+// Particle configuration
+const PARTICLE_COUNT = 120;
+const PARTICLE_SIZE = 3;
+const CONNECTION_DISTANCE = 120;
+const PARTICLE_SPEED = 0.1;
+```
+
+##### Visual Effects
+- **Connection lines**: Dynamic mesh network connecting nearby particles
+- **Wave propagation**: Concentric waves từ center với alternating colors
+- **Gradient strokes**: Sophisticated gradient connections between particles
+- **Glow effects**: Subtle particle glow với alpha variations
+
+##### Mouse Interaction System
+- **Repulsion force**: Particles move away from mouse cursor
+- **Distance-based influence**: Effect strength decreases với distance
+- **Smooth transitions**: Mouse influence fades over time
+- **Alpha enhancement**: Particles brighten when mouse is near
+
+##### Performance Optimizations
+- **Connection limiting**: Max 5 connections per particle cho performance
+- **RequestAnimationFrame**: Smooth 60fps animations
+- **Canvas-based rendering**: Hardware-accelerated graphics
+- **Responsive handling**: Auto-resize với window resize events
+
+##### Color Palette (Vanta DOTS Inspired)
+- **Blue particles**: `rgba(59, 130, 246, alpha)` - professional blue
+- **Violet particles**: `rgba(139, 92, 246, alpha)` - creative accent
+- **Connection gradients**: Dark blue to light blue transitions
+- **Wave effects**: Alternating blue/violet concentric circles
+
+##### Positioning Strategy
+- **Bottom half focus**: Particles constrained to lower 50% of screen
+- **Grid-like distribution**: Organized layout với random offsets
+- **Boundary handling**: Soft bounces at canvas edges
+- **Original position attraction**: Gentle pull back to initial positions
+
+#### Integration Changes
+- **Import update**: `DigitalAudioParticles` → `MovingDotsBackground`
+- **Component usage**: Updated TVC hero section integration
+- **Gradient overlay**: Adjusted từ `white/30` to `white/20` cho better visibility
+- **Z-index layering**: Proper stacking với content overlay
+
+#### Benefits
+- **Professional appearance**: Vanta DOTS inspired design elevates brand
+- **Interactive engagement**: Mouse effects create immersive experience
+- **Performance optimized**: Smooth 60fps với 120 particles
+- **Modern aesthetic**: Contemporary particle design trends
+- **Brand alignment**: Blue/violet colors match Mercury Solutions palette
+
+#### User Experience Improvements
+- **Visual interest**: Dynamic particle movements keep users engaged
+- **Interactive feedback**: Mouse responses create tactile digital experience
+- **Professional polish**: High-end particle system elevates TVC page
+- **Smooth performance**: No lag hoặc stuttering trên modern devices
+
+#### Technical Excellence
+- **Clean code structure**: Well-organized Particle class và helper functions
+- **Memory management**: Proper cleanup trong useEffect
+- **Event handling**: Comprehensive mouse event listeners
+- **Canvas optimization**: Efficient drawing và animation loops
+
 ### Current Status
 - ✅ **Pain Points enhanced**: Dramatic dark theme với sophisticated effects
 - ✅ **Solution elevated**: Bright optimistic theme với advanced interactions
@@ -133,6 +343,9 @@
 - ✅ **Visual contrast achieved**: Strong problem-solution narrative flow
 - ✅ **Performance optimized**: No linter errors, smooth rendering
 - ✅ **Gradient colors fixed**: Removed ugly blue-gold, now uses beautiful blue tones only
+- ✅ **Active menu fixed**: Navigation properly shows selected state regardless of language
+- ✅ **Route detection enhanced**: TVC và AI pages correctly show active menu states
+- ✅ **TVC background updated**: New MovingDotsBackground với Vanta DOTS inspired design
 
 ## 2024-12-19 - Strategic Partnerships Section Restructure
 
@@ -2301,6 +2514,32 @@ https://[username].gitlab.io/[project-name]
 
 ---
 
+## 2024-12-19: Multilingual Text Updates - COMPLETED
+
+### **Changes Made:**
+- **Added missing translation keys** for hardcoded text:
+  - `tvc.solution.exploreSolution`: "Khám phá giải pháp của chúng tôi" / "Explore Our Solutions"
+  - `tvc.portfolio.ourTvcPortfolio`: "Portfolio TVC của chúng tôi" / "Our TVC Portfolio"
+  - `tvc.portfolio.scrollToExplore`: "Cuộn để khám phá..." / "Scroll to explore..."
+  - `services.tvc.title`: "Dịch vụ Quay phim TVC" / "TVC Filming Services"
+- **Updated components** to use translation keys instead of hardcoded text:
+  - `app/tvc/TVCPageClient.tsx`: Button text now uses `translations.tvc.solution.exploreSolution`
+  - `components/TickerScroll.tsx`: Portfolio title and description now use translation keys
+  - `components/Footer.tsx`: Already using `t('services.tvc.title')` correctly
+
+### **Files Modified:**
+- `translations/vi.ts`, `translations/en.ts`, `translations/ja.ts`, `translations/ko.ts`
+- `app/tvc/TVCPageClient.tsx`
+- `components/TickerScroll.tsx`
+
+### **Technical Details:**
+- All hardcoded Vietnamese text now properly internationalized
+- Added useLanguage hook to TickerScroll component
+- Consistent multilingual support across all components
+- No breaking changes to existing functionality
+
+---
+
 ## 2024-12-19 - Website Design Update
 
 ### Work Done
@@ -2458,97 +2697,407 @@ https://[username].gitlab.io/[project-name]
 
 # Mercury Solutions - Memory Log
 
-## 2024-12-19: TVC Landing Page Content Update - COMPLETED
+## 2024-12-19: TVC Hero Section Content Update - COMPLETED
 
 ### Work Completed:
-- ✅ Cập nhật metadata SEO cho trang TVC theo tvc-landing-page-content.md
-- ✅ Tích hợp nội dung Hero Section mới với pain points và value proposition
-- ✅ Cập nhật Services Section với focus vào nhà máy và doanh nghiệp sản xuất
-- ✅ Thêm Portfolio Section với case studies Fujikin và Jworld Vina
-- ✅ Tích hợp Production Process Section 5 bước chi tiết
-- ✅ Cập nhật Why Us Section với bảng so sánh 3 cột
-- ✅ Thêm FAQ Section với 8 câu hỏi chuyên sâu
-- ✅ Tạo Contact Form Section với CTA mạnh mẽ
-- ✅ Cập nhật đa ngôn ngữ cho tất cả nội dung mới
-- ✅ Cập nhật FAQ với 8 câu hỏi chi tiết cho tất cả ngôn ngữ (VI, EN, JA, KO)
-- ✅ Test responsive design và performance
-- ✅ Fix TypeScript errors và build issues
+- ✅ Cập nhật nội dung hero section của trang TVC với nội dung mới
+- ✅ Thay đổi title từ "DỊCH VỤ QUAY PHIM TVC NHÀ MÁY & DOANH NGHIỆP SẢN XUẤT" thành "BIẾN CÔNG NGHỆ & QUY MÔ CỦA BẠN THÀNH LỢI THẾ CẠNH TRANH ĐỘT PHÁ"
+- ✅ Cập nhật subtitle với nội dung chi tiết về giải pháp TVC chuyên sâu
+- ✅ Đảm bảo đa ngôn ngữ cho tất cả 4 ngôn ngữ (VI, EN, JA, KO)
+- ✅ Giữ nguyên CTA "NHẬN TƯ VẤN & BÁO GIÁ NGAY"
 
-### Key Features Added:
-1. **Enhanced FAQ Section**: Thêm 8 câu hỏi chi tiết bao gồm:
-   - Timeline và cost estimation
-   - Equipment và technical specifications
-   - Process và quality assurance
-   - Revision và delivery formats
+### Content Changes:
+1. **Vietnamese (VI)**:
+   - Title: "BIẾN CÔNG NGHỆ & QUY MÔ CỦA BẠN THÀNH LỢI THẾ CẠNH TRANH ĐỘT PHÁ"
+   - Subtitle: "Mercury Solutions mang đến giải pháp sản xuất TVC chuyên sâu, giúp bạn khắc họa tầm vóc thương hiệu, quy trình hiện đại và công nghệ cốt lõi thông qua những thước phim điện ảnh. Chúng tôi không chỉ quay, mà còn giúp kể câu chuyện về sự chuyên nghiệp và sức mạnh của doanh nghiệp bạn, chinh phục đối tác và thu hút nhân tài."
 
-2. **Multi-language Support**: Cập nhật đầy đủ cho 4 ngôn ngữ:
-   - Vietnamese (VI)
-   - English (EN) 
-   - Japanese (JA)
-   - Korean (KO)
+2. **English (EN)**:
+   - Title: "TRANSFORM YOUR TECHNOLOGY & SCALE INTO BREAKTHROUGH COMPETITIVE ADVANTAGES"
+   - Subtitle: "Mercury Solutions delivers comprehensive TVC production solutions, helping you portray your brand stature, modern processes, and core technology through cinematic films. We don't just film, but also help tell the story of your company's professionalism and strength, conquering partners and attracting top talent."
 
-3. **SEO Optimization**: 
-   - Meta titles và descriptions tối ưu
-   - Keywords targeting cho ngành công nghiệp
-   - Open Graph tags cho social sharing
+3. **Japanese (JA)**:
+   - Title: "あなたの技術と規模を突破口となる競争優位性に変える"
+   - Subtitle: "Mercury Solutionsは包括的なTVC制作ソリューションを提供し、映画的なフィルムを通じてブランドの地位、現代的なプロセス、コア技術を描写するお手伝いをします。私たちは単に撮影するだけでなく、あなたの会社の専門性と強みの物語を語り、パートナーを征服し、トップ人材を引き付けるお手伝いもします。"
 
-### Technical Implementation:
-- Sử dụng Framer Motion cho animations
-- Responsive design với Tailwind CSS
-- Tracking buttons cho analytics
-- Contact form với validation
-
-### Build Status:
-- ✅ TypeScript compilation successful
-- ✅ All translation files synchronized
-- ✅ Build process completed successfully
-- ✅ SSR compatibility issues resolved
-- ✅ Static export temporarily disabled for dynamic rendering
-- ✅ Updated to Next.js 15.4.5 and React 19.1.1
-- ✅ Fixed duplicate function declarations in LanguageContext
-- ✅ Development server running successfully on port 3002
-- ⚠️ Minor warnings about client-side rendering (expected for dynamic content)
-- ⚠️ Port 3000 in use, dev server auto-switched to port 3002
-
-### Next Steps:
-- Optimize images với Next.js Image component
-- Implement lazy loading cho components
-- Add structured data markup cho SEO
-- Optimize bundle size
-- Add loading states cho components
-
-### Challenges & Solutions:
-- **Challenge**: Duplicate properties trong translation files
-- **Solution**: Xóa các phần duplicate và maintain clean structure
-- **Challenge**: Đồng bộ nội dung across multiple languages
-- **Solution**: Systematic approach với consistent terminology
-- **Challenge**: TypeScript type mismatches
-- **Solution**: Đảm bảo cấu trúc translation files đồng nhất
-- **Challenge**: SSR compatibility với client-side components
-- **Solution**: Disable static export và use dynamic rendering
-- **Challenge**: TypeError trong build process
-- **Solution**: Proper window object checks và error handling
-- **Challenge**: useLanguage hook trong SSR context
-- **Solution**: Wrap language-dependent components trong ClientOnly
-- **Challenge**: Next.js 15 compatibility với React 19
-- **Solution**: Update dependencies và fix SSR issues
-- **Challenge**: Client-side hooks trong server-side rendering
-- **Solution**: Use static fallbacks cho SSR và dynamic content cho client
-- **Challenge**: Duplicate function declarations trong LanguageContext
-- **Solution**: Clean up duplicate functions và organize hooks properly
-- **Challenge**: Port conflicts và Firebase service worker requests
-- **Solution**: Dev server auto-switched to available port, clear browser cache
+4. **Korean (KO)**:
+   - Title: "당신의 기술과 규모를 돌파구가 되는 경쟁 우위로 전환"
+   - Subtitle: "Mercury Solutions는 포괄적인 TVC 제작 솔루션을 제공하여 영화적인 필름을 통해 브랜드 위상, 현대적인 공정, 핵심 기술을 묘사하는 데 도움을 줍니다. 우리는 단순히 촬영하는 것이 아니라, 당신 회사의 전문성과 강점에 대한 이야기를 전하고, 파트너를 정복하며, 최고 인재를 끌어들이는 데도 도움을 줍니다."
 
 ### Files Modified:
-- `translations/vi.ts` - Updated FAQ và content structure
-- `translations/en.ts` - Enhanced FAQ section
-- `translations/ja.ts` - Added detailed FAQ questions và services section
-- `translations/ko.ts` - Updated FAQ content và added services section
-- `docs/todo.md` - Updated task status
-- `app/tvc/TVCPageClient.tsx` - Enhanced with complete content structure
+- `translations/vi.ts` - Updated tvc.hero.title and tvc.hero.subtitle
+- `translations/en.ts` - Updated tvc.hero.title and tvc.hero.subtitle  
+- `translations/ja.ts` - Updated tvc.hero.title and tvc.hero.subtitle
+- `translations/ko.ts` - Updated tvc.hero.title and tvc.hero.subtitle
 
-### Performance Notes:
-- Build successful với minor warnings
-- All pages rendering correctly
-- TypeScript errors resolved
-- Ready for production deployment
+### Key Benefits:
+- **Enhanced Value Proposition**: Nội dung mới tập trung vào lợi thế cạnh tranh và chuyển đổi công nghệ
+- **Professional Messaging**: Nhấn mạnh vào chuyên môn và khả năng kể chuyện thương hiệu
+- **Multi-language Consistency**: Đảm bảo thông điệp nhất quán across all languages
+- **SEO Optimization**: Title mới tối ưu cho từ khóa "công nghệ", "quy mô", "lợi thế cạnh tranh"
+
+### Technical Notes:
+- ✅ All translation files synchronized
+- ✅ Content structure maintained
+- ✅ CTA button text unchanged
+- ✅ Ready for production deployment
+
+## 2024-12-19: TVC Landing Page Content Update - COMPLETED
+
+## 2024-12-19: Multilingual Text Updates for Solution Section Description - COMPLETED
+
+### **Changes Made:**
+- **Updated solution section description** across all four translation files with new content:
+  - Vietnamese: "Tại Mercury Solutions, chúng tôi tin rằng mỗi quy trình sản xuất đều chứa đựng một câu chuyện giá trị. Chúng tôi giúp bạn biến những cỗ máy vô tri thành nguồn cảm hứng, và tiêu chuẩn chất lượng khắt khe thành niềm tự hào, khẳng định tầm vóc thương hiệu một cách tinh tế."
+  - English: "At Mercury Solutions, we believe that every production process contains a valuable story. We help you transform lifeless machines into sources of inspiration, and strict quality standards into pride, affirming brand stature in a sophisticated way."
+  - Japanese: "Mercury Solutionsでは、すべての生産プロセスに価値のあるストーリーが含まれていると信じています。私たちは、無機質な機械をインスピレーションの源に、厳格な品質基準を誇りに変え、洗練された方法でブランドの地位を確認するお手伝いをします。"
+  - Korean: "Mercury Solutions에서는 모든 생산 공정에 가치 있는 이야기가 담겨 있다고 믿습니다. 우리는 무기질한 기계를 영감의 원천으로, 엄격한 품질 기준을 자부심으로 바꾸어 세련된 방식으로 브랜드의 위상을 확인하는 데 도움을 드립니다."
+- **Updated highlighting logic** in `app/tvc/TVCPageClient.tsx` to match new content:
+  - Blue highlights: "Mercury Solutions", "quy trình sản xuất/production process/生産プロセス/생산 공정", "cỗ máy vô tri/lifeless machines/無機質な機械/무기질한 기계", "tiêu chuẩn chất lượng khắt khe/strict quality standards/厳格な品質基準/엄격한 품질 기준", "tầm vóc thương hiệu/brand stature/ブランドの地位/브랜드의 위상"
+  - Gold highlights: "câu chuyện giá trị/valuable story/価値のあるストーリー/가치 있는 이야기", "nguồn cảm hứng/sources of inspiration/インスピレーションの源/영감의 원천", "niềm tự hào/pride/誇り/자부심", "tinh tế/sophisticated/洗練された/세련된"
+
+### **Files Modified:**
+- `translations/vi.ts`, `translations/en.ts`, `translations/ja.ts`, `translations/ko.ts`
+- `app/tvc/TVCPageClient.tsx`
+
+### **Technical Details:**
+- Used `dangerouslySetInnerHTML` to apply gradient text effects
+- Applied Mercury blue gradient (`from-mercury-blue-600 to-mercury-blue-500`) for technical/process terms
+- Applied Mercury gold gradient (`from-mercury-gold-600 to-mercury-gold-500`) for creative/inspirational terms
+- Updated regex patterns to match new content across all four languages
+- Maintained consistent highlighting approach with Mercury's brand color palette
+
+### **Content Enhancement:**
+- Shifted focus from "filmmaking" to "storytelling and transformation"
+- Emphasized the transformation of industrial elements into artistic inspiration
+- Highlighted the value of production processes and quality standards
+- Maintained sophisticated and professional tone across all languages
+
+## 2024-12-19: Professional Production Ecosystem Section Addition - COMPLETED
+
+### **Changes Made:**
+- **Added comprehensive "Professional Production Ecosystem" section** to TVC page with complete multilingual support
+- **Created detailed content structure** including:
+  - Core Team roles (Director, D.O.P, Camera Operator, Drone/FPV Pilot, Gaffer & Grip, Editor & Colorist)
+  - Modern Equipment System (Cameras, Lenses, Stabilizers)
+  - Flycam & Drone Equipment (DJI Mavic 3 Pro Cine, Drone FPV)
+  - Auxiliary Equipment (Lighting, Sliders, Microphones)
+  - Strong Call-to-Action section
+- **Updated all four translation files** with comprehensive ecosystem content:
+  - Vietnamese: `translations/vi.ts`
+  - English: `translations/en.ts`
+  - Japanese: `translations/ja.ts`
+  - Korean: `translations/ko.ts`
+- **Enhanced TVC page component** (`app/tvc/TVCPageClient.tsx`) with professional UI/UX design:
+  - Added ecosystem section after WhyUs section
+  - Implemented responsive grid layouts for different content types
+  - Added smooth animations and hover effects
+  - Used Mercury brand colors consistently
+  - Created custom Drone icon component
+
+### **Technical Implementation:**
+- **Structured Content Organization**: Organized ecosystem content into logical sections (Core Team, Equipment, Drone, Auxiliary)
+- **Professional UI/UX Design**: 
+  - Glassmorphism cards with shadow effects
+  - Gradient backgrounds using Mercury brand colors
+  - Smooth Framer Motion animations with staggered delays
+  - Responsive grid layouts (sm:grid-cols-2, lg:grid-cols-3)
+  - Hover effects with scale and shadow transformations
+- **Custom Icon Integration**: Created custom Drone SVG icon component for specialized equipment section
+- **Brand Consistency**: Applied Mercury blue and gold color palette throughout the ecosystem section
+
+### **Files Modified:**
+- `translations/vi.ts`, `translations/en.ts`, `translations/ja.ts`, `translations/ko.ts`
+- `app/tvc/TVCPageClient.tsx`
+
+### **Design Features:**
+- Professional equipment showcase with technical specifications
+- Team expertise highlights with role descriptions
+- Modern equipment categories with detailed explanations
+- Drone technology emphasis for industrial filming
+- Comprehensive auxiliary equipment listing
+- Strong CTA with call to action for consultation
+
+### **Content Strategy:**
+- Emphasized Mercury Solutions' professional production capabilities
+- Highlighted cutting-edge equipment and technology
+- Showcased team expertise and specializations
+- Created trust through detailed equipment specifications
+- Positioned Mercury as industry-leading TVC production partner
+- Maintained professional tone while being accessible to industrial clients
+
+## 2024-12-19: Solution Section Content Update & Highlighting Redesign - COMPLETED
+
+### **Changes Made:**
+- **Updated solution section description** across all four translation files with simplified, more impactful content:
+  - Vietnamese: "Với Mercury Solutions, mỗi cỗ máy hay quy trình đều được chuyển hóa thành những câu chuyện hình ảnh đầy cảm hứng, nâng tầm giá trị thương hiệu."
+  - English: "With Mercury Solutions, every machine or process is transformed into inspiring visual stories that elevate brand value."
+  - Japanese: "Mercury Solutionsでは、すべての機械やプロセスをインスピレーションに満ちたビジュアルストーリーに変換し、ブランド価値を向上させます。"
+  - Korean: "Mercury Solutions에서는 모든 기계나 공정을 영감을 주는 시각적 스토리로 변환하여 브랜드 가치를 향상시킵니다."
+- **Removed underline highlighting effects** as requested by user
+- **Updated highlighting logic** in `app/tvc/TVCPageClient.tsx` to use colored text instead of underlines:
+  - Blue highlights: "Mercury Solutions", "cỗ máy", "quy trình", "machines", "process", "giá trị thương hiệu", "brand value"
+  - Gold highlights: "câu chuyện hình ảnh", "visual stories", "cảm hứng", "inspiring"
+
+### **Files Modified:**
+- `translations/vi.ts`, `translations/en.ts`, `translations/ja.ts`, `translations/ko.ts`
+- `app/tvc/TVCPageClient.tsx`
+
+### **Content Enhancement:**
+- Simplified from complex, detailed description to concise, powerful message
+- Focused on transformation and inspiration themes
+- Emphasized visual storytelling capability
+- Maintained brand value proposition
+- Removed underline styling for cleaner appearance
+- Used Mercury brand colors for text highlighting instead of borders
+
+### **Technical Details:**
+- Replaced `border-b-2 border-blue-600 pb-0.5` classes with color-based highlighting
+- Updated regex patterns to match new simplified content
+- Used `text-mercury-blue-600` and `text-mercury-gold-600` for consistent brand colors
+- Maintained `font-bold` for emphasis without underline effects
+
+## 2024-12-19: Removed Duplicate Portfolio TVC Section - COMPLETED
+
+### **Changes Made:**
+- **Removed duplicate TickerScroll component** from TVC page that was displaying:
+  - "Portfolio TVC của chúng tôi" (Our TVC Portfolio)
+  - "Cuộn để khám phá các sản phẩm TVC và nội dung video đa dạng của chúng tôi" (Scroll to explore our diverse TVC products and video content)
+- **Cleaned up imports** by removing unused `TickerScroll` import
+- **Streamlined page structure** to avoid content duplication
+
+### **Files Modified:**
+- `app/tvc/TVCPageClient.tsx`
+
+### **Rationale:**
+- The TVC page already had a comprehensive Portfolio section with project cards
+- TickerScroll component was creating redundant content with similar messaging
+- Removing duplication improves user experience and page load performance
+- Maintains focus on the main Portfolio section which has better visual presentation
+
+### **Technical Details:**
+- Removed `<TickerScroll />` component call from TVC page
+- Removed `import TickerScroll from '../../components/TickerScroll'` import statement
+- TickerScroll component still exists and can be used on other pages if needed
+- Main Portfolio section remains intact with project showcases and proper translations
+
+## 2024-12-19: Hero Section Badge Multilingual Update - COMPLETED
+
+### **Changes Made:**
+- **Added multilingual hero section badge content** across all four translation files:
+  - `badge`: "Video Production Studio" (consistent across all languages)
+  - `badgeSubtitle`: "Professional equipment & crew" / localized versions
+- **Updated TVC page component** to use new translation keys instead of hardcoded text:
+  - Replaced hardcoded "Professional TVC Services" with `translations.tvc.hero.badge`
+  - Added new subtitle line using `translations.tvc.hero.badgeSubtitle`
+- **Enhanced hero section layout** with improved badge structure:
+  - Main badge with icon and title
+  - Secondary subtitle line with proper indentation
+  - Better visual hierarchy
+
+### **Translation Content:**
+- **Vietnamese**: "Video Production Studio" + "Professional equipment & crew"
+- **English**: "Video Production Studio" + "Professional equipment & crew"
+- **Japanese**: "ビデオプロダクションスタジオ" + "プロフェッショナル機材＆クルー"
+- **Korean**: "비디오 프로덕션 스튜디오" + "전문 장비 & 크루"
+
+### **Files Modified:**
+- `translations/vi.ts`, `translations/en.ts`, `translations/ja.ts`, `translations/ko.ts`
+- `app/tvc/TVCPageClient.tsx`
+
+### **UI/UX Improvements:**
+- Better visual structure with two-line badge layout
+- Proper spacing and indentation for subtitle
+- Maintained Mercury brand colors and styling
+- Enhanced multilingual consistency
+- Removed hardcoded English text for better internationalization
+
+## 2024-12-19: Header Button Hover Effects Enhancement - COMPLETED
+
+### **Changes Made:**
+- **Updated "Bắt Đầu" (Get Started) button styling** in header navigation with improved hover effects:
+  - **Default state**: White background with blue border and blue text
+  - **Hover state**: Blue background with white text
+  - **Enhanced animations**: Scale effect on hover (1.05 for desktop, 1.02 for mobile)
+  - **Improved shadows**: Added shadow-lg and hover:shadow-xl for depth
+- **Updated both desktop and mobile versions** of the button with consistent styling
+- **Added Framer Motion hover effects** for mobile version with specific color transitions
+
+### **Design Changes:**
+- **Before**: `bg-mercury-blue-600 hover:bg-mercury-blue-700 text-white` (solid blue button)
+- **After**: `bg-white border-2 border-mercury-blue-600 text-mercury-blue-600 hover:bg-mercury-blue-600 hover:text-white` (outline button that fills on hover)
+
+### **Files Modified:**
+- `components/Header.tsx`
+
+### **Technical Details:**
+- **Desktop button**: Added `border-2 border-mercury-blue-600`, `bg-white`, `text-mercury-blue-600`, `hover:bg-mercury-blue-600`, `hover:text-white`
+- **Mobile button**: Same CSS classes plus Framer Motion `whileHover` with explicit color values
+- **Focus states**: Updated to use `focus:ring-mercury-blue-500` for better accessibility
+- **Shadow enhancement**: Replaced `btn-shadow` with `shadow-lg hover:shadow-xl` for modern look
+
+### **UX/UI Improvements:**
+- More visually appealing button with clear state changes
+- Better contrast and readability in both states
+- Smooth transitions between default and hover states
+- Consistent behavior across desktop and mobile
+- Enhanced focus states for accessibility compliance
+
+## 2024-12-19: Navigation Update & About Page Creation - COMPLETED
+
+### **Changes Made:**
+- **Updated navigation structure** in header menu:
+  - **Changed**: "Liên hệ" (Contact) → "Về chúng tôi" (About Us)
+  - **Updated route**: `#contact` → `/about`
+  - **Maintained**: "Bắt Đầu" button still directs to `#contact` (contact form)
+- **Created comprehensive About Us page** with complete multilingual support:
+  - Company information section (name, address, tax code, phone, email, founded year)
+  - Vision, Mission, and Core Values sections
+  - Professional UI/UX with animations and hover effects
+  - Contact CTA section directing to contact form
+- **Updated all four translation files** with About page content
+- **Enhanced route detection** in Header component to handle `/about` path
+
+### **Navigation Structure Update:**
+- **Home**: `/` (unchanged)
+- **AI Digital Transformation**: `/ai-digital-transformation` (unchanged)
+- **Digital Marketing**: `/tvc` (unchanged)
+- **About Us**: `/about` (new, replaced Contact)
+
+### **About Page Features:**
+- **Hero Section**: Company introduction with gradient backgrounds
+- **Company Info Cards**: Interactive cards showing business details
+- **Vision/Mission/Values**: Large feature cards with icons and animations
+- **Contact CTA**: Prominent call-to-action directing to contact form
+- **Responsive Design**: Mobile-first approach with proper grid layouts
+- **Animations**: Framer Motion for smooth interactions
+
+### **Files Created:**
+- `app/about/page.tsx` - About page route with SEO metadata
+- `app/about/AboutPageClient.tsx` - Main About page component
+
+### **Files Modified:**
+- `components/Header.tsx` - Updated navigation array and route detection
+- `translations/vi.ts`, `translations/en.ts`, `translations/ja.ts`, `translations/ko.ts` - Added About page translations
+
+### **Technical Implementation:**
+- **SEO Optimization**: Proper metadata with Vietnamese and English descriptions
+- **Multilingual Support**: Complete translations for all 4 languages (VI, EN, JA, KO)
+- **Company Details**: Placeholder company information (address, tax code, etc.)
+- **Route Handling**: Updated `getActiveHrefFromCurrentRoute` function
+- **Accessibility**: Proper focus states and semantic HTML structure
+
+### **Content Strategy:**
+- **Professional Positioning**: Emphasized Mercury Solutions as technology pioneer
+- **Trust Building**: Displayed company credentials and official information
+- **Value Proposition**: Clear mission, vision, and core values presentation
+- **Call-to-Action**: Strategic placement of contact encouragement
+
+### **User Experience:**
+- **Clear Navigation**: "Về chúng tôi" clearly indicates company information page
+- **Contact Access**: "Bắt Đầu" button maintains direct access to contact form
+- **Information Architecture**: Logical flow from company info to values to CTA
+- **Visual Hierarchy**: Proper use of gradients, shadows, and spacing
+
+## 2024-12-19: Privacy Policy Page Creation - COMPLETED
+
+### **Changes Made:**
+- **Created comprehensive Privacy Policy page** with complete multilingual support:
+  - 6 main sections: General Principles, Data Collection, Data Usage, Data Security, Data Sharing, User Rights
+  - Professional legal content covering all aspects of data protection
+  - Contact section with dedicated privacy email and phone
+  - Last updated date display
+- **Updated Footer component** to link to privacy policy page:
+  - Changed privacy link from `href="#"` to `href="/privacy"`
+  - Updated contact link text to use hardcoded "Liên hệ" instead of translation key
+- **Added complete multilingual translations** for all 4 languages (VI, EN, JA, KO)
+
+### **Privacy Policy Content:**
+- **Section 1**: General Principles - Commitment to data protection
+- **Section 2**: Data Collection Scope - Contact info, technical data, other information
+- **Section 3**: Data Usage Purpose - Service provision, website management, marketing, security
+- **Section 4**: Data Security Mechanisms - Encryption, secure servers, access control
+- **Section 5**: Data Sharing Policy - Consent requirements, trusted partners, legal compliance
+- **Section 6**: User Rights - Access/edit rights, deletion rights, opt-out rights
+
+### **Files Created:**
+- `app/privacy/page.tsx` - Privacy policy page route with SEO metadata
+- `app/privacy/PrivacyPageClient.tsx` - Main privacy policy component
+
+### **Files Modified:**
+- `components/Footer.tsx` - Updated privacy link and contact link
+- `translations/vi.ts`, `translations/en.ts`, `translations/ja.ts`, `translations/ko.ts` - Added privacy content
+
+### **Technical Implementation:**
+- **SEO Optimization**: Comprehensive metadata for privacy policy keywords
+- **Visual Design**: Professional layout with section icons and gradients
+- **Multilingual Support**: Full translations covering legal terminology
+- **Contact Integration**: Dedicated privacy contact information
+- **Responsive Design**: Mobile-first approach with proper spacing
+- **Accessibility**: Proper heading structure and focus states
+
+### **Legal Compliance Features:**
+- **GDPR Compliance**: Covers user rights including access, deletion, opt-out
+- **Data Collection Transparency**: Clear explanation of what data is collected
+- **Purpose Limitation**: Specific purposes for data usage listed
+- **Security Measures**: Detailed security and storage mechanisms
+- **User Control**: Clear explanation of user rights and how to exercise them
+- **Contact Information**: Dedicated privacy contact for inquiries
+
+### **Content Strategy:**
+- **Professional Tone**: Legal accuracy while maintaining readability
+- **Comprehensive Coverage**: All major privacy policy requirements included
+- **User-Friendly Format**: Section-based layout with clear icons and descriptions
+- **Transparency**: Open about data practices and user rights
+- **Compliance Ready**: Structured to meet Vietnamese and international privacy regulations
+
+## 2024-12-19: Terms of Service Page Creation - COMPLETED
+
+### **Changes Made:**
+- **Created comprehensive Terms of Service page** with complete multilingual support:
+  - 7 main sections: Introduction, Services Provided, Customer Rights, Mercury Rights, Intellectual Property, Dispute Resolution, Terms Changes
+  - Professional legal content covering all aspects of service terms
+  - Contact section with dedicated legal email and phone
+  - Last updated date display
+- **Updated Footer component** to link to terms of service page:
+  - Changed terms link from `href="#"` to `href="/terms"`
+- **Added complete multilingual translations** for all 4 languages (VI, EN, JA, KO)
+
+### **Terms of Service Content:**
+- **Section 1**: Introduction and Terms Acceptance - Welcome and agreement to terms
+- **Section 2**: Services Provided - Digital Transformation and Digital Marketing services
+- **Section 3**: Customer Rights and Responsibilities - Information accuracy, legal use, account security
+- **Section 4**: Mercury Solutions Rights and Responsibilities - Service quality, changes, liability limits
+- **Section 5**: Intellectual Property Rights - Website content ownership and developed products
+- **Section 6**: Dispute Resolution - Negotiation, mediation, court jurisdiction
+- **Section 7**: Terms Changes - Right to modify terms and continued use agreement
+
+### **Files Created:**
+- `app/terms/page.tsx` - Terms of service page route with SEO metadata
+- `app/terms/TermsPageClient.tsx` - Main terms of service component
+
+### **Files Modified:**
+- `components/Footer.tsx` - Updated terms link to `/terms`
+- `translations/vi.ts`, `translations/en.ts`, `translations/ja.ts`, `translations/ko.ts` - Added terms content
+
+### **Technical Implementation:**
+- **SEO Optimization**: Comprehensive metadata for terms of service keywords
+- **Visual Design**: Professional layout with section icons and gradients
+- **Multilingual Support**: Full translations covering legal terminology
+- **Contact Integration**: Dedicated legal contact information
+- **Responsive Design**: Mobile-first approach with proper spacing
+- **Accessibility**: Proper heading structure and focus states
+
+### **Legal Compliance Features:**
+- **Service Agreement**: Clear definition of services provided
+- **Rights and Responsibilities**: Detailed customer and company obligations
+- **Intellectual Property**: Clear ownership and usage rights
+- **Dispute Resolution**: Structured conflict resolution process
+- **Terms Modification**: Clear process for terms updates
+- **Contact Information**: Dedicated legal contact for inquiries
+
+### **Content Strategy:**
+- **Professional Tone**: Legal accuracy while maintaining readability
+- **Comprehensive Coverage**: All major terms of service requirements included
+- **User-Friendly Format**: Section-based layout with clear icons and descriptions
+- **Transparency**: Open about rights, responsibilities and service terms
+- **Compliance Ready**: Structured to meet Vietnamese and international legal requirements

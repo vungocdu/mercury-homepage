@@ -12,38 +12,69 @@ export default function Contact() {
     company: '',
     email: '',
     phone: '',
-    message: ''
+    message: '',
+    service: ''
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitSuccess, setSubmitSuccess] = useState(false)
+  const [submitError, setSubmitError] = useState('')
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitError('')
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    console.log('Form submitted:', formData)
-    setSubmitSuccess(true)
-    setIsSubmitting(false)
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setFormData({
-        firstName: '',
-        lastName: '',
-        company: '',
-        email: '',
-        phone: '',
-        message: ''
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          message: formData.message,
+          source: 'contact_form'
+        }),
       })
-      setSubmitSuccess(false)
-    }, 3000)
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.message || 'Failed to submit form')
+      }
+
+      const result = await response.json()
+      console.log('Form submitted successfully:', result)
+      
+      setSubmitSuccess(true)
+      
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setFormData({
+          firstName: '',
+          lastName: '',
+          company: '',
+          email: '',
+          phone: '',
+          message: '',
+          service: ''
+        })
+        setSubmitSuccess(false)
+      }, 3000)
+      
+    } catch (error) {
+      console.error('Form submission error:', error)
+      setSubmitError(error instanceof Error ? error.message : 'Failed to submit form')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -190,6 +221,32 @@ export default function Contact() {
                 </div>
               </div>
               
+              {/* Service Selection */}
+              <div className="group">
+                <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-2 group-focus-within:text-mercury-blue-600 transition-colors duration-200">
+                  Dịch vụ quan tâm *
+                </label>
+                <div className="relative">
+                  <select
+                    id="service"
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    required
+                    className="w-full pl-4 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-mercury-blue-500 focus:ring-4 focus:ring-mercury-blue-100 transition-all duration-200 bg-white appearance-none"
+                  >
+                    <option value="">-- Chọn dịch vụ --</option>
+                    <option value="software">💻 Phát triển phần mềm (Web/Mobile App, AI)</option>
+                    <option value="tvc">🎬 Sản xuất TVC (Video quảng cáo, giới thiệu)</option>
+                  </select>
+                  <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                    <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
               {/* Company Field */}
               <div className="group">
                 <label htmlFor="company" className="block text-sm font-semibold text-gray-700 mb-2 group-focus-within:text-mercury-blue-600 transition-colors duration-200">
@@ -268,6 +325,22 @@ export default function Contact() {
                 </div>
               </div>
               
+              {/* Error Message */}
+              {submitError && (
+                <div className="p-4 bg-red-50 border border-red-200 rounded-xl">
+                  <p className="text-red-600 text-sm font-medium">{submitError}</p>
+                </div>
+              )}
+              
+              {/* Success Message */}
+              {submitSuccess && (
+                <div className="p-4 bg-green-50 border border-green-200 rounded-xl">
+                  <p className="text-green-600 text-sm font-medium">
+                    Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất có thể.
+                  </p>
+                </div>
+              )}
+
               {/* Submit Button */}
               <button
                 type="submit"
