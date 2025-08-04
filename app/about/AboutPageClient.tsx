@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { MapPin, Phone, Mail, FileText, Target, Eye, Users, Award, Calendar, Building2 } from 'lucide-react'
+import { MapPin, Phone, Mail, FileText, Target, Eye, Users, Calendar, Building2 } from 'lucide-react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import { useLanguage } from '../../contexts/LanguageContext'
@@ -9,43 +9,59 @@ import { useLanguage } from '../../contexts/LanguageContext'
 export default function AboutPageClient() {
   const { translations } = useLanguage()
   
-  // Type assertion to avoid TypeScript errors
+  // Type assertion to avoid TypeScript errors with safe fallback
   const t = translations as any // eslint-disable-line @typescript-eslint/no-explicit-any
+
+  // Early return if translations are not ready
+  if (!t || !t.about || !t.about.company) {
+    return (
+      <>
+        <Header />
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-mercury-blue-50 via-white to-mercury-gold-50">
+          <div className="text-center">
+            <div className="inline-block animate-spin rounded-full h-32 w-32 border-b-2 border-mercury-blue-600"></div>
+            <p className="mt-4 text-lg text-gray-600">Loading...</p>
+          </div>
+        </div>
+        <Footer />
+      </>
+    )
+  }
 
   const companyInfo = [
     {
       icon: Building2,
-      label: t.about.company.name,
+      label: t.about.company.name || "Company Name",
       value: "Mercury Solutions",
       gradient: "from-mercury-blue-500 to-mercury-blue-600"
     },
     {
       icon: MapPin,
-      label: t.about.company.address,
+      label: t.about.company.address || "Address",
       value: "123 Đường Nguyễn Văn Linh, Quận 7, TP. Hồ Chí Minh, Việt Nam",
       gradient: "from-mercury-gold-500 to-mercury-gold-600"
     },
     {
       icon: FileText,
-      label: t.about.company.taxCode,
+      label: t.about.company.taxCode || "Tax Code",
       value: "0123456789",
       gradient: "from-blue-500 to-purple-600"
     },
     {
       icon: Phone,
-      label: t.about.company.phone,
+      label: t.about.company.phone || "Phone",
       value: "+84 (0)28 3xxx xxxx",
       gradient: "from-green-500 to-teal-600"
     },
     {
       icon: Mail,
-      label: t.about.company.email,
+      label: t.about.company.email || "Email",
       value: "info@mercurysolutions.vn",
       gradient: "from-red-500 to-pink-600"
     },
     {
       icon: Calendar,
-      label: t.about.company.founded,
+      label: t.about.company.founded || "Founded Year",
       value: "2020",
       gradient: "from-indigo-500 to-purple-600"
     }
@@ -54,20 +70,20 @@ export default function AboutPageClient() {
   const values = [
     {
       icon: Target,
-      title: t.about.mission.title,
-      description: t.about.mission.description,
+      title: t.about?.mission?.title || "Mission",
+      description: t.about?.mission?.description || "Our mission description",
       gradient: "from-mercury-blue-500 to-mercury-blue-600"
     },
     {
       icon: Eye,
-      title: t.about.vision.title,
-      description: t.about.vision.description,
+      title: t.about?.vision?.title || "Vision", 
+      description: t.about?.vision?.description || "Our vision description",
       gradient: "from-mercury-gold-500 to-mercury-gold-600"
     },
     {
       icon: Users,
-      title: t.about.values.title,
-      description: t.about.values.description,
+      title: t.about?.values?.title || "Values",
+      description: t.about?.values?.description || "Our values description",
       gradient: "from-purple-500 to-indigo-600"
     }
   ]
@@ -87,15 +103,15 @@ export default function AboutPageClient() {
           >
             <div className="flex items-center justify-center space-x-2 mb-6">
               <Building2 className="w-8 h-8 text-mercury-blue-600" />
-              <span className="text-mercury-blue-600 font-semibold text-lg">{t.about.badge}</span>
+              <span className="text-mercury-blue-600 font-semibold text-lg">{t.about?.badge || "About Mercury Solutions"}</span>
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-800 bg-clip-text text-transparent">
-              {t.about.hero.title}
+              {t.about?.hero?.title || "About Us"}
             </h1>
             
             <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed">
-              {t.about.hero.subtitle}
+              {t.about?.hero?.subtitle || "Learn more about our company"}
             </p>
           </motion.div>
         </div>
@@ -112,10 +128,10 @@ export default function AboutPageClient() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-gray-800">
-              {t.about.company.title}
+              {t.about?.company?.title || "Company Information"}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t.about.company.description}
+              {t.about?.company?.description || "Learn more about our company"}
             </p>
           </motion.div>
 
@@ -156,10 +172,10 @@ export default function AboutPageClient() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-800 bg-clip-text text-transparent">
-              {t.about.values.sectionTitle}
+              {t.about?.values?.sectionTitle || "Vision, Mission & Values"}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t.about.values.sectionDescription}
+              {t.about?.values?.sectionDescription || "Our guiding principles"}
             </p>
           </motion.div>
 
@@ -201,10 +217,10 @@ export default function AboutPageClient() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-white">
-              {t.about.cta.title}
+              {t.about?.cta?.title || "Ready to partner with Mercury Solutions?"}
             </h2>
             <p className="text-xl mb-8 max-w-3xl mx-auto text-mercury-blue-100">
-              {t.about.cta.description}
+              {t.about?.cta?.description || "Let us help you achieve your goals"}
             </p>
             <motion.a 
               href="#contact"
@@ -212,7 +228,7 @@ export default function AboutPageClient() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              {t.about.cta.button}
+              {t.about?.cta?.button || "Contact Now"}
             </motion.a>
           </motion.div>
         </div>
