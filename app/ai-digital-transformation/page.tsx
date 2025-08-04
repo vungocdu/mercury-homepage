@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import AIDigitalTransformationClient from './AIDigitalTransformationClient'
 
 // Force dynamic rendering for Next.js 15 compatibility
-export const dynamic = 'force-dynamic'
+export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'AI Digital Transformation - Chuyển đổi số với AI | Mercury Solutions',

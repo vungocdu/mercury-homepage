@@ -26,29 +26,26 @@ export default function Contact() {
     setSubmitError('')
     
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          firstName: formData.firstName,
-          lastName: formData.lastName,
-          email: formData.email,
-          phone: formData.phone,
-          company: formData.company,
-          message: formData.message,
-          source: 'contact_form'
-        }),
-      })
-
-      if (!response.ok) {
-        const errorData = await response.json()
-        throw new Error(errorData.message || 'Failed to submit form')
+      // Check if we have environment variables for production
+      if (typeof window !== 'undefined' && !process.env.NEXT_PUBLIC_SUPABASE_URL) {
+        throw new Error('Contact form is not configured. Please contact us directly via email: info@minova.vn')
       }
 
-      const result = await response.json()
-      console.log('Form submitted successfully:', result)
+      // Import and use client-side Supabase
+      const { insertContactSubmission } = await import('@/lib/supabase-client')
+      
+      const contactSubmission = await insertContactSubmission({
+        first_name: formData.firstName,
+        last_name: formData.lastName,
+        email: formData.email,
+        phone: formData.phone || undefined,
+        company: formData.company || undefined,
+        message: formData.message,
+        source: formData.service ? `contact_form_${formData.service}` : 'contact_form',
+        status: 'new'
+      })
+
+      console.log('Form submitted successfully:', contactSubmission)
       
       setSubmitSuccess(true)
       

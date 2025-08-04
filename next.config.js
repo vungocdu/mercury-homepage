@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: 'export', // Disabled for Next.js 15 compatibility
+  output: 'export', // Enable static export for GitLab Pages
   trailingSlash: true,
   images: {
-    domains: ['minova.vn'],
+    domains: ['mercurysolutions.vn'],
     unoptimized: true,
   },
 }

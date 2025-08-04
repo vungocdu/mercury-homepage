@@ -14,9 +14,15 @@ cache:
 # Build stage
 build:
   stage: build
-  image: node:18-alpine
+  image: node:20-alpine  # Updated to Node.js 20 to fix deprecation warning
   only:
     - main
+  variables:
+    # Environment variables for build process
+    # Set these in GitLab CI/CD Variables: Settings > CI/CD > Variables
+    NEXT_PUBLIC_SUPABASE_URL: $NEXT_PUBLIC_SUPABASE_URL
+    NEXT_PUBLIC_SUPABASE_ANON_KEY: $NEXT_PUBLIC_SUPABASE_ANON_KEY
+    NEXT_PUBLIC_SITE_URL: $NEXT_PUBLIC_SITE_URL
   before_script:
     # Install dependencies
     - npm ci

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import AboutPageClient from './AboutPageClient'
 
 // Force dynamic rendering for Next.js 15 compatibility
-export const dynamic = 'force-dynamic'
+export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Về chúng tôi - Mercury Solutions | Công ty Công nghệ & Truyền thông',

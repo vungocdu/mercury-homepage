@@ -7,53 +7,53 @@ import Footer from '../../components/Footer'
 import { useLanguage } from '../../contexts/LanguageContext'
 
 export default function TermsPageClient() {
-  const { translations } = useLanguage()
+  const { t, translations } = useLanguage()
 
   const sections = [
     {
       icon: FileText,
-      title: translations.terms.introduction.title,
-      content: translations.terms.introduction.content,
+      title: t('terms.introduction.title'),
+      content: t('terms.introduction.content'),
       gradient: "from-mercury-blue-500 to-mercury-blue-600"
     },
     {
       icon: Settings,
-      title: translations.terms.services.title,
-      content: translations.terms.services.content,
-      items: translations.terms.services.items,
+      title: t('terms.services.title'),
+      content: t('terms.services.content'),
+      items: translations?.terms?.services?.items || [],
       gradient: "from-mercury-gold-500 to-mercury-gold-600"
     },
     {
       icon: Users,
-      title: translations.terms.customerRights.title,
-      content: translations.terms.customerRights.content,
-      items: translations.terms.customerRights.items,
+      title: t('terms.customerRights.title'),
+      content: t('terms.customerRights.content'),
+      items: translations?.terms?.customerRights?.items || [],
       gradient: "from-green-500 to-teal-600"
     },
     {
       icon: Shield,
-      title: translations.terms.mercuryRights.title,
-      content: translations.terms.mercuryRights.content,
-      items: translations.terms.mercuryRights.items,
+      title: t('terms.mercuryRights.title'),
+      content: t('terms.mercuryRights.content'),
+      items: translations?.terms?.mercuryRights?.items || [],
       gradient: "from-purple-500 to-indigo-600"
     },
     {
       icon: Scale,
-      title: translations.terms.intellectualProperty.title,
-      content: translations.terms.intellectualProperty.content,
-      items: translations.terms.intellectualProperty.items,
+      title: t('terms.intellectualProperty.title'),
+      content: t('terms.intellectualProperty.content'),
+      items: translations?.terms?.intellectualProperty?.items || [],
       gradient: "from-red-500 to-pink-600"
     },
     {
       icon: Gavel,
-      title: translations.terms.disputeResolution.title,
-      content: translations.terms.disputeResolution.content,
+      title: t('terms.disputeResolution.title'),
+      content: t('terms.disputeResolution.content'),
       gradient: "from-blue-500 to-cyan-600"
     },
     {
       icon: AlertTriangle,
-      title: translations.terms.changes.title,
-      content: translations.terms.changes.content,
+      title: t('terms.changes.title'),
+      content: t('terms.changes.content'),
       gradient: "from-orange-500 to-red-600"
     }
   ]
@@ -73,19 +73,19 @@ export default function TermsPageClient() {
           >
             <div className="flex items-center justify-center space-x-2 mb-6">
               <FileText className="w-8 h-8 text-mercury-blue-600" />
-              <span className="text-mercury-blue-600 font-semibold text-lg">{translations.terms.badge}</span>
+              <span className="text-mercury-blue-600 font-semibold text-lg">{t('terms.badge')}</span>
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-800 bg-clip-text text-transparent">
-              {translations.terms.hero.title}
+              {t('terms.hero.title')}
             </h1>
             
             <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed">
-              {translations.terms.hero.subtitle}
+              {t('terms.hero.subtitle')}
             </p>
 
             <div className="mt-8 text-sm text-gray-600">
-              <p>{translations.terms.lastUpdated}: <span className="font-semibold">19/12/2024</span></p>
+              <p>{t('terms.lastUpdated')}: <span className="font-semibold">19/12/2024</span></p>
             </div>
           </motion.div>
         </div>
@@ -147,11 +147,11 @@ export default function TermsPageClient() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl lg:text-4xl font-bold mb-6 bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-800 bg-clip-text text-transparent">
-              {translations.terms.contact.title}
+                              {t('terms.contact.title')}
             </h2>
             
             <p className="text-xl text-gray-700 mb-8">
-              {translations.terms.contact.description}
+                              {t('terms.contact.description')}
             </p>
 
             <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">

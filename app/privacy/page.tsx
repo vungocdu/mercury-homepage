@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import PrivacyPageClient from './PrivacyPageClient'
 
 // Force dynamic rendering for Next.js 15 compatibility
-export const dynamic = 'force-dynamic'
+export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Chính Sách Bảo Mật - Mercury Solutions | Privacy Policy',

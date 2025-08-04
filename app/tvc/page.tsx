@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import TVCPageClient from './TVCPageClient'
 
 // Force dynamic rendering for Next.js 15 compatibility
-export const dynamic = 'force-dynamic'
+export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Dịch Vụ Quay Phim TVC Nhà Máy, Khu Công Nghiệp 4K | Mercury Solutions',

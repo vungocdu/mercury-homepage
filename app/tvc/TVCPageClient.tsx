@@ -53,25 +53,21 @@ export default function TVCPageClient() {
     setTvcSubmitError('')
     
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...tvcFormData,
-          service: 'tvc',
-          source: 'tvc_page'
-        }),
+      // Import and use client-side Supabase
+      const { insertContactSubmission } = await import('@/lib/supabase-client')
+      
+      const contactSubmission = await insertContactSubmission({
+        first_name: tvcFormData.firstName,
+        last_name: tvcFormData.lastName,
+        email: tvcFormData.email,
+        phone: tvcFormData.phone || undefined,
+        company: tvcFormData.company || undefined,
+        message: tvcFormData.message,
+        source: 'tvc_page',
+        status: 'new'
       })
 
-      if (!response.ok) {
-        const errorData = await response.json()
-        throw new Error(errorData.message || 'Failed to submit TVC consultation request')
-      }
-
-      const result = await response.json()
-      console.log('TVC form submitted successfully:', result)
+      console.log('TVC form submitted successfully:', contactSubmission)
       
       setTvcSubmitSuccess(true)
       

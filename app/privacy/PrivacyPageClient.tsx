@@ -7,48 +7,48 @@ import Footer from '../../components/Footer'
 import { useLanguage } from '../../contexts/LanguageContext'
 
 export default function PrivacyPageClient() {
-  const { translations } = useLanguage()
+  const { t, translations } = useLanguage()
 
   const sections = [
     {
       icon: Shield,
-      title: translations.privacy.generalPrinciples.title,
-      content: translations.privacy.generalPrinciples.content,
+      title: t('privacy.generalPrinciples.title'),
+      content: t('privacy.generalPrinciples.content'),
       gradient: "from-mercury-blue-500 to-mercury-blue-600"
     },
     {
       icon: FileText,
-      title: translations.privacy.dataCollection.title,
-      content: translations.privacy.dataCollection.content,
-      items: translations.privacy.dataCollection.items,
+      title: t('privacy.dataCollection.title'),
+      content: t('privacy.dataCollection.content'),
+      items: translations?.privacy?.dataCollection?.items || [],
       gradient: "from-mercury-gold-500 to-mercury-gold-600"
     },
     {
       icon: Eye,
-      title: translations.privacy.dataUsage.title,
-      content: translations.privacy.dataUsage.content,
-      items: translations.privacy.dataUsage.items,
+      title: t('privacy.dataUsage.title'),
+      content: t('privacy.dataUsage.content'),
+      items: translations?.privacy?.dataUsage?.items || [],
       gradient: "from-green-500 to-teal-600"
     },
     {
       icon: Lock,
-      title: translations.privacy.dataSecurity.title,
-      content: translations.privacy.dataSecurity.content,
-      items: translations.privacy.dataSecurity.items,
+      title: t('privacy.dataSecurity.title'),
+      content: t('privacy.dataSecurity.content'),
+      items: translations?.privacy?.dataSecurity?.items || [],
       gradient: "from-purple-500 to-indigo-600"
     },
     {
       icon: Settings,
-      title: translations.privacy.dataSharing.title,
-      content: translations.privacy.dataSharing.content,
-      items: translations.privacy.dataSharing.items,
+      title: t('privacy.dataSharing.title'),
+      content: t('privacy.dataSharing.content'),
+      items: translations?.privacy?.dataSharing?.items || [],
       gradient: "from-red-500 to-pink-600"
     },
     {
       icon: UserCheck,
-      title: translations.privacy.userRights.title,
-      content: translations.privacy.userRights.content,
-      items: translations.privacy.userRights.items,
+      title: t('privacy.userRights.title'),
+      content: t('privacy.userRights.content'),
+      items: translations?.privacy?.userRights?.items || [],
       gradient: "from-blue-500 to-cyan-600"
     }
   ]
@@ -68,19 +68,19 @@ export default function PrivacyPageClient() {
           >
             <div className="flex items-center justify-center space-x-2 mb-6">
               <Shield className="w-8 h-8 text-mercury-blue-600" />
-              <span className="text-mercury-blue-600 font-semibold text-lg">{translations.privacy.badge}</span>
+              <span className="text-mercury-blue-600 font-semibold text-lg">{t('privacy.badge')}</span>
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-800 bg-clip-text text-transparent">
-              {translations.privacy.hero.title}
+              {t('privacy.hero.title')}
             </h1>
             
             <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed">
-              {translations.privacy.hero.subtitle}
+              {t('privacy.hero.subtitle')}
             </p>
 
             <div className="mt-8 text-sm text-gray-600">
-              <p>{translations.privacy.lastUpdated}: <span className="font-semibold">19/12/2024</span></p>
+              <p>{t('privacy.lastUpdated')}: <span className="font-semibold">19/12/2024</span></p>
             </div>
           </motion.div>
         </div>
@@ -142,11 +142,11 @@ export default function PrivacyPageClient() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl lg:text-4xl font-bold mb-6 bg-gradient-to-r from-mercury-blue-600 to-mercury-blue-800 bg-clip-text text-transparent">
-              {translations.privacy.contact.title}
+                              {t('privacy.contact.title')}
             </h2>
             
             <p className="text-xl text-gray-700 mb-8">
-              {translations.privacy.contact.description}
+                              {t('privacy.contact.description')}
             </p>
 
             <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">

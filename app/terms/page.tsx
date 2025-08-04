@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import TermsPageClient from './TermsPageClient'
 
-// Force dynamic rendering for Next.js 15 compatibility
-export const dynamic = 'force-dynamic'
+// Force static rendering for GitLab Pages deployment
+export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Điều Khoản Dịch Vụ - Mercury Solutions | Terms of Service',
