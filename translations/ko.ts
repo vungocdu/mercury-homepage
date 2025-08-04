@@ -339,7 +339,7 @@ export const ko = {
 
   // Technology Stack
   technology: {
-    title: "우리의 기술 스택",
+    title: "우리가 사용하는 기술",
     subtitle: "AI 솔루션과 디지털 혁신을 지원하는 최첨단 기술과 프레임워크. 항상 진화하고, 항상 개선.",
     badge: "고급 기술 스택",
     categories: {
@@ -882,6 +882,21 @@ export const ko = {
     }
   },
 
+  // AI Digital Transformation Page
+  aiTransformation: {
+    badge: "AI Excellence",
+    hero: {
+      title: "성능을 혁신하고, 미래를 개척하세요.",
+      subtitle: "우리는 기업과 함께 인공지능의 무한한 잠재력을 발굴하고, 디지털 시대에서 지능적인 프로세스와 우월한 경쟁 우위를 창조합니다."
+    },
+    stats: {
+      projects: "완료된 프로젝트",
+      users: "사용자", 
+      uptime: "가동시간",
+      support: "지원"
+    }
+  },
+
   // Contact
   contact: {
     title: "연락처",
@@ -1031,7 +1046,8 @@ export const ko = {
     open: "열기",
     yes: "예",
     no: "아니오",
-    ok: "확인"
+    ok: "확인",
+    explorePortfolio: "포트폴리오 보기"
   },
 
   // Language Selector

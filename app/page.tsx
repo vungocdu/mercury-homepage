@@ -1,13 +1,8 @@
 import Hero from '@/components/Hero'
 import Services from '@/components/Services'
-import TechnologyStack from '@/components/TechnologyStack'
-import Process from '@/components/Process'
-import Projects from '@/components/Projects'
-import WhyChoose from '@/components/WhyChoose'
 import Contact from '@/components/Contact'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import TickerScroll from '@/components/TickerScroll'
 
 export default function Home() {
   return (
@@ -15,7 +10,6 @@ export default function Home() {
       <Header />
       <Hero />
       <Services />
-      <WhyChoose />
       <Contact />
       <Footer />
     </main>

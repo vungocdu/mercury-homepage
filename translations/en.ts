@@ -433,7 +433,7 @@ export const en = {
 
   // Technology Stack
   technology: {
-    title: "Our Technology Stack",
+    title: "Technologies We Use",
     subtitle: "Cutting-edge technologies and frameworks that power our AI solutions and digital innovations. Always evolving, always improving.",
     badge: "Advanced Technology Stack",
     categories: {
@@ -976,6 +976,21 @@ export const en = {
     }
   },
 
+  // AI Digital Transformation Page
+  aiTransformation: {
+    badge: "AI Excellence",
+    hero: {
+      title: "Break through performance, pave the future.",
+      subtitle: "We partner with businesses to unlock the endless potential of artificial intelligence, creating intelligent processes and superior competitive advantages in the digital era."
+    },
+    stats: {
+      projects: "Projects Completed",
+      users: "Users", 
+      uptime: "Uptime",
+      support: "Support"
+    }
+  },
+
   // Contact
   contact: {
     title: "Get In Touch",
@@ -1125,7 +1140,8 @@ export const en = {
     open: "Open",
     yes: "Yes",
     no: "No",
-    ok: "OK"
+    ok: "OK",
+    explorePortfolio: "Explore portfolio"
   },
 
   // Language Selector

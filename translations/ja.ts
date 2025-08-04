@@ -356,7 +356,7 @@ export const ja = {
 
   // Technology Stack
   technology: {
-    title: "私たちの技術スタック",
+    title: "私たちが使用する技術",
     subtitle: "AIソリューションとデジタル革新を支える最先端技術とフレームワーク。常に進化し、常に改善。",
     badge: "高度な技術スタック",
     categories: {
@@ -899,6 +899,21 @@ export const ja = {
     }
   },
 
+  // AI Digital Transformation Page
+  aiTransformation: {
+    badge: "AI Excellence",
+    hero: {
+      title: "パフォーマンスを革新し、未来を切り開く。",
+      subtitle: "私たちは企業と共に人工知能の無限の可能性を発掘し、デジタル時代における知的なプロセスと優れた競争優位性を創造します。"
+    },
+    stats: {
+      projects: "完了プロジェクト",
+      users: "ユーザー", 
+      uptime: "稼働時間",
+      support: "サポート"
+    }
+  },
+
   // Contact
   contact: {
     title: "お問い合わせ",
@@ -1048,7 +1063,8 @@ export const ja = {
     open: "開く",
     yes: "はい",
     no: "いいえ",
-    ok: "OK"
+    ok: "OK",
+    explorePortfolio: "ポートフォリオを見る"
   },
 
   // Language Selector

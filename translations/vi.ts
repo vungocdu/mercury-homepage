@@ -366,6 +366,21 @@ export const vi = {
     }
   },
 
+  // AI Digital Transformation Page
+  aiTransformation: {
+    badge: "AI Excellence",
+    hero: {
+      title: "Bứt phá hiệu suất, mở lối tương lai.",
+      subtitle: "Chúng tôi đồng hành cùng doanh nghiệp khai phá tiềm năng vô tận của trí tuệ nhân tạo, kiến tạo quy trình thông minh và lợi thế cạnh tranh vượt trội trong kỷ nguyên số."
+    },
+    stats: {
+      projects: "Dự án hoàn thành",
+      users: "Người dùng", 
+      uptime: "Uptime",
+      support: "Hỗ trợ"
+    }
+  },
+
   // Contact
   contact: {
     title: "Liên hệ",
@@ -465,12 +480,13 @@ export const vi = {
     open: "Mở",
     yes: "Có",
     no: "Không",
-    ok: "OK"
+    ok: "OK",
+    explorePortfolio: "Khám phá portfolio"
   },
 
   // Technology Stack
   technology: {
-    title: "Stack Công Nghệ Của Chúng Tôi",
+    title: "Công Nghệ Chúng Tôi Sử Dụng",
     subtitle: "Công nghệ và framework tiên tiến thúc đẩy các giải pháp AI và đổi mới số của chúng tôi. Luôn phát triển, luôn cải tiến.",
     badge: "Stack Công Nghệ Tiên Tiến",
     categories: {

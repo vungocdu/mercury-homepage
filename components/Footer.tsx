@@ -9,8 +9,8 @@ export default function Footer() {
 
   return (
     <footer className="bg-gradient-to-br from-mercury-blue-700 via-mercury-blue-800 to-mercury-blue-900 text-white">
-      <div className="container mx-auto px-4 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-7xl mx-auto">
+      <div className="container-custom py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <h3 className="text-3xl font-bold mb-6 text-white">
