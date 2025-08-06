@@ -5,14 +5,10 @@ let supabase: SupabaseClient | null = null
 
 export function getSupabaseClient() {
   if (!supabase) {
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://dhtmdfbzcglagzgyxdbs.supabase.co'
+    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRodG1kZmJ6Y2dsYWd6Z3l4ZGJzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg1MDAzMzIsImV4cCI6MjA2NDA3NjMzMn0.IOJ3N0Jv4XbCYCzNRQk4OV1hkSe52yeXrR67R4mts4M'
 
-    if (!supabaseUrl || !supabaseAnonKey) {
-      console.warn('Supabase configuration missing. Contact form will be disabled.')
-      return null
-    }
-
+    console.log('Creating Supabase client with URL:', supabaseUrl)
     supabase = createClient(supabaseUrl, supabaseAnonKey)
   }
 

@@ -908,6 +908,12 @@ export const ko = {
       firstNamePlaceholder: "이름을 입력하세요",
       lastName: "성",
       lastNamePlaceholder: "성을 입력하세요",
+      service: "관심 있는 서비스",
+      servicePlaceholder: "-- 서비스 선택 --",
+      serviceOptions: {
+        software: "💻 소프트웨어 개발 (웹/모바일 앱, AI)",
+        tvc: "🎬 TVC 제작 (광고 및 기업 영상)"
+      },
       company: "회사",
       companyPlaceholder: "회사명 (선택사항)",
       email: "이메일",
@@ -918,7 +924,14 @@ export const ko = {
       messagePlaceholder: "프로젝트에 대해 알려주세요...",
       submit: "메시지 보내기",
       sending: "전송 중...",
-      sent: "전송 완료!"
+      sent: "전송 완료!",
+      success: "문의해 주셔서 감사합니다! 가능한 한 빨리 답변드리겠습니다.",
+      errors: {
+        required: "필수 입력 항목입니다",
+        invalidEmail: "올바른 이메일 주소를 입력해 주세요",
+        submitError: "양식 전송에 실패했습니다. 다시 시도해 주세요.",
+        networkError: "네트워크 오류입니다. 연결을 확인하고 다시 시도해 주세요."
+      }
     },
     info: {
       title: "연락처 정보",

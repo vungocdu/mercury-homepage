@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test:email": "node scripts/test-email.js"
+    "test:email": "node scripts/test-email.js",
+    "test:contact": "node scripts/test-contact-api.js"
   },
   "dependencies": {
     "@mailchimp/mailchimp_marketing": "^3.0.80",
@@ -25,10 +26,11 @@
     "nodemailer": "^7.0.5",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "resend": "^4.8.0",
     "tailwind-merge": "^2.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@types/node": "^20.19.9",
     "@types/react": "^19.1.9",
     "@types/react-dom": "^19.1.7",
     "autoprefixer": "^10.0.1",

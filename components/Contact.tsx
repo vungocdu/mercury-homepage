@@ -22,17 +22,22 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    console.log('Form submit triggered with data:', formData)
     setIsSubmitting(true)
     setSubmitError('')
     
     try {
       // Check if we have environment variables for production
-      if (typeof window !== 'undefined' && !process.env.NEXT_PUBLIC_SUPABASE_URL) {
-        throw new Error('Contact form is not configured. Please contact us directly via email: info@minova.vn')
-      }
+      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://dhtmdfbzcglagzgyxdbs.supabase.co'
+      const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRodG1kZmJ6Y2dsYWd6Z3l4ZGJzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg1MDAzMzIsImV4cCI6MjA2NDA3NjMzMn0.IOJ3N0Jv4XbCYCzNRQk4OV1hkSe52yeXrR67R4mts4M'
+      
+      console.log('Supabase URL:', supabaseUrl)
+      console.log('Supabase Key available:', !!supabaseKey)
 
       // Import and use client-side Supabase
+      console.log('Importing Supabase client...')
       const { insertContactSubmission } = await import('@/lib/supabase-client')
+      console.log('Supabase client imported, calling insertContactSubmission...')
       
       const contactSubmission = await insertContactSubmission({
         first_name: formData.firstName,
@@ -176,7 +181,7 @@ export default function Contact() {
               </div>
             </div>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} method="POST" className="space-y-6">
               {/* Name Fields */}
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="group">

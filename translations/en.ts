@@ -1002,6 +1002,12 @@ export const en = {
       firstNamePlaceholder: "Your first name",
       lastName: "Last Name",
       lastNamePlaceholder: "Your last name",
+      service: "Service of Interest",
+      servicePlaceholder: "-- Select a service --",
+      serviceOptions: {
+        software: "💻 Software Development (Web/Mobile App, AI)",
+        tvc: "🎬 TVC Production (Advertising & Corporate Videos)"
+      },
       company: "Company",
       companyPlaceholder: "Company name (optional)",
       email: "Email",
@@ -1012,7 +1018,14 @@ export const en = {
       messagePlaceholder: "Tell us about your project...",
       submit: "Send Message",
       sending: "Sending...",
-      sent: "Sent!"
+      sent: "Sent!",
+      success: "Thank you for contacting us! We will respond as soon as possible.",
+      errors: {
+        required: "This field is required",
+        invalidEmail: "Please enter a valid email address",
+        submitError: "Failed to submit form. Please try again.",
+        networkError: "Network error. Please check your connection and try again."
+      }
     },
     info: {
       title: "Contact Information",

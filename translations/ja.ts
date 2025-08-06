@@ -925,6 +925,12 @@ export const ja = {
       firstNamePlaceholder: "お名前",
       lastName: "姓",
       lastNamePlaceholder: "お姓",
+      service: "ご興味のあるサービス",
+      servicePlaceholder: "-- サービスを選択 --",
+      serviceOptions: {
+        software: "💻 ソフトウェア開発（Web/モバイルアプリ、AI）",
+        tvc: "🎬 TVC制作（広告・企業ビデオ）"
+      },
       company: "会社",
       companyPlaceholder: "会社名（任意）",
       email: "メール",
@@ -935,7 +941,14 @@ export const ja = {
       messagePlaceholder: "プロジェクトについて教えてください...",
       submit: "メッセージを送信",
       sending: "送信中...",
-      sent: "送信完了！"
+      sent: "送信完了！",
+      success: "お問い合わせありがとうございます！できるだけ早くご返信いたします。",
+      errors: {
+        required: "この項目は必須です",
+        invalidEmail: "正しいメールアドレスを入力してください",
+        submitError: "フォームの送信に失敗しました。もう一度お試しください。",
+        networkError: "ネットワークエラーです。接続を確認してもう一度お試しください。"
+      }
     },
     info: {
       title: "連絡先情報",
