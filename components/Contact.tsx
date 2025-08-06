@@ -6,6 +6,10 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Contact() {
   const { t } = useLanguage()
+  
+  // Debug: Check if component is properly mounted
+  console.log('Contact component rendered')
+  
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -21,8 +25,10 @@ export default function Contact() {
   const [submitError, setSubmitError] = useState('')
 
   const handleSubmit = async (e: React.FormEvent) => {
+    console.log('handleSubmit called - preventing default...')
     e.preventDefault()
-    console.log('Form submit triggered with data:', formData)
+    console.log('Default prevented, form data:', formData)
+    
     setIsSubmitting(true)
     setSubmitError('')
     
@@ -70,7 +76,9 @@ export default function Contact() {
       
     } catch (error) {
       console.error('Form submission error:', error)
-      setSubmitError(error instanceof Error ? error.message : 'Failed to submit form')
+      console.error('Error type:', typeof error)
+      console.error('Error details:', JSON.stringify(error, null, 2))
+      setSubmitError(error instanceof Error ? error.message : `Failed to submit form: ${JSON.stringify(error)}`)
     } finally {
       setIsSubmitting(false)
     }
@@ -181,7 +189,12 @@ export default function Contact() {
               </div>
             </div>
             
-            <form onSubmit={handleSubmit} method="POST" className="space-y-6">
+            <form 
+              onSubmit={handleSubmit}
+              method="POST"
+              action=""
+              className="space-y-6"
+            >
               {/* Name Fields */}
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="group">
@@ -347,6 +360,10 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
+                onClick={(e) => {
+                  console.log('Button clicked!')
+                  // Don't prevent default here, let form handle it
+                }}
                 className={`w-full py-4 px-8 rounded-xl font-semibold text-white transition-all duration-300 transform ${
                   isSubmitting 
                     ? 'bg-gray-400 cursor-not-allowed' 
