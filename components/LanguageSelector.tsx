@@ -23,10 +23,10 @@ export default function LanguageSelector() {
   }, [])
 
   const languages = [
-    { code: 'en', name: translations.language.en, flag: '🇺🇸' },
-    { code: 'vi', name: translations.language.vi, flag: '🇻🇳' },
-    { code: 'ja', name: translations.language.ja, flag: '🇯🇵' },
-    { code: 'ko', name: translations.language.ko, flag: '🇰🇷' },
+    { code: 'en', name: translations?.language?.en || 'English', flag: '🇺🇸' },
+    { code: 'vi', name: translations?.language?.vi || 'Tiếng Việt', flag: '🇻🇳' },
+    { code: 'ja', name: translations?.language?.ja || '日本語', flag: '🇯🇵' },
+    { code: 'ko', name: translations?.language?.ko || '한국어', flag: '🇰🇷' },
   ]
 
   const currentLanguage = languages.find(lang => lang.code === language)

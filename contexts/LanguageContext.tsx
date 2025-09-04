@@ -1,35 +1,57 @@
 'use client'
 
 import React, { createContext, useContext, useState, useEffect } from 'react'
-import { en } from '@/translations/en'
-import { vi } from '@/translations/vi'
-import { ja } from '@/translations/ja'
-import { ko } from '@/translations/ko'
 
 // Use any type for translations to avoid TypeScript issues
 type TranslationType = any // eslint-disable-line @typescript-eslint/no-explicit-any
 
-// Server-side fallback
+// Lazy load translations
+let translationsCache: Record<string, TranslationType> = {}
+
+// Function to load translations dynamically
+async function loadTranslations(lang: Language): Promise<TranslationType> {
+  if (translationsCache[lang]) {
+    return translationsCache[lang]
+  }
+
+  try {
+    let translationModule
+    switch (lang) {
+      case 'en':
+        translationModule = await import('../translations/en')
+        break
+      case 'vi':
+        translationModule = await import('../translations/vi')
+        break
+      case 'ja':
+        translationModule = await import('../translations/ja')
+        break
+      case 'ko':
+        translationModule = await import('../translations/ko')
+        break
+      default:
+        translationModule = await import('../translations/en')
+    }
+
+    const translation = (translationModule as any)[lang] || translationModule
+    translationsCache[lang] = translation
+    return translation
+  } catch (error) {
+    console.error(`Failed to load translation for ${lang}:`, error)
+    // Fallback to English
+    const fallbackModule = await import('../translations/en')
+    const fallback = (fallbackModule as any).en || fallbackModule
+    translationsCache[lang] = fallback
+    return fallback
+  }
+}
+
+// Server-side fallback (simplified)
 const serverFallback = {
   language: 'en' as const,
   setLanguage: () => {},
-  t: (key: string) => {
-    const keys = key.split('.')
-    let value: unknown = en
-
-    for (const k of keys) {
-      if (value && typeof value === 'object' && k in (value as Record<string, unknown>)) {
-        value = (value as Record<string, unknown>)[k]
-      } else {
-        // Fallback to English if translation not found
-        value = keys.reduce((obj: unknown, k) => (obj as Record<string, unknown>)?.[k], en)
-        break
-      }
-    }
-
-    return typeof value === 'string' ? value : key
-  },
-  translations: en as TranslationType,
+  t: (key: string) => key,
+  translations: {} as TranslationType,
 }
 
 type Language = 'en' | 'vi' | 'ja' | 'ko'
@@ -41,18 +63,14 @@ interface LanguageContextType {
   translations: TranslationType
 }
 
-const translations: Record<Language, TranslationType> = {
-  en: en as TranslationType,
-  vi: vi as TranslationType,
-  ja: ja as TranslationType,
-  ko: ko as TranslationType,
-}
+// Translations will be loaded dynamically
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguageState] = useState<Language>('en')
   const [isClient, setIsClient] = useState(false)
+  const [currentTranslations, setCurrentTranslations] = useState<TranslationType>({})
 
   useEffect(() => {
     setIsClient(true)
@@ -68,6 +86,17 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     }
   }, [])
 
+  // Load translations when language changes
+  useEffect(() => {
+    if (isClient) {
+      loadTranslations(language).then(setCurrentTranslations).catch((error) => {
+        console.error('Failed to load translations:', error)
+        // Fallback to empty object
+        setCurrentTranslations({})
+      })
+    }
+  }, [language, isClient])
+
   const setLanguage = (lang: Language) => {
     setLanguageState(lang)
     try {
@@ -79,14 +108,12 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   const t = (key: string): string => {
     const keys = key.split('.')
-    let value: unknown = translations[language]
+    let value: unknown = currentTranslations
 
     for (const k of keys) {
       if (value && typeof value === 'object' && k in (value as Record<string, unknown>)) {
         value = (value as Record<string, unknown>)[k]
       } else {
-        // Fallback to English if translation not found
-        value = keys.reduce((obj: unknown, k) => (obj as Record<string, unknown>)?.[k], translations.en)
         break
       }
     }
@@ -98,7 +125,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     language,
     setLanguage,
     t,
-    translations: translations[language],
+    translations: currentTranslations,
   }
 
   // Only render children when client-side to avoid hydration issues
@@ -135,11 +162,11 @@ export function useLanguageClient() {
 // Main hook - uses server fallback for SSR
 export function useLanguage() {
   const context = useContext(LanguageContext)
-  
+
   // Check if we're on the server or context is undefined
   if (typeof window === 'undefined' || context === undefined) {
     return serverFallback
   }
-  
+
   return context
 } 

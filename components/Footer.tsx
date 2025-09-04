@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Footer() {
-  const { t } = useLanguage()
+  const { t, translations } = useLanguage()
   const currentYear = new Date().getFullYear()
 
   return (
@@ -17,7 +17,7 @@ export default function Footer() {
               Mercury Solutions
             </h3>
             <p className="mb-8 leading-relaxed text-gray-200 text-lg">
-              {t('footer.description')}
+              {translations?.footer?.description || 'Leading provider of AI-powered digital transformation solutions in Vietnam and Southeast Asia.'}
             </p>
             
             <div className="space-y-4">
@@ -26,7 +26,7 @@ export default function Footer() {
                   <MapPin className="w-5 h-5 text-mercury-gold-400" />
                 </div>
                 <span className="text-gray-200">
-                  {t('contact.info.address')}
+                  {translations?.contact?.info?.address || 'Ho Chi Minh City, Vietnam'}
                 </span>
               </div>
               <div className="flex items-center space-x-4">
@@ -34,7 +34,7 @@ export default function Footer() {
                   <Phone className="w-5 h-5 text-mercury-gold-400" />
                 </div>
                 <span className="text-gray-200">
-                  {t('contact.info.phone')}
+                  {translations?.contact?.info?.phone || '+84 123 456 789'}
                 </span>
               </div>
               <div className="flex items-center space-x-4">
@@ -42,7 +42,7 @@ export default function Footer() {
                   <Mail className="w-5 h-5 text-mercury-gold-400" />
                 </div>
                 <span className="text-gray-200">
-                  {t('contact.info.email')}
+                  {translations?.contact?.info?.email || 'contact@mercurysolutions.vn'}
                 </span>
               </div>
             </div>
@@ -51,37 +51,37 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h4 className="text-xl font-semibold mb-6 text-white">
-              {t('footer.services')}
+              {translations?.footer?.services || 'Services'}
             </h4>
             <ul className="space-y-3">
               <li>
                 <a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {t('services.ai.title')}
+                  {translations?.services?.ai?.title || 'AI Solutions'}
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {t('services.web.title')}
+                  {translations?.services?.web?.title || 'Web Development'}
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {t('services.mobile.title')}
+                  {translations?.services?.mobile?.title || 'Mobile Development'}
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {t('services.vision.title')}
+                  {translations?.services?.vision?.title || 'Computer Vision'}
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {t('services.devops.title')}
+                  {translations?.services?.devops?.title || 'DevOps & Cloud'}
                 </a>
               </li>
               <li>
                 <a href="/tvc" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {t('services.tvc.title')}
+                  {translations?.services?.tvc?.title || 'TVC Production'}
                 </a>
               </li>
             </ul>
@@ -90,32 +90,32 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h4 className="text-xl font-semibold mb-6 text-white">
-              {t('footer.quickLinks')}
+              {translations?.footer?.quickLinks || 'Quick Links'}
             </h4>
             <ul className="space-y-3">
               <li>
                 <a href="#home" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {t('nav.home')}
+                  {translations?.nav?.home || 'Home'}
                 </a>
               </li>
               <li>
                 <a href="#projects" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {t('nav.projects')}
+                  {translations?.nav?.projects || 'Projects'}
                 </a>
               </li>
               <li>
                 <a href="#technology" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {t('nav.technology')}
+                  {translations?.nav?.technology || 'Technology'}
                 </a>
               </li>
               <li>
                 <a href="#process" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {t('nav.process')}
+                  {translations?.nav?.process || 'Process'}
                 </a>
               </li>
               <li>
                 <a href="/tvc" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {t('nav.tvcServices')}
+                  {translations?.nav?.tvcServices || 'TVC Services'}
                 </a>
               </li>
               <li>
@@ -131,18 +131,18 @@ export default function Footer() {
         <div className="border-t border-gray-600 mt-16 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-gray-300">
-              {t('footer.copyright').replace('{year}', currentYear.toString())}
+              {(translations?.footer?.copyright || '© {year} Mercury Solutions. All rights reserved.').replace('{year}', currentYear.toString())}
             </p>
             
             <div className="flex space-x-8">
               <a href="/privacy" className="text-gray-300 hover:text-mercury-gold-400 transition-colors duration-300 text-sm">
-                {t('footer.privacy')}
+                {translations?.footer?.privacy || 'Privacy Policy'}
               </a>
               <a href="/terms" className="text-gray-300 hover:text-mercury-gold-400 transition-colors duration-300 text-sm">
-                {t('footer.terms')}
+                {translations?.footer?.terms || 'Terms of Service'}
               </a>
               <a href="#" className="text-gray-300 hover:text-mercury-gold-400 transition-colors duration-300 text-sm">
-                {t('footer.cookies')}
+                {translations?.footer?.cookies || 'Cookie Policy'}
               </a>
             </div>
           </div>

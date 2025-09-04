@@ -33,30 +33,42 @@ export default function Contact() {
     setSubmitError('')
     
     try {
-      // Check if we have environment variables for production
-      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://dhtmdfbzcglagzgyxdbs.supabase.co'
-      const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRodG1kZmJ6Y2dsYWd6Z3l4ZGJzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg1MDAzMzIsImV4cCI6MjA2NDA3NjMzMn0.IOJ3N0Jv4XbCYCzNRQk4OV1hkSe52yeXrR67R4mts4M'
-      
-      console.log('Supabase URL:', supabaseUrl)
-      console.log('Supabase Key available:', !!supabaseKey)
+      // Validate required fields
+      if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
+        throw new Error('Please fill in all required fields')
+      }
 
-      // Import and use client-side Supabase
-      console.log('Importing Supabase client...')
-      const { insertContactSubmission } = await import('@/lib/supabase-client')
-      console.log('Supabase client imported, calling insertContactSubmission...')
+      // Check if we're in browser environment and have access to dynamic imports
+      if (typeof window === 'undefined') {
+        throw new Error('This form can only be submitted from the browser')
+      }
+
+      console.log('Submitting contact form via API route...')
       
-      const contactSubmission = await insertContactSubmission({
-        first_name: formData.firstName,
-        last_name: formData.lastName,
-        email: formData.email,
-        phone: formData.phone || undefined,
-        company: formData.company || undefined,
-        message: formData.message,
-        source: formData.service ? `contact_form_${formData.service}` : 'contact_form',
-        status: 'new'
+      // Call API route for server-side processing
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone || undefined,
+          company: formData.company || undefined,
+          message: formData.message,
+          service: formData.service || undefined
+        })
       })
 
-      console.log('Form submitted successfully:', contactSubmission)
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to submit form')
+      }
+
+      console.log('✅ Contact form submitted successfully:', result)
       
       setSubmitSuccess(true)
       
@@ -75,10 +87,24 @@ export default function Contact() {
       }, 3000)
       
     } catch (error) {
-      console.error('Form submission error:', error)
-      console.error('Error type:', typeof error)
-      console.error('Error details:', JSON.stringify(error, null, 2))
-      setSubmitError(error instanceof Error ? error.message : `Failed to submit form: ${JSON.stringify(error)}`)
+      console.error('❌ Form submission error:', error)
+      
+      // More user-friendly error messages
+      let errorMessage = 'An error occurred while submitting the form. Please try again.'
+      
+      if (error instanceof Error) {
+        if (error.message.includes('RESEND_API_KEY')) {
+          errorMessage = 'Email service is not configured. Please contact support.'
+        } else if (error.message.includes('Database error')) {
+          errorMessage = 'Failed to save your message. Please try again or contact us directly.'
+        } else if (error.message.includes('required fields')) {
+          errorMessage = error.message
+        } else {
+          errorMessage = error.message
+        }
+      }
+      
+      setSubmitError(errorMessage)
     } finally {
       setIsSubmitting(false)
     }

@@ -36,29 +36,29 @@ export default function Services() {
   const digitalTransformationSolutions = [
     {
       icon: Database,
-      title: translations.services.digitalTransformation.solutions.attendance.title,
-      description: translations.services.digitalTransformation.solutions.attendance.description,
+      title: translations?.services?.digitalTransformation?.solutions?.attendance?.title || 'Attendance Management',
+      description: translations?.services?.digitalTransformation?.solutions?.attendance?.description || 'Smart attendance management system with AI-powered recognition',
       color: 'hsl(var(--link-primary))',
       partner: 'Fujikin Corporation (Japan)'
     },
     {
       icon: Dumbbell,
-      title: translations.services.digitalTransformation.solutions.gym.title,
-      description: translations.services.digitalTransformation.solutions.gym.description,
+      title: translations?.services?.digitalTransformation?.solutions?.gym?.title || 'Gym Management',
+      description: translations?.services?.digitalTransformation?.solutions?.gym?.description || 'AI-powered gym management and member tracking system',
       color: 'hsl(var(--success-color))',
       partner: 'Actiwell - AI Solution'
     },
     {
       icon: Hotel,
-      title: translations.services.digitalTransformation.solutions.hotel.title,
-      description: translations.services.digitalTransformation.solutions.hotel.description,
+      title: translations?.services?.digitalTransformation?.solutions?.hotel?.title || 'Hotel Management',
+      description: translations?.services?.digitalTransformation?.solutions?.hotel?.description || 'Comprehensive hotel management system with AI optimization',
       color: 'hsl(var(--warning-color))',
       partner: 'Minova Hotel Group'
     },
     {
       icon: Building2,
-      title: translations.services.digitalTransformation.solutions.enterprise.title,
-      description: translations.services.digitalTransformation.solutions.enterprise.description,
+      title: translations?.services?.digitalTransformation?.solutions?.enterprise?.title || 'Enterprise Solutions',
+      description: translations?.services?.digitalTransformation?.solutions?.enterprise?.description || 'Custom enterprise solutions with AI integration',
       color: 'hsl(var(--link-primary))',
       partner: 'MyArms (Japan)'
     }
@@ -68,8 +68,8 @@ export default function Services() {
   const digitalMarketingServices = [
     {
       icon: Video,
-      title: translations.services.digitalMarketing.services.tvc.title,
-      description: translations.services.digitalMarketing.services.tvc.description,
+      title: translations?.services?.digitalMarketing?.services?.tvc?.title || 'TVC Production',
+      description: translations?.services?.digitalMarketing?.services?.tvc?.description || 'Professional TVC video production services',
       color: 'hsl(var(--success-color))',
       partners: ['Jworld Vina (Korea)', 'Fujikin Viet Nam']
     }
@@ -103,7 +103,7 @@ export default function Services() {
             </h2>
             
             <p className="text-xl max-w-3xl mx-auto" style={{ color: 'hsl(var(--text-secondary))' }}>
-              {translations.services.subtitle}
+              {translations?.services?.subtitle}
             </p>
           </TextReveal>
         </ClientOnly>
@@ -113,13 +113,13 @@ export default function Services() {
           <TextReveal className="mb-16">
             <div className="text-center mb-12">
               <h3 className="text-2xl lg:text-3xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>
-                {translations.services.digitalTransformation.title}
+                {translations?.services?.digitalTransformation.title}
               </h3>
               <p className="text-lg mb-2" style={{ color: 'hsl(var(--link-primary))' }}>
-                {translations.services.digitalTransformation.subtitle}
+                {translations?.services?.digitalTransformation.subtitle}
               </p>
               <p className="text-base max-w-4xl mx-auto" style={{ color: 'hsl(var(--text-secondary))' }}>
-                {translations.services.digitalTransformation.description}
+                {translations?.services?.digitalTransformation.description}
               </p>
             </div>
 
@@ -191,13 +191,13 @@ export default function Services() {
           <TextReveal className="mb-16">
             <div className="text-center mb-12">
               <h3 className="text-2xl lg:text-3xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>
-                {translations.services.digitalMarketing.title}
+                {translations?.services?.digitalMarketing.title}
               </h3>
               <p className="text-lg mb-2" style={{ color: 'hsl(var(--link-primary))' }}>
-                {translations.services.digitalMarketing.subtitle}
+                {translations?.services?.digitalMarketing.subtitle}
               </p>
               <p className="text-base max-w-4xl mx-auto" style={{ color: 'hsl(var(--text-secondary))' }}>
-                {translations.services.digitalMarketing.description}
+                {translations?.services?.digitalMarketing.description}
               </p>
             </div>
 

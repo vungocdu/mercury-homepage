@@ -113,7 +113,7 @@ export const en = {
     badge: "About Mercury Solutions",
     hero: {
       title: "About Us",
-      subtitle: "Mercury Solutions was born from the aspiration to create a better and more convenient life for everyone through the power of technology. We continuously innovate to become a solid bridge between businesses and the digital future, bringing breakthrough solutions and sustainable value."
+      subtitle: "Born from a deep understanding of business challenges in the digital era, Mercury Solutions emerges with a mission to become a trusted partner, accompanying you on your powerful transformation journey. We believe that the combination of advanced technology and creative marketing strategies will create a strong momentum for every business."
     },
     company: {
       title: "Company Information",
@@ -125,36 +125,39 @@ export const en = {
       email: "Email",
       founded: "Founded Year"
     },
+    companyInfo: {
+      name: "MERCURY SOLUTIONS VIETNAM COMPANY LIMITED",
+      address: "5th Floor, 33/41 Thai Ha Street, Trung Liet Ward, Dong Da District, Hanoi City, Vietnam",
+      taxCode: "0123456789",
+      phone: "+84 (0)28 3xxx xxxx",
+      email: "info@mercurysolutions.vn",
+      founded: "2020"
+    },
     mission: {
       title: "Mission",
-      description: "Mercury Solutions' mission is to provide breakthrough technology solutions and creative marketing services, helping businesses optimize performance, develop sustainably and contribute to building a more convenient and better life for the community.",
-      details: {
-        title: "To fulfill this mission, we focus on:",
-        items: [
-          {
-            title: "Technology Innovation",
-            description: "Continuously researching and applying the latest technologies such as AI, IoT, and digital platforms to create outstanding products."
-          },
-          {
-            title: "Partner Collaboration",
-            description: "Always listening and understanding customer needs, working with them to build the most suitable and effective solutions."
-          },
-          {
-            title: "Value Creation",
-            description: "Not only bringing economic benefits to businesses but also contributing to the general development of society, improving quality of life."
-          }
-        ]
-      }
+      description: "We create result-oriented products. Through technology products, we digitize and automate core processes, helping businesses optimize operations, production, and business. Simultaneously, through media products, we transform technological value and brand stature into compelling stories, becoming powerful tools to optimize sales processes and conquer customers. Each product is designed to bring measurable value."
     },
     vision: {
       title: "Vision",
-      description: "Our vision is to become a pioneering technology company, creating a comprehensive digital ecosystem where every individual and business can enjoy the best conveniences. We envision a future where technology becomes a powerful assistant, liberating people from repetitive work, thereby giving everyone more time to create, develop and enjoy life."
+      description: "To become the most reliable ecosystem of products where businesses turn to create smart operating machines and equip themselves with highly persuasive sales tools, transforming performance and brand into parallel competitive advantages."
     },
     values: {
       title: "Core Values",
-      description: "With a team of experienced experts and strategic partnerships with world-leading partners, Mercury Solutions is committed to delivering products and services that are not only effective but also highly applicable, helping your business reach further in the digital era.",
+      description: "Build - Measure - Learn and Partnership as a Feature are the two core values that guide all our activities.",
       sectionTitle: "Vision, Mission & Values",
-      sectionDescription: "The principles and directions that guide Mercury Solutions in its development journey and customer service."
+      sectionDescription: "The principles and directions that guide Mercury Solutions in its development journey and customer service.",
+      coreValues: {
+        buildMeasureLearn: {
+          title: "Build - Measure - Learn",
+          subtitle: "Build - Measure - Learn",
+          description: "This cycle is the DNA in how we develop products. It is applied to refining a management system to reduce redundant operations for employees, and also applied to optimizing a sales message in video to hit the target customer's psychology. We continuously improve to make the product deliver the highest effectiveness."
+        },
+        partnershipAsFeature: {
+          title: "Partnership as a Feature",
+          subtitle: "Partnership as a Feature",
+          description: "When you choose Mercury, you don't just get a product. You get a strategic partner team. We are digital transformation consultants helping you reshape processes, and simultaneously marketing strategists helping you conquer the market. This partnership is an integral part of the product's core value."
+        }
+      }
     },
     cta: {
       title: "Ready to partner with Mercury Solutions?",

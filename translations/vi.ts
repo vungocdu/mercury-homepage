@@ -114,7 +114,7 @@ export const vi = {
     badge: "Về Mercury Solutions",
     hero: {
       title: "Về Chúng Tôi",
-      subtitle: "Mercury Solutions ra đời từ khát vọng tạo nên một cuộc sống tốt đẹp và tiện ích hơn cho tất cả mọi người thông qua sức mạnh của công nghệ. Chúng tôi không ngừng sáng tạo để trở thành cầu nối vững chắc giữa doanh nghiệp và tương lai số, mang lại những giải pháp đột phá và giá trị bền vững."
+      subtitle: "Bắt nguồn từ sự thấu hiểu sâu sắc những thách thức của doanh nghiệp trong kỷ nguyên số, Mercury Solutions ra đời với sứ mệnh trở thành đối tác tin cậy, đồng hành cùng bạn trên hành trình chuyển mình mạnh mẽ. Chúng tôi tin rằng, sự kết hợp giữa công nghệ tiên tiến và chiến lược marketing sáng tạo sẽ tạo nên sức bật mạnh mẽ cho mọi doanh nghiệp."
     },
     company: {
       title: "Thông tin công ty",
@@ -126,36 +126,39 @@ export const vi = {
       email: "Email",
       founded: "Năm thành lập"
     },
+    companyInfo: {
+      name: "MERCURY SOLUTIONS VIETNAM COMPANY LIMITED",
+      address: "Tầng 5, số nhà 33/41 Thái Hà, Phường Trung Liệt, Quận Đống Đa, Thành phố Hà Nội, Việt Nam",
+      taxCode: "0123456789",
+      phone: "+84 (0)28 3xxx xxxx",
+      email: "info@mercurysolutions.vn",
+      founded: "2020"
+    },
     mission: {
       title: "Sứ Mệnh (Mission)",
-      description: "Sứ mệnh của Mercury Solutions là cung cấp các giải pháp công nghệ đột phá và dịch vụ marketing sáng tạo, giúp doanh nghiệp tối ưu hóa hiệu suất, phát triển bền vững và đóng góp vào việc xây dựng một cuộc sống tiện ích, tốt đẹp hơn cho cộng đồng.",
-      details: {
-        title: "Để thực hiện sứ mệnh này, chúng tôi tập trung vào:",
-        items: [
-          {
-            title: "Đổi mới công nghệ",
-            description: "Liên tục nghiên cứu và ứng dụng các công nghệ mới nhất như AI, IoT, và các nền tảng số hóa để tạo ra những sản phẩm vượt trội."
-          },
-          {
-            title: "Đồng hành cùng đối tác",
-            description: "Luôn lắng nghe và thấu hiểu nhu cầu của khách hàng, cùng họ xây dựng các giải pháp phù hợp và hiệu quả nhất."
-          },
-          {
-            title: "Tạo dựng giá trị",
-            description: "Không chỉ mang lại lợi ích kinh tế cho doanh nghiệp mà còn đóng góp vào sự phát triển chung của xã hội, nâng cao chất lượng cuộc sống."
-          }
-        ]
-      }
+      description: "Chúng tôi kiến tạo các sản phẩm hướng đến kết quả. Thông qua các sản phẩm công nghệ, chúng tôi số hóa và tự động hóa các quy trình cốt lõi, giúp doanh nghiệp tối ưu hóa vận hành, sản xuất và kinh doanh. Song song đó, thông qua các sản phẩm media, chúng tôi chuyển hóa giá trị công nghệ và tầm vóc thương hiệu thành những câu chuyện lôi cuốn, trở thành công cụ đắc lực tối ưu hóa quy trình bán hàng và chinh phục khách hàng. Mỗi sản phẩm đều được thiết kế để mang lại một giá trị đo lường được."
     },
     vision: {
       title: "Tầm Nhìn (Vision)",
-      description: "Tầm nhìn của chúng tôi là trở thành công ty công nghệ tiên phong, kiến tạo một hệ sinh thái số toàn diện, nơi mọi cá nhân và doanh nghiệp đều được hưởng thụ những tiện ích tốt đẹp nhất. Chúng tôi hình dung về một tương lai nơi công nghệ trở thành trợ thủ đắc lực, giải phóng con người khỏi những công việc lặp lại, từ đó mọi người có thêm thời gian để sáng tạo, phát triển và tận hưởng cuộc sống."
+      description: "Trở thành hệ sinh thái sản phẩm đáng tin cậy nhất, nơi các doanh nghiệp tìm đến để kiến tạo nên những bộ máy vận hành thông minh và trang bị những công cụ bán hàng đầy sức thuyết phục, biến hiệu suất và thương hiệu thành lợi thế cạnh tranh song hành."
     },
     values: {
       title: "Giá trị cốt lõi",
-      description: "Với đội ngũ chuyên gia giàu kinh nghiệm và sự hợp tác chiến lược với các đối tác hàng đầu thế giới, Mercury Solutions cam kết mang đến những sản phẩm và dịch vụ không chỉ hiệu quả mà còn có tính ứng dụng cao, giúp doanh nghiệp bạn vươn xa hơn trong kỷ nguyên số.",
+      description: "Xây dựng - Đo lường - Học hỏi (Build - Measure - Learn) và Đối tác là một Tính năng (Partnership as a Feature) là hai giá trị cốt lõi định hướng mọi hoạt động của chúng tôi.",
       sectionTitle: "Tầm nhìn, Sứ mệnh & Giá trị",
-      sectionDescription: "Những nguyên tắc và định hướng dẫn dắt Mercury Solutions trong hành trình phát triển và phục vụ khách hàng."
+      sectionDescription: "Những nguyên tắc và định hướng dẫn dắt Mercury Solutions trong hành trình phát triển và phục vụ khách hàng.",
+      coreValues: {
+        buildMeasureLearn: {
+          title: "Xây dựng - Đo lường - Học hỏi",
+          subtitle: "Build - Measure - Learn",
+          description: "Vòng lặp này là DNA trong cách chúng tôi phát triển sản phẩm. Nó được áp dụng cho việc tinh chỉnh một hệ thống quản trị để giảm thao tác thừa cho nhân viên, và cũng được áp dụng cho việc tối ưu hóa một thông điệp bán hàng trong video để đánh trúng tâm lý khách hàng mục tiêu. Chúng tôi không ngừng cải tiến để sản phẩm mang lại hiệu quả cao nhất."
+        },
+        partnershipAsFeature: {
+          title: "Đối tác là một Tính năng",
+          subtitle: "Partnership as a Feature",
+          description: "Khi bạn chọn Mercury, bạn không chỉ nhận được một sản phẩm. Bạn nhận được một đội ngũ đối tác chiến lược. Chúng tôi là chuyên gia tư vấn chuyển đổi số giúp bạn định hình lại quy trình, và đồng thời là chiến lược gia truyền thông bán hàng giúp bạn chinh phục thị trường. Sự đồng hành này là một phần giá trị cốt lõi của sản phẩm."
+        }
+      }
     },
     cta: {
       title: "Sẵn sàng hợp tác cùng Mercury Solutions?",

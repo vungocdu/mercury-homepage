@@ -113,7 +113,7 @@ export const ko = {
     badge: "Mercury Solutions 소개",
     hero: {
       title: "디지털 시대의 기업과 함께하는 파트너",
-      subtitle: "Mercury Solutions는 AI, 디지털 트랜스포메이션, 비디오 프로덕션 분야의 선구적인 기업으로서, 베트남 기업에게 가장 혁신적이고 효과적인 기술 솔루션을 제공합니다."
+      subtitle: "디지털 시대 기업의 도전을 깊이 이해하며 탄생한 Mercury Solutions는 신뢰할 수 있는 파트너로서 강력한 혁신 여정에 동행합니다. 우리는 첨단 기술과 창의적 마케팅 전략의 결합이 모든 기업에 강력한 추진력을 창출한다고 믿습니다."
     },
     company: {
       title: "회사 정보",
@@ -125,19 +125,39 @@ export const ko = {
       email: "이메일",
       founded: "설립년도"
     },
+    companyInfo: {
+      name: "MERCURY SOLUTIONS VIETNAM COMPANY LIMITED",
+      address: "베트남 하노이시 동다구 중렬구 태하 거리 33/41번지 5층",
+      taxCode: "0123456789",
+      phone: "+84 (0)28 3xxx xxxx",
+      email: "info@mercurysolutions.vn",
+      founded: "2020"
+    },
     mission: {
       title: "미션",
-      description: "베트남 기업의 디지털 트랜스포메이션 여정에 동반하며, 경쟁력 향상과 지속가능한 발전을 위해 최첨단 AI와 기술 솔루션을 제공합니다."
+      description: "우리는 결과 지향적인 제품을 만듭니다. 기술 제품을 통해 코어 프로세스를 디지털화하고 자동화하여 기업의 운영, 생산, 비즈니스를 최적화합니다. 동시에, 미디어 제품을 통해 기술적 가치와 브랜드 지위를 설득력 있는 스토리로 변환하여 영업 프로세스를 최적화하고 고객을 정복하는 강력한 도구가 됩니다. 각 제품은 측정 가능한 가치를 가져오도록 설계되었습니다."
     },
     vision: {
       title: "비전",
-      description: "AI와 디지털 트랜스포메이션 솔루션에서 동남아시아를 선도하는 기업이 되어, 스마트하고 발전적인 디지털 미래 구축에 기여합니다."
+      description: "가장 신뢰할 수 있는 제품 생태계가 되어 기업이 스마트한 운영 기계를 만들고 고도로 설득력 있는 영업 도구를 갖추기 위해 찾는 곳이 되는 것. 성과와 브랜드를 병행하는 경쟁 우위성으로 바꾸는 것."
     },
     values: {
       title: "핵심 가치",
-      description: "기술의 힘, 끊임없는 혁신, 그리고 고객에게 최고의 가치를 제공하겠다는 약속을 믿습니다.",
+      description: "\"구축 - 측정 - 학습\"과 \"파트너십은 특징\"은 우리의 모든 활동을 이끄는 두 가지 핵심 가치입니다.",
       sectionTitle: "비전, 미션, 가치",
-      sectionDescription: "Mercury Solutions의 발전과 고객 서비스 여정을 이끄는 원칙과 방향성입니다."
+      sectionDescription: "Mercury Solutions의 발전과 고객 서비스 여정을 이끄는 원칙과 방향성입니다.",
+      coreValues: {
+        buildMeasureLearn: {
+          title: "구축 - 측정 - 학습",
+          subtitle: "Build - Measure - Learn",
+          description: "이 주기는 우리가 제품을 개발하는 방식의 DNA입니다. 직원의 중복 작업을 줄이기 위한 관리 시스템을 세련되게 하는 데 적용되며, 또한 타겟 고객의 심리를 맞추기 위해 비디오의 판매 메시지를 최적화하는 데도 적용됩니다. 우리는 제품이 최고의 효과를 발휘하도록 끊임없이 개선합니다."
+        },
+        partnershipAsFeature: {
+          title: "파트너십은 특징",
+          subtitle: "Partnership as a Feature",
+          description: "Mercury를 선택하면 제품만 받는 것이 아닙니다. 전략적 파트너 팀을 받습니다. 우리는 프로세스를 재형성하는 데 도움을 주는 디지털 트랜스포메이션 컨설턴트이자 동시에 시장을 정복하는 데 도움을 주는 마케팅 전략가입니다. 이 파트너십은 제품의 핵심 가치의 필수적인 부분입니다."
+        }
+      }
     },
     cta: {
       title: "Mercury Solutions와 파트너십을 맺을 준비가 되셨나요?",

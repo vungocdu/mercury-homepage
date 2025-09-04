@@ -125,10 +125,10 @@ export default function TickerScroll() {
       <div className="container-custom mb-12">
         <div className="text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>
-            {translations.tvc.portfolio.ourTvcPortfolio}
+            {translations?.tvc?.portfolio?.ourTvcPortfolio || 'Our TVC Portfolio'}
           </h2>
           <p className="text-xl max-w-3xl mx-auto" style={{ color: 'hsl(var(--text-secondary))' }}>
-            {translations.tvc.portfolio.scrollToExplore}
+            {translations?.tvc?.portfolio?.scrollToExplore || 'Scroll to explore our TVC portfolio'}
           </p>
         </div>
       </div>

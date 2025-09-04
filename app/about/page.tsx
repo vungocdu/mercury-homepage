@@ -5,10 +5,11 @@ import AboutPageClient from './AboutPageClient'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Về chúng tôi - Mercury Solutions | Công ty Công nghệ & Truyền thông',
-  description: 'Mercury Solutions - Đơn vị tiên phong về giải pháp AI, Digital Transformation và Video Production. Địa chỉ: 123 Đường ABC, TP.HCM. MST: 0123456789.',
+  title: 'Về chúng tôi - Mercury Solutions Vietnam Company Limited | Công ty Công nghệ & Truyền thông',
+  description: 'Mercury Solutions Vietnam Company Limited - Đơn vị tiên phong về giải pháp AI, Digital Transformation và Video Production. Địa chỉ: Tầng 5, số nhà 33/41 Thái Hà, Phường Trung Liệt, Quận Đống Đa, Thành phố Hà Nội, Việt Nam.',
   keywords: [
-    'Mercury Solutions',
+    'Mercury Solutions Vietnam Company Limited',
+    'MERCURY SOLUTIONS VIETNAM COMPANY LIMITED',
     'về chúng tôi',
     'about Mercury Solutions',
     'công ty công nghệ',
@@ -16,12 +17,14 @@ export const metadata: Metadata = {
     'digital transformation',
     'video production',
     'Vietnam technology company',
+    'Hanoi technology company',
     'tầm nhìn sứ mệnh',
-    'vision mission'
+    'vision mission',
+    'brand story'
   ],
   openGraph: {
-    title: 'Về chúng tôi - Mercury Solutions | Công ty Công nghệ & Truyền thông',
-    description: 'Mercury Solutions - Đơn vị tiên phong về giải pháp AI, Digital Transformation và Video Production.',
+    title: 'Về chúng tôi - Mercury Solutions Vietnam Company Limited | Công ty Công nghệ & Truyền thông',
+    description: 'Mercury Solutions Vietnam Company Limited - Đơn vị tiên phong về giải pháp AI, Digital Transformation và Video Production. Đột Phá Công Nghệ, Vững Vàng Thương Hiệu.',
     url: 'https://mercurysolutions.vn/about',
   },
 }

@@ -116,10 +116,10 @@ export default function Header() {
   const { translations } = useLanguage()
 
   const navigation = [
-    { name: translations.nav.home, href: '/' },
-    { name: translations.nav.aiDigitalTransformation, href: '/ai-digital-transformation' },
-    { name: translations.nav.digitalMarketing, href: '/tvc' },
-    { name: translations.nav.about, href: '/about' },
+    { name: translations?.nav?.home || 'Home', href: '/' },
+    { name: translations?.nav?.aiDigitalTransformation || 'AI Digital Transformation', href: '/ai-digital-transformation' },
+    { name: translations?.nav?.digitalMarketing || 'Digital Marketing', href: '/tvc' },
+    { name: translations?.nav?.about || 'About', href: '/about' },
   ]
 
 
@@ -194,7 +194,7 @@ export default function Header() {
               onClick={(e) => handleNavigationClick('#contact', e)}
               className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mercury-blue-500 bg-white border-2 border-mercury-blue-600 text-mercury-blue-600 hover:bg-mercury-blue-600 hover:text-white shadow-lg hover:shadow-xl"
             >
-              {translations.common.getStarted}
+              {translations?.common?.getStarted || 'Get Started'}
             </a>
           </div>
 
@@ -311,7 +311,7 @@ export default function Header() {
                       whileHover={{ scale: 1.02, backgroundColor: '#2563eb', color: '#ffffff' }}
                       whileTap={{ scale: 0.98 }}
                     >
-                      {translations.common.getStarted}
+                      {translations?.common?.getStarted || 'Get Started'}
                     </motion.a>
                   </div>
                 </div>
