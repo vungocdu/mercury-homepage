@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Play, Camera, Edit3, Zap, Clock, Video, Lightbulb, Target, Sparkles, Star, ArrowRight, Factory, Settings, Users2, Film, Globe, Users, Send } from 'lucide-react'
+import { Play, Camera, Edit3, Zap, Video, Lightbulb, Target, Sparkles, Star, ArrowRight, Factory, Settings, Users2, Film, Send } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
@@ -9,17 +9,6 @@ import TrackingButton from '../../components/TrackingButton'
 
 import MovingDotsBackground from '../../components/MovingDotsBackground'
 import { useLanguage } from '../../contexts/LanguageContext'
-
-// Custom Drone Icon Component
-const Drone = ({ className = "w-6 h-6" }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M3 7a1 1 0 011-1h16a1 1 0 110 2H4a1 1 0 01-1-1zM3 17a1 1 0 011-1h16a1 1 0 110 2H4a1 1 0 01-1-1zM9 12a1 1 0 011-1h4a1 1 0 110 2h-4a1 1 0 01-1-1z"/>
-    <circle cx="6" cy="12" r="2" fill="currentColor"/>
-    <circle cx="18" cy="12" r="2" fill="currentColor"/>
-    <circle cx="12" cy="9" r="1" fill="currentColor"/>
-    <circle cx="12" cy="15" r="1" fill="currentColor"/>
-  </svg>
-)
 
 export default function TVCPageClient() {
   const { translations } = useLanguage()
@@ -159,36 +148,6 @@ export default function TVCPageClient() {
     }
   ]
 
-  const process = [
-    {
-      step: '01',
-      title: tvcSection.process?.steps?.consultation?.title || 'Consultation',
-      description: tvcSection.process?.steps?.consultation?.description || 'Initial consultation and project planning',
-      icon: Lightbulb,
-      color: 'mercury-blue'
-    },
-    {
-      step: '02',
-      title: tvcSection.process?.steps?.concept?.title || 'Concept Development',
-      description: tvcSection.process?.steps?.concept?.description || 'Develop video concept and storyboard',
-      icon: Target,
-      color: 'mercury-blue'
-    },
-    {
-      step: '03',
-      title: tvcSection.process?.steps?.production?.title || 'Production',
-      description: tvcSection.process?.steps?.production?.description || 'Professional video production and filming',
-      icon: Camera,
-      color: 'mercury-blue'
-    },
-    {
-      step: '04',
-      title: tvcSection.process?.steps?.postProduction?.title || 'Post Production',
-      description: tvcSection.process?.steps?.postProduction?.description || 'Editing, color grading, and final delivery',
-      icon: Edit3,
-      color: 'mercury-blue'
-    }
-  ]
 
   const portfolio = [
     {
@@ -225,26 +184,6 @@ export default function TVCPageClient() {
     }
   ]
 
-  const whyUsFeatures = [
-    {
-      icon: Zap,
-      title: tvcSection.whyUs?.features?.speed?.title || 'Fast Turnaround',
-      description: tvcSection.whyUs?.features?.speed?.description || 'Quick production and delivery timelines',
-      gradient: 'from-mercury-blue-500 to-mercury-blue-600'
-    },
-    {
-      icon: Film,
-      title: tvcSection.whyUs?.features?.quality?.title || 'Professional Quality',
-      description: tvcSection.whyUs?.features?.quality?.description || '4K production with professional equipment',
-      gradient: 'from-mercury-gold-500 to-mercury-gold-600'
-    },
-    {
-      icon: Camera,
-      title: tvcSection.whyUs?.features?.technology?.title || 'Advanced Technology',
-      description: tvcSection.whyUs?.features?.technology?.description || 'Drone footage, FPV, and advanced cinematography',
-      gradient: 'from-mercury-blue-600 to-mercury-blue-700'
-    }
-  ]
 
   return (
     <>

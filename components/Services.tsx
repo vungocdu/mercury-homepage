@@ -1,16 +1,10 @@
 'use client'
 
 import { useLanguage } from '@/contexts/LanguageContext'
-import { 
-  Brain, 
-  Bot, 
-  Eye, 
-  Network, 
-  Zap, 
-  Shield, 
-  Cpu, 
-  TrendingUp, 
-  Users, 
+import {
+  Zap,
+  TrendingUp,
+  Users,
   Award,
   Clock,
   CheckCircle,
@@ -19,11 +13,7 @@ import {
   Building2,
   Hotel,
   Dumbbell,
-  Video,
-  Factory,
-  Globe,
-  Target,
-  BarChart3
+  Video
 } from 'lucide-react'
 import { motion } from 'framer-motion'
 import TextReveal from './TextReveal'

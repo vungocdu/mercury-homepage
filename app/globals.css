@@ -270,24 +270,43 @@ a:hover {
 }
 
 .btn-primary {
-  background-color: hsl(var(--link-primary));
-  color: white;
+  background: linear-gradient(135deg, hsl(var(--warning-color)), hsl(var(--warning-color) / 0.8));
+  color: hsl(210 40% 7%);
   font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 500;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
+  font-weight: 600;
+  padding: 0.875rem 2rem;
+  border-radius: 0.75rem;
   border: none;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 14px 0 hsl(var(--warning-color) / 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
 }
 
 .btn-primary:hover {
-  background-color: hsl(var(--link-hover));
-  transform: translateY(-1px);
+  background: linear-gradient(135deg, hsl(var(--warning-color) / 0.9), hsl(var(--warning-color)));
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px 0 hsl(var(--warning-color) / 0.4);
 }
 
 .btn-secondary {

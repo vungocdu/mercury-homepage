@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Footer() {
-  const { t, translations } = useLanguage()
+  const { translations } = useLanguage()
   const currentYear = new Date().getFullYear()
 
   return (
