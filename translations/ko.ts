@@ -765,19 +765,20 @@ export const ko = {
     labels: {
       features: "주요 기능:",
       platforms: "플랫폼:",
-      technologies: "기술:"
+      technologies: "기술:",
+      visitWebsite: "공식 웹사이트 방문"
     },
     items: {
       actiwell: {
-        title: "ACTIWELL 모바일 & CMS",
+        title: "Actiwell: 피트니스 체인용 포괄적 AI 플랫폼",
         description: "Actiwell을 사용하면 운동 관리와 예약이 쉬워집니다. 언제든지 체육관이나 피트니스 센터의 가능한 시간을 확인하고 피클볼 코트나 요가 수업을 빠르게 예약할 수 있습니다.",
         features: {
           title: "주요 기능:",
           items: [
-            "간소화된 스케줄링",
+            "스마트 예약 시스템",
             "자동 예약",
-            "고객 관리",
-            "마케팅 도구"
+            "회원 및 패키지 관리",
+            "마케팅 자동화"
           ]
         },
         platforms: {
@@ -790,8 +791,8 @@ export const ko = {
         }
       },
       timekeeping: {
-        title: "AI 카메라를 통한 출퇴근 관리",
-        description: "후지킨 베트남 공장의 출근 관리 시스템은 AI 카메라를 통합하여 시스템 내 직원의 출입 정보를 수집합니다.",
+        title: "출퇴근 및 급여 관리 시스템 - Fujikin",
+        description: "Fujikin Corporation(일본)과 공동 개발된 인사 관리 프로세스 자동화 솔루션으로, 2000명 이상의 대규모 공장을 대상으로 합니다. 시스템은 오류를 최소화하고 관리 효율성을 향상시킵니다. Fujikin의 공식 웹사이트에서 자세한 정보를 확인하세요.",
         features: {
           title: "주요 기능:",
           items: [
@@ -803,16 +804,17 @@ export const ko = {
         },
         platforms: {
           title: "플랫폼:",
-          items: ["웹 앱"]
+          items: ["웹 앱", "모바일 앱"]
         },
         technologies: {
           title: "기술:",
-          items: ["React", "Laravel", "AI/ML"]
-        }
+          items: ["React", "Laravel", "AI/머신러닝"]
+        },
+        website: "https://www.fujikin.co.jp/en/"
       },
       myarm: {
-        title: "myArm 모바일 애플리케이션",
-        description: "MyArm은 사용자가 작업을 효율적으로 구성하고 프로젝트를 지능적으로 관리하는 것을 돕는 작업 및 프로젝트 관리 애플리케이션입니다.",
+        title: "myArm 엔터프라이즈 관리 솔루션",
+        description: "MyArm은 MyArms(일본)와 공동 개발된 포괄적인 엔터프라이즈 관리 솔루션으로, 기업이 프로세스를 최적화하고 효율성을 향상시키며 지속 가능한 성장을 촉진하도록 돕습니다. 공식 웹사이트 myarms.jp에서 자세한 정보를 확인하세요.",
         features: {
           title: "주요 기능:",
           items: [
@@ -829,7 +831,8 @@ export const ko = {
         technologies: {
           title: "기술:",
           items: ["Flutter", "Laravel", "React"]
-        }
+        },
+        website: "https://myarms.jp/"
       },
       property: {
         title: "부동산 관리 시스템",
@@ -849,50 +852,52 @@ export const ko = {
         },
         technologies: {
           title: "기술:",
-          items: ["React", "Node.js", "IoT"]
+          items: ["React", "Node.js", "IoT (사물인터넷)"]
         }
       },
       powerControl: {
-        title: "전력 제어 IoT 플랫폼",
-        description: "IoT 디바이스 상태를 수집하고 전력 소비 데이터를 분석하며 밀리초 단위로 클라우드를 통해 이러한 디바이스를 제어하는 IoT 플랫폼을 구축했습니다.",
+        title: "OTA Calculator: 호텔용 스마트 가격 계산 도구",
+        description: "OTA Calculator (ota.minova.vn)는 호텔 산업을 위해 특별히 설계된 스마트 도구입니다. 단 몇 번의 클릭만으로 영업팀은 고객이 보게 될 최종 가격과 모든 비용을 공제한 후 호텔이 받는 순수익을 정확하게 예측할 수 있습니다. 이 도구는 수동 Excel 계산을 완전히 제거합니다.",
         features: {
           title: "주요 기능:",
           items: [
-            "30% 전력 절약",
-            "50% 빠른 제어",
-            "100만+ 디바이스 지원",
-            "실시간 분석"
+            "OTA 수수료 관리",
+            "표시 가격 및 순수취 가격 계산",
+            "가격 시나리오 비교",
+            "직관적인 인터페이스"
           ]
         },
         platforms: {
           title: "플랫폼:",
-          items: ["IoT 플랫폼", "웹 대시보드"]
+          items: ["웹 앱"]
         },
         technologies: {
           title: "기술:",
-          items: ["IoT", "Cloud", "Analytics"]
-        }
+          items: ["React", "Node.js"]
+        },
+        website: "https://ota.minova.vn"
       },
       airhub: {
-        title: "Airhub – 당신의 로컬 가이드",
-        description: "온라인 웹 앱으로 스마트폰 웹앱에 최적화되어 로컬 가이드 맵, 로컬 브랜드의 특별한 제안 등 여행자 정보를 제공합니다.",
+        title: "Visual-First Booking Engine: 객실이 아닌 경험 판매",
+        description: "우리는 '비주얼 우선' 콘셉트로 예약 경험을 재정의합니다. Mercury의 예약 엔진(tmha.minova.vn, 69bq.minova.vn)은 매력적인 '픽처 투어'로 처음부터 강력한 시각적 임팩트를 줍니다. 감정과 욕구를 불러일으킨 후에야 시스템은 완벽하게 모바일에 최적화된 인터페이스를 통해 고객을 객실 유형 및 가격 보기로 원활하게 안내합니다.",
         features: {
           title: "주요 기능:",
           items: [
-            "로컬 가이드",
-            "가상 프론트데스크",
-            "AI 지원",
-            "로컬 제안"
+            "픽처 투어 우선",
+            "모바일 최적화 인터페이스",
+            "3단계 예약 프로세스",
+            "결제 게이트웨이 연동"
           ]
         },
         platforms: {
           title: "플랫폼:",
-          items: ["웹 앱", "모바일 웹"]
+          items: ["웹 앱 (모바일 우선)"]
         },
         technologies: {
           title: "기술:",
-          items: ["React", "AI/ML", "Maps API"]
-        }
+          items: ["React", "Node.js"]
+        },
+        website: "https://tmha.minova.vn"
       }
     },
     cta: {

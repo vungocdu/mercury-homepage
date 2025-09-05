@@ -842,19 +842,20 @@ export const en = {
     labels: {
       features: "Key Features:",
       platforms: "Platforms:",
-      technologies: "Technologies:"
+      technologies: "Technologies:",
+      visitWebsite: "Visit Official Website"
     },
     items: {
       actiwell: {
-        title: "ACTIWELL Mobile & CMS",
-        description: "With Actiwell, managing workouts and booking is a breeze. Check available slots for gyms or fitness centers anytime and quickly book Pickleball courts or Yoga classes.",
+        title: "Actiwell: Comprehensive AI Platform for Gym & Fitness Chains",
+        description: "Mercury Solutions has strategically partnered with Attivo International—a powerhouse with over 20 years of leadership in the Southeast Asian fitness industry—to create Actiwell. It is an all-in-one ecosystem featuring a mobile app for members and a powerful CMS for managers, integrated with unique AI features to personalize workout journeys and automate marketing. Streamlined operations, enhanced member experience and loyalty, and driven sustainable revenue growth for the chain.",
         features: {
           title: "Key Features:",
           items: [
-            "Simplified Scheduling",
-            "Automated Booking",
-            "Customer Management",
-            "Marketing Tools"
+            "Smart Booking System",
+            "Membership & Package Management",
+            "Marketing Automation",
+            "AI-Powered Analytics"
           ]
         },
         platforms: {
@@ -864,32 +865,34 @@ export const en = {
         technologies: {
           title: "Technologies:",
           items: ["Flutter", "React", "Laravel"]
-        }
+        },
+        website: "https://www.actiwell.co"
       },
       timekeeping: {
-        title: "Timekeeping by AI Camera",
-        description: "The attendance management system for Fujikin Vietnam's factory integrates AI cameras to collect entry and exit information of employees within the system.",
+        title: "TNA HRM System: Digital Transformation for Manufacturing",
+        description: "In partnership with the Fujikin Corporation (Japan), Mercury developed a specialized Human Resource Management system for the manufacturing sector. Integrating AI Cameras for automatic recognition and check-in, the system digitizes the entire workflow, from attendance tracking and shift management to payroll calculation and processing. Ending the era of Excel-based management. It liberates the HR department from manual tasks, guarantees absolute accuracy and transparency in payroll, and delivers a real-time analytics dashboard.",
         features: {
           title: "Key Features:",
           items: [
             "AI Camera Integration",
-            "Attendance Management",
-            "HR Optimization",
-            "Real-time Monitoring"
+            "Automated Time & Attendance",
+            "HR Process Optimization",
+            "Real-Time Monitoring"
           ]
         },
         platforms: {
           title: "Platforms:",
-          items: ["Web App"]
+          items: ["Web App", "Mobile App"]
         },
         technologies: {
           title: "Technologies:",
           items: ["React", "Laravel", "AI/ML"]
-        }
+        },
+        website: "https://www.fujikin.co.jp/en/"
       },
       myarm: {
-        title: "myArm Mobile Application",
-        description: "MyArm is a work and project management application that helps users organize tasks efficiently and manage projects intelligently.",
+        title: "myArm: Comprehensive Japanese-style Business Management Solution",
+        description: "In partnership with MyArms (Japan), we offer a comprehensive business management solution. myArm standardizes workflows, from project planning and task organization to progress tracking and team collaboration, all on a single platform. Enhanced productivity, ensured project timelines, and fostered a culture of organized, transparent, and effective work.",
         features: {
           title: "Key Features:",
           items: [
@@ -906,18 +909,19 @@ export const en = {
         technologies: {
           title: "Technologies:",
           items: ["Flutter", "Laravel", "React"]
-        }
+        },
+        website: "https://myarms.jp/"
       },
       property: {
-        title: "Property Management System",
-        description: "SaaS applications for hotel owner and hotel management entrepreneurs. Application offers multiple-branch and realtime hotels chain management.",
+        title: "Minova PMS: Redefining Hotel Management in the Mobile Era",
+        description: "Together with Minova Hospitality Group—a renowned operator of boutique hotel chains—we have sparked a revolution. Minova PMS features the first Native iOS mobile application for hotel management in Vietnam, allowing every operation—from synchronizing booking channels (Channel Manager) to controlling in-room IoT devices—to be managed from the palm of their hand. Empowering managers to break free from their desks, make instant decisions, optimize room occupancy, and elevate the guest experience right from the lobby.",
         features: {
           title: "Key Features:",
           items: [
             "Channel Manager",
-            "Room Control Unit",
-            "Camera AI Integration",
-            "Multi-branch Management"
+            "Room Control Unit (IoT)",
+            "AI Camera Integration",
+            "Multi-Property Management"
           ]
         },
         platforms: {
@@ -927,49 +931,52 @@ export const en = {
         technologies: {
           title: "Technologies:",
           items: ["React", "Node.js", "IoT"]
-        }
+        },
+        website: "https://www.minova.vn"
       },
       powerControl: {
-        title: "Power Control IoT Platform",
-        description: "We have built an IoT platform that gathering IoT devices status, analyses electric consumption data and control these devices over cloud in mili-seconds.",
+        title: "OTA Calculator: Smart Pricing Tool for Hotels",
+        description: "The OTA Calculator (ota.minova.vn) is a smart tool specifically designed for the hospitality industry. With just a few clicks, the system helps sales teams accurately forecast the final price a customer sees and the net revenue the hotel receives after all deductions. This tool completely eliminates manual Excel calculations.",
         features: {
           title: "Key Features:",
           items: [
-            "30% Electricity Savings",
-            "50% Faster Control",
-            "1M+ Device Support",
-            "Real-time Analytics"
+            "OTA Commission Management",
+            "Display & Net Price Calculation",
+            "Price Scenario Comparison",
+            "Intuitive Interface"
           ]
         },
         platforms: {
           title: "Platforms:",
-          items: ["IoT Platform", "Web Dashboard"]
+          items: ["Web App"]
         },
         technologies: {
           title: "Technologies:",
-          items: ["IoT", "Cloud", "Analytics"]
-        }
+          items: ["React", "Node.js"]
+        },
+        website: "https://ota.minova.vn"
       },
       airhub: {
-        title: "Airhub – Your Local Guide",
-        description: "Online web app and best designed for smartphone webapp to provide traveller informations such as local guides map, special offers from local brand.",
+        title: "Visual-First Booking Engine: Selling Experiences, Not Just Rooms",
+        description: "We redefine the booking experience with a 'visual-first' concept. Mercury's Booking Engine (tmha.minova.vn, 69bq.minova.vn) makes a strong visual impact from the start with a captivating 'Picture Tour.' Only after evoking emotion and desire does the system smoothly guide customers to view room types and prices on a perfectly mobile-optimized interface.",
         features: {
           title: "Key Features:",
           items: [
-            "Local Guide",
-            "Virtual Frontdesk",
-            "AI Assistance",
-            "Local Offers"
+            "Picture Tour First",
+            "Mobile-Optimized Interface",
+            "3-Step Booking Process",
+            "Payment Gateway Integration"
           ]
         },
         platforms: {
           title: "Platforms:",
-          items: ["Web App", "Mobile Web"]
+          items: ["Web App (Mobile-First)"]
         },
         technologies: {
           title: "Technologies:",
-          items: ["React", "AI/ML", "Maps API"]
-        }
+          items: ["React", "Node.js"]
+        },
+        website: "https://tmha.minova.vn"
       }
     },
     cta: {

@@ -765,19 +765,20 @@ export const ja = {
     labels: {
       features: "主要機能:",
       platforms: "プラットフォーム:",
-      technologies: "技術:"
+      technologies: "技術:",
+      visitWebsite: "公式ウェブサイトをご覧ください"
     },
     items: {
       actiwell: {
-        title: "ACTIWELL モバイル & CMS",
-        description: "Actiwellでは、ワークアウトの管理と予約が簡単になります。ジムやフィットネスセンターの空き時間をいつでもチェックし、ピクルボールコートやヨガクラスを素早く予約できます。",
+        title: "Actiwell: ジムチェーン向け包括的AIプラットフォーム",
+        description: "Mercury Solutionsは、東南アジアのフィットネス業界で20年以上の実績を誇るリーディングカンパニーであるAttivo Internationalと戦略的パートナーシップを締結し、Actiwellを開発しました。これは会員向けのモバイルアプリと管理者向けの強力なCMSを含むオールインワンのエコシステムであり、独自のAI機能を統合してトレーニングプランをパーソナライズし、マーケティングを自動化します。運営を効率化し、会員体験とロイヤルティを向上させ、チェーン全体の持続可能な収益成長を促進します。",
         features: {
           title: "主要機能:",
           items: [
-            "簡素化されたスケジューリング",
-            "自動予約",
-            "顧客管理",
-            "マーケティングツール"
+            "スマート予約システム",
+            "会員・プラン管理",
+            "マーケティングオートメーション",
+            "AIによるデータ分析"
           ]
         },
         platforms: {
@@ -787,39 +788,41 @@ export const ja = {
         technologies: {
           title: "技術:",
           items: ["Flutter", "React", "Laravel"]
-        }
+        },
+        website: "https://www.actiwell.co"
       },
       timekeeping: {
-        title: "AIカメラによる勤怠管理",
-        description: "フジキン・ベトナム工場の勤怠管理システムは、AIカメラを統合して従業員の入退室情報をシステム内で収集します。",
+        title: "TNA HRM System: 製造業向けデジタルトランスフォーメーション",
+        description: "株式会社フジキン（日本）との提携により、Mercuryは製造業に特化した人事管理システムを開発しました。AIカメラを統合して自動認識と出退勤管理を行い、勤怠追跡、シフト管理から給与計算、支払処理まで、ワークフロー全体をデジタル化します。Excelによる管理の時代を終わらせます。人事部門を手作業から解放し、給与計算の完全な正確性と透明性を保証し、リアルタイムの分析ダッシュボードを提供します。",
         features: {
           title: "主要機能:",
           items: [
             "AIカメラ統合",
-            "勤怠管理",
-            "HR最適化",
+            "自動勤怠管理",
+            "人事プロセス最適化",
             "リアルタイム監視"
           ]
         },
         platforms: {
           title: "プラットフォーム:",
-          items: ["Webアプリ"]
+          items: ["Webアプリ", "モバイルアプリ"]
         },
         technologies: {
           title: "技術:",
-          items: ["React", "Laravel", "AI/ML"]
-        }
+          items: ["React", "Laravel", "AI/機械学習"]
+        },
+        website: "https://www.fujikin.co.jp/en/"
       },
       myarm: {
-        title: "myArm モバイルアプリケーション",
-        description: "MyArmは、ユーザーがタスクを効率的に整理し、プロジェクトをインテリジェントに管理することを支援する作業・プロジェクト管理アプリケーションです。",
+        title: "myArm: 包括的な日本式ビジネス管理ソリューション",
+        description: "MyArms（日本）との提携により、私たちは包括的な業務管理ソリューションを提供します。myArmは、プロジェクト計画、タスク整理から進捗追跡、チームコラボレーションまで、ワークフローを単一のプラットフォームで標準化します。生産性を向上させ、プロジェクトの納期を確実に遵守し、整理され、透明性が高く、効果的な職場文化を育みます。",
         features: {
           title: "主要機能:",
           items: [
             "プロジェクト管理",
             "タスク整理",
-            "チーム協力",
-            "期限追跡"
+            "チームコラボレーション",
+            "納期追跡"
           ]
         },
         platforms: {
@@ -829,18 +832,19 @@ export const ja = {
         technologies: {
           title: "技術:",
           items: ["Flutter", "Laravel", "React"]
-        }
+        },
+        website: "https://myarms.jp/"
       },
       property: {
-        title: "不動産管理システム",
-        description: "ホテルオーナーとホテル管理起業家向けのSaaSアプリケーション。アプリケーションは複数支店とリアルタイムのホテルチェーン管理を提供します。",
+        title: "Minova PMS: モバイル時代におけるホテル管理の再定義",
+        description: "有名なブティックホテルチェーンの運営者であるMinova Hospitality Groupと共に、私たちは革命を起こしました。Minova PMSは、ベトナム初のホテル管理用ネイティブiOSモバイルアプリケーションを特徴とし、予約チャネルの同期（チャネルマネージャー）から客室内のIoTデバイスの制御まで、あらゆる操作を手のひらで管理できます。管理者をデスクから解放し、即時の意思決定を可能にし、客室稼働率を最適化し、ロビーからゲスト体験を向上させます。",
         features: {
           title: "主要機能:",
           items: [
             "チャンネルマネージャー",
-            "ルームコントロールユニット",
-            "カメラAI統合",
-            "複数支店管理"
+            "ルームコントロールユニット (IoT)",
+            "AIカメラ統合",
+            "複数施設管理"
           ]
         },
         platforms: {
@@ -849,50 +853,53 @@ export const ja = {
         },
         technologies: {
           title: "技術:",
-          items: ["React", "Node.js", "IoT"]
-        }
+          items: ["React", "Node.js", "IoT (モノのインターネット)"]
+        },
+        website: "https://www.minova.vn"
       },
       powerControl: {
-        title: "電力制御IoTプラットフォーム",
-        description: "IoTデバイスのステータスを収集し、電力消費データを分析し、これらのデバイスをクラウド上でミリ秒単位で制御するIoTプラットフォームを構築しました。",
+        title: "OTA Calculator: ホテル向けスマート価格計算ツール",
+        description: "OTA Calculator (ota.minova.vn) は、ホスピタリティ業界向けに特化して設計されたスマートツールです。数クリックするだけで、営業チームは顧客が目にする最終価格と、すべての費用を差し引いた後のホテルの実収益を正確に予測できます。このツールは、手作業によるExcel計算を完全に排除します。",
         features: {
           title: "主要機能:",
           items: [
-            "30%の電力節約",
-            "50%高速制御",
-            "100万+デバイスサポート",
-            "リアルタイム分析"
+            "OTA手数料管理",
+            "表示価格と実収価格の計算",
+            "価格シナリオ比較",
+            "直感的なインターフェース"
           ]
         },
         platforms: {
           title: "プラットフォーム:",
-          items: ["IoTプラットフォーム", "Webダッシュボード"]
+          items: ["ウェブアプリ"]
         },
         technologies: {
           title: "技術:",
-          items: ["IoT", "Cloud", "Analytics"]
-        }
+          items: ["React", "Node.js"]
+        },
+        website: "https://ota.minova.vn"
       },
       airhub: {
-        title: "Airhub – あなたのローカルガイド",
-        description: "オンラインWebアプリで、スマートフォンWebアプリ用に最適設計され、ローカルガイドマップやローカルブランドからの特別オファーなどの旅行者情報を提供します。",
+        title: "Visual-First Booking Engine: 客室ではなく体験を販売",
+        description: "私たちは「ビジュアルファースト」というコンセプトで予約体験を再定義します。Mercuryの予約エンジン (tmha.minova.vn, 69bq.minova.vn) は、魅力的な「ピクチャーツアー」で最初から強烈な視覚的インパクトを与えます。感情と欲求を呼び起こした後、システムはスムーズに顧客を完璧にモバイル最適化されたインターフェースで客室タイプと価格の表示へと導きます。",
         features: {
           title: "主要機能:",
           items: [
-            "ローカルガイド",
-            "バーチャルフロントデスク",
-            "AIアシスタンス",
-            "ローカルオファー"
+            "ピクチャーツアー優先",
+            "モバイル最適化インターフェース",
+            "3ステップ予約プロセス",
+            "決済ゲートウェイ統合"
           ]
         },
         platforms: {
           title: "プラットフォーム:",
-          items: ["Webアプリ", "モバイルWeb"]
+          items: ["ウェブアプリ (モバイルファースト)"]
         },
         technologies: {
           title: "技術:",
-          items: ["React", "AI/ML", "Maps API"]
-        }
+          items: ["React", "Node.js"]
+        },
+        website: "https://tmha.minova.vn"
       }
     },
     cta: {

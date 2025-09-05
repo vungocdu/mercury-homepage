@@ -572,19 +572,20 @@ export const vi = {
     labels: {
       features: "Tính Năng Chính:",
       platforms: "Nền Tảng:",
-      technologies: "Công Nghệ:"
+      technologies: "Công Nghệ:",
+      visitWebsite: "Truy Cập Website Chính Thức"
     },
     items: {
       actiwell: {
-        title: "ACTIWELL Mobile & CMS",
-        description: "Với Actiwell, quản lý workout và đặt lịch thật dễ dàng. Kiểm tra slot có sẵn cho gym hoặc trung tâm thể dục bất cứ lúc nào và nhanh chóng đặt sân Pickleball hoặc lớp Yoga.",
+        title: "Actiwell: Nền Tảng AI Toàn Diện Cho Chuỗi Phòng Gym & Thể Dục",
+        description: "Mercury Solutions đã hợp tác chiến lược cùng Attivo International—tập đoàn có hơn 20 năm kinh nghiệm hàng đầu Đông Nam Á—để kiến tạo Actiwell. Đây là một hệ sinh thái 'tất cả trong một' bao gồm ứng dụng di động cho hội viên và hệ thống CMS mạnh mẽ cho nhà quản lý, tích hợp các tính năng AI độc đáo để cá nhân hóa lộ trình tập luyện và tự động hóa marketing. Tối ưu hóa vận hành, nâng cao trải nghiệm và sự trung thành của hội viên, đồng thời thúc đẩy tăng trưởng doanh thu bền vững cho chuỗi.",
         features: {
           title: "Tính Năng Chính:",
           items: [
-            "Lập Lịch Đơn Giản",
-            "Đặt Lịch Tự Động",
-            "Quản Lý Khách Hàng",
-            "Công Cụ Marketing"
+            "Hệ Thống Đặt Lịch Thông Minh",
+            "Quản Lý Hội Viên & Gói Tập",
+            "Tự Động Hóa Marketing",
+            "Phân Tích Dữ Liệu AI"
           ]
         },
         platforms: {
@@ -594,32 +595,34 @@ export const vi = {
         technologies: {
           title: "Công Nghệ:",
           items: ["Flutter", "React", "Laravel"]
-        }
+        },
+        website: "https://www.actiwell.co"
       },
       timekeeping: {
-        title: "Chấm Công Bằng Camera AI",
-        description: "Hệ thống quản lý chấm công cho nhà máy Fujikin Vietnam tích hợp camera AI để thu thập thông tin ra vào của nhân viên trong hệ thống.",
+        title: "TNA HRM System: Chuyển Đổi Số Cho Ngành Sản Xuất",
+        description: "Hợp tác cùng tập đoàn Fujikin (Nhật Bản), Mercury đã phát triển một hệ thống quản trị nhân sự chuyên sâu cho ngành sản xuất. Tích hợp AI Camera để nhận diện và chấm công tự động, hệ thống số hóa toàn bộ quy trình từ theo dõi ra vào, quản lý ca làm việc đến tính toán và thanh toán lương. Chấm dứt kỷ nguyên quản trị bằng Excel. Giải phóng bộ phận nhân sự khỏi các tác vụ thủ công, đảm bảo chính xác tuyệt đối, minh bạch trong lương thưởng và cung cấp dashboard phân tích theo thời gian thực.",
         features: {
           title: "Tính Năng Chính:",
           items: [
             "Tích Hợp Camera AI",
-            "Quản Lý Chấm Công",
-            "Tối Ưu Hóa HR",
+            "Quản Lý Chấm Công Tự Động",
+            "Tối Ưu Hóa Quy Trình HR",
             "Giám Sát Thời Gian Thực"
           ]
         },
         platforms: {
           title: "Nền Tảng:",
-          items: ["Ứng Dụng Web"]
+          items: ["Ứng Dụng Web", "Ứng Dụng Di Động"]
         },
         technologies: {
           title: "Công Nghệ:",
-          items: ["React", "Laravel", "AI/ML"]
-        }
+          items: ["React", "Laravel", "AI/Trí Tuệ Nhân Tạo"]
+        },
+        website: "https://www.fujikin.co.jp/en/"
       },
       myarm: {
-        title: "Ứng Dụng Mobile myArm",
-        description: "MyArm là ứng dụng quản lý công việc và dự án giúp người dùng tổ chức công việc hiệu quả và quản lý dự án thông minh.",
+        title: "myArm: Giải Pháp Quản Lý Doanh Nghiệp Phong Cách Nhật Bản Toàn Diện",
+        description: "Hợp tác cùng MyArms (Nhật Bản), chúng tôi mang đến một giải pháp quản lý doanh nghiệp toàn diện. myArm giúp chuẩn hóa quy trình từ việc lập kế hoạch dự án, tổ chức công việc, theo dõi tiến độ đến hợp tác nhóm trên một nền tảng duy nhất. Tăng cường hiệu suất, đảm bảo tiến độ dự án và thúc đẩy văn hóa làm việc có tổ chức, minh bạch và hiệu quả.",
         features: {
           title: "Tính Năng Chính:",
           items: [
@@ -636,16 +639,17 @@ export const vi = {
         technologies: {
           title: "Công Nghệ:",
           items: ["Flutter", "Laravel", "React"]
-        }
+        },
+        website: "https://myarms.jp/"
       },
       property: {
-        title: "Hệ Thống Quản Lý Bất Động Sản",
-        description: "Ứng dụng SaaS cho chủ khách sạn và doanh nhân quản lý khách sạn. Ứng dụng cung cấp quản lý chuỗi khách sạn đa chi nhánh và thời gian thực.",
+        title: "Minova PMS: Định Nghĩa Lại Quản Lý Khách Sạn Trong Kỷ Nguyên Di Động",
+        description: "Cùng với Minova Hospitality Group—đơn vị vận hành chuỗi khách sạn boutique danh tiếng, chúng tôi đã tạo ra một cuộc cách mạng. Minova PMS là hệ thống quản lý khách sạn với ứng dụng di động Native iOS đầu tiên tại Việt Nam, cho phép quản lý mọi hoạt động—từ đồng bộ kênh bán phòng (Channel Manager) đến điều khiển thiết bị trong phòng (IoT)—ngay trên tay. Giúp nhà quản lý thoát khỏi bàn làm việc, đưa ra quyết định tức thì, tối ưu hóa công suất phòng và nâng cao trải nghiệm khách hàng ngay tại sảnh.",
         features: {
           title: "Tính Năng Chính:",
           items: [
             "Channel Manager",
-            "Room Control Unit",
+            "Room Control Unit (IoT)",
             "Tích Hợp Camera AI",
             "Quản Lý Đa Chi Nhánh"
           ]
@@ -656,50 +660,53 @@ export const vi = {
         },
         technologies: {
           title: "Công Nghệ:",
-          items: ["React", "Node.js", "IoT"]
-        }
+          items: ["React", "Node.js", "IoT (Internet Vạn Vật)"]
+        },
+        website: "https://www.minova.vn"
       },
       powerControl: {
-        title: "Nền Tảng IoT Điều Khiển Điện",
-        description: "Chúng tôi đã xây dựng một nền tảng IoT thu thập trạng thái thiết bị IoT, phân tích dữ liệu tiêu thụ điện và điều khiển các thiết bị này qua cloud trong mili-giây.",
+        title: "OTA Calculator: Công Cụ Tính Giá Thông Minh Cho Khách Sạn",
+        description: "OTA Calculator (ota.minova.vn) là một công cụ thông minh, được thiết kế chuyên biệt cho ngành khách sạn. Chỉ với vài thao tác, hệ thống giúp đội ngũ kinh doanh dự báo chính xác mức giá cuối cùng khách hàng thấy và số tiền thực nhận sau khi trừ mọi chi phí. Công cụ này loại bỏ hoàn toàn việc tính toán thủ công bằng Excel.",
         features: {
           title: "Tính Năng Chính:",
           items: [
-            "Tiết Kiệm Điện 30%",
-            "Điều Khiển Nhanh Hơn 50%",
-            "Hỗ Trợ 1M+ Thiết Bị",
-            "Phân Tích Thời Gian Thực"
+            "Quản Lý Hoa Hồng OTA",
+            "Tính Giá Hiển Thị & Giá Thu Về",
+            "So Sánh Kịch Bản Giá",
+            "Giao Diện Trực Quan"
           ]
         },
         platforms: {
           title: "Nền Tảng:",
-          items: ["Nền Tảng IoT", "Dashboard Web"]
+          items: ["Ứng Dụng Web"]
         },
         technologies: {
           title: "Công Nghệ:",
-          items: ["IoT", "Cloud", "Analytics"]
-        }
+          items: ["React", "Node.js"]
+        },
+        website: "https://ota.minova.vn"
       },
       airhub: {
-        title: "Airhub – Hướng Dẫn Viên Địa Phương",
-        description: "Ứng dụng web trực tuyến và thiết kế tốt nhất cho webapp smartphone để cung cấp thông tin du lịch như bản đồ hướng dẫn địa phương, ưu đãi đặc biệt từ thương hiệu địa phương.",
+        title: "Visual-First Booking Engine: Bán Trải Nghiệm, Không Chỉ Bán Phòng",
+        description: "Chúng tôi tái định nghĩa trải nghiệm đặt phòng với concept 'hình ảnh là ưu tiên'. Booking Engine của Mercury (tmha.minova.vn, 69bq.minova.vn) gây ấn tượng thị giác mạnh mẽ ngay từ đầu với một 'Picture Tour' (Tour bằng hình ảnh) lôi cuốn. Sau khi khơi gợi được cảm xúc và mong muốn, hệ thống mới mượt mà dẫn dắt khách hàng đến việc xem các hạng phòng và giá cả trên một giao diện được tối ưu hoàn hảo cho di động.",
         features: {
           title: "Tính Năng Chính:",
           items: [
-            "Hướng Dẫn Viên Địa Phương",
-            "Virtual Frontdesk",
-            "Trợ Lý AI",
-            "Ưu Đãi Địa Phương"
+            "Ưu Tiên Tour Hình Ảnh",
+            "Giao Diện Tối Ưu Cho Di Động",
+            "Quy Trình Đặt Phòng 3 Bước",
+            "Tích Hợp Cổng Thanh Toán"
           ]
         },
         platforms: {
           title: "Nền Tảng:",
-          items: ["Ứng Dụng Web", "Mobile Web"]
+          items: ["Ứng Dụng Web (Mobile-First)"]
         },
         technologies: {
           title: "Công Nghệ:",
-          items: ["React", "AI/ML", "Maps API"]
-        }
+          items: ["React", "Node.js"]
+        },
+        website: "https://tmha.minova.vn"
       }
     },
     cta: {

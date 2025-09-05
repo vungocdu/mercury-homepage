@@ -21,14 +21,15 @@ export default function Projects() {
       ],
       platforms: [
         t(`projects.items.${key}.platforms.items.0`),
-        t(`projects.items.${key}.platforms.items.1`)
+        ...(t(`projects.items.${key}.platforms.items.1`) !== `projects.items.${key}.platforms.items.1` ? [t(`projects.items.${key}.platforms.items.1`)] : [])
       ].filter(Boolean),
       technologies: [
         t(`projects.items.${key}.technologies.items.0`),
         t(`projects.items.${key}.technologies.items.1`),
         t(`projects.items.${key}.technologies.items.2`)
       ].filter(Boolean),
-      image: `/images/${key}.jpg`
+      image: `/images/${key}.jpg`,
+      website: t(`projects.items.${key}.website`) || null
     }
   })
 
@@ -36,14 +37,16 @@ export default function Projects() {
     <section id="projects" className="section-white relative overflow-hidden">
       <div className="container-custom relative z-10">
         <div className="text-center mb-16 fade-in-up">
-          <div className="inline-flex items-center space-x-2 professional-card px-4 py-2 rounded-full mb-6">
-            <Zap className="w-4 h-4" style={{ color: 'hsl(var(--link-primary))' }} />
-            <span className="text-sm font-medium" style={{ color: 'hsl(var(--text-primary))' }}>{t('projects.header.badge')}</span>
+          <div className="inline-flex items-center space-x-2 px-6 py-3 rounded-full mb-8 shadow-lg bg-gradient-to-r from-blue-50 via-purple-50 to-cyan-50 border border-blue-200/50">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
+              <Zap className="w-4 h-4 text-white" />
+            </div>
+            <span className="text-sm font-semibold bg-gradient-to-r from-blue-700 to-purple-700 bg-clip-text text-transparent ml-2">{t('projects.header.badge')}</span>
           </div>
           
           <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-            <span style={{ color: 'hsl(var(--text-primary))' }}>{t('projects.header.title')}</span>{' '}
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-gray-800 via-slate-700 to-gray-900 bg-clip-text text-transparent">{t('projects.header.title')}</span>{' '}
+            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
               {t('projects.header.subtitle')}
             </span>
           </h2>
@@ -53,113 +56,253 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div 
-              key={index} 
-              className="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:scale-105"
-              style={{
-                backgroundColor: 'hsl(var(--card-bg))',
-                border: '2px solid hsl(var(--card-border))',
-                boxShadow: '0 4px 6px -1px rgb(30 58 138 / 0.1), 0 2px 4px -1px rgb(30 58 138 / 0.06)',
-                animationDelay: `${index * 0.1}s`
-              }}
-            >
-              {/* Project Image Placeholder */}
-              <div className="h-48 flex items-center justify-center relative overflow-hidden" style={{ backgroundColor: 'hsl(var(--link-primary))' }}>
-                <div className="text-center relative z-10">
-                  <Globe className="w-12 h-12 text-white mx-auto mb-2 animate-float" />
-                  <p className="text-sm text-white/80">Project Preview</p>
-                </div>
-              </div>
-              
-              <div className="p-6 relative z-10">
-                <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-200" style={{ color: 'hsl(var(--text-primary))' }}>
-                  {project.title}
-                </h3>
-                
-                <p className="mb-4 leading-relaxed" style={{ color: 'hsl(var(--text-secondary))' }}>
-                  {project.description}
-                </p>
-                
-                {/* Features */}
-                <div className="mb-4">
-                  <h4 className="font-semibold mb-2" style={{ color: 'hsl(var(--text-primary))' }}>{t('projects.labels.features')}</h4>
-                  <ul className="space-y-1">
-                    {project.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm" style={{ color: 'hsl(var(--text-secondary))' }}>
-                        <div className="w-2 h-2 rounded-full mr-3 animate-pulse" style={{ backgroundColor: 'hsl(var(--link-primary))' }}></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                {/* Platforms & Technologies */}
-                <div className="space-y-3">
-                  <div>
-                    <h4 className="font-semibold mb-2 flex items-center" style={{ color: 'hsl(var(--text-primary))' }}>
-                      <Smartphone className="w-4 h-4 mr-2" style={{ color: 'hsl(var(--link-primary))' }} />
-                      {t('projects.labels.platforms')}
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {project.platforms.map((platform, platformIndex) => (
-                        <span key={platformIndex} className="px-3 py-1 text-xs rounded-full" style={{ backgroundColor: 'hsl(var(--bg-primary))', color: 'hsl(var(--text-primary))' }}>
-                          {platform}
-                        </span>
-                      ))}
+        <div className="space-y-8">
+          {projects.map((project, index) => {
+            // Define unique color schemes for each project based on their actual brand colors
+            const projectColors = {
+              actiwell: {
+                gradient: 'from-blue-600 via-blue-700 to-cyan-500', // Actiwell brand colors - deep blue to cyan gradient
+                accent: 'blue',
+                iconBg: 'bg-blue-50',
+                iconColor: 'text-blue-700',
+                borderColor: 'border-blue-300',
+                shadowColor: 'shadow-blue-600/25'
+              },
+              timekeeping: {
+                gradient: 'from-yellow-600 via-amber-600 to-yellow-700', // Fujikin - gold/amber theme
+                accent: 'amber',
+                iconBg: 'bg-yellow-50',
+                iconColor: 'text-amber-700',
+                borderColor: 'border-yellow-300',
+                shadowColor: 'shadow-yellow-600/25'
+              },
+              myarm: {
+                gradient: 'from-slate-700 via-gray-800 to-slate-900', // myArms - sophisticated dark slate gradient
+                accent: 'slate',
+                iconBg: 'bg-gray-50',
+                iconColor: 'text-slate-800',
+                borderColor: 'border-gray-300',
+                shadowColor: 'shadow-gray-800/30'
+              },
+              property: {
+                gradient: 'from-emerald-500 via-emerald-600 to-emerald-700', // Minova - emerald green
+                accent: 'emerald',
+                iconBg: 'bg-emerald-100',
+                iconColor: 'text-emerald-600',
+                borderColor: 'border-emerald-200',
+                shadowColor: 'shadow-emerald-500/20'
+              },
+              powerControl: {
+                gradient: 'from-yellow-500 via-amber-600 to-yellow-600',
+                accent: 'yellow',
+                iconBg: 'bg-yellow-50',
+                iconColor: 'text-amber-700',
+                borderColor: 'border-yellow-200',
+                shadowColor: 'shadow-yellow-500/25'
+              },
+              airhub: {
+                gradient: 'from-pink-500 via-rose-600 to-pink-600',
+                accent: 'pink',
+                iconBg: 'bg-pink-50',
+                iconColor: 'text-rose-700',
+                borderColor: 'border-pink-200',
+                shadowColor: 'shadow-pink-500/25'
+              }
+            };
+
+            const colors = projectColors[projectKeys[index] as keyof typeof projectColors] || projectColors.actiwell;
+
+            return (
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-3xl transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2"
+                style={{
+                  backgroundColor: 'hsl(var(--card-bg))',
+                  border: '2px solid hsl(var(--card-border))',
+                  boxShadow: '0 10px 25px -5px rgb(30 58 138 / 0.1), 0 8px 10px -6px rgb(30 58 138 / 0.1)',
+                  animationDelay: `${index * 0.2}s`
+                }}
+              >
+                {/* Background Gradient Overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-r ${colors.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-500`}></div>
+
+                <div className="relative z-10 flex flex-col lg:flex-row min-h-[400px]">
+                  {/* Project Visual Section */}
+                  <div className="relative lg:w-1/3 xl:w-1/4 p-8 lg:p-12 flex items-center justify-center overflow-hidden">
+                    {/* Animated Background Circles */}
+                    <div className={`absolute inset-0 ${colors.iconBg} rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-500`}></div>
+                    <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 ${colors.iconBg} rounded-full opacity-10 group-hover:opacity-20 transition-opacity duration-500`}></div>
+
+                    {/* Floating Particles Effect */}
+                    <div className="absolute inset-0 overflow-hidden">
+                      <div className={`absolute top-8 left-8 w-3 h-3 ${colors.iconBg} rounded-full opacity-40 animate-bounce`}></div>
+                      <div className={`absolute top-16 right-12 w-2 h-2 ${colors.iconBg} rounded-full opacity-30 animate-pulse`}></div>
+                      <div className={`absolute bottom-12 left-16 w-4 h-4 ${colors.iconBg} rounded-full opacity-25 animate-bounce delay-1000`}></div>
+                    </div>
+
+                    {/* Project Icon */}
+                    <div className="relative z-10 text-center">
+                      <div className={`inline-flex items-center justify-center w-20 h-20 ${colors.iconBg} rounded-2xl mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg group-hover:shadow-xl`}>
+                        <Globe className={`w-10 h-10 ${colors.iconColor}`} />
+                      </div>
+                      <h3 className="text-xl lg:text-2xl font-bold text-gray-800 group-hover:text-gray-900 transition-colors duration-300">
+                        {project.title.split(':')[0]}
+                      </h3>
+                      <div className={`inline-block w-12 h-1 bg-gradient-to-r ${colors.gradient} rounded-full mt-3 group-hover:w-16 transition-all duration-300`}></div>
                     </div>
                   </div>
-                  
-                  <div>
-                    <h4 className="font-semibold mb-2 flex items-center" style={{ color: 'hsl(var(--text-primary))' }}>
-                      <Zap className="w-4 h-4 mr-2" style={{ color: 'hsl(var(--warning-color))' }} />
-                      {t('projects.labels.technologies')}
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech, techIndex) => (
-                        <span key={techIndex} className="px-3 py-1 text-xs rounded-full border" style={{ backgroundColor: 'hsl(var(--warning-color) / 0.1)', color: 'hsl(var(--text-primary))', borderColor: 'hsl(var(--warning-color) / 0.3)' }}>
-                          {tech}
-                        </span>
-                      ))}
+
+                  {/* Project Content Section */}
+                  <div className="lg:w-2/3 xl:w-3/4 p-8 lg:p-12">
+                    {/* Project Header */}
+                    <div className="mb-6">
+                      <h3 className={`text-2xl lg:text-3xl font-bold mb-3 bg-gradient-to-r ${colors.gradient} bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300`}>
+                        {project.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed text-lg group-hover:text-gray-700 transition-colors duration-300">
+                        {project.description}
+                      </p>
                     </div>
+
+                    {/* Project Details Grid */}
+                    <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                      {/* Features Section */}
+                      <div className="relative">
+                        <div className={`absolute -top-2 -left-2 w-6 h-6 ${colors.iconBg} rounded-full opacity-60`}></div>
+                        <h4 className={`font-bold mb-4 flex items-center text-gray-800 relative z-10`}>
+                          <div className={`w-8 h-8 ${colors.iconBg} rounded-lg flex items-center justify-center mr-3 shadow-sm group-hover:shadow-md transition-shadow duration-300`}>
+                            <Zap className={`w-4 h-4 ${colors.iconColor}`} />
+                          </div>
+                          {t('projects.labels.features')}
+                        </h4>
+                        <ul className="space-y-3 pl-2">
+                          {project.features.map((feature, featureIndex) => (
+                            <li key={featureIndex} className="flex items-start text-gray-600 group-hover:text-gray-700 transition-colors duration-300 animate-fade-in" style={{ animationDelay: `${featureIndex * 0.1}s` }}>
+                              <div className={`w-2 h-2 rounded-full mt-2 mr-4 bg-gradient-to-r ${colors.gradient} flex-shrink-0 group-hover:scale-125 transition-transform duration-200`}></div>
+                              <span className="leading-relaxed">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Platforms & Technologies */}
+                      <div className="space-y-6">
+                        {/* Platforms */}
+                        <div className="relative">
+                          <div className={`absolute -top-1 -right-1 w-4 h-4 ${colors.iconBg} rounded-full opacity-50`}></div>
+                          <h4 className={`font-bold mb-4 flex items-center text-gray-800 relative z-10`}>
+                            <div className={`w-8 h-8 ${colors.iconBg} rounded-lg flex items-center justify-center mr-3 shadow-sm group-hover:shadow-md transition-shadow duration-300`}>
+                              <Smartphone className={`w-4 h-4 ${colors.iconColor}`} />
+                            </div>
+                            {t('projects.labels.platforms')}
+                          </h4>
+                          <div className="flex flex-wrap gap-3">
+                            {project.platforms.map((platform, platformIndex) => (
+                              <span
+                                key={platformIndex}
+                                className={`px-4 py-2 text-sm font-medium rounded-full border-2 ${colors.borderColor} bg-white text-gray-700 hover:bg-gray-50 hover:scale-105 transition-all duration-200 shadow-sm hover:shadow-md`}
+                                style={{ animationDelay: `${platformIndex * 0.1}s` }}
+                              >
+                                {platform}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Technologies */}
+                        <div className="relative">
+                          <div className={`absolute -top-1 -right-1 w-4 h-4 ${colors.iconBg} rounded-full opacity-50`}></div>
+                          <h4 className={`font-bold mb-4 flex items-center text-gray-800 relative z-10`}>
+                            <div className={`w-8 h-8 ${colors.iconBg} rounded-lg flex items-center justify-center mr-3 shadow-sm group-hover:shadow-md transition-shadow duration-300`}>
+                              <Zap className={`w-4 h-4 ${colors.iconColor}`} />
+                            </div>
+                            {t('projects.labels.technologies')}
+                          </h4>
+                          <div className="flex flex-wrap gap-3">
+                            {project.technologies.map((tech, techIndex) => (
+                              <span
+                                key={techIndex}
+                                className={`px-4 py-2 text-sm font-medium rounded-full bg-gradient-to-r ${colors.gradient} text-white hover:shadow-xl hover:scale-105 transition-all duration-300 shadow-lg`}
+                                style={{ animationDelay: `${techIndex * 0.1}s` }}
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Website Link */}
+                    {project.website && (
+                      <div className="flex justify-end">
+                        <a
+                          href={project.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`group/btn inline-flex items-center px-6 py-3 bg-gradient-to-r ${colors.gradient} text-white font-semibold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 relative overflow-hidden`}
+                        >
+                          {/* Button Background Animation */}
+                          <div className={`absolute inset-0 bg-gradient-to-r ${colors.gradient} opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 blur-xl`}></div>
+
+                          {/* Button Ripple Effect */}
+                          <div className={`absolute inset-0 rounded-xl bg-white opacity-0 group-hover/btn:opacity-10 transition-opacity duration-300`}></div>
+
+                          <Globe className="w-5 h-5 mr-2 relative z-10 group-hover/btn:rotate-12 transition-transform duration-300" />
+                          <span className="relative z-10">{t('projects.labels.visitWebsite')}</span>
+                          <ExternalLink className="w-4 h-4 ml-2 relative z-10 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
+
+                {/* Enhanced Hover Effect */}
+                <div className={`absolute inset-0 bg-gradient-to-r ${colors.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none`}></div>
+
+                {/* Animated Border Effect */}
+                <div className={`absolute inset-0 rounded-3xl border-2 ${colors.borderColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`}></div>
               </div>
-              
-              {/* Hover Effect Overlay */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"
-                   style={{ 
-                     background: 'linear-gradient(135deg, hsl(var(--link-primary) / 0.08) 0%, hsl(var(--link-primary) / 0.04) 100%)'
-                   }}></div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 text-center">
-          <div className="rounded-3xl p-8 relative overflow-hidden"
+        <div className="mt-20 text-center">
+          <div className="rounded-3xl p-12 relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-100"
                style={{
-                 backgroundColor: 'hsl(var(--card-bg))',
                  border: '2px solid hsl(var(--card-border))',
-                 boxShadow: '0 4px 6px -1px rgb(30 58 138 / 0.1), 0 2px 4px -1px rgb(30 58 138 / 0.06)'
+                 boxShadow: '0 20px 40px -10px rgb(30 58 138 / 0.15), 0 10px 20px -5px rgb(30 58 138 / 0.1)'
                }}>
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-emerald-500/10"></div>
+              <div className="absolute top-10 right-10 w-20 h-20 bg-blue-500/10 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-10 left-10 w-16 h-16 bg-purple-500/10 rounded-full blur-2xl"></div>
+            </div>
+
             <div className="relative z-10">
-              <h3 className="text-2xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl mb-6 shadow-lg">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+
+              <h3 className="text-3xl lg:text-4xl font-bold mb-6 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 bg-clip-text text-transparent">
                 {t('projects.cta.title')}
               </h3>
-              <p className="mb-6 max-w-2xl mx-auto" style={{ color: 'hsl(var(--text-secondary))' }}>
+              <p className="text-xl mb-8 max-w-3xl mx-auto text-gray-600 leading-relaxed">
                 {t('projects.cta.description')}
               </p>
-              <a href="#contact" className="group btn-primary inline-flex items-center transform hover:scale-105 shadow-lg hover:shadow-xl">
+              <a href="#contact" className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1">
                 {t('projects.cta.button')}
-                <ExternalLink size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                <ExternalLink size={20} className="ml-3 group-hover:translate-x-1 transition-transform duration-300" />
               </a>
             </div>
-            
-            {/* Floating particles for CTA */}
-            <div className="absolute top-4 right-4 w-4 h-4 rounded-full animate-float" style={{ backgroundColor: 'hsl(var(--link-primary) / 0.2)' }}></div>
-            <div className="absolute bottom-4 left-4 w-3 h-3 rounded-full animate-float" style={{ animationDelay: '1s', backgroundColor: 'hsl(var(--warning-color) / 0.2)' }}></div>
+
+            {/* Enhanced Floating Particles */}
+            <div className="absolute top-8 right-8 w-6 h-6 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 opacity-20 animate-bounce"></div>
+            <div className="absolute bottom-8 left-8 w-5 h-5 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 opacity-20 animate-pulse"></div>
+            <div className="absolute top-1/2 left-8 w-4 h-4 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 opacity-20 animate-ping"></div>
+            <div className="absolute top-1/2 right-8 w-3 h-3 rounded-full bg-gradient-to-r from-orange-500 to-red-500 opacity-20 animate-pulse" style={{ animationDelay: '1s' }}></div>
           </div>
         </div>
       </div>
