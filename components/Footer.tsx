@@ -55,27 +55,27 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
+                <a href="#projects" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
                   {translations?.services?.ai?.title || 'AI Solutions'}
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
+                <a href="#projects" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
                   {translations?.services?.web?.title || 'Web Development'}
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
+                <a href="#projects" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
                   {translations?.services?.mobile?.title || 'Mobile Development'}
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
+                <a href="#projects" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
                   {translations?.services?.vision?.title || 'Computer Vision'}
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
+                <a href="#projects" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
                   {translations?.services?.devops?.title || 'DevOps & Cloud'}
                 </a>
               </li>

@@ -1,5 +1,6 @@
 import Hero from '@/components/Hero'
-import Services from '@/components/Services'
+import HomeProductNav from '@/components/HomeProductNav'
+import ITSolutionSection from '@/components/ITSolutionSection'
 import Contact from '@/components/Contact'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -9,7 +10,8 @@ export default function Home() {
     <main className="min-h-screen professional-bg">
       <Header />
       <Hero />
-      <Services />
+      <HomeProductNav />
+      <ITSolutionSection />
       <Contact />
       <Footer />
     </main>

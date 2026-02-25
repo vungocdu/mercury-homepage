@@ -788,7 +788,8 @@ export const ko = {
         technologies: {
           title: "기술:",
           items: ["Flutter", "React", "Laravel"]
-        }
+        },
+        website: "/actiwell-platform"
       },
       timekeeping: {
         title: "출퇴근 및 급여 관리 시스템 - Fujikin",
@@ -810,7 +811,7 @@ export const ko = {
           title: "기술:",
           items: ["React", "Laravel", "AI/머신러닝"]
         },
-        website: "https://www.fujikin.co.jp/en/"
+        website: "/tna-system"
       },
       myarm: {
         title: "myArm 엔터프라이즈 관리 솔루션",
@@ -853,7 +854,8 @@ export const ko = {
         technologies: {
           title: "기술:",
           items: ["React", "Node.js", "IoT (사물인터넷)"]
-        }
+        },
+        website: "/minova-pms"
       },
       powerControl: {
         title: "OTA Calculator: 호텔용 스마트 가격 계산 도구",
@@ -875,7 +877,7 @@ export const ko = {
           title: "기술:",
           items: ["React", "Node.js"]
         },
-        website: "https://ota.minova.vn"
+        website: "/ota-calculator"
       },
       airhub: {
         title: "Visual-First Booking Engine: 객실이 아닌 경험 판매",
@@ -898,6 +900,90 @@ export const ko = {
           items: ["React", "Node.js"]
         },
         website: "https://tmha.minova.vn"
+      },
+      quickshift: {
+        title: "QuickShift: AI 태스크포스 관리",
+        description: "일본 인력 파견 시장을 위해 Care Earth Inc.와 협력하여 개발되었습니다. QuickShift는 AI 타임카드 OCR, 자동 시프트 스케줄링, 실시간 업무 관리, 청구서 발행, 멀티채널 알림까지 파견 업무의 전체 프로세스를 디지털화하는 엔드투엔드 태스크포스 관리 플랫폼입니다. 수작업을 제거하고 근로자, 고객, 관리자 전반에 걸쳐 효율적인 운영 확장을 지원합니다.",
+        features: {
+          title: "주요 기능:",
+          items: [
+            "AI 타임카드 OCR (Gemini AI)",
+            "자동 시프트 생성 — Auto Shifter",
+            "업무 관리 및 청구서 발행",
+            "멀티채널 알림 (LINE/Zalo)"
+          ]
+        },
+        platforms: {
+          title: "플랫폼:",
+          items: ["웹 앱", "모바일 앱"]
+        },
+        technologies: {
+          title: "기술:",
+          items: ["Next.js", "Golang (Chi)", "Flutter"]
+        },
+        website: "/quickshift"
+      },
+      atms: {
+        title: "Actiwell ATMS: 선수 훈련 관리",
+        description: "Actiwell ATMS는 표준 테스트, 스테이션 기반 캠페인 운영, 주기화 분석, 다중 지점 거버넌스를 통합한 스포츠 훈련 플랫폼입니다. 베트남 국가 스포츠 훈련센터와 협력하여 개발되었습니다.",
+        features: {
+          title: "주요 기능:",
+          items: [
+            "NSCA 정렬 30개 이상 테스트 프로토콜",
+            "테스트 캠페인 및 스테이션 입력 모드",
+            "주기화 추적 (Volume/Intensity)",
+            "지방-국가 통합 운영 거버넌스"
+          ]
+        },
+        platforms: {
+          title: "플랫폼:",
+          items: ["웹 앱"]
+        },
+        technologies: {
+          title: "기술:",
+          items: ["Next.js", "Golang (Gin)", "PostgreSQL"]
+        },
+        website: "/actiwell-atms"
+      },
+      contcal: {
+        title: "ContCal: 3D 컨테이너 적재 최적화",
+        description: "AI 기반 컨테이너 적재 최적화 시스템으로 공간 활용률 90% 이상 달성, 운송 비용 10-15% 절감, 계획 시간을 수 시간에서 수 분으로 단축합니다. 가구 물류를 위한 20개 이상의 자동화된 비즈니스 규칙이 적용된 인터랙티브 3D 시각화.",
+        features: {
+          title: "주요 기능:",
+          items: [
+            "빔 서치 알고리즘을 활용한 3D 빈 패킹",
+            "인터랙티브 3D 컨테이너 시각화",
+            "20개 이상의 자동화된 비즈니스 및 안전 규칙",
+            "다중 정차 우선순위 그룹 관리"
+          ]
+        },
+        platforms: {
+          title: "플랫폼:",
+          items: ["웹 애플리케이션"]
+        },
+        technologies: {
+          title: "기술:",
+          items: ["React", "Go", "Three.js"]
+        },
+        website: "/container-calculator"
+      }
+    },
+    categories: {
+      hrTech: {
+        title: "HR Tech 솔루션",
+        description: "인사 관리, 인력 스케줄링 및 비즈니스 운영을 위한 디지털 전환 솔루션."
+      },
+      sportTech: {
+        title: "Sport Tech 솔루션",
+        description: "피트니스 체인, 체육관 관리 및 운동 훈련 센터를 위한 종합 플랫폼."
+      },
+      hotelTech: {
+        title: "Hotel Tech 솔루션",
+        description: "자산 관리, 예약 엔진 및 호텔 운영을 위한 스마트 호스피탈리티 솔루션."
+      },
+      businessOpt: {
+        title: "비즈니스 최적화",
+        description: "운영 효율성, 물류 최적화, 다기능 비즈니스 관리를 위한 지능형 도구."
       }
     },
     cta: {
@@ -1086,6 +1172,929 @@ export const ko = {
     no: "아니오",
     ok: "확인",
     explorePortfolio: "포트폴리오 보기"
+  },
+
+  // Process & Technology Page
+  processPage: {
+    hero: {
+      badge: "우리의 방법론",
+      title1: "프로세스",
+      title2: "& 기술",
+      subtitle: "검증된 개발 방법론과 솔루션을 구동하는 최첨단 기술 스택을 알아보세요.",
+    },
+    cta: "프로세스 & 기술 보기",
+    ctaSection: {
+      title: "프로젝트를 시작할 준비가 되셨나요?",
+      description: "검증된 방법론과 최첨단 기술로 비전을 현실로 만들어 드리겠습니다.",
+      button: "문의하기",
+    },
+  },
+
+  // IT Solution Landing Page
+  itPage: {
+    hero: {
+      badge: "Mercury Solution",
+      title1: "비즈니스를 움직이는",
+      title2: "소프트웨어를 구축",
+      subtitle: "호스피탈리티, 인력 관리, 스포츠 & 피트니스, 물류를 위한 전문 플랫폼 — 베트남과 전 세계 기업의 신뢰를 받고 있습니다.",
+      cta: {
+        explore: "서비스 탐색",
+        viewProjects: "프로젝트 보기",
+      },
+      stats: {
+        clients: "고객",
+        projects: "프로젝트",
+        satisfaction: "만족도",
+        support: "지원",
+      },
+    },
+    services: {
+      badge: "전문 AI & TVC 서비스",
+      heading1: "디지털",
+      heading2: "솔루션",
+      heading3: "성장을 촉진하는",
+      statsTitle: "왜 Mercury Solutions를 선택하나요?",
+      benefits: {
+        provenTrack: "검증된 실적",
+        fastDelivery: "빠른 납품",
+        premiumQuality: "프리미엄 품질",
+      },
+      statsItems: {
+        projects: "완료된 프로젝트",
+        clients: "만족한 고객",
+        awards: "업계 수상",
+        support: "지원 가능",
+      },
+    },
+  },
+
+  // Actiwell ATMS Page
+  atmsSystem: {
+    hero: {
+      badge: "Actiwell ATMS",
+      title: "국가 규모 스포츠 운영을 위한 선수 훈련 관리 시스템",
+      subtitle: "Actiwell ATMS는 표준 테스트, 캠페인 실행, 주기화 분석, 역할 기반 운영, 다중 지점 거버넌스를 하나의 디지털 흐름으로 연결합니다.",
+      stats: {
+        tests: "30개 이상의 NSCA 표준 테스트",
+        roles: "3개 역할 기반 포털",
+        multiLocation: "국가/지방 지점 운영 워크플로",
+        hybridArch: "Next.js + Golang 하이브리드 아키텍처"
+      }
+    },
+    cooperation: {
+      title: "협력 체계",
+      description: "베트남 국가 스포츠 훈련센터(Trung tam Huan luyen the thao quoc gia TP.HCM)와의 협력을 통해, 대규모 현장 운영과 표준화된 성과 관리에 맞춘 솔루션으로 개발되었습니다."
+    },
+    modules: {
+      title: "핵심 기능 모듈",
+      description: "ATMS는 요구사항과 아키텍처를 연결하여 선수 평가 및 육성 운영을 위한 일관된 워크플로를 제공합니다.",
+      items: {
+        athlete360: {
+          title: "선수 360 프로필 관리",
+          description: "선수 기본 정보, 신체 지표, 테스트 이력, 성장 타임라인을 통합 관리합니다."
+        },
+        testingProtocols: {
+          title: "NSCA 기반 테스트 프로토콜",
+          description: "PAR-Q+, 건강 이력, 금기 조건 검사를 포함한 표준 테스트 절차를 제공합니다."
+        },
+        campaignStation: {
+          title: "테스트 캠페인 및 스테이션 모드",
+          description: "대규모 테스트를 빠르게 입력하고, 중복 방지와 진행률 추적을 지원합니다."
+        },
+        periodization: {
+          title: "주기화 및 부하 분석",
+          description: "계획 대비 실적 비교를 통해 코치의 훈련 의사결정을 지원합니다."
+        },
+        multiBranch: {
+          title: "다중 지점 및 전환 워크플로",
+          description: "지방 지점과 국가 지점 간 선수/코치 소속 및 전환 이력을 관리합니다."
+        },
+        securityCompliance: {
+          title: "RBAC, 감사, 컴플라이언스",
+          description: "역할 기반 데이터 접근, 핵심 작업 감사 로그, 개인정보 보호 요구사항을 적용합니다."
+        }
+      }
+    },
+    architecture: {
+      title: "아키텍처 개요",
+      description: "UI, API, 데이터 계층을 분리하여 확장성과 유지보수성을 동시에 확보합니다.",
+      layers: {
+        frontend: "Frontend: Next.js App Router 기반 Admin/Coach/Athlete 포털 분리.",
+        backend: "Backend: Golang REST API(Gin + OpenAPI)로 비즈니스 로직과 권한 제어 수행.",
+        database: "Data layer: PostgreSQL로 선수, 테스트, 배정, 캠페인 데이터를 구조화 관리.",
+        integration: "Security/Compliance: JWT 인증, 감사 로그, PDPA 고려, NSCA 정렬 운영."
+      }
+    },
+    standards: {
+      title: "표준 및 거버넌스",
+      items: [
+        "NSCA 지향 테스트 절차와 안전 통제.",
+        "Admin, Coach, Athlete 역할 기반 RBAC 모델.",
+        "개인정보 및 의료정보 처리에 대한 PDPA 고려.",
+        "배정, 전환, 결과 수정에 대한 감사 대응 체계."
+      ]
+    },
+    cta: {
+      contact: "팀에 문의하기",
+      backToItSolution: "IT Solutions로 돌아가기"
+    }
+  },
+
+  // TNA System Page
+  tnaSystem: {
+    hero: {
+      badge: "TNA HRM System",
+      title: "Digital HR & Payroll Platform for Manufacturing Operations",
+      subtitle: "This page summarizes core TNA capabilities based on the project SRS and production landing flow: workforce data management, AI attendance capture, shift/leave operations, payroll automation, and accounting integration.",
+      stats: {
+        functionalPages: "17+ functional pages",
+        processFlows: "7 major process flows",
+        roles: "5 operational roles",
+        languages: "Multi-language support"
+      }
+    },
+    core: {
+      title: "Core Functional Modules",
+      description: "TNA covers the full HRM and payroll lifecycle for manufacturing teams, from attendance input to accounting output.",
+      modules: {
+        employeeOrg: {
+          title: "Employee & Organization Management",
+          description: "Manage employee profiles, department structure, and role-based access for HR, payroll, managers, and employees.",
+          bullets: ["Employee master data", "Department hierarchy", "Role and permission matrix"]
+        },
+        aiAttendance: {
+          title: "AI Time & Attendance",
+          description: "Capture attendance in real-time with AI camera/biometric-ready flow and synchronize timesheet data for payroll.",
+          bullets: ["Face-recognition flow", "Realtime check-in/out", "Timesheet synchronization"]
+        },
+        shiftMgmt: {
+          title: "Shift, Group Shift & Shift Change",
+          description: "Configure standard/rotating shifts, assign employees by group, and control shift-change requests with approval.",
+          bullets: ["Shift templates", "Group assignment", "Shift change workflow"]
+        },
+        leaveOtLate: {
+          title: "Leave, Overtime, Late/Early Rules",
+          description: "Handle leave requests, overtime categories, and late/early scenarios with policy-based calculations.",
+          bullets: ["Leave type and request", "Overtime policy matrix", "Late/early handling"]
+        },
+        payrollEngine: {
+          title: "Payroll Engine",
+          description: "Automate gross-to-net payroll with tax and insurance calculations aligned to Vietnamese labor regulations.",
+          bullets: ["Automated payroll run", "Tax and insurance logic", "Payslip output"]
+        },
+        salaryTemplate: {
+          title: "Salary Components & Templates",
+          description: "Build reusable payroll templates with configurable allowances, deductions, and formula-based components.",
+          bullets: ["Component library", "Template assignment", "Default salary settings"]
+        },
+        bonusDeduction: {
+          title: "Bonus & Deduction Management",
+          description: "Maintain additional income and deduction lists, apply targeted or bulk rules, and audit payroll impact.",
+          bullets: ["Bonus list management", "Deduction list management", "Net-salary impact checks"]
+        },
+        misaIntegration: {
+          title: "MISA Accounting Integration",
+          description: "Push payroll accounting vouchers and synchronize employee dictionaries for end-to-end accounting automation.",
+          bullets: ["Voucher sync API", "Employee dictionary sync", "Callback and sync monitoring"]
+        }
+      }
+    },
+    mock: {
+      common: { live: "Live" },
+      employeeOrg: {
+        windowTitle: "Staff / Department / User",
+        searchEmployee: "Search employee",
+        departmentFilter: "Department",
+        columns: { employee: "Employee", department: "Department", role: "Role" },
+        sample: { department: "Assembly A", role: "HR Manager" }
+      },
+      aiAttendance: {
+        windowTitle: "Timekeeping / AI Camera",
+        realtime: "Realtime",
+        cards: { present: "Present", late: "Late", noCheckIn: "No check-in" },
+        events: "Camera Events",
+        syncing: "Syncing",
+        sampleEvent: "Gate A · Face Match"
+      },
+      shiftMgmt: {
+        windowTitle: "Shift / Group Shift / Change",
+        columns: { group: "Group", shift: "Shift", time: "Time", status: "Status" },
+        lineA: { group: "Line A - Weekday", shift: "Morning", status: "Running" },
+        lineB: { group: "Line B - Rotation", shift: "Night", status: "Pending" }
+      },
+      leaveOtLate: {
+        windowTitle: "Leave / Overtime / Late-Early",
+        tabs: { leaveRequest: "Leave Request", overtime: "Overtime", lateEarly: "Late/Early" },
+        rows: {
+          leave: "Leave · EMP-01021 · 1 day",
+          overtime: "OT · EMP-00403 · 3.5h",
+          late: "Late · EMP-00210 · 18m"
+        },
+        status: { awaiting: "Awaiting", approved: "Approved", processed: "Processed" }
+      },
+      payroll: {
+        windowTitle: "Payroll Calculation",
+        rightLabel: "Monthly Run",
+        period: "Mar 2026",
+        departmentFilter: "Department",
+        gross: "Gross Payroll",
+        net: "Net Payroll",
+        statusLabel: "Calculation status",
+        calculated: "Calculated"
+      },
+      salaryTemplate: {
+        windowTitle: "Salary Components / Templates",
+        libraryTitle: "Component Library",
+        baseSalary: "Base Salary",
+        mealAllowance: "Meal Allowance",
+        insurance: "Insurance",
+        templateTitle: "Template Mapping",
+        templateName: "Factory Worker V2",
+        formulaGross: "Gross = Base + OT + Bonus",
+        formulaNet: "Net = Gross - Tax - BHXH",
+        active: "Active"
+      },
+      bonusDeduction: {
+        windowTitle: "Bonus / Deduction Lists",
+        columns: { item: "Item", type: "Type", rule: "Rule", amount: "Amount" },
+        rows: {
+          bonusName: "Attendance Bonus",
+          bonusType: "Bonus",
+          bonusRule: "Monthly fixed",
+          deductionName: "Advance Salary",
+          deductionType: "Deduction",
+          deductionRule: "Targeted"
+        }
+      },
+      misa: {
+        windowTitle: "MISA Sync Queue",
+        rightLabel: "API Callback",
+        queueTitle: "Payroll Voucher Push",
+        inQueue: "In Queue",
+        batchInfo: "Batch: 100 vouchers · Tenant: FUJIKIN-VN",
+        dictionarySync: "Dictionary Sync",
+        voucherCreate: "Voucher Create",
+        callbackStatus: "Callback Status",
+        done: "Done",
+        processing: "Processing",
+        awaiting: "Awaiting"
+      }
+    },
+    screenDesign: {
+      title: "TNA CMS Screen Design",
+      description: "Visualized from the TNA CMS frontend modules (`dashboard`, `payroll-calculation`, `settings/ai-camera`) to show how daily operation screens are organized.",
+      cards: {
+        dashboard: "Dashboard Overview",
+        payroll: "Payroll Calculation List",
+        aiCamera: "AI Camera Settings"
+      },
+      dashboard: {
+        realtime: "Dashboard / Real-time",
+        attendanceTrend: "Attendance Trend",
+        pendingRequests: "Pending Requests",
+        kpi: { totalStaff: "Total Staff", present: "Present", late: "Late", onLeave: "On Leave" },
+        pending: { leave: "Leave", shiftChange: "Shift change", lateEarly: "Late/Early" }
+      },
+      payroll: {
+        filterPeriodName: "Period name",
+        filterDateRange: "Date range",
+        columns: { period: "Period", status: "Status", department: "Department", staff: "Staff" },
+        sample: {
+          period: "Mar 2026",
+          calculated: "Calculated",
+          approved: "Approved",
+          draft: "Draft",
+          assembly: "Assembly",
+          qa: "QA",
+          warehouse: "Warehouse"
+        }
+      },
+      aiCamera: {
+        officeLocation: "Office / Location",
+        provider: "Provider",
+        placeIdToken: "Place ID / Token",
+        activeConfig: "Active Configuration",
+        connected: "Connected",
+        workflow: "Save / Edit / Delete workflow",
+        sample: {
+          officeA1: "Factory A - Gate 1",
+          officeA2: "Factory A - Gate 2",
+          officeB4: "Factory B - Loading Dock"
+        }
+      }
+    },
+    workflow: {
+      title: "Operational Workflow",
+      steps: [
+        "System and policy setup (company rules, calendar, shift defaults)",
+        "Salary structure and template configuration",
+        "Employee onboarding with profile and attendance source registration",
+        "Daily attendance and operational data collection",
+        "Payroll calculation, review, and approval",
+        "Accounting sync and payment execution"
+      ]
+    },
+    compliance: {
+      title: "Compliance & Integration",
+      p1: "Payroll logic includes tax and insurance handling (BHXH, BHYT, BHTN), configurable overtime rates, and policy-based rules for allowances and deductions.",
+      p2: "MISA integration automates accounting handoff by syncing employee dictionaries and pushing payroll vouchers through API and callback-based status tracking.",
+      p3: "Access control supports role-specific operation for Admin, HR Manager, Payroll Specialist, Department Manager, and Employee."
+    },
+    backToItSolution: "Back to IT Solutions"
+  },
+
+  // Actiwell Platform Page
+  actiwell: {
+    hero: {
+      badge: "올인원 피트니스 생태계",
+      title1: "Actiwell 플랫폼",
+      title2: "피트니스의 미래를 만들다",
+      subtitle: "Mercury Solutions는 동남아시아 피트니스 산업에서 20년 이상의 리더십을 가진 Attivo International과 전략적으로 파트너십을 맺어, 피트니스 체인의 운영과 성장을 혁신하는 올인원 생태계 Actiwell을 만들었습니다.",
+      stats: {
+        apps: "모바일 앱",
+        features: "핵심 기능",
+        experience: "년 경험",
+        powered: "AI 기반",
+      },
+    },
+    partnership: {
+      badge: "전략적 파트너십",
+      title: "업계 리더가 구축",
+      description: "Actiwell은 Mercury Solutions의 기술 전문성과 Attivo International의 동남아시아 피트니스 시장에 대한 깊은 이해에서 탄생한 전략적 협업의 결과입니다.",
+      mercury: {
+        role: "기술 파트너",
+        description: "Mercury Solutions는 최첨단 소프트웨어 엔지니어링, AI 역량, 그리고 수백만 사용자에게 서비스를 제공하는 고부하 엔터프라이즈 애플리케이션 구축의 검증된 실적을 제공합니다.",
+      },
+      attivo: {
+        role: "피트니스 산업 전문가",
+        description: "동남아시아 피트니스 산업에서 20년 이상의 리더십을 가진 Attivo International은 비할 데 없는 업계 전문 지식, 운영 통찰력, 그리고 피트니스 체인이 번성하기 위해 필요한 것에 대한 깊은 이해를 제공합니다.",
+      },
+    },
+    ecosystem: {
+      badge: "완전한 생태계",
+      title: "두 개의 앱, 하나의 강력한 플랫폼",
+      description: "Actiwell은 통합된 모바일 앱과 관리 시스템을 통해 헬스장 회원과 관리자 모두에게 원활한 경험을 제공합니다.",
+      memberApp: {
+        title: "회원 모바일 앱",
+        subtitle: "iOS & Android • Flutter",
+        features: {
+          booking: {
+            title: "스마트 예약",
+            desc: "실시간 가용성, AI 기반 시간 추천, 즉시 확인으로 그룹 수업과 개인 트레이닝 세션을 예약하세요.",
+          },
+          checkin: {
+            title: "빠른 체크인",
+            desc: "모든 헬스장 방문과 활동 이력의 타임라인 추적과 함께 어떤 스튜디오에서든 원활하게 체크인.",
+          },
+          classes: {
+            title: "수업 탐색",
+            desc: "그룹 수업 검색과 필터링, 트레이너 프로필 보기, 리뷰 읽기, 체인 내 어느 위치에서든 수업 참여.",
+          },
+          measurement: {
+            title: "체성분 추적",
+            desc: "시간에 따른 InBody 측정 추적, 상세한 체성분 이력 보기, 시각적 차트로 피트니스 진행 상황 모니터링.",
+          },
+          reviews: {
+            title: "평가 및 리뷰",
+            desc: "세션 후 트레이너와 수업 평가, 커뮤니티 리뷰 읽기, 체인 전체의 서비스 품질 유지에 기여.",
+          },
+          notifications: {
+            title: "스마트 알림",
+            desc: "예약 리마인더, 수업 업데이트, 패키지 만료 알림, 개인화된 추천을 푸시 알림으로 수신.",
+          },
+        },
+      },
+      cms: {
+        title: "관리 CMS",
+        subtitle: "웹 대시보드 • React",
+        features: {
+          customerMgmt: {
+            title: "고객 관리",
+            desc: "완전한 회원 프로필, 그룹 관리, 방문자 추적, 고객 라이프사이클 분석을 하나의 중앙 대시보드에서.",
+          },
+          scheduleMgmt: {
+            title: "일정 관리",
+            desc: "수업 일정, 트레이너 배정, PT 예약 슬롯, 모든 위치의 스튜디오 수용력 관리.",
+          },
+          analytics: {
+            title: "고급 분석",
+            desc: "매출 분석, 예약 트렌드, 체크인 패턴, 회원 라이프사이클 추적, 전환 퍼널, 직원 성과 보고서.",
+          },
+          salesPackages: {
+            title: "판매 및 패키지",
+            desc: "회원 패키지, 상품, 가격 티어 생성 및 관리, 통합 결제 추적을 통한 판매 주문 처리.",
+          },
+          contracts: {
+            title: "계약 관리",
+            desc: "디지털 계약 생성, 갱신 추적, 판매 목표 관리, 전체 체인의 자동 매출 보고.",
+          },
+          multiLocation: {
+            title: "다중 위치 지원",
+            desc: "위치별 설정, 직원 배정, 성과 비교와 함께 하나의 대시보드에서 여러 스튜디오 관리.",
+          },
+        },
+      },
+    },
+    ai: {
+      badge: "AI 기반 인텔리전스",
+      title: "독특한 AI 기능",
+      description: "Actiwell은 인공지능을 활용하여 워크아웃 여정을 개인화하고, 마케팅을 자동화하며, 비즈니스 운영을 최적화합니다.",
+      features: {
+        smartBooking: {
+          title: "AI 예약 추천",
+          desc: "고객 행동 패턴, 패키지 만료일, 정기적인 운동 슬롯, 스튜디오 수용력을 기반으로 한 지능형 예약 추천 — 참여를 극대화하는 우선순위 점수 포함.",
+          tags: {
+            expiringPackage: "만료 예정 패키지",
+            inactiveCustomer: "비활성 회원",
+            regularSlot: "정기 슬롯",
+            lowCapacity: "낮은 수용력",
+          },
+        },
+        retention: {
+          title: "회원 유지 AI",
+          desc: "행동 분석, 참여 점수, 자동 재참여 캠페인을 사용하여 이탈 위험이 있는 회원을 사전에 식별.",
+        },
+        revenueOptimize: {
+          title: "매출 최적화",
+          desc: "가격 전략, 패키지 추천, 업셀링 기회, 타겟 마케팅 캠페인을 위한 AI 기반 인사이트.",
+        },
+        capacityPlanning: {
+          title: "스마트 수용력 계획",
+          desc: "이력 데이터와 머신 러닝 모델을 사용하여 피크 시간 예측, 수업 일정 최적화, 트레이너 업무량 균형.",
+        },
+      },
+    },
+    value: {
+      title: "지속 가능한 성장 촉진",
+      description: "Actiwell은 피트니스 체인 운영의 모든 측면에서 측정 가능한 비즈니스 임팩트를 제공합니다.",
+      items: {
+        operations: {
+          title: "운영 효율화",
+          desc: "일일 보고서 자동화, 계약 디지털화, 다중 위치 관리 중앙화, 수작업 최대 60% 감소.",
+        },
+        experience: {
+          title: "회원 경험 향상",
+          desc: "개인화된 운동 추천, 원활한 예약, 즉시 체크인, 회원의 참여와 충성도를 유지하는 아름다운 모바일 경험.",
+        },
+        revenue: {
+          title: "지속 가능한 매출 성장",
+          desc: "데이터 기반 인사이트, 자동화된 마케팅, 개선된 유지율, 일관된 매출 성장을 이끄는 최적화된 판매 프로세스.",
+        },
+      },
+    },
+    tech: {
+      title: "최신 기술로 구축",
+      description: "성능, 확장성, 신뢰성을 보장하는 엔터프라이즈급 기술 스택.",
+      stack: {
+        flutter: "크로스 플랫폼 모바일",
+        laravel: "백엔드 API",
+        react: "CMS 대시보드",
+        mysql: "데이터베이스",
+        firebase: "푸시 & 애널리틱스",
+        docker: "컨테이너화",
+        ai: "스마트 기능",
+        api: "통합 레이어",
+      },
+    },
+    screens: {
+      businessApp: {
+        badge: "직원 & 트레이너 앱",
+        title: "직원용 비즈니스 앱",
+        description: "트레이너와 직원이 일정 관리, 매출 추적, 예약 처리, 체성분 측정을 수행하기 위한 전용 모바일 앱.",
+      },
+    },
+    demo: {
+      badge: "데모 센터",
+      heading: "Actiwell 플랫폼 체험하기",
+      directions: "길찾기",
+      items: {
+        address: {
+          label: "사무실 주소",
+          line1: "Mercury Solutions JSC",
+          line2: "506A Ford Thang Long, 105 Lang Ha, Dong Da, 하노이",
+        },
+        hours: {
+          label: "데모 운영 시간",
+          value: "월~금: 9:00 - 18:00 (GMT+7)",
+        },
+        platforms: {
+          label: "지원 플랫폼",
+          line1: "iOS & Android (Flutter 모바일 앱)",
+          line2: "Web CMS (React 대시보드)",
+        },
+        security: {
+          label: "보안 및 규정 준수",
+          value: "엔터프라이즈급 암호화, JWT 인증, 역할 기반 접근 제어",
+        },
+        support: {
+          label: "기술 지원",
+          line1: "신규 고객을 위한 전담 온보딩 팀",
+          line2: "24/7 시스템 모니터링 및 SLA 기반 대응",
+        },
+      },
+    },
+    cta: {
+      title: "피트니스 비즈니스를 혁신할 준비가 되셨나요?",
+      description: "Actiwell로 운영을 효율화하고, 회원 경험을 향상시키며, 피트니스 체인의 지속 가능한 매출 성장을 실현하세요.",
+      contact: "문의하기",
+      solutions: "모든 솔루션 보기",
+    },
+  },
+
+  // QuickShift Platform Page
+  quickshift: {
+    hero: {
+      badge: "AI 기반 인력 관리",
+      title: "태스크포스 관리 플랫폼",
+      subtitle: "AI 타임카드 스캔과 자동 스케줄링부터 청구서 발행, 멀티채널 알림까지 — 엔드투엔드 파견 인력 솔루션. 일본 인력 파견 업체를 위해 구축.",
+      cta: {
+        explore: "모듈 탐색",
+        apps: "모바일 앱",
+      },
+      stats: {
+        modules: "코어 모듈",
+        apps: "모바일 앱",
+        permissions: "RBAC 권한",
+        migrations: "DB 마이그레이션",
+      },
+    },
+    modules: {
+      badge: "플랫폼 모듈",
+      title1: "인력 관리에",
+      title2: "필요한 모든 것",
+      subtitle: "온보딩부터 청구서 발행까지 파견 인력의 전체 라이프사이클을 커버하는 8개 통합 모듈.",
+      items: {
+        timecardOcr: { title: "타임카드 OCR", desc: "Gemini AI를 활용한 AI 타임카드 스캔. 종이 타임카드에서 근무 시간, 초과 근무, 휴식 데이터를 높은 정확도로 자동 추출." },
+        autoShifter: { title: "자동 시프터", desc: "근무자 가용성, 스킬, 위치, 노동 규정에 기반하여 최적의 시프트 배정을 자동 생성하는 AI 스케줄링 엔진." },
+        workOrders: { title: "작업 지시", desc: "완전한 작업 지시 라이프사이클 관리 — 생성, 배정, 추적, 완료. 정기 주문, 템플릿, 다중 사이트 운영 지원." },
+        workerMgmt: { title: "근무자 관리", desc: "스킬, 자격증, 가용성 캘린더, 계약 이력, 성과 추적을 포함하는 종합 근무자 프로필." },
+        customerMgmt: { title: "고객 관리", desc: "파견 클라이언트를 위한 CRM — 계약, 결제 설정, 사이트 위치, 필요 스킬셋, 관계 이력." },
+        dashboard: { title: "대시보드 & 분석", desc: "4가지 전문 서브 대시보드: 운영 개요, 재무 요약, 근무자 활용률, 실시간 KPI가 포함된 고객 인사이트." },
+        invoicing: { title: "청구 & 결제", desc: "타임카드에서 자동 청구서 생성, 맞춤 결제 템플릿, 결제 추적, 회계 시스템 연동." },
+        notifications: { title: "멀티채널 알림", desc: "FCM/APNs를 통한 푸시 알림, LINE, Zalo, WhatsApp 연동을 통한 근무자·고객 커뮤니케이션." },
+      },
+    },
+    ai: {
+      badge: "AI 탑재",
+      title1: "모든 단계에",
+      title2: "인텔리전스를 내장",
+      ocr: {
+        title: "타임카드 OCR",
+        desc: "Google Gemini AI 기반 OCR 엔진이 종이 타임카드를 스캔하고 자동으로 추출:",
+        items: ["근무 시간 & 초과 근무", "휴식 시간", "시작/종료 타임스탬프", "근무자 식별", "이상 감지"],
+      },
+      shifter: {
+        title: "자동 시프터",
+        desc: "AI 스케줄링 엔진이 여러 요소를 고려하여 최적의 시프트 배정을 생성:",
+        items: ["근무자 스킬 & 자격증", "위치 근접성", "노동법 준수", "가용성 선호도", "공정 배분 알고리즘"],
+      },
+    },
+    roles: {
+      badge: "역할 기반 접근",
+      title1: "5가지 역할,",
+      title2: "63가지 세분화된 권한",
+      subtitle: "세분화된 접근 제어로 각 팀원이 필요한 정보만 정확하게 볼 수 있습니다 — 그 이상도 이하도 아닌.",
+      items: {
+        superAdmin: { title: "슈퍼 관리자", desc: "조직 설정, 사용자 관리, 감사 로그를 포함한 전체 시스템 접근.", permissions: "전체 63개 권한" },
+        admin: { title: "관리자", desc: "모든 지점의 근무자, 고객, 작업 지시, 청구서 관리.", permissions: "50개 이상 권한" },
+        manager: { title: "매니저", desc: "일일 운영 감독, 타임카드 승인, 스케줄 관리, 보고서 생성.", permissions: "35개 이상 권한" },
+        staff: { title: "스태프", desc: "작업 지시 생성·업데이트, 타임카드 처리, 근무자 배정 관리.", permissions: "20개 이상 권한" },
+        viewer: { title: "뷰어", desc: "대시보드, 보고서, 운영 데이터에 대한 읽기 전용 접근.", permissions: "읽기 전용" },
+      },
+    },
+    mobile: {
+      badge: "모바일 애플리케이션",
+      flutterBadge: "Flutter · Melos 모노레포 · iOS & Android로 구축",
+      worker: {
+        title: "근무자 애플리케이션",
+        subtitle: "스케줄, 타임카드 & 가용성",
+        features: [
+          "실시간 상태 및 위치 정보로 배정된 시프트 확인",
+          "출퇴근 및 휴식 추적이 포함된 타임카드 제출",
+          "주간 가용성 설정 및 휴가 신청",
+          "새로운 배정 및 스케줄 변경에 대한 푸시 알림 수신",
+          "수입 이력 및 결제 상태 확인",
+        ],
+        stats: { loadTime: "로딩 시간", clockIn: "출퇴근", pushAlerts: "푸시 알림" },
+      },
+      customer: {
+        title: "고객 애플리케이션",
+        subtitle: "작업 지시, 승인 & 결제",
+        features: [
+          "근무자 스킬 요건이 포함된 작업 지시 생성·관리",
+          "모든 배정 근무자 및 사이트의 실시간 상태 추적",
+          "원탭 일괄 작업으로 타임카드 승인 또는 이의 제기",
+          "청구서, 결제 이력, 미결 잔액 확인",
+          "근무자 성과 평가 및 선호 근무자 요청",
+        ],
+        stats: { bulkApprove: "일괄 승인", orderTracking: "주문 추적", invoicing: "청구서 발행" },
+      },
+      business: {
+        title: "비즈니스 / HR 애플리케이션",
+        subtitle: "운영, 배차 & 분석",
+        features: [
+          "KPI 및 충족률이 포함된 실시간 운영 대시보드",
+          "사이트 간 오픈 포지션에 원클릭 근무자 배차",
+          "AI 생성 스케줄을 위한 자동 시프터 연동",
+          "수익 추적 및 청구서 상태가 포함된 재무 개요",
+          "일별, 주별, 월별 운영 보고서 생성",
+        ],
+        stats: { dashboard: "대시보드", autoShifter: "자동 시프터", export: "내보내기" },
+      },
+    },
+    integrations: {
+      badge: "통합 허브",
+      title1: "기존 도구와",
+      title2: "원활하게 연결",
+      items: {
+        odoo: { name: "Odoo ERP", desc: "회계, HR, 재고의 양방향 동기화" },
+        payment: { name: "결제 게이트웨이", desc: "Stripe, PayPay, 은행 이체 자동화" },
+        messaging: { name: "LINE / Zalo / WhatsApp", desc: "멀티채널 메시징 & 알림" },
+        aws: { name: "AWS 인프라", desc: "EC2, RDS, S3, CloudFront, Lambda, ALB" },
+      },
+    },
+    tech: {
+      badge: "기술",
+      title1: "최신 기술로",
+      title2: "구축",
+      items: {
+        cms: { label: "CMS 프론트엔드", tech: "Next.js 16 · React 19 · Tailwind v4 · shadcn/ui" },
+        mobile: { label: "모바일 앱", tech: "Flutter · Melos 모노레포 · 3개 앱" },
+        backend: { label: "백엔드 API", tech: "Go (Chi router) · DDD 아키텍처 · PostgreSQL" },
+        ai: { label: "AI / ML", tech: "Google Gemini AI · OCR · 자동 스케줄링" },
+        infra: { label: "인프라", tech: "AWS · Docker · Supabase Auth · S3" },
+        db: { label: "데이터베이스", tech: "PostgreSQL · 110개 이상 마이그레이션 · Redis 캐시" },
+      },
+    },
+    cta: {
+      title: "인력 파견 업무를",
+      titleAccent: "디지털화할 준비가 되셨나요?",
+      subtitle: "QuickShift가 인력 관리를 효율화하고 수작업 프로세스를 제거하는 방법에 대해 상담하세요.",
+      getStarted: "시작하기",
+      viewAll: "모든 프로젝트 보기",
+    },
+  },
+
+  // Minova PMS Page
+  minovaPms: {
+    hero: {
+      badge: "클라우드 숙박 관리 시스템",
+      title: "PMS",
+      subtitle: "예약부터 체크아웃까지 엔터프라이즈급 호텔 관리. 다중 시설 지원, OTA 채널 연동, 실시간 하우스키핑, 나이트 오디트, 다중 결제 게이트웨이.",
+      cta: { explore: "기능 살펴보기", demo: "데모 요청" },
+      stats: { modules: "핵심 모듈", models: "데이터 모델", properties: "운영 시설", languages: "지원 언어" },
+    },
+    modules: {
+      badge: "플랫폼 모듈",
+      title: "호텔 운영",
+      titleAccent: "완전 솔루션",
+      subtitle: "호텔 관리 라이프사이클 전체를 커버하는 8개 통합 모듈.",
+      reservation: { title: "예약 관리", desc: "예약 전체 생명주기 — 생성, 수정, 취소, 대기목록. 캘린더 뷰, 폴리오 추적, 그룹 예약." },
+      frontDesk: { title: "프런트 데스크", desc: "오늘의 체크인/체크아웃, 인하우스 게스트, 워크인 등록. 원클릭 객실 배정과 실시간 상태 업데이트." },
+      housekeeping: { title: "하우스키핑", desc: "객실 상태 그리드 — 입실 현황, 청소 추적, 층/동 관리. 프런트와 HK 간 실시간 연동." },
+      nightAudit: { title: "나이트 오디트", desc: "일일 마감 — 노쇼 처리, 일일 요금 기장, 영업일 변경, 시설별 마감 절차." },
+      payment: { title: "결제 처리", desc: "다중 결제: VNPay QR, MoMo, 현금, 신용카드, 계좌이체. 보증금 추적, 청구서, 월별 정산." },
+      guestCrm: { title: "게스트 CRM", desc: "완전한 게스트 프로필 — 숙박 이력, 선호도, 알레르기, 멤버십 등급, 언어 설정. 가족·그룹·VIP 관리." },
+      channel: { title: "채널 매니저", desc: "Beds24를 통한 OTA 연동 — Booking.com, Agoda, Expedia 등과 실시간 요금·객실 동기화." },
+      reports: { title: "보고서 & 문서", desc: "가동률, 매출, 보증금, 미수금 보고서. PDF 청구서, 등록카드, 확인 이메일, DOCX 출력 자동 생성." },
+    },
+    guest: {
+      badge: "게스트 경험",
+      title: "스마트",
+      titleAccent: "게스트 기술",
+      subtitle: "셀프 체크인, AI 문서 스캔, QR 익스프레스 체크아웃, 실시간 알림.",
+      selfCheckin: { title: "셀프 체크인", desc: "단계별 체크인 — 객실 선택, OCR 신분증 업로드, 예약 확인, 결제. QR코드 지원." },
+      ocr: { title: "AI 문서 OCR", desc: "Tesseract.js 기반 여권/신분증 자동 인식. 프런트 대기 시간 60% 단축." },
+      expressCheckout: { title: "익스프레스 체크아웃", desc: "QR코드로 객실에서 결제 — VNPay 또는 MoMo. 프런트 데스크 불필요." },
+      notifications: { title: "실시간 알림", desc: "Pusher 기반 라이브 업데이트 — 신규 예약, 체크인 알림, 객실 상태 변경, 결제 확인." },
+    },
+    workflow: {
+      badge: "예약 라이프사이클",
+      title: "엔드투엔드",
+      titleAccent: "게스트 여정",
+      subtitle: "예약 순간부터 최종 청구서까지 — 모든 단계가 추적, 자동화, 감사 가능.",
+      steps: {
+        s1: { title: "예약 생성", desc: "OTA 또는 직접 예약. 폴리오 생성, 객실 배정, 요금 계산, 확인 이메일 발송." },
+        s2: { title: "체크인", desc: "프런트 또는 셀프 키오스크. 신분증 스캔, 룸키 발급, 객실 상태 업데이트. 등록카드 생성." },
+        s3: { title: "체류 중 관리", desc: "HK가 객실 상태 추적. 미니바·서비스 요금 추가. 전 층 실시간 객실 재고." },
+        s4: { title: "나이트 오디트", desc: "일일 마감: 객실 요금 기장, 노쇼 처리, 결제 대조, 영업일 변경. 자동화·감사 대응." },
+        s5: { title: "체크아웃 & 청구", desc: "최종 요금 계산, 결제 처리, PDF 청구서 생성. HK에 청소 인계." },
+        s6: { title: "보고서 & 분석", desc: "일일 가동률, 매출, 미수금 보고서(Excel). 채널 성과 추적. 재무 대조." },
+      },
+    },
+    multiProperty: {
+      badge: "다중 시설",
+      title: "하나의 플랫폼,",
+      titleAccent: "다수의 시설",
+      description: "Minova PMS는 계층적 멀티테넌트 아키텍처 지원: 운영자 → 지점 → 시설. 부티크 호텔, 리조트, 체인을 하나의 대시보드에서 관리.",
+      features: [
+        "전 시설 통합 대시보드",
+        "지점 수준 데이터 격리 및 보안",
+        "직원의 시설 간 전환",
+        "크로스 브랜치 통합 보고서",
+        "시설별 나이트 오디트 및 영업일",
+      ],
+    },
+    roles: {
+      badge: "역할 기반 접근",
+      title: "세밀한",
+      titleAccent: "권한 관리",
+      description: "Spatie Permission 기반 모듈별 접근 제어. 각 역할에 필요한 최소 권한만 부여.",
+      admin: { title: "관리자", desc: "전체 권한 — 예약, 결제, 보고서, 나이트 오디트, HK, 사용자 관리." },
+      frontDesk: { title: "프런트 데스크", desc: "체크인/아웃, 워크인 등록, 객실 배정, 게스트 관리, 결제 처리." },
+      housekeeping: { title: "하우스키핑", desc: "객실 상태 업데이트, 청소 배정, 층 관리, 장비 추적." },
+      receptionist: { title: "리셉션", desc: "예약 조회, 캘린더 관리, 체크인, 고객 검색." },
+    },
+    integrations: {
+      badge: "연동",
+      title: "연결된",
+      titleAccent: "에코시스템",
+      ota: { title: "OTA 채널", desc: "Beds24 연동으로 주요 OTA와 실시간 동기화." },
+      payment: { title: "결제 게이트웨이", desc: "QR코드 지원 다중 결제 게이트웨이." },
+      smart: { title: "스마트 기술", desc: "현대 호텔 운영을 위한 AI·IoT 연동." },
+    },
+    tech: {
+      badge: "기술",
+      title: "최신 기술로",
+      titleAccent: "구축",
+    },
+    i18n: {
+      title: "다국어 지원",
+      subtitle: "글로벌 호텔 운영을 위한 완전한 국제화 대응.",
+    },
+    cta: {
+      title: "호텔 운영을",
+      titleAccent: "현대화할 준비가 되셨나요?",
+      subtitle: "시설 규모와 요구에 맞춘 Minova PMS 맞춤형 데모를 받아보세요.",
+      demo: "데모 요청",
+      viewAll: "전체 솔루션 보기",
+    },
+  },
+
+  // OTA Calculator Page
+  otaCalculator: {
+    hero: {
+      badge: "수익 최적화 도구",
+      title: "Calculator",
+      subtitle: "7개 이상 OTA 채널의 수수료 구조, 할인 중첩, 순수익을 비교. 프로모션 시작 전에 호텔 수취액을 정확히 파악.",
+      cta: { explore: "기능 살펴보기", access: "접근 요청" },
+      stats: { platforms: "OTA 플랫폼", discounts: "할인 유형", methods: "계산 방식", languages: "지원 언어" },
+    },
+    platforms: {
+      badge: "지원 플랫폼",
+      title: "주요 7개",
+      titleAccent: "OTA 채널",
+      subtitle: "각 플랫폼은 다른 할인 계산 방식을 사용. OTA Calculator는 모두 정확하게 처리.",
+    },
+    methods: {
+      badge: "계산 엔진",
+      title: "4가지",
+      titleAccent: "계산 방식",
+      subtitle: "각 OTA의 할인 적용 방식이 다릅니다. 정확한 숫자를 위해 각사 공식을 충실히 재현.",
+      multiplicative: { name: "곱셈 방식", platform: "Booking.com", desc: "할인을 순차 적용 — 각 할인이 잔액에서 차감. 총 할인율이 개별 합보다 낮음." },
+      additive: { name: "덧셈 방식", platform: "Agoda, Airbnb, Trip.com, Go2Joy", desc: "모든 할인율을 합산 후 한 번에 적용. 단순하고 투명." },
+      highestOnly: { name: "최고값만", platform: "Expedia", desc: "가장 높은 할인만 적용. 나머지는 무시 — 호텔 마진 보호." },
+      hybrid: { name: "하이브리드", platform: "Traveloka", desc: "카테고리별 최고 할인을 선택 후 합산. 유연성과 제어의 균형." },
+    },
+    features: {
+      badge: "기능",
+      title: "요금 분석에 필요한",
+      titleAccent: "모든 것",
+      subtitle: "할인 시뮬레이션부터 PDF 출력까지 — OTA 채널 전반의 명확성이 필요한 수익 관리자를 위해.",
+      comparison: { title: "다중 OTA 비교", desc: "7개 OTA 플랫폼의 순수익을 동시 계산·비교. 수수료 영향 나란히 보기." },
+      discounts: { title: "할인 프로그램 관리", desc: "전 OTA 40개 이상 할인 유형 — 얼리버드, 플래시세일, Genius, 모바일, 지역 할인 등." },
+      direction: { title: "정방향 & 역방향 계산", desc: "정방향: 기본가 → 표시가 → 호텔 수취액. 역방향: 표시가에서 기본가와 마진 역산." },
+      rooms: { title: "객실 유형 관리", desc: "기본가가 포함된 객실 유형 생성. 객실 유형별 전 OTA 수익 매트릭스 산출." },
+      pdf: { title: "PDF 출력", desc: "객실-OTA 비교표, 계산 단계, 세션 정보가 포함된 상세 보고서. 다국어 PDF 지원." },
+      precision: { title: "정밀 계산", desc: "Decimal.js로 부동소수점 오류 제로. 모든 계산에서 금융 등급 정밀도 보장." },
+    },
+    howItWorks: {
+      badge: "사용 방법",
+      title: "간단한",
+      titleAccent: "3단계",
+      titleEnd: "프로세스",
+      s1: { title: "기본가 설정", desc: "객실 기본가를 입력하고 객실 유형 선택. 정방향 또는 역방향 계산 방향 선택." },
+      s2: { title: "할인 설정", desc: "OTA 플랫폼 선택, 할인 프로그램 활성화, 비율 커스터마이즈, 수수료율 조정." },
+      s3: { title: "비교 & 출력", desc: "나란히 결과 확인 — 표시가, 수수료, 호텔 수취액. 상세 PDF 보고서 출력." },
+    },
+    whyChoose: {
+      badge: "OTA Calculator를 선택하는 이유",
+      title: "추측을 멈추고,",
+      titleAccent: "계산을 시작하세요",
+      revenue: { title: "수익 투명성", desc: "각 OTA의 정확한 비용 파악. 전 채널의 수수료+할인 영향 비교." },
+      pricing: { title: "정보 기반 가격 결정", desc: "OTA 활성화 전 다양한 할인 조합 테스트. 프로모션 중첩으로 인한 마진 침식 방지." },
+      multiProperty: { title: "다중 시설 지원", desc: "다양한 객실 유형, 시설, 요금 전략으로 계산. 세션과 템플릿을 저장하여 반복 분석." },
+      compliance: { title: "규정 준수 & 감사", desc: "모든 계산을 완전한 감사 추적으로 기록. 경영 검토 및 규정 준수를 위한 보고서 출력." },
+    },
+    tech: {
+      badge: "기술",
+      title: "정밀도와 확장을",
+      titleAccent: "위해 구축",
+    },
+    i18n: {
+      title: "다국어 & 다중 통화",
+      subtitle: "베트남어, 영어, 중국어 지원. VND, USD, EUR, JPY, CNY 통화 지원.",
+    },
+    cta: {
+      title: "채널별",
+      titleAccent: "수익 극대화",
+      subtitle: "숨겨진 할인 중첩으로 인한 마진 손실을 중단하세요. OTA Calculator로 채널 가격 전략을 관리하세요.",
+      access: "접근 요청",
+      viewAll: "전체 솔루션 보기",
+    },
+  },
+
+  // ContCal - Container Calculator Page
+  contcal: {
+    hero: {
+      badge: "물류 최적화 도구",
+      title1: "3D 컨테이너",
+      title2: "적재 최적화",
+      subtitle: "AI 기반 최적화로 컨테이너 공간을 90% 이상 극대화하고, 운송 비용을 10-15% 절감하며, 계획 시간을 수 시간에서 수 분으로 단축합니다. 20개 이상의 자동화된 비즈니스 규칙을 갖춘 가구 물류 전용 솔루션.",
+      cta: { explore: "기능 살펴보기", demo: "데모 요청" },
+      stats: { utilization: "공간 활용률", savings: "비용 절감", speed: "최적화 시간", rules: "비즈니스 규칙" },
+    },
+    containers: {
+      badge: "지원 컨테이너",
+      title: "표준",
+      titleAccent: "컨테이너 규격",
+      subtitle: "업계 표준 운송 컨테이너에 맞게 사전 구성되어 있으며 맞춤 치수를 지원합니다.",
+      types: {
+        "20std": { name: "20ft 표준", dimensions: "5.9m x 2.35m x 2.39m", capacity: "33.2 m3", weight: "21,770 kg" },
+        "40std": { name: "40ft 표준", dimensions: "12.03m x 2.35m x 2.39m", capacity: "67.7 m3", weight: "26,780 kg" },
+        "40hc": { name: "40ft High Cube", dimensions: "12.03m x 2.35m x 2.69m", capacity: "76.3 m3", weight: "26,580 kg" },
+      },
+    },
+    rules: {
+      badge: "규칙 엔진",
+      title: "자동화된",
+      titleAccent: "비즈니스 규칙",
+      subtitle: "매트리스 방향부터 중량 분배 준수까지 20개 이상의 규칙을 자동 적용. 인적 오류 제로.",
+      categories: {
+        mattress: { name: "매트리스", rules: ["하층 수직 배치만 가능", "상층 수평 배치만 가능", "크기별 레이어 제한"] },
+        dining: { name: "다이닝", rules: ["중량 분배 (무거운 것 아래)", "화살표 방향 준수", "3가지 포장 시나리오"] },
+        safety: { name: "안전", rules: ["최소 1cm 간격", "압축 하중 검증", "하중 전파 분석"] },
+        weight: { name: "중량", rules: ["CBM 검증", "컨테이너 중량 제한", "차축 중량 (IMO 준수)"] },
+      },
+    },
+    features: {
+      badge: "핵심 기능",
+      title: "스마트 패킹을 위한",
+      titleAccent: "모든 것",
+      subtitle: "AI 최적화부터 인터랙티브 3D 시각화까지 — 정확성과 속도가 필요한 물류 팀을 위해 구축.",
+      beamSearch: { title: "빔 서치 최적화", desc: "Extreme Points 생성과 spatial hash 충돌 감지를 갖춘 고급 Beam Search 알고리즘. 1,000개 이상 아이템에서 10초 이내 90%+ 공간 활용률 달성." },
+      visualization: { title: "인터랙티브 3D 시각화", desc: "궤도 제어, 다중 카메라 앵글, 카테고리별 색상 구분, 드래그 앤 드롭 수동 조정 모드를 갖춘 Three.js 실시간 렌더링." },
+      rulesEngine: { title: "20+ 비즈니스 규칙 엔진", desc: "매트리스 방향, 다이닝 가구 시나리오, 압축 하중 제한, 중량 분배, 적재 호환성 규칙 자동 적용." },
+      priority: { title: "우선순위 그룹 관리", desc: "최대 50개 우선순위 그룹의 다중 정차 배송 최적화. 그룹 간 투명 벽 옵션으로 순차 적재/하역 제약." },
+      weightDist: { title: "중량 분배 분석", desc: "차축 중량 계산, 무게 중심 추적, 10cm 해상도 표면 압력 히트맵, 자동 균형 추천." },
+      export: { title: "다중 형식 출력", desc: "단계별 적재 지침, Excel 패킹 플랜, PDF 보고서, 공유 가능한 공개 링크를 하나의 최적화 결과에서 생성." },
+    },
+    howItWorks: {
+      badge: "사용 방법",
+      title: "간단한",
+      titleAccent: "4단계",
+      titleEnd: "워크플로우",
+      s1: { title: "컨테이너 선택", desc: "20ft, 40ft 또는 40ft High Cube를 선택하거나 특수 컨테이너의 맞춤 치수를 정의." },
+      s2: { title: "상품 가져오기", desc: "Excel로 제품 데이터를 업로드하거나 수동 입력. 다이닝, 매트리스, 홈 가구 카테고리 지원." },
+      s3: { title: "최적화 & 시각화", desc: "원클릭 최적화와 실시간 3D 미리보기. 드래그 앤 드롭 조정과 즉시 검증." },
+      s4: { title: "출력 & 공유", desc: "적재 지침, Excel 플랜, PDF 보고서 생성. 공개 링크로 창고 팀과 공유." },
+    },
+    whyChoose: {
+      badge: "ContCal을 선택하는 이유",
+      title: "공간 낭비를 멈추고,",
+      titleAccent: "최적화를 시작하세요",
+      cost: { title: "운송 비용 10-15% 절감", desc: "지능형 적재로 90%+ 컨테이너 활용률 달성 (수작업 평균 85%). 동일 화물량에 더 적은 컨테이너." },
+      time: { title: "수 시간에서 수 분으로", desc: "컨테이너 계획을 2-3시간에서 30분 이내로 단축. 컨테이너당 10초 이내 최적화 완료." },
+      damage: { title: "제품 손상 방지", desc: "20개 이상의 자동 규칙이 적절한 적재, 중량 분배, 간격 요구사항을 보장. 인적 오류 제거." },
+      roi: { title: "18개월 내 ROI 200%", desc: "운송 비용 절감, 손상품 감소, 창고 팀의 상당한 시간 절약으로 6-9개월 내 투자 회수." },
+    },
+    tech: {
+      badge: "기술",
+      title: "성능과",
+      titleAccent: "정확성을 위해 구축",
+      items: {
+        frontend: { label: "프론트엔드", tech: "React 19 · Vite · Tailwind CSS · TypeScript" },
+        engine3d: { label: "3D 엔진", tech: "Three.js · react-three-fiber · @react-three/drei" },
+        backend: { label: "백엔드", tech: "Go 1.21 · Gin Framework · Goroutines" },
+        algorithm: { label: "알고리즘", tech: "Beam Search · Extreme Points · Spatial Hash · Simulated Annealing" },
+        database: { label: "데이터베이스", tech: "PostgreSQL (pgx) · MongoDB (audit)" },
+        exportTech: { label: "출력", tech: "Excelize (Excel) · go-pdf (PDF) · Public Links" },
+      },
+    },
+    categories: {
+      title: "다중 카테고리 지원",
+      subtitle: "카테고리별 규칙을 갖춘 3대 가구 제품 카테고리에 최적화.",
+      dining: "다이닝",
+      mattress: "매트리스",
+      hfa: "홈 가구",
+    },
+    cta: {
+      title: "컨테이너 활용률을",
+      titleAccent: "극대화하세요",
+      subtitle: "공기 운송을 멈추세요. ContCal의 AI 기반 최적화와 실시간 3D 시각화로 컨테이너 적재 프로세스를 혁신하세요.",
+      demo: "데모 요청",
+      viewAll: "모든 솔루션 보기",
+    },
   },
 
   // Language Selector

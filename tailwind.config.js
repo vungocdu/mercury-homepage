@@ -18,6 +18,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'ibm-plex-sans': ['"IBM Plex Sans"', 'sans-serif'],
+        'ibm-plex': ['"IBM Plex Sans"', 'sans-serif'],
         'sans': ['"IBM Plex Sans"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
       },
       fontSize: {

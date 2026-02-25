@@ -43,10 +43,7 @@ const MercuryLogo = ({ className = "w-8 h-8" }: { className?: string }) => (
 // Helper function to determine active route
 const getActiveHrefFromCurrentRoute = () => {
   const currentPath = window.location.pathname
-  const currentHash = window.location.hash
-  
-  console.log('Determining active route - path:', currentPath, 'hash:', currentHash) // Debug log
-  
+
   if (currentPath === '/' || currentPath === '') {
     return '/'
   } else if (currentPath === '/ai-digital-transformation' || currentPath.includes('/ai-digital-transformation')) {
@@ -56,8 +53,8 @@ const getActiveHrefFromCurrentRoute = () => {
   } else if (currentPath === '/about' || currentPath.includes('/about')) {
     return '/about'
   }
-  
-  // Default to home if no match
+
+  // Sub-pages (minova-pms, ota-calculator, etc.) map back to home
   return '/'
 }
 

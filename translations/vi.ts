@@ -596,7 +596,7 @@ export const vi = {
           title: "Công Nghệ:",
           items: ["Flutter", "React", "Laravel"]
         },
-        website: "https://www.actiwell.co"
+        website: "/actiwell-platform"
       },
       timekeeping: {
         title: "TNA HRM System: Chuyển Đổi Số Cho Ngành Sản Xuất",
@@ -618,7 +618,7 @@ export const vi = {
           title: "Công Nghệ:",
           items: ["React", "Laravel", "AI/Trí Tuệ Nhân Tạo"]
         },
-        website: "https://www.fujikin.co.jp/en/"
+        website: "/tna-system"
       },
       myarm: {
         title: "myArm: Giải Pháp Quản Lý Doanh Nghiệp Phong Cách Nhật Bản Toàn Diện",
@@ -662,7 +662,7 @@ export const vi = {
           title: "Công Nghệ:",
           items: ["React", "Node.js", "IoT (Internet Vạn Vật)"]
         },
-        website: "https://www.minova.vn"
+        website: "/minova-pms"
       },
       powerControl: {
         title: "OTA Calculator: Công Cụ Tính Giá Thông Minh Cho Khách Sạn",
@@ -684,7 +684,7 @@ export const vi = {
           title: "Công Nghệ:",
           items: ["React", "Node.js"]
         },
-        website: "https://ota.minova.vn"
+        website: "/ota-calculator"
       },
       airhub: {
         title: "Visual-First Booking Engine: Bán Trải Nghiệm, Không Chỉ Bán Phòng",
@@ -707,6 +707,90 @@ export const vi = {
           items: ["React", "Node.js"]
         },
         website: "https://tmha.minova.vn"
+      },
+      quickshift: {
+        title: "QuickShift: Quản Lý Nhân Sự Thời Vụ AI",
+        description: "Phát triển cho thị trường nhân sự Nhật Bản hợp tác cùng Care Earth Inc., QuickShift là nền tảng quản lý nhân sự thời vụ toàn diện, số hóa toàn bộ quy trình từ OCR bảng chấm công bằng AI, lập lịch ca tự động đến quản lý đơn hàng, xuất hóa đơn và thông báo đa kênh. Hệ thống loại bỏ các quy trình thủ công, giúp doanh nghiệp mở rộng vận hành hiệu quả cho người lao động, khách hàng và quản lý.",
+        features: {
+          title: "Tính Năng Chính:",
+          items: [
+            "OCR Bảng Chấm Công AI (Gemini AI)",
+            "Lập Lịch Tự Động — Auto Shifter",
+            "Quản Lý Đơn Hàng & Hóa Đơn",
+            "Thông Báo Đa Kênh (LINE/Zalo)"
+          ]
+        },
+        platforms: {
+          title: "Nền Tảng:",
+          items: ["Ứng Dụng Web", "Ứng Dụng Di Động"]
+        },
+        technologies: {
+          title: "Công Nghệ:",
+          items: ["Next.js", "Golang (Chi)", "Flutter"]
+        },
+        website: "/quickshift"
+      },
+      atms: {
+        title: "Actiwell ATMS: Quản Lý Huấn Luyện Thể Thao",
+        description: "Actiwell ATMS số hóa toàn bộ vận hành huấn luyện: kiểm tra thể lực chuẩn hóa, tổ chức đợt kiểm tra theo trạm, phân tích chu kỳ huấn luyện và quản trị đa cơ sở. Giải pháp được phát triển phối hợp với Trung tâm Huấn luyện Thể thao Quốc gia Việt Nam.",
+        features: {
+          title: "Tính Năng Chính:",
+          items: [
+            "Chuẩn hóa 30+ bài test theo NSCA",
+            "Quản lý đợt kiểm tra và nhập liệu theo trạm",
+            "Theo dõi chu kỳ huấn luyện (Volume/Intensity)",
+            "Điều hành đa cơ sở từ cấp tỉnh đến cấp quốc gia"
+          ]
+        },
+        platforms: {
+          title: "Nền Tảng:",
+          items: ["Ứng Dụng Web"]
+        },
+        technologies: {
+          title: "Công Nghệ:",
+          items: ["Next.js", "Golang (Gin)", "PostgreSQL"]
+        },
+        website: "/actiwell-atms"
+      },
+      contcal: {
+        title: "ContCal: Tối Ưu Hóa Xếp Container 3D",
+        description: "Hệ thống tối ưu hóa xếp container bằng AI, tối đa hóa sử dụng không gian đến 90%+, giảm chi phí vận chuyển 10-15%, và rút ngắn thời gian lập kế hoạch từ hàng giờ xuống vài phút. Trực quan hóa 3D tương tác với 20+ quy tắc nghiệp vụ tự động cho logistics nội thất.",
+        features: {
+          title: "Tính Năng Chính:",
+          items: [
+            "Xếp Container 3D với Thuật Toán Beam Search",
+            "Trực Quan Hóa Container 3D Tương Tác",
+            "20+ Quy Tắc Nghiệp Vụ & An Toàn Tự Động",
+            "Quản Lý Nhóm Ưu Tiên Đa Điểm Giao"
+          ]
+        },
+        platforms: {
+          title: "Nền Tảng:",
+          items: ["Ứng Dụng Web"]
+        },
+        technologies: {
+          title: "Công Nghệ:",
+          items: ["React", "Go", "Three.js"]
+        },
+        website: "/container-calculator"
+      }
+    },
+    categories: {
+      hrTech: {
+        title: "Giải Pháp HR Tech",
+        description: "Giải pháp chuyển đổi số cho quản lý nhân sự, lập lịch nhân viên và vận hành doanh nghiệp."
+      },
+      sportTech: {
+        title: "Giải Pháp Sport Tech",
+        description: "Nền tảng toàn diện cho chuỗi phòng gym, quản lý fitness và trung tâm huấn luyện thể thao."
+      },
+      hotelTech: {
+        title: "Giải Pháp Hotel Tech",
+        description: "Giải pháp khách sạn thông minh cho quản lý tài sản, hệ thống đặt phòng và vận hành khách sạn."
+      },
+      businessOpt: {
+        title: "Tối Ưu Hóa Kinh Doanh",
+        description: "Công cụ thông minh cho hiệu quả vận hành, tối ưu hóa logistics và quản lý doanh nghiệp đa chức năng."
       }
     },
     cta: {
@@ -1087,6 +1171,929 @@ export const vi = {
       production: "Chúng tôi kết hợp chuyên môn kỹ thuật với tầm nhìn nghệ thuật, sử dụng thiết bị tiên tiến (4K, 6K, Full HD) và các chuyên gia giàu kinh nghiệm.",
       postProduction: "Đội ngũ nội bộ gồm biên tập viên, chỉnh màu và thiết kế âm thanh của chúng tôi tinh chỉnh từng chi tiết bằng phần mềm hàng đầu như Davinci Resolve."
     }
+  },
+
+  // Process & Technology Page
+  processPage: {
+    hero: {
+      badge: "Phương Pháp Của Chúng Tôi",
+      title1: "Quy Trình",
+      title2: "& Công Nghệ",
+      subtitle: "Khám phá phương pháp phát triển đã được chứng minh và stack công nghệ tiên tiến thúc đẩy các giải pháp của chúng tôi.",
+    },
+    cta: "Xem Quy Trình & Công Nghệ",
+    ctaSection: {
+      title: "Sẵn Sàng Bắt Đầu Dự Án?",
+      description: "Hãy để chúng tôi áp dụng phương pháp đã chứng minh và công nghệ tiên tiến để hiện thực hóa tầm nhìn của bạn.",
+      button: "Liên Hệ Ngay",
+    },
+  },
+
+  // IT Solution Landing Page
+  itPage: {
+    hero: {
+      badge: "Mercury Solution",
+      title1: "Giải Pháp Phần Mềm",
+      title2: "Vận Hành Doanh Nghiệp",
+      subtitle: "Nền tảng chuyên biệt cho khách sạn, quản lý nhân sự, thể thao & thể hình, và logistics — được tin dùng bởi các doanh nghiệp tại Việt Nam và quốc tế.",
+      cta: {
+        explore: "Khám Phá Dịch Vụ",
+        viewProjects: "Xem Dự Án",
+      },
+      stats: {
+        clients: "Khách hàng",
+        projects: "Dự án",
+        satisfaction: "Hài lòng",
+        support: "Hỗ trợ",
+      },
+    },
+    services: {
+      badge: "Dịch vụ AI & TVC Chuyên nghiệp",
+      heading1: "Giải pháp",
+      heading2: "Số Hóa",
+      heading3: "Thúc Đẩy Tăng Trưởng",
+      statsTitle: "Tại Sao Chọn Mercury Solutions?",
+      benefits: {
+        provenTrack: "Thành tích đã được chứng minh",
+        fastDelivery: "Giao hàng nhanh chóng",
+        premiumQuality: "Chất lượng cao cấp",
+      },
+      statsItems: {
+        projects: "Dự án hoàn thành",
+        clients: "Khách hàng hài lòng",
+        awards: "Giải thưởng ngành",
+        support: "Hỗ trợ sẵn sàng",
+      },
+    },
+  },
+
+  // Minova PMS Page
+  minovaPms: {
+    hero: {
+      badge: "Hệ Thống Quản Lý Khách Sạn Đám Mây",
+      title: "PMS",
+      subtitle: "Quản lý khách sạn toàn diện — từ đặt phòng đến trả phòng. Hỗ trợ đa cơ sở, tích hợp kênh OTA, quản lý buồng phòng thời gian thực, kiểm toán đêm và thanh toán đa cổng.",
+      cta: { explore: "Khám Phá Tính Năng", demo: "Yêu Cầu Demo" },
+      stats: { modules: "Module Chính", models: "Mô Hình Dữ Liệu", properties: "Cơ Sở Hoạt Động", languages: "Ngôn Ngữ" },
+    },
+    modules: {
+      badge: "Các Module",
+      title: "Bộ Giải Pháp",
+      titleAccent: "Vận Hành Khách Sạn",
+      subtitle: "8 module tích hợp bao phủ toàn bộ vòng đời quản lý khách sạn — từ đặt phòng đầu tiên đến hóa đơn cuối cùng.",
+      reservation: { title: "Quản Lý Đặt Phòng", desc: "Vòng đời đặt phòng hoàn chỉnh — tạo, sửa, hủy, danh sách chờ. Xem lịch, theo dõi folio và đặt phòng nhóm đa phòng." },
+      frontDesk: { title: "Lễ Tân", desc: "Check-in, check-out hôm nay, khách đang ở và đăng ký walk-in. Phân phòng nhanh và cập nhật trạng thái khách thời gian thực." },
+      housekeeping: { title: "Quản Lý Buồng Phòng", desc: "Bảng trạng thái phòng trực quan — tình trạng phòng, theo dõi vệ sinh, phân chia theo tầng/cánh. Cập nhật thời gian thực." },
+      nightAudit: { title: "Kiểm Toán Đêm", desc: "Đối soát cuối ngày — xử lý no-show, ghi phí phòng hàng ngày, chuyển ngày kinh doanh và đóng sổ theo cơ sở." },
+      payment: { title: "Thanh Toán", desc: "Đa cổng thanh toán: VNPay QR, ví MoMo, tiền mặt, thẻ tín dụng, chuyển khoản. Theo dõi tiền cọc, hóa đơn và thanh toán tháng." },
+      guestCrm: { title: "CRM Khách Hàng", desc: "Hồ sơ khách đầy đủ — lịch sử lưu trú, sở thích, dị ứng, hạng thành viên, ngôn ngữ ưu tiên. Quản lý gia đình, nhóm và VIP." },
+      channel: { title: "Quản Lý Kênh Phân Phối", desc: "Tích hợp OTA qua Beds24 — đồng bộ giá và phòng trống thời gian thực với Booking.com, Agoda, Expedia và các kênh khác." },
+      reports: { title: "Báo Cáo & Tài Liệu", desc: "Báo cáo công suất, doanh thu, tiền cọc và công nợ. Tự động tạo hóa đơn PDF, phiếu đăng ký, email xác nhận và xuất DOCX." },
+    },
+    guest: {
+      badge: "Trải Nghiệm Khách Hàng",
+      title: "Công Nghệ",
+      titleAccent: "Khách Hàng Thông Minh",
+      subtitle: "Tự check-in, quét giấy tờ AI, trả phòng nhanh QR và thông báo thời gian thực cho ngành hospitality hiện đại.",
+      selfCheckin: { title: "Tự Check-in", desc: "Check-in từng bước — chọn phòng, tải ảnh CCCD với OCR, xác nhận đặt phòng và thanh toán. Quét mã QR." },
+      ocr: { title: "OCR Giấy Tờ AI", desc: "Quét hộ chiếu/CCCD bằng Tesseract.js tự động trích xuất thông tin khách. Giảm 60% thời gian chờ tại lễ tân." },
+      expressCheckout: { title: "Trả Phòng Nhanh", desc: "Khách thanh toán từ phòng qua mã QR — VNPay hoặc MoMo. Không cần xếp hàng tại lễ tân." },
+      notifications: { title: "Thông Báo Thời Gian Thực", desc: "Cập nhật trực tiếp qua Pusher — đặt phòng mới, thông báo check-in, thay đổi trạng thái phòng, xác nhận thanh toán." },
+    },
+    workflow: {
+      badge: "Vòng Đời Đặt Phòng",
+      title: "Hành Trình",
+      titleAccent: "Khách Hàng Toàn Diện",
+      subtitle: "Từ khi khách đặt phòng đến hóa đơn cuối cùng — mọi bước đều được theo dõi, tự động hóa và kiểm toán.",
+      steps: {
+        s1: { title: "Tạo Đặt Phòng", desc: "Khách đặt qua OTA hoặc trực tiếp. Hệ thống tạo folio, phân phòng, tính giá, gửi email xác nhận." },
+        s2: { title: "Check-in", desc: "Lễ tân hoặc kiosk tự phục vụ. Quét CCCD, cấp thẻ phòng, cập nhật trạng thái phòng. Tạo phiếu đăng ký." },
+        s3: { title: "Quản Lý Trong Lưu Trú", desc: "Housekeeping theo dõi trạng thái phòng. Ghi phí mini-bar, dịch vụ. Kiểm kê phòng thời gian thực toàn tầng." },
+        s4: { title: "Kiểm Toán Đêm", desc: "Cuối ngày: ghi phí phòng, xử lý no-show, đối soát thanh toán, chuyển ngày kinh doanh. Tự động và kiểm toán được." },
+        s5: { title: "Check-out & Hóa Đơn", desc: "Tính phí cuối cùng, xử lý thanh toán, tạo hóa đơn PDF. Chuyển phòng cho housekeeping dọn dẹp." },
+        s6: { title: "Báo Cáo & Phân Tích", desc: "Báo cáo công suất, doanh thu, công nợ hàng ngày dạng Excel. Theo dõi hiệu suất kênh. Đối soát tài chính." },
+      },
+    },
+    multiProperty: {
+      badge: "Đa Cơ Sở",
+      title: "Một Nền Tảng,",
+      titleAccent: "Nhiều Cơ Sở",
+      description: "Minova PMS hỗ trợ kiến trúc đa cơ sở phân cấp: Nhà Điều Hành → Chi Nhánh → Cơ Sở. Quản lý khách sạn boutique, resort và chuỗi khách sạn từ một bảng điều khiển với cách ly dữ liệu và phân quyền.",
+      features: [
+        "Bảng điều khiển tập trung tất cả cơ sở",
+        "Cách ly dữ liệu và bảo mật theo chi nhánh",
+        "Nhân viên chuyển đổi giữa các cơ sở",
+        "Báo cáo tổng hợp đa chi nhánh",
+        "Kiểm toán đêm và ngày kinh doanh theo cơ sở",
+      ],
+    },
+    roles: {
+      badge: "Phân Quyền",
+      title: "Phân Quyền",
+      titleAccent: "Chi Tiết",
+      description: "RBAC dựa trên Spatie Permission với kiểm soát truy cập theo module. Mỗi vai trò chỉ được cấp quyền cần thiết.",
+      admin: { title: "Quản Trị / Quản Lý", desc: "Toàn quyền — đặt phòng, thanh toán, báo cáo, kiểm toán đêm, housekeeping và quản lý người dùng." },
+      frontDesk: { title: "Lễ Tân", desc: "Check-in/out, đăng ký walk-in, phân phòng, quản lý khách và xử lý thanh toán." },
+      housekeeping: { title: "Buồng Phòng", desc: "Cập nhật trạng thái phòng, phân công vệ sinh, quản lý tầng/cánh và thiết bị." },
+      receptionist: { title: "Tiếp Tân", desc: "Xem đặt phòng, quản lý lịch, check-in khách và tra cứu khách hàng." },
+    },
+    integrations: {
+      badge: "Tích Hợp",
+      title: "Hệ Sinh Thái",
+      titleAccent: "Kết Nối",
+      ota: { title: "Kênh OTA", desc: "Tích hợp Beds24 đồng bộ thời gian thực với các OTA lớn." },
+      payment: { title: "Cổng Thanh Toán", desc: "Đa cổng thanh toán với hỗ trợ mã QR cho thị trường Việt Nam." },
+      smart: { title: "Công Nghệ Thông Minh", desc: "Tích hợp AI và IoT cho vận hành khách sạn hiện đại." },
+    },
+    tech: {
+      badge: "Công Nghệ",
+      title: "Xây Dựng Với",
+      titleAccent: "Công Nghệ Hiện Đại",
+    },
+    i18n: {
+      title: "Hỗ Trợ Đa Ngôn Ngữ",
+      subtitle: "Quốc tế hóa hoàn toàn cho vận hành khách sạn toàn cầu.",
+    },
+    cta: {
+      title: "Sẵn Sàng Hiện Đại Hóa",
+      titleAccent: "Vận Hành Khách Sạn?",
+      subtitle: "Nhận demo cá nhân hóa Minova PMS phù hợp với quy mô và yêu cầu cơ sở của bạn.",
+      demo: "Yêu Cầu Demo",
+      viewAll: "Xem Tất Cả Giải Pháp",
+    },
+  },
+
+  // OTA Calculator Page
+  otaCalculator: {
+    hero: {
+      badge: "Công Cụ Tối Ưu Doanh Thu",
+      title: "Calculator",
+      subtitle: "So sánh cơ cấu hoa hồng, cách cộng dồn khuyến mãi và doanh thu ròng trên 7+ kênh OTA. Biết chính xác khách sạn nhận được bao nhiêu — trước khi kích hoạt bất kỳ chương trình nào.",
+      cta: { explore: "Khám Phá Tính Năng", access: "Yêu Cầu Truy Cập" },
+      stats: { platforms: "Nền Tảng OTA", discounts: "Loại Khuyến Mãi", methods: "Phương Pháp Tính", languages: "Ngôn Ngữ" },
+    },
+    platforms: {
+      badge: "Nền Tảng Hỗ Trợ",
+      title: "7 Kênh",
+      titleAccent: "OTA Chính",
+      subtitle: "Mỗi nền tảng sử dụng phương pháp tính khuyến mãi khác nhau. OTA Calculator xử lý tất cả với độ chính xác cao.",
+    },
+    methods: {
+      badge: "Công Cụ Tính Toán",
+      title: "4 Phương Pháp",
+      titleAccent: "Tính Toán Khác Nhau",
+      subtitle: "Mỗi OTA cộng dồn khuyến mãi theo cách riêng. Hệ thống tái tạo chính xác công thức của họ để bạn thấy con số thực — không phải ước tính.",
+      multiplicative: { name: "Nhân Dồn", platform: "Booking.com", desc: "Khuyến mãi áp dụng tuần tự — mỗi mức giảm trên giá còn lại. Tổng giảm giá thấp hơn tổng các tỷ lệ riêng lẻ." },
+      additive: { name: "Cộng Dồn", platform: "Agoda, Airbnb, Trip.com, Go2Joy", desc: "Tất cả phần trăm giảm giá được cộng lại, sau đó áp dụng một lần. Đơn giản và minh bạch." },
+      highestOnly: { name: "Chỉ Mức Cao Nhất", platform: "Expedia", desc: "Chỉ áp dụng mức giảm giá cao nhất. Các khuyến mãi khác bị bỏ qua — bảo vệ biên lợi nhuận." },
+      hybrid: { name: "Kết Hợp", platform: "Traveloka", desc: "Chọn giảm giá tốt nhất theo danh mục, sau đó cộng tất cả danh mục. Cân bằng linh hoạt và kiểm soát." },
+    },
+    features: {
+      badge: "Tính Năng",
+      title: "Mọi Thứ Bạn Cần Cho",
+      titleAccent: "Phân Tích Giá",
+      subtitle: "Từ mô phỏng khuyến mãi đến xuất PDF — xây dựng cho quản lý doanh thu cần sự rõ ràng trên các kênh OTA.",
+      comparison: { title: "So Sánh Đa OTA", desc: "Tính toán và so sánh doanh thu ròng trên 7 nền tảng OTA cùng lúc. Xem cạnh nhau tác động hoa hồng." },
+      discounts: { title: "Quản Lý Khuyến Mãi", desc: "40+ loại khuyến mãi trên tất cả OTA — Đặt Sớm, Flash Sale, Genius, Mobile, Địa Lý và nhiều hơn. Bật/tắt với tỷ lệ tùy chỉnh." },
+      direction: { title: "Tính Xuôi & Tính Ngược", desc: "Xuôi: giá gốc → giá hiển thị → khách sạn nhận. Ngược: từ giá hiển thị tính ngược giá gốc và biên lợi nhuận." },
+      rooms: { title: "Quản Lý Loại Phòng", desc: "Tạo loại phòng với giá gốc. Tính toán trên tất cả OTA theo loại phòng cho ma trận doanh thu hoàn chỉnh." },
+      pdf: { title: "Xuất PDF", desc: "Tạo báo cáo chi tiết với bảng so sánh phòng-OTA, các bước tính toán và thông tin phiên. Hỗ trợ PDF đa ngôn ngữ." },
+      precision: { title: "Tính Toán Chính Xác", desc: "Phép tính Decimal.js đảm bảo không sai số dấu phẩy động. Độ chính xác cấp tài chính cho mọi phép tính." },
+    },
+    howItWorks: {
+      badge: "Cách Hoạt Động",
+      title: "Quy Trình",
+      titleAccent: "3 Bước",
+      titleEnd: "Đơn Giản",
+      s1: { title: "Nhập Giá Gốc", desc: "Nhập giá gốc phòng và chọn loại phòng. Chọn hướng tính xuôi hoặc tính ngược." },
+      s2: { title: "Cấu Hình Khuyến Mãi", desc: "Chọn nền tảng OTA, bật chương trình khuyến mãi, tùy chỉnh tỷ lệ và điều chỉnh hoa hồng." },
+      s3: { title: "So Sánh & Xuất", desc: "Xem kết quả cạnh nhau — giá hiển thị, hoa hồng và khách sạn nhận. Xuất báo cáo PDF chi tiết." },
+    },
+    whyChoose: {
+      badge: "Tại Sao Chọn OTA Calculator",
+      title: "Ngừng Đoán,",
+      titleAccent: "Bắt Đầu Tính Toán",
+      revenue: { title: "Minh Bạch Doanh Thu", desc: "Xem chính xác mỗi OTA tốn bao nhiêu. So sánh tác động hoa hồng + khuyến mãi trên từng kênh." },
+      pricing: { title: "Quyết Định Giá Thông Minh", desc: "Thử nghiệm các tổ hợp khuyến mãi trước khi kích hoạt trên OTA. Ngăn ngừa xói mòn biên lợi nhuận." },
+      multiProperty: { title: "Hỗ Trợ Đa Cơ Sở", desc: "Tính toán cho các loại phòng, cơ sở và chiến lược giá khác nhau. Lưu phiên và mẫu để phân tích lặp lại." },
+      compliance: { title: "Tuân Thủ & Kiểm Toán", desc: "Mọi phép tính đều được ghi nhật ký kiểm toán đầy đủ. Xuất báo cáo cho ban quản lý và tuân thủ." },
+    },
+    tech: {
+      badge: "Công Nghệ",
+      title: "Xây Dựng Cho",
+      titleAccent: "Chính Xác & Mở Rộng",
+    },
+    i18n: {
+      title: "Đa Ngôn Ngữ & Đa Tiền Tệ",
+      subtitle: "Hỗ trợ Tiếng Việt, Tiếng Anh, Tiếng Trung với VND, USD, EUR, JPY, CNY.",
+    },
+    cta: {
+      title: "Tối Đa Hóa",
+      titleAccent: "Doanh Thu Mỗi Kênh",
+      subtitle: "Ngừng mất biên lợi nhuận do cộng dồn khuyến mãi ẩn. Sử dụng OTA Calculator để kiểm soát chiến lược giá kênh phân phối.",
+      access: "Yêu Cầu Truy Cập",
+      viewAll: "Xem Tất Cả Giải Pháp",
+    },
+  },
+
+  // ContCal - Container Calculator Page
+  contcal: {
+    hero: {
+      badge: "Công Cụ Tối Ưu Logistics",
+      title1: "Container 3D",
+      title2: "Tối Ưu Xếp Hàng",
+      subtitle: "Tối ưu hóa xếp container bằng AI, tối đa hóa không gian lên 90%+, giảm chi phí vận chuyển 10-15%, và rút ngắn thời gian lập kế hoạch từ hàng giờ xuống vài phút. Được xây dựng cho logistics nội thất với 20+ quy tắc tự động.",
+      cta: { explore: "Khám Phá Tính Năng", demo: "Yêu Cầu Demo" },
+      stats: { utilization: "Tỷ Lệ Sử Dụng", savings: "Giảm Chi Phí", speed: "Thời Gian Tối Ưu", rules: "Quy Tắc Nghiệp Vụ" },
+    },
+    containers: {
+      badge: "Container Hỗ Trợ",
+      title: "Các Loại",
+      titleAccent: "Container Tiêu Chuẩn",
+      subtitle: "Được cấu hình sẵn cho các container vận chuyển tiêu chuẩn với hỗ trợ kích thước tùy chỉnh.",
+      types: {
+        "20std": { name: "20ft Tiêu Chuẩn", dimensions: "5.9m x 2.35m x 2.39m", capacity: "33.2 m3", weight: "21.770 kg" },
+        "40std": { name: "40ft Tiêu Chuẩn", dimensions: "12.03m x 2.35m x 2.39m", capacity: "67.7 m3", weight: "26.780 kg" },
+        "40hc": { name: "40ft High Cube", dimensions: "12.03m x 2.35m x 2.69m", capacity: "76.3 m3", weight: "26.580 kg" },
+      },
+    },
+    rules: {
+      badge: "Hệ Thống Quy Tắc",
+      title: "Tự Động Hóa",
+      titleAccent: "Quy Tắc Nghiệp Vụ",
+      subtitle: "20+ quy tắc được thực thi tự động — từ hướng nệm đến tuân thủ phân bổ trọng lượng. Không sai sót.",
+      categories: {
+        mattress: { name: "Nệm", rules: ["Lớp dưới chỉ đặt dọc", "Lớp trên chỉ đặt ngang", "Giới hạn lớp theo kích thước"] },
+        dining: { name: "Bàn Ghế Ăn", rules: ["Phân bổ trọng lượng (nặng dưới)", "Tuân thủ hướng mũi tên", "3 kịch bản xếp hàng"] },
+        safety: { name: "An Toàn", rules: ["Khoảng cách tối thiểu 1cm", "Kiểm tra tải trọng chèn ép", "Phân tích lan truyền tải"] },
+        weight: { name: "Trọng Lượng", rules: ["Xác nhận CBM", "Giới hạn trọng lượng container", "Trọng lượng trục (tuân thủ IMO)"] },
+      },
+    },
+    features: {
+      badge: "Tính Năng Chính",
+      title: "Mọi Thứ Bạn Cần Cho",
+      titleAccent: "Xếp Hàng Thông Minh",
+      subtitle: "Từ tối ưu AI đến trực quan hóa 3D tương tác — được xây dựng cho đội logistics cần độ chính xác và tốc độ.",
+      beamSearch: { title: "Tối Ưu Beam Search", desc: "Thuật toán Beam Search tiên tiến với sinh Extreme Points và phát hiện va chạm bằng spatial hash. Đạt 90%+ tỷ lệ sử dụng không gian trong dưới 10 giây cho 1.000+ sản phẩm." },
+      visualization: { title: "Trực Quan 3D Tương Tác", desc: "Render container Three.js thời gian thực với điều khiển quỹ đạo, nhiều góc camera, phân loại theo màu, và chế độ điều chỉnh kéo thả." },
+      rulesEngine: { title: "20+ Quy Tắc Nghiệp Vụ", desc: "Tự động thực thi hướng nệm, kịch bản bàn ghế ăn, giới hạn tải chèn ép, phân bổ trọng lượng, và quy tắc tương thích xếp chồng." },
+      priority: { title: "Quản Lý Nhóm Ưu Tiên", desc: "Tối ưu giao hàng nhiều điểm với tối đa 50 nhóm ưu tiên. Ràng buộc xếp/dỡ tuần tự với tường vô hình tùy chọn giữa các nhóm." },
+      weightDist: { title: "Phân Tích Phân Bổ Trọng Lượng", desc: "Tính toán trọng lượng trục, theo dõi trọng tâm, bản đồ nhiệt áp suất bề mặt với độ phân giải 10cm, và khuyến nghị cân bằng tự động." },
+      export: { title: "Xuất Đa Định Dạng", desc: "Tạo hướng dẫn xếp hàng từng bước, kế hoạch xếp Excel, báo cáo PDF, và liên kết chia sẻ công khai — tất cả từ một kết quả tối ưu." },
+    },
+    howItWorks: {
+      badge: "Cách Thức Hoạt Động",
+      title: "Quy Trình",
+      titleAccent: "4 Bước",
+      titleEnd: "Đơn Giản",
+      s1: { title: "Chọn Container", desc: "Chọn 20ft, 40ft, hoặc 40ft High Cube — hoặc tùy chỉnh kích thước cho container đặc biệt." },
+      s2: { title: "Nhập Sản Phẩm", desc: "Tải dữ liệu sản phẩm qua Excel hoặc nhập thủ công. Hỗ trợ danh mục bàn ghế ăn, nệm và nội thất." },
+      s3: { title: "Tối Ưu & Trực Quan", desc: "Tối ưu một cú nhấp với xem trước 3D thời gian thực. Điều chỉnh kéo thả với xác nhận tức thì." },
+      s4: { title: "Xuất & Chia Sẻ", desc: "Tạo hướng dẫn xếp hàng, kế hoạch Excel, hoặc báo cáo PDF. Chia sẻ qua liên kết công khai với đội kho." },
+    },
+    whyChoose: {
+      badge: "Tại Sao Chọn ContCal",
+      title: "Ngừng Lãng Phí Không Gian,",
+      titleAccent: "Bắt Đầu Tối Ưu",
+      cost: { title: "Giảm Chi Phí Vận Chuyển 10-15%", desc: "Xếp hàng thông minh đạt 90%+ tỷ lệ sử dụng container so với 85% trung bình thủ công. Ít container hơn cho cùng khối lượng hàng." },
+      time: { title: "Từ Hàng Giờ Xuống Vài Phút", desc: "Giảm thời gian lập kế hoạch container từ 2-3 giờ xuống dưới 30 phút. Tối ưu hoàn tất trong dưới 10 giây mỗi container." },
+      damage: { title: "Ngăn Ngừa Hư Hại Sản Phẩm", desc: "20+ quy tắc tự động đảm bảo xếp chồng đúng cách, phân bổ trọng lượng, và yêu cầu khoảng cách. Loại bỏ sai sót con người." },
+      roi: { title: "ROI 200% Trong 18 Tháng", desc: "Hoàn vốn trong 6-9 tháng nhờ giảm chi phí vận chuyển, ít hàng hư hại, và tiết kiệm thời gian đáng kể cho đội kho." },
+    },
+    tech: {
+      badge: "Công Nghệ",
+      title: "Xây Dựng Cho",
+      titleAccent: "Hiệu Suất & Chính Xác",
+      items: {
+        frontend: { label: "Frontend", tech: "React 19 · Vite · Tailwind CSS · TypeScript" },
+        engine3d: { label: "Công Cụ 3D", tech: "Three.js · react-three-fiber · @react-three/drei" },
+        backend: { label: "Backend", tech: "Go 1.21 · Gin Framework · Goroutines" },
+        algorithm: { label: "Thuật Toán", tech: "Beam Search · Extreme Points · Spatial Hash · Simulated Annealing" },
+        database: { label: "Cơ Sở Dữ Liệu", tech: "PostgreSQL (pgx) · MongoDB (audit)" },
+        exportTech: { label: "Xuất Dữ Liệu", tech: "Excelize (Excel) · go-pdf (PDF) · Public Links" },
+      },
+    },
+    categories: {
+      title: "Hỗ Trợ Đa Danh Mục",
+      subtitle: "Được tối ưu cho ba danh mục sản phẩm nội thất chính với quy tắc riêng theo danh mục.",
+      dining: "Bàn Ghế Ăn",
+      mattress: "Nệm",
+      hfa: "Nội Thất Gia Đình",
+    },
+    cta: {
+      title: "Tối Đa Hóa",
+      titleAccent: "Tỷ Lệ Sử Dụng Container",
+      subtitle: "Ngừng vận chuyển không khí. Sử dụng ContCal và chuyển đổi quy trình xếp container với tối ưu hóa AI và trực quan hóa 3D thời gian thực.",
+      demo: "Yêu Cầu Demo",
+      viewAll: "Xem Tất Cả Giải Pháp",
+    },
+  },
+
+  // QuickShift Page
+  quickShift: {
+    hero: {
+      badge: "Quản Lý Nhân Lực Bằng AI",
+      title: "Nền Tảng Quản Lý Nhân Sự Thời Vụ",
+      subtitle: "Giải pháp quản lý nhân sự thời vụ toàn diện — từ quét bảng chấm công bằng AI, lập lịch tự động đến xuất hóa đơn và thông báo đa kênh. Được xây dựng cho các công ty phái cử nhân sự Nhật Bản.",
+      cta: {
+        explore: "Khám Phá Module",
+        apps: "Ứng Dụng Di Động",
+      },
+      stats: {
+        modules: "Module Chính",
+        apps: "Ứng Dụng Di Động",
+        permissions: "Phân Quyền RBAC",
+        migrations: "Migration CSDL",
+      },
+    },
+    modules: {
+      badge: "Module Nền Tảng",
+      title1: "Tất Cả Những Gì Bạn Cần Để",
+      title2: "Quản Lý Nhân Lực",
+      subtitle: "8 module tích hợp bao phủ toàn bộ quy trình nhân sự thời vụ, từ tiếp nhận đến xuất hóa đơn.",
+      items: {
+        timecardOcr: { title: "OCR Bảng Chấm Công", desc: "Quét bảng chấm công bằng AI sử dụng Gemini AI. Tự động trích xuất giờ làm, tăng ca và nghỉ giải lao từ bảng chấm công giấy với độ chính xác cao." },
+        autoShifter: { title: "Lập Lịch Tự Động", desc: "Công cụ lập lịch AI tự động tạo ca làm tối ưu dựa trên sẵn sàng, kỹ năng, vị trí và quy định lao động." },
+        workOrders: { title: "Đơn Hàng Công Việc", desc: "Quản lý vòng đời đơn hàng hoàn chỉnh — tạo, phân công, theo dõi và đóng. Hỗ trợ đơn hàng định kỳ, mẫu và vận hành đa địa điểm." },
+        workerMgmt: { title: "Quản Lý Nhân Viên", desc: "Hồ sơ nhân viên toàn diện với kỹ năng, chứng chỉ, lịch sẵn sàng, lịch sử hợp đồng và theo dõi hiệu suất." },
+        customerMgmt: { title: "Quản Lý Khách Hàng", desc: "CRM cho khách hàng phái cử — hợp đồng, tùy chọn thanh toán, địa điểm, yêu cầu kỹ năng và lịch sử quan hệ." },
+        dashboard: { title: "Bảng Điều Khiển & Phân Tích", desc: "Bốn bảng điều khiển chuyên biệt: Tổng Quan Vận Hành, Tóm Tắt Tài Chính, Sử Dụng Nhân Viên và Insights Khách Hàng với KPI thời gian thực." },
+        invoicing: { title: "Hóa Đơn & Thanh Toán", desc: "Tạo hóa đơn tự động từ bảng chấm công, mẫu thanh toán tùy chỉnh, theo dõi thanh toán và tích hợp với hệ thống kế toán." },
+        notifications: { title: "Thông Báo Đa Kênh", desc: "Thông báo đẩy qua FCM/APNs, tích hợp LINE, Zalo và WhatsApp cho giao tiếp nhân viên và khách hàng." },
+      },
+    },
+    ai: {
+      badge: "Tích Hợp AI",
+      title1: "Trí Tuệ Nhân Tạo Trong",
+      title2: "Mọi Bước",
+      ocr: {
+        title: "OCR Bảng Chấm Công",
+        desc: "Được hỗ trợ bởi Google Gemini AI, công cụ OCR quét bảng chấm công giấy và tự động trích xuất:",
+        items: ["Giờ làm & tăng ca", "Giờ nghỉ giải lao", "Thời gian bắt đầu/kết thúc", "Nhận dạng nhân viên", "Phát hiện bất thường"],
+      },
+      shifter: {
+        title: "Lập Lịch Tự Động",
+        desc: "Công cụ lập lịch AI xem xét nhiều yếu tố để tạo phân công ca làm tối ưu:",
+        items: ["Kỹ năng & chứng chỉ nhân viên", "Khoảng cách địa lý", "Tuân thủ luật lao động", "Sở thích sẵn sàng", "Thuật toán phân phối công bằng"],
+      },
+    },
+    roles: {
+      badge: "Phân Quyền Theo Vai Trò",
+      title1: "5 Vai Trò,",
+      title2: "63 Quyền Chi Tiết",
+      subtitle: "Kiểm soát truy cập chi tiết đảm bảo mỗi thành viên chỉ thấy đúng những gì họ cần — không hơn, không kém.",
+      items: {
+        superAdmin: { title: "Super Admin", desc: "Toàn quyền hệ thống với cài đặt tổ chức, quản lý người dùng và nhật ký kiểm tra.", permissions: "Tất cả 63 quyền" },
+        admin: { title: "Admin", desc: "Quản lý nhân viên, khách hàng, đơn hàng và hóa đơn trên tất cả chi nhánh.", permissions: "50+ quyền" },
+        manager: { title: "Quản Lý", desc: "Giám sát vận hành hàng ngày, duyệt bảng chấm công, quản lý lịch và tạo báo cáo.", permissions: "35+ quyền" },
+        staff: { title: "Nhân Viên", desc: "Tạo và cập nhật đơn hàng, xử lý bảng chấm công và phân công nhân viên.", permissions: "20+ quyền" },
+        viewer: { title: "Người Xem", desc: "Quyền chỉ xem bảng điều khiển, báo cáo và dữ liệu vận hành.", permissions: "Chỉ xem" },
+      },
+    },
+    mobile: {
+      badge: "Ứng Dụng Di Động",
+      flutterBadge: "Xây dựng với Flutter · Melos monorepo · iOS & Android",
+      worker: {
+        title: "Ứng Dụng Nhân Viên",
+        subtitle: "Lịch làm, chấm công & sẵn sàng",
+        features: [
+          "Xem ca được phân công với trạng thái thời gian thực và chi tiết địa điểm",
+          "Gửi bảng chấm công với check-in/out và theo dõi giờ nghỉ",
+          "Đặt sẵn sàng hàng tuần và yêu cầu nghỉ phép",
+          "Nhận thông báo đẩy cho phân công mới và thay đổi lịch",
+          "Xem lịch sử thu nhập và trạng thái thanh toán",
+        ],
+        stats: { loadTime: "Thời gian tải", clockIn: "Check in/out", pushAlerts: "Thông báo đẩy" },
+      },
+      customer: {
+        title: "Ứng Dụng Khách Hàng",
+        subtitle: "Đơn hàng, phê duyệt & thanh toán",
+        features: [
+          "Tạo và quản lý đơn hàng với yêu cầu kỹ năng nhân viên",
+          "Theo dõi trạng thái thời gian thực của tất cả nhân viên và địa điểm",
+          "Duyệt hoặc phản đối bảng chấm công với thao tác hàng loạt",
+          "Xem hóa đơn, lịch sử thanh toán và số dư còn lại",
+          "Đánh giá hiệu suất nhân viên và yêu cầu nhân viên ưu tiên",
+        ],
+        stats: { bulkApprove: "Duyệt hàng loạt", orderTracking: "Theo dõi đơn hàng", invoicing: "Hóa đơn" },
+      },
+      business: {
+        title: "Ứng Dụng Quản Lý / HR",
+        subtitle: "Vận hành, điều phối & phân tích",
+        features: [
+          "Bảng điều khiển vận hành thời gian thực với KPI và tỷ lệ lấp đầy",
+          "Điều phối nhân viên một chạm đến vị trí trống trên các địa điểm",
+          "Tích hợp Auto Shifter cho lịch được tạo bởi AI",
+          "Tổng quan tài chính với theo dõi doanh thu và trạng thái hóa đơn",
+          "Tạo báo cáo vận hành hàng ngày, tuần và tháng",
+        ],
+        stats: { dashboard: "Bảng điều khiển", autoShifter: "Auto Shifter", export: "Xuất báo cáo" },
+      },
+    },
+    integrations: {
+      badge: "Trung Tâm Tích Hợp",
+      title1: "Kết Nối Với",
+      title2: "Công Cụ Hiện Có",
+      items: {
+        odoo: { name: "Odoo ERP", desc: "Đồng bộ hai chiều cho kế toán, HR và kho hàng" },
+        payment: { name: "Cổng Thanh Toán", desc: "Stripe, PayPay, tự động hóa chuyển khoản ngân hàng" },
+        messaging: { name: "LINE / Zalo / WhatsApp", desc: "Nhắn tin và thông báo đa kênh" },
+        aws: { name: "Hạ Tầng AWS", desc: "EC2, RDS, S3, CloudFront, Lambda, ALB" },
+      },
+    },
+    tech: {
+      badge: "Công Nghệ",
+      title1: "Xây Dựng Với",
+      title2: "Công Nghệ Hiện Đại",
+      items: {
+        cms: { label: "Frontend CMS", tech: "Next.js 16 · React 19 · Tailwind v4 · shadcn/ui" },
+        mobile: { label: "Ứng Dụng Di Động", tech: "Flutter · Melos monorepo · 3 ứng dụng" },
+        backend: { label: "Backend API", tech: "Go (Chi router) · Kiến trúc DDD · PostgreSQL" },
+        ai: { label: "AI / ML", tech: "Google Gemini AI · OCR · Lập Lịch Tự Động" },
+        infra: { label: "Hạ Tầng", tech: "AWS · Docker · Supabase Auth · S3" },
+        db: { label: "Cơ Sở Dữ Liệu", tech: "PostgreSQL · 110+ migration · Redis cache" },
+      },
+    },
+    cta: {
+      title: "Sẵn Sàng Số Hóa",
+      titleAccent: "Quy Trình Phái Cử Nhân Sự?",
+      subtitle: "Hãy thảo luận về cách QuickShift có thể tối ưu quản lý nhân lực và loại bỏ các quy trình thủ công.",
+      getStarted: "Bắt Đầu Ngay",
+      viewAll: "Xem Tất Cả Dự Án",
+    },
+  },
+
+  // Actiwell Platform Page
+  actiwellPlatform: {
+    hero: {
+      badge: "Hệ Sinh Thái Fitness Toàn Diện",
+      title1: "Nền Tảng Actiwell",
+      title2: "Kiến Tạo Tương Lai Ngành Fitness",
+      subtitle: "Mercury Solutions đã hợp tác chiến lược với Attivo International — đơn vị dẫn đầu với hơn 20 năm kinh nghiệm trong ngành fitness Đông Nam Á — để tạo ra Actiwell, hệ sinh thái toàn diện giúp chuyển đổi cách các chuỗi phòng gym vận hành và phát triển.",
+      stats: {
+        apps: "Ứng Dụng Di Động",
+        features: "Tính Năng Chính",
+        experience: "Năm Kinh Nghiệm",
+        powered: "Tích Hợp AI",
+      },
+    },
+    partnership: {
+      badge: "Hợp Tác Chiến Lược",
+      title: "Được Xây Dựng Bởi Các Chuyên Gia",
+      description: "Actiwell ra đời từ sự hợp tác chiến lược giữa chuyên môn công nghệ của Mercury Solutions và sự am hiểu sâu sắc về thị trường fitness Đông Nam Á của Attivo International.",
+      mercury: {
+        role: "Đối Tác Công Nghệ",
+        description: "Mercury Solutions mang đến kỹ thuật phần mềm tiên tiến, khả năng AI, và kinh nghiệm xây dựng các ứng dụng doanh nghiệp chịu tải cao phục vụ hàng triệu người dùng.",
+      },
+      attivo: {
+        role: "Chuyên Gia Ngành Fitness",
+        description: "Với hơn 20 năm dẫn đầu trong ngành fitness Đông Nam Á, Attivo International đóng góp chuyên môn ngành, hiểu biết vận hành, và sự thấu hiểu sâu sắc về nhu cầu của các chuỗi phòng gym.",
+      },
+    },
+    ecosystem: {
+      badge: "Hệ Sinh Thái Hoàn Chỉnh",
+      title: "Hai Ứng Dụng, Một Nền Tảng Mạnh Mẽ",
+      description: "Actiwell mang đến trải nghiệm liền mạch cho cả hội viên và quản lý thông qua ứng dụng di động và hệ thống quản lý tích hợp.",
+      memberApp: {
+        title: "Ứng Dụng Hội Viên",
+        subtitle: "iOS & Android · Flutter",
+        features: {
+          booking: {
+            title: "Đặt Lịch Thông Minh",
+            desc: "Đặt lớp tập nhóm và buổi PT với tình trạng real-time, gợi ý thời gian bằng AI, và xác nhận tức thì.",
+          },
+          checkin: {
+            title: "Check-in Nhanh",
+            desc: "Check-in liền mạch tại bất kỳ cơ sở nào với timeline theo dõi tất cả lịch sử tập luyện.",
+          },
+          classes: {
+            title: "Khám Phá Lớp Tập",
+            desc: "Duyệt và lọc lớp tập nhóm, xem hồ sơ HLV, đọc đánh giá, và tham gia lớp tại bất kỳ cơ sở nào trong chuỗi.",
+          },
+          measurement: {
+            title: "Theo Dõi Chỉ Số Cơ Thể",
+            desc: "Theo dõi chỉ số InBody theo thời gian, xem lịch sử thành phần cơ thể chi tiết, và giám sát tiến trình với biểu đồ trực quan.",
+          },
+          reviews: {
+            title: "Đánh Giá & Nhận Xét",
+            desc: "Đánh giá HLV và lớp tập sau mỗi buổi, đọc nhận xét cộng đồng, và giúp duy trì chất lượng dịch vụ.",
+          },
+          notifications: {
+            title: "Thông Báo Thông Minh",
+            desc: "Nhận nhắc lịch đặt, cập nhật lớp tập, cảnh báo hết hạn gói tập, và gợi ý cá nhân hóa qua push notification.",
+          },
+        },
+      },
+      cms: {
+        title: "Hệ Thống Quản Lý CMS",
+        subtitle: "Dashboard Web · React",
+        features: {
+          customerMgmt: {
+            title: "Quản Lý Khách Hàng",
+            desc: "Hồ sơ hội viên đầy đủ, quản lý nhóm, theo dõi khách ghé thăm, và phân tích vòng đời khách hàng trong một dashboard tập trung.",
+          },
+          scheduleMgmt: {
+            title: "Quản Lý Lịch Trình",
+            desc: "Quản lý lịch lớp tập, phân công HLV, slot đặt PT, và sức chứa phòng tập tại tất cả các cơ sở.",
+          },
+          analytics: {
+            title: "Phân Tích Nâng Cao",
+            desc: "Phân tích doanh thu, xu hướng đặt lịch, mô hình check-in, theo dõi vòng đời hội viên, phễu chuyển đổi, và báo cáo hiệu suất nhân viên.",
+          },
+          salesPackages: {
+            title: "Bán Hàng & Gói Tập",
+            desc: "Tạo và quản lý gói hội viên, sản phẩm, bảng giá, và xử lý đơn hàng với theo dõi thanh toán tích hợp.",
+          },
+          contracts: {
+            title: "Quản Lý Hợp Đồng",
+            desc: "Tạo hợp đồng số, theo dõi gia hạn, quản lý mục tiêu doanh số, và báo cáo doanh thu tự động cho toàn chuỗi.",
+          },
+          multiLocation: {
+            title: "Hỗ Trợ Đa Cơ Sở",
+            desc: "Quản lý nhiều phòng tập từ một dashboard với cài đặt riêng theo cơ sở, phân công nhân sự, và so sánh hiệu suất.",
+          },
+        },
+      },
+    },
+    ai: {
+      badge: "Trí Tuệ Nhân Tạo",
+      title: "Tính Năng AI Độc Đáo",
+      description: "Actiwell tận dụng trí tuệ nhân tạo để cá nhân hóa hành trình tập luyện, tự động hóa tiếp thị, và tối ưu hóa vận hành kinh doanh.",
+      features: {
+        smartBooking: {
+          title: "Gợi Ý Đặt Lịch Bằng AI",
+          desc: "Gợi ý đặt lịch thông minh dựa trên hành vi khách hàng, ngày hết hạn gói tập, slot tập thường xuyên, và sức chứa phòng tập — với chấm điểm ưu tiên để tối đa hóa tương tác.",
+          tags: {
+            expiringPackage: "Gói Sắp Hết Hạn",
+            inactiveCustomer: "Hội Viên Không Hoạt Động",
+            regularSlot: "Slot Thường Xuyên",
+            lowCapacity: "Sức Chứa Thấp",
+          },
+        },
+        retention: {
+          title: "AI Giữ Chân Hội Viên",
+          desc: "Nhận diện hội viên có nguy cơ rời bỏ trước khi xảy ra bằng phân tích hành vi, chấm điểm tương tác, và chiến dịch tái tương tác tự động.",
+        },
+        revenueOptimize: {
+          title: "Tối Ưu Doanh Thu",
+          desc: "Insights dựa trên AI cho chiến lược giá, gợi ý gói tập, cơ hội upselling, và chiến dịch marketing có mục tiêu.",
+        },
+        capacityPlanning: {
+          title: "Lập Kế Hoạch Sức Chứa Thông Minh",
+          desc: "Dự đoán giờ cao điểm, tối ưu lịch lớp tập, và cân bằng khối lượng công việc HLV bằng dữ liệu lịch sử và mô hình machine learning.",
+        },
+      },
+    },
+    value: {
+      title: "Thúc Đẩy Tăng Trưởng Bền Vững",
+      description: "Actiwell mang lại tác động kinh doanh đo lường được trên mọi khía cạnh vận hành chuỗi phòng gym.",
+      items: {
+        operations: {
+          title: "Tối Ưu Vận Hành",
+          desc: "Tự động hóa báo cáo hàng ngày, số hóa hợp đồng, tập trung quản lý đa cơ sở, và giảm khối lượng công việc thủ công lên đến 60%.",
+        },
+        experience: {
+          title: "Nâng Cao Trải Nghiệm Hội Viên",
+          desc: "Gợi ý tập luyện cá nhân hóa, đặt lịch liền mạch, check-in tức thì, và trải nghiệm di động đẹp mắt giữ hội viên gắn bó và trung thành.",
+        },
+        revenue: {
+          title: "Tăng Trưởng Doanh Thu Bền Vững",
+          desc: "Insights dựa trên dữ liệu, marketing tự động, cải thiện tỷ lệ giữ chân, và quy trình bán hàng tối ưu thúc đẩy tăng trưởng doanh thu ổn định.",
+        },
+      },
+    },
+    tech: {
+      title: "Xây Dựng Với Công Nghệ Hiện Đại",
+      description: "Nền tảng công nghệ cấp doanh nghiệp đảm bảo hiệu suất, khả năng mở rộng, và độ tin cậy.",
+      stack: {
+        flutter: "Di Động Đa Nền Tảng",
+        laravel: "Backend API",
+        react: "Dashboard CMS",
+        mysql: "Cơ Sở Dữ Liệu",
+        firebase: "Push & Analytics",
+        docker: "Containerization",
+        ai: "Tính Năng Thông Minh",
+        api: "Tầng Tích Hợp",
+      },
+    },
+    screens: {
+      businessApp: {
+        badge: "Ứng Dụng Nhân Viên & HLV",
+        title: "Ứng Dụng Dành Cho Nhân Viên",
+        description: "Ứng dụng di động chuyên dụng cho HLV và nhân viên để quản lý lịch trình, theo dõi doanh số, xử lý đặt lịch, và giám sát chỉ số cơ thể.",
+      },
+    },
+    demo: {
+      badge: "Trung Tâm Demo",
+      heading: "Trải Nghiệm Nền Tảng Actiwell",
+      directions: "Chỉ Đường",
+      items: {
+        address: {
+          label: "Địa Chỉ Văn Phòng",
+          line1: "Công ty CP Mercury Solutions",
+          line2: "506A Ford Thăng Long, 105 Láng Hạ, Đống Đa, Hà Nội",
+        },
+        hours: {
+          label: "Giờ Demo",
+          value: "Thứ 2 - Thứ 6: 9:00 - 18:00 (GMT+7)",
+        },
+        platforms: {
+          label: "Nền Tảng Hỗ Trợ",
+          line1: "iOS & Android (Ứng dụng Flutter)",
+          line2: "Web CMS (Bảng điều khiển React)",
+        },
+        security: {
+          label: "Bảo Mật & Tuân Thủ",
+          value: "Mã hóa cấp doanh nghiệp, xác thực JWT, phân quyền theo vai trò",
+        },
+        support: {
+          label: "Hỗ Trợ Kỹ Thuật",
+          line1: "Đội ngũ onboarding chuyên biệt cho khách hàng mới",
+          line2: "Giám sát hệ thống 24/7 & cam kết SLA",
+        },
+      },
+    },
+    cta: {
+      title: "Sẵn Sàng Chuyển Đổi Kinh Doanh Fitness?",
+      description: "Để Actiwell tối ưu vận hành, nâng cao trải nghiệm hội viên, và thúc đẩy tăng trưởng doanh thu bền vững cho chuỗi phòng gym của bạn.",
+      contact: "Liên Hệ Ngay",
+      solutions: "Xem Tất Cả Giải Pháp",
+    },
+  },
+
+  // Actiwell ATMS Page
+  actiwellAtms: {
+    hero: {
+      badge: "Actiwell ATMS",
+      title: "Hệ Thống Quản Lý Huấn Luyện Vận Động Viên Cho Vận Hành Quy Mô Quốc Gia",
+      subtitle: "Actiwell ATMS số hóa luồng vận hành từ kiểm tra tiêu chuẩn, tổ chức đợt kiểm tra, phân tích chu kỳ huấn luyện đến quản trị phân quyền và đa cơ sở.",
+      stats: {
+        tests: "30+ bài test chuẩn NSCA",
+        roles: "3 cổng vai trò vận hành",
+        multiLocation: "Luồng vận hành cấp tỉnh và cấp quốc gia",
+        hybridArch: "Kiến trúc lai Next.js + Golang"
+      }
+    },
+    cooperation: {
+      title: "Hợp Tác Triển Khai",
+      description: "Giải pháp được phát triển phối hợp với Trung tâm Huấn luyện Thể thao Quốc gia Việt Nam (TP.HCM) nhằm đáp ứng vận hành kiểm tra thể lực số lượng lớn và chuẩn hóa quản trị dữ liệu thành tích."
+    },
+    modules: {
+      title: "Các Mô-đun Chức Năng Cốt Lõi",
+      description: "ATMS kết nối yêu cầu nghiệp vụ và kiến trúc hệ thống thành chuỗi vận hành hoàn chỉnh cho đánh giá và phát triển vận động viên.",
+      items: {
+        athlete360: {
+          title: "Hồ Sơ Vận Động Viên 360",
+          description: "Quản lý tập trung hồ sơ cá nhân, chỉ số thể chất, lịch sử kiểm tra và lộ trình phát triển."
+        },
+        testingProtocols: {
+          title: "Quy Trình Kiểm Tra Theo NSCA",
+          description: "Chuẩn hóa luồng kiểm tra với kiểm soát sàng lọc PAR-Q+, tiền sử sức khỏe và điều kiện chống chỉ định."
+        },
+        campaignStation: {
+          title: "Đợt Kiểm Tra và Chế Độ Theo Trạm",
+          description: "Vận hành đợt kiểm tra quy mô lớn với nhập liệu nhanh theo trạm, chống trùng và theo dõi tiến độ."
+        },
+        periodization: {
+          title: "Phân Tích Giáo Án và Tải Lượng",
+          description: "Theo dõi volume/intensity kế hoạch so với thực tế để hỗ trợ quyết định chuyên môn của HLV."
+        },
+        multiBranch: {
+          title: "Đa Cơ Sở và Điều Chuyển",
+          description: "Hỗ trợ quản lý điều chuyển VĐV/HLV giữa các đơn vị cấp tỉnh và trung tâm quốc gia với lịch sử đầy đủ."
+        },
+        securityCompliance: {
+          title: "Phân Quyền, Audit, Tuân Thủ",
+          description: "Áp dụng RBAC theo phạm vi dữ liệu, ghi vết thao tác quan trọng và đáp ứng yêu cầu bảo vệ dữ liệu cá nhân."
+        }
+      }
+    },
+    architecture: {
+      title: "Tổng Quan Kiến Trúc",
+      description: "Nền tảng được thiết kế theo mô hình tách lớp UI, API và dữ liệu để đảm bảo mở rộng và bảo trì dài hạn.",
+      layers: {
+        frontend: "Frontend: Next.js App Router với cổng nghiệp vụ riêng cho Admin, Coach và Athlete.",
+        backend: "Backend: Golang REST API (Gin + OpenAPI) xử lý logic nghiệp vụ, RBAC và validation.",
+        database: "Tầng dữ liệu: PostgreSQL quản lý cấu trúc vận động viên, bài test, phân công và đợt kiểm tra.",
+        integration: "Bảo mật và tuân thủ: JWT, audit trail, kiểm soát dữ liệu theo PDPA và quy trình NSCA."
+      }
+    },
+    standards: {
+      title: "Tiêu Chuẩn và Quản Trị",
+      items: [
+        "Quy trình kiểm tra theo định hướng NSCA, có sàng lọc và kiểm soát an toàn.",
+        "Mô hình RBAC theo vai trò Admin, Coach, Athlete.",
+        "Xử lý dữ liệu cá nhân và dữ liệu y tế theo yêu cầu PDPA.",
+        "Sẵn sàng audit cho phân công, điều chuyển và cập nhật kết quả."
+      ]
+    },
+    cta: {
+      contact: "Tư Vấn Cùng Chúng Tôi",
+      backToItSolution: "Quay Lại IT Solutions"
+    }
+  },
+
+  // TNA System Page
+  tnaSystem: {
+    hero: {
+      badge: "TNA HRM System",
+      title: "Digital HR & Payroll Platform for Manufacturing Operations",
+      subtitle: "This page summarizes core TNA capabilities based on the project SRS and production landing flow: workforce data management, AI attendance capture, shift/leave operations, payroll automation, and accounting integration.",
+      stats: {
+        functionalPages: "17+ functional pages",
+        processFlows: "7 major process flows",
+        roles: "5 operational roles",
+        languages: "Multi-language support"
+      }
+    },
+    core: {
+      title: "Core Functional Modules",
+      description: "TNA covers the full HRM and payroll lifecycle for manufacturing teams, from attendance input to accounting output.",
+      modules: {
+        employeeOrg: {
+          title: "Employee & Organization Management",
+          description: "Manage employee profiles, department structure, and role-based access for HR, payroll, managers, and employees.",
+          bullets: ["Employee master data", "Department hierarchy", "Role and permission matrix"]
+        },
+        aiAttendance: {
+          title: "AI Time & Attendance",
+          description: "Capture attendance in real-time with AI camera/biometric-ready flow and synchronize timesheet data for payroll.",
+          bullets: ["Face-recognition flow", "Realtime check-in/out", "Timesheet synchronization"]
+        },
+        shiftMgmt: {
+          title: "Shift, Group Shift & Shift Change",
+          description: "Configure standard/rotating shifts, assign employees by group, and control shift-change requests with approval.",
+          bullets: ["Shift templates", "Group assignment", "Shift change workflow"]
+        },
+        leaveOtLate: {
+          title: "Leave, Overtime, Late/Early Rules",
+          description: "Handle leave requests, overtime categories, and late/early scenarios with policy-based calculations.",
+          bullets: ["Leave type and request", "Overtime policy matrix", "Late/early handling"]
+        },
+        payrollEngine: {
+          title: "Payroll Engine",
+          description: "Automate gross-to-net payroll with tax and insurance calculations aligned to Vietnamese labor regulations.",
+          bullets: ["Automated payroll run", "Tax and insurance logic", "Payslip output"]
+        },
+        salaryTemplate: {
+          title: "Salary Components & Templates",
+          description: "Build reusable payroll templates with configurable allowances, deductions, and formula-based components.",
+          bullets: ["Component library", "Template assignment", "Default salary settings"]
+        },
+        bonusDeduction: {
+          title: "Bonus & Deduction Management",
+          description: "Maintain additional income and deduction lists, apply targeted or bulk rules, and audit payroll impact.",
+          bullets: ["Bonus list management", "Deduction list management", "Net-salary impact checks"]
+        },
+        misaIntegration: {
+          title: "MISA Accounting Integration",
+          description: "Push payroll accounting vouchers and synchronize employee dictionaries for end-to-end accounting automation.",
+          bullets: ["Voucher sync API", "Employee dictionary sync", "Callback and sync monitoring"]
+        }
+      }
+    },
+    mock: {
+      common: { live: "Live" },
+      employeeOrg: {
+        windowTitle: "Staff / Department / User",
+        searchEmployee: "Search employee",
+        departmentFilter: "Department",
+        columns: { employee: "Employee", department: "Department", role: "Role" },
+        sample: { department: "Assembly A", role: "HR Manager" }
+      },
+      aiAttendance: {
+        windowTitle: "Timekeeping / AI Camera",
+        realtime: "Realtime",
+        cards: { present: "Present", late: "Late", noCheckIn: "No check-in" },
+        events: "Camera Events",
+        syncing: "Syncing",
+        sampleEvent: "Gate A . Face Match"
+      },
+      shiftMgmt: {
+        windowTitle: "Shift / Group Shift / Change",
+        columns: { group: "Group", shift: "Shift", time: "Time", status: "Status" },
+        lineA: { group: "Line A - Weekday", shift: "Morning", status: "Running" },
+        lineB: { group: "Line B - Rotation", shift: "Night", status: "Pending" }
+      },
+      leaveOtLate: {
+        windowTitle: "Leave / Overtime / Late-Early",
+        tabs: { leaveRequest: "Leave Request", overtime: "Overtime", lateEarly: "Late/Early" },
+        rows: {
+          leave: "Leave . EMP-01021 . 1 day",
+          overtime: "OT . EMP-00403 . 3.5h",
+          late: "Late . EMP-00210 . 18m"
+        },
+        status: { awaiting: "Awaiting", approved: "Approved", processed: "Processed" }
+      },
+      payroll: {
+        windowTitle: "Payroll Calculation",
+        rightLabel: "Monthly Run",
+        period: "Mar 2026",
+        departmentFilter: "Department",
+        gross: "Gross Payroll",
+        net: "Net Payroll",
+        statusLabel: "Calculation status",
+        calculated: "Calculated"
+      },
+      salaryTemplate: {
+        windowTitle: "Salary Components / Templates",
+        libraryTitle: "Component Library",
+        baseSalary: "Base Salary",
+        mealAllowance: "Meal Allowance",
+        insurance: "Insurance",
+        templateTitle: "Template Mapping",
+        templateName: "Factory Worker V2",
+        formulaGross: "Gross = Base + OT + Bonus",
+        formulaNet: "Net = Gross - Tax - BHXH",
+        active: "Active"
+      },
+      bonusDeduction: {
+        windowTitle: "Bonus / Deduction Lists",
+        columns: { item: "Item", type: "Type", rule: "Rule", amount: "Amount" },
+        rows: {
+          bonusName: "Attendance Bonus",
+          bonusType: "Bonus",
+          bonusRule: "Monthly fixed",
+          deductionName: "Advance Salary",
+          deductionType: "Deduction",
+          deductionRule: "Targeted"
+        }
+      },
+      misa: {
+        windowTitle: "MISA Sync Queue",
+        rightLabel: "API Callback",
+        queueTitle: "Payroll Voucher Push",
+        inQueue: "In Queue",
+        batchInfo: "Batch: 100 vouchers . Tenant: FUJIKIN-VN",
+        dictionarySync: "Dictionary Sync",
+        voucherCreate: "Voucher Create",
+        callbackStatus: "Callback Status",
+        done: "Done",
+        processing: "Processing",
+        awaiting: "Awaiting"
+      }
+    },
+    screenDesign: {
+      title: "TNA CMS Screen Design",
+      description: "Visualized from the TNA CMS frontend modules (`dashboard`, `payroll-calculation`, `settings/ai-camera`) to show how daily operation screens are organized.",
+      cards: {
+        dashboard: "Dashboard Overview",
+        payroll: "Payroll Calculation List",
+        aiCamera: "AI Camera Settings"
+      },
+      dashboard: {
+        realtime: "Dashboard / Real-time",
+        attendanceTrend: "Attendance Trend",
+        pendingRequests: "Pending Requests",
+        kpi: { totalStaff: "Total Staff", present: "Present", late: "Late", onLeave: "On Leave" },
+        pending: { leave: "Leave", shiftChange: "Shift change", lateEarly: "Late/Early" }
+      },
+      payroll: {
+        filterPeriodName: "Period name",
+        filterDateRange: "Date range",
+        columns: { period: "Period", status: "Status", department: "Department", staff: "Staff" },
+        sample: {
+          period: "Mar 2026",
+          calculated: "Calculated",
+          approved: "Approved",
+          draft: "Draft",
+          assembly: "Assembly",
+          qa: "QA",
+          warehouse: "Warehouse"
+        }
+      },
+      aiCamera: {
+        officeLocation: "Office / Location",
+        provider: "Provider",
+        placeIdToken: "Place ID / Token",
+        activeConfig: "Active Configuration",
+        connected: "Connected",
+        workflow: "Save / Edit / Delete workflow",
+        sample: {
+          officeA1: "Factory A - Gate 1",
+          officeA2: "Factory A - Gate 2",
+          officeB4: "Factory B - Loading Dock"
+        }
+      }
+    },
+    workflow: {
+      title: "Operational Workflow",
+      steps: [
+        "System and policy setup (company rules, calendar, shift defaults)",
+        "Salary structure and template configuration",
+        "Employee onboarding with profile and attendance source registration",
+        "Daily attendance and operational data collection",
+        "Payroll calculation, review, and approval",
+        "Accounting sync and payment execution"
+      ]
+    },
+    compliance: {
+      title: "Compliance & Integration",
+      p1: "Payroll logic includes tax and insurance handling (BHXH, BHYT, BHTN), configurable overtime rates, and policy-based rules for allowances and deductions.",
+      p2: "MISA integration automates accounting handoff by syncing employee dictionaries and pushing payroll vouchers through API and callback-based status tracking.",
+      p3: "Access control supports role-specific operation for Admin, HR Manager, Payroll Specialist, Department Manager, and Employee."
+    },
+    backToItSolution: "Back to IT Solutions"
   },
 
   // Language Selector
