@@ -1227,6 +1227,204 @@ export const vi = {
     },
   },
 
+  // Actiwell Platform Page
+  actiwell: {
+    hero: {
+      badge: "Hệ Sinh Thái Fitness Toàn Diện",
+      title1: "Nền Tảng Actiwell",
+      title2: "Kiến Tạo Tương Lai Ngành Fitness",
+      subtitle: "Mercury Solutions hợp tác chiến lược cùng Attivo International — đơn vị tiên phong với hơn 20 năm dẫn dắt ngành fitness Đông Nam Á — để tạo nên Actiwell, một hệ sinh thái toàn diện thay đổi cách các chuỗi phòng tập vận hành và phát triển.",
+      stats: {
+        apps: "Ứng Dụng Di Động",
+        features: "Tính Năng Cốt Lõi",
+        experience: "Năm Kinh Nghiệm",
+        powered: "Tích Hợp AI",
+      },
+    },
+    partnership: {
+      badge: "Hợp Tác Chiến Lược",
+      title: "Kiến Tạo Bởi Những Người Dẫn Đầu",
+      description: "Actiwell ra đời từ sự hợp tác chiến lược giữa năng lực công nghệ của Mercury Solutions và hiểu biết sâu sắc của Attivo International về thị trường fitness Đông Nam Á.",
+      mercury: {
+        role: "Đối Tác Công Nghệ",
+        description: "Mercury Solutions mang đến năng lực phần mềm tiên tiến, khả năng AI vượt trội và thành tích đã được chứng minh trong việc xây dựng các ứng dụng doanh nghiệp tải cao phục vụ hàng triệu người dùng.",
+      },
+      attivo: {
+        role: "Chuyên Gia Ngành Fitness",
+        description: "Với hơn 20 năm dẫn dắt ngành fitness Đông Nam Á, Attivo International đóng góp chuyên môn lĩnh vực vượt trội, hiểu biết vận hành sâu sắc và sự thấu hiểu toàn diện về nhu cầu phát triển của các chuỗi phòng tập.",
+      },
+    },
+    ecosystem: {
+      badge: "Hệ Sinh Thái Hoàn Chỉnh",
+      title: "Hai Ứng Dụng, Một Nền Tảng Mạnh Mẽ",
+      description: "Actiwell mang đến trải nghiệm liền mạch cho cả hội viên và quản lý thông qua ứng dụng di động và hệ thống quản lý tích hợp.",
+      memberApp: {
+        title: "Ứng Dụng Hội Viên",
+        subtitle: "iOS & Android • Flutter",
+        features: {
+          booking: {
+            title: "Đặt Lịch Thông Minh",
+            desc: "Đặt lịch lớp tập nhóm và buổi tập cá nhân với khả dụng thời gian thực, gợi ý giờ tập bằng AI và xác nhận tức thì.",
+          },
+          checkin: {
+            title: "Check-in Nhanh Chóng",
+            desc: "Check-in liền mạch tại bất kỳ chi nhánh nào với theo dõi lịch sử tất cả các lần đến tập và hoạt động.",
+          },
+          classes: {
+            title: "Khám Phá Lớp Tập",
+            desc: "Duyệt và lọc các lớp tập nhóm, xem hồ sơ huấn luyện viên, đọc đánh giá và tham gia lớp tập tại bất kỳ chi nhánh nào trong chuỗi.",
+          },
+          measurement: {
+            title: "Theo Dõi Chỉ Số Cơ Thể",
+            desc: "Theo dõi chỉ số InBody theo thời gian, xem lịch sử thành phần cơ thể chi tiết và giám sát tiến trình tập luyện qua biểu đồ trực quan.",
+          },
+          reviews: {
+            title: "Đánh Giá & Nhận Xét",
+            desc: "Đánh giá huấn luyện viên và lớp tập sau mỗi buổi, đọc nhận xét từ cộng đồng và góp phần duy trì chất lượng dịch vụ toàn chuỗi.",
+          },
+          notifications: {
+            title: "Thông Báo Thông Minh",
+            desc: "Nhận nhắc nhở đặt lịch, cập nhật lớp tập, cảnh báo hết hạn gói tập và gợi ý cá nhân hóa qua thông báo đẩy.",
+          },
+        },
+      },
+      cms: {
+        title: "Hệ Thống Quản Lý CMS",
+        subtitle: "Bảng Điều Khiển Web • React",
+        features: {
+          customerMgmt: {
+            title: "Quản Lý Khách Hàng",
+            desc: "Hồ sơ hội viên đầy đủ, quản lý nhóm, theo dõi khách tham quan và phân tích vòng đời khách hàng trên một bảng điều khiển tập trung.",
+          },
+          scheduleMgmt: {
+            title: "Quản Lý Lịch Trình",
+            desc: "Quản lý lịch lớp tập, phân công huấn luyện viên, khung giờ đặt PT và sức chứa phòng tập tại tất cả các chi nhánh.",
+          },
+          analytics: {
+            title: "Phân Tích Nâng Cao",
+            desc: "Phân tích doanh thu, xu hướng đặt lịch, mẫu check-in, theo dõi vòng đời hội viên, phễu chuyển đổi và báo cáo hiệu suất nhân viên.",
+          },
+          salesPackages: {
+            title: "Bán Hàng & Gói Tập",
+            desc: "Tạo và quản lý gói hội viên, sản phẩm, phân tầng giá và xử lý đơn hàng với theo dõi thanh toán tích hợp.",
+          },
+          contracts: {
+            title: "Quản Lý Hợp Đồng",
+            desc: "Tạo hợp đồng số, theo dõi gia hạn, quản lý mục tiêu bán hàng và báo cáo doanh thu tự động cho toàn bộ chuỗi.",
+          },
+          multiLocation: {
+            title: "Hỗ Trợ Đa Chi Nhánh",
+            desc: "Quản lý nhiều phòng tập từ một bảng điều khiển với cài đặt riêng theo chi nhánh, phân công nhân viên và so sánh hiệu suất.",
+          },
+        },
+      },
+    },
+    ai: {
+      badge: "Trí Tuệ Nhân Tạo Tích Hợp",
+      title: "Tính Năng AI Độc Quyền",
+      description: "Actiwell ứng dụng trí tuệ nhân tạo để cá nhân hóa hành trình tập luyện, tự động hóa quyết định marketing và tối ưu hóa vận hành kinh doanh.",
+      features: {
+        smartBooking: {
+          title: "Gợi Ý Đặt Lịch Bằng AI",
+          desc: "Gợi ý đặt lịch thông minh dựa trên hành vi khách hàng, ngày hết hạn gói tập, khung giờ tập thường xuyên và sức chứa phòng tập — với chấm điểm ưu tiên để tối đa hóa tương tác.",
+          tags: {
+            expiringPackage: "Gói Sắp Hết Hạn",
+            inactiveCustomer: "Hội Viên Không Hoạt Động",
+            regularSlot: "Khung Giờ Quen",
+            lowCapacity: "Sức Chứa Thấp",
+          },
+        },
+        retention: {
+          title: "AI Giữ Chân Hội Viên",
+          desc: "Nhận diện hội viên có nguy cơ rời bỏ trước khi họ hủy bằng phân tích hành vi, chấm điểm tương tác và chiến dịch tái tương tác tự động.",
+        },
+        revenueOptimize: {
+          title: "Tối Ưu Hóa Doanh Thu",
+          desc: "Phân tích dựa trên AI cho chiến lược giá, gợi ý gói tập, cơ hội bán thêm và chiến dịch marketing có mục tiêu.",
+        },
+        capacityPlanning: {
+          title: "Hoạch Định Sức Chứa Thông Minh",
+          desc: "Dự đoán giờ cao điểm, tối ưu lịch lớp tập và cân bằng khối lượng công việc huấn luyện viên bằng dữ liệu lịch sử và mô hình học máy.",
+        },
+      },
+    },
+    value: {
+      title: "Thúc Đẩy Tăng Trưởng Bền Vững",
+      description: "Actiwell mang lại tác động kinh doanh đo lường được trên mọi khía cạnh vận hành chuỗi phòng tập.",
+      items: {
+        operations: {
+          title: "Tối Ưu Vận Hành",
+          desc: "Tự động hóa báo cáo hàng ngày, số hóa hợp đồng, tập trung quản lý đa chi nhánh và giảm khối lượng công việc thủ công lên đến 60%.",
+        },
+        experience: {
+          title: "Nâng Cao Trải Nghiệm Hội Viên",
+          desc: "Gợi ý bài tập cá nhân hóa, đặt lịch liền mạch, check-in tức thì và giao diện di động đẹp mắt giúp hội viên gắn bó và trung thành.",
+        },
+        revenue: {
+          title: "Tăng Trưởng Doanh Thu Bền Vững",
+          desc: "Phân tích dựa trên dữ liệu, marketing tự động, cải thiện tỷ lệ giữ chân và tối ưu quy trình bán hàng thúc đẩy tăng trưởng doanh thu ổn định.",
+        },
+      },
+    },
+    tech: {
+      title: "Xây Dựng Trên Công Nghệ Hiện Đại",
+      description: "Stack công nghệ cấp doanh nghiệp đảm bảo hiệu suất, khả năng mở rộng và độ tin cậy.",
+      stack: {
+        flutter: "Di Động Đa Nền Tảng",
+        laravel: "Backend API",
+        react: "Bảng Điều Khiển CMS",
+        mysql: "Cơ Sở Dữ Liệu",
+        firebase: "Thông Báo & Phân Tích",
+        docker: "Container Hóa",
+        ai: "Tính Năng Thông Minh",
+        api: "Tầng Tích Hợp",
+      },
+    },
+    screens: {
+      businessApp: {
+        badge: "Ứng Dụng Nhân Viên & Huấn Luyện Viên",
+        title: "Ứng Dụng Doanh Nghiệp Cho Nhân Viên",
+        description: "Ứng dụng di động chuyên dụng cho huấn luyện viên và nhân viên để quản lý lịch trình, theo dõi doanh số, xử lý đặt lịch và giám sát chỉ số cơ thể.",
+      },
+    },
+    demo: {
+      badge: "Trung Tâm Demo",
+      heading: "Trải Nghiệm Nền Tảng Actiwell",
+      directions: "Chỉ Đường",
+      items: {
+        address: {
+          label: "Địa Chỉ Văn Phòng",
+          line1: "Công ty CP Mercury Solutions",
+          line2: "506A Ford Thăng Long, 105 Láng Hạ, Đống Đa, Hà Nội",
+        },
+        hours: {
+          label: "Giờ Demo",
+          value: "Thứ Hai - Thứ Sáu: 9:00 - 18:00 (GMT+7)",
+        },
+        platforms: {
+          label: "Nền Tảng Hỗ Trợ",
+          line1: "iOS & Android (Ứng dụng di động Flutter)",
+          line2: "Web CMS (Bảng điều khiển React)",
+        },
+        security: {
+          label: "Bảo Mật & Tuân Thủ",
+          value: "Mã hóa cấp doanh nghiệp, xác thực JWT, kiểm soát truy cập theo vai trò",
+        },
+        support: {
+          label: "Hỗ Trợ Kỹ Thuật",
+          line1: "Đội ngũ onboarding chuyên trách cho khách hàng mới",
+          line2: "Giám sát hệ thống 24/7 & phản hồi theo cam kết SLA",
+        },
+      },
+    },
+    cta: {
+      title: "Sẵn Sàng Chuyển Đổi Doanh Nghiệp Fitness Của Bạn?",
+      description: "Để Actiwell tối ưu vận hành, nâng cao trải nghiệm hội viên và thúc đẩy tăng trưởng doanh thu bền vững cho chuỗi phòng tập của bạn.",
+      contact: "Liên Hệ Ngay",
+      solutions: "Xem Tất Cả Giải Pháp",
+    },
+  },
+
   // Minova PMS Page
   minovaPms: {
     hero: {

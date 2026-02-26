@@ -1503,6 +1503,204 @@ export const ja = {
     backToItSolution: "Back to IT Solutions"
   },
 
+  // Actiwell Platform Page
+  actiwell: {
+    hero: {
+      badge: "オールインワン フィットネスエコシステム",
+      title1: "Actiwell プラットフォーム",
+      title2: "フィットネスの未来を切り拓く",
+      subtitle: "Mercury Solutionsは、東南アジアのフィットネス業界で20年以上のリーダーシップを誇るAttivo Internationalと戦略的パートナーシップを締結し、フィットネスチェーンの運営と成長を変革するオールインワンエコシステム「Actiwell」を創り上げました。",
+      stats: {
+        apps: "モバイルアプリ",
+        features: "コア機能",
+        experience: "年の実績",
+        powered: "AI搭載",
+      },
+    },
+    partnership: {
+      badge: "戦略的パートナーシップ",
+      title: "業界リーダーによる構築",
+      description: "Actiwellは、Mercury Solutionsの技術力とAttivo Internationalの東南アジアフィットネス市場への深い知見を融合した戦略的協業から生まれました。",
+      mercury: {
+        role: "テクノロジーパートナー",
+        description: "Mercury Solutionsは、最先端のソフトウェアエンジニアリング、AI技術、そして数百万ユーザーに対応する高負荷エンタープライズアプリケーション開発の確かな実績を提供します。",
+      },
+      attivo: {
+        role: "フィットネス業界の専門家",
+        description: "東南アジアのフィットネス業界で20年以上のリーダーシップを持つAttivo Internationalは、比類のない業界専門知識、運営の洞察力、そしてフィットネスチェーンが成功するために必要なものへの深い理解を提供します。",
+      },
+    },
+    ecosystem: {
+      badge: "完全なエコシステム",
+      title: "2つのアプリ、1つの強力なプラットフォーム",
+      description: "Actiwellは、統合されたモバイルアプリと管理システムを通じて、ジム会員と管理者の双方にシームレスな体験を提供します。",
+      memberApp: {
+        title: "会員モバイルアプリ",
+        subtitle: "iOS & Android • Flutter",
+        features: {
+          booking: {
+            title: "スマート予約",
+            desc: "リアルタイムの空き状況確認、AIによる最適な時間帯の提案、即時予約確認で、グループレッスンやパーソナルトレーニングセッションを予約できます。",
+          },
+          checkin: {
+            title: "クイックチェックイン",
+            desc: "全ジム訪問履歴とアクティビティ履歴のタイムライン管理とともに、どのスタジオでもスムーズにチェックイン。",
+          },
+          classes: {
+            title: "クラス検索",
+            desc: "グループレッスンの検索・フィルタリング、トレーナープロフィールの閲覧、レビューの確認、チェーン内のどの店舗でもクラスに参加可能。",
+          },
+          measurement: {
+            title: "体組成トラッキング",
+            desc: "InBody測定データの経時的な追跡、詳細な体組成履歴の表示、ビジュアルチャートによるフィットネス進捗のモニタリング。",
+          },
+          reviews: {
+            title: "評価・レビュー",
+            desc: "セッション後にトレーナーやクラスを評価、コミュニティレビューの閲覧、チェーン全体のサービス品質向上に貢献。",
+          },
+          notifications: {
+            title: "スマート通知",
+            desc: "予約リマインダー、クラス更新情報、パッケージ有効期限アラート、パーソナライズされたおすすめをプッシュ通知で受信。",
+          },
+        },
+      },
+      cms: {
+        title: "管理CMS",
+        subtitle: "Webダッシュボード • React",
+        features: {
+          customerMgmt: {
+            title: "顧客管理",
+            desc: "完全な会員プロフィール、グループ管理、ビジター追跡、顧客ライフサイクル分析を一元化されたダッシュボードで。",
+          },
+          scheduleMgmt: {
+            title: "スケジュール管理",
+            desc: "クラススケジュール、トレーナーのアサイン、PT予約枠、全店舗のスタジオ収容人数を管理。",
+          },
+          analytics: {
+            title: "高度なアナリティクス",
+            desc: "売上分析、予約トレンド、チェックインパターン、会員ライフサイクル追跡、コンバージョンファネル、スタッフパフォーマンスレポート。",
+          },
+          salesPackages: {
+            title: "販売・パッケージ",
+            desc: "会員パッケージ、商品、料金プランの作成・管理、統合決済トラッキングによる販売注文の処理。",
+          },
+          contracts: {
+            title: "契約管理",
+            desc: "デジタル契約の作成、更新追跡、売上目標管理、チェーン全体の自動収益レポート。",
+          },
+          multiLocation: {
+            title: "マルチロケーション対応",
+            desc: "店舗別の設定、スタッフ配置、パフォーマンス比較とともに、1つのダッシュボードから複数スタジオを管理。",
+          },
+        },
+      },
+    },
+    ai: {
+      badge: "AI搭載インテリジェンス",
+      title: "独自のAI機能",
+      description: "Actiwellは人工知能を活用して、ワークアウト体験のパーソナライズ、マーケティング判断の自動化、ビジネス運営の最適化を実現します。",
+      features: {
+        smartBooking: {
+          title: "AI予約サジェスト",
+          desc: "顧客の行動パターン、パッケージ有効期限、定期的なトレーニング枠、スタジオ収容状況に基づくインテリジェントな予約提案 — エンゲージメントを最大化する優先度スコアリング付き。",
+          tags: {
+            expiringPackage: "有効期限間近",
+            inactiveCustomer: "非アクティブ会員",
+            regularSlot: "定期利用枠",
+            lowCapacity: "空き枠あり",
+          },
+        },
+        retention: {
+          title: "会員リテンションAI",
+          desc: "行動分析、エンゲージメントスコアリング、自動リエンゲージメントキャンペーンにより、退会リスクのある会員を事前に特定。",
+        },
+        revenueOptimize: {
+          title: "収益最適化",
+          desc: "価格戦略、パッケージ提案、アップセル機会、ターゲットマーケティングキャンペーンのためのAI駆動インサイト。",
+        },
+        capacityPlanning: {
+          title: "スマートキャパシティプランニング",
+          desc: "過去のデータと機械学習モデルを活用して、ピーク時間の予測、クラススケジュールの最適化、トレーナーの業務量バランスを実現。",
+        },
+      },
+    },
+    value: {
+      title: "持続可能な成長の推進",
+      description: "Actiwellは、フィットネスチェーン運営のあらゆる側面で、測定可能なビジネスインパクトを提供します。",
+      items: {
+        operations: {
+          title: "業務の効率化",
+          desc: "日次レポートの自動化、契約のデジタル化、マルチロケーション管理の一元化により、手作業を最大60%削減。",
+        },
+        experience: {
+          title: "会員体験の向上",
+          desc: "パーソナライズされたトレーニング提案、シームレスな予約、即時チェックイン、会員のエンゲージメントとロイヤルティを維持する美しいモバイル体験。",
+        },
+        revenue: {
+          title: "持続可能な収益成長",
+          desc: "データ駆動のインサイト、マーケティング自動化、リテンション率の改善、一貫した収益成長をもたらす最適化された販売プロセス。",
+        },
+      },
+    },
+    tech: {
+      title: "最新テクノロジーで構築",
+      description: "パフォーマンス、スケーラビリティ、信頼性を確保するエンタープライズグレードの技術スタック。",
+      stack: {
+        flutter: "クロスプラットフォーム モバイル",
+        laravel: "バックエンドAPI",
+        react: "CMSダッシュボード",
+        mysql: "データベース",
+        firebase: "プッシュ通知 & アナリティクス",
+        docker: "コンテナ化",
+        ai: "スマート機能",
+        api: "インテグレーションレイヤー",
+      },
+    },
+    screens: {
+      businessApp: {
+        badge: "スタッフ & トレーナーアプリ",
+        title: "スタッフ向けビジネスアプリ",
+        description: "トレーナーやスタッフがスケジュール管理、売上追跡、予約対応、体組成測定を行うための専用モバイルアプリ。",
+      },
+    },
+    demo: {
+      badge: "デモセンター",
+      heading: "Actiwell プラットフォームを体験する",
+      directions: "アクセス方法",
+      items: {
+        address: {
+          label: "オフィス所在地",
+          line1: "Mercury Solutions JSC",
+          line2: "506A Ford Thang Long, 105 Lang Ha, Dong Da, ハノイ",
+        },
+        hours: {
+          label: "デモ対応時間",
+          value: "月〜金: 9:00 - 18:00 (GMT+7)",
+        },
+        platforms: {
+          label: "対応プラットフォーム",
+          line1: "iOS & Android (Flutter モバイルアプリ)",
+          line2: "Web CMS (React ダッシュボード)",
+        },
+        security: {
+          label: "セキュリティ & コンプライアンス",
+          value: "エンタープライズグレードの暗号化、JWT認証、ロールベースのアクセス制御",
+        },
+        support: {
+          label: "テクニカルサポート",
+          line1: "新規クライアント向けの専任オンボーディングチーム",
+          line2: "24時間365日のシステム監視とSLAに基づく対応",
+        },
+      },
+    },
+    cta: {
+      title: "フィットネスビジネスを変革する準備はできていますか？",
+      description: "Actiwellで業務を効率化し、会員体験を向上させ、フィットネスチェーンの持続可能な収益成長を実現しましょう。",
+      contact: "お問い合わせ",
+      solutions: "すべてのソリューションを見る",
+    },
+  },
+
   // Minova PMS Page
   minovaPms: {
     hero: {

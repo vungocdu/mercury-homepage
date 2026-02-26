@@ -7,9 +7,6 @@ import { useLanguage } from '@/contexts/LanguageContext'
 export default function Contact() {
   const { t } = useLanguage()
   
-  // Debug: Check if component is properly mounted
-  console.log('Contact component rendered')
-  
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -25,9 +22,7 @@ export default function Contact() {
   const [submitError, setSubmitError] = useState('')
 
   const handleSubmit = async (e: React.FormEvent) => {
-    console.log('handleSubmit called - preventing default...')
     e.preventDefault()
-    console.log('Default prevented, form data:', formData)
     
     setIsSubmitting(true)
     setSubmitError('')
@@ -43,8 +38,6 @@ export default function Contact() {
         throw new Error('This form can only be submitted from the browser')
       }
 
-      console.log('Submitting contact form via API route...')
-      
       // Call API route for server-side processing
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -68,8 +61,6 @@ export default function Contact() {
         throw new Error(result.error || 'Failed to submit form')
       }
 
-      console.log('✅ Contact form submitted successfully:', result)
-      
       setSubmitSuccess(true)
       
       // Reset form after 3 seconds
@@ -87,8 +78,6 @@ export default function Contact() {
       }, 3000)
       
     } catch (error) {
-      console.error('❌ Form submission error:', error)
-      
       // More user-friendly error messages
       let errorMessage = 'An error occurred while submitting the form. Please try again.'
       
@@ -386,9 +375,8 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                onClick={(e) => {
-                  console.log('Button clicked!')
-                  // Don't prevent default here, let form handle it
+                onClick={() => {
+                  // Let form handle submit
                 }}
                 className={`w-full py-4 px-8 rounded-xl font-semibold text-white transition-all duration-300 transform ${
                   isSubmitting 

@@ -83,50 +83,51 @@ module.exports = {
           DEFAULT: "hsl(var(--success))",
           foreground: "hsl(var(--success-foreground))",
         },
-        // Mercury Solutions Pantone Colors
+        // Mercury Neutral Slate (blue-tinted)
         mercury: {
-          50: "#F8F9FA", // Clean White (Cool Gray 1 C)
-          100: "#F8F9FA", // Clean White
-          200: "#E9ECEF", // Light Gray
-          300: "#DEE2E6", // Medium Light Gray
-          400: "#CED4DA", // Medium Gray
-          500: "#ADB5BD", // Medium Dark Gray
-          600: "#6C757D", // Professional Gray (Cool Gray 9 C)
-          700: "#495057", // Dark Gray
-          800: "#343A40", // Very Dark Gray
-          900: "#212529", // Almost Black
-          950: "#1E3A8A", // Deep Mercury (7461 C)
-          blue: "#2E5BFF", // Mercury Blue (2925 C)
-          gold: "#FFD60A", // Mercury Gold (116 C)
-          white: "#F8F9FA", // Clean White
-          gray: "#6C757D", // Professional Gray
-          deep: "#1E3A8A", // Deep Mercury
+          50: "#F8FAFC",
+          100: "#F1F5F9",
+          200: "#E2E8F0",
+          300: "#CBD5E1",
+          400: "#94A3B8",
+          500: "#64748B",
+          600: "#475569",
+          700: "#334155",
+          800: "#1E293B",
+          900: "#0F172A",
+          950: "#020617",
+          blue: "#2E5BFF",
+          gold: "#F59E0B",
+          white: "#F8FAFC",
+          gray: "#64748B",
+          deep: "#1E3A8A",
         },
-        // Mercury Blue variations
+        // Mercury Blue (Logo Primary #2E5BFF)
         'mercury-blue': {
-          50: "#E6F0FF",
-          100: "#CCE1FF",
-          200: "#99C3FF",
-          300: "#66A5FF",
-          400: "#3387FF",
-          500: "#2E5BFF", // Mercury Blue (2925 C)
-          600: "#1E3A8A", // Deep Mercury (7461 C)
-          700: "#1A2E6B",
-          800: "#16234C",
-          900: "#11182D",
+          50: "#EFF4FF",
+          100: "#DBE4FF",
+          200: "#BFCFFF",
+          300: "#93AEFF",
+          400: "#5F85FF",
+          500: "#2E5BFF",  // Logo Blue
+          600: "#1D4ED8",
+          700: "#1E3A8A",
+          800: "#1E3370",
+          900: "#1A2756",
+          950: "#0F172A",
         },
-        // Mercury Gold variations
+        // Mercury Gold (Refined Amber)
         'mercury-gold': {
-          50: "#FFF9E6",
-          100: "#FFF3CC",
-          200: "#FFE799",
-          300: "#FFDB66",
-          400: "#FFCF33",
-          500: "#FFD60A", // Mercury Gold (116 C)
-          600: "#E6C100",
-          700: "#CCAD00",
-          800: "#B39900",
-          900: "#998500",
+          50: "#FFFBEB",
+          100: "#FEF3C7",
+          200: "#FDE68A",
+          300: "#FCD34D",
+          400: "#FBBF24",
+          500: "#F59E0B",
+          600: "#D97706",
+          700: "#B45309",
+          800: "#92400E",
+          900: "#78350F",
         },
       },
       borderRadius: {

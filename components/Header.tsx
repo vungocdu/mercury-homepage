@@ -71,19 +71,16 @@ const TabSelectNavigation = ({ navigation, activeHref, setActiveHref }: {
       <div className="flex items-center space-x-1 p-1 rounded-xl bg-gray-100/50">
         {navigation.map((item) => {
           const isActive = activeHref === item.href
-          console.log(`Menu item: ${item.name}, href: ${item.href}, activeHref: ${activeHref}, isActive: ${isActive}`) // Debug log
           return (
             <button
               key={item.name}
               onClick={(e) => {
-                console.log(`Clicked navigation: ${item.name} -> ${item.href}`) // Debug log
                 handleNavigationClick(item.href, e)
                 setActiveHref(item.href)
-                
+
                 // Force update after navigation
                 setTimeout(() => {
                   const newActiveHref = getActiveHrefFromCurrentRoute()
-                  console.log('After navigation, updating activeHref to:', newActiveHref) // Debug log
                   setActiveHref(newActiveHref)
                 }, 100)
               }}
@@ -94,7 +91,7 @@ const TabSelectNavigation = ({ navigation, activeHref, setActiveHref }: {
               {isActive && (
                 <motion.div
                   layoutId="activeTab"
-                  className="absolute inset-0 rounded-lg bg-mercury-blue-600 active-tab-shadow"
+                  className="absolute inset-0 rounded-lg bg-mercury-blue-500 active-tab-shadow"
                   transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                 />
               )}
@@ -125,7 +122,6 @@ export default function Header() {
   useEffect(() => {
     const updateActiveRoute = () => {
       const newActiveHref = getActiveHrefFromCurrentRoute()
-      console.log('Setting activeHref to:', newActiveHref) // Debug log
       setActiveHref(newActiveHref)
     }
 
@@ -258,7 +254,6 @@ export default function Header() {
                   <div className="space-y-1">
                     {navigation.map((item) => {
                       const isActive = activeHref === item.href
-                      console.log(`Mobile menu item: ${item.name}, href: ${item.href}, activeHref: ${activeHref}, isActive: ${isActive}`) // Debug log
                       return (
                         <motion.a
                           key={item.name}
@@ -267,15 +262,13 @@ export default function Header() {
                             isActive ? 'text-white' : 'text-gray-700 hover:text-gray-900'
                           }`}
                           onClick={(e) => {
-                            console.log(`Clicked mobile navigation: ${item.name} -> ${item.href}`) // Debug log
                             handleNavigationClick(item.href, e)
                             setActiveHref(item.href)
                             setIsMenuOpen(false)
-                            
+
                             // Force update after navigation
                             setTimeout(() => {
                               const newActiveHref = getActiveHrefFromCurrentRoute()
-                              console.log('After mobile navigation, updating activeHref to:', newActiveHref) // Debug log
                               setActiveHref(newActiveHref)
                             }, 100)
                           }}
@@ -286,7 +279,7 @@ export default function Header() {
                           {isActive && (
                             <motion.div
                               layoutId="mobileActiveTab"
-                              className="absolute inset-0 rounded-lg bg-mercury-blue-600 active-tab-shadow"
+                              className="absolute inset-0 rounded-lg bg-mercury-blue-500 active-tab-shadow"
                               transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                             />
                           )}

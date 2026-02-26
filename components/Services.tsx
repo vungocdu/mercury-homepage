@@ -86,7 +86,7 @@ export default function Services() {
             
             <h2 className="text-3xl lg:text-4xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>
               <span style={{ color: 'hsl(var(--text-primary))' }}>Digital</span>{' '}
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-mercury-blue-400 via-mercury-blue-500 to-mercury-blue-700 bg-clip-text text-transparent">
                 Solutions
               </span>{' '}
               <span style={{ color: 'hsl(var(--text-primary))' }}>That Drive Growth</span>
@@ -124,8 +124,8 @@ export default function Services() {
                       className="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:scale-105"
                       style={{
                         backgroundColor: 'hsl(var(--card-bg))',
-                        border: '2px solid hsl(var(--card-border))',
-                        boxShadow: '0 4px 6px -1px rgb(30 58 138 / 0.1), 0 2px 4px -1px rgb(30 58 138 / 0.06)'
+                        border: '1px solid hsl(var(--card-border))',
+                        boxShadow: '0 4px 6px -1px rgb(15 23 42 / 0.06), 0 2px 4px -1px rgb(15 23 42 / 0.03)'
                       }}
                     >
                       <div className="p-8 relative z-10">
@@ -202,8 +202,8 @@ export default function Services() {
                       className="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:scale-105"
                       style={{
                         backgroundColor: 'hsl(var(--card-bg))',
-                        border: '2px solid hsl(var(--card-border))',
-                        boxShadow: '0 4px 6px -1px rgb(30 58 138 / 0.1), 0 2px 4px -1px rgb(30 58 138 / 0.06)'
+                        border: '1px solid hsl(var(--card-border))',
+                        boxShadow: '0 4px 6px -1px rgb(15 23 42 / 0.06), 0 2px 4px -1px rgb(15 23 42 / 0.03)'
                       }}
                     >
                       <div className="p-8 relative z-10">

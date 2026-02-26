@@ -4,7 +4,12 @@ const nextConfig = {
   // output: process.env.NODE_ENV === 'production' ? 'export' : undefined,
   trailingSlash: true,
   images: {
-    domains: ['mercurysolutions.vn'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'mercurysolutions.vn',
+      },
+    ],
     unoptimized: true,
   },
   // Enable external packages for server components

@@ -164,51 +164,51 @@ export default function TNASystemClient() {
     const fallback = fallbackModuleCopy[module.key]
     return {
       ...module,
-      title: tr(`it.tnaSystem.core.modules.${module.key}.title`, fallback.title),
-      description: tr(`it.tnaSystem.core.modules.${module.key}.description`, fallback.description),
+      title: tr(`tnaSystem.core.modules.${module.key}.title`, fallback.title),
+      description: tr(`tnaSystem.core.modules.${module.key}.description`, fallback.description),
       bullets: [
-        tr(`it.tnaSystem.core.modules.${module.key}.bullets.0`, fallback.bullets[0]),
-        tr(`it.tnaSystem.core.modules.${module.key}.bullets.1`, fallback.bullets[1]),
-        tr(`it.tnaSystem.core.modules.${module.key}.bullets.2`, fallback.bullets[2]),
+        tr(`tnaSystem.core.modules.${module.key}.bullets.0`, fallback.bullets[0]),
+        tr(`tnaSystem.core.modules.${module.key}.bullets.1`, fallback.bullets[1]),
+        tr(`tnaSystem.core.modules.${module.key}.bullets.2`, fallback.bullets[2]),
       ],
     }
   })
 
   const implementationFlow = [
-    tr('it.tnaSystem.workflow.steps.0', 'System and policy setup (company rules, calendar, shift defaults)'),
-    tr('it.tnaSystem.workflow.steps.1', 'Salary structure and template configuration'),
-    tr('it.tnaSystem.workflow.steps.2', 'Employee onboarding with profile and attendance source registration'),
-    tr('it.tnaSystem.workflow.steps.3', 'Daily attendance and operational data collection'),
-    tr('it.tnaSystem.workflow.steps.4', 'Payroll calculation, review, and approval'),
-    tr('it.tnaSystem.workflow.steps.5', 'Accounting sync and payment execution'),
+    tr('tnaSystem.workflow.steps.0', 'System and policy setup (company rules, calendar, shift defaults)'),
+    tr('tnaSystem.workflow.steps.1', 'Salary structure and template configuration'),
+    tr('tnaSystem.workflow.steps.2', 'Employee onboarding with profile and attendance source registration'),
+    tr('tnaSystem.workflow.steps.3', 'Daily attendance and operational data collection'),
+    tr('tnaSystem.workflow.steps.4', 'Payroll calculation, review, and approval'),
+    tr('tnaSystem.workflow.steps.5', 'Accounting sync and payment execution'),
   ]
 
   const dashboardScreenStats = [
-    { label: tr('it.tnaSystem.screenDesign.dashboard.kpi.totalStaff', 'Total Staff'), value: '1,842', color: 'text-slate-900', bar: 'bg-slate-400' },
-    { label: tr('it.tnaSystem.screenDesign.dashboard.kpi.present', 'Present'), value: '1,716', color: 'text-emerald-700', bar: 'bg-emerald-500' },
-    { label: tr('it.tnaSystem.screenDesign.dashboard.kpi.late', 'Late'), value: '64', color: 'text-amber-700', bar: 'bg-amber-500' },
-    { label: tr('it.tnaSystem.screenDesign.dashboard.kpi.onLeave', 'On Leave'), value: '41', color: 'text-violet-700', bar: 'bg-violet-500' },
+    { label: tr('tnaSystem.screenDesign.dashboard.kpi.totalStaff', 'Total Staff'), value: '1,842', color: 'text-slate-900', bar: 'bg-slate-400' },
+    { label: tr('tnaSystem.screenDesign.dashboard.kpi.present', 'Present'), value: '1,716', color: 'text-emerald-700', bar: 'bg-emerald-500' },
+    { label: tr('tnaSystem.screenDesign.dashboard.kpi.late', 'Late'), value: '64', color: 'text-amber-700', bar: 'bg-amber-500' },
+    { label: tr('tnaSystem.screenDesign.dashboard.kpi.onLeave', 'On Leave'), value: '41', color: 'text-violet-700', bar: 'bg-violet-500' },
   ]
 
   const payrollRows = [
     {
-      period: tr('it.tnaSystem.screenDesign.payroll.sample.period', 'Mar 2026'),
-      status: tr('it.tnaSystem.screenDesign.payroll.sample.calculated', 'Calculated'),
-      department: tr('it.tnaSystem.screenDesign.payroll.sample.assembly', 'Assembly'),
+      period: tr('tnaSystem.screenDesign.payroll.sample.period', 'Mar 2026'),
+      status: tr('tnaSystem.screenDesign.payroll.sample.calculated', 'Calculated'),
+      department: tr('tnaSystem.screenDesign.payroll.sample.assembly', 'Assembly'),
       employees: 642,
       tone: 'bg-blue-100 text-blue-700',
     },
     {
-      period: tr('it.tnaSystem.screenDesign.payroll.sample.period', 'Mar 2026'),
-      status: tr('it.tnaSystem.screenDesign.payroll.sample.approved', 'Approved'),
-      department: tr('it.tnaSystem.screenDesign.payroll.sample.qa', 'QA'),
+      period: tr('tnaSystem.screenDesign.payroll.sample.period', 'Mar 2026'),
+      status: tr('tnaSystem.screenDesign.payroll.sample.approved', 'Approved'),
+      department: tr('tnaSystem.screenDesign.payroll.sample.qa', 'QA'),
       employees: 221,
       tone: 'bg-emerald-100 text-emerald-700',
     },
     {
-      period: tr('it.tnaSystem.screenDesign.payroll.sample.period', 'Mar 2026'),
-      status: tr('it.tnaSystem.screenDesign.payroll.sample.draft', 'Draft'),
-      department: tr('it.tnaSystem.screenDesign.payroll.sample.warehouse', 'Warehouse'),
+      period: tr('tnaSystem.screenDesign.payroll.sample.period', 'Mar 2026'),
+      status: tr('tnaSystem.screenDesign.payroll.sample.draft', 'Draft'),
+      department: tr('tnaSystem.screenDesign.payroll.sample.warehouse', 'Warehouse'),
       employees: 153,
       tone: 'bg-slate-100 text-slate-700',
     },
@@ -216,19 +216,19 @@ export default function TNASystemClient() {
 
   const cameraRows = [
     {
-      office: tr('it.tnaSystem.screenDesign.aiCamera.sample.officeA1', 'Factory A - Gate 1'),
+      office: tr('tnaSystem.screenDesign.aiCamera.sample.officeA1', 'Factory A - Gate 1'),
       provider: 'Hanet',
       placeId: 'HN-A-001',
       active: true,
     },
     {
-      office: tr('it.tnaSystem.screenDesign.aiCamera.sample.officeA2', 'Factory A - Gate 2'),
+      office: tr('tnaSystem.screenDesign.aiCamera.sample.officeA2', 'Factory A - Gate 2'),
       provider: 'Hanet',
       placeId: 'HN-A-002',
       active: true,
     },
     {
-      office: tr('it.tnaSystem.screenDesign.aiCamera.sample.officeB4', 'Factory B - Loading Dock'),
+      office: tr('tnaSystem.screenDesign.aiCamera.sample.officeB4', 'Factory B - Loading Dock'),
       provider: 'Hanet',
       placeId: 'HN-B-004',
       active: false,
@@ -239,28 +239,28 @@ export default function TNASystemClient() {
     switch (moduleKey) {
       case 'employeeOrg':
         return (
-          <MockWindow title={tr('it.tnaSystem.mock.employeeOrg.windowTitle', 'Staff / Department / User')} rightLabel={tr('it.tnaSystem.mock.common.live', 'Live')}>
+          <MockWindow title={tr('tnaSystem.mock.employeeOrg.windowTitle', 'Staff / Department / User')} rightLabel={tr('tnaSystem.mock.common.live', 'Live')}>
             <div className="flex items-center gap-2 mb-2">
               <span className="inline-flex items-center rounded-md border border-slate-200 bg-white px-2 py-1 text-[11px] text-slate-500">
                 <Search className="mr-1 h-3 w-3" />
-                {tr('it.tnaSystem.mock.employeeOrg.searchEmployee', 'Search employee')}
+                {tr('tnaSystem.mock.employeeOrg.searchEmployee', 'Search employee')}
               </span>
               <span className="inline-flex items-center rounded-md border border-slate-200 bg-white px-2 py-1 text-[11px] text-slate-500">
                 <ListFilter className="mr-1 h-3 w-3" />
-                {tr('it.tnaSystem.mock.employeeOrg.departmentFilter', 'Department')}
+                {tr('tnaSystem.mock.employeeOrg.departmentFilter', 'Department')}
               </span>
             </div>
             <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
               <div className="grid grid-cols-12 gap-2 bg-slate-100 px-2 py-1.5 text-[11px] font-medium text-slate-600">
-                <span className="col-span-4">{tr('it.tnaSystem.mock.employeeOrg.columns.employee', 'Employee')}</span>
-                <span className="col-span-4">{tr('it.tnaSystem.mock.employeeOrg.columns.department', 'Department')}</span>
-                <span className="col-span-4">{tr('it.tnaSystem.mock.employeeOrg.columns.role', 'Role')}</span>
+                <span className="col-span-4">{tr('tnaSystem.mock.employeeOrg.columns.employee', 'Employee')}</span>
+                <span className="col-span-4">{tr('tnaSystem.mock.employeeOrg.columns.department', 'Department')}</span>
+                <span className="col-span-4">{tr('tnaSystem.mock.employeeOrg.columns.role', 'Role')}</span>
               </div>
               <div className="grid grid-cols-12 gap-2 border-t border-slate-100 px-2 py-2 text-[11px]">
                 <span className="col-span-4 text-slate-700">EMP-00241</span>
-                <span className="col-span-4 text-slate-700">{tr('it.tnaSystem.mock.employeeOrg.sample.department', 'Assembly A')}</span>
+                <span className="col-span-4 text-slate-700">{tr('tnaSystem.mock.employeeOrg.sample.department', 'Assembly A')}</span>
                 <span className="col-span-4">
-                  <span className="inline-flex rounded-full bg-blue-100 px-1.5 py-0.5 text-blue-700">{tr('it.tnaSystem.mock.employeeOrg.sample.role', 'HR Manager')}</span>
+                  <span className="inline-flex rounded-full bg-blue-100 px-1.5 py-0.5 text-blue-700">{tr('tnaSystem.mock.employeeOrg.sample.role', 'HR Manager')}</span>
                 </span>
               </div>
             </div>
@@ -268,31 +268,31 @@ export default function TNASystemClient() {
         )
       case 'aiAttendance':
         return (
-          <MockWindow title={tr('it.tnaSystem.mock.aiAttendance.windowTitle', 'Timekeeping / AI Camera')} rightLabel={tr('it.tnaSystem.mock.aiAttendance.realtime', 'Realtime')}>
+          <MockWindow title={tr('tnaSystem.mock.aiAttendance.windowTitle', 'Timekeeping / AI Camera')} rightLabel={tr('tnaSystem.mock.aiAttendance.realtime', 'Realtime')}>
             <div className="grid grid-cols-3 gap-2 mb-2">
               <div className="rounded-lg border border-slate-200 bg-white p-2">
-                <p className="text-[10px] text-slate-500">{tr('it.tnaSystem.mock.aiAttendance.cards.present', 'Present')}</p>
+                <p className="text-[10px] text-slate-500">{tr('tnaSystem.mock.aiAttendance.cards.present', 'Present')}</p>
                 <p className="text-sm font-semibold text-emerald-700">1,716</p>
               </div>
               <div className="rounded-lg border border-slate-200 bg-white p-2">
-                <p className="text-[10px] text-slate-500">{tr('it.tnaSystem.mock.aiAttendance.cards.late', 'Late')}</p>
+                <p className="text-[10px] text-slate-500">{tr('tnaSystem.mock.aiAttendance.cards.late', 'Late')}</p>
                 <p className="text-sm font-semibold text-amber-700">64</p>
               </div>
               <div className="rounded-lg border border-slate-200 bg-white p-2">
-                <p className="text-[10px] text-slate-500">{tr('it.tnaSystem.mock.aiAttendance.cards.noCheckIn', 'No check-in')}</p>
+                <p className="text-[10px] text-slate-500">{tr('tnaSystem.mock.aiAttendance.cards.noCheckIn', 'No check-in')}</p>
                 <p className="text-sm font-semibold text-red-700">21</p>
               </div>
             </div>
             <div className="rounded-lg border border-slate-200 bg-white px-2 py-2 text-[11px]">
               <div className="mb-1.5 flex items-center justify-between">
-                <span className="text-slate-600">{tr('it.tnaSystem.mock.aiAttendance.events', 'Camera Events')}</span>
+                <span className="text-slate-600">{tr('tnaSystem.mock.aiAttendance.events', 'Camera Events')}</span>
                 <span className="inline-flex items-center rounded-full bg-emerald-100 px-1.5 py-0.5 text-emerald-700">
                   <CheckCircle2 className="mr-1 h-3 w-3" />
-                  {tr('it.tnaSystem.mock.aiAttendance.syncing', 'Syncing')}
+                  {tr('tnaSystem.mock.aiAttendance.syncing', 'Syncing')}
                 </span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-slate-600">{tr('it.tnaSystem.mock.aiAttendance.sampleEvent', 'Gate A · Face Match')}</span>
+                <span className="text-slate-600">{tr('tnaSystem.mock.aiAttendance.sampleEvent', 'Gate A · Face Match')}</span>
                 <span className="text-slate-700">07:13:22</span>
               </div>
             </div>
@@ -300,95 +300,95 @@ export default function TNASystemClient() {
         )
       case 'shiftMgmt':
         return (
-          <MockWindow title={tr('it.tnaSystem.mock.shiftMgmt.windowTitle', 'Shift / Group Shift / Change')} rightLabel={tr('it.tnaSystem.mock.common.live', 'Live')}>
+          <MockWindow title={tr('tnaSystem.mock.shiftMgmt.windowTitle', 'Shift / Group Shift / Change')} rightLabel={tr('tnaSystem.mock.common.live', 'Live')}>
             <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
               <div className="grid grid-cols-12 gap-2 bg-slate-100 px-2 py-1.5 text-[11px] font-medium text-slate-600">
-                <span className="col-span-4">{tr('it.tnaSystem.mock.shiftMgmt.columns.group', 'Group')}</span>
-                <span className="col-span-3">{tr('it.tnaSystem.mock.shiftMgmt.columns.shift', 'Shift')}</span>
-                <span className="col-span-3">{tr('it.tnaSystem.mock.shiftMgmt.columns.time', 'Time')}</span>
-                <span className="col-span-2">{tr('it.tnaSystem.mock.shiftMgmt.columns.status', 'Status')}</span>
+                <span className="col-span-4">{tr('tnaSystem.mock.shiftMgmt.columns.group', 'Group')}</span>
+                <span className="col-span-3">{tr('tnaSystem.mock.shiftMgmt.columns.shift', 'Shift')}</span>
+                <span className="col-span-3">{tr('tnaSystem.mock.shiftMgmt.columns.time', 'Time')}</span>
+                <span className="col-span-2">{tr('tnaSystem.mock.shiftMgmt.columns.status', 'Status')}</span>
               </div>
               <div className="grid grid-cols-12 gap-2 border-t border-slate-100 px-2 py-2 text-[11px]">
-                <span className="col-span-4 text-slate-700">{tr('it.tnaSystem.mock.shiftMgmt.lineA.group', 'Line A - Weekday')}</span>
-                <span className="col-span-3 text-slate-700">{tr('it.tnaSystem.mock.shiftMgmt.lineA.shift', 'Morning')}</span>
+                <span className="col-span-4 text-slate-700">{tr('tnaSystem.mock.shiftMgmt.lineA.group', 'Line A - Weekday')}</span>
+                <span className="col-span-3 text-slate-700">{tr('tnaSystem.mock.shiftMgmt.lineA.shift', 'Morning')}</span>
                 <span className="col-span-3 text-slate-700">07:00-15:00</span>
-                <span className="col-span-2"><span className="inline-flex rounded-full bg-blue-100 px-1.5 py-0.5 text-blue-700">{tr('it.tnaSystem.mock.shiftMgmt.lineA.status', 'Running')}</span></span>
+                <span className="col-span-2"><span className="inline-flex rounded-full bg-blue-100 px-1.5 py-0.5 text-blue-700">{tr('tnaSystem.mock.shiftMgmt.lineA.status', 'Running')}</span></span>
               </div>
               <div className="grid grid-cols-12 gap-2 border-t border-slate-100 px-2 py-2 text-[11px]">
-                <span className="col-span-4 text-slate-700">{tr('it.tnaSystem.mock.shiftMgmt.lineB.group', 'Line B - Rotation')}</span>
-                <span className="col-span-3 text-slate-700">{tr('it.tnaSystem.mock.shiftMgmt.lineB.shift', 'Night')}</span>
+                <span className="col-span-4 text-slate-700">{tr('tnaSystem.mock.shiftMgmt.lineB.group', 'Line B - Rotation')}</span>
+                <span className="col-span-3 text-slate-700">{tr('tnaSystem.mock.shiftMgmt.lineB.shift', 'Night')}</span>
                 <span className="col-span-3 text-slate-700">22:00-06:00</span>
-                <span className="col-span-2"><span className="inline-flex rounded-full bg-amber-100 px-1.5 py-0.5 text-amber-700">{tr('it.tnaSystem.mock.shiftMgmt.lineB.status', 'Pending')}</span></span>
+                <span className="col-span-2"><span className="inline-flex rounded-full bg-amber-100 px-1.5 py-0.5 text-amber-700">{tr('tnaSystem.mock.shiftMgmt.lineB.status', 'Pending')}</span></span>
               </div>
             </div>
           </MockWindow>
         )
       case 'leaveOtLate':
         return (
-          <MockWindow title={tr('it.tnaSystem.mock.leaveOtLate.windowTitle', 'Leave / Overtime / Late-Early')} rightLabel={tr('it.tnaSystem.mock.common.live', 'Live')}>
+          <MockWindow title={tr('tnaSystem.mock.leaveOtLate.windowTitle', 'Leave / Overtime / Late-Early')} rightLabel={tr('tnaSystem.mock.common.live', 'Live')}>
             <div className="mb-2 flex gap-2 text-[11px]">
-              <span className="rounded-full bg-blue-100 px-2 py-0.5 text-blue-700">{tr('it.tnaSystem.mock.leaveOtLate.tabs.leaveRequest', 'Leave Request')}</span>
-              <span className="rounded-full bg-white border border-slate-200 px-2 py-0.5 text-slate-600">{tr('it.tnaSystem.mock.leaveOtLate.tabs.overtime', 'Overtime')}</span>
-              <span className="rounded-full bg-white border border-slate-200 px-2 py-0.5 text-slate-600">{tr('it.tnaSystem.mock.leaveOtLate.tabs.lateEarly', 'Late/Early')}</span>
+              <span className="rounded-full bg-blue-100 px-2 py-0.5 text-blue-700">{tr('tnaSystem.mock.leaveOtLate.tabs.leaveRequest', 'Leave Request')}</span>
+              <span className="rounded-full bg-white border border-slate-200 px-2 py-0.5 text-slate-600">{tr('tnaSystem.mock.leaveOtLate.tabs.overtime', 'Overtime')}</span>
+              <span className="rounded-full bg-white border border-slate-200 px-2 py-0.5 text-slate-600">{tr('tnaSystem.mock.leaveOtLate.tabs.lateEarly', 'Late/Early')}</span>
             </div>
             <div className="space-y-1.5 text-[11px]">
               <div className="flex items-center justify-between rounded-lg border border-slate-200 bg-white px-2 py-2">
-                <span className="text-slate-700">{tr('it.tnaSystem.mock.leaveOtLate.rows.leave', 'Leave · EMP-01021 · 1 day')}</span>
-                <span className="rounded-full bg-amber-100 px-1.5 py-0.5 text-amber-700">{tr('it.tnaSystem.mock.leaveOtLate.status.awaiting', 'Awaiting')}</span>
+                <span className="text-slate-700">{tr('tnaSystem.mock.leaveOtLate.rows.leave', 'Leave · EMP-01021 · 1 day')}</span>
+                <span className="rounded-full bg-amber-100 px-1.5 py-0.5 text-amber-700">{tr('tnaSystem.mock.leaveOtLate.status.awaiting', 'Awaiting')}</span>
               </div>
               <div className="flex items-center justify-between rounded-lg border border-slate-200 bg-white px-2 py-2">
-                <span className="text-slate-700">{tr('it.tnaSystem.mock.leaveOtLate.rows.overtime', 'OT · EMP-00403 · 3.5h')}</span>
-                <span className="rounded-full bg-emerald-100 px-1.5 py-0.5 text-emerald-700">{tr('it.tnaSystem.mock.leaveOtLate.status.approved', 'Approved')}</span>
+                <span className="text-slate-700">{tr('tnaSystem.mock.leaveOtLate.rows.overtime', 'OT · EMP-00403 · 3.5h')}</span>
+                <span className="rounded-full bg-emerald-100 px-1.5 py-0.5 text-emerald-700">{tr('tnaSystem.mock.leaveOtLate.status.approved', 'Approved')}</span>
               </div>
               <div className="flex items-center justify-between rounded-lg border border-slate-200 bg-white px-2 py-2">
-                <span className="text-slate-700">{tr('it.tnaSystem.mock.leaveOtLate.rows.late', 'Late · EMP-00210 · 18m')}</span>
-                <span className="rounded-full bg-slate-100 px-1.5 py-0.5 text-slate-700">{tr('it.tnaSystem.mock.leaveOtLate.status.processed', 'Processed')}</span>
+                <span className="text-slate-700">{tr('tnaSystem.mock.leaveOtLate.rows.late', 'Late · EMP-00210 · 18m')}</span>
+                <span className="rounded-full bg-slate-100 px-1.5 py-0.5 text-slate-700">{tr('tnaSystem.mock.leaveOtLate.status.processed', 'Processed')}</span>
               </div>
             </div>
           </MockWindow>
         )
       case 'payrollEngine':
         return (
-          <MockWindow title={tr('it.tnaSystem.mock.payroll.windowTitle', 'Payroll Calculation')} rightLabel={tr('it.tnaSystem.mock.payroll.rightLabel', 'Monthly Run')}>
+          <MockWindow title={tr('tnaSystem.mock.payroll.windowTitle', 'Payroll Calculation')} rightLabel={tr('tnaSystem.mock.payroll.rightLabel', 'Monthly Run')}>
             <div className="flex items-center gap-2 mb-2">
-              <span className="inline-flex items-center rounded-md border border-slate-200 bg-white px-2 py-1 text-[11px] text-slate-500"><CalendarDays className="mr-1 h-3 w-3" />{tr('it.tnaSystem.mock.payroll.period', 'Mar 2026')}</span>
-              <span className="inline-flex items-center rounded-md border border-slate-200 bg-white px-2 py-1 text-[11px] text-slate-500"><Filter className="mr-1 h-3 w-3" />{tr('it.tnaSystem.mock.payroll.departmentFilter', 'Department')}</span>
+              <span className="inline-flex items-center rounded-md border border-slate-200 bg-white px-2 py-1 text-[11px] text-slate-500"><CalendarDays className="mr-1 h-3 w-3" />{tr('tnaSystem.mock.payroll.period', 'Mar 2026')}</span>
+              <span className="inline-flex items-center rounded-md border border-slate-200 bg-white px-2 py-1 text-[11px] text-slate-500"><Filter className="mr-1 h-3 w-3" />{tr('tnaSystem.mock.payroll.departmentFilter', 'Department')}</span>
             </div>
             <div className="grid grid-cols-2 gap-2">
               <div className="rounded-lg border border-slate-200 bg-white p-2">
-                <p className="text-[10px] text-slate-500">{tr('it.tnaSystem.mock.payroll.gross', 'Gross Payroll')}</p>
+                <p className="text-[10px] text-slate-500">{tr('tnaSystem.mock.payroll.gross', 'Gross Payroll')}</p>
                 <p className="text-sm font-semibold text-slate-900">$1,248,330</p>
               </div>
               <div className="rounded-lg border border-slate-200 bg-white p-2">
-                <p className="text-[10px] text-slate-500">{tr('it.tnaSystem.mock.payroll.net', 'Net Payroll')}</p>
+                <p className="text-[10px] text-slate-500">{tr('tnaSystem.mock.payroll.net', 'Net Payroll')}</p>
                 <p className="text-sm font-semibold text-emerald-700">$1,104,582</p>
               </div>
             </div>
             <div className="mt-2 flex items-center justify-between rounded-lg border border-slate-200 bg-white px-2 py-2 text-[11px]">
-              <span className="flex items-center text-slate-600"><BarChart3 className="mr-1 h-3.5 w-3.5" />{tr('it.tnaSystem.mock.payroll.statusLabel', 'Calculation status')}</span>
-              <span className="rounded-full bg-blue-100 px-1.5 py-0.5 text-blue-700">{tr('it.tnaSystem.mock.payroll.calculated', 'Calculated')}</span>
+              <span className="flex items-center text-slate-600"><BarChart3 className="mr-1 h-3.5 w-3.5" />{tr('tnaSystem.mock.payroll.statusLabel', 'Calculation status')}</span>
+              <span className="rounded-full bg-blue-100 px-1.5 py-0.5 text-blue-700">{tr('tnaSystem.mock.payroll.calculated', 'Calculated')}</span>
             </div>
           </MockWindow>
         )
       case 'salaryTemplate':
         return (
-          <MockWindow title={tr('it.tnaSystem.mock.salaryTemplate.windowTitle', 'Salary Components / Templates')} rightLabel={tr('it.tnaSystem.mock.common.live', 'Live')}>
+          <MockWindow title={tr('tnaSystem.mock.salaryTemplate.windowTitle', 'Salary Components / Templates')} rightLabel={tr('tnaSystem.mock.common.live', 'Live')}>
             <div className="grid grid-cols-2 gap-2 text-[11px]">
               <div className="rounded-lg border border-slate-200 bg-white p-2">
-                <p className="mb-1 text-slate-500">{tr('it.tnaSystem.mock.salaryTemplate.libraryTitle', 'Component Library')}</p>
+                <p className="mb-1 text-slate-500">{tr('tnaSystem.mock.salaryTemplate.libraryTitle', 'Component Library')}</p>
                 <div className="space-y-1">
-                  <div className="flex items-center justify-between"><span className="text-slate-700">{tr('it.tnaSystem.mock.salaryTemplate.baseSalary', 'Base Salary')}</span><Wallet className="h-3.5 w-3.5 text-slate-500" /></div>
-                  <div className="flex items-center justify-between"><span className="text-slate-700">{tr('it.tnaSystem.mock.salaryTemplate.mealAllowance', 'Meal Allowance')}</span><Circle className="h-2.5 w-2.5 fill-emerald-500 text-emerald-500" /></div>
-                  <div className="flex items-center justify-between"><span className="text-slate-700">{tr('it.tnaSystem.mock.salaryTemplate.insurance', 'Insurance')}</span><ShieldAlert className="h-3.5 w-3.5 text-violet-500" /></div>
+                  <div className="flex items-center justify-between"><span className="text-slate-700">{tr('tnaSystem.mock.salaryTemplate.baseSalary', 'Base Salary')}</span><Wallet className="h-3.5 w-3.5 text-slate-500" /></div>
+                  <div className="flex items-center justify-between"><span className="text-slate-700">{tr('tnaSystem.mock.salaryTemplate.mealAllowance', 'Meal Allowance')}</span><Circle className="h-2.5 w-2.5 fill-emerald-500 text-emerald-500" /></div>
+                  <div className="flex items-center justify-between"><span className="text-slate-700">{tr('tnaSystem.mock.salaryTemplate.insurance', 'Insurance')}</span><ShieldAlert className="h-3.5 w-3.5 text-violet-500" /></div>
                 </div>
               </div>
               <div className="rounded-lg border border-slate-200 bg-white p-2">
-                <p className="mb-1 text-slate-500">{tr('it.tnaSystem.mock.salaryTemplate.templateTitle', 'Template Mapping')}</p>
+                <p className="mb-1 text-slate-500">{tr('tnaSystem.mock.salaryTemplate.templateTitle', 'Template Mapping')}</p>
                 <div className="space-y-1 text-slate-700">
-                  <p>{tr('it.tnaSystem.mock.salaryTemplate.templateName', 'Factory Worker V2')}</p>
-                  <p className="text-slate-500">{tr('it.tnaSystem.mock.salaryTemplate.formulaGross', 'Gross = Base + OT + Bonus')}</p>
-                  <p className="text-slate-500">{tr('it.tnaSystem.mock.salaryTemplate.formulaNet', 'Net = Gross - Tax - BHXH')}</p>
-                  <span className="inline-flex rounded-full bg-emerald-100 px-1.5 py-0.5 text-emerald-700">{tr('it.tnaSystem.mock.salaryTemplate.active', 'Active')}</span>
+                  <p>{tr('tnaSystem.mock.salaryTemplate.templateName', 'Factory Worker V2')}</p>
+                  <p className="text-slate-500">{tr('tnaSystem.mock.salaryTemplate.formulaGross', 'Gross = Base + OT + Bonus')}</p>
+                  <p className="text-slate-500">{tr('tnaSystem.mock.salaryTemplate.formulaNet', 'Net = Gross - Tax - BHXH')}</p>
+                  <span className="inline-flex rounded-full bg-emerald-100 px-1.5 py-0.5 text-emerald-700">{tr('tnaSystem.mock.salaryTemplate.active', 'Active')}</span>
                 </div>
               </div>
             </div>
@@ -396,24 +396,24 @@ export default function TNASystemClient() {
         )
       case 'bonusDeduction':
         return (
-          <MockWindow title={tr('it.tnaSystem.mock.bonusDeduction.windowTitle', 'Bonus / Deduction Lists')} rightLabel={tr('it.tnaSystem.mock.common.live', 'Live')}>
+          <MockWindow title={tr('tnaSystem.mock.bonusDeduction.windowTitle', 'Bonus / Deduction Lists')} rightLabel={tr('tnaSystem.mock.common.live', 'Live')}>
             <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
               <div className="grid grid-cols-12 gap-2 bg-slate-100 px-2 py-1.5 text-[11px] font-medium text-slate-600">
-                <span className="col-span-4">{tr('it.tnaSystem.mock.bonusDeduction.columns.item', 'Item')}</span>
-                <span className="col-span-3">{tr('it.tnaSystem.mock.bonusDeduction.columns.type', 'Type')}</span>
-                <span className="col-span-3">{tr('it.tnaSystem.mock.bonusDeduction.columns.rule', 'Rule')}</span>
-                <span className="col-span-2 text-right">{tr('it.tnaSystem.mock.bonusDeduction.columns.amount', 'Amount')}</span>
+                <span className="col-span-4">{tr('tnaSystem.mock.bonusDeduction.columns.item', 'Item')}</span>
+                <span className="col-span-3">{tr('tnaSystem.mock.bonusDeduction.columns.type', 'Type')}</span>
+                <span className="col-span-3">{tr('tnaSystem.mock.bonusDeduction.columns.rule', 'Rule')}</span>
+                <span className="col-span-2 text-right">{tr('tnaSystem.mock.bonusDeduction.columns.amount', 'Amount')}</span>
               </div>
               <div className="grid grid-cols-12 gap-2 border-t border-slate-100 px-2 py-2 text-[11px]">
-                <span className="col-span-4 text-slate-700">{tr('it.tnaSystem.mock.bonusDeduction.rows.bonusName', 'Attendance Bonus')}</span>
-                <span className="col-span-3 text-emerald-700">{tr('it.tnaSystem.mock.bonusDeduction.rows.bonusType', 'Bonus')}</span>
-                <span className="col-span-3 text-slate-700">{tr('it.tnaSystem.mock.bonusDeduction.rows.bonusRule', 'Monthly fixed')}</span>
+                <span className="col-span-4 text-slate-700">{tr('tnaSystem.mock.bonusDeduction.rows.bonusName', 'Attendance Bonus')}</span>
+                <span className="col-span-3 text-emerald-700">{tr('tnaSystem.mock.bonusDeduction.rows.bonusType', 'Bonus')}</span>
+                <span className="col-span-3 text-slate-700">{tr('tnaSystem.mock.bonusDeduction.rows.bonusRule', 'Monthly fixed')}</span>
                 <span className="col-span-2 text-right text-emerald-700">+40</span>
               </div>
               <div className="grid grid-cols-12 gap-2 border-t border-slate-100 px-2 py-2 text-[11px]">
-                <span className="col-span-4 text-slate-700">{tr('it.tnaSystem.mock.bonusDeduction.rows.deductionName', 'Advance Salary')}</span>
-                <span className="col-span-3 text-rose-700">{tr('it.tnaSystem.mock.bonusDeduction.rows.deductionType', 'Deduction')}</span>
-                <span className="col-span-3 text-slate-700">{tr('it.tnaSystem.mock.bonusDeduction.rows.deductionRule', 'Targeted')}</span>
+                <span className="col-span-4 text-slate-700">{tr('tnaSystem.mock.bonusDeduction.rows.deductionName', 'Advance Salary')}</span>
+                <span className="col-span-3 text-rose-700">{tr('tnaSystem.mock.bonusDeduction.rows.deductionType', 'Deduction')}</span>
+                <span className="col-span-3 text-slate-700">{tr('tnaSystem.mock.bonusDeduction.rows.deductionRule', 'Targeted')}</span>
                 <span className="col-span-2 text-right text-rose-700">-120</span>
               </div>
             </div>
@@ -421,26 +421,26 @@ export default function TNASystemClient() {
         )
       case 'misaIntegration':
         return (
-          <MockWindow title={tr('it.tnaSystem.mock.misa.windowTitle', 'MISA Sync Queue')} rightLabel={tr('it.tnaSystem.mock.misa.rightLabel', 'API Callback')}>
+          <MockWindow title={tr('tnaSystem.mock.misa.windowTitle', 'MISA Sync Queue')} rightLabel={tr('tnaSystem.mock.misa.rightLabel', 'API Callback')}>
             <div className="rounded-lg border border-slate-200 bg-white p-2 text-[11px] mb-2">
               <div className="flex items-center justify-between">
-                <span className="flex items-center text-slate-700"><GitBranch className="mr-1 h-3.5 w-3.5 text-blue-600" />{tr('it.tnaSystem.mock.misa.queueTitle', 'Payroll Voucher Push')}</span>
-                <span className="rounded-full bg-blue-100 px-1.5 py-0.5 text-blue-700">{tr('it.tnaSystem.mock.misa.inQueue', 'In Queue')}</span>
+                <span className="flex items-center text-slate-700"><GitBranch className="mr-1 h-3.5 w-3.5 text-blue-600" />{tr('tnaSystem.mock.misa.queueTitle', 'Payroll Voucher Push')}</span>
+                <span className="rounded-full bg-blue-100 px-1.5 py-0.5 text-blue-700">{tr('tnaSystem.mock.misa.inQueue', 'In Queue')}</span>
               </div>
-              <div className="mt-1 text-slate-500">{tr('it.tnaSystem.mock.misa.batchInfo', 'Batch: 100 vouchers · Tenant: FUJIKIN-VN')}</div>
+              <div className="mt-1 text-slate-500">{tr('tnaSystem.mock.misa.batchInfo', 'Batch: 100 vouchers · Tenant: FUJIKIN-VN')}</div>
             </div>
             <div className="space-y-1.5 text-[11px]">
               <div className="flex items-center justify-between rounded-md border border-slate-200 bg-white px-2 py-1.5">
-                <span className="flex items-center text-slate-600"><UserCog className="mr-1 h-3.5 w-3.5" />{tr('it.tnaSystem.mock.misa.dictionarySync', 'Dictionary Sync')}</span>
-                <span className="text-emerald-700">{tr('it.tnaSystem.mock.misa.done', 'Done')}</span>
+                <span className="flex items-center text-slate-600"><UserCog className="mr-1 h-3.5 w-3.5" />{tr('tnaSystem.mock.misa.dictionarySync', 'Dictionary Sync')}</span>
+                <span className="text-emerald-700">{tr('tnaSystem.mock.misa.done', 'Done')}</span>
               </div>
               <div className="flex items-center justify-between rounded-md border border-slate-200 bg-white px-2 py-1.5">
-                <span className="flex items-center text-slate-600"><FileSpreadsheet className="mr-1 h-3.5 w-3.5" />{tr('it.tnaSystem.mock.misa.voucherCreate', 'Voucher Create')}</span>
-                <span className="text-blue-700">{tr('it.tnaSystem.mock.misa.processing', 'Processing')}</span>
+                <span className="flex items-center text-slate-600"><FileSpreadsheet className="mr-1 h-3.5 w-3.5" />{tr('tnaSystem.mock.misa.voucherCreate', 'Voucher Create')}</span>
+                <span className="text-blue-700">{tr('tnaSystem.mock.misa.processing', 'Processing')}</span>
               </div>
               <div className="flex items-center justify-between rounded-md border border-slate-200 bg-white px-2 py-1.5">
-                <span className="flex items-center text-slate-600"><FileText className="mr-1 h-3.5 w-3.5" />{tr('it.tnaSystem.mock.misa.callbackStatus', 'Callback Status')}</span>
-                <span className="text-slate-700">{tr('it.tnaSystem.mock.misa.awaiting', 'Awaiting')}</span>
+                <span className="flex items-center text-slate-600"><FileText className="mr-1 h-3.5 w-3.5" />{tr('tnaSystem.mock.misa.callbackStatus', 'Callback Status')}</span>
+                <span className="text-slate-700">{tr('tnaSystem.mock.misa.awaiting', 'Awaiting')}</span>
               </div>
             </div>
           </MockWindow>
@@ -484,25 +484,25 @@ export default function TNASystemClient() {
             {/* Badge */}
             <Badge className="mb-8 rounded-full border-pink-400/20 bg-pink-500/10 text-pink-200 backdrop-blur-sm px-4 py-2">
               <Sparkles className="mr-2 h-4 w-4 text-pink-300" />
-              {tr('it.tnaSystem.hero.badge', 'Mercury TNA System')}
+              {tr('tnaSystem.hero.badge', 'Mercury TNA System')}
             </Badge>
 
             {/* Title with gradient accent — matching TNA gradient-text technique */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.1] max-w-5xl">
               <span className="text-white">
-                {tr('it.tnaSystem.hero.title1', 'Digital HR & Payroll Platform')}
+                {tr('tnaSystem.hero.title1', 'Digital HR & Payroll Platform')}
               </span>
               <br />
               <TextHighlight color="rgba(244, 114, 182, 0.3)" delay={0.8} duration={0.8}>
                 <span className="bg-gradient-to-r from-pink-300 via-rose-300 to-pink-400 bg-clip-text text-transparent">
-                  {tr('it.tnaSystem.hero.title2', 'for Manufacturing Operations')}
+                  {tr('tnaSystem.hero.title2', 'for Manufacturing Operations')}
                 </span>
               </TextHighlight>
             </h1>
 
             {/* Subtitle */}
             <p className="mt-6 text-lg md:text-xl text-white/60 max-w-3xl leading-relaxed">
-              {tr('it.tnaSystem.hero.subtitle', 'End-to-end workforce management with AI attendance capture, shift & leave operations, payroll automation, and MISA accounting integration — built for Vietnamese manufacturing.')}{' '}
+              {tr('tnaSystem.hero.subtitle', 'End-to-end workforce management with AI attendance capture, shift & leave operations, payroll automation, and MISA accounting integration — built for Vietnamese manufacturing.')}{' '}
               <TextWordCarousel
                 words={['AI Attendance', 'Shift Management', 'Payroll Automation', 'MISA Integration']}
                 interval={2.5}
@@ -515,12 +515,12 @@ export default function TNASystemClient() {
               <Button asChild size="lg" className="bg-[#9D174D] hover:bg-[#831843] text-white border-0">
                 <a href="#modules">
                   <Sparkles className="mr-2 h-5 w-5" />
-                  {tr('it.tnaSystem.hero.cta.explore', 'Explore Modules')}
+                  {tr('tnaSystem.hero.cta.explore', 'Explore Modules')}
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-pink-400/25 text-pink-200 hover:text-white bg-pink-500/5 hover:bg-pink-500/10">
                 <a href="#screens">
-                  {tr('it.tnaSystem.hero.cta.viewScreens', 'View Screen Design')}
+                  {tr('tnaSystem.hero.cta.viewScreens', 'View Screen Design')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
@@ -534,10 +534,10 @@ export default function TNASystemClient() {
               className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-3xl"
             >
               {[
-                { number: '17+', label: tr('it.tnaSystem.hero.stats.pages', 'Functional Pages'), Icon: BadgeCheck },
-                { number: '7', label: tr('it.tnaSystem.hero.stats.flows', 'Process Flows'), Icon: Cpu },
-                { number: '5', label: tr('it.tnaSystem.hero.stats.userRoles', 'User Roles'), Icon: ShieldCheck },
-                { number: '3', label: tr('it.tnaSystem.hero.stats.langs', 'Languages'), Icon: Fingerprint },
+                { number: '17+', label: tr('tnaSystem.hero.stats.pages', 'Functional Pages'), Icon: BadgeCheck },
+                { number: '7', label: tr('tnaSystem.hero.stats.flows', 'Process Flows'), Icon: Cpu },
+                { number: '5', label: tr('tnaSystem.hero.stats.userRoles', 'User Roles'), Icon: ShieldCheck },
+                { number: '3', label: tr('tnaSystem.hero.stats.langs', 'Languages'), Icon: Fingerprint },
               ].map((stat) => (
                 <div key={stat.label} className="group rounded-xl border border-pink-500/15 bg-white/[0.03] backdrop-blur-sm px-4 py-5 text-center transition-colors hover:bg-white/[0.06] hover:border-pink-500/25">
                   <stat.Icon className="mx-auto mb-2 h-5 w-5 text-pink-400/70" />
@@ -556,8 +556,8 @@ export default function TNASystemClient() {
       <section id="modules" className="py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-10">
-            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900">{tr('it.tnaSystem.core.title', 'Core Functional Modules')}</h2>
-            <p className="mt-3 text-slate-600 text-lg">{tr('it.tnaSystem.core.description', 'TNA covers the full HRM and payroll lifecycle for manufacturing teams, from attendance input to accounting output.')}</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900">{tr('tnaSystem.core.title', 'Core Functional Modules')}</h2>
+            <p className="mt-3 text-slate-600 text-lg">{tr('tnaSystem.core.description', 'TNA covers the full HRM and payroll lifecycle for manufacturing teams, from attendance input to accounting output.')}</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -598,16 +598,16 @@ export default function TNASystemClient() {
       <section id="screens" className="bg-white py-16 lg:py-20 border-y border-slate-200">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
-            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900">{tr('it.tnaSystem.screenDesign.title', 'TNA CMS Screen Design')}</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900">{tr('tnaSystem.screenDesign.title', 'TNA CMS Screen Design')}</h2>
             <p className="mt-3 text-slate-600 text-lg max-w-4xl">
-              {tr('it.tnaSystem.screenDesign.description', 'Visualized from the TNA CMS frontend modules (`dashboard`, `payroll-calculation`, `settings/ai-camera`) to show how daily operation screens are organized.')}
+              {tr('tnaSystem.screenDesign.description', 'Visualized from the TNA CMS frontend modules (`dashboard`, `payroll-calculation`, `settings/ai-camera`) to show how daily operation screens are organized.')}
             </p>
           </div>
 
           <div className="grid xl:grid-cols-3 gap-6 mb-10">
             <Card className="border-slate-200 shadow-sm overflow-hidden">
               <CardHeader>
-                <CardTitle className="text-lg text-slate-900">{tr('it.tnaSystem.screenDesign.cards.dashboard', 'Dashboard Overview')}</CardTitle>
+                <CardTitle className="text-lg text-slate-900">{tr('tnaSystem.screenDesign.cards.dashboard', 'Dashboard Overview')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="rounded-xl border border-slate-200 bg-slate-50 p-3">
@@ -617,7 +617,7 @@ export default function TNASystemClient() {
                       <span className="h-2.5 w-2.5 rounded-full bg-amber-300" />
                       <span className="h-2.5 w-2.5 rounded-full bg-emerald-300" />
                     </div>
-                    <span className="text-xs text-slate-500">{tr('it.tnaSystem.screenDesign.dashboard.realtime', 'Dashboard / Real-time')}</span>
+                    <span className="text-xs text-slate-500">{tr('tnaSystem.screenDesign.dashboard.realtime', 'Dashboard / Real-time')}</span>
                   </div>
 
                   <div className="grid grid-cols-2 gap-2 mb-3">
@@ -634,7 +634,7 @@ export default function TNASystemClient() {
 
                   <div className="grid grid-cols-2 gap-2">
                     <div className="rounded-lg border border-slate-200 bg-white p-2.5">
-                      <p className="text-[11px] text-slate-500 mb-2">{tr('it.tnaSystem.screenDesign.dashboard.attendanceTrend', 'Attendance Trend')}</p>
+                      <p className="text-[11px] text-slate-500 mb-2">{tr('tnaSystem.screenDesign.dashboard.attendanceTrend', 'Attendance Trend')}</p>
                       <div className="h-14 flex items-end gap-1.5">
                         <span className="w-2.5 rounded-sm bg-blue-200 h-5" />
                         <span className="w-2.5 rounded-sm bg-blue-300 h-7" />
@@ -644,11 +644,11 @@ export default function TNASystemClient() {
                       </div>
                     </div>
                     <div className="rounded-lg border border-slate-200 bg-white p-2.5">
-                      <p className="text-[11px] text-slate-500 mb-2">{tr('it.tnaSystem.screenDesign.dashboard.pendingRequests', 'Pending Requests')}</p>
+                      <p className="text-[11px] text-slate-500 mb-2">{tr('tnaSystem.screenDesign.dashboard.pendingRequests', 'Pending Requests')}</p>
                       <div className="space-y-1.5 text-[11px]">
-                        <div className="flex items-center justify-between"><span className="text-slate-600">{tr('it.tnaSystem.screenDesign.dashboard.pending.leave', 'Leave')}</span><span className="font-medium text-amber-700">14</span></div>
-                        <div className="flex items-center justify-between"><span className="text-slate-600">{tr('it.tnaSystem.screenDesign.dashboard.pending.shiftChange', 'Shift change')}</span><span className="font-medium text-blue-700">9</span></div>
-                        <div className="flex items-center justify-between"><span className="text-slate-600">{tr('it.tnaSystem.screenDesign.dashboard.pending.lateEarly', 'Late/Early')}</span><span className="font-medium text-violet-700">5</span></div>
+                        <div className="flex items-center justify-between"><span className="text-slate-600">{tr('tnaSystem.screenDesign.dashboard.pending.leave', 'Leave')}</span><span className="font-medium text-amber-700">14</span></div>
+                        <div className="flex items-center justify-between"><span className="text-slate-600">{tr('tnaSystem.screenDesign.dashboard.pending.shiftChange', 'Shift change')}</span><span className="font-medium text-blue-700">9</span></div>
+                        <div className="flex items-center justify-between"><span className="text-slate-600">{tr('tnaSystem.screenDesign.dashboard.pending.lateEarly', 'Late/Early')}</span><span className="font-medium text-violet-700">5</span></div>
                       </div>
                     </div>
                   </div>
@@ -658,20 +658,20 @@ export default function TNASystemClient() {
 
             <Card className="border-slate-200 shadow-sm overflow-hidden">
               <CardHeader>
-                <CardTitle className="text-lg text-slate-900">{tr('it.tnaSystem.screenDesign.cards.payroll', 'Payroll Calculation List')}</CardTitle>
+                <CardTitle className="text-lg text-slate-900">{tr('tnaSystem.screenDesign.cards.payroll', 'Payroll Calculation List')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="rounded-xl border border-slate-200 bg-slate-50 p-3">
                   <div className="flex items-center gap-2 mb-3">
-                    <div className="flex items-center gap-1 rounded-md border border-slate-200 bg-white px-2 py-1 text-xs text-slate-500"><Search className="h-3.5 w-3.5" />{tr('it.tnaSystem.screenDesign.payroll.filterPeriodName', 'Period name')}</div>
-                    <div className="flex items-center gap-1 rounded-md border border-slate-200 bg-white px-2 py-1 text-xs text-slate-500"><Filter className="h-3.5 w-3.5" />{tr('it.tnaSystem.screenDesign.payroll.filterDateRange', 'Date range')}</div>
+                    <div className="flex items-center gap-1 rounded-md border border-slate-200 bg-white px-2 py-1 text-xs text-slate-500"><Search className="h-3.5 w-3.5" />{tr('tnaSystem.screenDesign.payroll.filterPeriodName', 'Period name')}</div>
+                    <div className="flex items-center gap-1 rounded-md border border-slate-200 bg-white px-2 py-1 text-xs text-slate-500"><Filter className="h-3.5 w-3.5" />{tr('tnaSystem.screenDesign.payroll.filterDateRange', 'Date range')}</div>
                   </div>
                   <div className="rounded-lg border border-slate-200 bg-white overflow-hidden">
                     <div className="grid grid-cols-12 gap-2 bg-slate-100 px-2 py-1.5 text-[11px] font-medium text-slate-600">
-                      <span className="col-span-3">{tr('it.tnaSystem.screenDesign.payroll.columns.period', 'Period')}</span>
-                      <span className="col-span-3">{tr('it.tnaSystem.screenDesign.payroll.columns.status', 'Status')}</span>
-                      <span className="col-span-4">{tr('it.tnaSystem.screenDesign.payroll.columns.department', 'Department')}</span>
-                      <span className="col-span-2 text-right">{tr('it.tnaSystem.screenDesign.payroll.columns.staff', 'Staff')}</span>
+                      <span className="col-span-3">{tr('tnaSystem.screenDesign.payroll.columns.period', 'Period')}</span>
+                      <span className="col-span-3">{tr('tnaSystem.screenDesign.payroll.columns.status', 'Status')}</span>
+                      <span className="col-span-4">{tr('tnaSystem.screenDesign.payroll.columns.department', 'Department')}</span>
+                      <span className="col-span-2 text-right">{tr('tnaSystem.screenDesign.payroll.columns.staff', 'Staff')}</span>
                     </div>
                     {payrollRows.map((row) => (
                       <div key={`${row.period}-${row.department}`} className="grid grid-cols-12 gap-2 px-2 py-2 border-t border-slate-100 text-[11px]">
@@ -688,19 +688,19 @@ export default function TNASystemClient() {
 
             <Card className="border-slate-200 shadow-sm overflow-hidden">
               <CardHeader>
-                <CardTitle className="text-lg text-slate-900">{tr('it.tnaSystem.screenDesign.cards.aiCamera', 'AI Camera Settings')}</CardTitle>
+                <CardTitle className="text-lg text-slate-900">{tr('tnaSystem.screenDesign.cards.aiCamera', 'AI Camera Settings')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="rounded-xl border border-slate-200 bg-slate-50 p-3">
                   <div className="rounded-lg border border-slate-200 bg-white p-2.5 mb-2.5">
                     <div className="grid grid-cols-2 gap-2 text-[11px]">
-                      <div className="rounded border border-slate-200 px-2 py-1.5 text-slate-500">{tr('it.tnaSystem.screenDesign.aiCamera.officeLocation', 'Office / Location')}</div>
-                      <div className="rounded border border-slate-200 px-2 py-1.5 text-slate-500">{tr('it.tnaSystem.screenDesign.aiCamera.provider', 'Provider')}: Hanet</div>
-                      <div className="rounded border border-slate-200 px-2 py-1.5 text-slate-500 col-span-2">{tr('it.tnaSystem.screenDesign.aiCamera.placeIdToken', 'Place ID / Token')}</div>
+                      <div className="rounded border border-slate-200 px-2 py-1.5 text-slate-500">{tr('tnaSystem.screenDesign.aiCamera.officeLocation', 'Office / Location')}</div>
+                      <div className="rounded border border-slate-200 px-2 py-1.5 text-slate-500">{tr('tnaSystem.screenDesign.aiCamera.provider', 'Provider')}: Hanet</div>
+                      <div className="rounded border border-slate-200 px-2 py-1.5 text-slate-500 col-span-2">{tr('tnaSystem.screenDesign.aiCamera.placeIdToken', 'Place ID / Token')}</div>
                     </div>
                     <div className="mt-2 flex items-center justify-between">
-                      <span className="text-[11px] text-slate-500">{tr('it.tnaSystem.screenDesign.aiCamera.activeConfig', 'Active Configuration')}</span>
-                      <span className="inline-flex items-center rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-medium text-emerald-700"><CheckCircle2 className="h-3 w-3 mr-1" />{tr('it.tnaSystem.screenDesign.aiCamera.connected', 'Connected')}</span>
+                      <span className="text-[11px] text-slate-500">{tr('tnaSystem.screenDesign.aiCamera.activeConfig', 'Active Configuration')}</span>
+                      <span className="inline-flex items-center rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-medium text-emerald-700"><CheckCircle2 className="h-3 w-3 mr-1" />{tr('tnaSystem.screenDesign.aiCamera.connected', 'Connected')}</span>
                     </div>
                   </div>
 
@@ -716,7 +716,7 @@ export default function TNASystemClient() {
                     ))}
                   </div>
 
-                  <div className="mt-2.5 flex items-center justify-end text-[11px] text-slate-500"><Settings2 className="h-3.5 w-3.5 mr-1.5" />{tr('it.tnaSystem.screenDesign.aiCamera.workflow', 'Save / Edit / Delete workflow')}</div>
+                  <div className="mt-2.5 flex items-center justify-end text-[11px] text-slate-500"><Settings2 className="h-3.5 w-3.5 mr-1.5" />{tr('tnaSystem.screenDesign.aiCamera.workflow', 'Save / Edit / Delete workflow')}</div>
                 </div>
               </CardContent>
             </Card>
@@ -725,7 +725,7 @@ export default function TNASystemClient() {
           <div className="grid lg:grid-cols-2 gap-8">
             <Card className="border-slate-200 shadow-sm">
               <CardHeader>
-                <CardTitle className="text-2xl text-slate-900">{tr('it.tnaSystem.workflow.title', 'Operational Workflow')}</CardTitle>
+                <CardTitle className="text-2xl text-slate-900">{tr('tnaSystem.workflow.title', 'Operational Workflow')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <ol className="space-y-4">
@@ -741,12 +741,12 @@ export default function TNASystemClient() {
 
             <Card className="border-slate-200 shadow-sm">
               <CardHeader>
-                <CardTitle className="text-2xl text-slate-900">{tr('it.tnaSystem.compliance.title', 'Compliance & Integration')}</CardTitle>
+                <CardTitle className="text-2xl text-slate-900">{tr('tnaSystem.compliance.title', 'Compliance & Integration')}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4 text-slate-700 leading-relaxed">
-                <p>{tr('it.tnaSystem.compliance.p1', 'Payroll logic includes tax and insurance handling (BHXH, BHYT, BHTN), configurable overtime rates, and policy-based rules for allowances and deductions.')}</p>
-                <p>{tr('it.tnaSystem.compliance.p2', 'MISA integration automates accounting handoff by syncing employee dictionaries and pushing payroll vouchers through API and callback-based status tracking.')}</p>
-                <p>{tr('it.tnaSystem.compliance.p3', 'Access control supports role-specific operation for Admin, HR Manager, Payroll Specialist, Department Manager, and Employee.')}</p>
+                <p>{tr('tnaSystem.compliance.p1', 'Payroll logic includes tax and insurance handling (BHXH, BHYT, BHTN), configurable overtime rates, and policy-based rules for allowances and deductions.')}</p>
+                <p>{tr('tnaSystem.compliance.p2', 'MISA integration automates accounting handoff by syncing employee dictionaries and pushing payroll vouchers through API and callback-based status tracking.')}</p>
+                <p>{tr('tnaSystem.compliance.p3', 'Access control supports role-specific operation for Admin, HR Manager, Payroll Specialist, Department Manager, and Employee.')}</p>
               </CardContent>
             </Card>
           </div>
@@ -754,7 +754,7 @@ export default function TNASystemClient() {
           <div className="mt-10">
             <Button asChild size="lg">
               <Link href="/">
-                {tr('it.tnaSystem.backToItSolution', 'Back to IT Solutions')}
+                {tr('tnaSystem.backToItSolution', 'Back to IT Solutions')}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>

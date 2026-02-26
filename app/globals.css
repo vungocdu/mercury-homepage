@@ -4,91 +4,91 @@
 @tailwind utilities;
 
 :root {
-  /* Mercury Solutions Pantone Color Palette */
-  --background: 210 20% 98% /* #F8F9FA - Clean White (Cool Gray 1 C) */
-  --foreground: 210 9% 46% /* #6C757D - Professional Gray (Cool Gray 9 C) */
-  --card: 0 0% 100% /* #FFFFFF - Pure White */
-  --card-foreground: 210 9% 46% /* #6C757D - Professional Gray */
-  --popover: 0 0% 100% /* #FFFFFF - Pure White */
-  --popover-foreground: 210 9% 46% /* #6C757D - Professional Gray */
-  --primary: 220 100% 60% /* #2E5BFF - Mercury Blue (2925 C) */
-  --primary-foreground: 0 0% 100% /* #FFFFFF - White text on Mercury Blue */
-  --secondary: 210 20% 98% /* #F8F9FA - Clean White */
-  --secondary-foreground: 210 9% 46% /* #6C757D - Professional Gray */
-  --muted: 210 20% 98% /* #F8F9FA - Clean White */
-  --muted-foreground: 210 9% 46% /* #6C757D - Professional Gray */
-  --accent: 210 20% 98% /* #F8F9FA - Clean White */
-  --accent-foreground: 210 9% 46% /* #6C757D - Professional Gray */
-  --destructive: 0 84% 60% /* #EF4444 - Error Red */
-  --destructive-foreground: 0 0% 100% /* #FFFFFF - White text on error */
-  --success: 142 76% 36% /* #16A34A - Success Green */
-  --success-foreground: 0 0% 100% /* #FFFFFF - White text on success */
-  --border: 220 100% 50% /* #1E3A8A - Deep Mercury Blue borders */
-  --input: 210 9% 46% /* #6C757D - Professional Gray inputs */
-  --ring: 220 100% 60% /* #2E5BFF - Mercury Blue focus ring */
-  --radius: 0.5rem;
+  /* Elegant Mercury Blue Theme */
+  --background: 220 16% 96%;     /* #F1F3F8 - Soft blue-tinted white */
+  --foreground: 222 47% 11%;     /* #0F172A - Rich dark slate */
+  --card: 0 0% 100%;             /* #FFFFFF - Pure white */
+  --card-foreground: 222 47% 11%;/* #0F172A */
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --primary: 224 100% 59%;       /* #2E5BFF - Mercury Blue (Logo) */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 220 16% 96%;
+  --secondary-foreground: 215 25% 27%;
+  --muted: 220 14% 95%;
+  --muted-foreground: 215 16% 47%;
+  --accent: 220 16% 96%;
+  --accent-foreground: 215 25% 27%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --success: 142 76% 36%;
+  --success-foreground: 0 0% 100%;
+  --border: 220 13% 91%;         /* #E2E5EB - Subtle blue-gray border */
+  --input: 220 13% 91%;
+  --ring: 224 100% 59%;
+  --radius: 0.625rem;
 
-  /* Mercury Solutions Brand Colors */
-  --bg-primary: 210 20% 98% /* #F8F9FA - Clean White (Cool Gray 1 C) */
-  --bg-secondary: 0 0% 100% /* #FFFFFF - Pure White */
-  --text-primary: 210 9% 46% /* #6C757D - Professional Gray (Cool Gray 9 C) */
-  --text-secondary: 210 9% 46% /* #6C757D - Professional Gray */
-  --text-muted: 210 9% 46% /* #6C757D - Professional Gray muted */
-  --link-primary: 220 100% 60% /* #2E5BFF - Mercury Blue (2925 C) */
-  --link-hover: 220 100% 50% /* #1E3A8A - Deep Mercury (7461 C) */
-  --success-color: 142 76% 36% /* #16A34A - Success Green */
-  --error-color: 0 84% 60% /* #EF4444 - Error Red */
-  --warning-color: 45 93% 47% /* #FFD60A - Mercury Gold (116 C) */
-  --card-bg: 0 0% 100% /* #FFFFFF - Pure White */
-  --card-border: 220 100% 50% /* #1E3A8A - Deep Mercury Blue */
-  --card-shadow: 0 1px 3px 0 rgb(30 58 138 / 0.1), 0 1px 2px -1px rgb(30 58 138 / 0.1);
+  /* Brand Hierarchy */
+  --bg-primary: 220 16% 96%;     /* #F1F3F8 - Tinted background */
+  --bg-secondary: 0 0% 100%;     /* #FFFFFF - Clean white */
+  --text-primary: 222 47% 11%;   /* #0F172A - Headings, strong text */
+  --text-secondary: 215 16% 47%; /* #64748B - Body text */
+  --text-muted: 215 20% 65%;     /* #94A3B8 - Muted, captions */
+  --link-primary: 224 100% 59%;  /* #2E5BFF - Mercury Blue */
+  --link-hover: 224 76% 44%;     /* #1D4ED8 - Darker hover */
+  --success-color: 142 76% 36%;
+  --error-color: 0 84% 60%;
+  --warning-color: 38 92% 50%;   /* #F59E0B - Warm amber */
+  --card-bg: 0 0% 100%;
+  --card-border: 220 13% 91%;    /* Subtle border, not heavy blue */
+  --card-shadow: 0 1px 3px 0 rgb(15 23 42 / 0.05), 0 1px 2px -1px rgb(15 23 42 / 0.03);
 
-  /* Mercury Solutions Specific Colors */
-  --mercury-blue: 220 100% 60% /* #2E5BFF - Mercury Blue (2925 C) */
-  --mercury-blue-rgb: 46 91 255 /* RGB values for Mercury Blue */
-  --clean-white: 210 20% 98% /* #F8F9FA - Clean White (Cool Gray 1 C) */
-  --clean-white-rgb: 248 249 250 /* RGB values for Clean White */
+  /* Mercury Brand Tokens */
+  --mercury-blue: 224 100% 59%;
+  --mercury-blue-rgb: 46 91 255;
+  --clean-white: 220 16% 96%;
+  --clean-white-rgb: 241 243 248;
 
-  /* Project Card Colors - Updated Brand Colors */
-  --actiwell-blue: 217 91% 60% /* Actiwell deep blue */
-  --actiwell-cyan: 180 100% 50% /* Actiwell cyan accent */
-  --fujikin-gold: 45 100% 51% /* Fujikin gold */
-  --fujikin-amber: 38 96% 59% /* Fujikin amber */
-  --myarms-slate: 215 28% 34% /* myArms dark slate */
-  --myarms-gray: 215 20% 65% /* myArms medium gray */
-  --minova-emerald: 142 76% 36% /* Minova emerald */
-  --project-orange: 25 95% 53%
-  --project-cyan: 188 95% 42%
-  --professional-gray: 210 9% 46% /* #6C757D - Professional Gray (Cool Gray 9 C) */
-  --professional-gray-rgb: 108 117 125 /* RGB values for Professional Gray */
-  --deep-mercury: 220 100% 50% /* #1E3A8A - Deep Mercury (7461 C) */
-  --deep-mercury-rgb: 30 58 138 /* RGB values for Deep Mercury */
-  --mercury-gold: 45 93% 47% /* #FFD60A - Mercury Gold (116 C) */
-  --mercury-gold-rgb: 255 214 10 /* RGB values for Mercury Gold */
+  /* Project Card Colors */
+  --actiwell-blue: 217 91% 60%;
+  --actiwell-cyan: 180 100% 50%;
+  --fujikin-gold: 45 100% 51%;
+  --fujikin-amber: 38 96% 59%;
+  --myarms-slate: 215 28% 34%;
+  --myarms-gray: 215 20% 65%;
+  --minova-emerald: 142 76% 36%;
+  --project-orange: 25 95% 53%;
+  --project-cyan: 188 95% 42%;
+  --professional-gray: 215 16% 47%;
+  --professional-gray-rgb: 100 116 139;
+  --deep-mercury: 224 64% 33%;   /* #1E3A8A - Deep navy */
+  --deep-mercury-rgb: 30 58 138;
+  --mercury-gold: 38 92% 50%;    /* #F59E0B - Warm amber */
+  --mercury-gold-rgb: 245 158 11;
 }
 
 .dark {
-  --background: 210 9% 46% /* #6C757D - Professional Gray */
-  --foreground: 210 20% 98% /* #F8F9FA - Clean White */
-  --card: 210 9% 46% /* #6C757D - Professional Gray */
-  --card-foreground: 210 20% 98% /* #F8F9FA - Clean White */
-  --popover: 210 9% 46% /* #6C757D - Professional Gray */
-  --popover-foreground: 210 20% 98% /* #F8F9FA - Clean White */
-  --primary: 220 100% 60% /* #2E5BFF - Mercury Blue (2925 C) */
-  --primary-foreground: 0 0% 100% /* #FFFFFF - White text on Mercury Blue */
-  --secondary: 210 9% 46% /* #6C757D - Professional Gray */
-  --secondary-foreground: 210 20% 98% /* #F8F9FA - Clean White */
-  --muted: 210 9% 46% /* #6C757D - Professional Gray */
-  --muted-foreground: 210 20% 98% /* #F8F9FA - Clean White */
-  --accent: 210 9% 46% /* #6C757D - Professional Gray */
-  --accent-foreground: 210 20% 98% /* #F8F9FA - Clean White */
-  --destructive: 0 84% 60% /* #EF4444 - Error Red */
-  --destructive-foreground: 0 0% 100% /* #FFFFFF - White text on error */
-  --success: 142 76% 36% /* #16A34A - Success Green */
-  --success-foreground: 0 0% 100% /* #FFFFFF - White text on success */
-  --border: 210 9% 46% /* #6C757D - Professional Gray */
-  --input: 210 9% 46% /* #6C757D - Professional Gray */
-  --ring: 220 100% 60% /* #2E5BFF - Mercury Blue focus ring */
+  --background: 224 71% 4%;      /* #020617 - Deep navy */
+  --foreground: 213 31% 91%;     /* #E2E8F0 - Soft white */
+  --card: 222 47% 11%;           /* #0F172A - Dark card */
+  --card-foreground: 213 31% 91%;
+  --popover: 222 47% 11%;
+  --popover-foreground: 213 31% 91%;
+  --primary: 224 100% 59%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 217 33% 17%;      /* #1E293B */
+  --secondary-foreground: 213 31% 91%;
+  --muted: 217 33% 17%;
+  --muted-foreground: 215 20% 65%;
+  --accent: 217 33% 17%;
+  --accent-foreground: 213 31% 91%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --success: 142 76% 36%;
+  --success-foreground: 0 0% 100%;
+  --border: 217 33% 17%;         /* Subtle dark border */
+  --input: 217 33% 17%;
+  --ring: 224 100% 59%;
 }
 
 * {
@@ -223,7 +223,7 @@ a:hover {
 
 .professional-card {
   background-color: hsl(var(--card-bg));
-  border: 2px solid hsl(var(--card-border));
+  border: 1px solid hsl(var(--card-border));
   border-radius: 0.75rem;
   box-shadow: var(--card-shadow);
   padding: 1.5rem;
@@ -231,16 +231,16 @@ a:hover {
 
 .service-card {
   background-color: hsl(var(--card-bg));
-  border: 2px solid hsl(var(--card-border));
+  border: 1px solid hsl(var(--card-border));
   border-radius: 1rem;
   box-shadow: var(--card-shadow);
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .service-card:hover {
-  box-shadow: 0 4px 6px -1px rgb(30 58 138 / 0.15), 0 2px 4px -2px rgb(30 58 138 / 0.1);
+  box-shadow: 0 8px 25px -5px rgb(46 91 255 / 0.1), 0 4px 10px -3px rgb(46 91 255 / 0.05);
   transform: translateY(-2px);
-  border-color: hsl(var(--mercury-blue));
+  border-color: hsl(var(--mercury-blue) / 0.3);
 }
 
 .professional-link {
@@ -281,20 +281,20 @@ a:hover {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, hsl(var(--warning-color)), hsl(var(--warning-color) / 0.8));
-  color: hsl(210 40% 7%);
+  background: linear-gradient(135deg, hsl(var(--mercury-blue)), hsl(var(--deep-mercury)));
+  color: #ffffff;
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
   padding: 0.875rem 2rem;
   border-radius: 0.75rem;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 14px 0 hsl(var(--warning-color) / 0.3);
+  box-shadow: 0 4px 14px 0 hsl(var(--mercury-blue) / 0.25);
   position: relative;
   overflow: hidden;
 }
@@ -315,9 +315,9 @@ a:hover {
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, hsl(var(--warning-color) / 0.9), hsl(var(--warning-color)));
+  background: linear-gradient(135deg, hsl(224 100% 54%), hsl(224 76% 38%));
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px 0 hsl(var(--warning-color) / 0.4);
+  box-shadow: 0 8px 25px 0 hsl(var(--mercury-blue) / 0.35);
 }
 
 .btn-secondary {
@@ -380,9 +380,9 @@ a:hover {
 }
 
 .header-bg {
-  background-color: hsl(var(--bg-secondary));
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  background-color: hsl(var(--bg-secondary) / 0.85);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(16px) saturate(180%);
   border-bottom: 1px solid hsl(var(--border));
 }
 
@@ -427,14 +427,14 @@ a:hover {
 
 .faq-item {
   background-color: hsl(var(--card-bg));
-  border: 2px solid hsl(var(--card-border));
+  border: 1px solid hsl(var(--card-border));
   border-radius: 0.75rem;
   overflow: hidden;
 }
 
 .blog-card {
   background-color: hsl(var(--card-bg));
-  border: 2px solid hsl(var(--card-border));
+  border: 1px solid hsl(var(--card-border));
   border-radius: 1rem;
   box-shadow: var(--card-shadow);
   overflow: hidden;
@@ -442,7 +442,7 @@ a:hover {
 
 .team-card {
   background-color: hsl(var(--card-bg));
-  border: 2px solid hsl(var(--card-border));
+  border: 1px solid hsl(var(--card-border));
   border-radius: 1rem;
   box-shadow: var(--card-shadow);
   padding: 1.5rem;
@@ -451,7 +451,7 @@ a:hover {
 
 .project-card {
   background-color: hsl(var(--card-bg));
-  border: 2px solid hsl(var(--card-border));
+  border: 1px solid hsl(var(--card-border));
   border-radius: 1rem;
   box-shadow: var(--card-shadow);
   overflow: hidden;
@@ -459,7 +459,7 @@ a:hover {
 
 .tech-stack-item {
   background-color: hsl(var(--card-bg));
-  border: 2px solid hsl(var(--card-border));
+  border: 1px solid hsl(var(--card-border));
   border-radius: 0.75rem;
   padding: 1rem;
   text-align: center;
@@ -467,7 +467,7 @@ a:hover {
 
 .process-step {
   background-color: hsl(var(--card-bg));
-  border: 2px solid hsl(var(--card-border));
+  border: 1px solid hsl(var(--card-border));
   border-radius: 1rem;
   box-shadow: var(--card-shadow);
   padding: 1.5rem;
@@ -476,7 +476,7 @@ a:hover {
 
 .analytics-card {
   background-color: hsl(var(--card-bg));
-  border: 2px solid hsl(var(--card-border));
+  border: 1px solid hsl(var(--card-border));
   border-radius: 1rem;
   box-shadow: var(--card-shadow);
   padding: 1.5rem;
@@ -489,7 +489,7 @@ a:hover {
 
 .tvc-card {
   background-color: hsl(var(--card-bg));
-  border: 2px solid hsl(var(--card-border));
+  border: 1px solid hsl(var(--card-border));
   border-radius: 1rem;
   box-shadow: var(--card-shadow);
   padding: 1.5rem;
@@ -504,77 +504,71 @@ a:hover {
   background-color: hsl(var(--mercury-blue));
 }
 
-.mercury-blue-50 { background-color: #E6F0FF; }
-.mercury-blue-100 { background-color: #CCE1FF; }
-.mercury-blue-150 { background-color: #B3D2FF; }
-.mercury-blue-200 { background-color: #99C3FF; }
-.mercury-blue-250 { background-color: #80B4FF; }
-.mercury-blue-300 { background-color: #66A5FF; }
-.mercury-blue-400 { background-color: #3387FF; }
+.mercury-blue-50 { background-color: #EFF4FF; }
+.mercury-blue-100 { background-color: #DBE4FF; }
+.mercury-blue-200 { background-color: #BFCFFF; }
+.mercury-blue-300 { background-color: #93AEFF; }
+.mercury-blue-400 { background-color: #5F85FF; }
 .mercury-blue-500 { background-color: #2E5BFF; }
-.mercury-blue-600 { background-color: #1E3A8A; }
-.mercury-blue-700 { background-color: #1A2E6B; }
-.mercury-blue-800 { background-color: #16234C; }
-.mercury-blue-900 { background-color: #11182D; }
+.mercury-blue-600 { background-color: #1D4ED8; }
+.mercury-blue-700 { background-color: #1E3A8A; }
+.mercury-blue-800 { background-color: #1E3370; }
+.mercury-blue-900 { background-color: #1A2756; }
 
-.text-mercury-blue-50 { color: #E6F0FF; }
-.text-mercury-blue-100 { color: #CCE1FF; }
-.text-mercury-blue-150 { color: #B3D2FF; }
-.text-mercury-blue-200 { color: #99C3FF; }
-.text-mercury-blue-250 { color: #80B4FF; }
-.text-mercury-blue-300 { color: #66A5FF; }
-.text-mercury-blue-400 { color: #3387FF; }
+.text-mercury-blue-50 { color: #EFF4FF; }
+.text-mercury-blue-100 { color: #DBE4FF; }
+.text-mercury-blue-200 { color: #BFCFFF; }
+.text-mercury-blue-300 { color: #93AEFF; }
+.text-mercury-blue-400 { color: #5F85FF; }
 .text-mercury-blue-500 { color: #2E5BFF; }
-.text-mercury-blue-600 { color: #1E3A8A; }
-.text-mercury-blue-700 { color: #1A2E6B; }
-.text-mercury-blue-800 { color: #16234C; }
-.text-mercury-blue-900 { color: #11182D; }
+.text-mercury-blue-600 { color: #1D4ED8; }
+.text-mercury-blue-700 { color: #1E3A8A; }
+.text-mercury-blue-800 { color: #1E3370; }
+.text-mercury-blue-900 { color: #1A2756; }
 
-.border-mercury-blue-50 { border-color: #E6F0FF; }
-.border-mercury-blue-100 { border-color: #CCE1FF; }
-.border-mercury-blue-150 { border-color: #B3D2FF; }
-.border-mercury-blue-200 { border-color: #99C3FF; }
-.border-mercury-blue-250 { border-color: #80B4FF; }
-.border-mercury-blue-300 { border-color: #66A5FF; }
-.border-mercury-blue-400 { border-color: #3387FF; }
+.border-mercury-blue-50 { border-color: #EFF4FF; }
+.border-mercury-blue-100 { border-color: #DBE4FF; }
+.border-mercury-blue-200 { border-color: #BFCFFF; }
+.border-mercury-blue-300 { border-color: #93AEFF; }
+.border-mercury-blue-400 { border-color: #5F85FF; }
 .border-mercury-blue-500 { border-color: #2E5BFF; }
-.border-mercury-blue-600 { border-color: #1E3A8A; }
-.border-mercury-blue-700 { border-color: #1A2E6B; }
-.border-mercury-blue-800 { border-color: #16234C; }
-.border-mercury-blue-900 { border-color: #11182D; }
+.border-mercury-blue-600 { border-color: #1D4ED8; }
+.border-mercury-blue-700 { border-color: #1E3A8A; }
+.border-mercury-blue-800 { border-color: #1E3370; }
+.border-mercury-blue-900 { border-color: #1A2756; }
 
-.mercury-gold-50 { background-color: #FFF9E6; }
-.mercury-gold-100 { background-color: #FFF3CC; }
-.mercury-gold-200 { background-color: #FFE799; }
-.mercury-gold-300 { background-color: #FFDB66; }
-.mercury-gold-400 { background-color: #FFCF33; }
-.mercury-gold-500 { background-color: #FFD60A; }
-.mercury-gold-600 { background-color: #E6C100; }
-.mercury-gold-700 { background-color: #CCAD00; }
-.mercury-gold-800 { background-color: #B39900; }
-.mercury-gold-900 { background-color: #998500; }
+.mercury-gold-50 { background-color: #FFFBEB; }
+.mercury-gold-100 { background-color: #FEF3C7; }
+.mercury-gold-200 { background-color: #FDE68A; }
+.mercury-gold-300 { background-color: #FCD34D; }
+.mercury-gold-400 { background-color: #FBBF24; }
+.mercury-gold-500 { background-color: #F59E0B; }
+.mercury-gold-600 { background-color: #D97706; }
+.mercury-gold-700 { background-color: #B45309; }
+.mercury-gold-800 { background-color: #92400E; }
+.mercury-gold-900 { background-color: #78350F; }
 
-.text-mercury-gold-50 { color: #FFF9E6; }
-.text-mercury-gold-100 { color: #FFF3CC; }
-.text-mercury-gold-200 { color: #FFE799; }
-.text-mercury-gold-300 { color: #FFDB66; }
-.text-mercury-gold-400 { color: #FFCF33; }
-.text-mercury-gold-500 { color: #FFD60A; }
-.text-mercury-gold-600 { color: #E6C100; }
-.text-mercury-gold-700 { color: #CCAD00; }
-.text-mercury-gold-800 { color: #B39900; }
-.text-mercury-gold-900 { color: #998500; }
+.text-mercury-gold-50 { color: #FFFBEB; }
+.text-mercury-gold-100 { color: #FEF3C7; }
+.text-mercury-gold-200 { color: #FDE68A; }
+.text-mercury-gold-300 { color: #FCD34D; }
+.text-mercury-gold-400 { color: #FBBF24; }
+.text-mercury-gold-500 { color: #F59E0B; }
+.text-mercury-gold-600 { color: #D97706; }
+.text-mercury-gold-700 { color: #B45309; }
+.text-mercury-gold-800 { color: #92400E; }
+.text-mercury-gold-900 { color: #78350F; }
 
-.border-mercury-gold-50 { border-color: #FFF9E6; }
-.border-mercury-gold-100 { border-color: #FFF3CC; }
-.border-mercury-gold-200 { border-color: #FFE799; }
-.border-mercury-gold-300 { border-color: #FFDB66; }
-.border-mercury-gold-400 { border-color: #FFCF33; }
-.border-mercury-gold-500 { border-color: #FFD60A; }
-.border-mercury-gold-600 { border-color: #E6C100; }
-.border-mercury-gold-700 { border-color: #CCAD00; }
-.border-mercury-gold-800 { border-color: #B39900; }
-.border-mercury-gold-900 { border-color: #998500; }
+.border-mercury-gold-50 { border-color: #FFFBEB; }
+.border-mercury-gold-100 { border-color: #FEF3C7; }
+.border-mercury-gold-200 { border-color: #FDE68A; }
+.border-mercury-gold-300 { border-color: #FCD34D; }
+.border-mercury-gold-400 { border-color: #FBBF24; }
+.border-mercury-gold-500 { border-color: #F59E0B; }
+.border-mercury-gold-600 { border-color: #D97706; }
+.border-mercury-gold-700 { border-color: #B45309; }
+.border-mercury-gold-800 { border-color: #92400E; }
+.border-mercury-gold-900 { border-color: #78350F; }
 
 .clean-white {
   color: hsl(var(--clean-white));
@@ -764,17 +758,17 @@ a:hover {
 
 /* Mercury Solutions brand gradients */
 .bg-mercury-gradient {
-  background: linear-gradient(135deg, 
-    hsl(220, 100%, 60%) 0%, 
-    hsl(220, 100%, 50%) 50%, 
-    hsl(45, 93%, 47%) 100%);
+  background: linear-gradient(135deg,
+    #2E5BFF 0%,
+    #1D4ED8 40%,
+    #1E3A8A 100%);
 }
 
 .text-mercury-gradient {
-  background: linear-gradient(135deg, 
-    hsl(220, 100%, 60%) 0%, 
-    hsl(220, 100%, 50%) 50%, 
-    hsl(45, 93%, 47%) 100%);
+  background: linear-gradient(135deg,
+    #5B85FF 0%,
+    #2E5BFF 40%,
+    #1E3A8A 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -901,67 +895,22 @@ a:hover {
   }
 } 
 
-/* Mercury Solutions Enhanced Color Classes */
-.mercury-blue-50 { background-color: #E6F0FF; }
-.mercury-blue-100 { background-color: #CCE1FF; }
-.mercury-blue-200 { background-color: #99C3FF; }
-.mercury-blue-300 { background-color: #66A5FF; }
-.mercury-blue-400 { background-color: #3387FF; }
-.mercury-blue-500 { background-color: #2E5BFF; }
-.mercury-blue-600 { background-color: #1E3A8A; }
-.mercury-blue-700 { background-color: #1A2E6B; }
-.mercury-blue-800 { background-color: #16234C; }
-.mercury-blue-900 { background-color: #11182D; }
-
-.text-mercury-blue-50 { color: #E6F0FF; }
-.text-mercury-blue-100 { color: #CCE1FF; }
-.text-mercury-blue-200 { color: #99C3FF; }
-.text-mercury-blue-300 { color: #66A5FF; }
-.text-mercury-blue-400 { color: #3387FF; }
-.text-mercury-blue-500 { color: #2E5BFF; }
-.text-mercury-blue-600 { color: #1E3A8A; }
-.text-mercury-blue-700 { color: #1A2E6B; }
-.text-mercury-blue-800 { color: #16234C; }
-.text-mercury-blue-900 { color: #11182D; }
-
-.mercury-gold-50 { background-color: #FFF9E6; }
-.mercury-gold-100 { background-color: #FFF3CC; }
-.mercury-gold-200 { background-color: #FFE799; }
-.mercury-gold-300 { background-color: #FFDB66; }
-.mercury-gold-400 { background-color: #FFCF33; }
-.mercury-gold-500 { background-color: #FFD60A; }
-.mercury-gold-600 { background-color: #E6C100; }
-.mercury-gold-700 { background-color: #CCAD00; }
-.mercury-gold-800 { background-color: #B39900; }
-.mercury-gold-900 { background-color: #998500; }
-
-.text-mercury-gold-50 { color: #FFF9E6; }
-.text-mercury-gold-100 { color: #FFF3CC; }
-.text-mercury-gold-200 { color: #FFE799; }
-.text-mercury-gold-300 { color: #FFDB66; }
-.text-mercury-gold-400 { color: #FFCF33; }
-.text-mercury-gold-500 { color: #FFD60A; }
-.text-mercury-gold-600 { color: #E6C100; }
-.text-mercury-gold-700 { color: #CCAD00; }
-.text-mercury-gold-800 { color: #B39900; }
-.text-mercury-gold-900 { color: #998500; }
-
-/* Mercury Gradient Classes */
+/* Mercury Gradient Classes (synced with tailwind.config.js) */
 .from-mercury-blue-500 { --tw-gradient-from: #2E5BFF; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(46, 91, 255, 0)); }
 .to-mercury-blue-500 { --tw-gradient-to: #2E5BFF; }
-.from-mercury-blue-600 { --tw-gradient-from: #1E3A8A; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(30, 58, 138, 0)); }
-.to-mercury-blue-600 { --tw-gradient-to: #1E3A8A; }
-.from-mercury-blue-700 { --tw-gradient-from: #1A2E6B; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(26, 46, 107, 0)); }
-.to-mercury-blue-700 { --tw-gradient-to: #1A2E6B; }
+.from-mercury-blue-600 { --tw-gradient-from: #1D4ED8; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(29, 78, 216, 0)); }
+.to-mercury-blue-600 { --tw-gradient-to: #1D4ED8; }
+.from-mercury-blue-700 { --tw-gradient-from: #1E3A8A; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(30, 58, 138, 0)); }
+.to-mercury-blue-700 { --tw-gradient-to: #1E3A8A; }
 
-.from-mercury-gold-400 { --tw-gradient-from: #FFCF33; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 207, 51, 0)); }
-.to-mercury-gold-400 { --tw-gradient-to: #FFCF33; }
-.from-mercury-gold-500 { --tw-gradient-from: #FFD60A; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 214, 10, 0)); }
-.to-mercury-gold-500 { --tw-gradient-to: #FFD60A; }
-.from-mercury-gold-600 { --tw-gradient-from: #E6C100; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(230, 193, 0, 0)); }
-.to-mercury-gold-600 { --tw-gradient-to: #E6C100; }
-.from-mercury-gold-700 { --tw-gradient-from: #CCAD00; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(204, 173, 0, 0)); }
-.to-mercury-gold-700 { --tw-gradient-to: #CCAD00; }
+.from-mercury-gold-400 { --tw-gradient-from: #FBBF24; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(251, 191, 36, 0)); }
+.to-mercury-gold-400 { --tw-gradient-to: #FBBF24; }
+.from-mercury-gold-500 { --tw-gradient-from: #F59E0B; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(245, 158, 11, 0)); }
+.to-mercury-gold-500 { --tw-gradient-to: #F59E0B; }
+.from-mercury-gold-600 { --tw-gradient-from: #D97706; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(217, 119, 6, 0)); }
+.to-mercury-gold-600 { --tw-gradient-to: #D97706; }
+.from-mercury-gold-700 { --tw-gradient-from: #B45309; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(180, 83, 9, 0)); }
+.to-mercury-gold-700 { --tw-gradient-to: #B45309; }
 
 /* Enhanced Animation Classes */
 .animate-pulse {
@@ -999,8 +948,8 @@ a:hover {
 }
 
 /* Enhanced Border Classes */
-.border-mercury-blue-200 { border-color: #99C3FF; }
-.border-mercury-gold-200 { border-color: #FFE799; }
+.border-mercury-blue-200 { border-color: #BFCFFF; }
+.border-mercury-gold-200 { border-color: #FDE68A; }
 
 /* Enhanced Background Classes */
 .bg-gradient-to-br {
@@ -1517,7 +1466,7 @@ a:hover {
 
 /* Enhanced active tab styling */
 .active-tab-shadow {
-  box-shadow: 0 4px 8px -2px rgba(46, 91, 255, 0.3), 0 2px 4px -1px rgba(46, 91, 255, 0.2);
+  box-shadow: 0 4px 12px -2px rgba(46, 91, 255, 0.25), 0 2px 6px -1px rgba(46, 91, 255, 0.15);
 }
 
 /* Button shadow enhancement */
@@ -1541,9 +1490,9 @@ a:hover {
 }
 
 .hero-overlay {
-  background: linear-gradient(135deg, rgba(46, 91, 255, 0.05) 0%, rgba(30, 58, 138, 0.05) 100%);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, rgba(46, 91, 255, 0.03) 0%, rgba(30, 58, 138, 0.03) 100%);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
 }
 
 /* Project Card Animations */
@@ -1644,7 +1593,7 @@ a:hover {
 
 /* Gradient Text Effect */
 .gradient-text {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #5B85FF 0%, #2E5BFF 50%, #1E3A8A 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

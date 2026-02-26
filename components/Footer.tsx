@@ -8,7 +8,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-gradient-to-br from-mercury-blue-700 via-mercury-blue-800 to-mercury-blue-900 text-white">
+    <footer className="bg-gradient-to-br from-mercury-blue-800 via-mercury-blue-900 to-mercury-blue-950 text-white">
       <div className="container-custom py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}

@@ -29,7 +29,7 @@ function HeroContent() {
             <TextReveal delay={0.2}>
               <h1 className="text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                 <span style={{ color: 'hsl(var(--text-primary))' }}>{t('hero.title.part1')}</span>{' '}
-                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent animate-gradient-x">
+                <span className="bg-gradient-to-r from-mercury-blue-400 via-mercury-blue-500 to-mercury-blue-700 bg-clip-text text-transparent animate-gradient-x">
                   {t('hero.title.part2')}
                 </span>{' '}
                 <span className="text-sm font-medium" style={{ color: 'hsl(var(--text-primary))' }}>{t('hero.title.part3')}</span>
@@ -82,7 +82,7 @@ export default function Hero() {
                 
                 <h1 className="text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                   <span style={{ color: 'hsl(var(--text-primary))' }}>Mercury Solutions</span>{' '}
-                  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent animate-gradient-x">
+                  <span className="bg-gradient-to-r from-mercury-blue-400 via-mercury-blue-500 to-mercury-blue-700 bg-clip-text text-transparent animate-gradient-x">
                     - Data Analysis & Innovative Technologies
                   </span>
                 </h1>
