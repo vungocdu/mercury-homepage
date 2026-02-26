@@ -2,7 +2,6 @@ export const ko = {
   // Navigation
   nav: {
     home: "홈",
-    aiDigitalTransformation: "AI 디지털 혁신",
     digitalMarketing: "디지털 마케팅",
     about: "회사 소개",
     // Legacy navigation items (for backward compatibility)
@@ -14,6 +13,31 @@ export const ko = {
     portfolio: "포트폴리오",
     ourAdvantage: "우리의 장점",
     softwareServices: "소프트웨어 서비스",
+    // System category navigation
+    hrSystem: "HR System",
+    sportSystem: "Sport System",
+    hotelSystem: "Hotel System",
+    bizOperation: "Biz Operation",
+    // Product names
+    tnaSystem: "TNA HRM System",
+    quickshift: "QuickShift",
+    actiwellPlatform: "Actiwell Platform",
+    actiwellATMS: "Actiwell ATMS",
+    minovaPMS: "Minova PMS",
+    otaCalculator: "OTA Calculator",
+    containerCalculator: "ContCal 3D",
+    processAndTechnology: "프로세스 & 테크놀로지",
+    // Product descriptions for dropdown
+    tnaSystemDesc: "근태 관리 시스템",
+    quickshiftDesc: "교대 근무 관리 시스템",
+    actiwellPlatformDesc: "스포츠 관리 플랫폼",
+    actiwellATMSDesc: "운동선수 훈련 관리",
+    minovaPMSDesc: "호텔 관리 시스템",
+    otaCalculatorDesc: "OTA 수수료 계산기",
+    containerCalculatorDesc: "3D 컨테이너 적재 최적화",
+    processAndTechnologyDesc: "디지털 프로세스 솔루션",
+    myarm: "MyARM",
+    myarmDesc: "일본식 비즈니스 관리 솔루션",
   },
 
   // Hero Section

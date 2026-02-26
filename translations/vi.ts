@@ -2,7 +2,6 @@ export const vi = {
   // Navigation
   nav: {
     home: "Trang chủ",
-    aiDigitalTransformation: "AI Digital Transformation",
     digitalMarketing: "Digital Marketing",
     about: "Về chúng tôi",
     // Legacy navigation items (for backward compatibility)
@@ -14,6 +13,31 @@ export const vi = {
     portfolio: "Portfolio",
     ourAdvantage: "Lợi thế của chúng tôi",
     softwareServices: "Dịch vụ phần mềm",
+    // System category navigation
+    hrSystem: "HR System",
+    sportSystem: "Sport System",
+    hotelSystem: "Hotel System",
+    bizOperation: "Biz Operation",
+    // Product names
+    tnaSystem: "TNA HRM System",
+    quickshift: "QuickShift",
+    actiwellPlatform: "Actiwell Platform",
+    actiwellATMS: "Actiwell ATMS",
+    minovaPMS: "Minova PMS",
+    otaCalculator: "OTA Calculator",
+    containerCalculator: "ContCal 3D",
+    processAndTechnology: "Quy trình & Công nghệ",
+    // Product descriptions for dropdown
+    tnaSystemDesc: "Quản lý Chấm công & Nhân sự",
+    quickshiftDesc: "Quản lý Ca làm việc",
+    actiwellPlatformDesc: "Nền tảng Quản lý Thể thao",
+    actiwellATMSDesc: "Quản lý Huấn luyện Thể thao",
+    minovaPMSDesc: "Hệ thống Quản lý Khách sạn",
+    otaCalculatorDesc: "Tính toán Hoa hồng OTA",
+    containerCalculatorDesc: "Tối ưu Xếp hàng Container 3D",
+    processAndTechnologyDesc: "Giải pháp Quy trình Số",
+    myarm: "MyARM",
+    myarmDesc: "Quản lý Doanh nghiệp phong cách Nhật Bản",
   },
 
   // Hero Section
@@ -1688,7 +1712,7 @@ export const vi = {
   },
 
   // QuickShift Page
-  quickShift: {
+  quickshift: {
     hero: {
       badge: "Quản Lý Nhân Lực Bằng AI",
       title: "Nền Tảng Quản Lý Nhân Sự Thời Vụ",
@@ -2094,204 +2118,204 @@ export const vi = {
   // TNA System Page
   tnaSystem: {
     hero: {
-      badge: "TNA HRM System",
-      title: "Digital HR & Payroll Platform for Manufacturing Operations",
-      subtitle: "This page summarizes core TNA capabilities based on the project SRS and production landing flow: workforce data management, AI attendance capture, shift/leave operations, payroll automation, and accounting integration.",
+      badge: "Hệ Thống TNA HRM",
+      title: "Nền Tảng Nhân Sự & Bảng Lương Số Hóa cho Sản Xuất",
+      subtitle: "Quản lý nhân sự toàn diện với chấm công AI, vận hành ca kíp & nghỉ phép, tự động hóa bảng lương và tích hợp kế toán MISA — xây dựng cho doanh nghiệp sản xuất Việt Nam.",
       stats: {
-        functionalPages: "17+ functional pages",
-        processFlows: "7 major process flows",
-        roles: "5 operational roles",
-        languages: "Multi-language support"
+        functionalPages: "17+ trang chức năng",
+        processFlows: "7 quy trình chính",
+        roles: "5 vai trò vận hành",
+        languages: "Hỗ trợ đa ngôn ngữ"
       }
     },
     core: {
-      title: "Core Functional Modules",
-      description: "TNA covers the full HRM and payroll lifecycle for manufacturing teams, from attendance input to accounting output.",
+      title: "Các Module Chức Năng Cốt Lõi",
+      description: "TNA bao phủ toàn bộ vòng đời nhân sự và bảng lương cho đội ngũ sản xuất, từ đầu vào chấm công đến đầu ra kế toán.",
       modules: {
         employeeOrg: {
-          title: "Employee & Organization Management",
-          description: "Manage employee profiles, department structure, and role-based access for HR, payroll, managers, and employees.",
-          bullets: ["Employee master data", "Department hierarchy", "Role and permission matrix"]
+          title: "Quản Lý Nhân Sự & Tổ Chức",
+          description: "Quản lý hồ sơ nhân viên, cơ cấu phòng ban và phân quyền truy cập theo vai trò cho HR, kế toán lương, quản lý và nhân viên.",
+          bullets: ["Dữ liệu gốc nhân viên", "Sơ đồ phòng ban", "Ma trận vai trò và quyền"]
         },
         aiAttendance: {
-          title: "AI Time & Attendance",
-          description: "Capture attendance in real-time with AI camera/biometric-ready flow and synchronize timesheet data for payroll.",
-          bullets: ["Face-recognition flow", "Realtime check-in/out", "Timesheet synchronization"]
+          title: "Chấm Công AI",
+          description: "Ghi nhận chấm công thời gian thực bằng camera AI/sinh trắc học và đồng bộ dữ liệu bảng chấm công cho tính lương.",
+          bullets: ["Luồng nhận diện khuôn mặt", "Check-in/out thời gian thực", "Đồng bộ bảng chấm công"]
         },
         shiftMgmt: {
-          title: "Shift, Group Shift & Shift Change",
-          description: "Configure standard/rotating shifts, assign employees by group, and control shift-change requests with approval.",
-          bullets: ["Shift templates", "Group assignment", "Shift change workflow"]
+          title: "Ca Làm, Nhóm Ca & Đổi Ca",
+          description: "Cấu hình ca cố định/xoay ca, phân công nhân viên theo nhóm và kiểm soát yêu cầu đổi ca với phê duyệt.",
+          bullets: ["Mẫu ca làm việc", "Phân công theo nhóm", "Quy trình đổi ca"]
         },
         leaveOtLate: {
-          title: "Leave, Overtime, Late/Early Rules",
-          description: "Handle leave requests, overtime categories, and late/early scenarios with policy-based calculations.",
-          bullets: ["Leave type and request", "Overtime policy matrix", "Late/early handling"]
+          title: "Nghỉ Phép, Tăng Ca, Đi Muộn/Về Sớm",
+          description: "Xử lý yêu cầu nghỉ phép, các loại tăng ca và tình huống đi muộn/về sớm với tính toán theo chính sách.",
+          bullets: ["Loại phép và yêu cầu", "Ma trận chính sách tăng ca", "Xử lý đi muộn/về sớm"]
         },
         payrollEngine: {
-          title: "Payroll Engine",
-          description: "Automate gross-to-net payroll with tax and insurance calculations aligned to Vietnamese labor regulations.",
-          bullets: ["Automated payroll run", "Tax and insurance logic", "Payslip output"]
+          title: "Bộ Máy Tính Lương",
+          description: "Tự động hóa tính lương từ gộp đến thực lĩnh với thuế và bảo hiểm theo quy định lao động Việt Nam.",
+          bullets: ["Chạy lương tự động", "Logic thuế và bảo hiểm", "Xuất phiếu lương"]
         },
         salaryTemplate: {
-          title: "Salary Components & Templates",
-          description: "Build reusable payroll templates with configurable allowances, deductions, and formula-based components.",
-          bullets: ["Component library", "Template assignment", "Default salary settings"]
+          title: "Thành Phần Lương & Mẫu Lương",
+          description: "Xây dựng mẫu lương tái sử dụng với phụ cấp, khấu trừ và thành phần tính theo công thức.",
+          bullets: ["Thư viện thành phần", "Gán mẫu lương", "Cài đặt lương mặc định"]
         },
         bonusDeduction: {
-          title: "Bonus & Deduction Management",
-          description: "Maintain additional income and deduction lists, apply targeted or bulk rules, and audit payroll impact.",
-          bullets: ["Bonus list management", "Deduction list management", "Net-salary impact checks"]
+          title: "Quản Lý Thưởng & Khấu Trừ",
+          description: "Duy trì danh sách thu nhập bổ sung và khấu trừ, áp dụng quy tắc theo cá nhân hoặc hàng loạt, và kiểm tra tác động bảng lương.",
+          bullets: ["Quản lý danh sách thưởng", "Quản lý danh sách khấu trừ", "Kiểm tra tác động lương ròng"]
         },
         misaIntegration: {
-          title: "MISA Accounting Integration",
-          description: "Push payroll accounting vouchers and synchronize employee dictionaries for end-to-end accounting automation.",
-          bullets: ["Voucher sync API", "Employee dictionary sync", "Callback and sync monitoring"]
+          title: "Tích Hợp Kế Toán MISA",
+          description: "Đẩy chứng từ kế toán lương và đồng bộ danh mục nhân viên để tự động hóa kế toán đầu-cuối.",
+          bullets: ["API đồng bộ chứng từ", "Đồng bộ danh mục nhân viên", "Giám sát callback và đồng bộ"]
         }
       }
     },
     mock: {
-      common: { live: "Live" },
+      common: { live: "Trực tiếp" },
       employeeOrg: {
-        windowTitle: "Staff / Department / User",
-        searchEmployee: "Search employee",
-        departmentFilter: "Department",
-        columns: { employee: "Employee", department: "Department", role: "Role" },
-        sample: { department: "Assembly A", role: "HR Manager" }
+        windowTitle: "Nhân Viên / Phòng Ban / Người Dùng",
+        searchEmployee: "Tìm nhân viên",
+        departmentFilter: "Phòng ban",
+        columns: { employee: "Nhân viên", department: "Phòng ban", role: "Vai trò" },
+        sample: { department: "Lắp ráp A", role: "Trưởng phòng HR" }
       },
       aiAttendance: {
-        windowTitle: "Timekeeping / AI Camera",
-        realtime: "Realtime",
-        cards: { present: "Present", late: "Late", noCheckIn: "No check-in" },
-        events: "Camera Events",
-        syncing: "Syncing",
-        sampleEvent: "Gate A . Face Match"
+        windowTitle: "Chấm Công / Camera AI",
+        realtime: "Thời gian thực",
+        cards: { present: "Có mặt", late: "Đi muộn", noCheckIn: "Chưa chấm công" },
+        events: "Sự kiện Camera",
+        syncing: "Đang đồng bộ",
+        sampleEvent: "Cổng A · Nhận diện khuôn mặt"
       },
       shiftMgmt: {
-        windowTitle: "Shift / Group Shift / Change",
-        columns: { group: "Group", shift: "Shift", time: "Time", status: "Status" },
-        lineA: { group: "Line A - Weekday", shift: "Morning", status: "Running" },
-        lineB: { group: "Line B - Rotation", shift: "Night", status: "Pending" }
+        windowTitle: "Ca Làm / Nhóm Ca / Đổi Ca",
+        columns: { group: "Nhóm", shift: "Ca", time: "Thời gian", status: "Trạng thái" },
+        lineA: { group: "Dây chuyền A - Ngày thường", shift: "Ca sáng", status: "Đang chạy" },
+        lineB: { group: "Dây chuyền B - Xoay ca", shift: "Ca đêm", status: "Chờ xử lý" }
       },
       leaveOtLate: {
-        windowTitle: "Leave / Overtime / Late-Early",
-        tabs: { leaveRequest: "Leave Request", overtime: "Overtime", lateEarly: "Late/Early" },
+        windowTitle: "Nghỉ Phép / Tăng Ca / Muộn-Sớm",
+        tabs: { leaveRequest: "Yêu cầu nghỉ", overtime: "Tăng ca", lateEarly: "Muộn/Sớm" },
         rows: {
-          leave: "Leave . EMP-01021 . 1 day",
-          overtime: "OT . EMP-00403 . 3.5h",
-          late: "Late . EMP-00210 . 18m"
+          leave: "Nghỉ phép · EMP-01021 · 1 ngày",
+          overtime: "Tăng ca · EMP-00403 · 3.5 giờ",
+          late: "Đi muộn · EMP-00210 · 18 phút"
         },
-        status: { awaiting: "Awaiting", approved: "Approved", processed: "Processed" }
+        status: { awaiting: "Chờ duyệt", approved: "Đã duyệt", processed: "Đã xử lý" }
       },
       payroll: {
-        windowTitle: "Payroll Calculation",
-        rightLabel: "Monthly Run",
-        period: "Mar 2026",
-        departmentFilter: "Department",
-        gross: "Gross Payroll",
-        net: "Net Payroll",
-        statusLabel: "Calculation status",
-        calculated: "Calculated"
+        windowTitle: "Tính Bảng Lương",
+        rightLabel: "Chạy hàng tháng",
+        period: "Tháng 3/2026",
+        departmentFilter: "Phòng ban",
+        gross: "Lương gộp",
+        net: "Lương thực lĩnh",
+        statusLabel: "Trạng thái tính lương",
+        calculated: "Đã tính"
       },
       salaryTemplate: {
-        windowTitle: "Salary Components / Templates",
-        libraryTitle: "Component Library",
-        baseSalary: "Base Salary",
-        mealAllowance: "Meal Allowance",
-        insurance: "Insurance",
-        templateTitle: "Template Mapping",
-        templateName: "Factory Worker V2",
-        formulaGross: "Gross = Base + OT + Bonus",
-        formulaNet: "Net = Gross - Tax - BHXH",
-        active: "Active"
+        windowTitle: "Thành Phần Lương / Mẫu",
+        libraryTitle: "Thư viện thành phần",
+        baseSalary: "Lương cơ bản",
+        mealAllowance: "Phụ cấp ăn",
+        insurance: "Bảo hiểm",
+        templateTitle: "Gán mẫu lương",
+        templateName: "Công nhân nhà máy V2",
+        formulaGross: "Gộp = Cơ bản + TC + Thưởng",
+        formulaNet: "Ròng = Gộp - Thuế - BHXH",
+        active: "Đang dùng"
       },
       bonusDeduction: {
-        windowTitle: "Bonus / Deduction Lists",
-        columns: { item: "Item", type: "Type", rule: "Rule", amount: "Amount" },
+        windowTitle: "Danh Sách Thưởng / Khấu Trừ",
+        columns: { item: "Khoản mục", type: "Loại", rule: "Quy tắc", amount: "Số tiền" },
         rows: {
-          bonusName: "Attendance Bonus",
-          bonusType: "Bonus",
-          bonusRule: "Monthly fixed",
-          deductionName: "Advance Salary",
-          deductionType: "Deduction",
-          deductionRule: "Targeted"
+          bonusName: "Thưởng chuyên cần",
+          bonusType: "Thưởng",
+          bonusRule: "Cố định hàng tháng",
+          deductionName: "Tạm ứng lương",
+          deductionType: "Khấu trừ",
+          deductionRule: "Theo cá nhân"
         }
       },
       misa: {
-        windowTitle: "MISA Sync Queue",
+        windowTitle: "Hàng đợi đồng bộ MISA",
         rightLabel: "API Callback",
-        queueTitle: "Payroll Voucher Push",
-        inQueue: "In Queue",
-        batchInfo: "Batch: 100 vouchers . Tenant: FUJIKIN-VN",
-        dictionarySync: "Dictionary Sync",
-        voucherCreate: "Voucher Create",
-        callbackStatus: "Callback Status",
-        done: "Done",
-        processing: "Processing",
-        awaiting: "Awaiting"
+        queueTitle: "Đẩy chứng từ lương",
+        inQueue: "Trong hàng đợi",
+        batchInfo: "Lô: 100 chứng từ · Đơn vị: FUJIKIN-VN",
+        dictionarySync: "Đồng bộ danh mục",
+        voucherCreate: "Tạo chứng từ",
+        callbackStatus: "Trạng thái Callback",
+        done: "Hoàn thành",
+        processing: "Đang xử lý",
+        awaiting: "Chờ xử lý"
       }
     },
     screenDesign: {
-      title: "TNA CMS Screen Design",
-      description: "Visualized from the TNA CMS frontend modules (`dashboard`, `payroll-calculation`, `settings/ai-camera`) to show how daily operation screens are organized.",
+      title: "Thiết Kế Màn Hình TNA CMS",
+      description: "Trực quan hóa từ các module frontend TNA CMS (dashboard, tính lương, cài đặt camera AI) để minh họa cách tổ chức các màn hình vận hành hàng ngày.",
       cards: {
-        dashboard: "Dashboard Overview",
-        payroll: "Payroll Calculation List",
-        aiCamera: "AI Camera Settings"
+        dashboard: "Tổng Quan Dashboard",
+        payroll: "Danh Sách Tính Lương",
+        aiCamera: "Cài Đặt Camera AI"
       },
       dashboard: {
-        realtime: "Dashboard / Real-time",
-        attendanceTrend: "Attendance Trend",
-        pendingRequests: "Pending Requests",
-        kpi: { totalStaff: "Total Staff", present: "Present", late: "Late", onLeave: "On Leave" },
-        pending: { leave: "Leave", shiftChange: "Shift change", lateEarly: "Late/Early" }
+        realtime: "Dashboard / Thời gian thực",
+        attendanceTrend: "Xu hướng chấm công",
+        pendingRequests: "Yêu cầu chờ duyệt",
+        kpi: { totalStaff: "Tổng nhân viên", present: "Có mặt", late: "Đi muộn", onLeave: "Nghỉ phép" },
+        pending: { leave: "Nghỉ phép", shiftChange: "Đổi ca", lateEarly: "Muộn/Sớm" }
       },
       payroll: {
-        filterPeriodName: "Period name",
-        filterDateRange: "Date range",
-        columns: { period: "Period", status: "Status", department: "Department", staff: "Staff" },
+        filterPeriodName: "Tên kỳ lương",
+        filterDateRange: "Khoảng thời gian",
+        columns: { period: "Kỳ lương", status: "Trạng thái", department: "Phòng ban", staff: "Nhân viên" },
         sample: {
-          period: "Mar 2026",
-          calculated: "Calculated",
-          approved: "Approved",
-          draft: "Draft",
-          assembly: "Assembly",
-          qa: "QA",
-          warehouse: "Warehouse"
+          period: "Tháng 3/2026",
+          calculated: "Đã tính",
+          approved: "Đã duyệt",
+          draft: "Nháp",
+          assembly: "Lắp ráp",
+          qa: "Kiểm định",
+          warehouse: "Kho"
         }
       },
       aiCamera: {
-        officeLocation: "Office / Location",
-        provider: "Provider",
-        placeIdToken: "Place ID / Token",
-        activeConfig: "Active Configuration",
-        connected: "Connected",
-        workflow: "Save / Edit / Delete workflow",
+        officeLocation: "Văn phòng / Vị trí",
+        provider: "Nhà cung cấp",
+        placeIdToken: "Mã vị trí / Token",
+        activeConfig: "Cấu hình đang hoạt động",
+        connected: "Đã kết nối",
+        workflow: "Lưu / Sửa / Xóa cấu hình",
         sample: {
-          officeA1: "Factory A - Gate 1",
-          officeA2: "Factory A - Gate 2",
-          officeB4: "Factory B - Loading Dock"
+          officeA1: "Nhà máy A - Cổng 1",
+          officeA2: "Nhà máy A - Cổng 2",
+          officeB4: "Nhà máy B - Bãi xuất hàng"
         }
       }
     },
     workflow: {
-      title: "Operational Workflow",
+      title: "Quy Trình Vận Hành",
       steps: [
-        "System and policy setup (company rules, calendar, shift defaults)",
-        "Salary structure and template configuration",
-        "Employee onboarding with profile and attendance source registration",
-        "Daily attendance and operational data collection",
-        "Payroll calculation, review, and approval",
-        "Accounting sync and payment execution"
+        "Thiết lập hệ thống và chính sách (quy định công ty, lịch, mặc định ca)",
+        "Cấu hình cơ cấu lương và mẫu lương",
+        "Tiếp nhận nhân viên với hồ sơ và đăng ký nguồn chấm công",
+        "Thu thập dữ liệu chấm công và vận hành hàng ngày",
+        "Tính lương, kiểm tra và phê duyệt",
+        "Đồng bộ kế toán và thực hiện thanh toán"
       ]
     },
     compliance: {
-      title: "Compliance & Integration",
-      p1: "Payroll logic includes tax and insurance handling (BHXH, BHYT, BHTN), configurable overtime rates, and policy-based rules for allowances and deductions.",
-      p2: "MISA integration automates accounting handoff by syncing employee dictionaries and pushing payroll vouchers through API and callback-based status tracking.",
-      p3: "Access control supports role-specific operation for Admin, HR Manager, Payroll Specialist, Department Manager, and Employee."
+      title: "Tuân Thủ & Tích Hợp",
+      p1: "Logic bảng lương bao gồm xử lý thuế và bảo hiểm (BHXH, BHYT, BHTN), hệ số tăng ca tùy chỉnh, và quy tắc phụ cấp/khấu trừ theo chính sách.",
+      p2: "Tích hợp MISA tự động hóa chuyển giao kế toán bằng cách đồng bộ danh mục nhân viên và đẩy chứng từ lương qua API với theo dõi trạng thái callback.",
+      p3: "Kiểm soát truy cập hỗ trợ vận hành theo vai trò cho Quản trị viên, Trưởng phòng HR, Chuyên viên lương, Trưởng bộ phận và Nhân viên."
     },
-    backToItSolution: "Back to IT Solutions"
+    backToItSolution: "Quay Lại IT Solutions"
   },
 
   // Language Selector

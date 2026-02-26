@@ -283,9 +283,8 @@ const MovingDotsBackground = () => {
     const particles = particlesRef.current;
     const mouse = mouseRef.current;
 
-    // Clear canvas with slight trail effect
-    ctx.fillStyle = 'rgba(255, 255, 255, 0.05)';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    // Clear canvas transparently so section background shows through
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // Draw wave propagation effect with Vanta DOTS colors
     const time = Date.now() * 0.001;

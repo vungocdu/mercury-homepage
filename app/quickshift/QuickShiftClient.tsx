@@ -196,11 +196,20 @@ export default function QuickShiftClient() {
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/60" />
 
+        {/* Accent glows */}
+        <div className="absolute inset-0 pointer-events-none z-[1]">
+          <div className="absolute -top-24 left-1/4 h-96 w-96 rounded-full bg-[#FFA31A]/8 blur-[140px]" />
+          <div className="absolute bottom-10 right-1/4 h-80 w-80 rounded-full bg-amber-500/6 blur-[120px]" />
+        </div>
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="flex flex-col items-center">
             {/* Badge */}
-            <Badge variant="secondary" className="px-4 py-2 mb-8 rounded-full text-sm font-medium bg-white/10 backdrop-blur-sm border border-white/10 text-white/90">
-              <Sparkles className="w-4 h-4 mr-2 text-[#FFA31A]" />
+            <Badge variant="secondary" className="px-4 py-2 mb-8 rounded-full text-sm font-medium bg-[#FFA31A]/15 backdrop-blur-sm border border-[#FFA31A]/25 text-amber-200">
+              <span className="relative mr-2 flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#FFA31A] opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-[#FFA31A]" />
+              </span>
               {tr('quickshift.hero.badge', 'AI-Powered Workforce Management')}
             </Badge>
 
@@ -216,7 +225,7 @@ export default function QuickShiftClient() {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg md:text-xl leading-relaxed mb-10 max-w-2xl text-white/60">
+            <p className="text-lg md:text-xl leading-relaxed mb-10 max-w-2xl text-white/70">
               {tr('quickshift.hero.subtitle', 'End-to-end temporary staffing solution — from AI timecard scanning and auto scheduling to invoicing and multi-channel notifications. Built for Japanese staffing agencies.')}{' '}
               <TextWordCarousel
                 words={['AI Timecard Scanning', 'Auto Scheduling', 'Smart Invoicing', 'Multi-channel Alerts']}

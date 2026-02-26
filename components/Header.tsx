@@ -1,7 +1,7 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
-import { Menu, X } from 'lucide-react'
+import { useState, useRef, useEffect, useCallback } from 'react'
+import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useLanguage } from '@/contexts/LanguageContext'
 import LanguageSelector from './LanguageSelector'
@@ -40,119 +40,117 @@ const MercuryLogo = ({ className = "w-8 h-8" }: { className?: string }) => (
   </svg>
 )
 
-// Helper function to determine active route
-const getActiveHrefFromCurrentRoute = () => {
-  const currentPath = window.location.pathname
+// Types
+type NavChild = { name: string; href: string; description: string }
+type NavItem = { name: string; href?: string; id?: string; children?: NavChild[] }
 
-  if (currentPath === '/' || currentPath === '') {
-    return '/'
-  } else if (currentPath === '/ai-digital-transformation' || currentPath.includes('/ai-digital-transformation')) {
-    return '/ai-digital-transformation'
-  } else if (currentPath === '/tvc' || currentPath.includes('/tvc')) {
-    return '/tvc'
-  } else if (currentPath === '/about' || currentPath.includes('/about')) {
-    return '/about'
+// Check if a nav item is active based on current path
+const isNavActive = (item: NavItem, currentPath: string): boolean => {
+  if (item.href) {
+    if (item.href === '/') return currentPath === '/' || currentPath === ''
+    return currentPath === item.href || currentPath.startsWith(item.href + '/')
   }
-
-  // Sub-pages (minova-pms, ota-calculator, etc.) map back to home
-  return '/'
-}
-
-// Tab Select Navigation Component
-const TabSelectNavigation = ({ navigation, activeHref, setActiveHref }: {
-  navigation: Array<{ name: string; href: string }>
-  activeHref: string
-  setActiveHref: (href: string) => void
-}) => {
-  const containerRef = useRef<HTMLDivElement>(null)
-
-  return (
-    <div ref={containerRef} className="relative">
-      <div className="flex items-center space-x-1 p-1 rounded-xl bg-gray-100/50">
-        {navigation.map((item) => {
-          const isActive = activeHref === item.href
-          return (
-            <button
-              key={item.name}
-              onClick={(e) => {
-                handleNavigationClick(item.href, e)
-                setActiveHref(item.href)
-
-                // Force update after navigation
-                setTimeout(() => {
-                  const newActiveHref = getActiveHrefFromCurrentRoute()
-                  setActiveHref(newActiveHref)
-                }, 100)
-              }}
-              className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
-                isActive ? 'text-white' : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
-              {isActive && (
-                <motion.div
-                  layoutId="activeTab"
-                  className="absolute inset-0 rounded-lg bg-mercury-blue-500 active-tab-shadow"
-                  transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                />
-              )}
-              <span className="relative z-10">{item.name}</span>
-            </button>
-          )
-        })}
-      </div>
-    </div>
-  )
+  if (item.children) {
+    return item.children.some(child => currentPath === child.href)
+  }
+  return false
 }
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [activeHref, setActiveHref] = useState('/')
+  const [currentPath, setCurrentPath] = useState('/')
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null)
+  const dropdownTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const { translations } = useLanguage()
 
-  const navigation = [
-    { name: translations?.nav?.home || 'Home', href: '/' },
-    { name: translations?.nav?.aiDigitalTransformation || 'AI Digital Transformation', href: '/ai-digital-transformation' },
-    { name: translations?.nav?.digitalMarketing || 'Digital Marketing', href: '/tvc' },
-    { name: translations?.nav?.about || 'About', href: '/about' },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const nav = translations?.nav as any
+
+  const navigation: NavItem[] = [
+    { name: nav?.home || 'Home', href: '/' },
+    {
+      name: nav?.hrSystem || 'HR System',
+      id: 'hrSystem',
+      children: [
+        { name: nav?.tnaSystem || 'TNA HRM System', href: '/tna-system', description: nav?.tnaSystemDesc || 'Time & Attendance Management' },
+        { name: nav?.quickshift || 'QuickShift', href: '/quickshift', description: nav?.quickshiftDesc || 'Shift & Schedule Management' },
+      ]
+    },
+    {
+      name: nav?.sportSystem || 'Sport System',
+      id: 'sportSystem',
+      children: [
+        { name: nav?.actiwellPlatform || 'Actiwell Platform', href: '/actiwell-platform', description: nav?.actiwellPlatformDesc || 'Sports Management Platform' },
+        { name: nav?.actiwellATMS || 'Actiwell ATMS', href: '/actiwell-atms', description: nav?.actiwellATMSDesc || 'Athletic Training Management' },
+      ]
+    },
+    {
+      name: nav?.hotelSystem || 'Hotel System',
+      id: 'hotelSystem',
+      children: [
+        { name: nav?.minovaPMS || 'Minova PMS', href: '/minova-pms', description: nav?.minovaPMSDesc || 'Property Management System' },
+        { name: nav?.otaCalculator || 'OTA Calculator', href: '/ota-calculator', description: nav?.otaCalculatorDesc || 'OTA Commission Calculator' },
+      ]
+    },
+    {
+      name: nav?.bizOperation || 'Biz Operation',
+      id: 'bizOperation',
+      children: [
+        { name: nav?.containerCalculator || 'ContCal 3D', href: '/container-calculator', description: nav?.containerCalculatorDesc || '3D Container Packing Optimizer' },
+        { name: nav?.processAndTechnology || 'Process & Technology', href: '/process-technology', description: nav?.processAndTechnologyDesc || 'Digital Process Solutions' },
+        { name: nav?.myarm || 'MyARM', href: 'https://myarms.jp/', description: nav?.myarmDesc || 'Japanese-style Business Management' },
+      ]
+    },
+    { name: nav?.about || 'About', href: '/about' },
   ]
 
+  // Dropdown hover handlers with delay to prevent flicker
+  const handleDropdownEnter = useCallback((id: string) => {
+    if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current)
+    setOpenDropdown(id)
+  }, [])
 
+  const handleDropdownLeave = useCallback(() => {
+    dropdownTimeoutRef.current = setTimeout(() => setOpenDropdown(null), 150)
+  }, [])
 
-  // Detect current route and set active tab
+  // Route detection
   useEffect(() => {
-    const updateActiveRoute = () => {
-      const newActiveHref = getActiveHrefFromCurrentRoute()
-      setActiveHref(newActiveHref)
-    }
+    const updatePath = () => setCurrentPath(window.location.pathname)
+    updatePath()
 
-    // Set initial active route
-    updateActiveRoute()
+    window.addEventListener('popstate', updatePath)
+    window.addEventListener('hashchange', updatePath)
 
-    // Listen for route changes
-    window.addEventListener('popstate', updateActiveRoute)
-    window.addEventListener('hashchange', updateActiveRoute)
-    
-    // Also listen for client-side navigation changes
     const originalPushState = window.history.pushState
     const originalReplaceState = window.history.replaceState
-    
+
     window.history.pushState = function(...args) {
       originalPushState.apply(window.history, args)
-      setTimeout(updateActiveRoute, 0)
+      setTimeout(updatePath, 0)
     }
-    
     window.history.replaceState = function(...args) {
       originalReplaceState.apply(window.history, args)
-      setTimeout(updateActiveRoute, 0)
+      setTimeout(updatePath, 0)
     }
 
     return () => {
-      window.removeEventListener('popstate', updateActiveRoute)
-      window.removeEventListener('hashchange', updateActiveRoute)
+      window.removeEventListener('popstate', updatePath)
+      window.removeEventListener('hashchange', updatePath)
       window.history.pushState = originalPushState
       window.history.replaceState = originalReplaceState
     }
   }, [])
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = () => setOpenDropdown(null)
+    if (openDropdown) {
+      document.addEventListener('click', handleClickOutside)
+      return () => document.removeEventListener('click', handleClickOutside)
+    }
+  }, [openDropdown])
 
   return (
     <header className="header-bg fixed top-0 left-0 right-0 z-40">
@@ -160,30 +158,140 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a 
-              href="#home" 
-              onClick={(e) => handleNavigationClick('#home', e)} 
+            <a
+              href="#home"
+              onClick={(e) => handleNavigationClick('#home', e)}
               className="flex items-center"
-              title="Mercury Solutions - Trang chủ"
+              title="Mercury Solutions"
             >
               <MercuryLogo className="w-10 h-12 sm:w-12 sm:h-14" />
             </a>
           </div>
 
-          {/* Desktop Navigation with Tab Select */}
-          <nav className="hidden md:block">
-            <TabSelectNavigation 
-              navigation={navigation}
-              activeHref={activeHref}
-              setActiveHref={setActiveHref}
-            />
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-0.5">
+            {navigation.map((item) => {
+              const isActive = isNavActive(item, currentPath)
+
+              // Simple link (no dropdown)
+              if (item.href) {
+                return (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={(e) => handleNavigationClick(item.href!, e)}
+                    className={`relative px-3 py-2 text-[13px] font-medium rounded-lg transition-colors duration-200 ${
+                      isActive
+                        ? 'text-mercury-blue-600'
+                        : 'text-gray-600 hover:text-gray-900'
+                    }`}
+                  >
+                    {item.name}
+                    {isActive && (
+                      <motion.div
+                        layoutId="navActiveIndicator"
+                        className="absolute bottom-0 left-3 right-3 h-0.5 bg-mercury-blue-500 rounded-full"
+                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                      />
+                    )}
+                  </a>
+                )
+              }
+
+              // Dropdown item
+              return (
+                <div
+                  key={item.id}
+                  className="relative"
+                  onMouseEnter={() => handleDropdownEnter(item.id!)}
+                  onMouseLeave={handleDropdownLeave}
+                >
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      setOpenDropdown(openDropdown === item.id ? null : item.id!)
+                    }}
+                    className={`relative flex items-center gap-1 px-3 py-2 text-[13px] font-medium rounded-lg transition-colors duration-200 ${
+                      isActive
+                        ? 'text-mercury-blue-600'
+                        : 'text-gray-600 hover:text-gray-900'
+                    }`}
+                  >
+                    {item.name}
+                    <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                      openDropdown === item.id ? 'rotate-180' : ''
+                    }`} />
+                    {isActive && (
+                      <motion.div
+                        layoutId="navActiveIndicator"
+                        className="absolute bottom-0 left-3 right-3 h-0.5 bg-mercury-blue-500 rounded-full"
+                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                      />
+                    )}
+                  </button>
+
+                  <AnimatePresence>
+                    {openDropdown === item.id && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 8 }}
+                        transition={{ duration: 0.15 }}
+                        className="absolute top-full left-0 pt-2 z-50"
+                      >
+                        <div className="bg-white rounded-xl shadow-lg ring-1 ring-gray-200/60 p-1.5 min-w-[250px]">
+                          {item.children?.map((child) => {
+                            const isExternal = child.href.startsWith('http')
+                            const isChildActive = !isExternal && currentPath === child.href
+                            return (
+                              <a
+                                key={child.href}
+                                href={child.href}
+                                {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                                onClick={(e) => {
+                                  if (!isExternal) handleNavigationClick(child.href, e)
+                                  setOpenDropdown(null)
+                                }}
+                                className={`flex items-center gap-3 px-3.5 py-3 rounded-lg transition-colors group ${
+                                  isChildActive
+                                    ? 'bg-mercury-blue-50'
+                                    : 'hover:bg-gray-50'
+                                }`}
+                              >
+                                <div className="flex-1">
+                                  <span className={`text-sm font-medium transition-colors ${
+                                    isChildActive
+                                      ? 'text-mercury-blue-600'
+                                      : 'text-gray-900 group-hover:text-mercury-blue-600'
+                                  }`}>
+                                    {child.name}
+                                  </span>
+                                  <span className="block text-xs text-gray-500 mt-0.5">
+                                    {child.description}
+                                  </span>
+                                </div>
+                                {isExternal && (
+                                  <svg className="w-3.5 h-3.5 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                  </svg>
+                                )}
+                              </a>
+                            )
+                          })}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              )
+            })}
           </nav>
 
           {/* Language Selector & CTA */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">
             <LanguageSelector />
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               onClick={(e) => handleNavigationClick('#contact', e)}
               className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mercury-blue-500 bg-white border-2 border-mercury-blue-600 text-mercury-blue-600 hover:bg-mercury-blue-600 hover:text-white shadow-lg hover:shadow-xl"
             >
@@ -192,7 +300,7 @@ export default function Header() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-2">
+          <div className="lg:hidden flex items-center space-x-2">
             <LanguageSelector />
             <motion.button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -234,7 +342,7 @@ export default function Header() {
               <>
                 {/* Overlay */}
                 <motion.div
-                  className="md:hidden mobile-menu-overlay"
+                  className="lg:hidden mobile-menu-overlay"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -242,70 +350,123 @@ export default function Header() {
                   onClick={() => setIsMenuOpen(false)}
                 />
                 {/* Menu Content */}
-                <motion.div 
-                  className="md:hidden mobile-menu-content"
+                <motion.div
+                  className="lg:hidden mobile-menu-content"
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2, ease: "easeOut" }}
                 >
-                <div className="px-4 py-6 space-y-4">
-                  {/* Mobile Navigation Links */}
-                  <div className="space-y-1">
+                  <div className="px-4 py-6 space-y-1">
                     {navigation.map((item) => {
-                      const isActive = activeHref === item.href
-                      return (
-                        <motion.a
-                          key={item.name}
-                          href={item.href}
-                          className={`mobile-nav-item block px-4 py-3 text-sm font-medium transition-all duration-200 rounded-lg relative ${
-                            isActive ? 'text-white' : 'text-gray-700 hover:text-gray-900'
-                          }`}
-                          onClick={(e) => {
-                            handleNavigationClick(item.href, e)
-                            setActiveHref(item.href)
-                            setIsMenuOpen(false)
+                      const isActive = isNavActive(item, currentPath)
 
-                            // Force update after navigation
-                            setTimeout(() => {
-                              const newActiveHref = getActiveHrefFromCurrentRoute()
-                              setActiveHref(newActiveHref)
-                            }, 100)
-                          }}
-                          whileHover={{ x: 4 }}
-                          whileTap={{ scale: 0.98 }}
-                          transition={{ duration: 0.2 }}
-                        >
-                          {isActive && (
-                            <motion.div
-                              layoutId="mobileActiveTab"
-                              className="absolute inset-0 rounded-lg bg-mercury-blue-500 active-tab-shadow"
-                              transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                            />
-                          )}
-                          <span className="relative z-10">{item.name}</span>
-                        </motion.a>
+                      // Simple link
+                      if (item.href) {
+                        return (
+                          <motion.a
+                            key={item.href}
+                            href={item.href}
+                            className={`block px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
+                              isActive
+                                ? 'text-mercury-blue-600 bg-mercury-blue-50'
+                                : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
+                            }`}
+                            onClick={(e) => {
+                              handleNavigationClick(item.href!, e)
+                              setIsMenuOpen(false)
+                            }}
+                            whileHover={{ x: 4 }}
+                            whileTap={{ scale: 0.98 }}
+                          >
+                            {item.name}
+                          </motion.a>
+                        )
+                      }
+
+                      // Dropdown (accordion on mobile)
+                      const isExpanded = mobileExpanded === item.id
+                      return (
+                        <div key={item.id}>
+                          <button
+                            onClick={() => setMobileExpanded(isExpanded ? null : item.id!)}
+                            className={`flex items-center justify-between w-full px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
+                              isActive
+                                ? 'text-mercury-blue-600 bg-mercury-blue-50'
+                                : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
+                            }`}
+                          >
+                            {item.name}
+                            <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                              isExpanded ? 'rotate-180' : ''
+                            }`} />
+                          </button>
+                          <AnimatePresence>
+                            {isExpanded && (
+                              <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: 'auto', opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.2 }}
+                                className="overflow-hidden"
+                              >
+                                <div className="pl-4 py-1 space-y-0.5">
+                                  {item.children?.map((child) => {
+                                    const isExternal = child.href.startsWith('http')
+                                    const isChildActive = !isExternal && currentPath === child.href
+                                    return (
+                                      <a
+                                        key={child.href}
+                                        href={child.href}
+                                        {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                                        onClick={(e) => {
+                                          if (!isExternal) handleNavigationClick(child.href, e)
+                                          setIsMenuOpen(false)
+                                        }}
+                                        className={`flex items-center gap-2.5 px-4 py-2.5 text-sm rounded-lg transition-colors ${
+                                          isChildActive
+                                            ? 'text-mercury-blue-600 bg-mercury-blue-50/50'
+                                            : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                                        }`}
+                                      >
+                                        <ChevronRight className="w-3 h-3 flex-shrink-0 text-gray-400" />
+                                        <div className="flex-1">
+                                          <div className="font-medium">{child.name}</div>
+                                          <div className="text-xs text-gray-400 mt-0.5">{child.description}</div>
+                                        </div>
+                                        {isExternal && (
+                                          <svg className="w-3.5 h-3.5 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                          </svg>
+                                        )}
+                                      </a>
+                                    )
+                                  })}
+                                </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
                       )
                     })}
+
+                    {/* Mobile CTA Button */}
+                    <div className="pt-4 border-t border-gray-100">
+                      <motion.a
+                        href="#contact"
+                        className="inline-flex items-center justify-center w-full px-4 py-3 text-sm font-medium rounded-lg transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mercury-blue-500 bg-white border-2 border-mercury-blue-600 text-mercury-blue-600 hover:bg-mercury-blue-600 hover:text-white shadow-lg hover:shadow-xl"
+                        onClick={(e) => {
+                          handleNavigationClick('#contact', e)
+                          setIsMenuOpen(false)
+                        }}
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        {translations?.common?.getStarted || 'Get Started'}
+                      </motion.a>
+                    </div>
                   </div>
-                  
-                  {/* Mobile CTA Button */}
-                  <div className="pt-4 border-t border-gray-100">
-                    <motion.a 
-                      href="#contact" 
-                      className="inline-flex items-center justify-center w-full px-4 py-3 text-sm font-medium rounded-lg transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mercury-blue-500 bg-white border-2 border-mercury-blue-600 text-mercury-blue-600 hover:bg-mercury-blue-600 hover:text-white shadow-lg hover:shadow-xl"
-                      onClick={(e) => {
-                        handleNavigationClick('#contact', e)
-                        setIsMenuOpen(false)
-                      }}
-                      whileHover={{ scale: 1.02, backgroundColor: '#2563eb', color: '#ffffff' }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      {translations?.common?.getStarted || 'Get Started'}
-                    </motion.a>
-                  </div>
-                </div>
-              </motion.div>
+                </motion.div>
               </>
             )}
           </AnimatePresence>
@@ -313,4 +474,4 @@ export default function Header() {
       </div>
     </header>
   )
-} 
+}

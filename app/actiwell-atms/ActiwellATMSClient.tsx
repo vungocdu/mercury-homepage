@@ -193,7 +193,7 @@ function PhoneMockup({ title, children }: { title: string; children: ReactNode }
 /* ────────────────────────── Component ────────────────────────── */
 
 export default function ActiwellATMSClient() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
   const tx = (key: string, fallback: string): string => {
     const value = t(key)
     return value === key ? fallback : value
@@ -229,29 +229,45 @@ export default function ActiwellATMSClient() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal-300 opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-teal-300" />
               </span>
-              NSCA v3.0 — 35 Sports
+              {tx('actiwellAtms.hero.badge', 'NSCA v3.0 — 35 Sports')}
             </Badge>
 
             {/* Title with ATMS gradient accent */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.1] max-w-5xl">
-              <span className="text-white">Athletic Training</span>
-              <br />
-              <TextHighlight color="rgba(59, 165, 181, 0.3)" delay={0.8} duration={0.8}>
-                <span className="bg-gradient-to-r from-teal-300 via-cyan-300 to-lime-300 bg-clip-text text-transparent">
-                  Management System
-                </span>
-              </TextHighlight>
+              {language === 'en' ? (
+                <>
+                  <span className="text-white">Athletic Training</span>
+                  <br />
+                  <TextHighlight color="rgba(59, 165, 181, 0.3)" delay={0.8} duration={0.8}>
+                    <span className="bg-gradient-to-r from-teal-300 via-cyan-300 to-lime-300 bg-clip-text text-transparent">
+                      Management System
+                    </span>
+                  </TextHighlight>
+                </>
+              ) : (
+                <TextHighlight color="rgba(59, 165, 181, 0.3)" delay={0.8} duration={0.8}>
+                  <span className="bg-gradient-to-r from-teal-300 via-cyan-300 to-lime-300 bg-clip-text text-transparent">
+                    {tx('actiwellAtms.hero.title', 'Athletic Training Management System')}
+                  </span>
+                </TextHighlight>
+              )}
             </h1>
 
             {/* Subtitle */}
-            <p className="mt-6 text-lg md:text-xl text-white/60 max-w-3xl leading-relaxed">
-              Professional sports training platform digitizing athlete development workflows — from{' '}
-              <TextWordCarousel
-                words={['NSCA-standard fitness testing', 'smart periodization', 'ACWR injury prevention', 'data-driven coaching']}
-                interval={2.5}
-                className="text-teal-300 font-semibold"
-              />{' '}
-              to peak performance.
+            <p className="mt-6 text-lg md:text-xl text-white/70 max-w-3xl leading-relaxed">
+              {language === 'en' ? (
+                <>
+                  Professional sports training platform digitizing athlete development workflows — from{' '}
+                  <TextWordCarousel
+                    words={['NSCA-standard fitness testing', 'smart periodization', 'ACWR injury prevention', 'data-driven coaching']}
+                    interval={2.5}
+                    className="text-teal-300 font-semibold"
+                  />{' '}
+                  to peak performance.
+                </>
+              ) : (
+                tx('actiwellAtms.hero.subtitle', 'Professional sports training platform digitizing athlete development workflows — from NSCA-standard fitness testing to peak performance.')
+              )}
             </p>
 
             {/* CTA Buttons */}
@@ -300,13 +316,21 @@ export default function ActiwellATMSClient() {
       <section id="features" className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-14">
-            <p className="text-[#3BA5B5] mb-3 text-sm font-semibold tracking-wider uppercase">Comprehensive Features</p>
+            <p className="text-[#3BA5B5] mb-3 text-sm font-semibold tracking-wider uppercase">{tx('actiwellAtms.modules.title', 'Comprehensive Features')}</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-              9 Core Modules for{' '}
-              <span className="bg-gradient-to-r from-[#3BA5B5] to-[#4BBDC8] bg-clip-text text-transparent">Professional Training</span>
+              {language === 'en' ? (
+                <>
+                  9 Core Modules for{' '}
+                  <span className="bg-gradient-to-r from-[#3BA5B5] to-[#4BBDC8] bg-clip-text text-transparent">Professional Training</span>
+                </>
+              ) : (
+                <span className="bg-gradient-to-r from-[#3BA5B5] to-[#4BBDC8] bg-clip-text text-transparent">
+                  {tx('actiwellAtms.modules.title', '9 Core Modules for Professional Training')}
+                </span>
+              )}
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              A modern sports training management system integrating everything from fitness assessment to periodization and injury prevention.
+              {tx('actiwellAtms.modules.description', 'A modern sports training management system integrating everything from fitness assessment to periodization and injury prevention.')}
             </p>
           </div>
 
@@ -815,13 +839,13 @@ export default function ActiwellATMSClient() {
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-[#2a8a97] hover:bg-gray-100 border-0">
               <Link href="/contact">
-                Get Started
+                {tx('actiwellAtms.cta.contact', 'Get Started')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
               <Link href="/">
-                Back to IT Solutions
+                {tx('actiwellAtms.cta.backToItSolution', 'Back to IT Solutions')}
               </Link>
             </Button>
           </div>

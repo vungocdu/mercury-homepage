@@ -89,16 +89,24 @@ export default function ContainerCalculatorClient() {
       <Header />
 
       {/* ═══════ Hero ═══════ */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-[#0a0e1a]">
+      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden" style={{ background: 'linear-gradient(135deg, #0d0a1a 0%, #150d2a 30%, #1a0f30 60%, #0d0a1a 100%)' }}>
         <div className="absolute inset-0 z-0">
           <MovingDotsBackground />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60 z-[1]" />
+
+        {/* Accent glows */}
+        <div className="absolute inset-0 pointer-events-none z-[1]">
+          <div className="absolute -top-24 left-1/4 h-96 w-96 rounded-full bg-violet-500/10 blur-[140px]" />
+          <div className="absolute bottom-10 right-1/4 h-80 w-80 rounded-full bg-purple-500/8 blur-[120px]" />
+        </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="flex flex-col items-center">
-            <Badge variant="secondary" className="px-4 py-2 mb-8 rounded-full text-sm font-medium bg-white/10 backdrop-blur-sm border border-white/10 text-white/90">
-              <Box className="w-4 h-4 mr-2 text-violet-400" />
+            <Badge variant="secondary" className="px-4 py-2 mb-8 rounded-full text-sm font-medium bg-violet-500/10 backdrop-blur-sm border border-violet-400/20 text-violet-200">
+              <span className="relative mr-2 flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-violet-400 opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-violet-400" />
+              </span>
               {t('contcal.hero.badge')}
             </Badge>
 
@@ -111,7 +119,7 @@ export default function ContainerCalculatorClient() {
               </TextHighlight>
             </h1>
 
-            <p className="text-lg md:text-xl leading-relaxed mb-10 max-w-3xl text-white/60">
+            <p className="text-lg md:text-xl leading-relaxed mb-10 max-w-3xl text-white/80">
               {t('contcal.hero.subtitle')}
             </p>
 
@@ -142,7 +150,7 @@ export default function ContainerCalculatorClient() {
                 <Card key={i} className="bg-white/5 border-white/10 backdrop-blur-sm">
                   <CardContent className="p-4 text-center">
                     <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">{s.num}</div>
-                    <div className="text-xs mt-1 text-white/50">{s.label}</div>
+                    <div className="text-xs mt-1 text-white/60">{s.label}</div>
                   </CardContent>
                 </Card>
               ))}
@@ -216,7 +224,7 @@ export default function ContainerCalculatorClient() {
               {t('contcal.rules.title')}{' '}
               <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">{t('contcal.rules.titleAccent')}</span>
             </h2>
-            <p className="text-xl max-w-3xl mx-auto leading-relaxed text-white/50">
+            <p className="text-xl max-w-3xl mx-auto leading-relaxed text-white/60">
               {t('contcal.rules.subtitle')}
             </p>
           </motion.div>
@@ -339,7 +347,7 @@ export default function ContainerCalculatorClient() {
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
-                    <p className="text-white/50 text-sm leading-relaxed">{item.description}</p>
+                    <p className="text-white/60 text-sm leading-relaxed">{item.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -413,7 +421,7 @@ export default function ContainerCalculatorClient() {
               {t('contcal.cta.title')}{' '}
               <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">{t('contcal.cta.titleAccent')}</span>
             </h2>
-            <p className="text-xl text-white/50 mb-10 leading-relaxed">
+            <p className="text-xl text-white/60 mb-10 leading-relaxed">
               {t('contcal.cta.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -2,7 +2,6 @@ export const en = {
   // Navigation
   nav: {
     home: "Home",
-    aiDigitalTransformation: "AI Digital Transformation",
     digitalMarketing: "Digital Marketing",
     about: "About Us",
     // Legacy navigation items (for backward compatibility)
@@ -32,9 +31,25 @@ export const en = {
     otaCalculator: "OTA Calculator",
     airhub: "Airhub",
     myarm: "MyARM",
-    containerCalculator: "ContCal",
+    containerCalculator: "ContCal 3D",
+    processAndTechnology: "Process & Technology",
     products: "Products",
     contact: "Contact",
+    // System category navigation
+    hrSystem: "HR System",
+    sportSystem: "Sport System",
+    hotelSystem: "Hotel System",
+    bizOperation: "Biz Operation",
+    // Product descriptions for dropdown
+    tnaSystemDesc: "Time & Attendance Management",
+    quickshiftDesc: "Shift & Schedule Management",
+    actiwellPlatformDesc: "Sports Management Platform",
+    actiwellATMSDesc: "Athletic Training Management",
+    minovaPMSDesc: "Property Management System",
+    otaCalculatorDesc: "OTA Commission Calculator",
+    containerCalculatorDesc: "3D Container Packing Optimizer",
+    processAndTechnologyDesc: "Digital Process Solutions",
+    myarmDesc: "Japanese-style Business Management",
   },
 
   // Hero Section
@@ -1394,6 +1409,78 @@ export const en = {
     },
     cta: {
       contact: "Consult With Our Team",
+      backToItSolution: "Back to IT Solutions"
+    }
+  },
+
+  // Actiwell ATMS Page (actiwellAtms)
+  actiwellAtms: {
+    hero: {
+      badge: "Actiwell ATMS",
+      title: "Athletic Training Management System for National-Scale Operations",
+      subtitle: "Actiwell ATMS digitizes operational workflows from standardized testing, testing campaign organization, periodization analysis to role-based access control and multi-branch management.",
+      stats: {
+        tests: "30+ NSCA Standard Tests",
+        roles: "3 Role-Based Portals",
+        multiLocation: "Provincial & National Operations",
+        hybridArch: "Hybrid Next.js + Golang Architecture"
+      }
+    },
+    cooperation: {
+      title: "Implementation Partnership",
+      description: "Solution developed in collaboration with Vietnam National Sports Training Center (HCMC) to support large-scale fitness testing operations and standardized performance data management."
+    },
+    modules: {
+      title: "Core Functional Modules",
+      description: "ATMS connects business requirements and system architecture into a complete operational chain for athlete assessment and development.",
+      items: {
+        athlete360: {
+          title: "360° Athlete Profile",
+          description: "Centralized management of personal records, physical metrics, test history, and development roadmap."
+        },
+        testingProtocols: {
+          title: "NSCA Testing Protocols",
+          description: "Standardized testing workflow with PAR-Q+ screening, medical history, and contraindication controls."
+        },
+        campaignStation: {
+          title: "Testing Campaigns & Station Mode",
+          description: "Large-scale testing operations with rapid station-based data entry, deduplication, and progress tracking."
+        },
+        periodization: {
+          title: "Periodization & Load Analysis",
+          description: "Track volume/intensity planned vs actual to support coaches' professional decision-making."
+        },
+        multiBranch: {
+          title: "Multi-Branch & Transfers",
+          description: "Support athlete/coach transfer management between provincial units and national centers with full history."
+        },
+        securityCompliance: {
+          title: "RBAC, Audit & Compliance",
+          description: "Data-scoped RBAC, critical operation audit trails, and personal data protection compliance."
+        }
+      }
+    },
+    architecture: {
+      title: "Architecture Overview",
+      description: "Platform designed with separated UI, API, and data layers to ensure long-term scalability and maintainability.",
+      layers: {
+        frontend: "Frontend: Next.js App Router with dedicated portals for Admin, Coach, and Athlete.",
+        backend: "Backend: Golang REST API (Gin + OpenAPI) handling business logic, RBAC, and validation.",
+        database: "Data Layer: PostgreSQL managing athlete structure, tests, assignments, and testing campaigns.",
+        integration: "Security & Compliance: JWT, audit trail, data controls per PDPA and NSCA standards."
+      }
+    },
+    standards: {
+      title: "Standards & Governance",
+      items: [
+        "Testing procedures following NSCA guidelines with screening and safety controls.",
+        "RBAC model with Admin, Coach, and Athlete roles.",
+        "Personal and medical data processing per PDPA requirements.",
+        "Audit-ready for assignments, transfers, and result updates."
+      ]
+    },
+    cta: {
+      contact: "Consult With Us",
       backToItSolution: "Back to IT Solutions"
     }
   },

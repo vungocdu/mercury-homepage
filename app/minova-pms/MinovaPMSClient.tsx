@@ -228,16 +228,24 @@ export default function MinovaPMSClient() {
       <Header />
 
       {/* ═══════ Hero ═══════ */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-[#0a0e1a]">
+      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden" style={{ background: 'linear-gradient(135deg, #070d1a 0%, #0a1628 30%, #0d1f35 60%, #070d1a 100%)' }}>
         <div className="absolute inset-0 z-0">
           <MovingDotsBackground />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60 z-[1]" />
+
+        {/* Accent glows */}
+        <div className="absolute inset-0 pointer-events-none z-[1]">
+          <div className="absolute -top-24 left-1/4 h-96 w-96 rounded-full bg-sky-500/10 blur-[140px]" />
+          <div className="absolute bottom-10 right-1/4 h-80 w-80 rounded-full bg-cyan-500/8 blur-[120px]" />
+        </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="flex flex-col items-center">
-            <Badge variant="secondary" className="px-4 py-2 mb-8 rounded-full text-sm font-medium bg-white/10 backdrop-blur-sm border border-white/10 text-white/90">
-              <Hotel className="w-4 h-4 mr-2 text-sky-400" />
+            <Badge variant="secondary" className="px-4 py-2 mb-8 rounded-full text-sm font-medium bg-sky-500/10 backdrop-blur-sm border border-sky-400/20 text-sky-200">
+              <span className="relative mr-2 flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-sky-400" />
+              </span>
               {tr('minovaPms.hero.badge', 'Cloud Property Management System')}
             </Badge>
 
@@ -250,7 +258,7 @@ export default function MinovaPMSClient() {
               </TextHighlight>
             </h1>
 
-            <p className="text-lg md:text-xl leading-relaxed mb-10 max-w-3xl text-white/60">
+            <p className="text-lg md:text-xl leading-relaxed mb-10 max-w-3xl text-white/80">
               {tr('minovaPms.hero.subtitle', 'Enterprise-grade hotel property management — from reservation to checkout. Multi-property support, OTA channel integration, real-time housekeeping, night audit, and multi-gateway payments.')}
             </p>
 
@@ -281,7 +289,7 @@ export default function MinovaPMSClient() {
                 <Card key={i} className="bg-white/5 border-white/10 backdrop-blur-sm">
                   <CardContent className="p-4 text-center">
                     <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">{s.num}</div>
-                    <div className="text-xs mt-1 text-white/50">{s.label}</div>
+                    <div className="text-xs mt-1 text-white/60">{s.label}</div>
                   </CardContent>
                 </Card>
               ))}
@@ -346,7 +354,7 @@ export default function MinovaPMSClient() {
               {tr('minovaPms.guest.title', 'Smart Guest')}{' '}
               <span className="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">{tr('minovaPms.guest.titleAccent', 'Technology')}</span>
             </h2>
-            <p className="text-xl max-w-3xl mx-auto leading-relaxed text-white/50">
+            <p className="text-xl max-w-3xl mx-auto leading-relaxed text-white/60">
               {tr('minovaPms.guest.subtitle', 'Self-service check-in, AI document scanning, express QR checkout, and real-time notifications for modern hospitality.')}
             </p>
           </motion.div>
@@ -645,7 +653,7 @@ export default function MinovaPMSClient() {
               {tr('minovaPms.cta.title', 'Ready to Modernize Your')}{' '}
               <span className="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">{tr('minovaPms.cta.titleAccent', 'Hotel Operations?')}</span>
             </h2>
-            <p className="text-xl text-white/50 mb-10 leading-relaxed">
+            <p className="text-xl text-white/60 mb-10 leading-relaxed">
               {tr('minovaPms.cta.subtitle', 'Get a personalized demo of Minova PMS tailored to your property size and requirements.')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

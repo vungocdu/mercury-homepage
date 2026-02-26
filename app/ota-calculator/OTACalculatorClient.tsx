@@ -184,16 +184,24 @@ export default function OTACalculatorClient() {
       <Header />
 
       {/* ═══════ Hero ═══════ */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-[#0a0e1a]">
+      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden" style={{ background: 'linear-gradient(135deg, #1a0f07 0%, #1f1408 30%, #1a1205 60%, #1a0f07 100%)' }}>
         <div className="absolute inset-0 z-0">
           <MovingDotsBackground />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60 z-[1]" />
+
+        {/* Accent glows */}
+        <div className="absolute inset-0 pointer-events-none z-[1]">
+          <div className="absolute -top-24 left-1/4 h-96 w-96 rounded-full bg-orange-500/10 blur-[140px]" />
+          <div className="absolute bottom-10 right-1/4 h-80 w-80 rounded-full bg-amber-500/8 blur-[120px]" />
+        </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="flex flex-col items-center">
-            <Badge variant="secondary" className="px-4 py-2 mb-8 rounded-full text-sm font-medium bg-white/10 backdrop-blur-sm border border-white/10 text-white/90">
-              <Calculator className="w-4 h-4 mr-2 text-orange-400" />
+            <Badge variant="secondary" className="px-4 py-2 mb-8 rounded-full text-sm font-medium bg-orange-500/10 backdrop-blur-sm border border-orange-400/20 text-orange-200">
+              <span className="relative mr-2 flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-400 opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-orange-400" />
+              </span>
               {tr('otaCalculator.hero.badge', 'Revenue Optimization Tool')}
             </Badge>
 
@@ -206,7 +214,7 @@ export default function OTACalculatorClient() {
               </TextHighlight>
             </h1>
 
-            <p className="text-lg md:text-xl leading-relaxed mb-10 max-w-3xl text-white/60">
+            <p className="text-lg md:text-xl leading-relaxed mb-10 max-w-3xl text-white/80">
               {tr('otaCalculator.hero.subtitle', 'Compare commission structures, discount stacking, and net revenue across 7+ OTA channels. Know exactly what your hotel receives — before you activate any promotion.')}
             </p>
 
@@ -237,7 +245,7 @@ export default function OTACalculatorClient() {
                 <Card key={i} className="bg-white/5 border-white/10 backdrop-blur-sm">
                   <CardContent className="p-4 text-center">
                     <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">{s.num}</div>
-                    <div className="text-xs mt-1 text-white/50">{s.label}</div>
+                    <div className="text-xs mt-1 text-white/60">{s.label}</div>
                   </CardContent>
                 </Card>
               ))}
@@ -302,7 +310,7 @@ export default function OTACalculatorClient() {
               {tr('otaCalculator.methods.title', '4 Distinct')}{' '}
               <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">{tr('otaCalculator.methods.titleAccent', 'Calculation Methods')}</span>
             </h2>
-            <p className="text-xl max-w-3xl mx-auto leading-relaxed text-white/50">
+            <p className="text-xl max-w-3xl mx-auto leading-relaxed text-white/60">
               {tr('otaCalculator.methods.subtitle', 'Each OTA stacks discounts differently. Our engine replicates their exact formulas so you see real numbers — not estimates.')}
             </p>
           </motion.div>
@@ -453,7 +461,7 @@ export default function OTACalculatorClient() {
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
-                    <p className="text-white/50 text-sm leading-relaxed">{item.description}</p>
+                    <p className="text-white/60 text-sm leading-relaxed">{item.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -529,7 +537,7 @@ export default function OTACalculatorClient() {
               {tr('otaCalculator.cta.title', 'Maximize Your')}{' '}
               <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">{tr('otaCalculator.cta.titleAccent', 'Revenue Per Channel')}</span>
             </h2>
-            <p className="text-xl text-white/50 mb-10 leading-relaxed">
+            <p className="text-xl text-white/60 mb-10 leading-relaxed">
               {tr('otaCalculator.cta.subtitle', 'Stop losing margin to hidden discount stacking. Get OTA Calculator and take control of your channel pricing strategy.')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

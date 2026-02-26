@@ -68,16 +68,17 @@ export default function ActiwellPlatformClient() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900">
-        {/* Moving Dots Particle Background — Actiwell Navy/Red brand */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ background: 'linear-gradient(135deg, #0a1218 0%, #0c1f1a 30%, #0d1b2a 60%, #0a1218 100%)' }}>
+        {/* Moving Dots Particle Background — Actiwell Emerald/Teal brand */}
         <div className="absolute inset-0">
           <MovingDotsBackground />
         </div>
 
         {/* Subtle accent glows for depth */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute -top-24 left-1/4 h-80 w-80 rounded-full bg-[#3A3B5C]/15 blur-[120px]" />
-          <div className="absolute bottom-10 right-1/4 h-72 w-72 rounded-full bg-[#C42E2A]/10 blur-[100px]" />
+          <div className="absolute -top-24 left-1/4 h-96 w-96 rounded-full bg-emerald-500/10 blur-[140px]" />
+          <div className="absolute bottom-10 right-1/4 h-80 w-80 rounded-full bg-teal-500/8 blur-[120px]" />
+          <div className="absolute top-1/2 right-1/6 h-64 w-64 rounded-full bg-blue-500/6 blur-[100px]" />
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -92,11 +93,14 @@ export default function ActiwellPlatformClient() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center px-6 py-3 bg-white/5 backdrop-blur-sm border border-white/10 text-white/90 rounded-full text-sm font-semibold mb-10"
+              className="inline-flex items-center px-6 py-3 bg-emerald-500/10 backdrop-blur-sm border border-emerald-400/20 text-emerald-200 rounded-full text-sm font-semibold mb-10"
             >
-              <Dumbbell className="w-5 h-5 mr-3 text-emerald-400" />
+              <span className="relative mr-2.5 flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+              </span>
               {t('actiwell.hero.badge')}
-              <Sparkles className="w-4 h-4 ml-3 text-amber-400 animate-pulse" />
+              <Sparkles className="w-4 h-4 ml-3 text-emerald-300 animate-pulse" />
             </motion.div>
 
             {/* Title */}
@@ -104,14 +108,14 @@ export default function ActiwellPlatformClient() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-4xl lg:text-6xl font-bold mb-6 leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 tracking-tight leading-[1.1]"
             >
               <span className="text-white">
                 {t('actiwell.hero.title1')}
               </span>
               <br />
-              <TextHighlight color="rgba(52, 211, 153, 0.3)" delay={0.8} duration={0.8}>
-                <span className="bg-gradient-to-r from-emerald-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+              <TextHighlight color="rgba(16, 185, 129, 0.25)" delay={0.8} duration={0.8}>
+                <span className="bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-400 bg-clip-text text-transparent">
                   {t('actiwell.hero.title2')}
                 </span>
               </TextHighlight>
@@ -122,13 +126,13 @@ export default function ActiwellPlatformClient() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-lg lg:text-xl text-white/60 mb-12 leading-relaxed max-w-3xl mx-auto"
+              className="text-lg md:text-xl text-white/70 mb-12 leading-relaxed max-w-3xl mx-auto"
             >
               {t('actiwell.hero.subtitle')}{' '}
               <TextWordCarousel
                 words={['Customer App', 'Business App', 'Management CMS', 'AI Intelligence']}
                 interval={2.5}
-                className="text-emerald-400 font-semibold"
+                className="text-emerald-300 font-semibold"
               />
             </motion.p>
 
@@ -137,7 +141,7 @@ export default function ActiwellPlatformClient() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto"
+              className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto w-full"
             >
               {[
                 { number: '2', label: t('actiwell.hero.stats.apps') },
@@ -150,9 +154,9 @@ export default function ActiwellPlatformClient() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
-                  className="text-center"
+                  className="group rounded-xl border border-emerald-500/15 bg-white/[0.03] backdrop-blur-sm px-4 py-5 text-center transition-colors hover:bg-white/[0.06] hover:border-emerald-400/25"
                 >
-                  <div className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
+                  <div className="text-3xl font-bold bg-gradient-to-b from-emerald-300 to-teal-400 bg-clip-text text-transparent">
                     {stat.number}
                   </div>
                   <div className="text-sm text-white/50 mt-1">{stat.label}</div>
@@ -181,6 +185,9 @@ export default function ActiwellPlatformClient() {
             </motion.div>
           </motion.div>
         </div>
+
+        {/* Gradient border bottom */}
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/40 to-transparent" />
       </section>
 
       {/* Partnership Section */}
@@ -199,7 +206,7 @@ export default function ActiwellPlatformClient() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="inline-flex items-center px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm font-semibold mb-6"
+                className="inline-flex items-center px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm font-semibold mb-6 border border-emerald-100"
               >
                 <Heart className="w-4 h-4 mr-2" />
                 {t('actiwell.partnership.badge')}
@@ -958,7 +965,7 @@ export default function ActiwellPlatformClient() {
       </section>
 
       {/* Business Value Section */}
-      <section className="py-24 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 relative overflow-hidden">
+      <section className="py-24 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0a1218 0%, #0c1f1a 30%, #0d1b2a 60%, #0a1218 100%)' }}>
         {/* Background decoration */}
         <div className="absolute inset-0">
           <motion.div
@@ -984,7 +991,7 @@ export default function ActiwellPlatformClient() {
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
               {t('actiwell.value.title')}
             </h2>
-            <p className="text-lg text-white/60 max-w-3xl mx-auto">
+            <p className="text-lg text-white/70 max-w-3xl mx-auto">
               {t('actiwell.value.description')}
             </p>
           </motion.div>
@@ -1009,7 +1016,7 @@ export default function ActiwellPlatformClient() {
                 <h3 className="text-xl font-bold text-white mb-3">
                   {t(`actiwell.value.items.${item.key}.title`)}
                 </h3>
-                <p className="text-white/60 leading-relaxed">
+                <p className="text-white/70 leading-relaxed">
                   {t(`actiwell.value.items.${item.key}.desc`)}
                 </p>
               </motion.div>

@@ -2,7 +2,6 @@ export const ja = {
   // Navigation
   nav: {
     home: "ホーム",
-    aiDigitalTransformation: "AI デジタル変革",
     digitalMarketing: "デジタルマーケティング",
     about: "私たちについて",
     // Legacy navigation items (for backward compatibility)
@@ -14,6 +13,31 @@ export const ja = {
     portfolio: "ポートフォリオ",
     ourAdvantage: "私たちの強み",
     softwareServices: "ソフトウェアサービス",
+    // System category navigation
+    hrSystem: "HR System",
+    sportSystem: "Sport System",
+    hotelSystem: "Hotel System",
+    bizOperation: "Biz Operation",
+    // Product names
+    tnaSystem: "TNA HRM System",
+    quickshift: "QuickShift",
+    actiwellPlatform: "Actiwell Platform",
+    actiwellATMS: "Actiwell ATMS",
+    minovaPMS: "Minova PMS",
+    otaCalculator: "OTA Calculator",
+    containerCalculator: "ContCal 3D",
+    processAndTechnology: "プロセス＆テクノロジー",
+    // Product descriptions for dropdown
+    tnaSystemDesc: "勤怠管理システム",
+    quickshiftDesc: "シフト管理システム",
+    actiwellPlatformDesc: "スポーツ管理プラットフォーム",
+    actiwellATMSDesc: "アスリートトレーニング管理",
+    minovaPMSDesc: "ホテル管理システム",
+    otaCalculatorDesc: "OTA手数料計算ツール",
+    containerCalculatorDesc: "3Dコンテナ積載最適化",
+    processAndTechnologyDesc: "デジタルプロセスソリューション",
+    myarm: "MyARM",
+    myarmDesc: "日本式ビジネス管理ソリューション",
   },
 
   // Hero Section
@@ -1298,6 +1322,140 @@ export const ja = {
       contact: "チームに相談する",
       backToItSolution: "IT Solutionsに戻る"
     }
+  },
+
+  // QuickShift Page
+  quickshift: {
+    hero: {
+      badge: "AI搭載ワークフォース管理",
+      title: "タスクフォース管理プラットフォーム",
+      subtitle: "AIタイムカードスキャンと自動スケジューリングから請求書発行、マルチチャネル通知まで — エンドツーエンドの人材派遣ソリューション。日本の人材派遣会社向けに構築。",
+      cta: {
+        explore: "モジュールを見る",
+        apps: "モバイルアプリ",
+      },
+      stats: {
+        modules: "コアモジュール",
+        apps: "モバイルアプリ",
+        permissions: "RBAC権限",
+        migrations: "DBマイグレーション",
+      },
+    },
+    modules: {
+      badge: "プラットフォームモジュール",
+      title1: "ワークフォース管理に",
+      title2: "必要なすべて",
+      subtitle: "オンボーディングから請求書発行まで、人材派遣ライフサイクル全体をカバーする8つの統合モジュール。",
+      items: {
+        timecardOcr: { title: "タイムカードOCR", desc: "Gemini AIを活用したAIタイムカードスキャン。紙のタイムカードから勤務時間、残業、休憩データを高精度で自動抽出。" },
+        autoShifter: { title: "オートシフター", desc: "作業者の空き状況、スキル、場所、労働規制に基づいて最適なシフト割り当てを自動生成するAIスケジューリングエンジン。" },
+        workOrders: { title: "作業指示", desc: "作業指示のライフサイクル管理 — 作成、割り当て、追跡、完了。定期注文、テンプレート、マルチサイト運用をサポート。" },
+        workerMgmt: { title: "作業者管理", desc: "スキル、資格、空き状況カレンダー、契約履歴、パフォーマンス追跡を含む包括的な作業者プロフィール。" },
+        customerMgmt: { title: "顧客管理", desc: "人材派遣クライアント向けCRM — 契約、請求設定、サイト場所、必要スキルセット、関係履歴。" },
+        dashboard: { title: "ダッシュボード＆分析", desc: "4つの専門ダッシュボード：運用概要、財務サマリー、作業者稼働率、顧客インサイトとリアルタイムKPI。" },
+        invoicing: { title: "請求書＆課金", desc: "タイムカードからの自動請求書生成、カスタマイズ可能な請求テンプレート、支払い追跡、会計システム連携。" },
+        notifications: { title: "マルチチャネル通知", desc: "FCM/APNsによるプッシュ通知、LINE・Zalo・WhatsApp連携による作業者・顧客コミュニケーション。" },
+      },
+    },
+    ai: {
+      badge: "AI搭載",
+      title1: "すべてのステップに",
+      title2: "知能を組み込み",
+      ocr: {
+        title: "タイムカードOCR",
+        desc: "Google Gemini AIを搭載したOCRエンジンが紙のタイムカードをスキャンし自動抽出：",
+        items: ["勤務時間＆残業", "休憩時間", "開始/終了タイムスタンプ", "作業者識別", "異常検知"],
+      },
+      shifter: {
+        title: "オートシフター",
+        desc: "複数の要素を考慮して最適なシフト割り当てを生成するAIスケジューリングエンジン：",
+        items: ["作業者のスキル＆資格", "場所の近接性", "労働法準拠", "空き状況の希望", "公平分配アルゴリズム"],
+      },
+    },
+    roles: {
+      badge: "ロールベースアクセス",
+      title1: "5つのロール、",
+      title2: "63の詳細権限",
+      subtitle: "きめ細かなアクセス制御で、各チームメンバーが必要なものだけを確認 — それ以上でもそれ以下でもなく。",
+      items: {
+        superAdmin: { title: "スーパー管理者", desc: "組織設定、ユーザー管理、監査ログを含むフルシステムアクセス。", permissions: "全63権限" },
+        admin: { title: "管理者", desc: "全支店の作業者、顧客、作業指示、請求書を管理。", permissions: "50以上の権限" },
+        manager: { title: "マネージャー", desc: "日常業務の監督、タイムカード承認、スケジュール管理、レポート作成。", permissions: "35以上の権限" },
+        staff: { title: "スタッフ", desc: "作業指示の作成・更新、タイムカード処理、作業者割り当て。", permissions: "20以上の権限" },
+        viewer: { title: "閲覧者", desc: "ダッシュボード、レポート、運用データの読み取り専用アクセス。", permissions: "閲覧のみ" },
+      },
+    },
+    mobile: {
+      badge: "モバイルアプリケーション",
+      flutterBadge: "Flutter・Melosモノレポ・iOS＆Android対応",
+      worker: {
+        title: "作業者アプリ",
+        subtitle: "スケジュール、タイムカード＆空き状況",
+        features: [
+          "リアルタイムステータスと場所詳細付きの割り当てシフトを表示",
+          "出退勤と休憩追跡付きのタイムカードを提出",
+          "週間空き状況の設定と休暇申請",
+          "新しい割り当てとスケジュール変更のプッシュ通知を受信",
+          "収入履歴と支払い状況を確認",
+        ],
+        stats: { loadTime: "読み込み時間", clockIn: "出退勤", pushAlerts: "プッシュ通知" },
+      },
+      customer: {
+        title: "顧客アプリ",
+        subtitle: "作業指示、承認＆請求",
+        features: [
+          "作業者スキル要件付きの作業指示を作成・管理",
+          "全割り当て作業者とサイトのリアルタイムステータスを追跡",
+          "ワンタップ一括操作でタイムカードを承認または異議申し立て",
+          "請求書、支払い履歴、未払い残高を確認",
+          "作業者パフォーマンスを評価し優先作業者をリクエスト",
+        ],
+        stats: { bulkApprove: "一括承認", orderTracking: "注文追跡", invoicing: "請求書" },
+      },
+      business: {
+        title: "ビジネス/HRアプリ",
+        subtitle: "運用、派遣＆分析",
+        features: [
+          "KPIと充填率付きのリアルタイム運用ダッシュボード",
+          "サイト全体のオープンポジションへのワンクリック作業者派遣",
+          "AI生成スケジュール用オートシフター連携",
+          "収益追跡と請求書ステータス付きの財務概要",
+          "日次、週次、月次の運用レポートを生成",
+        ],
+        stats: { dashboard: "ダッシュボード", autoShifter: "オートシフター", export: "エクスポート" },
+      },
+    },
+    integrations: {
+      badge: "連携ハブ",
+      title1: "既存ツールと",
+      title2: "連携",
+      items: {
+        odoo: { name: "Odoo ERP", desc: "会計、HR、在庫の双方向同期" },
+        payment: { name: "決済ゲートウェイ", desc: "Stripe、PayPay、銀行振込自動化" },
+        messaging: { name: "LINE / Zalo / WhatsApp", desc: "マルチチャネルメッセージング＆通知" },
+        aws: { name: "AWSインフラ", desc: "EC2、RDS、S3、CloudFront、Lambda、ALB" },
+      },
+    },
+    tech: {
+      badge: "テクノロジー",
+      title1: "最新技術で",
+      title2: "構築",
+      items: {
+        cms: { label: "CMSフロントエンド", tech: "Next.js 16・React 19・Tailwind v4・shadcn/ui" },
+        mobile: { label: "モバイルアプリ", tech: "Flutter・Melosモノレポ・3アプリ" },
+        backend: { label: "バックエンドAPI", tech: "Go (Chiルーター)・DDDアーキテクチャ・PostgreSQL" },
+        ai: { label: "AI / ML", tech: "Google Gemini AI・OCR・自動スケジューリング" },
+        infra: { label: "インフラ", tech: "AWS・Docker・Supabase Auth・S3" },
+        db: { label: "データベース", tech: "PostgreSQL・110以上のマイグレーション・Redisキャッシュ" },
+      },
+    },
+    cta: {
+      title: "人材派遣業務を",
+      titleAccent: "デジタル化しませんか？",
+      subtitle: "QuickShiftがワークフォース管理を効率化し、手作業プロセスを排除する方法について、ぜひご相談ください。",
+      getStarted: "始めましょう",
+      viewAll: "全プロジェクトを見る",
+    },
   },
 
   // TNA System Page
