@@ -4,24 +4,29 @@ import QuickShiftPrivacyClient from './QuickShiftPrivacyClient'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy & User Privacy Choices — QuickShift | Mercury Solutions',
+  title: 'Privacy Policy, User Privacy Choices & Account Deletion — QuickShift | Mercury Solutions Vietnam',
   description:
-    'QuickShift Privacy Policy: learn how we collect, use, and protect your data. Manage your privacy choices — access, modify, or delete your personal data at any time.',
+    'QuickShift Privacy Policy by Mercury Solutions Vietnam. Comprehensive data collection disclosure, Apple App Store privacy labels, account deletion instructions, third-party SDK details, GDPR & PDPA compliance. Access, modify, or permanently delete your personal data.',
   keywords: [
     'QuickShift privacy policy',
+    'QuickShift account deletion',
+    'QuickShift data deletion',
+    'app privacy policy',
+    'Apple App Store privacy',
     'user privacy choices',
     'data deletion request',
-    'personal data management',
     'GDPR compliance',
     'PDPA compliance',
-    'Mercury Solutions privacy',
-    'staffing app privacy',
+    'Mercury Solutions Vietnam privacy',
     'workforce data protection',
+    'app store privacy labels',
+    'third party SDK disclosure',
+    'HR Tech privacy',
   ],
   openGraph: {
-    title: 'Privacy Policy & User Privacy Choices — QuickShift',
+    title: 'Privacy Policy, Account Deletion & Privacy Choices — QuickShift',
     description:
-      'Understand how QuickShift handles your data. Access, modify, or request deletion of your personal information.',
+      'QuickShift comprehensive privacy policy: data collection, third-party SDKs, Apple privacy labels, account deletion, GDPR/PDPA rights.',
     url: 'https://www.mercurysolutions.vn/quickshift/privacy',
   },
 }

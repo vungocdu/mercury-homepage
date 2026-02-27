@@ -4,24 +4,30 @@ import QuickShiftClient from './QuickShiftClient'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'QuickShift | AI-Powered Task Force Management Platform',
+  title: 'QuickShift | HR Tech AI-Powered Workforce & Staffing Management Platform',
   description:
-    'QuickShift digitizes temporary staffing operations with AI Timecard OCR, automated shift scheduling, work order management, invoicing, and multi-channel notifications for staffing agencies.',
+    'QuickShift — HR Tech platform by Mercury Solutions. AI-powered temporary staffing management with Timecard OCR, automated shift scheduling, work order management, invoicing automation, and multi-channel notifications for staffing agencies.',
   keywords: [
+    'HR Tech',
     'QuickShift',
-    'task force management',
+    'workforce management platform',
     'staffing agency software',
-    'timecard OCR',
-    'shift scheduling',
-    'workforce management',
-    'temporary staffing',
+    'AI timecard OCR',
+    'shift scheduling system',
+    'temporary staffing technology',
+    'HR technology',
+    'human resource tech',
     'invoicing automation',
-    'Mercury Solutions',
+    'labor management software',
+    'gig economy platform',
+    'staffing operations',
+    'Mercury Solutions HR Tech',
+    'Vietnam HR technology',
   ],
   openGraph: {
-    title: 'QuickShift | AI-Powered Task Force Management Platform',
+    title: 'QuickShift | HR Tech AI-Powered Workforce Management Platform',
     description:
-      'End-to-end temporary staffing platform with AI OCR, auto scheduling, work orders, invoicing, and 3 dedicated mobile apps for workers, customers, and business managers.',
+      'HR Tech staffing platform with AI OCR, auto scheduling, work orders, invoicing, and 3 dedicated mobile apps for workers, customers & managers.',
     url: 'https://www.mercurysolutions.vn/quickshift',
   },
 }

@@ -4,27 +4,32 @@ import MinovaPMSClient from './MinovaPMSClient'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Minova PMS | Cloud Property Management System',
+  title: 'Minova PMS | Hotel Tech Cloud Property Management System',
   description:
-    'Minova PMS — enterprise-grade cloud Property Management System for hotels and resorts. Complete reservation lifecycle, multi-channel OTA integration, real-time housekeeping, night audit, VNPay & MoMo payments, and AI-powered guest experience.',
+    'Minova PMS — Hotel Tech cloud Property Management System by Mercury Solutions. AI-powered hotel operations with reservation lifecycle, multi-channel OTA integration, real-time housekeeping, night audit, VNPay & MoMo payments, and smart guest experience.',
   keywords: [
+    'Hotel Tech',
     'Minova PMS',
     'Property Management System',
     'hotel management software',
+    'cloud PMS',
+    'hotel technology',
     'reservation system',
     'channel manager',
     'OTA integration',
-    'night audit',
+    'night audit system',
     'housekeeping management',
-    'VNPay',
-    'MoMo payment',
-    'hotel technology',
-    'Minova Group',
+    'hotel revenue management',
+    'VNPay hotel',
+    'MoMo payment hotel',
+    'AI hotel management',
+    'Vietnam Hotel Tech',
+    'Mercury Solutions',
   ],
   openGraph: {
-    title: 'Minova PMS | Cloud Property Management System',
+    title: 'Minova PMS | Hotel Tech Cloud Property Management System',
     description:
-      'Enterprise-grade cloud PMS with reservation management, OTA channel integration, real-time housekeeping, night audit, and multi-gateway payments for hotels and resorts.',
+      'Hotel Tech cloud PMS with AI-powered reservation management, OTA channel integration, real-time housekeeping, night audit & multi-gateway payments.',
     url: 'https://www.mercurysolutions.vn/minova-pms',
   },
 }

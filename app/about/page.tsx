@@ -5,27 +5,30 @@ import AboutPageClient from './AboutPageClient'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Về chúng tôi - Mercury Solutions Vietnam Company Limited | Công ty Công nghệ & Truyền thông',
-  description: 'Công ty TNHH Mercury Solutions Việt Nam - Đơn vị tiên phong về giải pháp AI, Digital Transformation và Video Production. Địa chỉ: Tầng 5, số nhà 33/41 Thái Hà, Phường Đống Đa, TP Hà Nội. MST: 0110235195.',
+  title: 'Về chúng tôi - Mercury Solutions Vietnam | Công ty Phần mềm AI, HR Tech, Sport Tech',
+  description: 'Công ty TNHH Mercury Solutions Việt Nam - Đơn vị tiên phong về phát triển phần mềm AI, HR Tech, Sport Tech, Hotel Tech & DevOps. Giải pháp SaaS, ứng dụng mobile, chuyển đổi số toàn diện. MST: 0110235195. Địa chỉ: Tầng 5, 33/41 Thái Hà, Đống Đa, Hà Nội.',
   keywords: [
     'Mercury Solutions Vietnam Company Limited',
-    'MERCURY SOLUTIONS VIETNAM COMPANY LIMITED',
-    'về chúng tôi',
+    'công ty phần mềm AI Vietnam',
+    'HR Tech Vietnam',
+    'Sport Tech company',
+    'Hotel Tech Vietnam',
     'about Mercury Solutions',
-    'công ty công nghệ',
-    'AI solutions',
+    'AI software development',
+    'DevOps solutions',
     'digital transformation',
-    'video production',
+    'SaaS platform Vietnam',
+    'custom software development',
     'Vietnam technology company',
-    'Hanoi technology company',
-    'tầm nhìn sứ mệnh',
-    'vision mission',
-    'brand story'
+    'Hanoi software company',
+    'công ty công nghệ Hà Nội',
+    'phát triển phần mềm',
+    'giải pháp AI'
   ],
   openGraph: {
-    title: 'Về chúng tôi - Mercury Solutions Vietnam Company Limited | Công ty Công nghệ & Truyền thông',
-    description: 'Mercury Solutions Vietnam Company Limited - Đơn vị tiên phong về giải pháp AI, Digital Transformation và Video Production. Đột Phá Công Nghệ, Vững Vàng Thương Hiệu.',
-    url: 'https://mercurysolutions.vn/about',
+    title: 'Về chúng tôi - Mercury Solutions Vietnam | AI Software, HR Tech, Sport Tech',
+    description: 'Mercury Solutions Vietnam — AI-powered software development. HR Tech, Sport Tech, Hotel Tech platforms & DevOps solutions for enterprises.',
+    url: 'https://www.mercurysolutions.vn/about',
   },
 }
 
