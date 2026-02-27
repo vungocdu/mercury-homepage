@@ -151,9 +151,9 @@ export const ja = {
     },
     companyInfo: {
       name: "MERCURY SOLUTIONS VIETNAM COMPANY LIMITED",
-      address: "ベトナム、ハノイ市ドンダー区チュンリエット区タイハ通り33/41号5階",
-      taxCode: "0123456789",
-      phone: "+84 (0)28 3xxx xxxx",
+      address: "ベトナム、ハノイ市ドンダー区タイハ通り33/41号5階",
+      taxCode: "0110235195",
+      phone: "024 6663 6480",
       email: "info@mercurysolutions.vn",
       founded: "2020"
     },

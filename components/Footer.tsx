@@ -26,7 +26,7 @@ export default function Footer() {
                   <MapPin className="w-5 h-5 text-mercury-gold-400" />
                 </div>
                 <span className="text-gray-200">
-                  {translations?.contact?.info?.address || 'Ho Chi Minh City, Vietnam'}
+                  {translations?.contact?.info?.address || '5F, 33/41 Thai Ha, Dong Da, Hanoi'}
                 </span>
               </div>
               <div className="flex items-center space-x-4">
@@ -34,7 +34,7 @@ export default function Footer() {
                   <Phone className="w-5 h-5 text-mercury-gold-400" />
                 </div>
                 <span className="text-gray-200">
-                  {translations?.contact?.info?.phone || '+84 123 456 789'}
+                  {translations?.contact?.info?.phone || '024 6663 6480'}
                 </span>
               </div>
               <div className="flex items-center space-x-4">
@@ -42,7 +42,7 @@ export default function Footer() {
                   <Mail className="w-5 h-5 text-mercury-gold-400" />
                 </div>
                 <span className="text-gray-200">
-                  {translations?.contact?.info?.email || 'contact@mercurysolutions.vn'}
+                  {translations?.contact?.info?.email || 'info@mercurysolutions.vn'}
                 </span>
               </div>
             </div>

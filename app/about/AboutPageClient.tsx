@@ -27,19 +27,19 @@ export default function AboutPageClient() {
     {
       icon: MapPin,
       label: aboutSection?.company?.address || "Address",
-      value: aboutSection?.companyInfo?.address || "5th Floor, 33/41 Thai Ha Street, Trung Liet Ward, Dong Da District, Hanoi City, Vietnam",
+      value: aboutSection?.companyInfo?.address || "5th Floor, 33/41 Thai Ha Street, Dong Da District, Hanoi City, Vietnam",
       gradient: "from-mercury-gold-500 to-mercury-gold-600"
     },
     {
       icon: FileText,
       label: aboutSection?.company?.taxCode || "Tax Code",
-      value: aboutSection?.companyInfo?.taxCode || "0123456789",
+      value: aboutSection?.companyInfo?.taxCode || "0110235195",
       gradient: "from-blue-500 to-purple-600"
     },
     {
       icon: Phone,
       label: aboutSection?.company?.phone || "Phone",
-      value: aboutSection?.companyInfo?.phone || "+84 (0)28 3xxx xxxx",
+      value: aboutSection?.companyInfo?.phone || "024 6663 6480",
       gradient: "from-green-500 to-teal-600"
     },
     {

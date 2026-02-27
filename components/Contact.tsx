@@ -103,7 +103,7 @@ export default function Contact() {
       icon: MapPin,
       title: t('contact.info.address'),
       details: [
-        '33 Ng. 41 P. Thai Ha, Trung Liet,',
+        '5F, 33/41 Thai Ha Street,',
         'Dong Da, Hanoi, Vietnam'
       ],
       color: 'from-mercury-gold-500 to-mercury-gold-600'
@@ -112,8 +112,8 @@ export default function Contact() {
       icon: Phone,
       title: t('contact.info.phone'),
       details: [
-        '+84 24 1234 5678',
-        'info@mercury-solutions.vn'
+        '024 6663 6480',
+        'info@mercurysolutions.vn'
       ],
       color: 'from-mercury-blue-600 to-mercury-blue-700'
     }

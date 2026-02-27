@@ -159,13 +159,13 @@ export default function PrivacyPageClient() {
                 <span className="text-gray-800 font-semibold">privacy@mercurysolutions.vn</span>
               </motion.a>
 
-              <motion.a 
-                href="tel:+84283xxxxxx"
+              <motion.a
+                href="tel:+842466636480"
                 className="flex items-center justify-center space-x-3 p-4 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-mercury-blue-200"
                 whileHover={{ y: -2 }}
               >
                 <Phone className="w-6 h-6 text-mercury-blue-600" />
-                <span className="text-gray-800 font-semibold">+84 (0)28 3xxx xxxx</span>
+                <span className="text-gray-800 font-semibold">024 6663 6480</span>
               </motion.a>
             </div>
           </motion.div>

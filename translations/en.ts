@@ -163,9 +163,9 @@ export const en = {
     },
     companyInfo: {
       name: "MERCURY SOLUTIONS VIETNAM COMPANY LIMITED",
-      address: "5th Floor, 33/41 Thai Ha Street, Trung Liet Ward, Dong Da District, Hanoi City, Vietnam",
-      taxCode: "0123456789",
-      phone: "+84 (0)28 3xxx xxxx",
+      address: "5th Floor, 33/41 Thai Ha Street, Dong Da District, Hanoi City, Vietnam",
+      taxCode: "0110235195",
+      phone: "024 6663 6480",
       email: "info@mercurysolutions.vn",
       founded: "2020"
     },

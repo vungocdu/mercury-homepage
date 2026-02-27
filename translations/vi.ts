@@ -151,10 +151,10 @@ export const vi = {
       founded: "Năm thành lập"
     },
     companyInfo: {
-      name: "MERCURY SOLUTIONS VIETNAM COMPANY LIMITED",
-      address: "Tầng 5, số nhà 33/41 Thái Hà, Phường Trung Liệt, Quận Đống Đa, Thành phố Hà Nội, Việt Nam",
-      taxCode: "0123456789",
-      phone: "+84 (0)28 3xxx xxxx",
+      name: "CÔNG TY TNHH MERCURY SOLUTIONS VIỆT NAM",
+      address: "Tầng 5, số nhà 33/41 Thái Hà, Phường Đống Đa, TP Hà Nội",
+      taxCode: "0110235195",
+      phone: "024 6663 6480",
       email: "info@mercurysolutions.vn",
       founded: "2020"
     },

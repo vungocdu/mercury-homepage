@@ -6,7 +6,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Về chúng tôi - Mercury Solutions Vietnam Company Limited | Công ty Công nghệ & Truyền thông',
-  description: 'Mercury Solutions Vietnam Company Limited - Đơn vị tiên phong về giải pháp AI, Digital Transformation và Video Production. Địa chỉ: Tầng 5, số nhà 33/41 Thái Hà, Phường Trung Liệt, Quận Đống Đa, Thành phố Hà Nội, Việt Nam.',
+  description: 'Công ty TNHH Mercury Solutions Việt Nam - Đơn vị tiên phong về giải pháp AI, Digital Transformation và Video Production. Địa chỉ: Tầng 5, số nhà 33/41 Thái Hà, Phường Đống Đa, TP Hà Nội. MST: 0110235195.',
   keywords: [
     'Mercury Solutions Vietnam Company Limited',
     'MERCURY SOLUTIONS VIETNAM COMPANY LIMITED',
