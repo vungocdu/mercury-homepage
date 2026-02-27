@@ -1324,6 +1324,174 @@ export const ko = {
     }
   },
 
+  // Actiwell ATMS Page (actiwellAtms)
+  actiwellAtms: {
+    hero: {
+      badge: "NSCA v3.0 — 35 스포츠",
+      title: "운동 훈련 관리 시스템",
+      subtitle: "NSCA 표준 체력 테스트부터 최고 성과까지, 선수 육성 워크플로를 디지털화하는 전문 스포츠 훈련 플랫폼.",
+      ctaExplore: "기능 탐색",
+      ctaPortals: "3개 포털 보기",
+      stats: {
+        tests: "NSCA 테스트",
+        categories: "평가 카테고리",
+        sports: "지원 스포츠",
+        management: "선수 관리",
+      }
+    },
+    modules: {
+      sectionLabel: "종합 기능",
+      title: "전문 훈련을 위한 9개 핵심 모듈",
+      description: "체력 평가부터 주기화 계획 및 부상 예방까지 모든 것을 통합한 현대적 스포츠 훈련 관리 시스템.",
+      items: [
+        { title: "NSCA 표준 테스트", description: "CV% 신뢰도, 5단계 분류, 기준 데이터 비교를 갖춘 NSCA v3.0 표준의 30개 이상 체력 테스트." },
+        { title: "360° 선수 관리", description: "개인 프로필, 체력, 심리, 영양부터 경력 계획 및 LTAD(장기 선수 육성)까지 포괄적 관리." },
+        { title: "스마트 주기화", description: "매크로/메소/마이크로 사이클 수준의 훈련 계획 설계, 볼륨-강도 추적, ACWR 모니터링, 과부하 감지." },
+        { title: "세션 관리", description: "훈련 세션 스케줄링, 출석 관리, RPE/sRPE 기록, 훈련 계획별 출석 추세 추적." },
+        { title: "건강 및 부상 추적", description: "PAR-Q+ 스크리닝, 회복 마일스톤이 포함된 부상 추적, 금기사항 확인, 경기 복귀 프로토콜." },
+        { title: "영양 관리", description: "목표별 식단 템플릿(근육 증가/지방 감소/회복), 매크로 영양소 추적, 스포츠별 프로필, 준수 모니터링." },
+        { title: "코치 부하 관리", description: "역할별 부하(수석/보조/전문가)를 통한 코치 배정, 스마트 제안, 과부하 방지." },
+        { title: "테스트 캠페인", description: "장소 스케줄링, 출석 추적, 일괄 결과 기록, 보고서 생성을 통한 대규모 테스트 조직화." },
+        { title: "분석 및 보고서", description: "다차원 대시보드(출석, 성과, 영양, 건강), KPI 추적, 추세 분석, PDF/Excel 내보내기." },
+      ]
+    },
+    testCategories: {
+      sectionLabel: "NSCA 테스트 카테고리",
+      title: "9개 카테고리",
+      titleSuffix: "30개 이상의 테스트",
+      description: "CV% 신뢰도, 기준 데이터, 5단계 분류를 갖춘 NSCA v3.0 준수 종합 체력 테스트 시스템.",
+      complianceBadge: "NSCA v3.0 표준 100% 준수",
+      categories: [
+        { title: "인체 측정", tests: ["신장", "체중", "체지방률", "BMI", "허리-엉덩이 비율"] },
+        { title: "활력 징후", tests: ["안정시 심박수", "혈압", "금기사항 확인"] },
+        { title: "민첩성", tests: ["프로 어질리티 5-10-5", "T-테스트", "일리노이 어질리티", "헥사고날 점프"] },
+        { title: "파워", tests: ["스쿼트 점프", "CMJ", "수직 점프", "제자리 멀리뛰기", "윈게이트 테스트"] },
+        { title: "속도", tests: ["5m 스프린트", "10m 스프린트", "20m 스프린트", "40야드 대시", "풋 태핑"] },
+        { title: "근력", tests: ["1RM 벤치 프레스", "1RM 스쿼트", "1RM 데드리프트", "악력"] },
+        { title: "근지구력", tests: ["YMCA 벤치 프레스", "푸시업 테스트", "컬업 테스트", "코어 안정성"] },
+        { title: "심혈관", tests: ["YMCA 사이클 테스트", "1.5마일 달리기", "쿠퍼 12분", "Yo-Yo IR1"] },
+        { title: "유연성 및 균형", tests: ["앉아서 앞으로 굽히기", "어깨 유연성", "황새 서기", "Y-밸런스"] },
+      ]
+    },
+    problemSolution: {
+      sectionLabel: "문제 및 해결책",
+      titleManual: "수동",
+      titleAutomated: "자동화",
+      problemsTitle: "현재 문제점",
+      solutionsTitle: "ATMS 솔루션",
+      problems: [
+        { title: "수동 기록 관리", detail: "선수 데이터가 Excel, 종이에 분산 — 검색이 어렵고 오류 발생 가능" },
+        { title: "통일된 테스트 표준 없음", detail: "각 코치가 다르게 평가하며 비교용 기준 데이터 없음" },
+        { title: "주관적 체력 평가", detail: "CV% 신뢰도 없음 — 국제 표준에 따른 정확한 분류 불가능" },
+        { title: "부상 위험 감지 없음", detail: "훈련 중 ACWR 추적이나 금기사항 확인 없음" },
+        { title: "수동 주기화", detail: "매크로/메소/마이크로 사이클 계획 및 훈련 부하 추적이 어려움" },
+        { title: "비효율적 코치 관리", detail: "부하 계산 없음 — 코치의 과부하 또는 과소 배정이 쉽게 발생" },
+      ],
+      solutions: [
+        { title: "360° 디지털 선수 프로필", detail: "포괄적 관리: 프로필, 체력, 심리, 영양, LTAD를 하나의 시스템에서" },
+        { title: "완전한 NSCA v3.0 준수", detail: "CV% 신뢰도, 기준 데이터, 5단계 분류를 갖춘 30개 이상 테스트" },
+        { title: "과학적, 객관적 분류", detail: "성별, 연령, 스포츠별 국제 기준과 자동 비교" },
+        { title: "ACWR 및 위험 모니터링", detail: "급성:만성 부하 비율 추적, 금기사항 확인, 과부하 감지" },
+        { title: "스마트 주기화", detail: "자동 볼륨-강도 추적을 통한 매크로/메소/마이크로 사이클 계획" },
+        { title: "코치 부하 관리", detail: "역할별 부하(수석/보조/전문가)와 과부하 방지" },
+      ]
+    },
+    roles: {
+      sectionLabel: "역할 기반 접근",
+      title: "3개의 전문 포털",
+      description: "각 사용자 유형에 맞춘 명확한 역할 기반 접근 제어.",
+      admin: {
+        title: "관리자 포털",
+        description: "전체 시스템 관리, 스포츠 구성, 코치-선수 배정, 센터 전체 모니터링.",
+        features: [
+          "센터 전체 선수 및 코치 프로필",
+          "수석/보조/전문가 역할별 코치 배정",
+          "35개 스포츠 및 영양 프로필 구성",
+          "다차원 대시보드: 센터/부서/팀/선수",
+          "대규모 테스트 캠페인 조직 및 일괄 기록",
+          "PDF/Excel 내보내기 포함 종합 보고서",
+        ]
+      },
+      coach: {
+        title: "코치 포털",
+        description: "체력 테스트 실행, 주기화 관리, 배정된 선수의 진행 상황 추적.",
+        features: [
+          "30개 이상 NSCA 테스트 결과 기록",
+          "매크로/메소/마이크로 사이클 계획 설계",
+          "훈련 세션 및 레슨 계획 관리",
+          "ACWR 모니터링 및 부상 감시",
+          "영양 준수 수준 기록",
+          "배정된 선수의 개별 보고서",
+        ]
+      },
+      athlete: {
+        title: "선수 포털",
+        description: "개인 테스트 결과 조회, 스케줄 추적, 영양 계획, 훈련 로그 관리.",
+        features: [
+          "5단계 NSCA 분류 테스트 결과 조회",
+          "시간별 진행 차트",
+          "개인 스케줄 및 예정된 세션",
+          "식단 계획 및 영양 추적",
+          "훈련 로그 및 개인 메모",
+          "코치 및 시스템 알림 수신",
+        ]
+      }
+    },
+    workflow: {
+      sectionLabel: "워크플로",
+      title: "간단한 프로세스, 높은 효율",
+      description: "국제 표준을 따르는 과학적 훈련 워크플로 — 접수부터 분석까지.",
+      steps: [
+        { title: "선수 접수", description: "프로필 등록, PAR-Q+ 스크리닝, 훈련 전 금기사항 확인" },
+        { title: "체력 테스트", description: "CV% 신뢰도와 5단계 분류를 갖춘 30개 이상 NSCA 테스트" },
+        { title: "주기화", description: "볼륨-강도 추적을 통한 매크로/메소/마이크로 사이클 계획" },
+        { title: "훈련 세션", description: "세션 스케줄링, 출석, RPE/sRPE 기록, 레슨 계획" },
+        { title: "건강 모니터링", description: "부상 추적, ACWR 모니터링, 경기 복귀 프로토콜" },
+        { title: "분석 및 보고서", description: "다차원 대시보드, KPI 추적, 추세 분석, PDF/Excel 내보내기" },
+      ]
+    },
+    mobileApps: {
+      sectionLabel: "모바일 애플리케이션",
+      title: "코치 & 선수 앱",
+      description: "태블릿과 휴대폰에 최적화된 모바일 앱 — 현장에서 결과를 기록하고 언제 어디서나 진행 상황을 추적.",
+      coachApp: {
+        title: "코치 애플리케이션",
+        subtitle: "테스트 기록 및 세션 관리",
+        features: [
+          "30개 이상 NSCA 테스트 대응 태블릿 최적화 폼",
+          "대규모 테스트 캠페인용 스테이션 모드",
+          "세션 관리, 출석, RPE/sRPE",
+          "운동 포맷 포함 상세 레슨 계획",
+        ],
+        stats: { formLoad: "폼 로드", perResult: "결과당", nscaValid: "NSCA 유효" }
+      },
+      athleteApp: {
+        title: "선수 애플리케이션",
+        subtitle: "진행 추적 및 훈련 로그",
+        features: [
+          "진행 추세 차트 포함 테스트 결과",
+          "일일 훈련 로그: 상태, 체력, 기분",
+          "세트, 반복, 중량, RPE 포함 운동 로그",
+          "개인 통계: 총 일수, 연속 기록, 추세",
+        ],
+        stats: { createLog: "로그 작성", editWindow: "편집 기간", offline: "지원" }
+      },
+      sharedTitle: "두 앱 공통 기능",
+      sharedFeatures: [
+        "실시간 알림",
+        "부상 경고 < 5분",
+        "자동 데이터 동기화",
+        "태블릿 및 휴대폰 최적화",
+      ]
+    },
+    cta: {
+      title: "훈련 센터를 디지털화할 준비가 되셨나요?",
+      description: "ATMS는 NSCA 표준 테스트, 스마트 주기화, 데이터 기반 코칭을 통합 플랫폼으로 제공합니다.",
+      contact: "시작하기",
+      backToItSolution: "IT 솔루션으로 돌아가기"
+    }
+  },
+
   // TNA System Page
   tnaSystem: {
     hero: {

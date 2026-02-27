@@ -2046,71 +2046,167 @@ export const vi = {
   // Actiwell ATMS Page
   actiwellAtms: {
     hero: {
-      badge: "Actiwell ATMS",
-      title: "Hệ Thống Quản Lý Huấn Luyện Vận Động Viên Cho Vận Hành Quy Mô Quốc Gia",
-      subtitle: "Actiwell ATMS số hóa luồng vận hành từ kiểm tra tiêu chuẩn, tổ chức đợt kiểm tra, phân tích chu kỳ huấn luyện đến quản trị phân quyền và đa cơ sở.",
+      badge: "NSCA v3.0 — 35 Môn Thể Thao",
+      title: "Hệ Thống Quản Lý Huấn Luyện Thể Thao",
+      subtitle: "Nền tảng huấn luyện thể thao chuyên nghiệp số hóa quy trình phát triển vận động viên — từ kiểm tra thể lực chuẩn NSCA đến đỉnh cao thành tích.",
+      ctaExplore: "Khám Phá Tính Năng",
+      ctaPortals: "Xem 3 Cổng Quản Trị",
       stats: {
-        tests: "30+ bài test chuẩn NSCA",
-        roles: "3 cổng vai trò vận hành",
-        multiLocation: "Luồng vận hành cấp tỉnh và cấp quốc gia",
-        hybridArch: "Kiến trúc lai Next.js + Golang"
+        tests: "Bài Test NSCA",
+        categories: "Nhóm Đánh Giá",
+        sports: "Môn Thể Thao",
+        management: "Quản Lý VĐV",
       }
-    },
-    cooperation: {
-      title: "Hợp Tác Triển Khai",
-      description: "Giải pháp được phát triển phối hợp với Trung tâm Huấn luyện Thể thao Quốc gia Việt Nam (TP.HCM) nhằm đáp ứng vận hành kiểm tra thể lực số lượng lớn và chuẩn hóa quản trị dữ liệu thành tích."
     },
     modules: {
-      title: "Các Mô-đun Chức Năng Cốt Lõi",
-      description: "ATMS kết nối yêu cầu nghiệp vụ và kiến trúc hệ thống thành chuỗi vận hành hoàn chỉnh cho đánh giá và phát triển vận động viên.",
-      items: {
-        athlete360: {
-          title: "Hồ Sơ Vận Động Viên 360",
-          description: "Quản lý tập trung hồ sơ cá nhân, chỉ số thể chất, lịch sử kiểm tra và lộ trình phát triển."
-        },
-        testingProtocols: {
-          title: "Quy Trình Kiểm Tra Theo NSCA",
-          description: "Chuẩn hóa luồng kiểm tra với kiểm soát sàng lọc PAR-Q+, tiền sử sức khỏe và điều kiện chống chỉ định."
-        },
-        campaignStation: {
-          title: "Đợt Kiểm Tra và Chế Độ Theo Trạm",
-          description: "Vận hành đợt kiểm tra quy mô lớn với nhập liệu nhanh theo trạm, chống trùng và theo dõi tiến độ."
-        },
-        periodization: {
-          title: "Phân Tích Giáo Án và Tải Lượng",
-          description: "Theo dõi volume/intensity kế hoạch so với thực tế để hỗ trợ quyết định chuyên môn của HLV."
-        },
-        multiBranch: {
-          title: "Đa Cơ Sở và Điều Chuyển",
-          description: "Hỗ trợ quản lý điều chuyển VĐV/HLV giữa các đơn vị cấp tỉnh và trung tâm quốc gia với lịch sử đầy đủ."
-        },
-        securityCompliance: {
-          title: "Phân Quyền, Audit, Tuân Thủ",
-          description: "Áp dụng RBAC theo phạm vi dữ liệu, ghi vết thao tác quan trọng và đáp ứng yêu cầu bảo vệ dữ liệu cá nhân."
-        }
-      }
-    },
-    architecture: {
-      title: "Tổng Quan Kiến Trúc",
-      description: "Nền tảng được thiết kế theo mô hình tách lớp UI, API và dữ liệu để đảm bảo mở rộng và bảo trì dài hạn.",
-      layers: {
-        frontend: "Frontend: Next.js App Router với cổng nghiệp vụ riêng cho Admin, Coach và Athlete.",
-        backend: "Backend: Golang REST API (Gin + OpenAPI) xử lý logic nghiệp vụ, RBAC và validation.",
-        database: "Tầng dữ liệu: PostgreSQL quản lý cấu trúc vận động viên, bài test, phân công và đợt kiểm tra.",
-        integration: "Bảo mật và tuân thủ: JWT, audit trail, kiểm soát dữ liệu theo PDPA và quy trình NSCA."
-      }
-    },
-    standards: {
-      title: "Tiêu Chuẩn và Quản Trị",
+      sectionLabel: "Tính Năng Toàn Diện",
+      title: "9 Mô-đun Cốt Lõi Cho Huấn Luyện Chuyên Nghiệp",
+      description: "Hệ thống quản lý huấn luyện thể thao hiện đại tích hợp mọi thứ từ đánh giá thể lực đến giáo án chu kỳ và phòng ngừa chấn thương.",
       items: [
-        "Quy trình kiểm tra theo định hướng NSCA, có sàng lọc và kiểm soát an toàn.",
-        "Mô hình RBAC theo vai trò Admin, Coach, Athlete.",
-        "Xử lý dữ liệu cá nhân và dữ liệu y tế theo yêu cầu PDPA.",
-        "Sẵn sàng audit cho phân công, điều chuyển và cập nhật kết quả."
+        { title: "Kiểm Tra Chuẩn NSCA", description: "30+ bài test thể lực theo chuẩn NSCA v3.0 với độ tin cậy CV%, phân loại 5 mức và so sánh dữ liệu chuẩn." },
+        { title: "Quản Lý VĐV 360°", description: "Quản lý toàn diện từ hồ sơ cá nhân, thể lực, tâm lý, dinh dưỡng đến kế hoạch phát triển sự nghiệp và LTAD." },
+        { title: "Giáo Án Chu Kỳ Thông Minh", description: "Thiết kế giáo án huấn luyện theo chu kỳ macro/meso/micro với theo dõi volume-intensity, giám sát ACWR và phát hiện quá tải." },
+        { title: "Quản Lý Buổi Tập", description: "Lên lịch buổi tập, điểm danh, ghi nhận RPE/sRPE và theo dõi xu hướng tham gia theo giáo án." },
+        { title: "Theo Dõi Sức Khỏe & Chấn Thương", description: "Sàng lọc PAR-Q+, theo dõi chấn thương với mốc phục hồi, kiểm tra chống chỉ định và quy trình trở lại thi đấu." },
+        { title: "Quản Lý Dinh Dưỡng", description: "Mẫu bữa ăn theo mục tiêu (Tăng Cơ / Giảm Mỡ / Phục Hồi), theo dõi macronutrient, hồ sơ theo môn và giám sát tuân thủ." },
+        { title: "Quản Lý Tải Lượng HLV", description: "Phân công HLV với tải lượng theo vai trò (Trưởng/Phó/Chuyên Gia), gợi ý thông minh và phòng ngừa quá tải." },
+        { title: "Đợt Kiểm Tra", description: "Tổ chức kiểm tra hàng loạt với lên lịch địa điểm, theo dõi tham gia, ghi kết quả hàng loạt và tạo báo cáo." },
+        { title: "Phân Tích & Báo Cáo", description: "Dashboard đa chiều (tham gia, thành tích, dinh dưỡng, sức khỏe), theo dõi KPI, phân tích xu hướng và xuất PDF/Excel." },
+      ]
+    },
+    testCategories: {
+      sectionLabel: "Nhóm Bài Test NSCA",
+      title: "9 Nhóm",
+      titleSuffix: "với 30+ Bài Test",
+      description: "Hệ thống kiểm tra thể lực toàn diện theo chuẩn NSCA v3.0 với độ tin cậy CV%, dữ liệu chuẩn và phân loại 5 mức.",
+      complianceBadge: "Tuân thủ 100% tiêu chuẩn NSCA v3.0",
+      categories: [
+        { title: "Nhân Trắc Học", tests: ["Chiều Cao", "Cân Nặng", "% Mỡ Cơ Thể", "BMI", "Tỷ Lệ Eo-Hông"] },
+        { title: "Dấu Hiệu Sinh Tồn", tests: ["Nhịp Tim Nghỉ", "Huyết Áp", "Kiểm Tra Chống Chỉ Định"] },
+        { title: "Nhanh Nhẹn", tests: ["Pro Agility 5-10-5", "T-Test", "Illinois Agility", "Nhảy Lục Giác"] },
+        { title: "Sức Mạnh Bùng Nổ", tests: ["Squat Jump", "CMJ", "Bật Nhảy Cao", "Bật Xa Tại Chỗ", "Wingate Test"] },
+        { title: "Tốc Độ", tests: ["Chạy 5m", "Chạy 10m", "Chạy 20m", "40-Yard Dash", "Gõ Chân"] },
+        { title: "Sức Mạnh", tests: ["1RM Đẩy Ngực", "1RM Squat", "1RM Deadlift", "Lực Bóp Tay"] },
+        { title: "Sức Bền Cơ", tests: ["YMCA Bench Press", "Test Chống Đẩy", "Test Gập Bụng", "Ổn Định Core"] },
+        { title: "Tim Mạch", tests: ["YMCA Cycle Test", "Chạy 1.5 Dặm", "Cooper 12 Phút", "Yo-Yo IR1"] },
+        { title: "Linh Hoạt & Thăng Bằng", tests: ["Ngồi Với", "Linh Hoạt Vai", "Đứng Cò", "Y-Balance"] },
+      ]
+    },
+    problemSolution: {
+      sectionLabel: "Vấn Đề & Giải Pháp",
+      titleManual: "Thủ Công",
+      titleAutomated: "Tự Động",
+      problemsTitle: "Vấn Đề Hiện Tại",
+      solutionsTitle: "Giải Pháp ATMS",
+      problems: [
+        { title: "Ghi chép thủ công", detail: "Dữ liệu VĐV phân tán qua Excel, giấy tờ — khó truy xuất và dễ sai sót" },
+        { title: "Không có tiêu chuẩn test thống nhất", detail: "Mỗi HLV đánh giá khác nhau, không có dữ liệu chuẩn để so sánh" },
+        { title: "Đánh giá thể lực chủ quan", detail: "Không có độ tin cậy CV% — không thể phân loại chính xác theo tiêu chuẩn quốc tế" },
+        { title: "Không phát hiện rủi ro chấn thương", detail: "Không theo dõi ACWR hoặc kiểm tra chống chỉ định trong huấn luyện" },
+        { title: "Giáo án chu kỳ thủ công", detail: "Khó lập kế hoạch macro/meso/micro và theo dõi tải lượng huấn luyện" },
+        { title: "Quản lý HLV không hiệu quả", detail: "Không tính toán tải lượng — dễ quá tải hoặc phân công thiếu cho HLV" },
+      ],
+      solutions: [
+        { title: "Hồ sơ VĐV số 360°", detail: "Quản lý toàn diện: hồ sơ, thể lực, tâm lý, dinh dưỡng, LTAD trong một hệ thống" },
+        { title: "Tuân thủ đầy đủ NSCA v3.0", detail: "30+ bài test với độ tin cậy CV%, dữ liệu chuẩn và phân loại 5 mức" },
+        { title: "Phân loại khoa học, khách quan", detail: "Tự động so sánh với chuẩn quốc tế theo giới tính, tuổi và môn thể thao" },
+        { title: "Giám sát ACWR & rủi ro", detail: "Theo dõi tỷ lệ tải cấp tính:mãn tính, kiểm tra chống chỉ định và phát hiện quá tải" },
+        { title: "Giáo án chu kỳ thông minh", detail: "Lập kế hoạch macro/meso/micro với tự động theo dõi volume-intensity" },
+        { title: "Quản lý tải lượng HLV", detail: "Tải lượng theo vai trò (Trưởng/Phó/Chuyên Gia) với phòng ngừa quá tải" },
+      ]
+    },
+    roles: {
+      sectionLabel: "Phân Quyền Theo Vai Trò",
+      title: "Ba Cổng Quản Trị Chuyên Biệt",
+      description: "Phân quyền truy cập rõ ràng phù hợp với từng loại người dùng.",
+      admin: {
+        title: "Cổng Quản Trị",
+        description: "Quản lý toàn hệ thống, cấu hình môn thể thao, phân công HLV-VĐV và giám sát toàn trung tâm.",
+        features: [
+          "Hồ sơ VĐV & HLV toàn trung tâm",
+          "Phân công HLV theo vai trò Trưởng/Phó/Chuyên Gia",
+          "Cấu hình 35 môn thể thao & hồ sơ dinh dưỡng",
+          "Dashboard đa chiều: Trung Tâm/Phòng Ban/Đội/VĐV",
+          "Tổ chức đợt kiểm tra hàng loạt & ghi kết quả",
+          "Báo cáo tổng hợp xuất PDF/Excel",
+        ]
+      },
+      coach: {
+        title: "Cổng HLV",
+        description: "Thực hiện kiểm tra thể lực, quản lý giáo án chu kỳ và theo dõi tiến trình VĐV được phân công.",
+        features: [
+          "Ghi kết quả cho 30+ bài test NSCA",
+          "Thiết kế giáo án macro/meso/micro",
+          "Quản lý buổi tập & giáo án chi tiết",
+          "Giám sát ACWR & theo dõi chấn thương",
+          "Ghi nhận mức tuân thủ dinh dưỡng",
+          "Báo cáo cá nhân cho VĐV được phân công",
+        ]
+      },
+      athlete: {
+        title: "Cổng VĐV",
+        description: "Xem kết quả test cá nhân, theo dõi lịch tập, kế hoạch dinh dưỡng và nhật ký huấn luyện.",
+        features: [
+          "Xem kết quả test với phân loại 5 mức NSCA",
+          "Biểu đồ tiến trình theo thời gian",
+          "Lịch cá nhân & buổi tập sắp tới",
+          "Kế hoạch bữa ăn & theo dõi dinh dưỡng",
+          "Nhật ký tập luyện & ghi chú cá nhân",
+          "Nhận thông báo từ HLV & hệ thống",
+        ]
+      }
+    },
+    workflow: {
+      sectionLabel: "Quy Trình",
+      title: "Quy Trình Đơn Giản, Hiệu Quả Cao",
+      description: "Quy trình huấn luyện khoa học theo tiêu chuẩn quốc tế — từ tiếp nhận đến phân tích.",
+      steps: [
+        { title: "Tiếp Nhận VĐV", description: "Đăng ký hồ sơ, sàng lọc PAR-Q+ và kiểm tra chống chỉ định trước huấn luyện" },
+        { title: "Kiểm Tra Thể Lực", description: "30+ bài test NSCA với độ tin cậy CV% và phân loại 5 mức" },
+        { title: "Giáo Án Chu Kỳ", description: "Lập kế hoạch macro/meso/micro với theo dõi volume-intensity" },
+        { title: "Buổi Tập", description: "Lên lịch buổi tập, điểm danh, ghi RPE/sRPE và giáo án chi tiết" },
+        { title: "Giám Sát Sức Khỏe", description: "Theo dõi chấn thương, giám sát ACWR và quy trình trở lại thi đấu" },
+        { title: "Phân Tích & Báo Cáo", description: "Dashboard đa chiều, theo dõi KPI, phân tích xu hướng và xuất PDF/Excel" },
+      ]
+    },
+    mobileApps: {
+      sectionLabel: "Ứng Dụng Di Động",
+      title: "Ứng Dụng HLV & VĐV",
+      description: "Ứng dụng di động tối ưu cho tablet và điện thoại — ghi kết quả ngay tại sân và theo dõi tiến trình mọi lúc, mọi nơi.",
+      coachApp: {
+        title: "Ứng Dụng HLV",
+        subtitle: "Ghi kết quả test & quản lý buổi tập",
+        features: [
+          "Form test tối ưu cho tablet với 30+ bài test NSCA",
+          "Chế độ trạm cho đợt kiểm tra hàng loạt",
+          "Quản lý buổi tập, điểm danh, RPE/sRPE",
+          "Giáo án chi tiết với format bài tập",
+        ],
+        stats: { formLoad: "Tải form", perResult: "Mỗi kết quả", nscaValid: "NSCA hợp lệ" }
+      },
+      athleteApp: {
+        title: "Ứng Dụng VĐV",
+        subtitle: "Theo dõi tiến trình & nhật ký tập",
+        features: [
+          "Kết quả test với biểu đồ xu hướng tiến trình",
+          "Nhật ký tập hàng ngày: trạng thái, thể lực, tâm trạng",
+          "Ghi bài tập với sets, reps, trọng lượng, RPE",
+          "Thống kê cá nhân: tổng ngày, chuỗi liên tục, xu hướng",
+        ],
+        stats: { createLog: "Tạo nhật ký", editWindow: "Thời gian chỉnh sửa", offline: "Hỗ trợ" }
+      },
+      sharedTitle: "Tính Năng Chung Cho Cả Hai Ứng Dụng",
+      sharedFeatures: [
+        "Thông báo thời gian thực",
+        "Cảnh báo chấn thương < 5 phút",
+        "Đồng bộ dữ liệu tự động",
+        "Tối ưu cho tablet & điện thoại",
       ]
     },
     cta: {
-      contact: "Tư Vấn Cùng Chúng Tôi",
+      title: "Sẵn Sàng Số Hóa Trung Tâm Huấn Luyện?",
+      description: "ATMS mang kiểm tra chuẩn NSCA, giáo án thông minh và huấn luyện dựa trên dữ liệu vào một nền tảng thống nhất.",
+      contact: "Bắt Đầu Ngay",
       backToItSolution: "Quay Lại IT Solutions"
     }
   },

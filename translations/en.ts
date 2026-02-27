@@ -1416,71 +1416,167 @@ export const en = {
   // Actiwell ATMS Page (actiwellAtms)
   actiwellAtms: {
     hero: {
-      badge: "Actiwell ATMS",
-      title: "Athletic Training Management System for National-Scale Operations",
-      subtitle: "Actiwell ATMS digitizes operational workflows from standardized testing, testing campaign organization, periodization analysis to role-based access control and multi-branch management.",
+      badge: "NSCA v3.0 — 35 Sports",
+      title: "Athletic Training Management System",
+      subtitle: "Professional sports training platform digitizing athlete development workflows — from NSCA-standard fitness testing to peak performance.",
+      ctaExplore: "Explore Features",
+      ctaPortals: "View 3 Portals",
       stats: {
-        tests: "30+ NSCA Standard Tests",
-        roles: "3 Role-Based Portals",
-        multiLocation: "Provincial & National Operations",
-        hybridArch: "Hybrid Next.js + Golang Architecture"
+        tests: "NSCA Tests",
+        categories: "Assessment Categories",
+        sports: "Sports Supported",
+        management: "Athlete Management",
       }
-    },
-    cooperation: {
-      title: "Implementation Partnership",
-      description: "Solution developed in collaboration with Vietnam National Sports Training Center (HCMC) to support large-scale fitness testing operations and standardized performance data management."
     },
     modules: {
-      title: "Core Functional Modules",
-      description: "ATMS connects business requirements and system architecture into a complete operational chain for athlete assessment and development.",
-      items: {
-        athlete360: {
-          title: "360° Athlete Profile",
-          description: "Centralized management of personal records, physical metrics, test history, and development roadmap."
-        },
-        testingProtocols: {
-          title: "NSCA Testing Protocols",
-          description: "Standardized testing workflow with PAR-Q+ screening, medical history, and contraindication controls."
-        },
-        campaignStation: {
-          title: "Testing Campaigns & Station Mode",
-          description: "Large-scale testing operations with rapid station-based data entry, deduplication, and progress tracking."
-        },
-        periodization: {
-          title: "Periodization & Load Analysis",
-          description: "Track volume/intensity planned vs actual to support coaches' professional decision-making."
-        },
-        multiBranch: {
-          title: "Multi-Branch & Transfers",
-          description: "Support athlete/coach transfer management between provincial units and national centers with full history."
-        },
-        securityCompliance: {
-          title: "RBAC, Audit & Compliance",
-          description: "Data-scoped RBAC, critical operation audit trails, and personal data protection compliance."
-        }
-      }
-    },
-    architecture: {
-      title: "Architecture Overview",
-      description: "Platform designed with separated UI, API, and data layers to ensure long-term scalability and maintainability.",
-      layers: {
-        frontend: "Frontend: Next.js App Router with dedicated portals for Admin, Coach, and Athlete.",
-        backend: "Backend: Golang REST API (Gin + OpenAPI) handling business logic, RBAC, and validation.",
-        database: "Data Layer: PostgreSQL managing athlete structure, tests, assignments, and testing campaigns.",
-        integration: "Security & Compliance: JWT, audit trail, data controls per PDPA and NSCA standards."
-      }
-    },
-    standards: {
-      title: "Standards & Governance",
+      sectionLabel: "Comprehensive Features",
+      title: "9 Core Modules for Professional Training",
+      description: "A modern sports training management system integrating everything from fitness assessment to periodization and injury prevention.",
       items: [
-        "Testing procedures following NSCA guidelines with screening and safety controls.",
-        "RBAC model with Admin, Coach, and Athlete roles.",
-        "Personal and medical data processing per PDPA requirements.",
-        "Audit-ready for assignments, transfers, and result updates."
+        { title: "NSCA Standardized Testing", description: "30+ fitness tests following NSCA v3.0 standards with CV% reliability, 5-level classification, and normative data comparison." },
+        { title: "360° Athlete Management", description: "Comprehensive management from personal profiles, fitness, psychology, nutrition to career planning and LTAD (Long-Term Athlete Development)." },
+        { title: "Smart Periodization", description: "Training plan design at macro/meso/micro cycle levels with volume-intensity tracking, ACWR monitoring, and overload detection." },
+        { title: "Session Management", description: "Schedule training sessions, take attendance, record RPE/sRPE, and track attendance trends by training plan." },
+        { title: "Health & Injury Tracking", description: "PAR-Q+ screening, injury tracking with recovery milestones, contraindication checks, and return-to-play protocols." },
+        { title: "Nutrition Management", description: "Goal-based meal templates (Muscle Gain / Fat Loss / Recovery), macronutrient tracking, sport-specific profiles, and compliance monitoring." },
+        { title: "Coach Workload Management", description: "Coach assignment with role-based workload (Head/Assistant/Specialist), smart suggestions, and overload prevention." },
+        { title: "Testing Campaigns", description: "Organize mass testing with venue scheduling, attendance tracking, batch result recording, and report generation." },
+        { title: "Analytics & Reports", description: "Multi-dimensional dashboards (attendance, performance, nutrition, health), KPI tracking, trend analysis, and PDF/Excel export." },
+      ]
+    },
+    testCategories: {
+      sectionLabel: "NSCA Test Categories",
+      title: "9 Categories",
+      titleSuffix: "with 30+ Tests",
+      description: "Comprehensive fitness testing system following NSCA v3.0 with CV% reliability, normative data, and 5-level classification.",
+      complianceBadge: "100% compliant with NSCA v3.0 standards",
+      categories: [
+        { title: "Anthropometrics", tests: ["Height", "Weight", "Body Fat %", "BMI", "Waist-Hip Ratio"] },
+        { title: "Vital Signs", tests: ["Resting Heart Rate", "Blood Pressure", "Contraindication Check"] },
+        { title: "Agility", tests: ["Pro Agility 5-10-5", "T-Test", "Illinois Agility", "Hexagonal Jump"] },
+        { title: "Power", tests: ["Squat Jump", "CMJ", "Vertical Jump", "Standing Long Jump", "Wingate Test"] },
+        { title: "Speed", tests: ["5m Sprint", "10m Sprint", "20m Sprint", "40-Yard Dash", "Foot Tapping"] },
+        { title: "Strength", tests: ["1RM Bench Press", "1RM Squat", "1RM Deadlift", "Grip Strength"] },
+        { title: "Muscular Endurance", tests: ["YMCA Bench Press", "Push-Up Test", "Curl-Up Test", "Core Stability"] },
+        { title: "Cardiovascular", tests: ["YMCA Cycle Test", "1.5-Mile Run", "Cooper 12-Min", "Yo-Yo IR1"] },
+        { title: "Flexibility & Balance", tests: ["Sit & Reach", "Shoulder Flexibility", "Stork Stand", "Y-Balance"] },
+      ]
+    },
+    problemSolution: {
+      sectionLabel: "Problem & Solution",
+      titleManual: "Manual",
+      titleAutomated: "Automated",
+      problemsTitle: "Current Problems",
+      solutionsTitle: "ATMS Solution",
+      problems: [
+        { title: "Manual record keeping", detail: "Athlete data scattered across Excel, paper — hard to retrieve and error-prone" },
+        { title: "No unified test standards", detail: "Each coach evaluates differently with no normative data for comparison" },
+        { title: "Subjective fitness assessment", detail: "No CV% reliability — impossible to classify accurately by international standards" },
+        { title: "No injury risk detection", detail: "No ACWR tracking or contraindication checks during training" },
+        { title: "Manual periodization", detail: "Hard to plan macro/meso/micro cycles and track training load" },
+        { title: "Inefficient coach management", detail: "No workload calculation — easy to overload or under-assign coaches" },
+      ],
+      solutions: [
+        { title: "360° digital athlete profiles", detail: "Comprehensive management: profile, fitness, psychology, nutrition, LTAD in one system" },
+        { title: "Full NSCA v3.0 compliance", detail: "30+ tests with CV% reliability, normative data, and 5-level classification" },
+        { title: "Scientific, objective classification", detail: "Auto-compare against international norms by gender, age, and sport" },
+        { title: "ACWR & risk monitoring", detail: "Acute:Chronic Workload Ratio tracking, contraindication checks, and overload detection" },
+        { title: "Smart periodization", detail: "Macro/meso/micro cycle planning with automatic volume-intensity tracking" },
+        { title: "Coach workload management", detail: "Role-weighted workload (Head/Assistant/Specialist) with overload prevention" },
+      ]
+    },
+    roles: {
+      sectionLabel: "Role-Based Access",
+      title: "Three Specialized Portals",
+      description: "Clear role-based access control tailored for each user type.",
+      admin: {
+        title: "Admin Portal",
+        description: "Full system management, sport configuration, coach-athlete assignment, and center-wide monitoring.",
+        features: [
+          "Center-wide athlete & coach profiles",
+          "Coach assignment by Head/Assistant/Specialist role",
+          "Configure 35 sports & nutrition profiles",
+          "Multi-dimensional dashboards: Center/Dept/Team/Athlete",
+          "Organize mass testing campaigns & batch recording",
+          "Aggregated reports with PDF/Excel export",
+        ]
+      },
+      coach: {
+        title: "Coach Portal",
+        description: "Execute fitness tests, manage periodization, and track progress for assigned athletes.",
+        features: [
+          "Record results for 30+ NSCA tests",
+          "Design macro/meso/micro cycle plans",
+          "Manage training sessions & lesson plans",
+          "ACWR monitoring & injury surveillance",
+          "Record nutrition compliance levels",
+          "Individual reports for assigned athletes",
+        ]
+      },
+      athlete: {
+        title: "Athlete Portal",
+        description: "View personal test results, track schedule, nutrition plans, and maintain training logs.",
+        features: [
+          "View test results with 5-level NSCA classification",
+          "Progress charts over time",
+          "Personal schedule & upcoming sessions",
+          "Meal plans & nutrition tracking",
+          "Training log & personal notes",
+          "Receive notifications from coaches & system",
+        ]
+      }
+    },
+    workflow: {
+      sectionLabel: "Workflow",
+      title: "Simple Process, High Efficiency",
+      description: "Scientific training workflow following international standards — from intake to analytics.",
+      steps: [
+        { title: "Athlete Intake", description: "Profile registration, PAR-Q+ screening, and pre-training contraindication checks" },
+        { title: "Fitness Testing", description: "30+ NSCA tests with CV% reliability and 5-level classification" },
+        { title: "Periodization", description: "Macro/meso/micro cycle planning with volume-intensity tracking" },
+        { title: "Training Sessions", description: "Session scheduling, attendance, RPE/sRPE recording, and lesson plans" },
+        { title: "Health Monitoring", description: "Injury tracking, ACWR monitoring, and return-to-play protocols" },
+        { title: "Analytics & Reports", description: "Multi-dimensional dashboards, KPI tracking, trend analysis, and PDF/Excel export" },
+      ]
+    },
+    mobileApps: {
+      sectionLabel: "Mobile Applications",
+      title: "Coach & Athlete Apps",
+      description: "Mobile apps optimized for tablets and phones — record results on the field and track progress anytime, anywhere.",
+      coachApp: {
+        title: "Coach Application",
+        subtitle: "Test recording & session management",
+        features: [
+          "Tablet-optimized test forms with 30+ NSCA tests",
+          "Station mode for mass testing campaigns",
+          "Session management, attendance, RPE/sRPE",
+          "Detailed lesson plans with exercise format",
+        ],
+        stats: { formLoad: "Form load", perResult: "Per result", nscaValid: "NSCA valid" }
+      },
+      athleteApp: {
+        title: "Athlete Application",
+        subtitle: "Progress tracking & training logs",
+        features: [
+          "Test results with progress trend charts",
+          "Daily training log: status, fitness, mood",
+          "Exercise logging with sets, reps, weight, RPE",
+          "Personal stats: total days, streaks, trends",
+        ],
+        stats: { createLog: "Create log", editWindow: "Edit window", offline: "Supported" }
+      },
+      sharedTitle: "Shared Features Across Both Apps",
+      sharedFeatures: [
+        "Real-time notifications",
+        "Injury alerts < 5 minutes",
+        "Automatic data sync",
+        "Tablet & phone optimized",
       ]
     },
     cta: {
-      contact: "Consult With Us",
+      title: "Ready to Digitize Your Training Center?",
+      description: "ATMS brings NSCA-standard testing, smart periodization, and data-driven coaching into a unified platform.",
+      contact: "Get Started",
       backToItSolution: "Back to IT Solutions"
     }
   },

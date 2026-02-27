@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import { Mail, Phone, MapPin, Clock, Send, User, Building, MessageSquare, Linkedin, Facebook, Twitter, Instagram, Youtube } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { getFirestoreDb } from '@/lib/firebase'
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore'
 
 export default function Contact() {
   const { t } = useLanguage()
@@ -33,33 +35,19 @@ export default function Contact() {
         throw new Error('Please fill in all required fields')
       }
 
-      // Check if we're in browser environment and have access to dynamic imports
-      if (typeof window === 'undefined') {
-        throw new Error('This form can only be submitted from the browser')
-      }
-
-      // Call API route for server-side processing
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          firstName: formData.firstName,
-          lastName: formData.lastName,
-          email: formData.email,
-          phone: formData.phone || undefined,
-          company: formData.company || undefined,
-          message: formData.message,
-          service: formData.service || undefined
-        })
+      // Write directly to Firestore — Cloud Function handles email sending
+      const db = getFirestoreDb()
+      await addDoc(collection(db, 'contact_submissions'), {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phone: formData.phone || null,
+        company: formData.company || null,
+        message: formData.message,
+        service: formData.service || null,
+        status: 'new',
+        createdAt: serverTimestamp(),
       })
-
-      const result = await response.json()
-
-      if (!response.ok) {
-        throw new Error(result.error || 'Failed to submit form')
-      }
 
       setSubmitSuccess(true)
       
@@ -78,18 +66,13 @@ export default function Contact() {
       }, 3000)
       
     } catch (error) {
-      // More user-friendly error messages
       let errorMessage = 'An error occurred while submitting the form. Please try again.'
-      
+
       if (error instanceof Error) {
-        if (error.message.includes('RESEND_API_KEY')) {
-          errorMessage = 'Email service is not configured. Please contact support.'
-        } else if (error.message.includes('Database error')) {
-          errorMessage = 'Failed to save your message. Please try again or contact us directly.'
-        } else if (error.message.includes('required fields')) {
+        if (error.message.includes('required fields')) {
           errorMessage = error.message
-        } else {
-          errorMessage = error.message
+        } else if (error.message.includes('permission') || error.message.includes('PERMISSION_DENIED')) {
+          errorMessage = 'Service temporarily unavailable. Please try again later.'
         }
       }
       

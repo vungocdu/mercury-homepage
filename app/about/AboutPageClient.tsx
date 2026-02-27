@@ -3,6 +3,7 @@
 import { MapPin, Phone, Mail, FileText, Target, Eye, Users, Calendar, Building2 } from 'lucide-react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import Contact from '../../components/Contact'
 import { useLanguage } from '../../contexts/LanguageContext'
 
 export default function AboutPageClient() {
@@ -222,6 +223,7 @@ export default function AboutPageClient() {
         </div>
       </section>
 
+      <Contact />
       <Footer />
     </>
   )

@@ -7,7 +7,6 @@ import {
   Activity,
   AlertTriangle,
   ArrowRight,
-  BarChart3,
   CheckCircle2,
   ClipboardCheck,
   Dumbbell,
@@ -18,7 +17,6 @@ import {
   Ruler,
   Scale,
   Shield,
-  Sparkles,
   Timer,
   Users,
   XCircle,
@@ -35,142 +33,27 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
-/* ────────────────────────── Data ────────────────────────── */
+/* ────────────────────────── Icons for test categories ────────────────────────── */
 
-const mainFeatures = [
-  {
-    title: 'NSCA Standardized Testing',
-    description: '30+ fitness tests following NSCA v3.0 standards with CV% reliability, 5-level classification, and normative data comparison.',
-  },
-  {
-    title: '360° Athlete Management',
-    description: 'Comprehensive management from personal profiles, fitness, psychology, nutrition to career planning and LTAD (Long-Term Athlete Development).',
-  },
-  {
-    title: 'Smart Periodization',
-    description: 'Training plan design at macro/meso/micro cycle levels with volume-intensity tracking, ACWR monitoring, and overload detection.',
-  },
-  {
-    title: 'Session Management',
-    description: 'Schedule training sessions, take attendance, record RPE/sRPE, and track attendance trends by training plan.',
-  },
-  {
-    title: 'Health & Injury Tracking',
-    description: 'PAR-Q+ screening, injury tracking with recovery milestones, contraindication checks, and return-to-play protocols.',
-  },
-  {
-    title: 'Nutrition Management',
-    description: 'Goal-based meal templates (Muscle Gain / Fat Loss / Recovery), macronutrient tracking, sport-specific profiles, and compliance monitoring.',
-  },
-  {
-    title: 'Coach Workload Management',
-    description: 'Coach assignment with role-based workload (Head/Assistant/Specialist), smart suggestions, and overload prevention.',
-  },
-  {
-    title: 'Testing Campaigns',
-    description: 'Organize mass testing with venue scheduling, attendance tracking, batch result recording, and report generation.',
-  },
-  {
-    title: 'Analytics & Reports',
-    description: 'Multi-dimensional dashboards (attendance, performance, nutrition, health), KPI tracking, trend analysis, and PDF/Excel export.',
-  },
-]
-
-const testCategories = [
-  { icon: Ruler, title: 'Anthropometrics', tests: ['Height', 'Weight', 'Body Fat %', 'BMI', 'Waist-Hip Ratio'], color: 'from-slate-500 to-slate-600' },
-  { icon: Heart, title: 'Vital Signs', tests: ['Resting Heart Rate', 'Blood Pressure', 'Contraindication Check'], color: 'from-red-500 to-red-600' },
-  { icon: Activity, title: 'Agility', tests: ['Pro Agility 5-10-5', 'T-Test', 'Illinois Agility', 'Hexagonal Jump'], color: 'from-purple-500 to-purple-600' },
-  { icon: Zap, title: 'Power', tests: ['Squat Jump', 'CMJ', 'Vertical Jump', 'Standing Long Jump', 'Wingate Test'], color: 'from-orange-500 to-orange-600' },
-  { icon: Timer, title: 'Speed', tests: ['5m Sprint', '10m Sprint', '20m Sprint', '40-Yard Dash', 'Foot Tapping'], color: 'from-yellow-500 to-yellow-600' },
-  { icon: Dumbbell, title: 'Strength', tests: ['1RM Bench Press', '1RM Squat', '1RM Deadlift', 'Grip Strength'], color: 'from-blue-500 to-blue-600' },
-  { icon: Scale, title: 'Muscular Endurance', tests: ['YMCA Bench Press', 'Push-Up Test', 'Curl-Up Test', 'Core Stability'], color: 'from-cyan-500 to-cyan-600' },
-  { icon: Flame, title: 'Cardiovascular', tests: ['YMCA Cycle Test', '1.5-Mile Run', 'Cooper 12-Min', 'Yo-Yo IR1'], color: 'from-emerald-500 to-emerald-600' },
-  { icon: Move, title: 'Flexibility & Balance', tests: ['Sit & Reach', 'Shoulder Flexibility', 'Stork Stand', 'Y-Balance'], color: 'from-pink-500 to-pink-600' },
-]
-
-const roles = [
-  {
-    icon: Shield,
-    title: 'Admin Portal',
-    description: 'Full system management, sport configuration, coach-athlete assignment, and center-wide monitoring.',
-    features: [
-      'Center-wide athlete & coach profiles',
-      'Coach assignment by Head/Assistant/Specialist role',
-      'Configure 35 sports & nutrition profiles',
-      'Multi-dimensional dashboards: Center/Dept/Team/Athlete',
-      'Organize mass testing campaigns & batch recording',
-      'Aggregated reports with PDF/Excel export',
-    ],
-    gradient: 'from-[#3BA5B5] to-[#4BBDC8]',
-    border: 'border-[#3BA5B5]/25',
-    bg: 'bg-[#3BA5B5]/5',
-    dot: 'bg-[#3BA5B5]',
-    // ATMS Teal — Admin Portal
-  },
-  {
-    icon: GraduationCap,
-    title: 'Coach Portal',
-    description: 'Execute fitness tests, manage periodization, and track progress for assigned athletes.',
-    features: [
-      'Record results for 30+ NSCA tests',
-      'Design macro/meso/micro cycle plans',
-      'Manage training sessions & lesson plans',
-      'ACWR monitoring & injury surveillance',
-      'Record nutrition compliance levels',
-      'Individual reports for assigned athletes',
-    ],
-    gradient: 'from-[#d11a2a] to-red-500',
-    border: 'border-[#d11a2a]/25',
-    bg: 'bg-[#d11a2a]/5',
-    dot: 'bg-[#d11a2a]',
-  },
-  {
-    icon: Users,
-    title: 'Athlete Portal',
-    description: 'View personal test results, track schedule, nutrition plans, and maintain training logs.',
-    features: [
-      'View test results with 5-level NSCA classification',
-      'Progress charts over time',
-      'Personal schedule & upcoming sessions',
-      'Meal plans & nutrition tracking',
-      'Training log & personal notes',
-      'Receive notifications from coaches & system',
-    ],
-    gradient: 'from-[#10b981] to-emerald-400',
-    border: 'border-[#10b981]/25',
-    bg: 'bg-[#10b981]/5',
-    dot: 'bg-[#10b981]',
-  },
-]
-
-const workflowSteps = [
-  { title: 'Athlete Intake', description: 'Profile registration, PAR-Q+ screening, and pre-training contraindication checks' },
-  { title: 'Fitness Testing', description: '30+ NSCA tests with CV% reliability and 5-level classification' },
-  { title: 'Periodization', description: 'Macro/meso/micro cycle planning with volume-intensity tracking' },
-  { title: 'Training Sessions', description: 'Session scheduling, attendance, RPE/sRPE recording, and lesson plans' },
-  { title: 'Health Monitoring', description: 'Injury tracking, ACWR monitoring, and return-to-play protocols' },
-  { title: 'Analytics & Reports', description: 'Multi-dimensional dashboards, KPI tracking, trend analysis, and PDF/Excel export' },
-]
-
-const problems = [
-  { title: 'Manual record keeping', detail: 'Athlete data scattered across Excel, paper — hard to retrieve and error-prone' },
-  { title: 'No unified test standards', detail: 'Each coach evaluates differently with no normative data for comparison' },
-  { title: 'Subjective fitness assessment', detail: 'No CV% reliability — impossible to classify accurately by international standards' },
-  { title: 'No injury risk detection', detail: 'No ACWR tracking or contraindication checks during training' },
-  { title: 'Manual periodization', detail: 'Hard to plan macro/meso/micro cycles and track training load' },
-  { title: 'Inefficient coach management', detail: 'No workload calculation — easy to overload or under-assign coaches' },
-]
-
-const solutions = [
-  { title: '360° digital athlete profiles', detail: 'Comprehensive management: profile, fitness, psychology, nutrition, LTAD in one system' },
-  { title: 'Full NSCA v3.0 compliance', detail: '30+ tests with CV% reliability, normative data, and 5-level classification' },
-  { title: 'Scientific, objective classification', detail: 'Auto-compare against international norms by gender, age, and sport' },
-  { title: 'ACWR & risk monitoring', detail: 'Acute:Chronic Workload Ratio tracking, contraindication checks, and overload detection' },
-  { title: 'Smart periodization', detail: 'Macro/meso/micro cycle planning with automatic volume-intensity tracking' },
-  { title: 'Coach workload management', detail: 'Role-weighted workload (Head/Assistant/Specialist) with overload prevention' },
+const testCategoryIcons = [Ruler, Heart, Activity, Zap, Timer, Dumbbell, Scale, Flame, Move]
+const testCategoryColors = [
+  'from-slate-500 to-slate-600',
+  'from-red-500 to-red-600',
+  'from-purple-500 to-purple-600',
+  'from-orange-500 to-orange-600',
+  'from-yellow-500 to-yellow-600',
+  'from-blue-500 to-blue-600',
+  'from-cyan-500 to-cyan-600',
+  'from-emerald-500 to-emerald-600',
+  'from-pink-500 to-pink-600',
 ]
 
 /* ────────────────────────── Helpers ────────────────────────── */
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function getNestedValue(obj: any, path: string): any {
+  return path.split('.').reduce((acc, key) => acc?.[key], obj)
+}
 
 function PhoneMockup({ title, children }: { title: string; children: ReactNode }) {
   return (
@@ -193,11 +76,145 @@ function PhoneMockup({ title, children }: { title: string; children: ReactNode }
 /* ────────────────────────── Component ────────────────────────── */
 
 export default function ActiwellATMSClient() {
-  const { t, language } = useLanguage()
+  const { t, language, translations } = useLanguage()
+
   const tx = (key: string, fallback: string): string => {
     const value = t(key)
     return value === key ? fallback : value
   }
+
+  // Helper to get array/object translations with fallback
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const ta = (path: string, fallback: any): any => {
+    const value = getNestedValue(translations, path)
+    return value ?? fallback
+  }
+
+  // ─── Translated data ───
+  const moduleItems = ta('actiwellAtms.modules.items', [
+    { title: 'NSCA Standardized Testing', description: '30+ fitness tests following NSCA v3.0 standards with CV% reliability, 5-level classification, and normative data comparison.' },
+    { title: '360° Athlete Management', description: 'Comprehensive management from personal profiles, fitness, psychology, nutrition to career planning and LTAD (Long-Term Athlete Development).' },
+    { title: 'Smart Periodization', description: 'Training plan design at macro/meso/micro cycle levels with volume-intensity tracking, ACWR monitoring, and overload detection.' },
+    { title: 'Session Management', description: 'Schedule training sessions, take attendance, record RPE/sRPE, and track attendance trends by training plan.' },
+    { title: 'Health & Injury Tracking', description: 'PAR-Q+ screening, injury tracking with recovery milestones, contraindication checks, and return-to-play protocols.' },
+    { title: 'Nutrition Management', description: 'Goal-based meal templates (Muscle Gain / Fat Loss / Recovery), macronutrient tracking, sport-specific profiles, and compliance monitoring.' },
+    { title: 'Coach Workload Management', description: 'Coach assignment with role-based workload (Head/Assistant/Specialist), smart suggestions, and overload prevention.' },
+    { title: 'Testing Campaigns', description: 'Organize mass testing with venue scheduling, attendance tracking, batch result recording, and report generation.' },
+    { title: 'Analytics & Reports', description: 'Multi-dimensional dashboards (attendance, performance, nutrition, health), KPI tracking, trend analysis, and PDF/Excel export.' },
+  ])
+
+  const testCategories = ta('actiwellAtms.testCategories.categories', [
+    { title: 'Anthropometrics', tests: ['Height', 'Weight', 'Body Fat %', 'BMI', 'Waist-Hip Ratio'] },
+    { title: 'Vital Signs', tests: ['Resting Heart Rate', 'Blood Pressure', 'Contraindication Check'] },
+    { title: 'Agility', tests: ['Pro Agility 5-10-5', 'T-Test', 'Illinois Agility', 'Hexagonal Jump'] },
+    { title: 'Power', tests: ['Squat Jump', 'CMJ', 'Vertical Jump', 'Standing Long Jump', 'Wingate Test'] },
+    { title: 'Speed', tests: ['5m Sprint', '10m Sprint', '20m Sprint', '40-Yard Dash', 'Foot Tapping'] },
+    { title: 'Strength', tests: ['1RM Bench Press', '1RM Squat', '1RM Deadlift', 'Grip Strength'] },
+    { title: 'Muscular Endurance', tests: ['YMCA Bench Press', 'Push-Up Test', 'Curl-Up Test', 'Core Stability'] },
+    { title: 'Cardiovascular', tests: ['YMCA Cycle Test', '1.5-Mile Run', 'Cooper 12-Min', 'Yo-Yo IR1'] },
+    { title: 'Flexibility & Balance', tests: ['Sit & Reach', 'Shoulder Flexibility', 'Stork Stand', 'Y-Balance'] },
+  ])
+
+  const problems = ta('actiwellAtms.problemSolution.problems', [
+    { title: 'Manual record keeping', detail: 'Athlete data scattered across Excel, paper — hard to retrieve and error-prone' },
+    { title: 'No unified test standards', detail: 'Each coach evaluates differently with no normative data for comparison' },
+    { title: 'Subjective fitness assessment', detail: 'No CV% reliability — impossible to classify accurately by international standards' },
+    { title: 'No injury risk detection', detail: 'No ACWR tracking or contraindication checks during training' },
+    { title: 'Manual periodization', detail: 'Hard to plan macro/meso/micro cycles and track training load' },
+    { title: 'Inefficient coach management', detail: 'No workload calculation — easy to overload or under-assign coaches' },
+  ])
+
+  const solutions = ta('actiwellAtms.problemSolution.solutions', [
+    { title: '360° digital athlete profiles', detail: 'Comprehensive management: profile, fitness, psychology, nutrition, LTAD in one system' },
+    { title: 'Full NSCA v3.0 compliance', detail: '30+ tests with CV% reliability, normative data, and 5-level classification' },
+    { title: 'Scientific, objective classification', detail: 'Auto-compare against international norms by gender, age, and sport' },
+    { title: 'ACWR & risk monitoring', detail: 'Acute:Chronic Workload Ratio tracking, contraindication checks, and overload detection' },
+    { title: 'Smart periodization', detail: 'Macro/meso/micro cycle planning with automatic volume-intensity tracking' },
+    { title: 'Coach workload management', detail: 'Role-weighted workload (Head/Assistant/Specialist) with overload prevention' },
+  ])
+
+  const adminRole = {
+    icon: Shield,
+    title: tx('actiwellAtms.roles.admin.title', 'Admin Portal'),
+    description: tx('actiwellAtms.roles.admin.description', 'Full system management, sport configuration, coach-athlete assignment, and center-wide monitoring.'),
+    features: ta('actiwellAtms.roles.admin.features', [
+      'Center-wide athlete & coach profiles',
+      'Coach assignment by Head/Assistant/Specialist role',
+      'Configure 35 sports & nutrition profiles',
+      'Multi-dimensional dashboards: Center/Dept/Team/Athlete',
+      'Organize mass testing campaigns & batch recording',
+      'Aggregated reports with PDF/Excel export',
+    ]),
+    gradient: 'from-[#3BA5B5] to-[#4BBDC8]',
+    border: 'border-[#3BA5B5]/25',
+    dot: 'bg-[#3BA5B5]',
+  }
+
+  const coachRole = {
+    icon: GraduationCap,
+    title: tx('actiwellAtms.roles.coach.title', 'Coach Portal'),
+    description: tx('actiwellAtms.roles.coach.description', 'Execute fitness tests, manage periodization, and track progress for assigned athletes.'),
+    features: ta('actiwellAtms.roles.coach.features', [
+      'Record results for 30+ NSCA tests',
+      'Design macro/meso/micro cycle plans',
+      'Manage training sessions & lesson plans',
+      'ACWR monitoring & injury surveillance',
+      'Record nutrition compliance levels',
+      'Individual reports for assigned athletes',
+    ]),
+    gradient: 'from-[#d11a2a] to-red-500',
+    border: 'border-[#d11a2a]/25',
+    dot: 'bg-[#d11a2a]',
+  }
+
+  const athleteRole = {
+    icon: Users,
+    title: tx('actiwellAtms.roles.athlete.title', 'Athlete Portal'),
+    description: tx('actiwellAtms.roles.athlete.description', 'View personal test results, track schedule, nutrition plans, and maintain training logs.'),
+    features: ta('actiwellAtms.roles.athlete.features', [
+      'View test results with 5-level NSCA classification',
+      'Progress charts over time',
+      'Personal schedule & upcoming sessions',
+      'Meal plans & nutrition tracking',
+      'Training log & personal notes',
+      'Receive notifications from coaches & system',
+    ]),
+    gradient: 'from-[#10b981] to-emerald-400',
+    border: 'border-[#10b981]/25',
+    dot: 'bg-[#10b981]',
+  }
+
+  const roles = [adminRole, coachRole, athleteRole]
+
+  const workflowSteps = ta('actiwellAtms.workflow.steps', [
+    { title: 'Athlete Intake', description: 'Profile registration, PAR-Q+ screening, and pre-training contraindication checks' },
+    { title: 'Fitness Testing', description: '30+ NSCA tests with CV% reliability and 5-level classification' },
+    { title: 'Periodization', description: 'Macro/meso/micro cycle planning with volume-intensity tracking' },
+    { title: 'Training Sessions', description: 'Session scheduling, attendance, RPE/sRPE recording, and lesson plans' },
+    { title: 'Health Monitoring', description: 'Injury tracking, ACWR monitoring, and return-to-play protocols' },
+    { title: 'Analytics & Reports', description: 'Multi-dimensional dashboards, KPI tracking, trend analysis, and PDF/Excel export' },
+  ])
+
+  const coachAppFeatures = ta('actiwellAtms.mobileApps.coachApp.features', [
+    'Tablet-optimized test forms with 30+ NSCA tests',
+    'Station mode for mass testing campaigns',
+    'Session management, attendance, RPE/sRPE',
+    'Detailed lesson plans with exercise format',
+  ])
+
+  const athleteAppFeatures = ta('actiwellAtms.mobileApps.athleteApp.features', [
+    'Test results with progress trend charts',
+    'Daily training log: status, fitness, mood',
+    'Exercise logging with sets, reps, weight, RPE',
+    'Personal stats: total days, streaks, trends',
+  ])
+
+  const sharedFeatures = ta('actiwellAtms.mobileApps.sharedFeatures', [
+    'Real-time notifications',
+    'Injury alerts < 5 minutes',
+    'Automatic data sync',
+    'Tablet & phone optimized',
+  ])
 
   return (
     <div className="min-h-screen bg-white">
@@ -275,12 +292,12 @@ export default function ActiwellATMSClient() {
               <Button asChild size="lg" className="bg-[#3BA5B5] hover:bg-[#4BBDC8] text-white border-0">
                 <a href="#features">
                   <Activity className="mr-2 h-5 w-5" />
-                  Explore Features
+                  {tx('actiwellAtms.hero.ctaExplore', 'Explore Features')}
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-teal-400/25 text-teal-200 hover:text-white bg-teal-500/5 hover:bg-teal-500/10">
                 <a href="#roles">
-                  View 3 Portals
+                  {tx('actiwellAtms.hero.ctaPortals', 'View 3 Portals')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
@@ -294,10 +311,10 @@ export default function ActiwellATMSClient() {
               className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-3xl"
             >
               {[
-                { number: '30+', label: 'NSCA Tests' },
-                { number: '9', label: 'Assessment Categories' },
-                { number: '35', label: 'Sports Supported' },
-                { number: '360°', label: 'Athlete Management' },
+                { number: '30+', label: tx('actiwellAtms.hero.stats.tests', 'NSCA Tests') },
+                { number: '9', label: tx('actiwellAtms.hero.stats.categories', 'Assessment Categories') },
+                { number: '35', label: tx('actiwellAtms.hero.stats.sports', 'Sports Supported') },
+                { number: '360°', label: tx('actiwellAtms.hero.stats.management', 'Athlete Management') },
               ].map((stat) => (
                 <div key={stat.label} className="group rounded-xl border border-[#3BA5B5]/20 bg-white/[0.03] backdrop-blur-sm px-4 py-5 text-center transition-colors hover:bg-white/[0.06] hover:border-[#4BBDC8]/30">
                   <div className="text-3xl font-bold bg-gradient-to-b from-teal-200 to-teal-400 bg-clip-text text-transparent">{stat.number}</div>
@@ -316,18 +333,11 @@ export default function ActiwellATMSClient() {
       <section id="features" className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-14">
-            <p className="text-[#3BA5B5] mb-3 text-sm font-semibold tracking-wider uppercase">{tx('actiwellAtms.modules.title', 'Comprehensive Features')}</p>
+            <p className="text-[#3BA5B5] mb-3 text-sm font-semibold tracking-wider uppercase">{tx('actiwellAtms.modules.sectionLabel', 'Comprehensive Features')}</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-              {language === 'en' ? (
-                <>
-                  9 Core Modules for{' '}
-                  <span className="bg-gradient-to-r from-[#3BA5B5] to-[#4BBDC8] bg-clip-text text-transparent">Professional Training</span>
-                </>
-              ) : (
-                <span className="bg-gradient-to-r from-[#3BA5B5] to-[#4BBDC8] bg-clip-text text-transparent">
-                  {tx('actiwellAtms.modules.title', '9 Core Modules for Professional Training')}
-                </span>
-              )}
+              <span className="bg-gradient-to-r from-[#3BA5B5] to-[#4BBDC8] bg-clip-text text-transparent">
+                {tx('actiwellAtms.modules.title', '9 Core Modules for Professional Training')}
+              </span>
             </h2>
             <p className="mt-4 text-lg text-gray-600">
               {tx('actiwellAtms.modules.description', 'A modern sports training management system integrating everything from fitness assessment to periodization and injury prevention.')}
@@ -335,9 +345,9 @@ export default function ActiwellATMSClient() {
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {mainFeatures.map((feature, index) => (
+            {moduleItems.map((feature: { title: string; description: string }, index: number) => (
               <motion.div
-                key={feature.title}
+                key={index}
                 initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -362,44 +372,48 @@ export default function ActiwellATMSClient() {
       <section id="tests" className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-14">
-            <p className="text-[#3BA5B5] mb-3 text-sm font-semibold tracking-wider uppercase">NSCA Test Categories</p>
+            <p className="text-[#3BA5B5] mb-3 text-sm font-semibold tracking-wider uppercase">{tx('actiwellAtms.testCategories.sectionLabel', 'NSCA Test Categories')}</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-              <span className="bg-gradient-to-r from-[#3BA5B5] to-[#4BBDC8] bg-clip-text text-transparent">9 Categories</span> with 30+ Tests
+              <span className="bg-gradient-to-r from-[#3BA5B5] to-[#4BBDC8] bg-clip-text text-transparent">{tx('actiwellAtms.testCategories.title', '9 Categories')}</span> {tx('actiwellAtms.testCategories.titleSuffix', 'with 30+ Tests')}
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              Comprehensive fitness testing system following NSCA v3.0 with CV% reliability, normative data, and 5-level classification.
+              {tx('actiwellAtms.testCategories.description', 'Comprehensive fitness testing system following NSCA v3.0 with CV% reliability, normative data, and 5-level classification.')}
             </p>
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {testCategories.map((category, index) => (
-              <motion.div
-                key={category.title}
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.04 }}
-              >
-                <Card className="h-full group border-gray-200/60 bg-white shadow-sm hover:shadow-lg hover:border-[#3BA5B5]/15 transition-all">
-                  <CardContent className="pt-6">
-                    <div className="mb-4 flex items-center gap-3">
-                      <div className={`flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br ${category.color} shadow-md transition-transform group-hover:scale-110`}>
-                        <category.icon className="h-5 w-5 text-white" />
+            {testCategories.map((category: { title: string; tests: string[] }, index: number) => {
+              const Icon = testCategoryIcons[index] || Activity
+              const color = testCategoryColors[index] || 'from-gray-500 to-gray-600'
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.04 }}
+                >
+                  <Card className="h-full group border-gray-200/60 bg-white shadow-sm hover:shadow-lg hover:border-[#3BA5B5]/15 transition-all">
+                    <CardContent className="pt-6">
+                      <div className="mb-4 flex items-center gap-3">
+                        <div className={`flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br ${color} shadow-md transition-transform group-hover:scale-110`}>
+                          <Icon className="h-5 w-5 text-white" />
+                        </div>
+                        <h3 className="text-base font-semibold text-gray-900">{category.title}</h3>
                       </div>
-                      <h3 className="text-base font-semibold text-gray-900">{category.title}</h3>
-                    </div>
-                    <ul className="space-y-1.5">
-                      {category.tests.map(test => (
-                        <li key={test} className="flex items-center gap-2 text-sm text-gray-600">
-                          <span className="h-1.5 w-1.5 rounded-full bg-[#3BA5B5]" />
-                          {test}
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+                      <ul className="space-y-1.5">
+                        {category.tests.map((test: string) => (
+                          <li key={test} className="flex items-center gap-2 text-sm text-gray-600">
+                            <span className="h-1.5 w-1.5 rounded-full bg-[#3BA5B5]" />
+                            {test}
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              )
+            })}
           </div>
 
           {/* NSCA compliance badge */}
@@ -409,7 +423,7 @@ export default function ActiwellATMSClient() {
                 <Activity className="h-4 w-4 text-[#3BA5B5]" />
               </div>
               <span className="text-sm font-medium text-gray-700">
-                100% compliant with <span className="text-[#3BA5B5] font-semibold">NSCA v3.0</span> standards
+                {tx('actiwellAtms.testCategories.complianceBadge', '100% compliant with NSCA v3.0 standards')}
               </span>
             </div>
           </div>
@@ -420,10 +434,12 @@ export default function ActiwellATMSClient() {
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-14">
-            <p className="text-[#3BA5B5] mb-3 text-sm font-semibold tracking-wider uppercase">Problem & Solution</p>
+            <p className="text-[#3BA5B5] mb-3 text-sm font-semibold tracking-wider uppercase">{tx('actiwellAtms.problemSolution.sectionLabel', 'Problem & Solution')}</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-              From <span className="text-red-500">Manual</span> to{' '}
-              <span className="text-[#3BA5B5]">Automated</span>
+              {language === 'en' ? 'From' : tx('actiwellAtms.problemSolution.sectionLabel', 'Problem & Solution').split(' ')[0] === tx('actiwellAtms.problemSolution.sectionLabel', 'Problem & Solution').split(' ')[0] ? '' : ''}{' '}
+              <span className="text-red-500">{tx('actiwellAtms.problemSolution.titleManual', 'Manual')}</span>{' '}
+              {language === 'en' ? 'to' : '→'}{' '}
+              <span className="text-[#3BA5B5]">{tx('actiwellAtms.problemSolution.titleAutomated', 'Automated')}</span>
             </h2>
           </div>
 
@@ -435,12 +451,12 @@ export default function ActiwellATMSClient() {
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-500">
                     <AlertTriangle className="h-5 w-5 text-white" />
                   </div>
-                  <CardTitle className="text-xl text-red-700">Current Problems</CardTitle>
+                  <CardTitle className="text-xl text-red-700">{tx('actiwellAtms.problemSolution.problemsTitle', 'Current Problems')}</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-4">
-                  {problems.map((problem) => (
+                  {problems.map((problem: { title: string; detail: string }) => (
                     <li key={problem.title} className="flex items-start gap-3">
                       <XCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-red-500" />
                       <div>
@@ -460,12 +476,12 @@ export default function ActiwellATMSClient() {
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500">
                     <CheckCircle2 className="h-5 w-5 text-white" />
                   </div>
-                  <CardTitle className="text-xl text-emerald-700">ATMS Solution</CardTitle>
+                  <CardTitle className="text-xl text-emerald-700">{tx('actiwellAtms.problemSolution.solutionsTitle', 'ATMS Solution')}</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-4">
-                  {solutions.map((solution) => (
+                  {solutions.map((solution: { title: string; detail: string }) => (
                     <li key={solution.title} className="flex items-start gap-3">
                       <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-emerald-500" />
                       <div>
@@ -493,13 +509,12 @@ export default function ActiwellATMSClient() {
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="mx-auto max-w-3xl text-center mb-14">
-            <p className="text-[#4BBDC8] mb-3 text-sm font-semibold tracking-wider uppercase">Role-Based Access</p>
+            <p className="text-[#4BBDC8] mb-3 text-sm font-semibold tracking-wider uppercase">{tx('actiwellAtms.roles.sectionLabel', 'Role-Based Access')}</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-white">
-              Three{' '}
-              <span className="bg-gradient-to-r from-[#3BA5B5] to-[#8DC63F] bg-clip-text text-transparent">Specialized Portals</span>
+              <span className="bg-gradient-to-r from-[#3BA5B5] to-[#8DC63F] bg-clip-text text-transparent">{tx('actiwellAtms.roles.title', 'Three Specialized Portals')}</span>
             </h2>
             <p className="mt-4 text-lg text-gray-300">
-              Clear role-based access control tailored for each user type.
+              {tx('actiwellAtms.roles.description', 'Clear role-based access control tailored for each user type.')}
             </p>
           </div>
 
@@ -524,7 +539,7 @@ export default function ActiwellATMSClient() {
                   <CardContent>
                     <p className="mb-5 text-gray-300">{role.description}</p>
                     <ul className="space-y-2.5">
-                      {role.features.map(feature => (
+                      {role.features.map((feature: string) => (
                         <li key={feature} className="flex items-center gap-2 text-sm text-gray-200">
                           <span className={`h-2 w-2 rounded-full ${role.dot}`} />
                           {feature}
@@ -543,19 +558,21 @@ export default function ActiwellATMSClient() {
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-14">
-            <p className="text-[#3BA5B5] mb-3 text-sm font-semibold tracking-wider uppercase">Workflow</p>
+            <p className="text-[#3BA5B5] mb-3 text-sm font-semibold tracking-wider uppercase">{tx('actiwellAtms.workflow.sectionLabel', 'Workflow')}</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-              <span className="bg-gradient-to-r from-[#3BA5B5] to-[#4BBDC8] bg-clip-text text-transparent">Simple</span> Process, High Efficiency
+              <span className="bg-gradient-to-r from-[#3BA5B5] to-[#4BBDC8] bg-clip-text text-transparent">
+                {tx('actiwellAtms.workflow.title', 'Simple Process, High Efficiency')}
+              </span>
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              Scientific training workflow following international standards — from intake to analytics.
+              {tx('actiwellAtms.workflow.description', 'Scientific training workflow following international standards — from intake to analytics.')}
             </p>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {workflowSteps.map((step, index) => (
+            {workflowSteps.map((step: { title: string; description: string }, index: number) => (
               <motion.div
-                key={step.title}
+                key={index}
                 initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -580,15 +597,19 @@ export default function ActiwellATMSClient() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-14">
-            <p className="text-[#3BA5B5] mb-3 text-sm font-semibold tracking-wider uppercase">Mobile Applications</p>
+            <p className="text-[#3BA5B5] mb-3 text-sm font-semibold tracking-wider uppercase">{tx('actiwellAtms.mobileApps.sectionLabel', 'Mobile Applications')}</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-              <span className="bg-gradient-to-r from-[#d11a2a] to-red-500 bg-clip-text text-transparent">Coach</span>{' '}
+              <span className="bg-gradient-to-r from-[#d11a2a] to-red-500 bg-clip-text text-transparent">
+                {language === 'en' ? 'Coach' : tx('actiwellAtms.mobileApps.coachApp.title', 'Coach').split(' ')[0]}
+              </span>{' '}
               &{' '}
-              <span className="bg-gradient-to-r from-[#10b981] to-emerald-400 bg-clip-text text-transparent">Athlete</span>{' '}
-              Apps
+              <span className="bg-gradient-to-r from-[#10b981] to-emerald-400 bg-clip-text text-transparent">
+                {language === 'en' ? 'Athlete' : tx('actiwellAtms.mobileApps.athleteApp.title', 'Athlete').split(' ')[0]}
+              </span>{' '}
+              {language === 'en' ? 'Apps' : ''}
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              Mobile apps optimized for tablets and phones — record results on the field and track progress anytime, anywhere.
+              {tx('actiwellAtms.mobileApps.description', 'Mobile apps optimized for tablets and phones — record results on the field and track progress anytime, anywhere.')}
             </p>
           </div>
 
@@ -598,7 +619,7 @@ export default function ActiwellATMSClient() {
               <CardContent className="pt-6">
                 <div className="flex flex-col sm:flex-row gap-8">
                   {/* Phone mockup */}
-                  <PhoneMockup title="Coach App">
+                  <PhoneMockup title={tx('actiwellAtms.mobileApps.coachApp.title', 'Coach Application')}>
                     {/* Status bar */}
                     <div className="mb-3 flex items-center justify-between text-[9px] text-gray-400">
                       <span>9:41</span>
@@ -653,17 +674,12 @@ export default function ActiwellATMSClient() {
                         <ClipboardCheck className="h-6 w-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold text-gray-900">Coach Application</h3>
-                        <p className="text-xs text-gray-500">Test recording & session management</p>
+                        <h3 className="text-lg font-bold text-gray-900">{tx('actiwellAtms.mobileApps.coachApp.title', 'Coach Application')}</h3>
+                        <p className="text-xs text-gray-500">{tx('actiwellAtms.mobileApps.coachApp.subtitle', 'Test recording & session management')}</p>
                       </div>
                     </div>
                     <ul className="space-y-2.5">
-                      {[
-                        'Tablet-optimized test forms with 30+ NSCA tests',
-                        'Station mode for mass testing campaigns',
-                        'Session management, attendance, RPE/sRPE',
-                        'Detailed lesson plans with exercise format',
-                      ].map(f => (
+                      {coachAppFeatures.map((f: string) => (
                         <li key={f} className="flex items-start gap-2 text-sm text-gray-700">
                           <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#d11a2a]" />
                           {f}
@@ -673,15 +689,15 @@ export default function ActiwellATMSClient() {
                     <div className="mt-5 grid grid-cols-3 gap-2 rounded-lg bg-[#d11a2a]/10 p-3">
                       <div className="text-center">
                         <p className="text-[#d11a2a] text-lg font-bold">{'<'}1s</p>
-                        <p className="text-[10px] text-gray-500">Form load</p>
+                        <p className="text-[10px] text-gray-500">{tx('actiwellAtms.mobileApps.coachApp.stats.formLoad', 'Form load')}</p>
                       </div>
                       <div className="text-center">
                         <p className="text-[#d11a2a] text-lg font-bold">15s</p>
-                        <p className="text-[10px] text-gray-500">Per result</p>
+                        <p className="text-[10px] text-gray-500">{tx('actiwellAtms.mobileApps.coachApp.stats.perResult', 'Per result')}</p>
                       </div>
                       <div className="text-center">
                         <p className="text-[#d11a2a] text-lg font-bold">100%</p>
-                        <p className="text-[10px] text-gray-500">NSCA valid</p>
+                        <p className="text-[10px] text-gray-500">{tx('actiwellAtms.mobileApps.coachApp.stats.nscaValid', 'NSCA valid')}</p>
                       </div>
                     </div>
                   </div>
@@ -694,7 +710,7 @@ export default function ActiwellATMSClient() {
               <CardContent className="pt-6">
                 <div className="flex flex-col sm:flex-row gap-8">
                   {/* Phone mockup */}
-                  <PhoneMockup title="Athlete App">
+                  <PhoneMockup title={tx('actiwellAtms.mobileApps.athleteApp.title', 'Athlete Application')}>
                     {/* Status bar */}
                     <div className="mb-3 flex items-center justify-between text-[9px] text-gray-400">
                       <span>9:41</span>
@@ -776,17 +792,12 @@ export default function ActiwellATMSClient() {
                         <Activity className="h-6 w-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold text-gray-900">Athlete Application</h3>
-                        <p className="text-xs text-gray-500">Progress tracking & training logs</p>
+                        <h3 className="text-lg font-bold text-gray-900">{tx('actiwellAtms.mobileApps.athleteApp.title', 'Athlete Application')}</h3>
+                        <p className="text-xs text-gray-500">{tx('actiwellAtms.mobileApps.athleteApp.subtitle', 'Progress tracking & training logs')}</p>
                       </div>
                     </div>
                     <ul className="space-y-2.5">
-                      {[
-                        'Test results with progress trend charts',
-                        'Daily training log: status, fitness, mood',
-                        'Exercise logging with sets, reps, weight, RPE',
-                        'Personal stats: total days, streaks, trends',
-                      ].map(f => (
+                      {athleteAppFeatures.map((f: string) => (
                         <li key={f} className="flex items-start gap-2 text-sm text-gray-700">
                           <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#10b981]" />
                           {f}
@@ -796,15 +807,15 @@ export default function ActiwellATMSClient() {
                     <div className="mt-5 grid grid-cols-3 gap-2 rounded-lg bg-[#10b981]/10 p-3">
                       <div className="text-center">
                         <p className="text-[#10b981] text-lg font-bold">{'<'}3m</p>
-                        <p className="text-[10px] text-gray-500">Create log</p>
+                        <p className="text-[10px] text-gray-500">{tx('actiwellAtms.mobileApps.athleteApp.stats.createLog', 'Create log')}</p>
                       </div>
                       <div className="text-center">
                         <p className="text-[#10b981] text-lg font-bold">7d</p>
-                        <p className="text-[10px] text-gray-500">Edit window</p>
+                        <p className="text-[10px] text-gray-500">{tx('actiwellAtms.mobileApps.athleteApp.stats.editWindow', 'Edit window')}</p>
                       </div>
                       <div className="text-center">
                         <p className="text-[#10b981] text-lg font-bold">Offline</p>
-                        <p className="text-[10px] text-gray-500">Supported</p>
+                        <p className="text-[10px] text-gray-500">{tx('actiwellAtms.mobileApps.athleteApp.stats.offline', 'Supported')}</p>
                       </div>
                     </div>
                   </div>
@@ -815,9 +826,9 @@ export default function ActiwellATMSClient() {
 
           {/* Shared features */}
           <div className="mt-10">
-            <h4 className="mb-5 text-center text-lg font-semibold text-gray-900">Shared Features Across Both Apps</h4>
+            <h4 className="mb-5 text-center text-lg font-semibold text-gray-900">{tx('actiwellAtms.mobileApps.sharedTitle', 'Shared Features Across Both Apps')}</h4>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              {['Real-time notifications', 'Injury alerts < 5 minutes', 'Automatic data sync', 'Tablet & phone optimized'].map(f => (
+              {sharedFeatures.map((f: string) => (
                 <div key={f} className="rounded-xl border border-gray-200 bg-gray-50 p-4 text-center">
                   <span className="text-sm text-gray-700">{f}</span>
                 </div>
@@ -831,10 +842,10 @@ export default function ActiwellATMSClient() {
       <section className="py-16 lg:py-20" style={{ background: 'linear-gradient(135deg, #3BA5B5 0%, #8DC63F 100%)' }}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white">
-            Ready to Digitize Your Training Center?
+            {tx('actiwellAtms.cta.title', 'Ready to Digitize Your Training Center?')}
           </h2>
           <p className="mt-4 text-lg text-white/80 max-w-2xl mx-auto">
-            ATMS brings NSCA-standard testing, smart periodization, and data-driven coaching into a unified platform.
+            {tx('actiwellAtms.cta.description', 'ATMS brings NSCA-standard testing, smart periodization, and data-driven coaching into a unified platform.')}
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-[#2a8a97] hover:bg-gray-100 border-0">
