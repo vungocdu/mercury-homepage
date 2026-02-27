@@ -897,6 +897,14 @@ export default function QuickShiftClient() {
                 </Link>
               </Button>
             </div>
+            <div className="mt-6">
+              <Button asChild variant="link" className="text-white/40 hover:text-white/70">
+                <Link href="/quickshift/privacy">
+                  <Shield className="w-4 h-4 mr-2" />
+                  Privacy Policy & User Privacy Choices
+                </Link>
+              </Button>
+            </div>
           </motion.div>
         </div>
       </section>
