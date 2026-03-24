@@ -53,6 +53,7 @@ function GravityStarsBackground({
   const containerRef = React.useRef<HTMLDivElement | null>(null);
   const canvasRef = React.useRef<HTMLCanvasElement | null>(null);
   const animRef = React.useRef<number | null>(null);
+  const animateRef = React.useRef<() => void>(() => {});
   const starsRef = React.useRef<Particle[]>([]);
   const mouseRef = React.useRef<{ x: number; y: number }>({ x: 0, y: 0 });
   const [dpr, setDpr] = React.useState(1);
@@ -291,8 +292,12 @@ function GravityStarsBackground({
     if (!ctx) return;
     updateStars();
     drawStars(ctx);
-    animRef.current = requestAnimationFrame(animate);
+    animRef.current = requestAnimationFrame(animateRef.current);
   }, [updateStars, drawStars]);
+
+  React.useEffect(() => {
+    animateRef.current = animate;
+  }, [animate]);
 
   React.useEffect(() => {
     resizeCanvas();

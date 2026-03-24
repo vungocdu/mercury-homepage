@@ -38,7 +38,7 @@ export const en = {
     // System category navigation
     hrSystem: "HR System",
     sportSystem: "Sport System",
-    hotelSystem: "Hotel System",
+    hotelSystem: "Hospitality",
     bizOperation: "Biz Operation",
     hospitalitySystem: "Hospitality",
     nightlifeCrm: "Nightlife CRM",

@@ -68,34 +68,35 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<Language>('en')
-  const [isClient, setIsClient] = useState(false)
-  const [currentTranslations, setCurrentTranslations] = useState<TranslationType>({})
-
-  useEffect(() => {
-    setIsClient(true)
-    // Get language from localStorage or default to 'en'
-    try {
-      const savedLanguage = localStorage.getItem('language') as Language
-      if (savedLanguage && ['en', 'vi', 'ja', 'ko'].includes(savedLanguage)) {
-        setLanguageState(savedLanguage)
-      }
-    } catch (error) {
-      // Fallback to 'en' if localStorage is not available
-      console.warn('localStorage not available, using default language')
+  const [language, setLanguageState] = useState<Language>(() => {
+    if (typeof window === 'undefined') {
+      return 'en'
     }
-  }, [])
+
+    try {
+      const savedLanguage = localStorage.getItem('language') as Language | null
+      if (savedLanguage && ['en', 'vi', 'ja', 'ko'].includes(savedLanguage)) {
+        return savedLanguage
+      }
+    } catch {
+      // Ignore storage failures and keep English as the default.
+    }
+
+    return 'en'
+  })
+  const [currentTranslations, setCurrentTranslations] = useState<TranslationType>({})
 
   // Load translations when language changes
   useEffect(() => {
-    if (isClient) {
-      loadTranslations(language).then(setCurrentTranslations).catch((error) => {
-        console.error('Failed to load translations:', error)
-        // Fallback to empty object
-        setCurrentTranslations({})
-      })
+    if (typeof window === 'undefined') {
+      return
     }
-  }, [language, isClient])
+
+    loadTranslations(language).then(setCurrentTranslations).catch((error) => {
+      console.error('Failed to load translations:', error)
+      setCurrentTranslations({})
+    })
+  }, [language])
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang)
@@ -126,15 +127,6 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     setLanguage,
     t,
     translations: currentTranslations,
-  }
-
-  // Only render children when client-side to avoid hydration issues
-  if (!isClient) {
-    return (
-      <LanguageContext.Provider value={value}>
-        {children}
-      </LanguageContext.Provider>
-    )
   }
 
   return (

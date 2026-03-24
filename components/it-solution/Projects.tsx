@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import { ExternalLink, Smartphone, Globe, Zap, Dumbbell, Clock, Building2, Plane, Code2, Activity, Users, Briefcase, Box, BarChart3, Moon } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
-import ClientOnly from '@/components/ClientOnly'
 import { Card, CardContent, CardFooter } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -162,7 +161,7 @@ export default function Projects() {
     }
   }
 
-  const ProjectsContent = () => (
+  return (
     <section id="projects" className="section-white relative overflow-hidden" style={{ paddingTop: '6rem' }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 fade-in-up">
@@ -354,33 +353,5 @@ export default function Projects() {
         </div>
       </div>
     </section>
-  )
-
-  return (
-    <ClientOnly fallback={
-      <section id="projects" className="section-white relative overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16 fade-in-up">
-            <Badge variant="outline" className="px-4 py-2 mb-6">
-              <Zap className="w-4 h-4 mr-2" />
-              <span className="text-sm font-medium">High-Performance Applications</span>
-            </Badge>
-
-            <h2 className="text-3xl lg:text-5xl font-bold mb-6" style={{ color: 'hsl(var(--text-primary))' }}>
-              We excel in building{' '}
-              <span style={{ color: 'hsl(var(--link-primary))' }}>
-                high-load mobile and web applications
-              </span>
-            </h2>
-
-            <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: 'hsl(var(--text-secondary))' }}>
-              Explore our portfolio of successful projects that demonstrate our expertise in delivering innovative solutions across various industries with cutting-edge technology.
-            </p>
-          </div>
-        </div>
-      </section>
-    }>
-      <ProjectsContent />
-    </ClientOnly>
   )
 }

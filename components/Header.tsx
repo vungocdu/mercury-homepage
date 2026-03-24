@@ -86,11 +86,12 @@ export default function Header() {
       ]
     },
     {
-      name: nav?.hotelSystem || 'Hotel System',
+      name: nav?.hotelSystem || 'Hospitality',
       id: 'hotelSystem',
       children: [
         { name: nav?.minovaPMS || 'Minova PMS', href: '/minova-pms', description: nav?.minovaPMSDesc || 'Property Management System' },
         { name: nav?.otaCalculator || 'OTA Calculator', href: '/ota-calculator', description: nav?.otaCalculatorDesc || 'OTA Commission Calculator' },
+        { name: nav?.nightlifeCrm || 'Nightlife CRM', href: '/hospitality/nightclub-crm', description: nav?.nightlifeCrmDesc || 'CRM for Nightclubs, Bars & Lounges' },
       ]
     },
     {
@@ -100,13 +101,6 @@ export default function Header() {
         { name: nav?.containerCalculator || 'ContCal 3D', href: '/container-calculator', description: nav?.containerCalculatorDesc || '3D Container Packing Optimizer' },
         { name: nav?.processAndTechnology || 'Process & Technology', href: '/process-technology', description: nav?.processAndTechnologyDesc || 'Digital Process Solutions' },
         { name: nav?.myarm || 'MyARM', href: 'https://myarms.jp/', description: nav?.myarmDesc || 'Japanese-style Business Management' },
-      ]
-    },
-    {
-      name: nav?.hospitalitySystem || 'Hospitality',
-      id: 'hospitalitySystem',
-      children: [
-        { name: nav?.nightlifeCrm || 'Nightlife CRM', href: '/hospitality/nightclub-crm', description: nav?.nightlifeCrmDesc || 'CRM for Nightclubs, Bars & Lounges' },
       ]
     },
     { name: nav?.about || 'About', href: '/about' },
