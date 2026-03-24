@@ -18,6 +18,8 @@ export const vi = {
     sportSystem: "Sport System",
     hotelSystem: "Hotel System",
     bizOperation: "Biz Operation",
+    hospitalitySystem: "Hospitality",
+    nightlifeCrm: "Nightlife CRM",
     // Product names
     tnaSystem: "TNA HRM System",
     quickshift: "QuickShift",
@@ -38,6 +40,7 @@ export const vi = {
     processAndTechnologyDesc: "Giải pháp Quy trình Số",
     myarm: "MyARM",
     myarmDesc: "Quản lý Doanh nghiệp phong cách Nhật Bản",
+    nightlifeCrmDesc: "CRM cho Quán bar, Câu lạc bộ & Lounge",
   },
 
   // Hero Section
@@ -732,6 +735,28 @@ export const vi = {
         },
         website: "https://tmha.minova.vn"
       },
+      nightlife: {
+        title: "Night Life CRM: Nền Tảng CRM Vận Hành Cho Club & Lounge",
+        description: "Mercury Night Life CRM là nền tảng đa tenant cho venue nightlife, hợp nhất dữ liệu khách, phân khúc, đặt bàn, waitlist và điều phối sàn theo thời gian thực. Hệ thống liên kết vận hành tại chỗ với chiến dịch marketing tuân thủ và chỉ số SLA rõ ràng.",
+        features: {
+          title: "Tính Năng Chính:",
+          items: [
+            "Hồ sơ khách hợp nhất và nhận diện đa kênh",
+            "Đặt bàn, hàng chờ và vận hành bàn theo thời gian thực",
+            "Chiến dịch Email/SMS/WhatsApp có kiểm soát consent",
+            "Bảo mật đa tenant và kiểm toán tuân thủ"
+          ]
+        },
+        platforms: {
+          title: "Nền Tảng:",
+          items: ["Ứng Dụng Web", "Ứng Dụng Mobile Vận Hành"]
+        },
+        technologies: {
+          title: "Công Nghệ:",
+          items: ["Next.js", "PHP API", "MySQL/MariaDB"]
+        },
+        website: "/hospitality/nightclub-crm"
+      },
       quickshift: {
         title: "QuickShift: Quản Lý Nhân Sự Thời Vụ AI",
         description: "Phát triển cho thị trường nhân sự Nhật Bản hợp tác cùng Care Earth Inc., QuickShift là nền tảng quản lý nhân sự thời vụ toàn diện, số hóa toàn bộ quy trình từ OCR bảng chấm công bằng AI, lập lịch ca tự động đến quản lý đơn hàng, xuất hóa đơn và thông báo đa kênh. Hệ thống loại bỏ các quy trình thủ công, giúp doanh nghiệp mở rộng vận hành hiệu quả cho người lao động, khách hàng và quản lý.",
@@ -811,6 +836,10 @@ export const vi = {
       hotelTech: {
         title: "Giải Pháp Hotel Tech",
         description: "Giải pháp khách sạn thông minh cho quản lý tài sản, hệ thống đặt phòng và vận hành khách sạn."
+      },
+      hospitalityTech: {
+        title: "Nightlife Hospitality",
+        description: "CRM vận hành cho club, lounge và bar với dữ liệu khách, điều phối sàn và tương tác khách hàng tuân thủ."
       },
       businessOpt: {
         title: "Tối Ưu Hóa Kinh Doanh",

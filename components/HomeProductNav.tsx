@@ -13,6 +13,7 @@ import {
   Plane,
   Smartphone,
   Box,
+  Moon,
 } from 'lucide-react'
 
 export default function HomeProductNav() {
@@ -26,10 +27,10 @@ export default function HomeProductNav() {
     { title: t('projects.items.property.title').split(':')[0] || 'Minova PMS', id: 'project-property', icon: <Building2 className="w-4 h-4" /> },
     { title: 'OTA Calculator', id: 'project-powerControl', icon: <Zap className="w-4 h-4" /> },
     { title: 'AirHub', id: 'project-airhub', icon: <Plane className="w-4 h-4" /> },
+    { title: 'Night Life CRM', id: 'project-nightlife', icon: <Moon className="w-4 h-4" /> },
     { title: 'MyARM', id: 'project-myarm', icon: <Smartphone className="w-4 h-4" /> },
     { title: 'ContCal', id: 'project-contcal', icon: <Box className="w-4 h-4" /> },
   ]
 
   return <HorizontalNav items={navItems} scrollOffset={160} />
 }
-

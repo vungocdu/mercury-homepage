@@ -102,6 +102,13 @@ export default function Header() {
         { name: nav?.myarm || 'MyARM', href: 'https://myarms.jp/', description: nav?.myarmDesc || 'Japanese-style Business Management' },
       ]
     },
+    {
+      name: nav?.hospitalitySystem || 'Hospitality',
+      id: 'hospitalitySystem',
+      children: [
+        { name: nav?.nightlifeCrm || 'Nightlife CRM', href: '/hospitality/nightclub-crm', description: nav?.nightlifeCrmDesc || 'CRM for Nightclubs, Bars & Lounges' },
+      ]
+    },
     { name: nav?.about || 'About', href: '/about' },
   ]
 

@@ -18,6 +18,8 @@ export const ko = {
     sportSystem: "Sport System",
     hotelSystem: "Hotel System",
     bizOperation: "Biz Operation",
+    hospitalitySystem: "Hospitality",
+    nightlifeCrm: "Nightlife CRM",
     // Product names
     tnaSystem: "TNA HRM System",
     quickshift: "QuickShift",
@@ -38,6 +40,7 @@ export const ko = {
     processAndTechnologyDesc: "디지털 프로세스 솔루션",
     myarm: "MyARM",
     myarmDesc: "일본식 비즈니스 관리 솔루션",
+    nightlifeCrmDesc: "나이트클럽, 바 및 라운지용 CRM",
   },
 
   // Hero Section
@@ -925,6 +928,28 @@ export const ko = {
         },
         website: "https://tmha.minova.vn"
       },
+      nightlife: {
+        title: "Night Life CRM: 클럽 운영을 위한 프로덕션 CRM",
+        description: "Mercury Night Life CRM은 나이트클럽, 바, 라운지를 위한 멀티 테넌트 CRM입니다. 게스트 데이터, 세그먼트, 예약, 대기열, 테이블 운영을 하나의 운영 화면으로 통합해 현장 운영과 마케팅 실행을 동시에 최적화합니다.",
+        features: {
+          title: "주요 기능:",
+          items: [
+            "통합 게스트 프로필 및 ID 매칭",
+            "예약·대기열·실시간 테이블 운영",
+            "동의 기반 Email/SMS/WhatsApp 캠페인",
+            "감사 대응 멀티 테넌트 보안 및 컴플라이언스"
+          ]
+        },
+        platforms: {
+          title: "플랫폼:",
+          items: ["웹 앱", "모바일 운영 앱"]
+        },
+        technologies: {
+          title: "기술:",
+          items: ["Next.js", "PHP API", "MySQL/MariaDB"]
+        },
+        website: "/hospitality/nightclub-crm"
+      },
       quickshift: {
         title: "QuickShift: AI 태스크포스 관리",
         description: "일본 인력 파견 시장을 위해 Care Earth Inc.와 협력하여 개발되었습니다. QuickShift는 AI 타임카드 OCR, 자동 시프트 스케줄링, 실시간 업무 관리, 청구서 발행, 멀티채널 알림까지 파견 업무의 전체 프로세스를 디지털화하는 엔드투엔드 태스크포스 관리 플랫폼입니다. 수작업을 제거하고 근로자, 고객, 관리자 전반에 걸쳐 효율적인 운영 확장을 지원합니다.",
@@ -1004,6 +1029,10 @@ export const ko = {
       hotelTech: {
         title: "Hotel Tech 솔루션",
         description: "자산 관리, 예약 엔진 및 호텔 운영을 위한 스마트 호스피탈리티 솔루션."
+      },
+      hospitalityTech: {
+        title: "Nightlife Hospitality",
+        description: "클럽·라운지·바를 위한 게스트 인텔리전스, 플로어 운영, 컴플라이언스 통합 CRM."
       },
       businessOpt: {
         title: "비즈니스 최적화",

@@ -40,6 +40,8 @@ export const en = {
     sportSystem: "Sport System",
     hotelSystem: "Hotel System",
     bizOperation: "Biz Operation",
+    hospitalitySystem: "Hospitality",
+    nightlifeCrm: "Nightlife CRM",
     // Product descriptions for dropdown
     tnaSystemDesc: "Time & Attendance Management",
     quickshiftDesc: "Shift & Schedule Management",
@@ -50,6 +52,7 @@ export const en = {
     containerCalculatorDesc: "3D Container Packing Optimizer",
     processAndTechnologyDesc: "Digital Process Solutions",
     myarmDesc: "Japanese-style Business Management",
+    nightlifeCrmDesc: "CRM for Nightclubs, Bars & Lounges",
   },
 
   // Hero Section
@@ -1014,6 +1017,28 @@ export const en = {
         },
         website: "https://tmha.minova.vn"
       },
+      nightlife: {
+        title: "Night Life CRM: Production CRM for Club and Lounge Operations",
+        description: "Mercury Night Life CRM is a multi-tenant platform built for nightlife venues that need one operating surface for guest intelligence, segmentation, reservations, waitlist, and table execution. The system connects floor operations with compliant marketing workflows and measurable production SLAs.",
+        features: {
+          title: "Key Features:",
+          items: [
+            "Unified guest profile and identity resolution",
+            "Reservations, waitlist, and live table operations",
+            "Consent-aware campaigns across Email/SMS/WhatsApp",
+            "Audit-ready multi-tenant security and compliance controls"
+          ]
+        },
+        platforms: {
+          title: "Platforms:",
+          items: ["Web App", "Mobile Operations App"]
+        },
+        technologies: {
+          title: "Technologies:",
+          items: ["Next.js", "PHP API", "MySQL/MariaDB"]
+        },
+        website: "/hospitality/nightclub-crm"
+      },
       quickshift: {
         title: "QuickShift: AI Task Force Management",
         description: "Developed for the Japanese staffing market in partnership with Care Earth Inc., QuickShift is an end-to-end task force management platform that digitizes the entire temporary staffing workflow. From AI-powered Timecard OCR and automated shift scheduling to real-time work order management, invoicing, and multi-channel notifications, the system eliminates manual processes and empowers agencies to scale operations efficiently across workers, customers, and business managers.",
@@ -1093,6 +1118,10 @@ export const en = {
       hotelTech: {
         title: "Hotel Tech Solution",
         description: "Smart hospitality solutions for property management, booking engines, and hotel operations."
+      },
+      hospitalityTech: {
+        title: "Nightlife Hospitality",
+        description: "Production CRM for clubs, lounges, and bars with guest intelligence, floor operations, and compliant engagement."
       },
       businessOpt: {
         title: "Business Optimization",

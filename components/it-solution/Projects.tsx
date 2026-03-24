@@ -1,7 +1,7 @@
 "use client"
 
 import Link from 'next/link'
-import { ExternalLink, Smartphone, Globe, Zap, Dumbbell, Clock, Building2, Plane, Code2, Activity, Users, Briefcase, Box, BarChart3 } from 'lucide-react'
+import { ExternalLink, Smartphone, Globe, Zap, Dumbbell, Clock, Building2, Plane, Code2, Activity, Users, Briefcase, Box, BarChart3, Moon } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import ClientOnly from '@/components/ClientOnly'
 import { Card, CardContent, CardFooter } from '@/components/ui/card'
@@ -48,6 +48,14 @@ const categories: CategoryDef[] = [
     projectKeys: ['property', 'powerControl', 'airhub'],
   },
   {
+    key: 'hospitalityTech',
+    icon: Moon,
+    color: 'text-sky-600',
+    iconColor: 'text-sky-700',
+    bgColor: 'bg-sky-50',
+    projectKeys: ['nightlife'],
+  },
+  {
     key: 'businessOpt',
     icon: BarChart3,
     color: 'text-violet-600',
@@ -60,7 +68,7 @@ const categories: CategoryDef[] = [
 export default function Projects() {
   const { t } = useLanguage()
 
-  const allProjectKeys = ['actiwell', 'timekeeping', 'quickshift', 'atms', 'myarm', 'property', 'powerControl', 'airhub', 'contcal']
+  const allProjectKeys = ['actiwell', 'timekeeping', 'quickshift', 'atms', 'myarm', 'property', 'powerControl', 'airhub', 'nightlife', 'contcal']
 
   const projectsMap = Object.fromEntries(
     allProjectKeys.map(key => {
@@ -139,6 +147,12 @@ export default function Projects() {
       bg: 'bg-rose-600',
       iconBg: 'bg-pink-50',
       iconColor: 'text-rose-700',
+    },
+    nightlife: {
+      icon: Moon,
+      bg: 'bg-sky-700',
+      iconBg: 'bg-sky-50',
+      iconColor: 'text-sky-700',
     },
     contcal: {
       icon: Box,
