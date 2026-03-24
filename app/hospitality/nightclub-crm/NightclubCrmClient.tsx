@@ -272,7 +272,7 @@ export default function NightclubCrmClient() {
             transition={{ duration: 0.55, delay: 0.1 }}
             className="relative overflow-hidden rounded-[2rem] border border-slate-700/70 bg-[#071226]"
           >
-            <div className="grid lg:grid-cols-[1.15fr_0.85fr]">
+            <div className="grid xl:grid-cols-[1.15fr_0.85fr]">
               <div className="relative min-h-[420px]">
                 <img
                   src="https://images.unsplash.com/photo-1566737236500-c8ac43014a8e?auto=format&fit=crop&w=1600&q=80"
@@ -291,14 +291,14 @@ export default function NightclubCrmClient() {
                 </div>
               </div>
 
-              <div className="relative border-t border-slate-700/70 bg-[linear-gradient(180deg,rgba(6,15,38,0.98)_0%,rgba(4,11,28,0.96)_100%)] p-5 md:p-6 lg:border-l lg:border-t-0">
+              <div className="relative border-t border-slate-700/70 bg-[linear-gradient(180deg,rgba(6,15,38,0.98)_0%,rgba(4,11,28,0.96)_100%)] p-5 md:p-6 xl:border-l xl:border-t-0">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(56,189,248,0.18),transparent_34%),radial-gradient(circle_at_bottom_left,rgba(245,158,11,0.12),transparent_28%)]" />
                 <div className="relative">
-                  <p className="mb-6 max-w-sm text-sm leading-relaxed text-slate-300">
+                  <p className="mb-6 max-w-2xl text-sm leading-relaxed text-slate-300">
                     {tr('nightlifePage.context.support', 'Three live cues stay visible beside the floor image so the section reads like service intelligence, not generic nightlife mood.')}
                   </p>
 
-                  <div className="space-y-4">
+                  <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-1">
                     {serviceContextMoments.map((moment, index) => (
                       <motion.div
                         key={moment.title}
@@ -306,19 +306,19 @@ export default function NightclubCrmClient() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, amount: 0.4 }}
                         transition={{ duration: 0.4, delay: 0.08 * index }}
-                        className="grid grid-cols-[108px_1fr] gap-4 rounded-[1.35rem] border border-white/10 bg-white/[0.04] p-3 backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1"
+                        className="grid grid-cols-[112px_1fr] gap-4 rounded-[1.35rem] border border-white/10 bg-white/[0.04] p-3 backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1 sm:grid-cols-[132px_1fr] sm:p-4 xl:grid-cols-[118px_1fr]"
                       >
                         <div className="overflow-hidden rounded-[1rem]">
                           <img
                             src={moment.image}
                             alt={moment.alt}
-                            className="h-full min-h-[96px] w-full object-cover"
+                            className="h-full min-h-[112px] w-full object-cover sm:min-h-[132px] xl:min-h-[118px]"
                           />
                         </div>
                         <div className="flex min-w-0 flex-col justify-center">
-                          <div className="mb-2 flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-sky-200/85">
+                          <div className="mb-2 flex items-center gap-2 text-[10px] uppercase tracking-[0.18em] text-sky-200/85 sm:text-[11px]">
                             <moment.icon className="h-3.5 w-3.5" />
-                            <span>{tr('nightlifePage.context.cardLabel', 'Live context')}</span>
+                            <span className="whitespace-nowrap">{tr('nightlifePage.context.cardLabel', 'Live context')}</span>
                           </div>
                           <h4 className="text-lg font-semibold leading-tight text-slate-100">{moment.title}</h4>
                           <p className="mb-0 mt-2 text-sm leading-relaxed text-slate-300">{moment.detail}</p>
