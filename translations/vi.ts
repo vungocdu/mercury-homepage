@@ -2443,6 +2443,136 @@ export const vi = {
     backToItSolution: "Quay Lại IT Solutions"
   },
 
+  nightlifePage: {
+    hero: {
+      brand: "Mercury Solutions",
+      title: "Night Life CRM",
+      subtitle: "Nền tảng dữ liệu khách hàng vận hành thực chiến cho club, lounge và bar.",
+      description: "Một bề mặt vận hành thống nhất cho dữ liệu khách, phân khúc, đặt bàn, waitlist và điều phối sàn, đi kèm kiểm soát tuân thủ chặt chẽ và SLA đo lường được.",
+      ctaDemo: "Yêu Cầu Demo Production",
+      ctaFlow: "Xem Luồng Dịch Vụ",
+      imageAlt: "Vận hành venue nightlife",
+    },
+    heroStats: {
+      waitlist: { label: "Waitlist trực tiếp", value: "22 nhóm" },
+      seatTime: { label: "Thời gian xếp chỗ", value: "13 phút" },
+      noShow: { label: "Rủi ro no-show", value: "4 booking" },
+      campaign: { label: "Trạng thái campaign", value: "Chuỗi sau ghé thăm" },
+    },
+    signals: {
+      title: "Tín Hiệu Production",
+      items: {
+        latency: { label: "Độ trễ API (p95)", value: "< 400ms" },
+        operators: { label: "Nhân sự vận hành đồng thời", value: "2,000+" },
+        uptime: { label: "Uptime mục tiêu", value: "99.9%" },
+        tenant: { label: "Mô hình tenant", value: "SaaS đa venue" },
+      },
+    },
+    capabilities: {
+      kicker: "Guest intelligence",
+      title: "Biết rõ từng khách trước lời chào đầu tiên.",
+      description: "Mercury Night Life CRM tập trung identity, intent và engagement để host và marketing cùng hành động trên một nguồn dữ liệu chuẩn.",
+      items: {
+        profile: {
+          title: "Hồ sơ khách hợp nhất",
+          detail: "Hợp nhất định danh qua số điện thoại, email, booking và dòng lịch sử ghé thăm.",
+        },
+        segment: {
+          title: "Phân khúc thông minh",
+          detail: "Tự động gắn thẻ và lưu audience cho no-show recovery, VIP quay lại và nhóm giá trị cao.",
+        },
+        outreach: {
+          title: "Outreach an toàn theo kênh",
+          detail: "Chiến dịch Email, SMS và WhatsApp với kiểm soát consent và suppression riêng theo từng kênh.",
+        },
+      },
+    },
+    context: {
+      kicker: "Ngữ cảnh phục vụ",
+      title: "Xếp chỗ bằng nhận diện thời gian thực, không phải phỏng đoán.",
+      description: "Đội FOH nhìn thấy identity, lịch sử ghé thăm và campaign intent ngay đúng thời điểm họ xếp khách vào bàn.",
+      support: "Ba tín hiệu trực tiếp luôn hiện bên cạnh hình ảnh sàn để phần này đọc như lớp intelligence phục vụ, không phải ảnh nightlife mang tính trang trí.",
+      cardLabel: "Ngữ cảnh trực tiếp",
+      imageAlt: "Quầy host và khu vực phục vụ trong nightclub",
+      cards: {
+        identity: {
+          title: "Nhận diện ngay khung nhìn",
+          detail: "Nhìn thấy hạng VIP, host phụ trách và ghi chú sở thích trước khi bắt đầu chào khách.",
+          alt: "Quầy host với hoạt động khách đến",
+        },
+        history: {
+          title: "Nhịp ghé thăm",
+          detail: "Hiển thị độ gần đây, mô hình chi tiêu và kết quả những lần trước trong khi hàng chờ vẫn đang di chuyển.",
+          alt: "Sàn lounge đông khách trong giờ phục vụ",
+        },
+        intent: {
+          title: "Ý định chiến dịch",
+          detail: "Biết rõ chuỗi recovery, loyalty hay event nào đã kéo khách quay lại tối nay.",
+          alt: "Khoảnh khắc nhóm khách nightlife với bầu không khí quảng bá",
+        },
+      },
+    },
+    flow: {
+      kicker: "Luồng vận hành",
+      title: "Thiết kế cho khung giờ cao điểm.",
+      description: "Một vòng vận hành liên tục từ tra cứu hồ sơ đến campaign sau ghé thăm, tối ưu cho ca đêm mà không cần chuyển ngữ cảnh.",
+      stepLabel: "Bước",
+      items: {
+        intake: {
+          title: "Tiếp nhận tại quầy",
+          detail: "Host tìm hồ sơ trong vài giây và thấy mức chi tiêu, sở thích cùng kết quả các lần trước.",
+        },
+        reservation: {
+          title: "Đặt bàn + waitlist",
+          detail: "Luồng booking và walk-in chạy trong một hàng đợi với trạng thái trực tiếp và xử lý no-show.",
+        },
+        floor: {
+          title: "Phân bàn trên sàn",
+          detail: "Vận hành bàn và bottle service đồng bộ theo thời gian thực trên web và mobile cho staff.",
+        },
+        automation: {
+          title: "Tự động hóa sau ghé thăm",
+          detail: "Tin nhắn kích hoạt theo sự kiện đi kèm attribution của campaign và telemetry giao nhận.",
+        },
+      },
+    },
+    compliance: {
+      kicker: "Bảo mật và tuân thủ",
+      title: "Các lớp kiểm soát đáp ứng yêu cầu procurement doanh nghiệp.",
+      description: "Baseline từ SRS định hình tenant isolation, auditability và xử lý quyền riêng tư xuyên suốt toàn bộ workflow khách hàng và campaign.",
+      points: [
+        "Tenant isolation theo tổ chức và venue",
+        "Phân quyền theo vai trò kèm audit log cho thao tác nhạy cảm",
+        "Workflow consent, export và deletion phù hợp GDPR/CCPA/PDPA",
+        "Tích hợp OpenAPI-first và phân phối sự kiện qua webhook",
+      ],
+    },
+    stack: {
+      title: "Production stack",
+      items: {
+        web: { key: "Web console", value: "Next.js + React" },
+        mobile: { key: "Mobile operations", value: "Flutter iOS/Android" },
+        data: { key: "Tầng dữ liệu", value: "MySQL/MariaDB 10.6+" },
+        comms: { key: "Kênh liên lạc", value: "Email / SMS / WhatsApp" },
+        realtime: { key: "Cập nhật thời gian thực", value: "WebSocket / SSE" },
+        spec: { key: "Kỷ luật đặc tả", value: "OpenAPI 3.0 + Webhooks" },
+      },
+    },
+    cta: {
+      kicker: "Lộ trình triển khai",
+      title: "Đi từ pilot đến production bằng một kế hoạch triển khai thống nhất.",
+      description: "Căn chỉnh data model khách, workflow vận hành và kiểm soát tuân thủ trước khi go-live. Đội Mercury có thể map baseline trên trang này vào rollout của venue chỉ trong một discovery sprint.",
+      primary: "Bắt Đầu Kế Hoạch Production",
+      secondary: "Trao Đổi Với Đội Mercury",
+    },
+    footerPoints: [
+      "Hồ sơ khách và identity graph",
+      "Phân khúc theo rule và chiến dịch",
+      "Vòng vận hành reservation, waitlist và floor",
+      "Vận hành sẵn sàng cho SLA và tuân thủ",
+    ],
+  },
+
   // Language Selector
   language: {
     en: "English",

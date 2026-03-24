@@ -2318,6 +2318,136 @@ export const ja = {
     },
   },
 
+  nightlifePage: {
+    hero: {
+      brand: "Mercury Solutions",
+      title: "Night Life CRM",
+      subtitle: "クラブ、ラウンジ、バー向けの本番運用レベルのゲストインテリジェンス。",
+      description: "ゲストデータ、セグメンテーション、予約、待機列、フロア運用を一つの運用画面に統合し、厳格なコンプライアンスと測定可能なSLAに対応します。",
+      ctaDemo: "本番デモを依頼",
+      ctaFlow: "サービスフローを見る",
+      imageAlt: "ナイト会場の運用風景",
+    },
+    heroStats: {
+      waitlist: { label: "リアルタイム待機列", value: "22組" },
+      seatTime: { label: "着席までの時間", value: "13分" },
+      noShow: { label: "ノーショーリスク", value: "4件の予約" },
+      campaign: { label: "キャンペーン状態", value: "来店後シーケンス" },
+    },
+    signals: {
+      title: "本番運用シグナル",
+      items: {
+        latency: { label: "APIレイテンシ (p95)", value: "< 400ms" },
+        operators: { label: "同時オペレーター数", value: "2,000+" },
+        uptime: { label: "目標稼働率", value: "99.9%" },
+        tenant: { label: "テナントモデル", value: "マルチ会場SaaS" },
+      },
+    },
+    capabilities: {
+      kicker: "ゲストインテリジェンス",
+      title: "最初の挨拶の前に、すべてのゲストを把握する。",
+      description: "Mercury Night Life CRMは、identity、intent、engagementを一元化し、ホストとマーケティングが同じ情報源で判断できるようにします。",
+      items: {
+        profile: {
+          title: "統合ゲストプロファイル",
+          detail: "電話番号、メール、予約、来店履歴を横断したID統合。",
+        },
+        segment: {
+          title: "スマートセグメンテーション",
+          detail: "ノーショー回復、VIP再来店、高価値層向けの自動タグと保存済みオーディエンス。",
+        },
+        outreach: {
+          title: "チャネル安全なアウトリーチ",
+          detail: "Email、SMS、WhatsAppを対象に、チャネル別の同意管理と抑止制御を実装。",
+        },
+      },
+    },
+    context: {
+      kicker: "サービスコンテキスト",
+      title: "勘ではなく、リアルタイム認識で着席させる。",
+      description: "FOHチームは、ゲストを席へ案内するその瞬間に、identity、来店履歴、キャンペーン意図を同時に確認できます。",
+      support: "フロア写真の横に3つのライブシグナルを並べることで、このセクションが単なるナイトライフの雰囲気写真ではなく、サービスインテリジェンスとして読めるようにしています。",
+      cardLabel: "ライブコンテキスト",
+      imageAlt: "ナイトクラブのホストデスクとサービスフロア",
+      cards: {
+        identity: {
+          title: "ひと目で本人確認",
+          detail: "挨拶が始まる前に、VIPランク、担当ホスト、好みのメモを把握。",
+          alt: "ゲスト到着時のホストデスク",
+        },
+        history: {
+          title: "来店リズム",
+          detail: "待機列が動いている間に、直近来店、支出傾向、過去の結果を表示。",
+          alt: "サービス中の混雑したラウンジフロア",
+        },
+        intent: {
+          title: "キャンペーン意図",
+          detail: "今夜の再来店につながった recovery、loyalty、event シーケンスを確認。",
+          alt: "プロモーションの雰囲気があるナイトライフのグループシーン",
+        },
+      },
+    },
+    flow: {
+      kicker: "運用フロー",
+      title: "ピーク時間帯のために設計。",
+      description: "プロファイル検索から来店後キャンペーンまで、夜間運用でコンテキスト切替を起こさない連続サービスループ。",
+      stepLabel: "Step",
+      items: {
+        intake: {
+          title: "デスク受付",
+          detail: "ホストは数秒でプロファイルを見つけ、支出、好み、過去の結果を確認できます。",
+        },
+        reservation: {
+          title: "予約 + 待機列",
+          detail: "予約客とウォークインを一つのキューで扱い、リアルタイム状態とノーショー対応を実現。",
+        },
+        floor: {
+          title: "フロア割当",
+          detail: "テーブルとボトル運用を、Webとモバイルのスタッフ画面でリアルタイム同期。",
+        },
+        automation: {
+          title: "来店後の自動化",
+          detail: "イベント駆動メッセージを、キャンペーン帰属と配信テレメトリ付きで発火。",
+        },
+      },
+    },
+    compliance: {
+      kicker: "セキュリティとコンプライアンス",
+      title: "エンタープライズ調達に耐えるコントロール。",
+      description: "SRSベースラインにより、すべてのゲスト・キャンペーン運用で tenant isolation、監査性、プライバシー権対応を実現します。",
+      points: [
+        "組織と会場単位でのテナント分離",
+        "機密操作に対する監査ログ付きロールベースアクセス",
+        "GDPR/CCPA/PDPAに沿った同意、エクスポート、削除ワークフロー",
+        "OpenAPI-first の統合と webhook イベント配信",
+      ],
+    },
+    stack: {
+      title: "本番スタック",
+      items: {
+        web: { key: "Webコンソール", value: "Next.js + React" },
+        mobile: { key: "モバイル運用", value: "Flutter iOS/Android" },
+        data: { key: "データ層", value: "MySQL/MariaDB 10.6+" },
+        comms: { key: "通信チャネル", value: "Email / SMS / WhatsApp" },
+        realtime: { key: "リアルタイム更新", value: "WebSocket / SSE" },
+        spec: { key: "仕様規律", value: "OpenAPI 3.0 + Webhooks" },
+      },
+    },
+    cta: {
+      kicker: "導入パス",
+      title: "一つの導入計画で pilot から production へ。",
+      description: "go-live前に、ゲストデータモデル、運用フロー、コンプライアンス制御を整合。Mercuryチームは、このページのベースラインを1回のディスカバリースプリントで会場導入計画に落とし込めます。",
+      primary: "本番計画を開始",
+      secondary: "Mercuryチームに相談",
+    },
+    footerPoints: [
+      "ゲストプロファイルと identity graph",
+      "ルールベースのセグメンテーションとキャンペーン",
+      "予約、待機列、フロアループ",
+      "SLA とコンプライアンスに対応した運用",
+    ],
+  },
+
   // Language Selector
   language: {
     en: "English",

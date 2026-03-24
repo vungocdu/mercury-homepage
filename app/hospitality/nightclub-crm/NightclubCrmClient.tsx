@@ -270,7 +270,7 @@ export default function NightclubCrmClient() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55, delay: 0.1 }}
-            className="relative overflow-hidden rounded-[2rem] border border-slate-700/70 bg-[#071226]"
+            className="relative overflow-hidden rounded-[2rem] border border-slate-700/70 bg-[#071226] lg:col-span-2"
           >
             <div className="grid xl:grid-cols-[1.15fr_0.85fr]">
               <div className="relative min-h-[420px]">

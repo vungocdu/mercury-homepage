@@ -2407,6 +2407,136 @@ export const en = {
     },
   },
 
+  nightlifePage: {
+    hero: {
+      brand: "Mercury Solutions",
+      title: "Night Life CRM",
+      subtitle: "Production-grade guest intelligence for clubs, lounges, and bars.",
+      description: "One operating surface for guest data, segmentation, reservations, waitlist, and floor execution, mapped to strict compliance and measurable SLA targets.",
+      ctaDemo: "Request Production Demo",
+      ctaFlow: "See Service Flow",
+      imageAlt: "Night venue operations",
+    },
+    heroStats: {
+      waitlist: { label: "Live waitlist", value: "22 parties" },
+      seatTime: { label: "Floor seat time", value: "13 minutes" },
+      noShow: { label: "No-show risk", value: "4 bookings" },
+      campaign: { label: "Campaign state", value: "Post-visit sequence" },
+    },
+    signals: {
+      title: "Production Signals",
+      items: {
+        latency: { label: "API latency (p95)", value: "< 400ms" },
+        operators: { label: "Concurrent operators", value: "2,000+" },
+        uptime: { label: "Target uptime", value: "99.9%" },
+        tenant: { label: "Tenant model", value: "Multi-venue SaaS" },
+      },
+    },
+    capabilities: {
+      kicker: "Guest intelligence",
+      title: "Know every guest before the first greeting.",
+      description: "Mercury Night Life CRM centralizes identity, intent, and engagement so hosts and marketers act from one source of truth.",
+      items: {
+        profile: {
+          title: "Unified guest profile",
+          detail: "Identity resolution across phone, email, reservation, and visit timeline.",
+        },
+        segment: {
+          title: "Smart segmentation",
+          detail: "Auto-tags and saved audiences for no-show recovery, VIP return, and high-value cohorts.",
+        },
+        outreach: {
+          title: "Channel-safe outreach",
+          detail: "Email, SMS, and WhatsApp campaigns with per-channel consent and suppression controls.",
+        },
+      },
+    },
+    context: {
+      kicker: "Service context",
+      title: "Seat guests with live recognition, not guesswork.",
+      description: "FOH teams see identity, visit history, and campaign intent at the same moment they seat guests.",
+      support: "Three live cues stay visible beside the floor image so the section reads like service intelligence, not generic nightlife mood.",
+      cardLabel: "Live context",
+      imageAlt: "Nightclub host desk and service floor",
+      cards: {
+        identity: {
+          title: "Identity in frame",
+          detail: "Recognize VIP tier, host ownership, and preference notes before the greeting starts.",
+          alt: "Host desk with guest arrival activity",
+        },
+        history: {
+          title: "Visit rhythm",
+          detail: "Surface recency, spend pattern, and prior outcomes while the queue is still moving.",
+          alt: "Crowded lounge floor during active service",
+        },
+        intent: {
+          title: "Campaign intent",
+          detail: "See which recovery, loyalty, or event sequence brought the guest back tonight.",
+          alt: "Nightlife group moment with promotional atmosphere",
+        },
+      },
+    },
+    flow: {
+      kicker: "Operations flow",
+      title: "Built for the rush window.",
+      description: "One continuous service loop from profile lookup to post-visit campaign, designed for nightly execution without context switching.",
+      stepLabel: "Step",
+      items: {
+        intake: {
+          title: "Desk intake",
+          detail: "Host finds profile in seconds and sees spend, preferences, and prior outcomes.",
+        },
+        reservation: {
+          title: "Reservation + waitlist",
+          detail: "Booked and walk-in flows run in one queue with live status and no-show handling.",
+        },
+        floor: {
+          title: "Floor assignment",
+          detail: "Table and bottle operations stay synced in real time across web and mobile staff views.",
+        },
+        automation: {
+          title: "Post-visit automation",
+          detail: "Event-driven messages trigger with campaign attribution and delivery telemetry.",
+        },
+      },
+    },
+    compliance: {
+      kicker: "Security and compliance",
+      title: "Controls that satisfy enterprise procurement.",
+      description: "The SRS baseline drives tenant isolation, auditability, and privacy rights handling across all guest and campaign workflows.",
+      points: [
+        "Tenant isolation scoped by organization and venue",
+        "Role-based access with audit logs on sensitive actions",
+        "Consent, export, and deletion workflows aligned to GDPR/CCPA/PDPA",
+        "OpenAPI-first integration and webhook event delivery",
+      ],
+    },
+    stack: {
+      title: "Production stack",
+      items: {
+        web: { key: "Web console", value: "Next.js + React" },
+        mobile: { key: "Mobile operations", value: "Flutter iOS/Android" },
+        data: { key: "Data layer", value: "MySQL/MariaDB 10.6+" },
+        comms: { key: "Comms channels", value: "Email / SMS / WhatsApp" },
+        realtime: { key: "Realtime updates", value: "WebSocket / SSE" },
+        spec: { key: "Spec discipline", value: "OpenAPI 3.0 + Webhooks" },
+      },
+    },
+    cta: {
+      kicker: "Launch path",
+      title: "Move from pilot to production with one implementation plan.",
+      description: "Align guest data model, operating workflows, and compliance controls before go-live. Mercury team can map this page’s baseline to your venue rollout in one discovery sprint.",
+      primary: "Start Production Planning",
+      secondary: "Talk To Mercury Team",
+    },
+    footerPoints: [
+      "Guest profiles and identity graph",
+      "Rule-based segmentation and campaigns",
+      "Reservation, waitlist, and floor loop",
+      "SLA and compliance-ready operations",
+    ],
+  },
+
   // Language Selector
   language: {
     en: "English",

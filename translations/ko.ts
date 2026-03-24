@@ -2318,6 +2318,136 @@ export const ko = {
     },
   },
 
+  nightlifePage: {
+    hero: {
+      brand: "Mercury Solutions",
+      title: "Night Life CRM",
+      subtitle: "클럽, 라운지, 바를 위한 프로덕션급 게스트 인텔리전스.",
+      description: "게스트 데이터, 세그먼트, 예약, 대기열, 플로어 운영을 하나의 운영 화면에 통합하고 엄격한 컴플라이언스와 측정 가능한 SLA에 맞춥니다.",
+      ctaDemo: "프로덕션 데모 요청",
+      ctaFlow: "서비스 플로우 보기",
+      imageAlt: "나이트 베뉴 운영 장면",
+    },
+    heroStats: {
+      waitlist: { label: "실시간 대기열", value: "22팀" },
+      seatTime: { label: "착석 시간", value: "13분" },
+      noShow: { label: "노쇼 위험", value: "예약 4건" },
+      campaign: { label: "캠페인 상태", value: "방문 후 시퀀스" },
+    },
+    signals: {
+      title: "프로덕션 신호",
+      items: {
+        latency: { label: "API 지연시간 (p95)", value: "< 400ms" },
+        operators: { label: "동시 운영 인원", value: "2,000+" },
+        uptime: { label: "목표 가동률", value: "99.9%" },
+        tenant: { label: "테넌트 모델", value: "멀티 베뉴 SaaS" },
+      },
+    },
+    capabilities: {
+      kicker: "게스트 인텔리전스",
+      title: "첫 인사 전에 모든 고객을 파악합니다.",
+      description: "Mercury Night Life CRM은 identity, intent, engagement를 한곳에 모아 호스트와 마케팅 팀이 하나의 기준 데이터에서 움직이도록 합니다.",
+      items: {
+        profile: {
+          title: "통합 게스트 프로필",
+          detail: "전화번호, 이메일, 예약, 방문 타임라인을 가로지르는 ID 통합.",
+        },
+        segment: {
+          title: "스마트 세그먼트",
+          detail: "노쇼 복구, VIP 재방문, 고가치 고객군을 위한 자동 태그와 저장된 오디언스.",
+        },
+        outreach: {
+          title: "채널 안전형 아웃리치",
+          detail: "Email, SMS, WhatsApp 캠페인을 채널별 동의 및 억제 제어와 함께 운영.",
+        },
+      },
+    },
+    context: {
+      kicker: "서비스 컨텍스트",
+      title: "추측이 아니라 실시간 인식으로 자리를 배정합니다.",
+      description: "FOH 팀은 고객을 착석시키는 바로 그 순간에 identity, 방문 이력, 캠페인 의도를 함께 확인합니다.",
+      support: "플로어 이미지 옆에 세 가지 라이브 신호를 고정해 두어, 이 섹션이 단순한 나이트라이프 무드가 아니라 서비스 인텔리전스로 읽히도록 했습니다.",
+      cardLabel: "라이브 컨텍스트",
+      imageAlt: "나이트클럽 호스트 데스크와 서비스 플로어",
+      cards: {
+        identity: {
+          title: "한눈에 신원 파악",
+          detail: "인사가 시작되기 전에 VIP 등급, 담당 호스트, 선호 메모를 확인합니다.",
+          alt: "고객 도착이 보이는 호스트 데스크",
+        },
+        history: {
+          title: "방문 리듬",
+          detail: "대기열이 움직이는 동안 최근 방문, 지출 패턴, 이전 결과를 바로 보여줍니다.",
+          alt: "서비스가 진행 중인 붐비는 라운지 플로어",
+        },
+        intent: {
+          title: "캠페인 의도",
+          detail: "오늘 밤 재방문을 만든 recovery, loyalty, event 시퀀스를 확인합니다.",
+          alt: "프로모션 분위기의 나이트라이프 그룹 장면",
+        },
+      },
+    },
+    flow: {
+      kicker: "운영 플로우",
+      title: "피크 타임을 위해 설계.",
+      description: "프로필 조회부터 방문 후 캠페인까지, 야간 운영 중 컨텍스트 전환 없이 이어지는 연속 서비스 루프.",
+      stepLabel: "단계",
+      items: {
+        intake: {
+          title: "데스크 접수",
+          detail: "호스트는 몇 초 안에 프로필을 찾고 지출, 선호도, 이전 결과를 확인합니다.",
+        },
+        reservation: {
+          title: "예약 + 대기열",
+          detail: "예약과 워크인을 하나의 큐에서 운영하며 실시간 상태와 노쇼 처리를 함께 관리합니다.",
+        },
+        floor: {
+          title: "플로어 배정",
+          detail: "테이블과 보틀 운영이 웹과 모바일 스태프 화면에서 실시간으로 동기화됩니다.",
+        },
+        automation: {
+          title: "방문 후 자동화",
+          detail: "이벤트 기반 메시지가 캠페인 귀속 정보와 전달 텔레메트리와 함께 실행됩니다.",
+        },
+      },
+    },
+    compliance: {
+      kicker: "보안 및 컴플라이언스",
+      title: "엔터프라이즈 조달 기준을 충족하는 제어 체계.",
+      description: "SRS 기준선을 바탕으로 모든 게스트 및 캠페인 워크플로우 전반에서 tenant isolation, 감사 가능성, 개인정보 권리 처리를 보장합니다.",
+      points: [
+        "조직과 베뉴 단위의 테넌트 분리",
+        "민감 작업에 대한 감사 로그가 포함된 역할 기반 접근 제어",
+        "GDPR/CCPA/PDPA에 맞춘 동의, 내보내기, 삭제 워크플로우",
+        "OpenAPI-first 통합 및 webhook 이벤트 전달",
+      ],
+    },
+    stack: {
+      title: "프로덕션 스택",
+      items: {
+        web: { key: "웹 콘솔", value: "Next.js + React" },
+        mobile: { key: "모바일 운영", value: "Flutter iOS/Android" },
+        data: { key: "데이터 레이어", value: "MySQL/MariaDB 10.6+" },
+        comms: { key: "커뮤니케이션 채널", value: "Email / SMS / WhatsApp" },
+        realtime: { key: "실시간 업데이트", value: "WebSocket / SSE" },
+        spec: { key: "명세 규율", value: "OpenAPI 3.0 + Webhooks" },
+      },
+    },
+    cta: {
+      kicker: "출시 경로",
+      title: "하나의 구현 계획으로 파일럿에서 프로덕션까지 이동합니다.",
+      description: "go-live 전에 게스트 데이터 모델, 운영 워크플로우, 컴플라이언스 제어를 정렬합니다. Mercury 팀은 이 페이지의 기준선을 한 번의 디스커버리 스프린트로 귀사 베뉴 롤아웃 계획에 매핑할 수 있습니다.",
+      primary: "프로덕션 계획 시작",
+      secondary: "Mercury 팀과 상담",
+    },
+    footerPoints: [
+      "게스트 프로필과 identity graph",
+      "규칙 기반 세그먼트와 캠페인",
+      "예약, 대기열, 플로어 루프",
+      "SLA 및 컴플라이언스 대응 운영",
+    ],
+  },
+
   // Language Selector
   language: {
     en: "English",
