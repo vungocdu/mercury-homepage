@@ -272,26 +272,38 @@ export default function NightclubCrmClient() {
             transition={{ duration: 0.55, delay: 0.1 }}
             className="relative overflow-hidden rounded-[2rem] border border-slate-700/70 bg-[#071226] lg:col-span-2"
           >
-            <div className="grid xl:grid-cols-[1.15fr_0.85fr]">
-              <div className="relative min-h-[420px]">
-                <img
-                  src="https://images.unsplash.com/photo-1566737236500-c8ac43014a8e?auto=format&fit=crop&w=1600&q=80"
-                  alt={tr('nightlifePage.context.imageAlt', 'Nightclub host desk and service floor')}
-                  className="h-full w-full object-cover object-center"
-                />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,10,26,0.12)_0%,rgba(5,10,26,0.2)_42%,rgba(5,10,26,0.92)_100%)]" />
-                <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
-                  <p className="mb-3 text-xs uppercase tracking-[0.2em] text-sky-300">{tr('nightlifePage.context.kicker', 'Service context')}</p>
-                  <h3 className="max-w-lg text-3xl font-semibold leading-tight text-slate-50 md:text-4xl">
-                    {tr('nightlifePage.context.title', 'Seat guests with live recognition, not guesswork.')}
-                  </h3>
-                  <p className="mb-0 mt-4 max-w-xl text-sm leading-relaxed text-slate-200 md:text-base">
-                    {tr('nightlifePage.context.description', 'FOH teams see identity, visit history, and campaign intent at the same moment they seat guests.')}
-                  </p>
+            <div className="grid xl:grid-cols-[0.9fr_1.1fr]">
+              <div className="relative border-b border-slate-700/70 bg-[linear-gradient(180deg,rgba(7,18,38,0.9)_0%,rgba(5,10,26,1)_100%)] p-6 md:p-8 xl:border-b-0 xl:border-r">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,0.16),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(245,158,11,0.1),transparent_26%)]" />
+                <div className="relative flex h-full flex-col justify-between">
+                  <div>
+                    <p className="mb-3 text-xs uppercase tracking-[0.2em] text-sky-300">{tr('nightlifePage.context.kicker', 'Service context')}</p>
+                    <h3 className="max-w-xl text-3xl font-semibold leading-tight text-slate-50 md:text-4xl">
+                      {tr('nightlifePage.context.title', 'Seat guests with live recognition, not guesswork.')}
+                    </h3>
+                    <p className="mb-0 mt-4 max-w-xl text-base leading-relaxed text-slate-200">
+                      {tr('nightlifePage.context.description', 'FOH teams see identity, visit history, and campaign intent at the same moment they seat guests.')}
+                    </p>
+                  </div>
+
+                  <div className="mt-8 grid gap-4 sm:grid-cols-3 xl:grid-cols-1">
+                    {[
+                      tr('nightlifePage.context.cards.identity.title', 'Identity in frame'),
+                      tr('nightlifePage.context.cards.history.title', 'Visit rhythm'),
+                      tr('nightlifePage.context.cards.intent.title', 'Campaign intent'),
+                    ].map((label) => (
+                      <div key={label} className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3">
+                        <div className="text-[10px] uppercase tracking-[0.2em] text-sky-200/80">
+                          {tr('nightlifePage.context.cardLabel', 'Live context')}
+                        </div>
+                        <div className="mt-2 text-sm font-semibold text-slate-100">{label}</div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 
-              <div className="relative border-t border-slate-700/70 bg-[linear-gradient(180deg,rgba(6,15,38,0.98)_0%,rgba(4,11,28,0.96)_100%)] p-5 md:p-6 xl:border-l xl:border-t-0">
+              <div className="relative bg-[linear-gradient(180deg,rgba(6,15,38,0.98)_0%,rgba(4,11,28,0.96)_100%)] p-5 md:p-6">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(56,189,248,0.18),transparent_34%),radial-gradient(circle_at_bottom_left,rgba(245,158,11,0.12),transparent_28%)]" />
                 <div className="relative">
                   <p className="mb-6 max-w-2xl text-sm leading-relaxed text-slate-300">
