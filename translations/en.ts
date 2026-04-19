@@ -1614,14 +1614,19 @@ export const en = {
   tnaSystem: {
     hero: {
       badge: "TNA HRM System",
-      title: "Digital HR & Payroll Platform for Manufacturing Operations",
+      title1: "Digital HR & Payroll Platform",
+      title2: "for Manufacturing Operations",
       subtitle: "This page summarizes core TNA capabilities based on the project SRS and production landing flow: workforce data management, AI attendance capture, shift/leave operations, payroll automation, and accounting integration.",
+      cta: {
+        explore: "Explore Modules",
+        viewScreens: "View Screen Design",
+      },
       stats: {
-        functionalPages: "17+ functional pages",
-        processFlows: "7 major process flows",
-        roles: "5 operational roles",
-        languages: "Multi-language support"
-      }
+        pages: "Functional Pages",
+        flows: "Process Flows",
+        userRoles: "User Roles",
+        langs: "Languages",
+      },
     },
     core: {
       title: "Core Functional Modules",
@@ -2012,15 +2017,16 @@ export const en = {
   },
 
   // QuickShift Platform
-  quickshift: {
-    hero: {
-      badge: "AI-Powered Workforce Management",
-      title: "Task Force Management Platform",
-      subtitle: "End-to-end temporary staffing solution — from AI timecard scanning and auto scheduling to invoicing and multi-channel notifications. Built for Japanese staffing agencies.",
-      cta: {
-        explore: "Explore Modules",
-        apps: "Mobile Apps",
-      },
+	  quickshift: {
+	    hero: {
+	      badge: "AI-Powered Workforce Management",
+	      title: "Task Force Management Platform",
+	      subtitle: "End-to-end temporary staffing solution — from AI timecard scanning and auto scheduling to invoicing and multi-channel notifications. Built for Japanese staffing agencies.",
+	      carouselWords: ["AI Timecard Scanning", "Auto Scheduling", "Smart Invoicing", "Multi-channel Alerts"],
+	      cta: {
+	        explore: "Explore Modules",
+	        apps: "Mobile Apps",
+	      },
       stats: {
         modules: "Core Modules",
         apps: "Mobile Apps",
@@ -2072,46 +2078,101 @@ export const en = {
         viewer: { title: "Viewer", desc: "Read-only access to dashboards, reports, and operational data.", permissions: "View-only" },
       },
     },
-    mobile: {
-      badge: "Mobile Applications",
-      flutterBadge: "Built with Flutter · Melos monorepo · iOS & Android",
-      worker: {
-        title: "Worker Application",
-        subtitle: "Schedule, timecards & availability",
-        features: [
-          "View assigned shifts with real-time status and location details",
-          "Submit timecards with clock-in/out and break tracking",
+	    mobile: {
+	      badge: "Mobile Applications",
+	      flutterBadge: "Built with Flutter · Melos monorepo · iOS & Android",
+	      worker: {
+	        title: "Worker Application",
+	        titleShort: "Worker",
+	        subtitle: "Schedule, timecards & availability",
+	        features: [
+	          "View assigned shifts with real-time status and location details",
+	          "Submit timecards with clock-in/out and break tracking",
           "Set weekly availability and request time off",
           "Receive push notifications for new assignments and schedule changes",
           "View earnings history and payment status",
         ],
         stats: { loadTime: "Load time", clockIn: "Clock in/out", pushAlerts: "Push alerts" },
       },
-      customer: {
-        title: "Customer Application",
-        subtitle: "Work orders, approvals & billing",
-        features: [
-          "Create and manage work orders with worker skill requirements",
-          "Track real-time status of all assigned workers and sites",
+	      customer: {
+	        title: "Customer Application",
+	        titleShort: "Customer",
+	        subtitle: "Work orders, approvals & billing",
+	        features: [
+	          "Create and manage work orders with worker skill requirements",
+	          "Track real-time status of all assigned workers and sites",
           "Approve or dispute timecards with one-tap bulk actions",
           "View invoices, payment history, and outstanding balances",
           "Rate worker performance and request preferred workers",
         ],
         stats: { bulkApprove: "Bulk approve", orderTracking: "Order tracking", invoicing: "Invoicing" },
       },
-      business: {
-        title: "Business / HR Application",
-        subtitle: "Operations, dispatch & analytics",
-        features: [
-          "Real-time operations dashboard with KPIs and fill rates",
-          "One-click worker dispatch to open positions across sites",
+	      business: {
+	        title: "Business / HR Application",
+	        titleShort: "Business",
+	        subtitle: "Operations, dispatch & analytics",
+	        features: [
+	          "Real-time operations dashboard with KPIs and fill rates",
+	          "One-click worker dispatch to open positions across sites",
           "Auto Shifter integration for AI-generated schedules",
           "Financial overview with revenue tracking and invoice status",
           "Generate daily, weekly, and monthly operational reports",
         ],
-        stats: { dashboard: "Dashboard", autoShifter: "Auto Shifter", export: "Export" },
-      },
-    },
+	        stats: { dashboard: "Dashboard", autoShifter: "Auto Shifter", export: "Export" },
+	      },
+	      mock: {
+	        brand: "QuickShift",
+	        worker: {
+	          phoneTitle: "Worker App",
+	          profileMeta: "Warehouse · Full-time",
+	          todayShift: "Today's Shift",
+	          statusActive: "Active",
+	          location: "Warehouse A",
+	          upcoming: "Upcoming",
+	          upcomingDay1: "Tomorrow",
+	          upcomingDay2: "Wed",
+	          timecard: "Timecard",
+	          timecardDate: "Feb 14",
+	          clockIn: "Clock In",
+	          clockOut: "Clock Out",
+	          worked: "Worked",
+	          submit: "Submit Timecard",
+	        },
+	        customer: {
+	          phoneTitle: "Customer App",
+	          companyDashboard: "Company Dashboard",
+	          activeWorkOrders: "Active Work Orders",
+	          status: { inProgress: "In Progress", pending: "Pending" },
+	          wo1Desc: "Warehouse sorting · 5 workers",
+	          wo2Desc: "Factory assembly · 8 workers",
+	          pendingApprovals: "Pending Approvals",
+	          timecards: "Timecards",
+	          approveAll: "Approve All",
+	          review: "Review",
+	          thisMonth: "This Month",
+	          invoiceTotal: "Invoice Total",
+	          paid: "Paid",
+	        },
+	        business: {
+	          phoneTitle: "Business App",
+	          operationsDashboard: "Operations Dashboard",
+	          date: "Feb 14, 2026",
+	          kpi: {
+	            activeWorkers: "Active Workers",
+	            workOrders: "Work Orders",
+	            fillRate: "Fill Rate",
+	            revenueMtd: "Revenue MTD",
+	          },
+	          todaysDispatches: "Today's Dispatches",
+	          dispatch: {
+	            statusComplete: "Complete",
+	            statusOpen: "1 Open",
+	            workersSuffix: "workers",
+	          },
+	          actions: { dispatch: "Dispatch", reports: "Reports" },
+	        },
+	      },
+	    },
     integrations: {
       badge: "Integration Hub",
       title1: "Connects With Your",
@@ -2136,14 +2197,15 @@ export const en = {
         db: { label: "Database", tech: "PostgreSQL · 110+ migrations · Redis cache" },
       },
     },
-    cta: {
-      title: "Ready to Digitize Your",
-      titleAccent: "Staffing Operations?",
-      subtitle: "Let's discuss how QuickShift can streamline your workforce management and eliminate manual processes.",
-      getStarted: "Get Started",
-      viewAll: "View All Projects",
-    },
-  },
+	    cta: {
+	      title: "Ready to Digitize Your",
+	      titleAccent: "Staffing Operations?",
+	      subtitle: "Let's discuss how QuickShift can streamline your workforce management and eliminate manual processes.",
+	      getStarted: "Get Started",
+	      viewAll: "View All Projects",
+	      privacyLink: "Privacy Policy & User Privacy Choices",
+	    },
+	  },
 
   // Minova PMS
   minovaPms: {

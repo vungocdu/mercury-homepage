@@ -1354,15 +1354,16 @@ export const ja = {
   },
 
   // QuickShift Page
-  quickshift: {
-    hero: {
-      badge: "AI搭載ワークフォース管理",
-      title: "タスクフォース管理プラットフォーム",
-      subtitle: "AIタイムカードスキャンと自動スケジューリングから請求書発行、マルチチャネル通知まで — エンドツーエンドの人材派遣ソリューション。日本の人材派遣会社向けに構築。",
-      cta: {
-        explore: "モジュールを見る",
-        apps: "モバイルアプリ",
-      },
+	  quickshift: {
+	    hero: {
+	      badge: "AI搭載ワークフォース管理",
+	      title: "タスクフォース管理プラットフォーム",
+	      subtitle: "AIタイムカードスキャンと自動スケジューリングから請求書発行、マルチチャネル通知まで — エンドツーエンドの人材派遣ソリューション。日本の人材派遣会社向けに構築。",
+	      carouselWords: ["AIタイムカードOCR", "自動シフト作成", "スマート請求", "マルチチャネル通知"],
+	      cta: {
+	        explore: "モジュールを見る",
+	        apps: "モバイルアプリ",
+	      },
       stats: {
         modules: "コアモジュール",
         apps: "モバイルアプリ",
@@ -1414,46 +1415,101 @@ export const ja = {
         viewer: { title: "閲覧者", desc: "ダッシュボード、レポート、運用データの読み取り専用アクセス。", permissions: "閲覧のみ" },
       },
     },
-    mobile: {
-      badge: "モバイルアプリケーション",
-      flutterBadge: "Flutter・Melosモノレポ・iOS＆Android対応",
-      worker: {
-        title: "作業者アプリ",
-        subtitle: "スケジュール、タイムカード＆空き状況",
-        features: [
-          "リアルタイムステータスと場所詳細付きの割り当てシフトを表示",
-          "出退勤と休憩追跡付きのタイムカードを提出",
+	    mobile: {
+	      badge: "モバイルアプリケーション",
+	      flutterBadge: "Flutter・Melosモノレポ・iOS＆Android対応",
+	      worker: {
+	        title: "作業者アプリ",
+	        titleShort: "作業者",
+	        subtitle: "スケジュール、タイムカード＆空き状況",
+	        features: [
+	          "リアルタイムステータスと場所詳細付きの割り当てシフトを表示",
+	          "出退勤と休憩追跡付きのタイムカードを提出",
           "週間空き状況の設定と休暇申請",
           "新しい割り当てとスケジュール変更のプッシュ通知を受信",
           "収入履歴と支払い状況を確認",
         ],
         stats: { loadTime: "読み込み時間", clockIn: "出退勤", pushAlerts: "プッシュ通知" },
       },
-      customer: {
-        title: "顧客アプリ",
-        subtitle: "作業指示、承認＆請求",
-        features: [
-          "作業者スキル要件付きの作業指示を作成・管理",
-          "全割り当て作業者とサイトのリアルタイムステータスを追跡",
+	      customer: {
+	        title: "顧客アプリ",
+	        titleShort: "顧客",
+	        subtitle: "作業指示、承認＆請求",
+	        features: [
+	          "作業者スキル要件付きの作業指示を作成・管理",
+	          "全割り当て作業者とサイトのリアルタイムステータスを追跡",
           "ワンタップ一括操作でタイムカードを承認または異議申し立て",
           "請求書、支払い履歴、未払い残高を確認",
           "作業者パフォーマンスを評価し優先作業者をリクエスト",
         ],
         stats: { bulkApprove: "一括承認", orderTracking: "注文追跡", invoicing: "請求書" },
       },
-      business: {
-        title: "ビジネス/HRアプリ",
-        subtitle: "運用、派遣＆分析",
-        features: [
-          "KPIと充填率付きのリアルタイム運用ダッシュボード",
-          "サイト全体のオープンポジションへのワンクリック作業者派遣",
+	      business: {
+	        title: "ビジネス/HRアプリ",
+	        titleShort: "管理",
+	        subtitle: "運用、派遣＆分析",
+	        features: [
+	          "KPIと充填率付きのリアルタイム運用ダッシュボード",
+	          "サイト全体のオープンポジションへのワンクリック作業者派遣",
           "AI生成スケジュール用オートシフター連携",
           "収益追跡と請求書ステータス付きの財務概要",
           "日次、週次、月次の運用レポートを生成",
         ],
-        stats: { dashboard: "ダッシュボード", autoShifter: "オートシフター", export: "エクスポート" },
-      },
-    },
+	        stats: { dashboard: "ダッシュボード", autoShifter: "オートシフター", export: "エクスポート" },
+	      },
+	      mock: {
+	        brand: "QuickShift",
+	        worker: {
+	          phoneTitle: "作業者アプリ",
+	          profileMeta: "倉庫・フルタイム",
+	          todayShift: "本日のシフト",
+	          statusActive: "稼働中",
+	          location: "倉庫A",
+	          upcoming: "今後の予定",
+	          upcomingDay1: "明日",
+	          upcomingDay2: "水",
+	          timecard: "タイムカード",
+	          timecardDate: "2月14日",
+	          clockIn: "出勤",
+	          clockOut: "退勤",
+	          worked: "勤務",
+	          submit: "提出",
+	        },
+	        customer: {
+	          phoneTitle: "顧客アプリ",
+	          companyDashboard: "会社ダッシュボード",
+	          activeWorkOrders: "稼働中の作業指示",
+	          status: { inProgress: "進行中", pending: "保留" },
+	          wo1Desc: "倉庫仕分け・5名",
+	          wo2Desc: "工場組立・8名",
+	          pendingApprovals: "承認待ち",
+	          timecards: "タイムカード",
+	          approveAll: "一括承認",
+	          review: "確認",
+	          thisMonth: "今月",
+	          invoiceTotal: "請求総額",
+	          paid: "支払済み",
+	        },
+	        business: {
+	          phoneTitle: "管理アプリ",
+	          operationsDashboard: "運用ダッシュボード",
+	          date: "2026年2月14日",
+	          kpi: {
+	            activeWorkers: "稼働中の作業者",
+	            workOrders: "作業指示",
+	            fillRate: "充填率",
+	            revenueMtd: "月次売上",
+	          },
+	          todaysDispatches: "本日の派遣",
+	          dispatch: {
+	            statusComplete: "完了",
+	            statusOpen: "1名不足",
+	            workersSuffix: "名",
+	          },
+	          actions: { dispatch: "派遣", reports: "レポート" },
+	        },
+	      },
+	    },
     integrations: {
       badge: "連携ハブ",
       title1: "既存ツールと",
@@ -1478,14 +1534,15 @@ export const ja = {
         db: { label: "データベース", tech: "PostgreSQL・110以上のマイグレーション・Redisキャッシュ" },
       },
     },
-    cta: {
-      title: "人材派遣業務を",
-      titleAccent: "デジタル化しませんか？",
-      subtitle: "QuickShiftがワークフォース管理を効率化し、手作業プロセスを排除する方法について、ぜひご相談ください。",
-      getStarted: "始めましょう",
-      viewAll: "全プロジェクトを見る",
-    },
-  },
+	    cta: {
+	      title: "人材派遣業務を",
+	      titleAccent: "デジタル化しませんか？",
+	      subtitle: "QuickShiftがワークフォース管理を効率化し、手作業プロセスを排除する方法について、ぜひご相談ください。",
+	      getStarted: "始めましょう",
+	      viewAll: "全プロジェクトを見る",
+	      privacyLink: "プライバシーポリシーとユーザープライバシー設定",
+	    },
+	  },
 
   // Actiwell ATMS Page (actiwellAtms)
   actiwellAtms: {
@@ -1658,204 +1715,209 @@ export const ja = {
   // TNA System Page
   tnaSystem: {
     hero: {
-      badge: "TNA HRM System",
-      title: "Digital HR & Payroll Platform for Manufacturing Operations",
-      subtitle: "This page summarizes core TNA capabilities based on the project SRS and production landing flow: workforce data management, AI attendance capture, shift/leave operations, payroll automation, and accounting integration.",
+      badge: "TNA HRM システム",
+      title1: "デジタルHR・給与プラットフォーム",
+      title2: "製造現場の運用のために",
+      subtitle: "このページは、プロジェクトSRSと本番導入フローに基づき、TNAの中核機能を要約します。人員データ管理、AI勤怠、シフト・休暇運用、給与自動化、MISA会計連携。",
+      cta: {
+        explore: "モジュールを見る",
+        viewScreens: "画面設計を見る",
+      },
       stats: {
-        functionalPages: "17+ functional pages",
-        processFlows: "7 major process flows",
-        roles: "5 operational roles",
-        languages: "Multi-language support"
-      }
+        pages: "機能ページ",
+        flows: "業務フロー",
+        userRoles: "ユーザーロール",
+        langs: "言語",
+      },
     },
     core: {
-      title: "Core Functional Modules",
-      description: "TNA covers the full HRM and payroll lifecycle for manufacturing teams, from attendance input to accounting output.",
+      title: "主要機能モジュール",
+      description: "TNA は製造業向けに、勤怠入力から会計出力まで、HRMと給与の全ライフサイクルをカバーします。",
       modules: {
         employeeOrg: {
-          title: "Employee & Organization Management",
-          description: "Manage employee profiles, department structure, and role-based access for HR, payroll, managers, and employees.",
-          bullets: ["Employee master data", "Department hierarchy", "Role and permission matrix"]
+          title: "従業員・組織管理",
+          description: "従業員プロフィール、部門構造、ロールベースアクセスを、人事・給与・管理者・従業員向けに管理します。",
+          bullets: ["従業員マスタ", "部門階層", "ロール/権限マトリクス"]
         },
         aiAttendance: {
-          title: "AI Time & Attendance",
-          description: "Capture attendance in real-time with AI camera/biometric-ready flow and synchronize timesheet data for payroll.",
-          bullets: ["Face-recognition flow", "Realtime check-in/out", "Timesheet synchronization"]
+          title: "AI勤怠",
+          description: "AIカメラ/生体認証に対応したフローで勤怠をリアルタイムに記録し、給与計算用のタイムシートへ同期します。",
+          bullets: ["顔認証フロー", "リアルタイム打刻", "タイムシート同期"]
         },
         shiftMgmt: {
-          title: "Shift, Group Shift & Shift Change",
-          description: "Configure standard/rotating shifts, assign employees by group, and control shift-change requests with approval.",
-          bullets: ["Shift templates", "Group assignment", "Shift change workflow"]
+          title: "シフト/グループシフト/シフト変更",
+          description: "固定/ローテーションシフトを設定し、グループ単位で割当、申請・承認によるシフト変更を管理します。",
+          bullets: ["シフトテンプレート", "グループ割当", "シフト変更ワークフロー"]
         },
         leaveOtLate: {
-          title: "Leave, Overtime, Late/Early Rules",
-          description: "Handle leave requests, overtime categories, and late/early scenarios with policy-based calculations.",
-          bullets: ["Leave type and request", "Overtime policy matrix", "Late/early handling"]
+          title: "休暇・残業・遅刻/早退ルール",
+          description: "休暇申請、残業区分、遅刻/早退などをポリシーに基づく計算で処理します。",
+          bullets: ["休暇種別と申請", "残業ポリシーマトリクス", "遅刻/早退の処理"]
         },
         payrollEngine: {
-          title: "Payroll Engine",
-          description: "Automate gross-to-net payroll with tax and insurance calculations aligned to Vietnamese labor regulations.",
-          bullets: ["Automated payroll run", "Tax and insurance logic", "Payslip output"]
+          title: "給与計算エンジン",
+          description: "ベトナム労働規定に準拠した税・保険計算を含め、総支給から手取りまでの給与計算を自動化します。",
+          bullets: ["給与計算の自動実行", "税・保険ロジック", "給与明細出力"]
         },
         salaryTemplate: {
-          title: "Salary Components & Templates",
-          description: "Build reusable payroll templates with configurable allowances, deductions, and formula-based components.",
-          bullets: ["Component library", "Template assignment", "Default salary settings"]
+          title: "給与構成要素・テンプレート",
+          description: "手当・控除・数式ベースの構成要素を組み合わせ、再利用可能な給与テンプレートを作成します。",
+          bullets: ["構成要素ライブラリ", "テンプレート割当", "既定の給与設定"]
         },
         bonusDeduction: {
-          title: "Bonus & Deduction Management",
-          description: "Maintain additional income and deduction lists, apply targeted or bulk rules, and audit payroll impact.",
-          bullets: ["Bonus list management", "Deduction list management", "Net-salary impact checks"]
+          title: "賞与・控除管理",
+          description: "追加収入と控除のリストを管理し、個別または一括で適用し、給与への影響を監査できます。",
+          bullets: ["賞与リスト管理", "控除リスト管理", "手取りへの影響チェック"]
         },
         misaIntegration: {
-          title: "MISA Accounting Integration",
-          description: "Push payroll accounting vouchers and synchronize employee dictionaries for end-to-end accounting automation.",
-          bullets: ["Voucher sync API", "Employee dictionary sync", "Callback and sync monitoring"]
+          title: "MISA会計連携",
+          description: "給与仕訳の連携と従業員辞書の同期を行い、会計業務をエンドツーエンドで自動化します。",
+          bullets: ["仕訳同期API", "従業員辞書同期", "コールバック/同期の監視"]
         }
       }
     },
     mock: {
-      common: { live: "Live" },
+      common: { live: "ライブ" },
       employeeOrg: {
-        windowTitle: "Staff / Department / User",
-        searchEmployee: "Search employee",
-        departmentFilter: "Department",
-        columns: { employee: "Employee", department: "Department", role: "Role" },
-        sample: { department: "Assembly A", role: "HR Manager" }
+        windowTitle: "従業員 / 部門 / ユーザー",
+        searchEmployee: "従業員を検索",
+        departmentFilter: "部門",
+        columns: { employee: "従業員", department: "部門", role: "役割" },
+        sample: { department: "組立 A", role: "人事マネージャー" }
       },
       aiAttendance: {
-        windowTitle: "Timekeeping / AI Camera",
-        realtime: "Realtime",
-        cards: { present: "Present", late: "Late", noCheckIn: "No check-in" },
-        events: "Camera Events",
-        syncing: "Syncing",
-        sampleEvent: "Gate A · Face Match"
+        windowTitle: "勤怠 / AIカメラ",
+        realtime: "リアルタイム",
+        cards: { present: "出勤", late: "遅刻", noCheckIn: "未打刻" },
+        events: "カメライベント",
+        syncing: "同期中",
+        sampleEvent: "ゲートA · 顔認証"
       },
       shiftMgmt: {
-        windowTitle: "Shift / Group Shift / Change",
-        columns: { group: "Group", shift: "Shift", time: "Time", status: "Status" },
-        lineA: { group: "Line A - Weekday", shift: "Morning", status: "Running" },
-        lineB: { group: "Line B - Rotation", shift: "Night", status: "Pending" }
+        windowTitle: "シフト / グループシフト / 変更",
+        columns: { group: "グループ", shift: "シフト", time: "時間", status: "ステータス" },
+        lineA: { group: "ラインA - 平日", shift: "早番", status: "稼働中" },
+        lineB: { group: "ラインB - ローテーション", shift: "夜勤", status: "保留" }
       },
       leaveOtLate: {
-        windowTitle: "Leave / Overtime / Late-Early",
-        tabs: { leaveRequest: "Leave Request", overtime: "Overtime", lateEarly: "Late/Early" },
+        windowTitle: "休暇 / 残業 / 遅刻-早退",
+        tabs: { leaveRequest: "休暇申請", overtime: "残業", lateEarly: "遅刻/早退" },
         rows: {
-          leave: "Leave · EMP-01021 · 1 day",
-          overtime: "OT · EMP-00403 · 3.5h",
-          late: "Late · EMP-00210 · 18m"
+          leave: "休暇 · EMP-01021 · 1日",
+          overtime: "残業 · EMP-00403 · 3.5時間",
+          late: "遅刻 · EMP-00210 · 18分"
         },
-        status: { awaiting: "Awaiting", approved: "Approved", processed: "Processed" }
+        status: { awaiting: "承認待ち", approved: "承認済み", processed: "処理済み" }
       },
       payroll: {
-        windowTitle: "Payroll Calculation",
-        rightLabel: "Monthly Run",
-        period: "Mar 2026",
-        departmentFilter: "Department",
-        gross: "Gross Payroll",
-        net: "Net Payroll",
-        statusLabel: "Calculation status",
-        calculated: "Calculated"
+        windowTitle: "給与計算",
+        rightLabel: "月次実行",
+        period: "2026年3月",
+        departmentFilter: "部門",
+        gross: "総支給",
+        net: "手取り",
+        statusLabel: "計算ステータス",
+        calculated: "計算済み"
       },
       salaryTemplate: {
-        windowTitle: "Salary Components / Templates",
-        libraryTitle: "Component Library",
-        baseSalary: "Base Salary",
-        mealAllowance: "Meal Allowance",
-        insurance: "Insurance",
-        templateTitle: "Template Mapping",
-        templateName: "Factory Worker V2",
-        formulaGross: "Gross = Base + OT + Bonus",
-        formulaNet: "Net = Gross - Tax - BHXH",
-        active: "Active"
+        windowTitle: "給与構成 / テンプレート",
+        libraryTitle: "構成要素ライブラリ",
+        baseSalary: "基本給",
+        mealAllowance: "食事手当",
+        insurance: "保険",
+        templateTitle: "テンプレート割当",
+        templateName: "工場作業者 V2",
+        formulaGross: "総支給 = 基本 + 残業 + 賞与",
+        formulaNet: "手取り = 総支給 - 税 - BHXH",
+        active: "有効"
       },
       bonusDeduction: {
-        windowTitle: "Bonus / Deduction Lists",
-        columns: { item: "Item", type: "Type", rule: "Rule", amount: "Amount" },
+        windowTitle: "賞与 / 控除リスト",
+        columns: { item: "項目", type: "種別", rule: "ルール", amount: "金額" },
         rows: {
-          bonusName: "Attendance Bonus",
-          bonusType: "Bonus",
-          bonusRule: "Monthly fixed",
-          deductionName: "Advance Salary",
-          deductionType: "Deduction",
-          deductionRule: "Targeted"
+          bonusName: "皆勤手当",
+          bonusType: "賞与",
+          bonusRule: "月次固定",
+          deductionName: "前借り給与",
+          deductionType: "控除",
+          deductionRule: "対象指定"
         }
       },
       misa: {
-        windowTitle: "MISA Sync Queue",
-        rightLabel: "API Callback",
-        queueTitle: "Payroll Voucher Push",
-        inQueue: "In Queue",
-        batchInfo: "Batch: 100 vouchers · Tenant: FUJIKIN-VN",
-        dictionarySync: "Dictionary Sync",
-        voucherCreate: "Voucher Create",
-        callbackStatus: "Callback Status",
-        done: "Done",
-        processing: "Processing",
-        awaiting: "Awaiting"
+        windowTitle: "MISA 同期キュー",
+        rightLabel: "APIコールバック",
+        queueTitle: "給与仕訳の送信",
+        inQueue: "キュー内",
+        batchInfo: "バッチ: 100 仕訳 · テナント: FUJIKIN-VN",
+        dictionarySync: "辞書同期",
+        voucherCreate: "仕訳作成",
+        callbackStatus: "コールバック状態",
+        done: "完了",
+        processing: "処理中",
+        awaiting: "待機"
       }
     },
     screenDesign: {
-      title: "TNA CMS Screen Design",
-      description: "Visualized from the TNA CMS frontend modules (`dashboard`, `payroll-calculation`, `settings/ai-camera`) to show how daily operation screens are organized.",
+      title: "TNA CMS 画面設計",
+      description: "TNA CMS フロントエンドモジュール（dashboard、payroll-calculation、settings/ai-camera）をもとに、日次運用画面の構成を可視化しました。",
       cards: {
-        dashboard: "Dashboard Overview",
-        payroll: "Payroll Calculation List",
-        aiCamera: "AI Camera Settings"
+        dashboard: "ダッシュボード概要",
+        payroll: "給与計算一覧",
+        aiCamera: "AIカメラ設定"
       },
       dashboard: {
-        realtime: "Dashboard / Real-time",
-        attendanceTrend: "Attendance Trend",
-        pendingRequests: "Pending Requests",
-        kpi: { totalStaff: "Total Staff", present: "Present", late: "Late", onLeave: "On Leave" },
-        pending: { leave: "Leave", shiftChange: "Shift change", lateEarly: "Late/Early" }
+        realtime: "ダッシュボード / リアルタイム",
+        attendanceTrend: "勤怠トレンド",
+        pendingRequests: "未処理申請",
+        kpi: { totalStaff: "在籍", present: "出勤", late: "遅刻", onLeave: "休暇中" },
+        pending: { leave: "休暇", shiftChange: "シフト変更", lateEarly: "遅刻/早退" }
       },
       payroll: {
-        filterPeriodName: "Period name",
-        filterDateRange: "Date range",
-        columns: { period: "Period", status: "Status", department: "Department", staff: "Staff" },
+        filterPeriodName: "期間名",
+        filterDateRange: "期間",
+        columns: { period: "期間", status: "状態", department: "部門", staff: "人数" },
         sample: {
-          period: "Mar 2026",
-          calculated: "Calculated",
-          approved: "Approved",
-          draft: "Draft",
-          assembly: "Assembly",
+          period: "2026年3月",
+          calculated: "計算済み",
+          approved: "承認済み",
+          draft: "下書き",
+          assembly: "組立",
           qa: "QA",
-          warehouse: "Warehouse"
+          warehouse: "倉庫"
         }
       },
       aiCamera: {
-        officeLocation: "Office / Location",
-        provider: "Provider",
-        placeIdToken: "Place ID / Token",
-        activeConfig: "Active Configuration",
-        connected: "Connected",
-        workflow: "Save / Edit / Delete workflow",
+        officeLocation: "事業所 / ロケーション",
+        provider: "プロバイダー",
+        placeIdToken: "Place ID / トークン",
+        activeConfig: "有効設定",
+        connected: "接続済み",
+        workflow: "保存 / 編集 / 削除フロー",
         sample: {
-          officeA1: "Factory A - Gate 1",
-          officeA2: "Factory A - Gate 2",
-          officeB4: "Factory B - Loading Dock"
+          officeA1: "工場A - ゲート1",
+          officeA2: "工場A - ゲート2",
+          officeB4: "工場B - 搬入口"
         }
       }
     },
     workflow: {
-      title: "Operational Workflow",
+      title: "運用ワークフロー",
       steps: [
-        "System and policy setup (company rules, calendar, shift defaults)",
-        "Salary structure and template configuration",
-        "Employee onboarding with profile and attendance source registration",
-        "Daily attendance and operational data collection",
-        "Payroll calculation, review, and approval",
-        "Accounting sync and payment execution"
+        "システム/ポリシー設定（会社ルール、カレンダー、既定シフト）",
+        "給与構成とテンプレート設定",
+        "従業員登録（プロフィールと勤怠ソースの登録）",
+        "日次の勤怠・運用データ収集",
+        "給与計算、レビュー、承認",
+        "会計連携と支払い実行"
       ]
     },
     compliance: {
-      title: "Compliance & Integration",
-      p1: "Payroll logic includes tax and insurance handling (BHXH, BHYT, BHTN), configurable overtime rates, and policy-based rules for allowances and deductions.",
-      p2: "MISA integration automates accounting handoff by syncing employee dictionaries and pushing payroll vouchers through API and callback-based status tracking.",
-      p3: "Access control supports role-specific operation for Admin, HR Manager, Payroll Specialist, Department Manager, and Employee."
+      title: "コンプライアンス・連携",
+      p1: "給与ロジックには税・保険（BHXH, BHYT, BHTN）、残業倍率、手当・控除のポリシールールが含まれます。",
+      p2: "MISA 連携は、従業員辞書の同期と給与仕訳の送信をAPI＋コールバックによる状態追跡で自動化します。",
+      p3: "管理者、人事マネージャー、給与担当、部門管理者、従業員のロール別に操作権限を提供します。"
     },
-    backToItSolution: "Back to IT Solutions"
+    backToItSolution: "ITソリューションへ戻る"
   },
 
   // Actiwell Platform Page

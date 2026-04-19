@@ -1524,204 +1524,209 @@ export const ko = {
   // TNA System Page
   tnaSystem: {
     hero: {
-      badge: "TNA HRM System",
-      title: "Digital HR & Payroll Platform for Manufacturing Operations",
-      subtitle: "This page summarizes core TNA capabilities based on the project SRS and production landing flow: workforce data management, AI attendance capture, shift/leave operations, payroll automation, and accounting integration.",
+      badge: "TNA HRM 시스템",
+      title1: "디지털 HR·급여 플랫폼",
+      title2: "제조 현장 운영을 위해",
+      subtitle: "이 페이지는 프로젝트 SRS와 프로덕션 도입 흐름을 바탕으로 TNA의 핵심 역량을 요약합니다. 인력 데이터 관리, AI 근태, 교대/휴가 운영, 급여 자동화, MISA 회계 연동.",
+      cta: {
+        explore: "모듈 살펴보기",
+        viewScreens: "화면 설계 보기",
+      },
       stats: {
-        functionalPages: "17+ functional pages",
-        processFlows: "7 major process flows",
-        roles: "5 operational roles",
-        languages: "Multi-language support"
-      }
+        pages: "기능 페이지",
+        flows: "업무 플로우",
+        userRoles: "사용자 역할",
+        langs: "언어",
+      },
     },
     core: {
-      title: "Core Functional Modules",
-      description: "TNA covers the full HRM and payroll lifecycle for manufacturing teams, from attendance input to accounting output.",
+      title: "핵심 기능 모듈",
+      description: "TNA는 제조 조직을 위해 근태 입력부터 회계 출력까지 HRM과 급여의 전체 라이프사이클을 커버합니다.",
       modules: {
         employeeOrg: {
-          title: "Employee & Organization Management",
-          description: "Manage employee profiles, department structure, and role-based access for HR, payroll, managers, and employees.",
-          bullets: ["Employee master data", "Department hierarchy", "Role and permission matrix"]
+          title: "직원·조직 관리",
+          description: "직원 프로필, 부서 구조, 역할 기반 접근 제어를 HR, 급여 담당, 관리자, 직원 관점에서 관리합니다.",
+          bullets: ["직원 마스터 데이터", "부서 계층 구조", "역할/권한 매트릭스"]
         },
         aiAttendance: {
-          title: "AI Time & Attendance",
-          description: "Capture attendance in real-time with AI camera/biometric-ready flow and synchronize timesheet data for payroll.",
-          bullets: ["Face-recognition flow", "Realtime check-in/out", "Timesheet synchronization"]
+          title: "AI 근태",
+          description: "AI 카메라/생체인증 연동이 가능한 흐름으로 근태를 실시간 수집하고 급여를 위한 타임시트 데이터를 동기화합니다.",
+          bullets: ["얼굴 인식 흐름", "실시간 출퇴근", "타임시트 동기화"]
         },
         shiftMgmt: {
-          title: "Shift, Group Shift & Shift Change",
-          description: "Configure standard/rotating shifts, assign employees by group, and control shift-change requests with approval.",
-          bullets: ["Shift templates", "Group assignment", "Shift change workflow"]
+          title: "교대·그룹 교대·교대 변경",
+          description: "고정/로테이션 교대를 설정하고 그룹 단위로 배정하며, 승인 기반 교대 변경 요청을 통제합니다.",
+          bullets: ["교대 템플릿", "그룹 배정", "교대 변경 워크플로"]
         },
         leaveOtLate: {
-          title: "Leave, Overtime, Late/Early Rules",
-          description: "Handle leave requests, overtime categories, and late/early scenarios with policy-based calculations.",
-          bullets: ["Leave type and request", "Overtime policy matrix", "Late/early handling"]
+          title: "휴가·연장근로·지각/조퇴 규칙",
+          description: "휴가 신청, 연장근로 유형, 지각/조퇴 시나리오를 정책 기반 계산으로 처리합니다.",
+          bullets: ["휴가 유형 및 신청", "연장근로 정책 매트릭스", "지각/조퇴 처리"]
         },
         payrollEngine: {
-          title: "Payroll Engine",
-          description: "Automate gross-to-net payroll with tax and insurance calculations aligned to Vietnamese labor regulations.",
-          bullets: ["Automated payroll run", "Tax and insurance logic", "Payslip output"]
+          title: "급여 엔진",
+          description: "베트남 노동 규정에 맞춘 세금·보험 계산을 포함해 총지급에서 실수령까지 급여 산정을 자동화합니다.",
+          bullets: ["급여 자동 실행", "세금·보험 로직", "급여명세 출력"]
         },
         salaryTemplate: {
-          title: "Salary Components & Templates",
-          description: "Build reusable payroll templates with configurable allowances, deductions, and formula-based components.",
-          bullets: ["Component library", "Template assignment", "Default salary settings"]
+          title: "급여 구성요소·템플릿",
+          description: "수당, 공제, 수식 기반 구성요소를 조합해 재사용 가능한 급여 템플릿을 구성합니다.",
+          bullets: ["구성요소 라이브러리", "템플릿 배정", "기본 급여 설정"]
         },
         bonusDeduction: {
-          title: "Bonus & Deduction Management",
-          description: "Maintain additional income and deduction lists, apply targeted or bulk rules, and audit payroll impact.",
-          bullets: ["Bonus list management", "Deduction list management", "Net-salary impact checks"]
+          title: "상여·공제 관리",
+          description: "추가 소득과 공제 목록을 관리하고, 개인/일괄 규칙 적용 및 급여 영향도를 점검할 수 있습니다.",
+          bullets: ["상여 목록 관리", "공제 목록 관리", "실수령 영향 점검"]
         },
         misaIntegration: {
-          title: "MISA Accounting Integration",
-          description: "Push payroll accounting vouchers and synchronize employee dictionaries for end-to-end accounting automation.",
-          bullets: ["Voucher sync API", "Employee dictionary sync", "Callback and sync monitoring"]
+          title: "MISA 회계 연동",
+          description: "급여 전표 전송과 직원 사전 동기화를 통해 회계 업무를 엔드투엔드로 자동화합니다.",
+          bullets: ["전표 동기화 API", "직원 사전 동기화", "콜백/동기화 모니터링"]
         }
       }
     },
     mock: {
-      common: { live: "Live" },
+      common: { live: "라이브" },
       employeeOrg: {
-        windowTitle: "Staff / Department / User",
-        searchEmployee: "Search employee",
-        departmentFilter: "Department",
-        columns: { employee: "Employee", department: "Department", role: "Role" },
-        sample: { department: "Assembly A", role: "HR Manager" }
+        windowTitle: "직원 / 부서 / 사용자",
+        searchEmployee: "직원 검색",
+        departmentFilter: "부서",
+        columns: { employee: "직원", department: "부서", role: "역할" },
+        sample: { department: "조립 A", role: "HR 매니저" }
       },
       aiAttendance: {
-        windowTitle: "Timekeeping / AI Camera",
-        realtime: "Realtime",
-        cards: { present: "Present", late: "Late", noCheckIn: "No check-in" },
-        events: "Camera Events",
-        syncing: "Syncing",
-        sampleEvent: "Gate A · Face Match"
+        windowTitle: "근태 / AI 카메라",
+        realtime: "실시간",
+        cards: { present: "출근", late: "지각", noCheckIn: "미체크인" },
+        events: "카메라 이벤트",
+        syncing: "동기화 중",
+        sampleEvent: "게이트 A · 얼굴 매칭"
       },
       shiftMgmt: {
-        windowTitle: "Shift / Group Shift / Change",
-        columns: { group: "Group", shift: "Shift", time: "Time", status: "Status" },
-        lineA: { group: "Line A - Weekday", shift: "Morning", status: "Running" },
-        lineB: { group: "Line B - Rotation", shift: "Night", status: "Pending" }
+        windowTitle: "교대 / 그룹 교대 / 변경",
+        columns: { group: "그룹", shift: "교대", time: "시간", status: "상태" },
+        lineA: { group: "라인 A - 평일", shift: "주간", status: "운영 중" },
+        lineB: { group: "라인 B - 로테이션", shift: "야간", status: "대기" }
       },
       leaveOtLate: {
-        windowTitle: "Leave / Overtime / Late-Early",
-        tabs: { leaveRequest: "Leave Request", overtime: "Overtime", lateEarly: "Late/Early" },
+        windowTitle: "휴가 / 연장근로 / 지각-조퇴",
+        tabs: { leaveRequest: "휴가 신청", overtime: "연장근로", lateEarly: "지각/조퇴" },
         rows: {
-          leave: "Leave · EMP-01021 · 1 day",
-          overtime: "OT · EMP-00403 · 3.5h",
-          late: "Late · EMP-00210 · 18m"
+          leave: "휴가 · EMP-01021 · 1일",
+          overtime: "OT · EMP-00403 · 3.5시간",
+          late: "지각 · EMP-00210 · 18분"
         },
-        status: { awaiting: "Awaiting", approved: "Approved", processed: "Processed" }
+        status: { awaiting: "대기", approved: "승인", processed: "처리됨" }
       },
       payroll: {
-        windowTitle: "Payroll Calculation",
-        rightLabel: "Monthly Run",
-        period: "Mar 2026",
-        departmentFilter: "Department",
-        gross: "Gross Payroll",
-        net: "Net Payroll",
-        statusLabel: "Calculation status",
-        calculated: "Calculated"
+        windowTitle: "급여 계산",
+        rightLabel: "월간 실행",
+        period: "2026년 3월",
+        departmentFilter: "부서",
+        gross: "총지급",
+        net: "실수령",
+        statusLabel: "계산 상태",
+        calculated: "계산됨"
       },
       salaryTemplate: {
-        windowTitle: "Salary Components / Templates",
-        libraryTitle: "Component Library",
-        baseSalary: "Base Salary",
-        mealAllowance: "Meal Allowance",
-        insurance: "Insurance",
-        templateTitle: "Template Mapping",
-        templateName: "Factory Worker V2",
-        formulaGross: "Gross = Base + OT + Bonus",
-        formulaNet: "Net = Gross - Tax - BHXH",
-        active: "Active"
+        windowTitle: "급여 구성요소 / 템플릿",
+        libraryTitle: "구성요소 라이브러리",
+        baseSalary: "기본급",
+        mealAllowance: "식대 수당",
+        insurance: "보험",
+        templateTitle: "템플릿 매핑",
+        templateName: "공장 근로자 V2",
+        formulaGross: "총지급 = 기본 + OT + 상여",
+        formulaNet: "실수령 = 총지급 - 세금 - BHXH",
+        active: "활성"
       },
       bonusDeduction: {
-        windowTitle: "Bonus / Deduction Lists",
-        columns: { item: "Item", type: "Type", rule: "Rule", amount: "Amount" },
+        windowTitle: "상여 / 공제 목록",
+        columns: { item: "항목", type: "유형", rule: "규칙", amount: "금액" },
         rows: {
-          bonusName: "Attendance Bonus",
-          bonusType: "Bonus",
-          bonusRule: "Monthly fixed",
-          deductionName: "Advance Salary",
-          deductionType: "Deduction",
-          deductionRule: "Targeted"
+          bonusName: "근태 상여",
+          bonusType: "상여",
+          bonusRule: "월 고정",
+          deductionName: "급여 선지급",
+          deductionType: "공제",
+          deductionRule: "대상 지정"
         }
       },
       misa: {
-        windowTitle: "MISA Sync Queue",
-        rightLabel: "API Callback",
-        queueTitle: "Payroll Voucher Push",
-        inQueue: "In Queue",
-        batchInfo: "Batch: 100 vouchers · Tenant: FUJIKIN-VN",
-        dictionarySync: "Dictionary Sync",
-        voucherCreate: "Voucher Create",
-        callbackStatus: "Callback Status",
-        done: "Done",
-        processing: "Processing",
-        awaiting: "Awaiting"
+        windowTitle: "MISA 동기화 큐",
+        rightLabel: "API 콜백",
+        queueTitle: "급여 전표 전송",
+        inQueue: "대기열",
+        batchInfo: "배치: 100 전표 · 테넌트: FUJIKIN-VN",
+        dictionarySync: "사전 동기화",
+        voucherCreate: "전표 생성",
+        callbackStatus: "콜백 상태",
+        done: "완료",
+        processing: "처리 중",
+        awaiting: "대기"
       }
     },
     screenDesign: {
-      title: "TNA CMS Screen Design",
-      description: "Visualized from the TNA CMS frontend modules (`dashboard`, `payroll-calculation`, `settings/ai-camera`) to show how daily operation screens are organized.",
+      title: "TNA CMS 화면 설계",
+      description: "TNA CMS 프런트엔드 모듈(dashboard, payroll-calculation, settings/ai-camera)을 기준으로 일상 운영 화면이 어떻게 구성되는지 시각화했습니다.",
       cards: {
-        dashboard: "Dashboard Overview",
-        payroll: "Payroll Calculation List",
-        aiCamera: "AI Camera Settings"
+        dashboard: "대시보드 개요",
+        payroll: "급여 계산 목록",
+        aiCamera: "AI 카메라 설정"
       },
       dashboard: {
-        realtime: "Dashboard / Real-time",
-        attendanceTrend: "Attendance Trend",
-        pendingRequests: "Pending Requests",
-        kpi: { totalStaff: "Total Staff", present: "Present", late: "Late", onLeave: "On Leave" },
-        pending: { leave: "Leave", shiftChange: "Shift change", lateEarly: "Late/Early" }
+        realtime: "대시보드 / 실시간",
+        attendanceTrend: "근태 추세",
+        pendingRequests: "대기 중 요청",
+        kpi: { totalStaff: "총 인원", present: "출근", late: "지각", onLeave: "휴가" },
+        pending: { leave: "휴가", shiftChange: "교대 변경", lateEarly: "지각/조퇴" }
       },
       payroll: {
-        filterPeriodName: "Period name",
-        filterDateRange: "Date range",
-        columns: { period: "Period", status: "Status", department: "Department", staff: "Staff" },
+        filterPeriodName: "기간명",
+        filterDateRange: "기간",
+        columns: { period: "기간", status: "상태", department: "부서", staff: "인원" },
         sample: {
-          period: "Mar 2026",
-          calculated: "Calculated",
-          approved: "Approved",
-          draft: "Draft",
-          assembly: "Assembly",
+          period: "2026년 3월",
+          calculated: "계산됨",
+          approved: "승인됨",
+          draft: "초안",
+          assembly: "조립",
           qa: "QA",
-          warehouse: "Warehouse"
+          warehouse: "창고"
         }
       },
       aiCamera: {
-        officeLocation: "Office / Location",
-        provider: "Provider",
-        placeIdToken: "Place ID / Token",
-        activeConfig: "Active Configuration",
-        connected: "Connected",
-        workflow: "Save / Edit / Delete workflow",
+        officeLocation: "사무실 / 위치",
+        provider: "공급자",
+        placeIdToken: "Place ID / 토큰",
+        activeConfig: "활성 구성",
+        connected: "연결됨",
+        workflow: "저장 / 수정 / 삭제 워크플로",
         sample: {
-          officeA1: "Factory A - Gate 1",
-          officeA2: "Factory A - Gate 2",
-          officeB4: "Factory B - Loading Dock"
+          officeA1: "공장 A - 게이트 1",
+          officeA2: "공장 A - 게이트 2",
+          officeB4: "공장 B - 상하차 도크"
         }
       }
     },
     workflow: {
-      title: "Operational Workflow",
+      title: "운영 워크플로",
       steps: [
-        "System and policy setup (company rules, calendar, shift defaults)",
-        "Salary structure and template configuration",
-        "Employee onboarding with profile and attendance source registration",
-        "Daily attendance and operational data collection",
-        "Payroll calculation, review, and approval",
-        "Accounting sync and payment execution"
+        "시스템/정책 설정(회사 규정, 캘린더, 기본 교대)",
+        "급여 구조 및 템플릿 구성",
+        "직원 온보딩(프로필 및 근태 소스 등록)",
+        "일일 근태 및 운영 데이터 수집",
+        "급여 계산, 검토, 승인",
+        "회계 동기화 및 지급 실행"
       ]
     },
     compliance: {
-      title: "Compliance & Integration",
-      p1: "Payroll logic includes tax and insurance handling (BHXH, BHYT, BHTN), configurable overtime rates, and policy-based rules for allowances and deductions.",
-      p2: "MISA integration automates accounting handoff by syncing employee dictionaries and pushing payroll vouchers through API and callback-based status tracking.",
-      p3: "Access control supports role-specific operation for Admin, HR Manager, Payroll Specialist, Department Manager, and Employee."
+      title: "컴플라이언스 및 연동",
+      p1: "급여 로직에는 세금 및 보험(BHXH, BHYT, BHTN), 조정 가능한 연장근로 배율, 수당/공제에 대한 정책 기반 규칙이 포함됩니다.",
+      p2: "MISA 연동은 직원 사전 동기화와 급여 전표 전송을 API 및 콜백 기반 상태 추적으로 자동화합니다.",
+      p3: "권한 제어는 관리자, HR 매니저, 급여 담당, 부서 관리자, 직원 등 역할별 운영을 지원합니다."
     },
-    backToItSolution: "Back to IT Solutions"
+    backToItSolution: "IT 솔루션으로 돌아가기"
   },
 
   // Actiwell Platform Page
@@ -1923,15 +1928,16 @@ export const ko = {
   },
 
   // QuickShift Platform Page
-  quickshift: {
-    hero: {
-      badge: "AI 기반 인력 관리",
-      title: "태스크포스 관리 플랫폼",
-      subtitle: "AI 타임카드 스캔과 자동 스케줄링부터 청구서 발행, 멀티채널 알림까지 — 엔드투엔드 파견 인력 솔루션. 일본 인력 파견 업체를 위해 구축.",
-      cta: {
-        explore: "모듈 탐색",
-        apps: "모바일 앱",
-      },
+	  quickshift: {
+	    hero: {
+	      badge: "AI 기반 인력 관리",
+	      title: "태스크포스 관리 플랫폼",
+	      subtitle: "AI 타임카드 스캔과 자동 스케줄링부터 청구서 발행, 멀티채널 알림까지 — 엔드투엔드 파견 인력 솔루션. 일본 인력 파견 업체를 위해 구축.",
+	      carouselWords: ["AI 타임카드 OCR", "자동 스케줄링", "스마트 청구", "멀티채널 알림"],
+	      cta: {
+	        explore: "모듈 탐색",
+	        apps: "모바일 앱",
+	      },
       stats: {
         modules: "코어 모듈",
         apps: "모바일 앱",
@@ -1983,46 +1989,101 @@ export const ko = {
         viewer: { title: "뷰어", desc: "대시보드, 보고서, 운영 데이터에 대한 읽기 전용 접근.", permissions: "읽기 전용" },
       },
     },
-    mobile: {
-      badge: "모바일 애플리케이션",
-      flutterBadge: "Flutter · Melos 모노레포 · iOS & Android로 구축",
-      worker: {
-        title: "근무자 애플리케이션",
-        subtitle: "스케줄, 타임카드 & 가용성",
-        features: [
-          "실시간 상태 및 위치 정보로 배정된 시프트 확인",
-          "출퇴근 및 휴식 추적이 포함된 타임카드 제출",
+	    mobile: {
+	      badge: "모바일 애플리케이션",
+	      flutterBadge: "Flutter · Melos 모노레포 · iOS & Android로 구축",
+	      worker: {
+	        title: "근무자 애플리케이션",
+	        titleShort: "근무자",
+	        subtitle: "스케줄, 타임카드 & 가용성",
+	        features: [
+	          "실시간 상태 및 위치 정보로 배정된 시프트 확인",
+	          "출퇴근 및 휴식 추적이 포함된 타임카드 제출",
           "주간 가용성 설정 및 휴가 신청",
           "새로운 배정 및 스케줄 변경에 대한 푸시 알림 수신",
           "수입 이력 및 결제 상태 확인",
         ],
         stats: { loadTime: "로딩 시간", clockIn: "출퇴근", pushAlerts: "푸시 알림" },
       },
-      customer: {
-        title: "고객 애플리케이션",
-        subtitle: "작업 지시, 승인 & 결제",
-        features: [
-          "근무자 스킬 요건이 포함된 작업 지시 생성·관리",
-          "모든 배정 근무자 및 사이트의 실시간 상태 추적",
+	      customer: {
+	        title: "고객 애플리케이션",
+	        titleShort: "고객",
+	        subtitle: "작업 지시, 승인 & 결제",
+	        features: [
+	          "근무자 스킬 요건이 포함된 작업 지시 생성·관리",
+	          "모든 배정 근무자 및 사이트의 실시간 상태 추적",
           "원탭 일괄 작업으로 타임카드 승인 또는 이의 제기",
           "청구서, 결제 이력, 미결 잔액 확인",
           "근무자 성과 평가 및 선호 근무자 요청",
         ],
         stats: { bulkApprove: "일괄 승인", orderTracking: "주문 추적", invoicing: "청구서 발행" },
       },
-      business: {
-        title: "비즈니스 / HR 애플리케이션",
-        subtitle: "운영, 배차 & 분석",
-        features: [
-          "KPI 및 충족률이 포함된 실시간 운영 대시보드",
-          "사이트 간 오픈 포지션에 원클릭 근무자 배차",
+	      business: {
+	        title: "비즈니스 / HR 애플리케이션",
+	        titleShort: "비즈니스",
+	        subtitle: "운영, 배차 & 분석",
+	        features: [
+	          "KPI 및 충족률이 포함된 실시간 운영 대시보드",
+	          "사이트 간 오픈 포지션에 원클릭 근무자 배차",
           "AI 생성 스케줄을 위한 자동 시프터 연동",
           "수익 추적 및 청구서 상태가 포함된 재무 개요",
           "일별, 주별, 월별 운영 보고서 생성",
         ],
-        stats: { dashboard: "대시보드", autoShifter: "자동 시프터", export: "내보내기" },
-      },
-    },
+	        stats: { dashboard: "대시보드", autoShifter: "자동 시프터", export: "내보내기" },
+	      },
+	      mock: {
+	        brand: "QuickShift",
+	        worker: {
+	          phoneTitle: "근무자 앱",
+	          profileMeta: "창고 · 정규직",
+	          todayShift: "오늘의 근무",
+	          statusActive: "진행 중",
+	          location: "창고 A",
+	          upcoming: "예정",
+	          upcomingDay1: "내일",
+	          upcomingDay2: "수",
+	          timecard: "타임카드",
+	          timecardDate: "2월 14일",
+	          clockIn: "출근",
+	          clockOut: "퇴근",
+	          worked: "근무",
+	          submit: "타임카드 제출",
+	        },
+	        customer: {
+	          phoneTitle: "고객 앱",
+	          companyDashboard: "회사 대시보드",
+	          activeWorkOrders: "진행 중 작업 지시",
+	          status: { inProgress: "진행 중", pending: "대기" },
+	          wo1Desc: "창고 분류 · 5명",
+	          wo2Desc: "공장 조립 · 8명",
+	          pendingApprovals: "승인 대기",
+	          timecards: "타임카드",
+	          approveAll: "모두 승인",
+	          review: "검토",
+	          thisMonth: "이번 달",
+	          invoiceTotal: "청구 합계",
+	          paid: "결제 완료",
+	        },
+	        business: {
+	          phoneTitle: "비즈니스 앱",
+	          operationsDashboard: "운영 대시보드",
+	          date: "2026년 2월 14일",
+	          kpi: {
+	            activeWorkers: "활동 근무자",
+	            workOrders: "작업 지시",
+	            fillRate: "충족률",
+	            revenueMtd: "월 누계 매출",
+	          },
+	          todaysDispatches: "오늘의 배차",
+	          dispatch: {
+	            statusComplete: "완료",
+	            statusOpen: "1명 부족",
+	            workersSuffix: "명",
+	          },
+	          actions: { dispatch: "배차", reports: "리포트" },
+	        },
+	      },
+	    },
     integrations: {
       badge: "통합 허브",
       title1: "기존 도구와",
@@ -2047,14 +2108,15 @@ export const ko = {
         db: { label: "데이터베이스", tech: "PostgreSQL · 110개 이상 마이그레이션 · Redis 캐시" },
       },
     },
-    cta: {
-      title: "인력 파견 업무를",
-      titleAccent: "디지털화할 준비가 되셨나요?",
-      subtitle: "QuickShift가 인력 관리를 효율화하고 수작업 프로세스를 제거하는 방법에 대해 상담하세요.",
-      getStarted: "시작하기",
-      viewAll: "모든 프로젝트 보기",
-    },
-  },
+	    cta: {
+	      title: "인력 파견 업무를",
+	      titleAccent: "디지털화할 준비가 되셨나요?",
+	      subtitle: "QuickShift가 인력 관리를 효율화하고 수작업 프로세스를 제거하는 방법에 대해 상담하세요.",
+	      getStarted: "시작하기",
+	      viewAll: "모든 프로젝트 보기",
+	      privacyLink: "개인정보 처리방침 및 사용자 개인정보 선택",
+	    },
+	  },
 
   // Minova PMS Page
   minovaPms: {

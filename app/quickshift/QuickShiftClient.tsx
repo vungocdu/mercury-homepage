@@ -159,7 +159,7 @@ function PhoneMockup({ children, title }: { children: React.ReactNode; title: st
 /* ────────────────────────── Component ────────────────────────── */
 
 export default function QuickShiftClient() {
-  const { t } = useLanguage()
+  const { t, translations } = useLanguage()
 
   const tr = (key: string, fallback: string) => {
     const val = t(key)
@@ -171,10 +171,32 @@ export default function QuickShiftClient() {
   const integrationKeys = ['odoo', 'payment', 'messaging', 'aws'] as const
   const techKeys = ['cms', 'mobile', 'backend', 'ai', 'infra', 'db'] as const
 
-  const trArr = (key: string): string[] => {
-    const val = t(key)
-    return Array.isArray(val) ? val : []
+  const getRaw = (key: string): unknown => {
+    const keys = key.split('.')
+    let value: unknown = translations
+
+    for (const k of keys) {
+      if (value && typeof value === 'object' && k in (value as Record<string, unknown>)) {
+        value = (value as Record<string, unknown>)[k]
+      } else {
+        return undefined
+      }
+    }
+
+    return value
   }
+
+  const trArr = (key: string): string[] => {
+    const val = getRaw(key)
+    return Array.isArray(val) ? (val.filter(v => typeof v === 'string') as string[]) : []
+  }
+
+  const heroCarouselWords = trArr('quickshift.hero.carouselWords')
+  const heroCarouselWordsFallback = ['AI Timecard Scanning', 'Auto Scheduling', 'Smart Invoicing', 'Multi-channel Alerts']
+
+  const mobileWorkerTitleShort = tr('quickshift.mobile.worker.titleShort', tr('quickshift.mobile.worker.title', 'Worker Application'))
+  const mobileCustomerTitleShort = tr('quickshift.mobile.customer.titleShort', tr('quickshift.mobile.customer.title', 'Customer Application'))
+  const mobileBusinessTitleShort = tr('quickshift.mobile.business.titleShort', tr('quickshift.mobile.business.title', 'Business / HR Application'))
 
   return (
     <main className="min-h-screen font-ibm-plex-sans">
@@ -228,7 +250,7 @@ export default function QuickShiftClient() {
             <p className="text-lg md:text-xl leading-relaxed mb-10 max-w-2xl text-white/70">
               {tr('quickshift.hero.subtitle', 'End-to-end temporary staffing solution — from AI timecard scanning and auto scheduling to invoicing and multi-channel notifications. Built for Japanese staffing agencies.')}{' '}
               <TextWordCarousel
-                words={['AI Timecard Scanning', 'Auto Scheduling', 'Smart Invoicing', 'Multi-channel Alerts']}
+                words={heroCarouselWords.length > 0 ? heroCarouselWords : heroCarouselWordsFallback}
                 interval={2.5}
                 className="text-amber-400 font-semibold"
               />
@@ -428,11 +450,11 @@ export default function QuickShiftClient() {
           <div className="mx-auto max-w-3xl text-center mb-14">
             <p className="text-[#FFA31A] mb-3 text-sm font-semibold tracking-wider uppercase">{tr('quickshift.mobile.badge', 'Mobile Applications')}</p>
             <h2 className="text-3xl lg:text-4xl font-bold" style={{ color: 'hsl(var(--text-primary))' }}>
-              <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">{tr('quickshift.mobile.worker.title', 'Worker Application').split(' ')[0]}</span>
+              <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">{mobileWorkerTitleShort}</span>
               {' · '}
-              <span className="bg-gradient-to-r from-[#FFA31A] to-amber-500 bg-clip-text text-transparent">{tr('quickshift.mobile.customer.title', 'Customer Application').split(' ')[0]}</span>
+              <span className="bg-gradient-to-r from-[#FFA31A] to-amber-500 bg-clip-text text-transparent">{mobileCustomerTitleShort}</span>
               {' · '}
-              <span className="bg-gradient-to-r from-emerald-500 to-emerald-600 bg-clip-text text-transparent">{tr('quickshift.mobile.business.title', 'Business / HR Application').split(' ')[0]}</span>
+              <span className="bg-gradient-to-r from-emerald-500 to-emerald-600 bg-clip-text text-transparent">{mobileBusinessTitleShort}</span>
             </h2>
             <p className="mt-4 text-lg" style={{ color: 'hsl(var(--text-secondary))' }}>
               {tr('quickshift.mobile.flutterBadge', 'Built with Flutter · Melos monorepo · iOS & Android')}
@@ -444,11 +466,11 @@ export default function QuickShiftClient() {
             <Card className="border-blue-200/50 shadow-sm" style={{ backgroundColor: 'rgba(59,130,246,0.03)' }}>
               <CardContent className="pt-6">
                 <div className="flex flex-col sm:flex-row gap-8">
-                  <PhoneMockup title="Worker App">
+                  <PhoneMockup title={tr('quickshift.mobile.mock.worker.phoneTitle', 'Worker App')}>
                     {/* Status bar */}
                     <div className="mb-3 flex items-center justify-between text-[9px] text-gray-400">
                       <span>9:41</span>
-                      <span className="font-semibold text-blue-600">QuickShift</span>
+                      <span className="font-semibold text-blue-600">{tr('quickshift.mobile.mock.brand', 'QuickShift')}</span>
                       <span>100%</span>
                     </div>
                     {/* Profile header */}
@@ -457,21 +479,21 @@ export default function QuickShiftClient() {
                         <div className="h-8 w-8 rounded-full bg-white/20 flex items-center justify-center text-[10px] text-white font-bold">TN</div>
                         <div>
                           <p className="text-xs font-bold text-white">Tanaka Naoki</p>
-                          <p className="text-[9px] text-white/80">Warehouse · Full-time</p>
+                          <p className="text-[9px] text-white/80">{tr('quickshift.mobile.mock.worker.profileMeta', 'Warehouse · Full-time')}</p>
                         </div>
                       </div>
                     </div>
                     {/* Today's shift */}
-                    <p className="mb-2 text-[10px] font-semibold text-gray-700">Today&apos;s Shift</p>
+                    <p className="mb-2 text-[10px] font-semibold text-gray-700">{tr('quickshift.mobile.mock.worker.todayShift', "Today's Shift")}</p>
                     <div className="mb-3 rounded-lg border border-blue-200 bg-blue-50/50 px-2.5 py-2">
                       <div className="flex items-center justify-between mb-1">
                         <span className="text-[10px] font-medium text-gray-800">ABC Logistics</span>
-                        <span className="text-[8px] rounded-full bg-blue-100 px-1.5 py-0.5 text-blue-700 font-medium">Active</span>
+                        <span className="text-[8px] rounded-full bg-blue-100 px-1.5 py-0.5 text-blue-700 font-medium">{tr('quickshift.mobile.mock.worker.statusActive', 'Active')}</span>
                       </div>
                       <div className="flex items-center gap-3 text-[9px] text-gray-500">
                         <span>08:00 — 17:00</span>
                         <span>|</span>
-                        <span>Warehouse A</span>
+                        <span>{tr('quickshift.mobile.mock.worker.location', 'Warehouse A')}</span>
                       </div>
                       {/* Progress bar */}
                       <div className="mt-1.5 flex items-center gap-2">
@@ -482,11 +504,11 @@ export default function QuickShiftClient() {
                       </div>
                     </div>
                     {/* Upcoming shifts */}
-                    <p className="mb-2 text-[10px] font-semibold text-gray-700">Upcoming</p>
+                    <p className="mb-2 text-[10px] font-semibold text-gray-700">{tr('quickshift.mobile.mock.worker.upcoming', 'Upcoming')}</p>
                     <div className="space-y-1.5 mb-3">
                       {[
-                        { day: 'Tomorrow', site: 'XYZ Factory', time: '07:00–16:00' },
-                        { day: 'Wed', site: 'ABC Logistics', time: '08:00–17:00' },
+                        { day: tr('quickshift.mobile.mock.worker.upcomingDay1', 'Tomorrow'), site: 'XYZ Factory', time: '07:00–16:00' },
+                        { day: tr('quickshift.mobile.mock.worker.upcomingDay2', 'Wed'), site: 'ABC Logistics', time: '08:00–17:00' },
                       ].map((s, si) => (
                         <div key={si} className="flex items-center justify-between rounded-md border border-gray-200 bg-white px-2.5 py-1.5">
                           <div>
@@ -500,27 +522,27 @@ export default function QuickShiftClient() {
                     {/* Timecard submit */}
                     <div className="rounded-lg border border-blue-200 bg-white p-2">
                       <div className="flex items-center justify-between mb-1.5">
-                        <span className="text-[9px] font-semibold text-gray-700">Timecard</span>
-                        <span className="text-[8px] text-gray-400">Feb 14</span>
+                        <span className="text-[9px] font-semibold text-gray-700">{tr('quickshift.mobile.mock.worker.timecard', 'Timecard')}</span>
+                        <span className="text-[8px] text-gray-400">{tr('quickshift.mobile.mock.worker.timecardDate', 'Feb 14')}</span>
                       </div>
                       <div className="grid grid-cols-3 gap-1 text-center">
                         <div className="rounded bg-gray-50 py-1">
                           <p className="text-[10px] font-bold text-gray-800">8:02</p>
-                          <p className="text-[7px] text-gray-400">Clock In</p>
+                          <p className="text-[7px] text-gray-400">{tr('quickshift.mobile.mock.worker.clockIn', 'Clock In')}</p>
                         </div>
                         <div className="rounded bg-gray-50 py-1">
                           <p className="text-[10px] font-bold text-gray-800">—</p>
-                          <p className="text-[7px] text-gray-400">Clock Out</p>
+                          <p className="text-[7px] text-gray-400">{tr('quickshift.mobile.mock.worker.clockOut', 'Clock Out')}</p>
                         </div>
                         <div className="rounded bg-blue-50 py-1">
                           <p className="text-[10px] font-bold text-blue-600">5.9h</p>
-                          <p className="text-[7px] text-blue-500">Worked</p>
+                          <p className="text-[7px] text-blue-500">{tr('quickshift.mobile.mock.worker.worked', 'Worked')}</p>
                         </div>
                       </div>
                     </div>
                     {/* Submit button */}
                     <div className="mt-2.5 rounded-lg bg-blue-600 py-2 text-center">
-                      <span className="text-[10px] font-semibold text-white">Submit Timecard</span>
+                      <span className="text-[10px] font-semibold text-white">{tr('quickshift.mobile.mock.worker.submit', 'Submit Timecard')}</span>
                     </div>
                   </PhoneMockup>
 
@@ -572,27 +594,27 @@ export default function QuickShiftClient() {
             <Card className="border-orange-200/50 shadow-sm" style={{ backgroundColor: 'rgba(255,163,26,0.03)' }}>
               <CardContent className="pt-6">
                 <div className="flex flex-col sm:flex-row gap-8">
-                  <PhoneMockup title="Customer App">
+                  <PhoneMockup title={tr('quickshift.mobile.mock.customer.phoneTitle', 'Customer App')}>
                     {/* Status bar */}
                     <div className="mb-3 flex items-center justify-between text-[9px] text-gray-400">
                       <span>9:41</span>
-                      <span className="font-semibold text-[#FFA31A]">QuickShift</span>
+                      <span className="font-semibold text-[#FFA31A]">{tr('quickshift.mobile.mock.brand', 'QuickShift')}</span>
                       <span>100%</span>
                     </div>
                     {/* Company header */}
                     <div className="mb-3 rounded-lg bg-gradient-to-r from-[#FFA31A] to-amber-500 px-3 py-2.5">
-                      <p className="text-[10px] text-white/80">Company Dashboard</p>
+                      <p className="text-[10px] text-white/80">{tr('quickshift.mobile.mock.customer.companyDashboard', 'Company Dashboard')}</p>
                       <p className="text-xs font-bold text-white">ABC Logistics Co., Ltd.</p>
                     </div>
                     {/* Active work orders */}
-                    <p className="mb-2 text-[10px] font-semibold text-gray-700">Active Work Orders</p>
+                    <p className="mb-2 text-[10px] font-semibold text-gray-700">{tr('quickshift.mobile.mock.customer.activeWorkOrders', 'Active Work Orders')}</p>
                     <div className="space-y-2 mb-3">
                       <div className="rounded-md border border-gray-200 bg-white px-2.5 py-2">
                         <div className="flex items-center justify-between mb-1">
                           <span className="text-[10px] font-medium text-gray-800">WO-2024-0847</span>
-                          <span className="text-[8px] rounded-full bg-green-100 px-1.5 py-0.5 text-green-700 font-medium">In Progress</span>
+                          <span className="text-[8px] rounded-full bg-green-100 px-1.5 py-0.5 text-green-700 font-medium">{tr('quickshift.mobile.mock.customer.status.inProgress', 'In Progress')}</span>
                         </div>
-                        <p className="text-[9px] text-gray-500 mb-1">Warehouse sorting · 5 workers</p>
+                        <p className="text-[9px] text-gray-500 mb-1">{tr('quickshift.mobile.mock.customer.wo1Desc', 'Warehouse sorting · 5 workers')}</p>
                         <div className="flex items-center gap-2">
                           <div className="flex-1 h-1.5 rounded-full bg-gray-100">
                             <div className="h-full w-[80%] rounded-full bg-gradient-to-r from-[#FFA31A] to-amber-400" />
@@ -603,38 +625,38 @@ export default function QuickShiftClient() {
                       <div className="rounded-md border border-gray-200 bg-white px-2.5 py-2">
                         <div className="flex items-center justify-between mb-1">
                           <span className="text-[10px] font-medium text-gray-800">WO-2024-0852</span>
-                          <span className="text-[8px] rounded-full bg-amber-100 px-1.5 py-0.5 text-amber-700 font-medium">Pending</span>
+                          <span className="text-[8px] rounded-full bg-amber-100 px-1.5 py-0.5 text-amber-700 font-medium">{tr('quickshift.mobile.mock.customer.status.pending', 'Pending')}</span>
                         </div>
-                        <p className="text-[9px] text-gray-500">Factory assembly · 8 workers</p>
+                        <p className="text-[9px] text-gray-500">{tr('quickshift.mobile.mock.customer.wo2Desc', 'Factory assembly · 8 workers')}</p>
                       </div>
                     </div>
                     {/* Timecard approvals */}
-                    <p className="mb-2 text-[10px] font-semibold text-gray-700">Pending Approvals</p>
+                    <p className="mb-2 text-[10px] font-semibold text-gray-700">{tr('quickshift.mobile.mock.customer.pendingApprovals', 'Pending Approvals')}</p>
                     <div className="rounded-md border border-orange-200 bg-orange-50/50 px-2.5 py-2 mb-3">
                       <div className="flex items-center justify-between mb-1.5">
-                        <span className="text-[10px] text-gray-800 font-medium">Timecards</span>
+                        <span className="text-[10px] text-gray-800 font-medium">{tr('quickshift.mobile.mock.customer.timecards', 'Timecards')}</span>
                         <span className="text-[10px] font-bold text-[#FFA31A]">12</span>
                       </div>
                       <div className="flex gap-1.5">
                         <div className="flex-1 rounded bg-white py-1.5 text-center border border-green-200">
-                          <span className="text-[9px] text-green-600 font-medium">Approve All</span>
+                          <span className="text-[9px] text-green-600 font-medium">{tr('quickshift.mobile.mock.customer.approveAll', 'Approve All')}</span>
                         </div>
                         <div className="flex-1 rounded bg-white py-1.5 text-center border border-gray-200">
-                          <span className="text-[9px] text-gray-600 font-medium">Review</span>
+                          <span className="text-[9px] text-gray-600 font-medium">{tr('quickshift.mobile.mock.customer.review', 'Review')}</span>
                         </div>
                       </div>
                     </div>
                     {/* Invoice summary */}
                     <div className="rounded-md border border-gray-200 bg-white px-2.5 py-2">
-                      <p className="text-[9px] font-semibold text-gray-700 mb-1">This Month</p>
+                      <p className="text-[9px] font-semibold text-gray-700 mb-1">{tr('quickshift.mobile.mock.customer.thisMonth', 'This Month')}</p>
                       <div className="grid grid-cols-2 gap-2">
                         <div className="text-center">
                           <p className="text-[11px] font-bold text-[#FFA31A]">¥2.4M</p>
-                          <p className="text-[7px] text-gray-400">Invoice Total</p>
+                          <p className="text-[7px] text-gray-400">{tr('quickshift.mobile.mock.customer.invoiceTotal', 'Invoice Total')}</p>
                         </div>
                         <div className="text-center">
                           <p className="text-[11px] font-bold text-emerald-500">¥1.8M</p>
-                          <p className="text-[7px] text-gray-400">Paid</p>
+                          <p className="text-[7px] text-gray-400">{tr('quickshift.mobile.mock.customer.paid', 'Paid')}</p>
                         </div>
                       </div>
                     </div>
@@ -688,49 +710,51 @@ export default function QuickShiftClient() {
             <Card className="border-emerald-200/50 shadow-sm" style={{ backgroundColor: 'rgba(16,185,129,0.03)' }}>
               <CardContent className="pt-6">
                 <div className="flex flex-col sm:flex-row gap-8">
-                  <PhoneMockup title="Business App">
+                  <PhoneMockup title={tr('quickshift.mobile.mock.business.phoneTitle', 'Business App')}>
                     {/* Status bar */}
                     <div className="mb-3 flex items-center justify-between text-[9px] text-gray-400">
                       <span>9:41</span>
-                      <span className="font-semibold text-emerald-600">QuickShift</span>
+                      <span className="font-semibold text-emerald-600">{tr('quickshift.mobile.mock.brand', 'QuickShift')}</span>
                       <span>100%</span>
                     </div>
                     {/* Dashboard header */}
                     <div className="mb-3 rounded-lg bg-gradient-to-r from-emerald-600 to-emerald-700 px-3 py-2.5">
-                      <p className="text-[10px] text-white/80">Operations Dashboard</p>
-                      <p className="text-xs font-bold text-white">Feb 14, 2026</p>
+                      <p className="text-[10px] text-white/80">{tr('quickshift.mobile.mock.business.operationsDashboard', 'Operations Dashboard')}</p>
+                      <p className="text-xs font-bold text-white">{tr('quickshift.mobile.mock.business.date', 'Feb 14, 2026')}</p>
                     </div>
                     {/* KPI Cards */}
                     <div className="grid grid-cols-2 gap-1.5 mb-3">
                       <div className="rounded-md bg-emerald-50 px-2 py-1.5 text-center">
                         <p className="text-xs font-bold text-emerald-600">247</p>
-                        <p className="text-[7px] text-gray-500">Active Workers</p>
+                        <p className="text-[7px] text-gray-500">{tr('quickshift.mobile.mock.business.kpi.activeWorkers', 'Active Workers')}</p>
                       </div>
                       <div className="rounded-md bg-blue-50 px-2 py-1.5 text-center">
                         <p className="text-xs font-bold text-blue-600">38</p>
-                        <p className="text-[7px] text-gray-500">Work Orders</p>
+                        <p className="text-[7px] text-gray-500">{tr('quickshift.mobile.mock.business.kpi.workOrders', 'Work Orders')}</p>
                       </div>
                       <div className="rounded-md bg-orange-50 px-2 py-1.5 text-center">
                         <p className="text-xs font-bold text-[#FFA31A]">96%</p>
-                        <p className="text-[7px] text-gray-500">Fill Rate</p>
+                        <p className="text-[7px] text-gray-500">{tr('quickshift.mobile.mock.business.kpi.fillRate', 'Fill Rate')}</p>
                       </div>
                       <div className="rounded-md bg-purple-50 px-2 py-1.5 text-center">
                         <p className="text-xs font-bold text-purple-600">¥18.2M</p>
-                        <p className="text-[7px] text-gray-500">Revenue MTD</p>
+                        <p className="text-[7px] text-gray-500">{tr('quickshift.mobile.mock.business.kpi.revenueMtd', 'Revenue MTD')}</p>
                       </div>
                     </div>
                     {/* Shift Overview */}
-                    <p className="mb-1.5 text-[10px] font-semibold text-gray-700">Today&apos;s Dispatches</p>
+                    <p className="mb-1.5 text-[10px] font-semibold text-gray-700">{tr('quickshift.mobile.mock.business.todaysDispatches', "Today's Dispatches")}</p>
                     <div className="space-y-1.5 mb-3">
                       {[
-                        { site: 'ABC Logistics', workers: '5/5', status: 'Complete', color: 'text-emerald-600 bg-emerald-100' },
-                        { site: 'XYZ Factory', workers: '7/8', status: '1 Open', color: 'text-amber-600 bg-amber-100' },
-                        { site: 'DEF Retail', workers: '3/3', status: 'Complete', color: 'text-emerald-600 bg-emerald-100' },
+                        { site: 'ABC Logistics', workers: '5/5', status: tr('quickshift.mobile.mock.business.dispatch.statusComplete', 'Complete'), color: 'text-emerald-600 bg-emerald-100' },
+                        { site: 'XYZ Factory', workers: '7/8', status: tr('quickshift.mobile.mock.business.dispatch.statusOpen', '1 Open'), color: 'text-amber-600 bg-amber-100' },
+                        { site: 'DEF Retail', workers: '3/3', status: tr('quickshift.mobile.mock.business.dispatch.statusComplete', 'Complete'), color: 'text-emerald-600 bg-emerald-100' },
                       ].map((d, di) => (
                         <div key={di} className="flex items-center justify-between rounded-md border border-gray-200 bg-white px-2 py-1.5">
                           <div>
                             <p className="text-[10px] font-medium text-gray-800">{d.site}</p>
-                            <p className="text-[8px] text-gray-400">{d.workers} workers</p>
+                            <p className="text-[8px] text-gray-400">
+                              {d.workers} {tr('quickshift.mobile.mock.business.dispatch.workersSuffix', 'workers')}
+                            </p>
                           </div>
                           <span className={`text-[8px] rounded-full px-1.5 py-0.5 font-medium ${d.color}`}>{d.status}</span>
                         </div>
@@ -739,10 +763,10 @@ export default function QuickShiftClient() {
                     {/* Quick actions */}
                     <div className="grid grid-cols-2 gap-1.5">
                       <div className="rounded-lg bg-emerald-600 py-1.5 text-center">
-                        <span className="text-[9px] font-semibold text-white">Dispatch</span>
+                        <span className="text-[9px] font-semibold text-white">{tr('quickshift.mobile.mock.business.actions.dispatch', 'Dispatch')}</span>
                       </div>
                       <div className="rounded-lg border border-emerald-200 bg-white py-1.5 text-center">
-                        <span className="text-[9px] font-semibold text-emerald-600">Reports</span>
+                        <span className="text-[9px] font-semibold text-emerald-600">{tr('quickshift.mobile.mock.business.actions.reports', 'Reports')}</span>
                       </div>
                     </div>
                   </PhoneMockup>
@@ -901,7 +925,7 @@ export default function QuickShiftClient() {
               <Button asChild variant="link" className="text-white/40 hover:text-white/70">
                 <Link href="/quickshift/privacy">
                   <Shield className="w-4 h-4 mr-2" />
-                  Privacy Policy & User Privacy Choices
+                  {tr('quickshift.cta.privacyLink', 'Privacy Policy & User Privacy Choices')}
                 </Link>
               </Button>
             </div>

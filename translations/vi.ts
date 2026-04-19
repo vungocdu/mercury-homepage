@@ -1741,15 +1741,16 @@ export const vi = {
   },
 
   // QuickShift Page
-  quickshift: {
-    hero: {
-      badge: "Quản Lý Nhân Lực Bằng AI",
-      title: "Nền Tảng Quản Lý Nhân Sự Thời Vụ",
-      subtitle: "Giải pháp quản lý nhân sự thời vụ toàn diện — từ quét bảng chấm công bằng AI, lập lịch tự động đến xuất hóa đơn và thông báo đa kênh. Được xây dựng cho các công ty phái cử nhân sự Nhật Bản.",
-      cta: {
-        explore: "Khám Phá Module",
-        apps: "Ứng Dụng Di Động",
-      },
+	  quickshift: {
+	    hero: {
+	      badge: "Quản Lý Nhân Lực Bằng AI",
+	      title: "Nền Tảng Quản Lý Nhân Sự Thời Vụ",
+	      subtitle: "Giải pháp quản lý nhân sự thời vụ toàn diện — từ quét bảng chấm công bằng AI, lập lịch tự động đến xuất hóa đơn và thông báo đa kênh. Được xây dựng cho các công ty phái cử nhân sự Nhật Bản.",
+	      carouselWords: ["Quét chấm công AI", "Lập lịch tự động", "Hóa đơn thông minh", "Thông báo đa kênh"],
+	      cta: {
+	        explore: "Khám Phá Module",
+	        apps: "Ứng Dụng Di Động",
+	      },
       stats: {
         modules: "Module Chính",
         apps: "Ứng Dụng Di Động",
@@ -1801,46 +1802,101 @@ export const vi = {
         viewer: { title: "Người Xem", desc: "Quyền chỉ xem bảng điều khiển, báo cáo và dữ liệu vận hành.", permissions: "Chỉ xem" },
       },
     },
-    mobile: {
-      badge: "Ứng Dụng Di Động",
-      flutterBadge: "Xây dựng với Flutter · Melos monorepo · iOS & Android",
-      worker: {
-        title: "Ứng Dụng Nhân Viên",
-        subtitle: "Lịch làm, chấm công & sẵn sàng",
-        features: [
-          "Xem ca được phân công với trạng thái thời gian thực và chi tiết địa điểm",
-          "Gửi bảng chấm công với check-in/out và theo dõi giờ nghỉ",
+	    mobile: {
+	      badge: "Ứng Dụng Di Động",
+	      flutterBadge: "Xây dựng với Flutter · Melos monorepo · iOS & Android",
+	      worker: {
+	        title: "Ứng Dụng Nhân Viên",
+	        titleShort: "Nhân viên",
+	        subtitle: "Lịch làm, chấm công & sẵn sàng",
+	        features: [
+	          "Xem ca được phân công với trạng thái thời gian thực và chi tiết địa điểm",
+	          "Gửi bảng chấm công với check-in/out và theo dõi giờ nghỉ",
           "Đặt sẵn sàng hàng tuần và yêu cầu nghỉ phép",
           "Nhận thông báo đẩy cho phân công mới và thay đổi lịch",
           "Xem lịch sử thu nhập và trạng thái thanh toán",
         ],
         stats: { loadTime: "Thời gian tải", clockIn: "Check in/out", pushAlerts: "Thông báo đẩy" },
       },
-      customer: {
-        title: "Ứng Dụng Khách Hàng",
-        subtitle: "Đơn hàng, phê duyệt & thanh toán",
-        features: [
-          "Tạo và quản lý đơn hàng với yêu cầu kỹ năng nhân viên",
-          "Theo dõi trạng thái thời gian thực của tất cả nhân viên và địa điểm",
+	      customer: {
+	        title: "Ứng Dụng Khách Hàng",
+	        titleShort: "Khách hàng",
+	        subtitle: "Đơn hàng, phê duyệt & thanh toán",
+	        features: [
+	          "Tạo và quản lý đơn hàng với yêu cầu kỹ năng nhân viên",
+	          "Theo dõi trạng thái thời gian thực của tất cả nhân viên và địa điểm",
           "Duyệt hoặc phản đối bảng chấm công với thao tác hàng loạt",
           "Xem hóa đơn, lịch sử thanh toán và số dư còn lại",
           "Đánh giá hiệu suất nhân viên và yêu cầu nhân viên ưu tiên",
         ],
         stats: { bulkApprove: "Duyệt hàng loạt", orderTracking: "Theo dõi đơn hàng", invoicing: "Hóa đơn" },
       },
-      business: {
-        title: "Ứng Dụng Quản Lý / HR",
-        subtitle: "Vận hành, điều phối & phân tích",
-        features: [
-          "Bảng điều khiển vận hành thời gian thực với KPI và tỷ lệ lấp đầy",
-          "Điều phối nhân viên một chạm đến vị trí trống trên các địa điểm",
+	      business: {
+	        title: "Ứng Dụng Quản Lý / HR",
+	        titleShort: "Quản lý",
+	        subtitle: "Vận hành, điều phối & phân tích",
+	        features: [
+	          "Bảng điều khiển vận hành thời gian thực với KPI và tỷ lệ lấp đầy",
+	          "Điều phối nhân viên một chạm đến vị trí trống trên các địa điểm",
           "Tích hợp Auto Shifter cho lịch được tạo bởi AI",
           "Tổng quan tài chính với theo dõi doanh thu và trạng thái hóa đơn",
           "Tạo báo cáo vận hành hàng ngày, tuần và tháng",
         ],
-        stats: { dashboard: "Bảng điều khiển", autoShifter: "Auto Shifter", export: "Xuất báo cáo" },
-      },
-    },
+	        stats: { dashboard: "Bảng điều khiển", autoShifter: "Auto Shifter", export: "Xuất báo cáo" },
+	      },
+	      mock: {
+	        brand: "QuickShift",
+	        worker: {
+	          phoneTitle: "App Nhân Viên",
+	          profileMeta: "Kho · Toàn thời gian",
+	          todayShift: "Ca hôm nay",
+	          statusActive: "Đang làm",
+	          location: "Kho A",
+	          upcoming: "Sắp tới",
+	          upcomingDay1: "Ngày mai",
+	          upcomingDay2: "T4",
+	          timecard: "Chấm công",
+	          timecardDate: "14 Thg 2",
+	          clockIn: "Vào ca",
+	          clockOut: "Ra ca",
+	          worked: "Đã làm",
+	          submit: "Gửi chấm công",
+	        },
+	        customer: {
+	          phoneTitle: "App Khách Hàng",
+	          companyDashboard: "Bảng điều khiển công ty",
+	          activeWorkOrders: "Đơn hàng đang chạy",
+	          status: { inProgress: "Đang thực hiện", pending: "Chờ" },
+	          wo1Desc: "Phân loại kho · 5 nhân viên",
+	          wo2Desc: "Lắp ráp nhà máy · 8 nhân viên",
+	          pendingApprovals: "Chờ phê duyệt",
+	          timecards: "Bảng chấm công",
+	          approveAll: "Duyệt tất cả",
+	          review: "Xem lại",
+	          thisMonth: "Tháng này",
+	          invoiceTotal: "Tổng hóa đơn",
+	          paid: "Đã thanh toán",
+	        },
+	        business: {
+	          phoneTitle: "App Quản Lý",
+	          operationsDashboard: "Bảng điều khiển vận hành",
+	          date: "14/02/2026",
+	          kpi: {
+	            activeWorkers: "Nhân viên hoạt động",
+	            workOrders: "Đơn hàng",
+	            fillRate: "Tỷ lệ lấp đầy",
+	            revenueMtd: "Doanh thu MTD",
+	          },
+	          todaysDispatches: "Điều phối hôm nay",
+	          dispatch: {
+	            statusComplete: "Hoàn tất",
+	            statusOpen: "Còn 1 chỗ",
+	            workersSuffix: "người",
+	          },
+	          actions: { dispatch: "Điều phối", reports: "Báo cáo" },
+	        },
+	      },
+	    },
     integrations: {
       badge: "Trung Tâm Tích Hợp",
       title1: "Kết Nối Với",
@@ -1865,14 +1921,15 @@ export const vi = {
         db: { label: "Cơ Sở Dữ Liệu", tech: "PostgreSQL · 110+ migration · Redis cache" },
       },
     },
-    cta: {
-      title: "Sẵn Sàng Số Hóa",
-      titleAccent: "Quy Trình Phái Cử Nhân Sự?",
-      subtitle: "Hãy thảo luận về cách QuickShift có thể tối ưu quản lý nhân lực và loại bỏ các quy trình thủ công.",
-      getStarted: "Bắt Đầu Ngay",
-      viewAll: "Xem Tất Cả Dự Án",
-    },
-  },
+	    cta: {
+	      title: "Sẵn Sàng Số Hóa",
+	      titleAccent: "Quy Trình Phái Cử Nhân Sự?",
+	      subtitle: "Hãy thảo luận về cách QuickShift có thể tối ưu quản lý nhân lực và loại bỏ các quy trình thủ công.",
+	      getStarted: "Bắt Đầu Ngay",
+	      viewAll: "Xem Tất Cả Dự Án",
+	      privacyLink: "Chính sách quyền riêng tư & lựa chọn riêng tư của người dùng",
+	    },
+	  },
 
   // Actiwell Platform Page
   actiwellPlatform: {
@@ -2244,14 +2301,19 @@ export const vi = {
   tnaSystem: {
     hero: {
       badge: "Hệ Thống TNA HRM",
-      title: "Nền Tảng Nhân Sự & Bảng Lương Số Hóa cho Sản Xuất",
+      title1: "Nền Tảng Nhân Sự & Bảng Lương Số Hóa",
+      title2: "cho Sản Xuất",
       subtitle: "Quản lý nhân sự toàn diện với chấm công AI, vận hành ca kíp & nghỉ phép, tự động hóa bảng lương và tích hợp kế toán MISA — xây dựng cho doanh nghiệp sản xuất Việt Nam.",
+      cta: {
+        explore: "Khám phá module",
+        viewScreens: "Xem thiết kế màn hình",
+      },
       stats: {
-        functionalPages: "17+ trang chức năng",
-        processFlows: "7 quy trình chính",
-        roles: "5 vai trò vận hành",
-        languages: "Hỗ trợ đa ngôn ngữ"
-      }
+        pages: "Trang chức năng",
+        flows: "Quy trình",
+        userRoles: "Vai trò",
+        langs: "Ngôn ngữ",
+      },
     },
     core: {
       title: "Các Module Chức Năng Cốt Lõi",
