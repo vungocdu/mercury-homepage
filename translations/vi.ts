@@ -648,15 +648,15 @@ export const vi = {
         website: "/tna-system"
       },
       myarm: {
-        title: "MyARM: Nền Tảng Workflow Phong Cách Nhật Ưu Tiên Mobile",
-        description: "MyARM kết nối jobs, missions, meetings, tài liệu và notifications trong một bề mặt vận hành thống nhất. Được phát triển cùng MyArms (Nhật Bản), nền tảng này tạo một nhịp điều phối chung cho đội ngũ hiện trường và đội ngũ văn phòng thay vì phân mảnh qua chat, spreadsheet và deadline rời rạc.",
+        title: "MyARM: Dự Án Mercury Triển Khai Cho MyArms Nhật Bản",
+        description: "Cho khách hàng MyArms tại Nhật Bản, Mercury Solutions đã triển khai một nền tảng workflow production hợp nhất jobs, missions, meetings, tài liệu và notifications trên mobile lẫn web. Dự án này cho thấy cách Mercury biến bài toán vận hành phức tạp thành phần mềm mà đội ngũ thực tế có thể sử dụng mỗi ngày.",
         features: {
           title: "Tính Năng Chính:",
           items: [
-            "Điều phối jobs, missions và deadline",
-            "Quản lý meetings, events và lịch làm việc",
-            "Thư viện dùng chung, memo và tài liệu",
-            "Thông báo mobile và workflow thành viên"
+            "Triển khai đa nền tảng với logic sản phẩm dùng chung",
+            "Thiết kế workflow cho jobs, meetings và điều phối đội nhóm",
+            "Kiến trúc dịch vụ Laravel cho app APIs và domain tái sử dụng",
+            "Phát hành sẵn sàng lên iOS, Android và website chính thức"
           ]
         },
         platforms: {
@@ -2575,88 +2575,88 @@ export const vi = {
 
   myarmPage: {
     hero: {
-      badge: "Nền tảng workflow ưu tiên mobile",
-      title: "Kỷ luật workflow kiểu Nhật cho các đội ngũ luôn dịch chuyển.",
-      subtitle: "MyARM gom jobs, missions, meetings, tài liệu và cập nhật vào một bề mặt vận hành mobile-first để đội ngũ hiện trường và đội ngũ văn phòng chạy cùng một nhịp.",
-      primaryCta: "Trao đổi với Mercury Solutions",
+      badge: "Nền tảng Mercury triển khai cho MyArms Nhật Bản",
+      title: "Mercury đã xây dựng MyARM thành một hệ thống workflow production cho khách hàng Nhật Bản.",
+      subtitle: "Cho MyArms tại Nhật Bản, Mercury đã triển khai mobile app, backend services và luồng sản phẩm sẵn sàng phát hành của MyARM để vận hành hằng ngày đi qua một hệ thống có kỷ luật.",
+      primaryCta: "Trao đổi với Mercury về hệ thống tương tự",
       secondaryCta: "Truy cập website chính thức",
       deviceBadge: "iOS + Android",
-      posterLabel: "Dựa trên app MyARM production thực tế",
-      posterSubtext: "Flutter mobile app, Laravel API và shared service layer được xác minh trực tiếp từ codebase thật.",
+      posterLabel: "Một client delivery thực tế, không phải concept nội bộ",
+      posterSubtext: "Mercury đã triển khai Flutter mobile app, Laravel services và bản phát hành sẵn sàng lên store cho MyArms.",
     },
     overview: {
-      eyebrow: "Vì sao đội ngũ chọn MyARM",
-      title: "Một nhịp vận hành chung cho công việc, cuộc họp, deadline và cộng tác đội nhóm.",
-      body: "Hệ sinh thái MyARM nối công việc hiện trường với kế hoạch văn phòng thành một flow có kỷ luật, thay vì đẩy mọi thứ vào chat, spreadsheet và các buổi cập nhật trạng thái rời rạc.",
+      eyebrow: "Mercury đã bàn giao gì",
+      title: "Một dự án phần mềm thực tế từ thiết kế workflow đến phát hành production.",
+      body: "MyARM không phải mockup để trưng bày trên homepage của Mercury. Đây là dự án khách hàng mà Mercury Solutions triển khai cho MyArms, bao phủ từ thiết kế workflow, phát triển mobile product, backend services đến đường ra production cho đội ngũ sử dụng thật.",
     },
     sections: {
       jobs: {
-        title: "Jobs + phân công",
-        desc: "Tạo và phân phối công việc với cấu trúc rõ ràng hơn cho người giao, người thực thi và trạng thái deadline.",
+        title: "Mô hình hóa workflow",
+        desc: "Mercury chuyển các yêu cầu vận hành thành cấu trúc jobs và phân công rõ ràng để owner, người thực thi và deadline cùng nằm trong một flow sản phẩm.",
       },
       missions: {
-        title: "Missions + tiến độ",
-        desc: "Theo dõi mission, milestone và áp lực deadline mà không đánh rơi trách nhiệm giữa các nhóm.",
+        title: "Hiển thị tiến độ thực thi",
+        desc: "Mission, milestone và áp lực deadline được biến thành các trạng thái sản phẩm có thể theo dõi để quản lý nhìn thấy chuyển động thay vì phải đuổi theo cập nhật thủ công.",
       },
       meetings: {
-        title: "Meetings + events",
-        desc: "Đưa lịch họp, công tác chuẩn bị sự kiện và hành động follow-up vào cùng một làn vận hành với công việc hằng ngày.",
+        title: "Lớp điều phối cộng tác",
+        desc: "Meetings, events và follow-up actions được gắn vào cùng một làn workflow, thể hiện năng lực của Mercury trong việc thiết kế tính năng cộng tác quanh vận hành thực tế.",
       },
       library: {
-        title: "Library + memo",
-        desc: "Tạo một nơi dùng chung cho tài liệu, memo và quy chuẩn vận hành để ngữ cảnh luôn đi sát công việc.",
+        title: "Kho tri thức vận hành",
+        desc: "Tài liệu, memo và quy chuẩn được đặt sát quá trình thực thi để sản phẩm giữ ngữ cảnh bên trong workflow thay vì nằm rời bên ngoài.",
       },
     },
     workflow: {
-      eyebrow: "Luồng vận hành",
-      title: "Từ giao việc đến xác nhận, toàn bộ flow vẫn luôn dễ đọc.",
+      eyebrow: "Mercury cấu trúc dự án như thế nào",
+      title: "Yêu cầu nghiệp vụ, product flow, service design và phát hành luôn đi cùng nhau.",
       steps: {
         capture: {
-          title: "Ghi nhận công việc",
-          desc: "Quản lý biến yêu cầu thành job, mission hoặc event với một nơi duy nhất để chốt owner, thời gian và phạm vi.",
+          title: "Bóc tách luồng nghiệp vụ",
+          desc: "Mercury bắt đầu bằng việc chuyển các quy trình vận hành của khách hàng thành product flow cụ thể cho jobs, missions, meetings và tài liệu dùng chung.",
         },
         coordinate: {
-          title: "Điều phối đội nhóm",
-          desc: "Thành viên nhìn thấy việc nào quan trọng lúc này, việc nào đang chặn và việc nào đã dịch chuyển mà không phải nhảy qua nhiều công cụ.",
+          title: "Thiết kế một mặt vận hành chung",
+          desc: "Đội ngũ xây dựng một trải nghiệm thống nhất để nhân sự hiện trường và văn phòng làm việc trên cùng một nguồn sự thật thay vì bị chia cắt qua nhiều công cụ.",
         },
         communicate: {
-          title: "Trao đổi trong đúng ngữ cảnh",
-          desc: "Meetings, memo, notifications và tài liệu tham chiếu bám theo workflow thay vì biến mất trong tiếng ồn của chat.",
+          title: "Xây đồng thời app và services",
+          desc: "Mercury triển khai mobile client, backend APIs và lớp service dùng chung cùng lúc để dữ liệu, giao tiếp và hành động luôn khớp nhau.",
         },
         confirm: {
-          title: "Xác nhận tiến độ",
-          desc: "Trạng thái deadline và tín hiệu hoàn thành luôn hiển thị để cấp quản lý can thiệp trước khi công việc trượt khỏi nhịp.",
+          title: "Đưa ra production có kỷ luật",
+          desc: "Phân phối trên store, website chính thức và ranh giới dịch vụ ổn định biến dự án này thành một nền tảng production thay vì một portfolio mockup.",
         },
       },
     },
     architecture: {
-      eyebrow: "Kiến trúc triển khai",
-      title: "Một sản phẩm mobile được neo bởi hai dịch vụ Laravel.",
-      body: "Codebase cho thấy một Flutter mobile client, một Laravel backend chuyên biệt và một Laravel common service dùng chung. Cấu trúc này giúp MyARM xử lý lưu lượng vận hành hằng ngày, gom logic dùng chung và mở rộng sản phẩm trong tương lai mà không dồn tất cả vào một runtime.",
+      eyebrow: "Kiến trúc công nghệ",
+      title: "Flutter ở client. Laravel ở lõi dịch vụ.",
+      body: "Mercury triển khai MyARM với Flutter mobile client, một Laravel backend chuyên biệt và một Laravel common service dùng chung. Kiến trúc này tách lớp giao tiếp với app khỏi các business domain có thể tái sử dụng, giúp hệ thống dễ mở rộng, bảo trì và vận hành hơn.",
     },
     stack: {
       mobile: {
-        title: "Flutter mobile app",
-        desc: "Client production cho iOS và Android với các module jobs, missions, meetings, notifications và không gian làm việc cá nhân.",
+        title: "Năng lực product engineering với Flutter",
+        desc: "Mercury triển khai client production cho iOS và Android với các module jobs, missions, meetings, notifications và không gian làm việc cá nhân.",
       },
       backend: {
-        title: "Laravel backend API",
-        desc: "Dịch vụ chuyên biệt xử lý authentication, business workflows, event flows và các API phục vụ app.",
+        title: "Triển khai Laravel API",
+        desc: "Một dịch vụ Laravel chuyên biệt xử lý authentication, workflow orchestration, event logic và các API mà app tiêu thụ.",
       },
       common: {
-        title: "Laravel common service",
-        desc: "Lớp dịch vụ dùng chung để gom domain rules và internal APIs vào một nơi thay vì lặp lại ở nhiều runtime.",
+        title: "Thiết kế shared domain service",
+        desc: "Mercury gom các domain rules tái sử dụng và internal APIs vào một common Laravel service thay vì lặp logic ở nhiều runtime.",
       },
       notifications: {
-        title: "Phân phối sẵn ra thị trường",
-        desc: "Sản phẩm đã có domain riêng cùng App Store và Google Play, khiến MyARM mang cảm giác sẵn sàng thương mại thay vì chỉ là concept.",
+        title: "Sẵn sàng phát hành và phân phối",
+        desc: "Website chính thức cùng App Store và Google Play cho thấy Mercury có thể đi xa hơn phát triển tính năng để chạm tới bản phát hành sẵn sàng ra thị trường.",
       },
     },
     cta: {
-      eyebrow: "Xem sản phẩm ngoài thị trường",
-      title: "Đưa MyARM lên Mercury Solution Homepage như một nền tảng kinh doanh nghiêm túc, không phải một project card placeholder.",
-      body: "Website chính thức và kênh phát hành app đã tồn tại. Mercury giờ có thể kể câu chuyện MyARM với độ sâu sản phẩm tương đương QuickShift và Minova PMS.",
-      primary: "Yêu cầu tư vấn dự án",
+      eyebrow: "Bước tiếp theo",
+      title: "Muốn triển khai một nền tảng workflow mobile-first cho vận hành?",
+      body: "Từ case study MyARM, Mercury có thể giúp bạn chốt yêu cầu, thiết kế kiến trúc Flutter + Laravel và đưa hệ thống vào production với kỷ luật phát hành rõ ràng.",
+      primary: "Yêu cầu tư vấn nền tảng tương tự",
       secondary: "Mở myarms.jp",
       iosTitle: "App Store",
       iosBody: "Quét mã hoặc mở trang phát hành trên iPhone.",

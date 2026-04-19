@@ -841,15 +841,15 @@ export const ja = {
         website: "/tna-system"
       },
       myarm: {
-        title: "MyARM: モバイルファーストの日本式ワークフロープラットフォーム",
-        description: "MyARM は jobs、missions、meetings、ドキュメント、notifications を一つの統制された業務面にまとめます。MyArms（日本）と共に構築され、現場チームとオフィスチームに、チャットやスプレッドシートに分断されない共通の実行リズムを提供します。",
+        title: "MyARM: MyArms Japan 向けに Mercury が実装したプロジェクト",
+        description: "日本の MyArms 向けに、Mercury Solutions は jobs、missions、meetings、ドキュメント、notifications をモバイルとWebで統合する本番ワークフロープラットフォームを実装しました。この案件は、複雑な運用要件を日々使えるソフトウェアへ落とし込む当社の力を示しています。",
         features: {
           title: "主要機能:",
           items: [
-            "jobs・missions・deadline のオーケストレーション",
-            "meetings・events・スケジュール連携",
-            "共有 library・memo・ファイルアクセス",
-            "モバイル通知とメンバーワークフロー"
+            "共通プロダクトロジックを持つクロスプラットフォーム実装",
+            "jobs、meetings、チーム連携のための workflow 設計",
+            "app API と再利用 domain を支える Laravel サービス構成",
+            "iOS、Android、公式Webまで含む release-ready な納品"
           ]
         },
         platforms: {
@@ -2450,88 +2450,88 @@ export const ja = {
 
   myarmPage: {
     hero: {
-      badge: "モバイルファーストのワークフロープラットフォーム",
-      title: "動き続けるチームのための日本式ワークフロー規律。",
-      subtitle: "MyARM は jobs、missions、meetings、ドキュメント、更新情報を一つの mobile-first 業務面にまとめ、現場チームとオフィスチームを同じリズムで動かします。",
-      primaryCta: "Mercury Solutions に相談する",
+      badge: "MyArms Japan 向けに Mercury が実装したプラットフォーム",
+      title: "Mercury は MyARM を日本の顧客向け本番ワークフローシステムとして構築しました。",
+      subtitle: "日本の MyArms 向けに、Mercury は MyARM のモバイルアプリ、backend services、release-ready なプロダクト導線を実装し、日々の運用を一つの規律あるシステムへまとめました。",
+      primaryCta: "同様のシステムを Mercury に相談する",
       secondaryCta: "公式サイトを見る",
       deviceBadge: "iOS + Android",
-      posterLabel: "実運用中の MyARM プロダクションアプリをもとに構成",
-      posterSubtext: "Flutter モバイルアプリ、Laravel API、共有 service layer を実コードベースから確認済みです。",
+      posterLabel: "社内コンセプトではなく、実際の顧客案件",
+      posterSubtext: "Mercury は Flutter モバイルアプリ、Laravel services、store-ready な公開導線まで納品しました。",
     },
     overview: {
-      eyebrow: "MyARM が選ばれる理由",
-      title: "仕事、会議、締切、チーム連携を一つの運用リズムにまとめる。",
-      body: "MyARM プロダクト群は、現場の実務とオフィスの計画を、チャットやスプレッドシートや定例会議へ分散させず、一つの規律ある flow に接続します。",
+      eyebrow: "Mercury が納品した内容",
+      title: "業務設計から production release まで通した実案件。",
+      body: "MyARM は Mercury homepage 上の見せるためのモックではありません。MyArms 向けに Mercury Solutions が workflow 設計、モバイル実装、backend services、production release まで担った顧客案件です。",
     },
     sections: {
       jobs: {
-        title: "Jobs + 担当割当",
-        desc: "担当者、実行者、締切の見通しをより明確にした構造で業務を作成し配布できます。",
+        title: "Workflow モデリング",
+        desc: "Mercury は運用要件を jobs と担当構造へ落とし込み、owner、実行者、deadline を一つのプロダクトフローで見える化しました。",
       },
       missions: {
-        title: "Missions + 進捗",
-        desc: "チーム間で責任の所在を失わずに、mission の状態、milestone、締切プレッシャーを追跡できます。",
+        title: "実行可視化",
+        desc: "mission の進捗、milestone、締切プレッシャーを追える状態に設計し、管理者が手作業で進捗を追い回さなくてよいようにしました。",
       },
       meetings: {
-        title: "Meetings + events",
-        desc: "会議、イベント準備、follow-up アクションを日々の実行フローと同じ運用レーンに保ちます。",
+        title: "連携レイヤー",
+        desc: "meetings、events、follow-up を同じ workflow レーンへ統合し、実運用に沿ったコラボレーション機能を設計できる Mercury の力を示しています。",
       },
       library: {
-        title: "Library + memos",
-        desc: "ドキュメント、メモ、運用リファレンスを共有する場所を持たせ、仕事の近くに文脈を残します。",
+        title: "運用ナレッジベース",
+        desc: "ドキュメント、memo、運用リファレンスを実行の近くへ置き、文脈が workflow の外へ逃げないようにしました。",
       },
     },
     workflow: {
-      eyebrow: "運用フロー",
-      title: "依頼から完了確認まで、ワークフローは常に読みやすい。",
+      eyebrow: "Mercury の進め方",
+      title: "要件整理、プロダクト設計、サービス設計、release が分断されない。",
       steps: {
         capture: {
-          title: "業務を登録する",
-          desc: "マネージャーは依頼を jobs、missions、events に変換し、担当者、時間、範囲を一箇所で定義できます。",
+          title: "業務フローを定義する",
+          desc: "まず顧客の運用ルーティンを jobs、missions、meetings、共有資料の具体的な product flow へ翻訳しました。",
         },
         coordinate: {
-          title: "チームを調整する",
-          desc: "メンバーは今重要なこと、止まっていること、動いたことを、分断された複数ツールをまたがず把握できます。",
+          title: "共通運用面を設計する",
+          desc: "現場スタッフとオフィススタッフが、分断された複数ツールではなく一つの source of truth で働けるよう体験を設計しました。",
         },
         communicate: {
-          title: "文脈の中で伝える",
-          desc: "meetings、memos、notifications、参考資料は chat のノイズに埋もれず、workflow に紐づいたまま残ります。",
+          title: "app と services を同時に構築する",
+          desc: "Mercury は mobile client、backend API、共通 service layer を合わせて実装し、データと操作の整合を保ちました。",
         },
         confirm: {
-          title: "進捗を確認する",
-          desc: "締切状態と完了シグナルが見えるため、マネジメントは仕事が崩れる前に介入できます。",
+          title: "本番品質で公開する",
+          desc: "store 配信、公式サイト、安定した service 境界まで含め、ポートフォリオ用ではない production platform として納品しました。",
         },
       },
     },
     architecture: {
-      eyebrow: "導入アーキテクチャ",
-      title: "二つの Laravel サービスで支えるモバイルプロダクト。",
-      body: "コードベースには Flutter モバイルクライアント、専用 Laravel backend、共有 Laravel common service が存在します。この分割により、MyARM は日常運用トラフィック、共通 business logic、将来の拡張を一つの runtime に押し込まずに扱えます。",
+      eyebrow: "技術アーキテクチャ",
+      title: "クライアントは Flutter。サービスコアは Laravel。",
+      body: "Mercury は MyARM を Flutter モバイルクライアント、専用 Laravel backend、共有 Laravel common service で実装しました。この構成により、app 向け処理と再利用 domain を分離し、拡張性、保守性、運用性を高めています。",
     },
     stack: {
       mobile: {
-        title: "Flutter モバイルアプリ",
-        desc: "jobs、missions、meetings、notifications、個人ワークスペースを含む iOS / Android 向け本番クライアントです。",
+        title: "Flutter プロダクト実装力",
+        desc: "Mercury は jobs、missions、meetings、notifications、個人ワークスペースを備えた iOS / Android クライアントを本番品質で実装しました。",
       },
       backend: {
-        title: "Laravel backend API",
-        desc: "認証、業務 workflow、event flow、アプリ向け API を処理する専用サービスです。",
+        title: "Laravel API 実装",
+        desc: "専用 Laravel サービスが認証、workflow orchestration、event logic、アプリ向け API を処理します。",
       },
       common: {
-        title: "共有 Laravel common service",
-        desc: "横断的な domain rule と internal API を重複なく集約する共通サービス層です。",
+        title: "共有 domain service 設計",
+        desc: "再利用 domain rule と internal API を common Laravel service に集約し、runtime ごとの重複実装を避けました。",
       },
       notifications: {
-        title: "公開配信済みのプロダクト",
-        desc: "公式 web domain に加え、App Store と Google Play への配信も存在し、MyARM は概念段階ではなく市場投入済みの製品として見せられます。",
+        title: "公開・配信まで対応",
+        desc: "公式 web presence と App Store / Google Play 配信は、Mercury が開発だけでなく release-ready な納品まで担えることを示しています。",
       },
     },
     cta: {
-      eyebrow: "市場に出ている製品を見る",
-      title: "MyARM を単なる placeholder card ではなく、本格的な業務プラットフォームとして Mercury Solution Homepage に載せる。",
-      body: "公式サイトとストア配信はすでに存在します。Mercury は MyARM を QuickShift や Minova PMS と同じ深さで紹介できるようになりました。",
-      primary: "導入相談を依頼する",
+      eyebrow: "次のステップ",
+      title: "モバイルファーストの業務ワークフロー基盤を実装したいですか？",
+      body: "MyARM の納品をベースに、Mercury は要件整理、Flutter + Laravel の設計、そして production 公開までをリリース規律込みで支援できます。",
+      primary: "類似プラットフォームを相談する",
       secondary: "myarms.jp を開く",
       iosTitle: "App Store",
       iosBody: "QR を読むか、iPhone 向け配信ページを開いてください。",

@@ -930,15 +930,15 @@ export const en = {
         website: "/tna-system"
       },
       myarm: {
-        title: "MyARM: Mobile-first Japanese Workflow Platform",
-        description: "MyARM connects jobs, missions, meetings, documents, and notifications in one disciplined operating surface. Built with MyArms (Japan), it gives field teams and office teams a shared execution rhythm instead of fragmented chat, spreadsheet, and deadline tracking.",
+        title: "MyARM: Mercury Delivery for MyArms Japan",
+        description: "For MyArms in Japan, Mercury Solutions delivered a production workflow platform that unifies jobs, missions, meetings, documents, and notifications across mobile and web. The project shows how we turn operational complexity into software that real teams can run every day.",
         features: {
           title: "Key Features:",
           items: [
-            "Jobs, missions, and deadline orchestration",
-            "Meetings, events, and schedule coordination",
-            "Shared library, memos, and file access",
-            "Mobile notifications and member workflows"
+            "Cross-platform delivery with shared product logic",
+            "Workflow design for jobs, meetings, and team coordination",
+            "Laravel service architecture for app APIs and reusable domains",
+            "Release-ready delivery across iOS, Android, and official web presence"
           ]
         },
         platforms: {
@@ -2539,88 +2539,88 @@ export const en = {
 
   myarmPage: {
     hero: {
-      badge: "Mobile-first workflow platform",
-      title: "Japanese workflow discipline for teams in motion.",
-      subtitle: "MyARM brings jobs, missions, meetings, documents, and updates into one mobile-first operating surface so field teams and office teams move in sync.",
-      primaryCta: "Talk to Mercury Solutions",
+      badge: "Mercury-delivered platform for MyArms Japan",
+      title: "Mercury built MyARM into a production workflow system for a Japanese client.",
+      subtitle: "For MyArms in Japan, Mercury delivered the mobile app, backend services, and release-ready product flow behind MyARM so daily operations could move through one disciplined system.",
+      primaryCta: "Talk to Mercury about similar systems",
       secondaryCta: "Visit official website",
       deviceBadge: "iOS + Android",
-      posterLabel: "Built from the real MyARM production app",
-      posterSubtext: "Flutter mobile app, Laravel API, and shared service layer verified from the live codebase.",
+      posterLabel: "A real client delivery, not an internal concept",
+      posterSubtext: "Mercury shipped the Flutter mobile app, Laravel services, and store-ready release for MyArms.",
     },
     overview: {
-      eyebrow: "Why teams adopt MyARM",
-      title: "One operating rhythm for jobs, meetings, deadlines, and team communication.",
-      body: "The MyARM product family connects field work and office planning into one disciplined flow instead of scattering work across chats, spreadsheets, and status meetings.",
+      eyebrow: "What Mercury delivered",
+      title: "A real software delivery from business workflow design to production release.",
+      body: "MyARM is a client project Mercury Solutions implemented for MyArms. The work covered workflow design, mobile product delivery, backend services, and a release path that could support real teams instead of staying at prototype level.",
     },
     sections: {
       jobs: {
-        title: "Jobs + assignments",
-        desc: "Create and distribute job work with a clearer structure for owners, executors, and deadline visibility.",
+        title: "Workflow modeling",
+        desc: "Mercury translated operational requirements into structured jobs and assignments so ownership, execution, and deadlines became visible inside one product flow.",
       },
       missions: {
-        title: "Missions + progress",
-        desc: "Track mission status, milestones, and deadline pressure without losing accountability between teams.",
+        title: "Execution visibility",
+        desc: "Mission progress, milestones, and deadline pressure were shaped into trackable product states so managers could see movement instead of chasing updates manually.",
       },
       meetings: {
-        title: "Meetings + events",
-        desc: "Keep meetings, event preparation, and follow-up actions inside the same operational lane as daily execution.",
+        title: "Coordination layer",
+        desc: "Meetings, events, and follow-up actions were connected to the same workflow lane, showing Mercury's ability to design collaboration features around real operations.",
       },
       library: {
-        title: "Library + memos",
-        desc: "Give teams a shared place for documents, memos, and operational references so context stays close to the work.",
+        title: "Operational knowledge base",
+        desc: "Shared documents, memos, and references were placed close to execution so the product kept context inside the workflow instead of outside it.",
       },
     },
     workflow: {
-      eyebrow: "Operational flow",
-      title: "From assignment to confirmation, the workflow stays legible.",
+      eyebrow: "How Mercury structured the delivery",
+      title: "Requirements, product flow, service design, and release stayed connected.",
       steps: {
         capture: {
-          title: "Capture the work",
-          desc: "Managers turn requests into jobs, missions, or events with one place to define owner, timing, and scope.",
+          title: "Map the business flow",
+          desc: "Mercury first translated the client's operational routines into concrete product flows for jobs, missions, meetings, and shared references.",
         },
         coordinate: {
-          title: "Coordinate the team",
-          desc: "Members see what matters now, what is blocked, and what has moved, without jumping across fragmented tools.",
+          title: "Design shared operations",
+          desc: "The team shaped one coordinated experience so field staff and office staff could work from the same source of truth instead of fragmented tools.",
         },
         communicate: {
-          title: "Communicate in context",
-          desc: "Meetings, memos, notifications, and reference materials stay attached to the workflow instead of disappearing into chat noise.",
+          title: "Build across clients and services",
+          desc: "Mercury implemented the mobile client, backend APIs, and reusable service layer together so communication, data, and actions stayed aligned.",
         },
         confirm: {
-          title: "Confirm progress",
-          desc: "Deadline status and completion signals stay visible so leadership can intervene before work drifts.",
+          title: "Release with production discipline",
+          desc: "Store distribution, official web presence, and stable service boundaries turned the delivery into a production platform, not a portfolio mockup.",
         },
       },
     },
     architecture: {
-      eyebrow: "Delivery architecture",
-      title: "A mobile product anchored by two Laravel services.",
-      body: "The codebase shows a Flutter mobile client, a dedicated Laravel backend, and a shared Laravel common service. That split lets MyARM handle daily operational traffic, shared business logic, and future product expansion without collapsing everything into one runtime.",
+      eyebrow: "Technical architecture",
+      title: "Flutter on the client side. Laravel at the service core.",
+      body: "Mercury implemented MyARM with a Flutter mobile client, a dedicated Laravel backend, and a shared Laravel common service. That architecture separates app-facing delivery from reusable business domains, making the system easier to extend, maintain, and operate.",
     },
     stack: {
       mobile: {
-        title: "Flutter mobile app",
-        desc: "Production mobile client for iOS and Android with modules for jobs, missions, meetings, notifications, and personal workspace.",
+        title: "Flutter product engineering",
+        desc: "Mercury shipped an iOS and Android client with modules for jobs, missions, meetings, notifications, and personal workspace.",
       },
       backend: {
-        title: "Laravel backend API",
-        desc: "Dedicated service handling authentication, business workflows, event flows, and app-facing APIs.",
+        title: "Laravel API delivery",
+        desc: "A dedicated Laravel service handles authentication, workflow orchestration, event logic, and the APIs consumed by the app.",
       },
       common: {
-        title: "Shared Laravel common service",
-        desc: "Reusable common domain and internal APIs to keep cross-cutting rules centralized instead of duplicated.",
+        title: "Shared domain service design",
+        desc: "Mercury kept reusable domain rules and internal APIs inside a common Laravel service instead of duplicating logic across runtimes.",
       },
       notifications: {
-        title: "Store-ready distribution",
-        desc: "Official web domain plus App Store and Google Play distribution already exist, making the product feel market-ready instead of conceptual.",
+        title: "Release and distribution readiness",
+        desc: "Official web presence plus App Store and Google Play distribution show Mercury can deliver beyond development into release-ready execution.",
       },
     },
     cta: {
-      eyebrow: "See the product in market",
-      title: "Bring MyARM into Mercury Solution Homepage as a serious business platform, not a placeholder card.",
-      body: "The official site and store distribution already exist. Mercury can now present MyARM with the same product depth as QuickShift and Minova PMS.",
-      primary: "Request project consultation",
+      eyebrow: "Next step",
+      title: "Need a mobile-first workflow platform for operations?",
+      body: "Based on the MyARM delivery, Mercury can help you lock requirements, design a Flutter + Laravel architecture, and ship to production with a clear release discipline.",
+      primary: "Request a similar platform consultation",
       secondary: "Open myarms.jp",
       iosTitle: "App Store",
       iosBody: "Scan or open the iPhone distribution page.",

@@ -841,15 +841,15 @@ export const ko = {
         website: "/tna-system"
       },
       myarm: {
-        title: "MyARM: 모바일 우선의 일본식 워크플로 플랫폼",
-        description: "MyARM은 jobs, missions, meetings, 문서, notifications를 하나의 정돈된 운영 화면으로 연결합니다. MyArms(일본)와 함께 구축되어 현장 팀과 오피스 팀이 채팅, 스프레드시트, 흩어진 마감 관리 대신 하나의 실행 리듬으로 움직이게 합니다.",
+        title: "MyARM: MyArms Japan을 위해 Mercury가 구축한 프로젝트",
+        description: "일본 고객 MyArms를 위해 Mercury Solutions는 jobs, missions, meetings, 문서, notifications를 모바일과 웹에서 통합하는 프로덕션 워크플로 플랫폼을 구축했습니다. 이 프로젝트는 복잡한 운영 요구를 실제 팀이 매일 쓰는 소프트웨어로 바꾸는 Mercury의 역량을 보여줍니다.",
         features: {
           title: "주요 기능:",
           items: [
-            "jobs, missions, deadline 오케스트레이션",
-            "meetings, events, 일정 조율",
-            "공유 library, memo, 파일 접근",
-            "모바일 알림과 멤버 워크플로"
+            "공유 제품 로직을 갖춘 크로스플랫폼 구현",
+            "jobs, meetings, 팀 협업을 위한 workflow 설계",
+            "app API와 재사용 domain을 위한 Laravel 서비스 아키텍처",
+            "iOS, Android, 공식 웹까지 포함한 release-ready 납품"
           ]
         },
         platforms: {
@@ -2450,88 +2450,88 @@ export const ko = {
 
   myarmPage: {
     hero: {
-      badge: "모바일 우선 워크플로 플랫폼",
-      title: "움직이는 팀을 위한 일본식 워크플로 규율.",
-      subtitle: "MyARM은 jobs, missions, meetings, 문서, 업데이트를 하나의 mobile-first 운영 화면에 모아 현장 팀과 오피스 팀이 같은 리듬으로 움직이게 합니다.",
-      primaryCta: "Mercury Solutions와 상담하기",
+      badge: "MyArms Japan을 위해 Mercury가 구축한 플랫폼",
+      title: "Mercury는 MyARM을 일본 고객을 위한 프로덕션 워크플로 시스템으로 만들었습니다.",
+      subtitle: "일본의 MyArms를 위해 Mercury는 MyARM의 모바일 앱, backend services, release-ready 제품 흐름을 구현해 일상 운영이 하나의 규율 있는 시스템으로 움직이게 했습니다.",
+      primaryCta: "유사한 시스템을 Mercury와 상담하기",
       secondaryCta: "공식 웹사이트 방문",
       deviceBadge: "iOS + Android",
-      posterLabel: "실제 MyARM 프로덕션 앱을 기반으로 구성",
-      posterSubtext: "Flutter 모바일 앱, Laravel API, 공유 service layer를 실제 코드베이스에서 직접 확인했습니다.",
+      posterLabel: "내부 컨셉이 아닌 실제 고객 납품",
+      posterSubtext: "Mercury는 Flutter 모바일 앱, Laravel services, store-ready 출시 경로까지 실제로 납품했습니다.",
     },
     overview: {
-      eyebrow: "팀이 MyARM을 선택하는 이유",
-      title: "업무, 회의, 마감, 팀 커뮤니케이션을 하나의 운영 리듬으로 묶습니다.",
-      body: "MyARM 제품군은 현장 업무와 오피스 계획을 채팅, 스프레드시트, 상태 회의에 흩뿌리지 않고 하나의 규율 있는 flow로 연결합니다.",
+      eyebrow: "Mercury가 납품한 범위",
+      title: "업무 설계부터 production release까지 이어진 실제 소프트웨어 프로젝트.",
+      body: "MyARM은 Mercury 홈페이지를 위한 목업이 아닙니다. MyArms를 위해 Mercury Solutions가 workflow 설계, 모바일 제품 구현, backend services, production release까지 수행한 실제 고객 프로젝트입니다.",
     },
     sections: {
       jobs: {
-        title: "Jobs + 배정",
-        desc: "담당자, 실행자, 마감 가시성을 더 명확하게 가진 구조로 업무를 생성하고 배포할 수 있습니다.",
+        title: "Workflow 모델링",
+        desc: "Mercury는 운영 요구를 jobs와 배정 구조로 바꿔 owner, 실행자, deadline이 하나의 제품 흐름 안에서 보이도록 만들었습니다.",
       },
       missions: {
-        title: "Missions + 진행상황",
-        desc: "팀 간 책임을 놓치지 않으면서 mission 상태, milestone, 마감 압박을 추적합니다.",
+        title: "실행 가시성",
+        desc: "mission 진행, milestone, 마감 압박을 추적 가능한 제품 상태로 설계해 관리자가 수작업으로 업데이트를 쫓지 않도록 했습니다.",
       },
       meetings: {
-        title: "Meetings + events",
-        desc: "회의, 이벤트 준비, follow-up 작업을 일상 실행과 같은 운영 레인 안에 유지합니다.",
+        title: "협업 조정 레이어",
+        desc: "meetings, events, follow-up actions를 같은 workflow 레인에 묶어 실제 운영을 중심으로 협업 기능을 설계하는 Mercury의 역량을 보여줍니다.",
       },
       library: {
-        title: "Library + memos",
-        desc: "문서, 메모, 운영 레퍼런스를 위한 공유 공간을 제공해 업무 가까이에 맥락이 남도록 합니다.",
+        title: "운영 지식 베이스",
+        desc: "문서, memo, 운영 레퍼런스를 실행 가까이에 배치해 맥락이 workflow 바깥으로 빠지지 않게 했습니다.",
       },
     },
     workflow: {
-      eyebrow: "운영 플로우",
-      title: "배정부터 확인까지, 워크플로는 끝까지 읽기 쉽습니다.",
+      eyebrow: "Mercury의 전달 방식",
+      title: "요구사항, 제품 흐름, 서비스 설계, 출시가 분리되지 않았습니다.",
       steps: {
         capture: {
-          title: "업무를 등록합니다",
-          desc: "관리자는 요청을 jobs, missions, events로 바꾸고 담당자, 일정, 범위를 한 곳에서 정의할 수 있습니다.",
+          title: "업무 흐름을 정의합니다",
+          desc: "먼저 고객의 운영 루틴을 jobs, missions, meetings, 공유 자료에 대한 구체적인 product flow로 바꿨습니다.",
         },
         coordinate: {
-          title: "팀을 조율합니다",
-          desc: "구성원은 지금 중요한 일, 막힌 일, 이동한 일을 여러 도구를 오가며 찾지 않고도 바로 파악합니다.",
+          title: "공통 운영면을 설계합니다",
+          desc: "현장 팀과 오피스 팀이 여러 도구가 아닌 하나의 source of truth 위에서 일할 수 있도록 경험을 설계했습니다.",
         },
         communicate: {
-          title: "맥락 안에서 소통합니다",
-          desc: "meetings, memos, notifications, 참고 자료가 채팅 소음 속으로 사라지지 않고 workflow에 붙어 남아 있습니다.",
+          title: "app과 services를 함께 만듭니다",
+          desc: "Mercury는 mobile client, backend API, 공통 service layer를 함께 구현해 데이터와 동작이 계속 맞물리도록 했습니다.",
         },
         confirm: {
-          title: "진행을 확인합니다",
-          desc: "마감 상태와 완료 신호가 계속 보이기 때문에 리더십은 일이 흐트러지기 전에 개입할 수 있습니다.",
+          title: "프로덕션 품질로 출시합니다",
+          desc: "store 배포, 공식 웹사이트, 안정적인 서비스 경계까지 포함해 포트폴리오용이 아닌 production platform으로 납품했습니다.",
         },
       },
     },
     architecture: {
-      eyebrow: "전달 아키텍처",
-      title: "두 개의 Laravel 서비스가 받치는 모바일 제품.",
-      body: "코드베이스는 Flutter 모바일 클라이언트, 전용 Laravel backend, 공유 Laravel common service로 구성됩니다. 이 분리는 MyARM이 일상 운영 트래픽, 공통 business logic, 향후 확장을 하나의 runtime에 몰아넣지 않고 처리하게 합니다.",
+      eyebrow: "기술 아키텍처",
+      title: "클라이언트는 Flutter. 서비스 코어는 Laravel.",
+      body: "Mercury는 MyARM을 Flutter 모바일 클라이언트, 전용 Laravel backend, 공유 Laravel common service로 구현했습니다. 이 구조는 앱 대응 로직과 재사용 가능한 business domain을 분리해 확장성과 유지보수성을 높입니다.",
     },
     stack: {
       mobile: {
-        title: "Flutter 모바일 앱",
-        desc: "jobs, missions, meetings, notifications, 개인 워크스페이스 모듈을 포함한 iOS / Android 프로덕션 클라이언트입니다.",
+        title: "Flutter 제품 엔지니어링",
+        desc: "Mercury는 jobs, missions, meetings, notifications, 개인 워크스페이스를 포함한 iOS / Android 클라이언트를 프로덕션 품질로 구현했습니다.",
       },
       backend: {
-        title: "Laravel backend API",
-        desc: "인증, 업무 workflow, event flow, 앱용 API를 처리하는 전용 서비스입니다.",
+        title: "Laravel API 구현",
+        desc: "전용 Laravel 서비스가 인증, workflow orchestration, event logic, 앱이 소비하는 API를 처리합니다.",
       },
       common: {
-        title: "공유 Laravel common service",
-        desc: "횡단 관심사의 domain rule과 internal API를 중복 없이 중앙화하는 공통 서비스 레이어입니다.",
+        title: "공유 domain service 설계",
+        desc: "재사용 domain rule과 internal API를 common Laravel service에 모아 runtime 간 중복 구현을 피했습니다.",
       },
       notifications: {
-        title: "시장 배포가 완료된 제품",
-        desc: "공식 웹 도메인과 App Store, Google Play 배포가 이미 존재해 MyARM이 개념이 아니라 실제 시장 제품으로 보이게 합니다.",
+        title: "출시 및 배포 준비",
+        desc: "공식 웹 presence와 App Store, Google Play 배포는 Mercury가 개발을 넘어 release-ready delivery까지 수행할 수 있음을 보여줍니다.",
       },
     },
     cta: {
-      eyebrow: "시장에서 제품 보기",
-      title: "MyARM을 placeholder 카드가 아니라 진지한 비즈니스 플랫폼으로 Mercury Solution Homepage에 올립니다.",
-      body: "공식 웹사이트와 앱 배포 채널이 이미 존재합니다. 이제 Mercury는 MyARM을 QuickShift, Minova PMS와 같은 깊이로 소개할 수 있습니다.",
-      primary: "프로젝트 상담 요청",
+      eyebrow: "다음 단계",
+      title: "운영을 위한 mobile-first 워크플로 플랫폼이 필요하신가요?",
+      body: "MyARM 납품 경험을 바탕으로 Mercury는 요구사항 정리, Flutter + Laravel 아키텍처 설계, 그리고 production 출시까지 명확한 릴리스 규율과 함께 지원할 수 있습니다.",
+      primary: "유사 플랫폼 상담 요청",
       secondary: "myarms.jp 열기",
       iosTitle: "App Store",
       iosBody: "QR을 스캔하거나 iPhone 배포 페이지를 여세요.",
