@@ -51,7 +51,7 @@ export const en = {
     otaCalculatorDesc: "OTA Commission Calculator",
     containerCalculatorDesc: "3D Container Packing Optimizer",
     processAndTechnologyDesc: "Digital Process Solutions",
-    myarmDesc: "Japanese-style Business Management",
+    myarmDesc: "Japanese workflow platform for mobile teams",
     nightlifeCrmDesc: "CRM for Nightclubs, Bars & Lounges",
   },
 
@@ -930,15 +930,15 @@ export const en = {
         website: "/tna-system"
       },
       myarm: {
-        title: "myArm: Comprehensive Japanese-style Business Management Solution",
-        description: "In partnership with MyArms (Japan), we offer a comprehensive business management solution. myArm standardizes workflows, from project planning and task organization to progress tracking and team collaboration, all on a single platform. Enhanced productivity, ensured project timelines, and fostered a culture of organized, transparent, and effective work.",
+        title: "MyARM: Mobile-first Japanese Workflow Platform",
+        description: "MyARM connects jobs, missions, meetings, documents, and notifications in one disciplined operating surface. Built with MyArms (Japan), it gives field teams and office teams a shared execution rhythm instead of fragmented chat, spreadsheet, and deadline tracking.",
         features: {
           title: "Key Features:",
           items: [
-            "Project Management",
-            "Task Organization",
-            "Team Collaboration",
-            "Deadline Tracking"
+            "Jobs, missions, and deadline orchestration",
+            "Meetings, events, and schedule coordination",
+            "Shared library, memos, and file access",
+            "Mobile notifications and member workflows"
           ]
         },
         platforms: {
@@ -949,7 +949,7 @@ export const en = {
           title: "Technologies:",
           items: ["Flutter", "Laravel", "React"]
         },
-        website: "https://myarms.jp/"
+        website: "/myarm"
       },
       property: {
         title: "Minova PMS: Redefining Hotel Management in the Mobile Era",
@@ -2535,6 +2535,98 @@ export const en = {
       "Reservation, waitlist, and floor loop",
       "SLA and compliance-ready operations",
     ],
+  },
+
+  myarmPage: {
+    hero: {
+      badge: "Mobile-first workflow platform",
+      title: "Japanese workflow discipline for teams in motion.",
+      subtitle: "MyARM brings jobs, missions, meetings, documents, and updates into one mobile-first operating surface so field teams and office teams move in sync.",
+      primaryCta: "Talk to Mercury Solutions",
+      secondaryCta: "Visit official website",
+      deviceBadge: "iOS + Android",
+      posterLabel: "Built from the real MyARM production app",
+      posterSubtext: "Flutter mobile app, Laravel API, and shared service layer verified from the live codebase.",
+    },
+    overview: {
+      eyebrow: "Why teams adopt MyARM",
+      title: "One operating rhythm for jobs, meetings, deadlines, and team communication.",
+      body: "The MyARM product family connects field work and office planning into one disciplined flow instead of scattering work across chats, spreadsheets, and status meetings.",
+    },
+    sections: {
+      jobs: {
+        title: "Jobs + assignments",
+        desc: "Create and distribute job work with a clearer structure for owners, executors, and deadline visibility.",
+      },
+      missions: {
+        title: "Missions + progress",
+        desc: "Track mission status, milestones, and deadline pressure without losing accountability between teams.",
+      },
+      meetings: {
+        title: "Meetings + events",
+        desc: "Keep meetings, event preparation, and follow-up actions inside the same operational lane as daily execution.",
+      },
+      library: {
+        title: "Library + memos",
+        desc: "Give teams a shared place for documents, memos, and operational references so context stays close to the work.",
+      },
+    },
+    workflow: {
+      eyebrow: "Operational flow",
+      title: "From assignment to confirmation, the workflow stays legible.",
+      steps: {
+        capture: {
+          title: "Capture the work",
+          desc: "Managers turn requests into jobs, missions, or events with one place to define owner, timing, and scope.",
+        },
+        coordinate: {
+          title: "Coordinate the team",
+          desc: "Members see what matters now, what is blocked, and what has moved, without jumping across fragmented tools.",
+        },
+        communicate: {
+          title: "Communicate in context",
+          desc: "Meetings, memos, notifications, and reference materials stay attached to the workflow instead of disappearing into chat noise.",
+        },
+        confirm: {
+          title: "Confirm progress",
+          desc: "Deadline status and completion signals stay visible so leadership can intervene before work drifts.",
+        },
+      },
+    },
+    architecture: {
+      eyebrow: "Delivery architecture",
+      title: "A mobile product anchored by two Laravel services.",
+      body: "The codebase shows a Flutter mobile client, a dedicated Laravel backend, and a shared Laravel common service. That split lets MyARM handle daily operational traffic, shared business logic, and future product expansion without collapsing everything into one runtime.",
+    },
+    stack: {
+      mobile: {
+        title: "Flutter mobile app",
+        desc: "Production mobile client for iOS and Android with modules for jobs, missions, meetings, notifications, and personal workspace.",
+      },
+      backend: {
+        title: "Laravel backend API",
+        desc: "Dedicated service handling authentication, business workflows, event flows, and app-facing APIs.",
+      },
+      common: {
+        title: "Shared Laravel common service",
+        desc: "Reusable common domain and internal APIs to keep cross-cutting rules centralized instead of duplicated.",
+      },
+      notifications: {
+        title: "Store-ready distribution",
+        desc: "Official web domain plus App Store and Google Play distribution already exist, making the product feel market-ready instead of conceptual.",
+      },
+    },
+    cta: {
+      eyebrow: "See the product in market",
+      title: "Bring MyARM into Mercury Solution Homepage as a serious business platform, not a placeholder card.",
+      body: "The official site and store distribution already exist. Mercury can now present MyARM with the same product depth as QuickShift and Minova PMS.",
+      primary: "Request project consultation",
+      secondary: "Open myarms.jp",
+      iosTitle: "App Store",
+      iosBody: "Scan or open the iPhone distribution page.",
+      androidTitle: "Google Play",
+      androidBody: "Scan or open the Android distribution page.",
+    },
   },
 
   // Language Selector

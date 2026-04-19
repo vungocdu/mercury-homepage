@@ -39,7 +39,7 @@ export const ja = {
     containerCalculatorDesc: "3Dコンテナ積載最適化",
     processAndTechnologyDesc: "デジタルプロセスソリューション",
     myarm: "MyARM",
-    myarmDesc: "日本式ビジネス管理ソリューション",
+    myarmDesc: "モバイルファーストの日本式ワークフロープラットフォーム",
     nightlifeCrmDesc: "ナイトクラブ・バー・ラウンジ向けCRM",
   },
 
@@ -841,15 +841,15 @@ export const ja = {
         website: "/tna-system"
       },
       myarm: {
-        title: "myArm: 包括的な日本式ビジネス管理ソリューション",
-        description: "MyArms（日本）との提携により、私たちは包括的な業務管理ソリューションを提供します。myArmは、プロジェクト計画、タスク整理から進捗追跡、チームコラボレーションまで、ワークフローを単一のプラットフォームで標準化します。生産性を向上させ、プロジェクトの納期を確実に遵守し、整理され、透明性が高く、効果的な職場文化を育みます。",
+        title: "MyARM: モバイルファーストの日本式ワークフロープラットフォーム",
+        description: "MyARM は jobs、missions、meetings、ドキュメント、notifications を一つの統制された業務面にまとめます。MyArms（日本）と共に構築され、現場チームとオフィスチームに、チャットやスプレッドシートに分断されない共通の実行リズムを提供します。",
         features: {
           title: "主要機能:",
           items: [
-            "プロジェクト管理",
-            "タスク整理",
-            "チームコラボレーション",
-            "納期追跡"
+            "jobs・missions・deadline のオーケストレーション",
+            "meetings・events・スケジュール連携",
+            "共有 library・memo・ファイルアクセス",
+            "モバイル通知とメンバーワークフロー"
           ]
         },
         platforms: {
@@ -860,7 +860,7 @@ export const ja = {
           title: "技術:",
           items: ["Flutter", "Laravel", "React"]
         },
-        website: "https://myarms.jp/"
+        website: "/myarm"
       },
       property: {
         title: "Minova PMS: モバイル時代におけるホテル管理の再定義",
@@ -2446,6 +2446,98 @@ export const ja = {
       "予約、待機列、フロアループ",
       "SLA とコンプライアンスに対応した運用",
     ],
+  },
+
+  myarmPage: {
+    hero: {
+      badge: "モバイルファーストのワークフロープラットフォーム",
+      title: "動き続けるチームのための日本式ワークフロー規律。",
+      subtitle: "MyARM は jobs、missions、meetings、ドキュメント、更新情報を一つの mobile-first 業務面にまとめ、現場チームとオフィスチームを同じリズムで動かします。",
+      primaryCta: "Mercury Solutions に相談する",
+      secondaryCta: "公式サイトを見る",
+      deviceBadge: "iOS + Android",
+      posterLabel: "実運用中の MyARM プロダクションアプリをもとに構成",
+      posterSubtext: "Flutter モバイルアプリ、Laravel API、共有 service layer を実コードベースから確認済みです。",
+    },
+    overview: {
+      eyebrow: "MyARM が選ばれる理由",
+      title: "仕事、会議、締切、チーム連携を一つの運用リズムにまとめる。",
+      body: "MyARM プロダクト群は、現場の実務とオフィスの計画を、チャットやスプレッドシートや定例会議へ分散させず、一つの規律ある flow に接続します。",
+    },
+    sections: {
+      jobs: {
+        title: "Jobs + 担当割当",
+        desc: "担当者、実行者、締切の見通しをより明確にした構造で業務を作成し配布できます。",
+      },
+      missions: {
+        title: "Missions + 進捗",
+        desc: "チーム間で責任の所在を失わずに、mission の状態、milestone、締切プレッシャーを追跡できます。",
+      },
+      meetings: {
+        title: "Meetings + events",
+        desc: "会議、イベント準備、follow-up アクションを日々の実行フローと同じ運用レーンに保ちます。",
+      },
+      library: {
+        title: "Library + memos",
+        desc: "ドキュメント、メモ、運用リファレンスを共有する場所を持たせ、仕事の近くに文脈を残します。",
+      },
+    },
+    workflow: {
+      eyebrow: "運用フロー",
+      title: "依頼から完了確認まで、ワークフローは常に読みやすい。",
+      steps: {
+        capture: {
+          title: "業務を登録する",
+          desc: "マネージャーは依頼を jobs、missions、events に変換し、担当者、時間、範囲を一箇所で定義できます。",
+        },
+        coordinate: {
+          title: "チームを調整する",
+          desc: "メンバーは今重要なこと、止まっていること、動いたことを、分断された複数ツールをまたがず把握できます。",
+        },
+        communicate: {
+          title: "文脈の中で伝える",
+          desc: "meetings、memos、notifications、参考資料は chat のノイズに埋もれず、workflow に紐づいたまま残ります。",
+        },
+        confirm: {
+          title: "進捗を確認する",
+          desc: "締切状態と完了シグナルが見えるため、マネジメントは仕事が崩れる前に介入できます。",
+        },
+      },
+    },
+    architecture: {
+      eyebrow: "導入アーキテクチャ",
+      title: "二つの Laravel サービスで支えるモバイルプロダクト。",
+      body: "コードベースには Flutter モバイルクライアント、専用 Laravel backend、共有 Laravel common service が存在します。この分割により、MyARM は日常運用トラフィック、共通 business logic、将来の拡張を一つの runtime に押し込まずに扱えます。",
+    },
+    stack: {
+      mobile: {
+        title: "Flutter モバイルアプリ",
+        desc: "jobs、missions、meetings、notifications、個人ワークスペースを含む iOS / Android 向け本番クライアントです。",
+      },
+      backend: {
+        title: "Laravel backend API",
+        desc: "認証、業務 workflow、event flow、アプリ向け API を処理する専用サービスです。",
+      },
+      common: {
+        title: "共有 Laravel common service",
+        desc: "横断的な domain rule と internal API を重複なく集約する共通サービス層です。",
+      },
+      notifications: {
+        title: "公開配信済みのプロダクト",
+        desc: "公式 web domain に加え、App Store と Google Play への配信も存在し、MyARM は概念段階ではなく市場投入済みの製品として見せられます。",
+      },
+    },
+    cta: {
+      eyebrow: "市場に出ている製品を見る",
+      title: "MyARM を単なる placeholder card ではなく、本格的な業務プラットフォームとして Mercury Solution Homepage に載せる。",
+      body: "公式サイトとストア配信はすでに存在します。Mercury は MyARM を QuickShift や Minova PMS と同じ深さで紹介できるようになりました。",
+      primary: "導入相談を依頼する",
+      secondary: "myarms.jp を開く",
+      iosTitle: "App Store",
+      iosBody: "QR を読むか、iPhone 向け配信ページを開いてください。",
+      androidTitle: "Google Play",
+      androidBody: "QR を読むか、Android 向け配信ページを開いてください。",
+    },
   },
 
   // Language Selector

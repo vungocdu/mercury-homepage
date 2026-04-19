@@ -39,7 +39,7 @@ export const vi = {
     containerCalculatorDesc: "Tối ưu Xếp hàng Container 3D",
     processAndTechnologyDesc: "Giải pháp Quy trình Số",
     myarm: "MyARM",
-    myarmDesc: "Quản lý Doanh nghiệp phong cách Nhật Bản",
+    myarmDesc: "Nền tảng workflow kiểu Nhật cho đội ngũ di động",
     nightlifeCrmDesc: "CRM cho Quán bar, Câu lạc bộ & Lounge",
   },
 
@@ -648,15 +648,15 @@ export const vi = {
         website: "/tna-system"
       },
       myarm: {
-        title: "myArm: Giải Pháp Quản Lý Doanh Nghiệp Phong Cách Nhật Bản Toàn Diện",
-        description: "Hợp tác cùng MyArms (Nhật Bản), chúng tôi mang đến một giải pháp quản lý doanh nghiệp toàn diện. myArm giúp chuẩn hóa quy trình từ việc lập kế hoạch dự án, tổ chức công việc, theo dõi tiến độ đến hợp tác nhóm trên một nền tảng duy nhất. Tăng cường hiệu suất, đảm bảo tiến độ dự án và thúc đẩy văn hóa làm việc có tổ chức, minh bạch và hiệu quả.",
+        title: "MyARM: Nền Tảng Workflow Phong Cách Nhật Ưu Tiên Mobile",
+        description: "MyARM kết nối jobs, missions, meetings, tài liệu và notifications trong một bề mặt vận hành thống nhất. Được phát triển cùng MyArms (Nhật Bản), nền tảng này tạo một nhịp điều phối chung cho đội ngũ hiện trường và đội ngũ văn phòng thay vì phân mảnh qua chat, spreadsheet và deadline rời rạc.",
         features: {
           title: "Tính Năng Chính:",
           items: [
-            "Quản Lý Dự Án",
-            "Tổ Chức Công Việc",
-            "Hợp Tác Nhóm",
-            "Theo Dõi Deadline"
+            "Điều phối jobs, missions và deadline",
+            "Quản lý meetings, events và lịch làm việc",
+            "Thư viện dùng chung, memo và tài liệu",
+            "Thông báo mobile và workflow thành viên"
           ]
         },
         platforms: {
@@ -667,7 +667,7 @@ export const vi = {
           title: "Công Nghệ:",
           items: ["Flutter", "Laravel", "React"]
         },
-        website: "https://myarms.jp/"
+        website: "/myarm"
       },
       property: {
         title: "Minova PMS: Định Nghĩa Lại Quản Lý Khách Sạn Trong Kỷ Nguyên Di Động",
@@ -2571,6 +2571,98 @@ export const vi = {
       "Vòng vận hành reservation, waitlist và floor",
       "Vận hành sẵn sàng cho SLA và tuân thủ",
     ],
+  },
+
+  myarmPage: {
+    hero: {
+      badge: "Nền tảng workflow ưu tiên mobile",
+      title: "Kỷ luật workflow kiểu Nhật cho các đội ngũ luôn dịch chuyển.",
+      subtitle: "MyARM gom jobs, missions, meetings, tài liệu và cập nhật vào một bề mặt vận hành mobile-first để đội ngũ hiện trường và đội ngũ văn phòng chạy cùng một nhịp.",
+      primaryCta: "Trao đổi với Mercury Solutions",
+      secondaryCta: "Truy cập website chính thức",
+      deviceBadge: "iOS + Android",
+      posterLabel: "Dựa trên app MyARM production thực tế",
+      posterSubtext: "Flutter mobile app, Laravel API và shared service layer được xác minh trực tiếp từ codebase thật.",
+    },
+    overview: {
+      eyebrow: "Vì sao đội ngũ chọn MyARM",
+      title: "Một nhịp vận hành chung cho công việc, cuộc họp, deadline và cộng tác đội nhóm.",
+      body: "Hệ sinh thái MyARM nối công việc hiện trường với kế hoạch văn phòng thành một flow có kỷ luật, thay vì đẩy mọi thứ vào chat, spreadsheet và các buổi cập nhật trạng thái rời rạc.",
+    },
+    sections: {
+      jobs: {
+        title: "Jobs + phân công",
+        desc: "Tạo và phân phối công việc với cấu trúc rõ ràng hơn cho người giao, người thực thi và trạng thái deadline.",
+      },
+      missions: {
+        title: "Missions + tiến độ",
+        desc: "Theo dõi mission, milestone và áp lực deadline mà không đánh rơi trách nhiệm giữa các nhóm.",
+      },
+      meetings: {
+        title: "Meetings + events",
+        desc: "Đưa lịch họp, công tác chuẩn bị sự kiện và hành động follow-up vào cùng một làn vận hành với công việc hằng ngày.",
+      },
+      library: {
+        title: "Library + memo",
+        desc: "Tạo một nơi dùng chung cho tài liệu, memo và quy chuẩn vận hành để ngữ cảnh luôn đi sát công việc.",
+      },
+    },
+    workflow: {
+      eyebrow: "Luồng vận hành",
+      title: "Từ giao việc đến xác nhận, toàn bộ flow vẫn luôn dễ đọc.",
+      steps: {
+        capture: {
+          title: "Ghi nhận công việc",
+          desc: "Quản lý biến yêu cầu thành job, mission hoặc event với một nơi duy nhất để chốt owner, thời gian và phạm vi.",
+        },
+        coordinate: {
+          title: "Điều phối đội nhóm",
+          desc: "Thành viên nhìn thấy việc nào quan trọng lúc này, việc nào đang chặn và việc nào đã dịch chuyển mà không phải nhảy qua nhiều công cụ.",
+        },
+        communicate: {
+          title: "Trao đổi trong đúng ngữ cảnh",
+          desc: "Meetings, memo, notifications và tài liệu tham chiếu bám theo workflow thay vì biến mất trong tiếng ồn của chat.",
+        },
+        confirm: {
+          title: "Xác nhận tiến độ",
+          desc: "Trạng thái deadline và tín hiệu hoàn thành luôn hiển thị để cấp quản lý can thiệp trước khi công việc trượt khỏi nhịp.",
+        },
+      },
+    },
+    architecture: {
+      eyebrow: "Kiến trúc triển khai",
+      title: "Một sản phẩm mobile được neo bởi hai dịch vụ Laravel.",
+      body: "Codebase cho thấy một Flutter mobile client, một Laravel backend chuyên biệt và một Laravel common service dùng chung. Cấu trúc này giúp MyARM xử lý lưu lượng vận hành hằng ngày, gom logic dùng chung và mở rộng sản phẩm trong tương lai mà không dồn tất cả vào một runtime.",
+    },
+    stack: {
+      mobile: {
+        title: "Flutter mobile app",
+        desc: "Client production cho iOS và Android với các module jobs, missions, meetings, notifications và không gian làm việc cá nhân.",
+      },
+      backend: {
+        title: "Laravel backend API",
+        desc: "Dịch vụ chuyên biệt xử lý authentication, business workflows, event flows và các API phục vụ app.",
+      },
+      common: {
+        title: "Laravel common service",
+        desc: "Lớp dịch vụ dùng chung để gom domain rules và internal APIs vào một nơi thay vì lặp lại ở nhiều runtime.",
+      },
+      notifications: {
+        title: "Phân phối sẵn ra thị trường",
+        desc: "Sản phẩm đã có domain riêng cùng App Store và Google Play, khiến MyARM mang cảm giác sẵn sàng thương mại thay vì chỉ là concept.",
+      },
+    },
+    cta: {
+      eyebrow: "Xem sản phẩm ngoài thị trường",
+      title: "Đưa MyARM lên Mercury Solution Homepage như một nền tảng kinh doanh nghiêm túc, không phải một project card placeholder.",
+      body: "Website chính thức và kênh phát hành app đã tồn tại. Mercury giờ có thể kể câu chuyện MyARM với độ sâu sản phẩm tương đương QuickShift và Minova PMS.",
+      primary: "Yêu cầu tư vấn dự án",
+      secondary: "Mở myarms.jp",
+      iosTitle: "App Store",
+      iosBody: "Quét mã hoặc mở trang phát hành trên iPhone.",
+      androidTitle: "Google Play",
+      androidBody: "Quét mã hoặc mở trang phát hành trên Android.",
+    },
   },
 
   // Language Selector

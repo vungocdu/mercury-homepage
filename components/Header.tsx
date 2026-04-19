@@ -100,7 +100,7 @@ export default function Header() {
       children: [
         { name: nav?.containerCalculator || 'ContCal 3D', href: '/container-calculator', description: nav?.containerCalculatorDesc || '3D Container Packing Optimizer' },
         { name: nav?.processAndTechnology || 'Process & Technology', href: '/process-technology', description: nav?.processAndTechnologyDesc || 'Digital Process Solutions' },
-        { name: nav?.myarm || 'MyARM', href: 'https://myarms.jp/', description: nav?.myarmDesc || 'Japanese-style Business Management' },
+        { name: nav?.myarm || 'MyARM', href: '/myarm', description: nav?.myarmDesc || 'Japanese-style workflow platform' },
       ]
     },
     { name: nav?.about || 'About', href: '/about' },
