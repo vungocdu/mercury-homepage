@@ -342,7 +342,7 @@ export default function MyArmClient() {
               <p className="text-sm font-semibold uppercase tracking-[0.28em] text-cyan-300">
                 {tr('myarmPage.cta.eyebrow', 'See the product in market')}
               </p>
-              <h2 className="mt-4 max-w-2xl text-3xl font-semibold md:text-5xl">
+              <h2 className="mt-4 max-w-2xl text-3xl font-semibold text-white md:text-5xl">
                 {tr(
                   'myarmPage.cta.title',
                   'Bring MyARM into Mercury Solution Homepage as a serious business platform, not a placeholder card.'
