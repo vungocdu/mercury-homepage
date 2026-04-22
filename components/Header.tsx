@@ -44,14 +44,22 @@ const MercuryLogo = ({ className = "w-8 h-8" }: { className?: string }) => (
 type NavChild = { name: string; href: string; description: string }
 type NavItem = { name: string; href?: string; id?: string; children?: NavChild[] }
 
+const normalizeNavPath = (path: string): string => {
+  if (path.startsWith('/ja/')) return path.slice(3)
+  if (path.startsWith('/en/')) return path.slice(3)
+  return path
+}
+
 // Check if a nav item is active based on current path
 const isNavActive = (item: NavItem, currentPath: string): boolean => {
+  const path = normalizeNavPath(currentPath)
+
   if (item.href) {
-    if (item.href === '/') return currentPath === '/' || currentPath === ''
-    return currentPath === item.href || currentPath.startsWith(item.href + '/')
+    if (item.href === '/') return path === '/' || path === ''
+    return path === item.href || path.startsWith(item.href + '/')
   }
   if (item.children) {
-    return item.children.some(child => currentPath === child.href)
+    return item.children.some(child => normalizeNavPath(child.href) === path)
   }
   return false
 }
@@ -243,7 +251,7 @@ export default function Header() {
                         <div className="bg-white rounded-xl shadow-lg ring-1 ring-gray-200/60 p-1.5 min-w-[250px]">
                           {item.children?.map((child) => {
                             const isExternal = child.href.startsWith('http')
-                            const isChildActive = !isExternal && currentPath === child.href
+                            const isChildActive = !isExternal && normalizeNavPath(currentPath) === normalizeNavPath(child.href)
                             return (
                               <a
                                 key={child.href}
