@@ -40,6 +40,8 @@ export const vi = {
     processAndTechnologyDesc: "Giải pháp Quy trình Số",
     myarm: "MyARM",
     myarmDesc: "Nền tảng workflow kiểu Nhật cho đội ngũ di động",
+    erpSolution: "ERP Solution",
+    erpSolutionDesc: "Triển Khai & Tùy Chỉnh ERPNext",
     nightlifeCrmDesc: "CRM cho Quán bar, Câu lạc bộ & Lounge",
   },
 
