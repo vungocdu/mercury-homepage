@@ -52,6 +52,8 @@ export const en = {
     containerCalculatorDesc: "3D Container Packing Optimizer",
     processAndTechnologyDesc: "Digital Process Solutions",
     myarmDesc: "Japanese workflow platform for mobile teams",
+    erpSolution: "ERP Solution",
+    erpSolutionDesc: "ERPNext Implementation & Customization",
     nightlifeCrmDesc: "CRM for Nightclubs, Bars & Lounges",
   },
 
