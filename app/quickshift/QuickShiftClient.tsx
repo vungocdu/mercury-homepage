@@ -892,6 +892,130 @@ export default function QuickShiftClient() {
         </div>
       </section>
 
+      {/* ═══════ Strategic Partner ═══════ */}
+      <section className="py-24" style={{ backgroundColor: 'hsl(var(--section-bg, 0 0% 100%))' }}>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
+            <Badge variant="outline" className="px-4 py-2 mb-6 border-[#FFA31A]/30 text-[#FFA31A]">
+              <Sparkles className="w-4 h-4 mr-2" />
+              {tr('quickshift.partner.badge', 'Strategic Partner')}
+            </Badge>
+            <h2 className="text-3xl lg:text-5xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>
+              {tr('quickshift.partner.title1', 'Built Together With')}{' '}
+              <span className="text-[#FFA31A]">{tr('quickshift.partner.title2', 'Care Earth Japan')}</span>
+            </h2>
+            <p className="text-lg max-w-2xl mx-auto leading-relaxed" style={{ color: 'hsl(var(--text-secondary))' }}>
+              {tr('quickshift.partner.subtitle', 'QuickShift was co-developed with Care Earth, a leading Japanese staffing firm, to address real-world workforce management challenges for foreign workers in Japan.')}
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-5xl overflow-hidden rounded-3xl border shadow-lg"
+            style={{ borderColor: 'hsl(var(--border))', backgroundColor: 'hsl(var(--card-bg))' }}
+          >
+            <div className="grid lg:grid-cols-2">
+              {/* Left — branding */}
+              <div className="relative flex flex-col items-center justify-center gap-6 overflow-hidden bg-gradient-to-br from-[#0a3d62] via-[#0d5986] to-[#1a7abf] p-10 lg:p-14">
+                {/* Decorative dots */}
+                <div className="pointer-events-none absolute inset-0 opacity-10"
+                  style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+                {/* Logo */}
+                <div className="relative z-10 flex h-28 w-56 items-center justify-center rounded-2xl bg-white/10 p-4 shadow-xl backdrop-blur-sm ring-1 ring-white/20">
+                  <img
+                    src="https://careearth.info/wp-content/uploads/2025/09/care-earth-logo-color.png"
+                    alt="Care Earth Logo"
+                    className="h-full w-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
+                {/* Company name & tagline */}
+                <div className="relative z-10 text-center">
+                  <p className="text-2xl font-bold text-white">Care Earth</p>
+                  <p className="mt-1 text-sm font-medium tracking-wider text-white/70">ケアアース</p>
+                  <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur-sm">
+                    <span className="text-base font-bold text-[#FFA31A]">GO BEYOND</span>
+                  </div>
+                  <p className="mt-3 text-xs text-white/60">〜想いでつなぐ、未来を支える〜</p>
+                  <p className="mt-1 text-xs italic text-white/50">Connecting intentions, supporting the future</p>
+                </div>
+                {/* Location badge */}
+                <div className="relative z-10 flex items-center gap-2 text-xs text-white/60">
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#FFA31A]" />
+                  Osaka, Japan · Vietnam Branch
+                </div>
+              </div>
+
+              {/* Right — details */}
+              <div className="flex flex-col justify-center gap-6 p-8 lg:p-12">
+                {/* Vision */}
+                <div>
+                  <p className="mb-1.5 text-xs font-semibold uppercase tracking-widest text-[#FFA31A]">
+                    {tr('quickshift.partner.visionLabel', 'Company Vision')}
+                  </p>
+                  <p className="text-base font-medium leading-relaxed" style={{ color: 'hsl(var(--text-primary))' }}>
+                    &ldquo;{tr('quickshift.partner.vision', 'Create an affluent lifestyle for people from around the world gathered in Japan.')}&rdquo;
+                  </p>
+                </div>
+
+                {/* Services */}
+                <div>
+                  <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-[#FFA31A]">
+                    {tr('quickshift.partner.servicesLabel', 'Core Services')}
+                  </p>
+                  <ul className="space-y-2">
+                    {[
+                      tr('quickshift.partner.services.dispatch', 'Personnel dispatch — foreign worker placement across Japan'),
+                      tr('quickshift.partner.services.outsourcing', 'Business outsourcing & contract manufacturing support'),
+                      tr('quickshift.partner.services.ssw', 'Specified Skilled Worker (特定技能) recruitment & visa support'),
+                      tr('quickshift.partner.services.food', 'Asian grocery & food import business'),
+                      tr('quickshift.partner.services.mvno', 'MVNO telecom services for international residents'),
+                    ].map((s) => (
+                      <li key={s} className="flex items-start gap-2.5 text-sm" style={{ color: 'hsl(var(--text-secondary))' }}>
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#FFA31A]" />
+                        {s}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Values chips */}
+                <div>
+                  <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-[#FFA31A]">
+                    {tr('quickshift.partner.valuesLabel', 'Core Values')}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {['I GO', 'Heart to Heart', 'Can-do Attitude', 'Happy Smile 101%'].map((v) => (
+                      <span key={v} className="rounded-full border border-[#FFA31A]/25 bg-[#FFA31A]/8 px-3 py-1 text-xs font-medium text-[#FFA31A]">
+                        {v}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Partnership note */}
+                <div className="rounded-xl border border-[#FFA31A]/20 bg-[#FFA31A]/5 p-4">
+                  <p className="text-xs leading-relaxed" style={{ color: 'hsl(var(--text-secondary))' }}>
+                    {tr('quickshift.partner.note', 'Care Earth operates a Vietnam branch and works closely with Mercury Solution to continuously improve QuickShift — ensuring the platform reflects the real daily workflows of Japanese dispatch staffing companies.')}
+                  </p>
+                  <a
+                    href="https://careearth.info/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-[#FFA31A] hover:underline"
+                  >
+                    careearth.info
+                    <ArrowRight className="h-3 w-3" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ═══════ CTA ═══════ */}
       <section className="py-24 relative overflow-hidden"
         style={{ background: 'linear-gradient(135deg, #1a0e00 0%, #2a1600 50%, #1a0e00 100%)' }}>
