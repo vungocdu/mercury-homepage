@@ -6,12 +6,13 @@ import { motion } from 'framer-motion'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import TrackingButton from '../../components/TrackingButton'
+import { ContactSubmissionValidationError, submitContactSubmission } from '@/lib/contact-submissions'
 
 import MovingDotsBackground from '../../components/MovingDotsBackground'
 import { useLanguage } from '../../contexts/LanguageContext'
 
 export default function TVCPageClient() {
-  const { translations } = useLanguage()
+  const { translations, t: translate } = useLanguage()
   // Type assertion to avoid TypeScript errors with translation structure
   const t = translations as any // eslint-disable-line @typescript-eslint/no-explicit-any
 
@@ -45,42 +46,7 @@ export default function TVCPageClient() {
     setTvcSubmitError('')
 
     try {
-      // Validate required fields
-      if (!tvcFormData.firstName || !tvcFormData.lastName || !tvcFormData.email || !tvcFormData.message) {
-        throw new Error('Please fill in all required fields')
-      }
-
-      // Check if we're in browser environment
-      if (typeof window === 'undefined') {
-        throw new Error('This form can only be submitted from the browser')
-      }
-
-      console.log('Submitting TVC form via API route...')
-
-      // Call API route for server-side processing
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          firstName: tvcFormData.firstName,
-          lastName: tvcFormData.lastName,
-          email: tvcFormData.email,
-          phone: tvcFormData.phone || undefined,
-          company: tvcFormData.company || undefined,
-          message: tvcFormData.message,
-          service: 'TVC Production' // Specify TVC service
-        })
-      })
-
-      const result = await response.json()
-
-      if (!response.ok) {
-        throw new Error(result.error || 'Failed to submit form')
-      }
-
-      console.log('✅ TVC form submitted successfully:', result)
+      await submitContactSubmission({ ...tvcFormData, service: 'TVC Production' })
 
       setTvcSubmitSuccess(true)
 
@@ -98,24 +64,17 @@ export default function TVCPageClient() {
       }, 3000)
 
     } catch (error) {
-      console.error('❌ TVC form submission error:', error)
-
-      // More user-friendly error messages
-      let errorMessage = 'An error occurred while submitting the form. Please try again.'
-
-      if (error instanceof Error) {
-        if (error.message.includes('RESEND_API_KEY')) {
-          errorMessage = 'Email service is not configured. Please contact support.'
-        } else if (error.message.includes('Database error')) {
-          errorMessage = 'Failed to save your message. Please try again or contact us directly.'
-        } else if (error.message.includes('required fields')) {
-          errorMessage = error.message
-        } else {
-          errorMessage = error.message
-        }
+      if (error instanceof ContactSubmissionValidationError) {
+        setTvcSubmitError(error.code === 'required'
+          ? translate('contact.form.errors.required')
+          : error.code === 'invalid-email'
+            ? translate('contact.form.errors.invalidEmail')
+            : translate('contact.form.errors.submitError'))
+      } else if (error instanceof Error && (error.message.includes('permission') || error.message.includes('PERMISSION_DENIED') || error.message.includes('network'))) {
+        setTvcSubmitError(translate('contact.form.errors.networkError'))
+      } else {
+        setTvcSubmitError(translate('contact.form.errors.submitError'))
       }
-
-      setTvcSubmitError(errorMessage)
     } finally {
       setIsTvcSubmitting(false)
     }

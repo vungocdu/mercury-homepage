@@ -40,6 +40,8 @@ export const ko = {
     processAndTechnologyDesc: "디지털 프로세스 솔루션",
     myarm: "MyARM",
     myarmDesc: "모바일 우선의 일본식 워크플로 플랫폼",
+    hmbErp: "HMB ERP",
+    hmbErpDesc: "다법인 운영을 위한 모듈형 ERP 플랫폼",
     erpSolution: "ERP Solution",
     erpSolutionDesc: "ERPNext 구현 및 커스터마이징",
     nightlifeCrmDesc: "나이트클럽, 바 및 라운지용 CRM",

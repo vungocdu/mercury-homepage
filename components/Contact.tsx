@@ -13,8 +13,7 @@ import {
   User,
 } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
-import { getFirestoreDb } from '@/lib/firebase'
-import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
+import { ContactSubmissionValidationError, submitContactSubmission } from '@/lib/contact-submissions'
 
 export default function Contact() {
   const { t, language } = useLanguage()
@@ -53,23 +52,7 @@ export default function Contact() {
     setSubmitError('')
 
     try {
-      const requiredError = t('contact.form.errors.required')
-      if (!formData.firstName.trim() || !formData.lastName.trim() || !formData.email.trim() || !formData.message.trim()) {
-        throw new Error(requiredError)
-      }
-
-      const db = getFirestoreDb()
-      await addDoc(collection(db, 'contact_submissions'), {
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        email: formData.email,
-        phone: formData.phone || null,
-        company: formData.company || null,
-        message: formData.message,
-        service: formData.service || null,
-        status: 'new',
-        createdAt: serverTimestamp(),
-      })
+      await submitContactSubmission(formData)
 
       setSubmitSuccess(true)
 
@@ -86,13 +69,16 @@ export default function Contact() {
         setSubmitSuccess(false)
       }, 3000)
     } catch (error) {
-      const requiredError = t('contact.form.errors.required')
       let errorMessage = t('contact.form.errors.submitError')
 
-      if (error instanceof Error) {
-        if (error.message === requiredError) {
-          errorMessage = error.message
-        } else if (error.message.includes('permission') || error.message.includes('PERMISSION_DENIED')) {
+      if (error instanceof ContactSubmissionValidationError) {
+        if (error.code === 'required') {
+          errorMessage = t('contact.form.errors.required')
+        } else if (error.code === 'invalid-email') {
+          errorMessage = t('contact.form.errors.invalidEmail')
+        }
+      } else if (error instanceof Error) {
+        if (error.message.includes('permission') || error.message.includes('PERMISSION_DENIED') || error.message.includes('network')) {
           errorMessage = t('contact.form.errors.networkError')
         }
       }

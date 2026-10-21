@@ -40,6 +40,8 @@ export const ja = {
     processAndTechnologyDesc: "デジタルプロセスソリューション",
     myarm: "MyARM",
     myarmDesc: "モバイルファーストの日本式ワークフロープラットフォーム",
+    hmbErp: "HMB ERP",
+    hmbErpDesc: "複数法人の業務を支えるモジュラー ERP",
     erpSolution: "ERP Solution",
     erpSolutionDesc: "ERPNext 導入・カスタマイズ",
     nightlifeCrmDesc: "ナイトクラブ・バー・ラウンジ向けCRM",

@@ -40,6 +40,8 @@ export const vi = {
     processAndTechnologyDesc: "Giải pháp Quy trình Số",
     myarm: "MyARM",
     myarmDesc: "Nền tảng workflow kiểu Nhật cho đội ngũ di động",
+    hmbErp: "HMB ERP",
+    hmbErpDesc: "Nền tảng ERP modular cho vận hành đa pháp nhân",
     erpSolution: "ERP Solution",
     erpSolutionDesc: "Triển Khai & Tùy Chỉnh ERPNext",
     nightlifeCrmDesc: "CRM cho Quán bar, Câu lạc bộ & Lounge",
@@ -434,7 +436,13 @@ export const vi = {
       messagePlaceholder: "Kể cho chúng tôi về dự án của bạn...",
       submit: "Gửi tin nhắn",
       sending: "Đang gửi...",
-      sent: "Đã gửi!"
+      sent: "Đã gửi!",
+      errors: {
+        required: "Vui lòng điền các trường bắt buộc",
+        invalidEmail: "Vui lòng nhập địa chỉ email hợp lệ",
+        submitError: "Không thể gửi biểu mẫu. Vui lòng thử lại.",
+        networkError: "Lỗi kết nối. Vui lòng kiểm tra mạng và thử lại."
+      }
     },
     info: {
       title: "Thông tin liên hệ",

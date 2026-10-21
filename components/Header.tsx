@@ -109,6 +109,7 @@ export default function Header() {
         { name: nav?.containerCalculator || 'ContCal 3D', href: '/container-calculator', description: nav?.containerCalculatorDesc || '3D Container Packing Optimizer' },
         { name: nav?.processAndTechnology || 'Process & Technology', href: '/process-technology', description: nav?.processAndTechnologyDesc || 'Digital Process Solutions' },
         { name: nav?.myarm || 'MyARM', href: '/myarm', description: nav?.myarmDesc || 'Japanese-style workflow platform' },
+        { name: nav?.hmbErp || 'HMB ERP', href: '/hmb-erp', description: nav?.hmbErpDesc || 'Modular ERP for multi-company operations' },
         { name: nav?.erpSolution || 'ERP Solution', href: '/erpnext', description: nav?.erpSolutionDesc || 'ERPNext Implementation & Customization' },
       ]
     },
