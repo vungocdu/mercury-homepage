@@ -2,59 +2,33 @@ export const vi = {
   // Navigation
   nav: {
     home: "Trang chủ",
-    digitalMarketing: "Digital Marketing",
-    about: "Về chúng tôi",
-    // Legacy navigation items (for backward compatibility)
     services: "Dịch vụ",
     technology: "Công nghệ",
     process: "Quy trình",
     projects: "Dự án",
     tvcServices: "Dịch vụ TVC",
+    contact: "Liên hệ",
     portfolio: "Portfolio",
     ourAdvantage: "Lợi thế của chúng tôi",
     softwareServices: "Dịch vụ phần mềm",
-    // System category navigation
-    hrSystem: "HR System",
-    sportSystem: "Sport System",
-    hotelSystem: "Hospitality",
-    bizOperation: "Biz Operation",
-    hospitalitySystem: "Hospitality",
-    nightlifeCrm: "Nightlife CRM",
-    // Product names
-    tnaSystem: "TNA HRM System",
-    quickshift: "QuickShift",
-    actiwellPlatform: "Actiwell Platform",
-    actiwellATMS: "Actiwell ATMS",
-    minovaPMS: "Minova PMS",
-    otaCalculator: "OTA Calculator",
-    containerCalculator: "ContCal 3D",
-    processAndTechnology: "Quy trình & Công nghệ",
-    // Product descriptions for dropdown
-    tnaSystemDesc: "Quản lý Chấm công & Nhân sự",
-    quickshiftDesc: "Quản lý Ca làm việc",
-    actiwellPlatformDesc: "Nền tảng Quản lý Thể thao",
-    actiwellATMSDesc: "Quản lý Huấn luyện Thể thao",
-    minovaPMSDesc: "Hệ thống Quản lý Khách sạn",
-    otaCalculatorDesc: "Tính toán Hoa hồng OTA",
-    containerCalculatorDesc: "Tối ưu Xếp hàng Container 3D",
-    processAndTechnologyDesc: "Giải pháp Quy trình Số",
-    myarm: "MyARM",
-    myarmDesc: "Nền tảng workflow kiểu Nhật cho đội ngũ di động",
-    erpSolution: "ERP Solution",
-    erpSolutionDesc: "Triển Khai & Tùy Chỉnh ERPNext",
-    nightlifeCrmDesc: "CRM cho Quán bar, Câu lạc bộ & Lounge",
+    about: "Giới thiệu",
+    solutions: "Giải pháp",
+    clients: "Khách hàng",
+    insights: "Góc nhìn",
+    careers: "Tuyển dụng",
+    contactUs: "Liên hệ",
   },
 
   // Hero Section
   hero: {
-    badge: "Digital Innovation Leader",
+    badge: "Đối tác chuyển đổi số từ năm 2020",
     title: {
-      part1: "Đột Phá Công Nghệ,",
-      part2: "Vững Vàng Thương Hiệu",
-      part3: ""
+      part1: "Next-Gen",
+      part2: "AI Technology",
+      part3: "Solutions"
     },
-    subtitle: "Digital Solutions That Drive Growth - Bắt nguồn từ sự thấu hiểu sâu sắc những thách thức của doanh nghiệp trong kỷ nguyên số, Mercury Solutions ra đời với sứ mệnh trở thành đối tác tin cậy, đồng hành cùng bạn trên hành trình chuyển mình mạnh mẽ.",
-    cta: "Khám phá giải pháp"
+    subtitle: "Mercury Solutions cung cấp giải pháp AI, thị giác máy tính và phần mềm theo yêu cầu, giúp doanh nghiệp tự động hóa, ra quyết định nhanh hơn và tăng trưởng.",
+    cta: "Xem dịch vụ"
   },
 
   // Why Choose Mercury Solutions
@@ -98,318 +72,501 @@ export const vi = {
   services: {
     title: "Dịch vụ của chúng tôi",
     subtitle: "Chúng tôi cung cấp giải pháp công nghệ toàn diện để giúp doanh nghiệp đạt được chuyển đổi số và xuất sắc trong vận hành.",
-    
-    // Digital Transformation Services
-    digitalTransformation: {
-      title: "Giải pháp Chuyển đổi số toàn diện",
-      subtitle: "Tối ưu hóa quy trình, nâng tầm hiệu suất",
-      description: "Mercury Solutions cung cấp các giải pháp chuyển đổi số toàn diện, giúp doanh nghiệp số hóa và tự động hóa quy trình vận hành. Chúng tôi tự hào hợp tác với các đối tác hàng đầu để mang đến những giải pháp tối ưu nhất.",
-      solutions: {
-        attendance: {
-          title: "Hệ thống Chấm công và Tính lương",
-          description: "Giải pháp tự động hóa quy trình quản lý nhân sự, được đồng phát triển cùng Fujikin Corporation (Nhật Bản) cho các nhà máy quy mô lớn trên 2000 nhân sự. Hệ thống giúp giảm thiểu sai sót và nâng cao hiệu quả quản lý."
-        },
-        gym: {
-          title: "Hệ thống Quản trị chuỗi phòng gym",
-          description: "Nền tảng quản lý toàn diện được phát triển cùng đối tác Actiwell - AI Solution for gym & fitness, giúp chủ phòng gym dễ dàng kiểm soát hoạt động kinh doanh và cải thiện trải nghiệm khách hàng."
-        },
-        hotel: {
-          title: "Hệ thống Quản trị chuỗi khách sạn",
-          description: "Giải pháp quản lý vận hành được phát triển và tin dùng bởi Minova Hotel Group, giúp tối ưu hóa quy trình đặt phòng, quản lý dịch vụ và nâng cao sự hài lòng của khách hàng."
-        },
-        enterprise: {
-          title: "Giải pháp quản trị doanh nghiệp",
-          description: "Hệ thống quản lý toàn diện theo phong cách Nhật Bản, được phát triển với sự hợp tác của MyArms (Nhật Bản), giúp doanh nghiệp tối ưu hóa quy trình, tăng cường hiệu suất và thúc đẩy tăng trưởng bền vững."
-        }
-      }
+    ai: {
+      title: "AI & Machine Learning",
+      description: "Giải pháp trí tuệ nhân tạo và machine learning tiên tiến để tự động hóa quy trình và thu thập insights từ dữ liệu.",
+      features: ["Phân tích dự đoán", "Xử lý ngôn ngữ tự nhiên", "Thị giác máy tính", "Ra quyết định tự động"]
+    },
+    design: {
+      title: "Thiết kế & Ý tưởng",
+      description: "Experience maps, user journeys và user flows. Information Architecture. UX Wireframes. Interactive Mockups. Assets.",
+      features: ["UX/UI Design", "Information Architecture", "Interactive Prototypes", "Design Systems"]
+    },
+    web: {
+      title: "Phát triển Web",
+      description: "Chúng tôi chuyên về Phát triển Web và Thiết kế Web, cung cấp ứng dụng công nghệ tiên tiến cho doanh nghiệp từ SMEs đến MNCs.",
+      features: ["Frontend Development", "Backend Development", "E-commerce Solutions", "Progressive Web Apps"]
+    },
+    mobile: {
+      title: "Phát triển Mobile",
+      description: "Chúng tôi thấy sự tăng trưởng đáng kể trong việc sử dụng ứng dụng mobile và cách nó giúp các công ty tăng hiệu quả quản lý.",
+      features: ["iOS Development", "Android Development", "Cross-platform Apps", "App Maintenance"]
+    },
+    testing: {
+      title: "Testing/QA",
+      description: "Functional/Regression testing. Integration/Load testing. Stress testing. Security testing. UI và API Auto tests.",
+      features: ["Automated Testing", "Performance Testing", "Security Testing", "Quality Assurance"]
+    },
+    devops: {
+      title: "DevOps & Cloud",
+      description: "Kết hợp quy trình từ development đến delivery. Tạo điều kiện trong infrastructure cho hoạt động bình thường của phần mềm.",
+      features: ["CI/CD Pipelines", "Cloud Infrastructure", "Container Orchestration", "Monitoring & Logging"]
+    },
+    backend: {
+      title: "Phát triển Backend",
+      description: "Phát triển dựa trên frameworks. Tích hợp với dịch vụ bên thứ ba. Làm việc với databases. High-load architecture và design.",
+      features: ["API Development", "Database Design", "Microservices", "System Architecture"]
+    },
+    automation: {
+      title: "Tự động hóa quy trình",
+      description: "Tối ưu hóa hoạt động kinh doanh với giải pháp tự động hóa thông minh giúp giảm công việc thủ công và tăng hiệu quả.",
+      features: ["Workflow Automation", "RPA Implementation", "Business Process Optimization", "Integration Services"]
+    },
+    vision: {
+      title: "Thị giác máy tính",
+      description: "Giải pháp thị giác máy tính tiên tiến cho nhận dạng hình ảnh, phát hiện đối tượng và phân tích dữ liệu hình ảnh.",
+      features: ["Image Recognition", "Object Detection", "Facial Recognition", "Visual Analytics"]
+    },
+    integration: {
+      title: "Tích hợp hệ thống",
+      description: "Tích hợp liền mạch các hệ thống và ứng dụng khác nhau để tạo giải pháp kinh doanh thống nhất.",
+      features: ["API Integration", "Data Synchronization", "Legacy System Migration", "Real-time Connectivity"]
+    },
+    security: {
+      title: "Bảo mật mạng",
+      description: "Giải pháp bảo mật toàn diện để bảo vệ tài sản số của bạn và đảm bảo tuân thủ quyền riêng tư dữ liệu.",
+      features: ["Threat Detection", "Data Encryption", "Access Control", "Security Auditing"]
+    },
+    optimization: {
+      title: "Tối ưu hóa hiệu suất",
+      description: "Tối ưu hóa hiệu suất hệ thống, hiệu quả database và tốc độ ứng dụng để trải nghiệm người dùng tốt hơn.",
+      features: ["Database Optimization", "Code Performance", "Load Balancing", "Caching Strategies"]
     },
 
-    // Digital Marketing Services
-    digitalMarketing: {
-      title: "Kiến tạo thương hiệu mạnh mẽ",
-      subtitle: "Tiếp cận khách hàng hiệu quả trong kỷ nguyên số",
-      description: "Mercury Solutions giúp doanh nghiệp xây dựng và phát triển thương hiệu thông qua các chiến lược digital marketing sáng tạo.",
-      services: {
-        tvc: {
-          title: "Dịch vụ Quay phim TVC",
-          description: "Chúng tôi chuyên sản xuất các TVC giới thiệu nhà máy và khu công nghiệp, tập trung vào việc làm nổi bật máy móc, công nghệ tiên tiến. Nổi bật là dự án hợp tác cùng Jworld Vina (Hàn Quốc) hay Fujikin Viet Nam, tạo ra những thước phim quảng bá ấn tượng và chuyên nghiệp."
-        }
+  },
+
+  // Technology Stack
+  technology: {
+    title: "Công nghệ của chúng tôi",
+    subtitle: "Công nghệ và frameworks tiên tiến giúp cung cấp giải pháp AI và đổi mới số. Luôn phát triển, luôn cải tiến.",
+    badge: "Công nghệ tiên tiến",
+    categories: {
+      frontend: "Frontend",
+      backend: "Backend",
+      database: "Database",
+      devops: "DevOps",
+      mobile: "Mobile",
+      ai: "AI & ML"
+    },
+    additional: {
+      title: "Công nghệ bổ sung & Công cụ đổi mới",
+      subtitle: "Giải pháp giám sát, kiểm thử và tích hợp tiên tiến đảm bảo hiệu suất tối ưu",
+      sections: {
+        monitoring: "Giám sát",
+        logManagement: "Quản lý log",
+        testing: "Kiểm thử",
+        integration: "Tích hợp"
       }
     }
   },
 
-  // About Page
-  about: {
-    badge: "Về Mercury Solutions",
+  // TVC Services
+  tvc: {
     hero: {
-      title: "Về Chúng Tôi",
-      subtitle: "Bắt nguồn từ sự thấu hiểu sâu sắc những thách thức của doanh nghiệp trong kỷ nguyên số, Mercury Solutions ra đời với sứ mệnh trở thành đối tác tin cậy, đồng hành cùng bạn trên hành trình chuyển mình mạnh mẽ. Chúng tôi tin rằng, sự kết hợp giữa công nghệ tiên tiến và chiến lược marketing sáng tạo sẽ tạo nên sức bật mạnh mẽ cho mọi doanh nghiệp."
+      title: "DỊCH VỤ QUAY PHIM TVC NHÀ MÁY & DOANH NGHIỆP SẢN XUẤT",
+      subtitle: "BIẾN CÔNG NGHỆ & QUY MÔ CỦA BẠN THÀNH LỢI THẾ CẠNH TRANH ĐỘT PHÁ",
+      description: "Mercury Solutions mang đến giải pháp sản xuất TVC Film 4K chuyên sâu, giúp khắc họa tầm vóc thương hiệu, chinh phục đối tác và thu hút nhân tài chỉ trong 1-2 tuần triển khai.",
+      cta: "NHẬN TƯ VẤN & BÁO GIÁ NGAY",
+      partners: "Chúng tôi là đối tác của:",
+      stats: {
+        projects: "Dự án TVC đã hoàn thành",
+        clients: "Khách hàng hài lòng",
+        support: "Hỗ trợ sáng tạo"
+      }
     },
-    company: {
-      title: "Thông tin công ty",
-      description: "Chúng tôi tự hào là đối tác tin cậy, đồng hành cùng các doanh nghiệp trên hành trình chuyển đổi số. Từ việc phát triển các hệ thống quản lý thông minh, tối ưu hóa quy trình, đến việc kiến tạo những chiến dịch marketing đầy cảm hứng, mỗi giải pháp của chúng tôi đều được xây dựng với sự tận tâm và chuyên nghiệp cao nhất.",
-      name: "Tên công ty",
-      address: "Địa chỉ",
-      taxCode: "Mã số thuế",
-      phone: "Điện thoại",
-      email: "Email",
-      founded: "Năm thành lập"
+    painPoints: {
+      title: "NHÀ MÁY CỦA BẠN RẤT HIỆN ĐẠI, NHƯNG...",
+      points: [
+        "Đối tác chưa thấy hết quy mô và sự đầu tư công nghệ của bạn chỉ qua catalogue?",
+        "Khách hàng khó hình dung sự chuẩn mực trong quy trình sản xuất và kiểm soát chất lượng?",
+        "Phim giới thiệu cũ kỹ không còn phản ánh đúng tầm vóc và văn hóa doanh nghiệp hiện tại?",
+        "Thương hiệu tuyển dụng mờ nhạt, khó thu hút được các kỹ sư và nhân sự chất lượng cao?"
+      ],
+      conclusion: "Đã đến lúc nâng cấp câu chuyện thương hiệu của bạn bằng hình ảnh."
     },
-    companyInfo: {
-      name: "CÔNG TY TNHH MERCURY SOLUTIONS VIỆT NAM",
-      address: "Tầng 5, số nhà 33/41 Thái Hà, Phường Đống Đa, TP Hà Nội",
-      taxCode: "0110235195",
-      phone: "024 6663 6480",
-      email: "info@mercurysolutions.vn",
-      founded: "2020"
-    },
-    mission: {
-      title: "Sứ Mệnh (Mission)",
-      description: "Chúng tôi kiến tạo các sản phẩm hướng đến kết quả. Thông qua các sản phẩm công nghệ, chúng tôi số hóa và tự động hóa các quy trình cốt lõi, giúp doanh nghiệp tối ưu hóa vận hành, sản xuất và kinh doanh. Song song đó, thông qua các sản phẩm media, chúng tôi chuyển hóa giá trị công nghệ và tầm vóc thương hiệu thành những câu chuyện lôi cuốn, trở thành công cụ đắc lực tối ưu hóa quy trình bán hàng và chinh phục khách hàng. Mỗi sản phẩm đều được thiết kế để mang lại một giá trị đo lường được."
-    },
-    vision: {
-      title: "Tầm Nhìn (Vision)",
-      description: "Trở thành hệ sinh thái sản phẩm đáng tin cậy nhất, nơi các doanh nghiệp tìm đến để kiến tạo nên những bộ máy vận hành thông minh và trang bị những công cụ bán hàng đầy sức thuyết phục, biến hiệu suất và thương hiệu thành lợi thế cạnh tranh song hành."
-    },
-    values: {
-      title: "Giá trị cốt lõi",
-      description: "Xây dựng - Đo lường - Học hỏi (Build - Measure - Learn) và Đối tác là một Tính năng (Partnership as a Feature) là hai giá trị cốt lõi định hướng mọi hoạt động của chúng tôi.",
-      sectionTitle: "Tầm nhìn, Sứ mệnh & Giá trị",
-      sectionDescription: "Những nguyên tắc và định hướng dẫn dắt Mercury Solutions trong hành trình phát triển và phục vụ khách hàng.",
-      coreValues: {
-        buildMeasureLearn: {
-          title: "Xây dựng - Đo lường - Học hỏi",
-          subtitle: "Build - Measure - Learn",
-          description: "Vòng lặp này là DNA trong cách chúng tôi phát triển sản phẩm. Nó được áp dụng cho việc tinh chỉnh một hệ thống quản trị để giảm thao tác thừa cho nhân viên, và cũng được áp dụng cho việc tối ưu hóa một thông điệp bán hàng trong video để đánh trúng tâm lý khách hàng mục tiêu. Chúng tôi không ngừng cải tiến để sản phẩm mang lại hiệu quả cao nhất."
+    solution: {
+      title: "MERCURY SOLUTIONS: KỂ CÂU CHUYỆN VĨ ĐẠI TỪ TRÁI TIM NHÀ MÁY",
+      description: "Chúng tôi không chỉ quay phim. Chúng tôi là những chuyên gia chuyển hóa những quy trình phức tạp, những cỗ máy vô tri và những tiêu chuẩn khắt khe thành những thước phim doanh nghiệp đầy cảm xúc, thuyết phục và đẳng cấp.",
+      services: {
+        factory: {
+          title: "🎥 Quay phim giới thiệu nhà máy, khu công nghiệp",
+          description: "Thể hiện toàn cảnh quy mô, cơ sở hạ tầng và tiềm lực sản xuất."
         },
-        partnershipAsFeature: {
-          title: "Đối tác là một Tính năng",
-          subtitle: "Partnership as a Feature",
-          description: "Khi bạn chọn Mercury, bạn không chỉ nhận được một sản phẩm. Bạn nhận được một đội ngũ đối tác chiến lược. Chúng tôi là chuyên gia tư vấn chuyển đổi số giúp bạn định hình lại quy trình, và đồng thời là chiến lược gia truyền thông bán hàng giúp bạn chinh phục thị trường. Sự đồng hành này là một phần giá trị cốt lõi của sản phẩm."
+        process: {
+          title: "⚙️ Quay phim TVC quy trình sản xuất",
+          description: "Mô tả trực quan, sinh động từng công đoạn, từ nguyên liệu đến thành phẩm."
+        },
+        technology: {
+          title: "🔬 Làm phim về công nghệ & máy móc",
+          description: "Nhấn mạnh vào sự chính xác, hiện đại của dây chuyền, robot và công nghệ cốt lõi."
+        },
+        culture: {
+          title: "🤝 Sản xuất video văn hóa doanh nghiệp",
+          description: "Truyền tải lịch sử, giá trị, và tinh thần con người làm nên sức mạnh công ty."
+        }
+      }
+    },
+    portfolio: {
+      title: "Portfolio của chúng tôi",
+      subtitle: "Thể hiện chuyên môn của chúng tôi trên nhiều ngành và loại dự án",
+      description: "Khám phá portfolio các dự án thành công thể hiện chuyên môn của chúng tôi trong việc cung cấp giải pháp sáng tạo trên nhiều ngành với công nghệ tiên tiến.",
+      projects: {
+        corporate: {
+          title: "Phim thương hiệu doanh nghiệp",
+          description: "Kể chuyện thương hiệu toàn diện cho bản sắc doanh nghiệp và định vị thị trường."
+        },
+        product: {
+          title: "Chiến dịch ra mắt sản phẩm",
+          description: "Trưng bày sản phẩm năng động thúc đẩy bán hàng và nhận thức thị trường."
+        },
+        internal: {
+          title: "Truyền thông nội bộ",
+          description: "Nội dung tương tác nhân viên và đào tạo tăng cường văn hóa công ty."
+        },
+        events: {
+          title: "Ghi hình sự kiện & Điểm nổi bật",
+          description: "Tài liệu sự kiện chuyên nghiệp và nội dung quảng bá."
+        },
+        videoPreview: "Xem trước dự án",
+        platform: "Nền tảng"
+      }
+    },
+    process: {
+      title: "Quy trình chiến lược của chúng tôi",
+      subtitle: "Phương pháp đã được chứng minh đảm bảo mọi dự án mang lại kết quả xuất sắc",
+      description: "Chúng tôi chuyên tạo nội dung TVC chiến lược nâng cao hình ảnh thương hiệu và thu hút nhân tài hàng đầu. Cách tiếp cận toàn diện kết hợp công nghệ tiên tiến với sự xuất sắc sáng tạo.",
+      steps: {
+        consultation: {
+          title: "Tư vấn hợp tác",
+          description: "Phân tích nhu cầu, mục tiêu và đối tượng mục tiêu để xây dựng chiến lược nội dung phù hợp."
+        },
+        concept: {
+          title: "Phát triển ý tưởng chiến lược",
+          description: "Sáng tạo ý tưởng độc đáo và kịch bản chi tiết thể hiện thông điệp thương hiệu."
+        },
+        production: {
+          title: "Sản xuất điện ảnh",
+          description: "Thực hiện quay phim chuyên nghiệp với thiết bị cao cấp và đội ngũ giàu kinh nghiệm."
+        },
+        postProduction: {
+          title: "Hậu kỳ xuất sắc",
+          description: "Dựng phim, chỉnh màu, hiệu ứng và hoàn thiện sản phẩm cuối cùng."
+        },
+        timeline: "Thời gian"
+      },
+      summary: {
+        title: "Tổng quan quy trình",
+        subtitle: "Cam kết chất lượng và thời gian",
+        weeks: "Tuần",
+        satisfaction: "Hài lòng",
+        quality: "Chất lượng"
+      }
+    },
+    whyUs: {
+      title: "ĐỐI TÁC SẢN XUẤT VIDEO MARKETING TIN CẬY CHO NGÀNH CÔNG NGHIỆP",
+      features: {
+        speed: {
+          title: "TỐC ĐỘ VƯỢT TRỘI",
+          description: "Quy trình tinh gọn, bàn giao TVC Film hoàn chỉnh chỉ sau 1-2 tuần. Tiết kiệm thời gian, tối ưu hiệu quả cho doanh nghiệp."
+        },
+        quality: {
+          title: "CHẤT LƯỢNG ĐIỆN ẢNH",
+          description: "Cam kết chất lượng 4K-6K RAW, màu sắc chân thực, hình ảnh sắc nét, xứng tầm thương hiệu lớn."
+        },
+        technology: {
+          title: "CÔNG NGHỆ TIÊN PHONG",
+          description: "Sử dụng Flycam, Drone FPV, Gimbal Ronin RS3 Pro, Sony FX Cinema Line để tạo ra những góc máy đột phá, khác biệt."
+        }
+      }
+    },
+    faq: {
+      title: "GIẢI ĐÁP THẮC MẮC VỀ DỊCH VỤ QUAY PHIM TVC",
+      questions: {
+        timeline: {
+          question: "Thời gian sản xuất một TVC nhà máy mất bao lâu?",
+          answer: "Với quy trình tối ưu, Mercury Solutions có thể hoàn thành toàn bộ quá trình từ tiền kỳ, sản xuất đến hậu kỳ và bàn giao sản phẩm cuối cùng trong vòng 1 đến 2 tuần, tùy thuộc vào độ phức tạp của dự án."
+        },
+        cost: {
+          question: "Chi phí để quay một phim giới thiệu doanh nghiệp là bao nhiêu?",
+          answer: "Chi phí phụ thuộc vào nhiều yếu tố: số ngày quay, yêu cầu về thiết bị (drone, FPV, kỹ xảo...), độ dài kịch bản. Hãy liên hệ với chúng tôi để nhận được báo giá chi tiết và phù hợp nhất với ngân sách của bạn."
+        },
+        location: {
+          question: "Mercury Solutions có nhận quay phim tại các tỉnh thành khác không?",
+          answer: "Chắc chắn có. Đội ngũ của chúng tôi linh hoạt và sẵn sàng di chuyển đến bất kỳ khu công nghiệp, nhà máy nào trên toàn quốc để thực hiện dự án."
+        },
+        equipment: {
+          question: "Mercury Solutions sử dụng thiết bị gì để quay phim?",
+          answer: "Chúng tôi sử dụng thiết bị chuyên nghiệp hàng đầu: máy quay Sony FX Cinema Line, drone FPV, gimbal Ronin RS3 Pro, thiết bị ánh sáng chuyên nghiệp để đảm bảo chất lượng 4K-6K RAW."
+        },
+        process: {
+          question: "Quy trình làm việc của Mercury Solutions như thế nào?",
+          answer: "Chúng tôi tuân theo quy trình 5 bước: Tư vấn & Khảo sát → Xây dựng ý tưởng & Kịch bản → Sản xuất & Ghi hình → Hậu kỳ & Dựng phim → Tinh chỉnh & Nghiệm thu."
+        },
+        quality: {
+          question: "Mercury Solutions đảm bảo chất lượng như thế nào?",
+          answer: "Chúng tôi cam kết chất lượng điện ảnh với đội ngũ chuyên nghiệp, thiết bị hiện đại, và quy trình kiểm soát chất lượng nghiêm ngặt. Mọi dự án đều được nghiệm thu trước khi bàn giao."
+        },
+        revision: {
+          question: "Có được chỉnh sửa sau khi hoàn thành không?",
+          answer: "Có, chúng tôi hỗ trợ chỉnh sửa theo yêu cầu của khách hàng. Chúng tôi sẽ gửi bản dựng đầu tiên để bạn xem và đưa ra phản hồi trước khi hoàn thiện sản phẩm cuối cùng."
+        },
+        delivery: {
+          question: "Mercury Solutions giao sản phẩm ở định dạng nào?",
+          answer: "Chúng tôi giao sản phẩm ở nhiều định dạng phù hợp: MP4 cho web/social media, MOV cho trình chiếu, và các định dạng khác theo yêu cầu cụ thể của khách hàng."
         }
       }
     },
     cta: {
-      title: "Sẵn sàng hợp tác cùng Mercury Solutions?",
-      description: "Hãy để chúng tôi giúp bạn hiện thực hóa những ý tưởng công nghệ và đưa doanh nghiệp lên tầm cao mới.",
-      button: "Liên hệ ngay"
-    }
-  },
-
-  // Privacy Policy Page
-  privacy: {
-    badge: "Chính Sách Bảo Mật",
-    hero: {
-      title: "CHÍNH SÁCH BẢO MẬT",
-      subtitle: "Mercury Solutions cam kết bảo vệ quyền riêng tư và thông tin cá nhân của khách hàng với các biện pháp bảo mật tiên tiến nhất."
-    },
-    lastUpdated: "Cập nhật lần cuối",
-    generalPrinciples: {
-      title: "Nguyên Tắc Chung",
-      content: "Mercury Solutions cam kết bảo mật tuyệt đối thông tin cá nhân của khách hàng. Chính sách này mô tả cách chúng tôi thu thập, sử dụng và bảo vệ thông tin đó. Bằng việc truy cập và sử dụng website, bạn đồng ý với các điều khoản trong chính sách này."
-    },
-    dataCollection: {
-      title: "Phạm Vi Thu Thập Thông Tin Cá Nhân",
-      content: "Chúng tôi thu thập thông tin của bạn khi bạn sử dụng các dịch vụ trên website, bao gồm nhưng không giới hạn ở:",
-      items: [
-        {
-          title: "Thông tin liên hệ",
-          description: "Họ và tên, email, số điện thoại, tên công ty, chức vụ."
-        },
-        {
-          title: "Thông tin kỹ thuật",
-          description: "Địa chỉ IP, loại trình duyệt, hệ điều hành, thời gian truy cập, các trang đã xem, và các dữ liệu tương tác khác trên website."
-        },
-        {
-          title: "Thông tin khác",
-          description: "Mọi thông tin bạn cung cấp trong các biểu mẫu liên hệ, yêu cầu tư vấn hoặc các cuộc khảo sát."
-        }
-      ]
-    },
-    dataUsage: {
-      title: "Mục Đích Sử Dụng Thông Tin",
-      content: "Chúng tôi sử dụng thông tin cá nhân của bạn cho các mục đích sau:",
-      items: [
-        {
-          title: "Cung cấp dịch vụ",
-          description: "Hỗ trợ tư vấn, trả lời yêu cầu và cung cấp thông tin chi tiết về các dịch vụ của Mercury Solutions."
-        },
-        {
-          title: "Quản lý và cải thiện website",
-          description: "Phân tích hành vi người dùng để tối ưu hóa trải nghiệm, nội dung và giao diện website."
-        },
-        {
-          title: "Marketing và quảng bá",
-          description: "Gửi các bản tin, thông tin về các chương trình khuyến mãi, sự kiện, sản phẩm và dịch vụ mới (chỉ khi có sự đồng ý của bạn)."
-        },
-        {
-          title: "An toàn và bảo mật",
-          description: "Ngăn chặn các hoạt động gian lận, bảo vệ an toàn cho hệ thống và thông tin của người dùng."
-        }
-      ]
-    },
-    dataSecurity: {
-      title: "Cơ Chế Bảo Mật và Lưu Trữ Dữ Liệu",
-      content: "Chúng tôi áp dụng các biện pháp bảo mật tiên tiến để bảo vệ thông tin của bạn:",
-      items: [
-        {
-          title: "Mã hóa dữ liệu",
-          description: "Thông tin cá nhân được mã hóa bằng các công nghệ tiên tiến nhất để đảm bảo an toàn tuyệt đối."
-        },
-        {
-          title: "Máy chủ bảo mật",
-          description: "Thông tin được lưu trữ trên các máy chủ bảo mật tuân thủ các tiêu chuẩn bảo mật quốc tế."
-        },
-        {
-          title: "Kiểm soát truy cập",
-          description: "Áp dụng các quy trình kiểm soát truy cập nghiêm ngặt và tường lửa để ngăn chặn truy cập trái phép."
-        }
-      ]
-    },
-    dataSharing: {
-      title: "Chia Sẻ Thông Tin Cá Nhân",
-      content: "Chúng tôi cam kết không bán, cho thuê hoặc trao đổi thông tin cá nhân của bạn cho bất kỳ bên thứ ba nào, trừ các trường hợp sau:",
-      items: [
-        {
-          title: "Được sự đồng ý rõ ràng",
-          description: "Chỉ chia sẻ thông tin khi có sự đồng ý rõ ràng và cụ thể từ phía bạn."
-        },
-        {
-          title: "Đối tác tin cậy",
-          description: "Chia sẻ thông tin cần thiết với các đối tác tin cậy để hoàn thành hợp đồng dịch vụ, với cam kết bảo mật nghiêm ngặt."
-        },
-        {
-          title: "Yêu cầu pháp lý",
-          description: "Tuân thủ yêu cầu của các cơ quan nhà nước có thẩm quyền theo quy định pháp luật."
-        }
-      ]
-    },
-    userRights: {
-      title: "Quyền Của Người Dùng",
-      content: "Bạn có các quyền sau đối với thông tin cá nhân của mình:",
-      items: [
-        {
-          title: "Quyền truy cập và chỉnh sửa",
-          description: "Yêu cầu xem, chỉnh sửa hoặc cập nhật thông tin cá nhân của mình bất cứ lúc nào."
-        },
-        {
-          title: "Quyền xóa bỏ",
-          description: "Yêu cầu xóa bỏ thông tin cá nhân khỏi hệ thống của chúng tôi khi không còn cần thiết."
-        },
-        {
-          title: "Quyền từ chối",
-          description: "Từ chối việc xử lý thông tin cá nhân cho mục đích marketing hoặc quảng bá."
-        }
-      ]
-    },
-    contact: {
-      title: "Liên Hệ Về Chính Sách Bảo Mật",
-      description: "Nếu bạn có bất kỳ câu hỏi nào về chính sách bảo mật hoặc muốn thực hiện các quyền của mình, vui lòng liên hệ với chúng tôi:"
-    }
-  },
-
-  // Terms of Service Page
-  terms: {
-    badge: "Điều Khoản Dịch Vụ",
-    hero: {
-      title: "ĐIỀU KHOẢN DỊCH VỤ",
-      subtitle: "Điều khoản và điều kiện sử dụng dịch vụ của Mercury Solutions. Quy định về quyền lợi, trách nhiệm và các điều kiện sử dụng dịch vụ."
-    },
-    lastUpdated: "Cập nhật lần cuối",
-    introduction: {
-      title: "Giới Thiệu và Chấp Thuận Điều Khoản",
-      content: "Chào mừng bạn đến với website chính thức của Mercury Solutions. Việc truy cập và sử dụng các dịch vụ của chúng tôi đồng nghĩa với việc bạn đã đọc, hiểu và đồng ý tuân thủ toàn bộ các điều khoản và điều kiện được nêu dưới đây."
+      title: "SẴN SÀNG NÂNG TẦM THƯƠNG HIỆU NHÀ MÁY CỦA BẠN?",
+      subtitle: "Đừng để những câu chuyện về công nghệ và con người của bạn bị ẩn giấu. Hãy để chúng tôi giúp bạn kể chúng một cách ấn tượng nhất.",
+      description: "Điền thông tin vào form dưới đây, chuyên gia của Mercury Solutions sẽ liên hệ tư vấn miễn phí và gửi báo giá chi tiết trong vòng 8 giờ làm việc!",
+      form: {
+        name: "Họ và Tên*",
+        email: "Email*",
+        phone: "Số điện thoại*",
+        company: "Tên công ty",
+        requirements: "Nhu cầu của bạn (ví dụ: quay phim giới thiệu nhà máy 5 phút, quay quy trình sản xuất...)",
+        submit: "GỬI YÊU CẦU TƯ VẤN"
+      }
     },
     services: {
-      title: "Các Dịch Vụ Được Cung Cấp",
-      content: "Mercury Solutions cung cấp các dịch vụ cốt lõi sau:",
-      items: [
-        {
-          title: "Dịch vụ Chuyển đổi số",
-          description: "Phát triển ứng dụng web và mobile (hệ thống chấm công, quản lý phòng gym, khách sạn...), các giải pháp AI, Machine Learning, Computer Vision và các dịch vụ quản trị doanh nghiệp chuyên biệt."
-        },
-        {
-          title: "Dịch vụ Digital Marketing",
-          description: "Sản xuất TVC, phim giới thiệu doanh nghiệp và các giải pháp trình chiếu tương tác kết hợp với các đối tác uy tín như Naked Inc (Nhật Bản) và Panasonic Connect."
-        }
-      ]
+      title: "Chúng tôi làm gì",
+      subtitle: "Chúng tôi chuyên tạo nội dung TVC chiến lược nâng cao hình ảnh thương hiệu và thu hút nhân tài hàng đầu. Cách tiếp cận toàn diện kết hợp công nghệ tiên tiến với sự xuất sắc sáng tạo.",
+      consultation: {
+        title: "Tư vấn hợp tác",
+        description: "Chúng tôi bắt đầu với tư vấn chuyên sâu để hiểu mục tiêu kinh doanh, đối tượng mục tiêu và định vị thương hiệu của bạn."
+      },
+      concept: {
+        title: "Phát triển ý tưởng chiến lược",
+        description: "Đội ngũ sáng tạo của chúng tôi phát triển ý tưởng hấp dẫn phù hợp với mục tiêu kinh doanh và tạo tiếng vang với khán giả."
+      },
+      production: {
+        title: "Sản xuất điện ảnh",
+        description: "Thiết bị hiện đại và đội ngũ giàu kinh nghiệm đảm bảo tiêu chuẩn sản xuất chất lượng cao nhất."
+      },
+      postProduction: {
+        title: "Hậu kỳ xuất sắc",
+        description: "Chỉnh sửa, color grading và hiệu ứng hình ảnh tiên tiến để tạo nội dung chuyên nghiệp, hoàn thiện."
+      },
+      motionGraphics: {
+        title: "Motion Graphics & VFX",
+        description: "Animation và hiệu ứng hình ảnh tùy chỉnh nâng cao thông điệp và thu hút khán giả."
+      },
+      distribution: {
+        title: "Lập kế hoạch truyền thông & Phân phối chiến lược",
+        description: "Chiến lược phân phối toàn diện để tối đa hóa phạm vi tiếp cận và tác động trên tất cả nền tảng."
+      }
     },
-    customerRights: {
-      title: "Quyền và Trách Nhiệm Của Khách Hàng",
-      content: "Khách hàng có các quyền và trách nhiệm sau:",
-      items: [
-        {
-          title: "Tính chính xác của thông tin",
-          description: "Khách hàng phải đảm bảo thông tin cung cấp khi đăng ký hoặc sử dụng dịch vụ là chính xác và đầy đủ."
-        },
-        {
-          title: "Sử dụng hợp pháp",
-          description: "Khách hàng cam kết không sử dụng dịch vụ của Mercury Solutions cho bất kỳ mục đích bất hợp pháp nào, vi phạm quyền riêng tư, hoặc gây tổn hại đến người khác."
-        },
-        {
-          title: "Bảo mật tài khoản",
-          description: "Khách hàng chịu trách nhiệm bảo mật thông tin tài khoản (nếu có) và thông báo ngay cho chúng tôi nếu phát hiện bất kỳ dấu hiệu truy cập trái phép nào."
-        }
-      ]
+    features: {
+      consultation: ["Phân tích thương hiệu", "Lập kế hoạch chiến lược", "Hướng dẫn chuyên gia", "Đồng bộ tầm nhìn"],
+      concept: ["Phân tích DNA thương hiệu", "Tạo kể chuyện", "Đồng bộ marketing", "Nội dung hướng hành động"],
+      production: ["Chất lượng 4K/6K", "Thiết bị chuyên nghiệp", "Đội ngũ chuyên gia", "Tầm nhìn điện ảnh"],
+      postProduction: ["Chỉnh sửa chuyên nghiệp", "Color Grading", "Thiết kế âm thanh", "Davinci Resolve"],
+      motionGraphics: ["Animation 2D/3D", "Hiệu ứng hình ảnh", "Animation logo", "Infographics"],
+      distribution: ["Lập kế hoạch truyền thông", "Nhắm đối tượng", "Phân phối đa nền tảng", "Tối ưu ROI"]
     },
-    mercuryRights: {
-      title: "Quyền và Trách Nhiệm Của Mercury Solutions",
-      content: "Mercury Solutions có các quyền và trách nhiệm sau:",
-      items: [
-        {
-          title: "Chất lượng dịch vụ",
-          description: "Mercury Solutions cam kết cung cấp dịch vụ với chất lượng chuyên nghiệp, đúng theo các thỏa thuận và hợp đồng đã ký kết."
-        },
-        {
-          title: "Thay đổi dịch vụ",
-          description: "Chúng tôi có quyền tạm ngừng, thay đổi hoặc chấm dứt một phần hoặc toàn bộ các dịch vụ mà không cần báo trước trong trường hợp bất khả kháng hoặc khi cần thiết để bảo trì hệ thống."
-        },
-        {
-          title: "Giới hạn trách nhiệm",
-          description: "Mercury Solutions không chịu trách nhiệm đối với bất kỳ thiệt hại nào phát sinh do việc khách hàng vi phạm các điều khoản này, hoặc từ việc sử dụng các sản phẩm dịch vụ sai mục đích."
-        }
-      ]
-    },
-    intellectualProperty: {
-      title: "Quyền Sở Hữu Trí Tuệ",
-      content: "Quyền sở hữu trí tuệ được quy định như sau:",
-      items: [
-        {
-          title: "Nội dung website",
-          description: "Toàn bộ nội dung, hình ảnh, video và các tài liệu khác trên website thuộc quyền sở hữu của Mercury Solutions. Mọi hành vi sao chép, phân phối hoặc sử dụng trái phép đều bị nghiêm cấm."
-        },
-        {
-          title: "Sản phẩm phát triển",
-          description: "Đối với các sản phẩm được phát triển cho khách hàng (ví dụ: phần mềm, ứng dụng, TVC), quyền sở hữu trí tuệ sẽ được quy định chi tiết trong hợp đồng dịch vụ cụ thể."
-        }
-      ]
-    },
-    disputeResolution: {
-      title: "Giải Quyết Tranh Chấp",
-      content: "Mọi tranh chấp phát sinh trong quá trình sử dụng dịch vụ sẽ được ưu tiên giải quyết thông qua thương lượng, hòa giải trên tinh thần hợp tác. Nếu không thể đạt được thỏa thuận, một trong hai bên có quyền đưa vụ việc ra Tòa án có thẩm quyền tại Việt Nam để giải quyết theo quy định của pháp luật."
-    },
-    changes: {
-      title: "Thay Đổi Điều Khoản",
-      content: "Mercury Solutions có quyền điều chỉnh, bổ sung các điều khoản này vào bất kỳ thời điểm nào. Mọi thay đổi sẽ được đăng tải công khai trên website. Việc bạn tiếp tục sử dụng dịch vụ sau khi các thay đổi có hiệu lực được xem là bạn đã đồng ý với các điều khoản mới."
-    },
-    contact: {
-      title: "Liên Hệ Về Điều Khoản Dịch Vụ",
-      description: "Nếu bạn có bất kỳ câu hỏi nào về điều khoản dịch vụ hoặc cần làm rõ các quy định, vui lòng liên hệ với chúng tôi:"
+    descriptions: {
+      consultation: "Chúng tôi bắt đầu bằng việc hiểu thương hiệu, đối tượng mục tiêu và mục tiêu của bạn. Chúng tôi làm việc chặt chẽ, lắng nghe nhu cầu và đưa ra hướng dẫn chuyên gia.",
+      concept: "Chúng tôi phát triển ý tưởng TVC hấp dẫn vượt xa kịch bản đơn thuần. Chúng tôi đi sâu vào DNA thương hiệu để tạo kể chuyện phù hợp mục tiêu marketing.",
+      production: "Chúng tôi kết hợp chuyên môn kỹ thuật với tầm nhìn nghệ thuật, sử dụng thiết bị hiện đại (4K, 6K, Full HD) và chuyên gia giàu kinh nghiệm.",
+      postProduction: "Đội ngũ nội bộ gồm editors, colorists và sound designers tinh chỉnh mọi chi tiết bằng phần mềm hàng đầu như Davinci Resolve."
     }
   },
 
-  // AI Digital Transformation Page
-  aiTransformation: {
-    badge: "AI Excellence",
-    hero: {
-      title: "Bứt phá hiệu suất, mở lối tương lai.",
-      subtitle: "Chúng tôi đồng hành cùng doanh nghiệp khai phá tiềm năng vô tận của trí tuệ nhân tạo, kiến tạo quy trình thông minh và lợi thế cạnh tranh vượt trội trong kỷ nguyên số."
+  // Process
+  process: {
+    title: "Quy trình của chúng tôi",
+    subtitle: "Chúng tôi tuân theo phương pháp đã được chứng minh để cung cấp giải pháp chất lượng cao đáp ứng yêu cầu kinh doanh và vượt quá mong đợi.",
+    steps: {
+      plan: {
+        title: "Lập kế hoạch",
+        description: "Nhận yêu cầu và thông tin từ khách hàng, bao gồm tư vấn CNTT để đưa ra đề xuất và phát triển ước tính dự án theo mong đợi của họ.",
+        imageAlt: "Giai đoạn lập kế hoạch với thu thập yêu cầu và ước tính dự án"
+      },
+      design: {
+        title: "Thiết kế & Định nghĩa",
+        description: "Dựa trên đặc tả yêu cầu chuẩn bị tài liệu dự án, giúp ích cho các giai đoạn tiếp theo. Định nghĩa kiến trúc hệ thống tổng thể và công nghệ stack.",
+        imageAlt: "Giai đoạn thiết kế với wireframes và kiến trúc hệ thống"
+      },
+      build: {
+        title: "Xây dựng & Kiểm thử",
+        description: "Đội ngũ chuyên gia của chúng tôi sử dụng ngôn ngữ lập trình, kỹ thuật và phương pháp đã chọn để xây dựng phần mềm. Đánh giá chất lượng phát triển phần mềm.",
+        imageAlt: "Giai đoạn phát triển và kiểm thử với triển khai code"
+      },
+      deploy: {
+        title: "Triển khai & Bảo trì",
+        description: "Kết quả phần mềm cuối cùng được phát hành và kiểm tra các vấn đề triển khai nếu có. Theo thỏa thuận mức dịch vụ, chúng tôi đảm bảo bảo trì liên tục.",
+        imageAlt: "Giai đoạn triển khai và bảo trì với giám sát liên tục"
+      }
     },
-    stats: {
-      projects: "Dự án hoàn thành",
-      users: "Người dùng", 
-      uptime: "Uptime",
-      support: "Hỗ trợ"
+    benefits: {
+      title: "Tại sao chọn quy trình của chúng tôi?",
+      subtitle: "Cách tiếp cận có hệ thống đảm bảo minh bạch, chất lượng và giao hàng đúng hạn trong khi duy trì giao tiếp rõ ràng xuyên suốt.",
+      transparency: {
+        title: "Giao tiếp minh bạch",
+        description: "Cập nhật thường xuyên và giao tiếp rõ ràng ở mọi giai đoạn phát triển."
+      },
+      agile: {
+        title: "Phương pháp Agile",
+        description: "Cách tiếp cận phát triển linh hoạt với cải tiến lặp và phản hồi nhanh."
+      },
+      quality: {
+        title: "Đảm bảo chất lượng",
+        description: "Kiểm thử toàn diện và kiểm tra chất lượng đảm bảo giải pháp mạnh mẽ và đáng tin cậy."
+      }
+    }
+  },
+
+  // Projects
+  projects: {
+    title: "Dự án của chúng tôi",
+    subtitle: "Thể hiện chuyên môn và triển khai thành công của chúng tôi",
+    header: {
+      badge: "Ứng dụng hiệu suất cao",
+      title: "Chúng tôi xuất sắc trong việc xây dựng",
+      subtitle: "ứng dụng mobile và web có tải cao",
+      description: "Một số sản phẩm tiêu biểu chúng tôi đã thiết kế và xây dựng cho khách hàng ở nhiều ngành."
+    },
+    viewProject: "Xem dự án",
+    technologies: "Công nghệ",
+    platforms: "Nền tảng",
+    labels: {
+      features: "Tính năng chính:",
+      platforms: "Nền tảng:",
+      technologies: "Công nghệ:"
+    },
+    items: {
+      actiwell: {
+        title: "ACTIWELL Mobile & CMS",
+        description: "Với Actiwell, việc quản lý tập luyện và đặt lịch trở nên dễ dàng. Kiểm tra các slot có sẵn cho phòng gym hoặc trung tâm thể dục bất cứ lúc nào và nhanh chóng đặt sân Pickleball hoặc lớp Yoga.",
+        features: {
+          title: "Tính năng chính:",
+          items: [
+            "Lập lịch đơn giản hóa",
+            "Đặt lịch tự động",
+            "Quản lý khách hàng",
+            "Công cụ marketing"
+          ]
+        },
+        platforms: {
+          title: "Nền tảng:",
+          items: ["Ứng dụng Mobile", "Ứng dụng Web"]
+        },
+        technologies: {
+          title: "Công nghệ:",
+          items: ["Flutter", "React", "Laravel"]
+        }
+      },
+      timekeeping: {
+        title: "Hệ thống chấm công bằng AI Camera",
+        description: "Hệ thống quản lý chấm công cho nhà máy Fujikin Vietnam tích hợp camera AI để thu thập thông tin ra vào của nhân viên trong hệ thống.",
+        features: {
+          title: "Tính năng chính:",
+          items: [
+            "Tích hợp Camera AI",
+            "Quản lý chấm công",
+            "Tối ưu hóa HR",
+            "Giám sát thời gian thực"
+          ]
+        },
+        platforms: {
+          title: "Nền tảng:",
+          items: ["Ứng dụng Web"]
+        },
+        technologies: {
+          title: "Công nghệ:",
+          items: ["React", "Laravel", "AI/ML"]
+        }
+      },
+      myarm: {
+        title: "Ứng dụng Mobile myArm",
+        description: "MyArm là ứng dụng quản lý công việc và dự án giúp người dùng tổ chức nhiệm vụ hiệu quả và quản lý dự án thông minh.",
+        features: {
+          title: "Tính năng chính:",
+          items: [
+            "Quản lý dự án",
+            "Tổ chức nhiệm vụ",
+            "Cộng tác nhóm",
+            "Theo dõi deadline"
+          ]
+        },
+        platforms: {
+          title: "Nền tảng:",
+          items: ["Ứng dụng Mobile", "Ứng dụng Web"]
+        },
+        technologies: {
+          title: "Công nghệ:",
+          items: ["Flutter", "Laravel", "React"]
+        }
+      },
+      property: {
+        title: "Hệ thống Quản lý Bất động sản",
+        description: "Ứng dụng SaaS cho chủ khách sạn và doanh nhân quản lý khách sạn. Ứng dụng cung cấp quản lý chuỗi khách sạn đa chi nhánh và thời gian thực.",
+        features: {
+          title: "Tính năng chính:",
+          items: [
+            "Channel Manager",
+            "Room Control Unit",
+            "Tích hợp Camera AI",
+            "Quản lý đa chi nhánh"
+          ]
+        },
+        platforms: {
+          title: "Nền tảng:",
+          items: ["Ứng dụng Web", "Ứng dụng Mobile"]
+        },
+        technologies: {
+          title: "Công nghệ:",
+          items: ["React", "Node.js", "IoT"]
+        }
+      },
+      powerControl: {
+        title: "Nền tảng IoT Điều khiển Điện",
+        description: "Chúng tôi đã xây dựng nền tảng IoT thu thập trạng thái thiết bị IoT, phân tích dữ liệu tiêu thụ điện và điều khiển các thiết bị này qua cloud trong mili-giây.",
+        features: {
+          title: "Tính năng chính:",
+          items: [
+            "Tiết kiệm điện 30%",
+            "Điều khiển nhanh hơn 50%",
+            "Hỗ trợ 1M+ thiết bị",
+            "Phân tích thời gian thực"
+          ]
+        },
+        platforms: {
+          title: "Nền tảng:",
+          items: ["Nền tảng IoT", "Dashboard Web"]
+        },
+        technologies: {
+          title: "Công nghệ:",
+          items: ["IoT", "Cloud", "Analytics"]
+        }
+      },
+      airhub: {
+        title: "Airhub – Hướng dẫn địa phương của bạn",
+        description: "Ứng dụng web trực tuyến và được thiết kế tốt nhất cho webapp smartphone để cung cấp thông tin du lịch như bản đồ hướng dẫn địa phương, ưu đãi đặc biệt từ thương hiệu địa phương.",
+        features: {
+          title: "Tính năng chính:",
+          items: [
+            "Hướng dẫn địa phương",
+            "Virtual Frontdesk",
+            "Hỗ trợ AI",
+            "Ưu đãi địa phương"
+          ]
+        },
+        platforms: {
+          title: "Nền tảng:",
+          items: ["Ứng dụng Web", "Mobile Web"]
+        },
+        technologies: {
+          title: "Công nghệ:",
+          items: ["React", "AI/ML", "Maps API"]
+        }
+      }
+    },
+    cta: {
+      title: "Sẵn sàng bắt đầu dự án AI của bạn?",
+      description: "Hãy thảo luận cách chúng tôi có thể giúp bạn đạt được mục tiêu chuyển đổi số với các giải pháp AI và công nghệ tiên tiến của chúng tôi.",
+      button: "Khởi động dự án"
     }
   },
 
@@ -456,7 +613,105 @@ export const vi = {
     }
   },
 
+  // FAQ
+  faq: {
+    title: "Câu hỏi thường gặp",
+    subtitle: "Nhận câu trả lời cho các câu hỏi phổ biến về dịch vụ và quy trình của chúng tôi",
+    stillHaveQuestions: "Vẫn còn câu hỏi?",
+    contactTeam: "Đội ngũ của chúng tôi sẵn sàng giúp bạn hiểu quy trình và trả lời mọi câu hỏi.",
+    questions: {
+      tvcTypes: {
+        question: "Mercury Solutions chuyên về những loại dự án TVC nào?",
+        answer: "Mercury Solutions chuyên về nhiều loại dự án TVC bao gồm video thương hiệu doanh nghiệp, truyền thông nội bộ, ra mắt sản phẩm và ghi hình sự kiện. Chúng tôi làm việc trên nhiều ngành, tạo nội dung hấp dẫn mang lại kết quả cho bộ phận HR, Admin và Purchasing."
+      },
+      approach: {
+        question: "Mercury Solutions tiếp cận sản xuất TVC như thế nào?",
+        answer: "Chúng tôi áp dụng cách tiếp cận chiến lược, hợp tác trong sản xuất TVC. Bắt đầu với tư vấn chuyên sâu, chúng tôi phát triển ý tưởng phù hợp mục tiêu, thực hiện với xuất sắc kỹ thuật và đảm bảo hậu kỳ chất lượng cao. Mọi dự án đều được hưởng lợi từ chuyên môn end-to-end."
+      },
+      custom: {
+        question: "Mercury Solutions có thể xử lý giải pháp TVC tùy chỉnh không?",
+        answer: "Chúng tôi tự hào tạo giải pháp TVC tùy chỉnh đáp ứng nhu cầu cụ thể. Dù bạn cần series video đào tạo, phim thương hiệu doanh nghiệp hay showcase sản phẩm, chúng tôi điều chỉnh cách tiếp cận để cung cấp chính xác những gì bạn cần."
+      },
+      equipment: {
+        question: "Mercury Solutions sử dụng thiết bị và công nghệ gì?",
+        answer: "Chúng tôi sử dụng thiết bị hiện đại bao gồm camera 4K và 6K, hệ thống ánh sáng tiên tiến và phần mềm hậu kỳ hàng đầu như Davinci Resolve. Khả năng kỹ thuật đảm bảo output chất lượng cao nhất cho dự án TVC."
+      },
+      timeline: {
+        question: "Dự án TVC điển hình mất bao lâu?",
+        answer: "Timeline dự án thay đổi tùy độ phức tạp và phạm vi. Video doanh nghiệp đơn giản có thể mất 2-3 tuần, trong khi TVC phức tạp với nhiều địa điểm và hiệu ứng hậu kỳ có thể mất 6-8 tuần. Chúng tôi cung cấp timeline chi tiết trong giai đoạn tư vấn."
+      },
+      difference: {
+        question: "Điều gì làm Mercury Solutions khác biệt so với các công ty sản xuất TVC khác?",
+        answer: "Sự kết hợp độc đáo giữa chuyên môn kỹ thuật, xuất sắc sáng tạo và hiểu biết kinh doanh chiến lược làm chúng tôi nổi bật. Chúng tôi không chỉ tạo video đẹp - chúng tôi tạo nội dung chiến lược thúc đẩy kết quả kinh doanh và nâng cao định vị thương hiệu."
+      },
+      budget: {
+        question: "Ngân sách điển hình cho dự án TVC là bao nhiêu?",
+        answer: "Ngân sách dự án TVC thay đổi đáng kể dựa trên phạm vi, độ phức tạp và yêu cầu sản xuất. Video doanh nghiệp đơn giản thường từ $5,000-$15,000, trong khi sản xuất TVC cao cấp có thể từ $20,000-$100,000+. Chúng tôi cung cấp breakdown chi phí chi tiết trong tư vấn để đảm bảo minh bạch và giá trị."
+      },
+      revisions: {
+        question: "Bao nhiêu lần chỉnh sửa được bao gồm trong dịch vụ TVC?",
+        answer: "Chúng tôi bao gồm 2-3 vòng chỉnh sửa trong gói TVC tiêu chuẩn để đảm bảo hài lòng hoàn toàn. Chỉnh sửa bổ sung có sẵn với giá hợp lý. Chúng tôi tin vào phản hồi hợp tác để đạt sản phẩm cuối hoàn hảo đáp ứng tầm nhìn và mục tiêu."
+      },
+      delivery: {
+        question: "Bạn giao TVC cuối cùng ở định dạng nào?",
+        answer: "Chúng tôi giao dự án TVC cuối cùng ở nhiều định dạng bao gồm file HD/4K sẵn sàng phát sóng, phiên bản tối ưu web, định dạng mạng xã hội và phiên bản thân thiện mobile. Chúng tôi đảm bảo tương thích trên tất cả nền tảng và cung cấp thông số kỹ thuật chi tiết cho mỗi định dạng giao hàng."
+      },
+      rights: {
+        question: "Ai sở hữu quyền nội dung TVC sau sản xuất?",
+        answer: "Sau khi thanh toán đầy đủ, bạn sở hữu tất cả quyền nội dung TVC cuối cùng. Chúng tôi chỉ giữ quyền showcase công việc trong portfolio. Chúng tôi cung cấp thỏa thuận cấp phép rõ ràng và có thể thảo luận quyền độc quyền hoặc điều khoản sử dụng mở rộng dựa trên nhu cầu cụ thể."
+      }
+    }
+  },
+
   // Footer
+  home: {
+    eyebrow: "Giới thiệu",
+    title: "Mercury Solutions",
+    intro1: "Thành lập từ năm 2020, Mercury Solutions Việt Nam là công ty công nghệ chuyên cung cấp các giải pháp chuyển đổi số và phát triển phần mềm theo yêu cầu cho doanh nghiệp.",
+    intro2: "Chúng tôi đã đồng hành cùng nhiều khách hàng trong và ngoài nước, bao gồm Nhật Bản, Singapore, Úc cùng nhiều doanh nghiệp và cơ quan nhà nước tại Việt Nam.",
+    direction: {
+      title: "Định hướng",
+      items: [
+        { title: "Tầm nhìn", text: "Trở thành đối tác công nghệ uy tín, tiên phong cung cấp giải pháp số toàn diện cho doanh nghiệp trong và ngoài nước." },
+        { title: "Sứ mệnh", text: "Đồng hành cùng doanh nghiệp trên hành trình chuyển đổi số, mang đến giải pháp sáng tạo, hiệu quả và bền vững." },
+        { title: "Hành động", text: "Lấy khách hàng làm trung tâm, lấy chất lượng làm cam kết và đổi mới sáng tạo làm động lực." },
+      ]
+    },
+    clients: {
+      title: "Khách hàng",
+      text: "Mercury Solutions phục vụ khách hàng tại Việt Nam, Nhật Bản, Singapore và Úc, từ tập đoàn sản xuất, chuỗi fitness, giáo dục mầm non đến cơ quan nhà nước."
+    },
+    cta: {
+      title: "Sẵn sàng đồng hành cùng doanh nghiệp của bạn?",
+      subtitle: "Chia sẻ nhu cầu của bạn, đội ngũ Mercury sẽ tư vấn giải pháp phù hợp."
+    }
+  },
+
+  insights: {
+    badge: "Góc nhìn",
+    title: "Ý tưởng giúp doanh nghiệp tiến xa hơn",
+    subtitle: "Những chia sẻ thực tế từ đội ngũ Mercury về AI, thị giác máy tính và chuyển đổi số.",
+    readMore: "Trao đổi chủ đề này",
+    items: [
+      { category: "AI & Tự động hóa", title: "Bắt đầu ứng dụng AI từ đâu cho doanh nghiệp vừa", excerpt: "Cách chọn bài toán đầu tiên, đo lường ROI và mở rộng an toàn." },
+      { category: "Thị giác máy tính", title: "Thị giác máy tính trong nhà máy", excerpt: "Kiểm tra bằng hình ảnh giúp giảm lỗi và thời gian kiểm tra thủ công trên dây chuyền." },
+      { category: "Chuyển đổi số", title: "Xây dựng ứng dụng web và di động tải cao", excerpt: "Các lựa chọn kiến trúc giúp sản phẩm nhanh và ổn định khi lượng truy cập tăng." },
+    ]
+  },
+
+  careers: {
+    badge: "Tuyển dụng",
+    title: "Cùng xây dựng thế hệ sản phẩm AI tiếp theo",
+    subtitle: "Chúng tôi là đội ngũ kỹ sư và nhà thiết kế yêu thích những bài toán khó. Gia nhập Mercury Solutions để phát triển cùng các dự án thực tế.",
+    perks: [
+      { title: "Tác động thực tế", text: "Phát triển sản phẩm AI và phần mềm được doanh nghiệp khắp châu Á sử dụng." },
+      { title: "Phát triển nhanh", text: "Học hỏi từ kỹ sư giàu kinh nghiệm, sớm có cơ hội dẫn dắt dự án." },
+      { title: "Đội ngũ tuyệt vời", text: "Văn hóa hợp tác, ham học hỏi tại Hà Nội, làm việc linh hoạt." },
+    ],
+    cta: "Gửi CV cho chúng tôi",
+    note: "Chưa có vị trí phù hợp? Hãy gửi CV, chúng tôi luôn muốn gặp người tài."
+  },
+
   footer: {
     description: "Tại Mercury Solutions, chúng tôi tập trung vào thị giác máy tính và triển khai trực quan hóa dữ liệu để cung cấp giải pháp quản lý tốt hơn cho doanh nghiệp từ SMEs đến MNCs.",
     services: "Dịch vụ",
@@ -495,6 +750,7 @@ export const vi = {
 
   // Common
   common: {
+    getConsultation: "Nhận tư vấn",
     learnMore: "Tìm hiểu thêm",
     getStarted: "Bắt đầu",
     contactUs: "Liên hệ chúng tôi",
@@ -512,2221 +768,7 @@ export const vi = {
     open: "Mở",
     yes: "Có",
     no: "Không",
-    ok: "OK",
-    explorePortfolio: "Khám phá portfolio"
-  },
-
-  // Technology Stack
-  technology: {
-    title: "Công Nghệ Chúng Tôi Sử Dụng",
-    subtitle: "Công nghệ và framework tiên tiến thúc đẩy các giải pháp AI và đổi mới số của chúng tôi. Luôn phát triển, luôn cải tiến.",
-    badge: "Stack Công Nghệ Tiên Tiến",
-    categories: {
-      frontend: "Frontend",
-      backend: "Backend",
-      database: "Database",
-      devops: "DevOps",
-      mobile: "Mobile",
-      ai: "AI & ML"
-    },
-    additional: {
-      title: "Công Nghệ Bổ Sung & Công Cụ Đổi Mới",
-      subtitle: "Giải pháp giám sát, kiểm thử và tích hợp tiên tiến đảm bảo hiệu suất tối ưu",
-      sections: {
-        monitoring: "Giám Sát",
-        logManagement: "Quản Lý Log",
-        testing: "Kiểm Thử",
-        integration: "Tích Hợp"
-      }
-    }
-  },
-
-  // Process
-  process: {
-    title: "Quy Trình Của Chúng Tôi",
-    subtitle: "Chúng tôi tuân theo một phương pháp đã được chứng minh để cung cấp các giải pháp chất lượng cao đáp ứng yêu cầu kinh doanh và vượt quá mong đợi.",
-    steps: {
-      plan: {
-        title: "Lập Kế Hoạch",
-        description: "Nhận yêu cầu và thông tin từ khách hàng, bao gồm tư vấn CNTT để đưa ra đề xuất và phát triển ước tính dự án theo mong đợi của họ.",
-        imageAlt: "Giai đoạn lập kế hoạch với thu thập yêu cầu và ước tính dự án"
-      },
-      design: {
-        title: "Thiết Kế & Định Nghĩa",
-        description: "Dựa trên đặc tả yêu cầu chuẩn bị tài liệu dự án, giúp ích cho các giai đoạn tiếp theo. Định nghĩa kiến trúc hệ thống tổng thể và stack công nghệ.",
-        imageAlt: "Giai đoạn thiết kế với wireframes và kiến trúc hệ thống"
-      },
-      build: {
-        title: "Xây Dựng & Kiểm Thử",
-        description: "Đội ngũ chuyên gia của chúng tôi sử dụng ngôn ngữ lập trình, kỹ thuật và phương pháp đã chọn để xây dựng phần mềm. Đánh giá chất lượng phát triển phần mềm.",
-        imageAlt: "Giai đoạn phát triển và kiểm thử với triển khai code"
-      },
-      deploy: {
-        title: "Triển Khai & Bảo Trì",
-        description: "Sản phẩm phần mềm cuối cùng được phát hành và kiểm tra các vấn đề triển khai nếu có. Theo thỏa thuận mức dịch vụ, chúng tôi đảm bảo bảo trì liên tục.",
-        imageAlt: "Giai đoạn triển khai và bảo trì với giám sát liên tục"
-      }
-    },
-    benefits: {
-      title: "Tại Sao Chọn Quy Trình Của Chúng Tôi?",
-      subtitle: "Cách tiếp cận có hệ thống của chúng tôi đảm bảo tính minh bạch, chất lượng và giao hàng đúng hạn cho các dự án của bạn trong khi duy trì giao tiếp rõ ràng xuyên suốt.",
-      transparency: {
-        title: "Giao Tiếp Minh Bạch",
-        description: "Cập nhật thường xuyên và giao tiếp rõ ràng ở mọi giai đoạn phát triển."
-      },
-      agile: {
-        title: "Phương Pháp Agile",
-        description: "Cách tiếp cận phát triển linh hoạt với cải tiến lặp lại và phản hồi nhanh."
-      },
-      quality: {
-        title: "Đảm Bảo Chất Lượng",
-        description: "Kiểm thử toàn diện và kiểm tra chất lượng để đảm bảo các giải pháp mạnh mẽ và đáng tin cậy."
-      }
-    }
-  },
-
-  // Projects
-  projects: {
-    title: "Dự Án Của Chúng Tôi",
-    subtitle: "Thể hiện chuyên môn và triển khai thành công của chúng tôi",
-    header: {
-      badge: "Ứng Dụng Hiệu Suất Cao",
-      title: "Chúng tôi xuất sắc trong việc xây dựng",
-      subtitle: "ứng dụng mobile và web có tải cao",
-      description: "Khám phá portfolio các dự án thành công thể hiện chuyên môn của chúng tôi trong việc cung cấp giải pháp sáng tạo trên nhiều ngành với công nghệ tiên tiến."
-    },
-    viewProject: "Xem Dự Án",
-    technologies: "Công Nghệ",
-    platforms: "Nền Tảng",
-    labels: {
-      features: "Tính Năng Chính:",
-      platforms: "Nền Tảng:",
-      technologies: "Công Nghệ:",
-      visitWebsite: "Truy Cập Website Chính Thức"
-    },
-    items: {
-      actiwell: {
-        title: "Actiwell: Nền Tảng AI Toàn Diện Cho Chuỗi Phòng Gym & Thể Dục",
-        description: "Mercury Solutions đã hợp tác chiến lược cùng Attivo International—tập đoàn có hơn 20 năm kinh nghiệm hàng đầu Đông Nam Á—để kiến tạo Actiwell. Đây là một hệ sinh thái 'tất cả trong một' bao gồm ứng dụng di động cho hội viên và hệ thống CMS mạnh mẽ cho nhà quản lý, tích hợp các tính năng AI độc đáo để cá nhân hóa lộ trình tập luyện và tự động hóa marketing. Tối ưu hóa vận hành, nâng cao trải nghiệm và sự trung thành của hội viên, đồng thời thúc đẩy tăng trưởng doanh thu bền vững cho chuỗi.",
-        features: {
-          title: "Tính Năng Chính:",
-          items: [
-            "Hệ Thống Đặt Lịch Thông Minh",
-            "Quản Lý Hội Viên & Gói Tập",
-            "Tự Động Hóa Marketing",
-            "Phân Tích Dữ Liệu AI"
-          ]
-        },
-        platforms: {
-          title: "Nền Tảng:",
-          items: ["Ứng Dụng Mobile", "Ứng Dụng Web"]
-        },
-        technologies: {
-          title: "Công Nghệ:",
-          items: ["Flutter", "React", "Laravel"]
-        },
-        website: "/actiwell-platform"
-      },
-      timekeeping: {
-        title: "TNA HRM System: Chuyển Đổi Số Cho Ngành Sản Xuất",
-        description: "Hợp tác cùng tập đoàn Fujikin (Nhật Bản), Mercury đã phát triển một hệ thống quản trị nhân sự chuyên sâu cho ngành sản xuất. Tích hợp AI Camera để nhận diện và chấm công tự động, hệ thống số hóa toàn bộ quy trình từ theo dõi ra vào, quản lý ca làm việc đến tính toán và thanh toán lương. Chấm dứt kỷ nguyên quản trị bằng Excel. Giải phóng bộ phận nhân sự khỏi các tác vụ thủ công, đảm bảo chính xác tuyệt đối, minh bạch trong lương thưởng và cung cấp dashboard phân tích theo thời gian thực.",
-        features: {
-          title: "Tính Năng Chính:",
-          items: [
-            "Tích Hợp Camera AI",
-            "Quản Lý Chấm Công Tự Động",
-            "Tối Ưu Hóa Quy Trình HR",
-            "Giám Sát Thời Gian Thực"
-          ]
-        },
-        platforms: {
-          title: "Nền Tảng:",
-          items: ["Ứng Dụng Web", "Ứng Dụng Di Động"]
-        },
-        technologies: {
-          title: "Công Nghệ:",
-          items: ["React", "Laravel", "AI/Trí Tuệ Nhân Tạo"]
-        },
-        website: "/tna-system"
-      },
-      myarm: {
-        title: "MyARM: Dự Án Mercury Triển Khai Cho MyArms Nhật Bản",
-        description: "Cho khách hàng MyArms tại Nhật Bản, Mercury Solutions đã triển khai một nền tảng workflow production hợp nhất jobs, missions, meetings, tài liệu và notifications trên mobile lẫn web. Dự án này cho thấy cách Mercury biến bài toán vận hành phức tạp thành phần mềm mà đội ngũ thực tế có thể sử dụng mỗi ngày.",
-        features: {
-          title: "Tính Năng Chính:",
-          items: [
-            "Triển khai đa nền tảng với logic sản phẩm dùng chung",
-            "Thiết kế workflow cho jobs, meetings và điều phối đội nhóm",
-            "Kiến trúc dịch vụ Laravel cho app APIs và domain tái sử dụng",
-            "Phát hành sẵn sàng lên iOS, Android và website chính thức"
-          ]
-        },
-        platforms: {
-          title: "Nền Tảng:",
-          items: ["Ứng Dụng Mobile", "Ứng Dụng Web"]
-        },
-        technologies: {
-          title: "Công Nghệ:",
-          items: ["Flutter", "Laravel", "React"]
-        },
-        website: "/myarm"
-      },
-      property: {
-        title: "Minova PMS: Định Nghĩa Lại Quản Lý Khách Sạn Trong Kỷ Nguyên Di Động",
-        description: "Cùng với Minova Hospitality Group—đơn vị vận hành chuỗi khách sạn boutique danh tiếng, chúng tôi đã tạo ra một cuộc cách mạng. Minova PMS là hệ thống quản lý khách sạn với ứng dụng di động Native iOS đầu tiên tại Việt Nam, cho phép quản lý mọi hoạt động—từ đồng bộ kênh bán phòng (Channel Manager) đến điều khiển thiết bị trong phòng (IoT)—ngay trên tay. Giúp nhà quản lý thoát khỏi bàn làm việc, đưa ra quyết định tức thì, tối ưu hóa công suất phòng và nâng cao trải nghiệm khách hàng ngay tại sảnh.",
-        features: {
-          title: "Tính Năng Chính:",
-          items: [
-            "Channel Manager",
-            "Room Control Unit (IoT)",
-            "Tích Hợp Camera AI",
-            "Quản Lý Đa Chi Nhánh"
-          ]
-        },
-        platforms: {
-          title: "Nền Tảng:",
-          items: ["Ứng Dụng Web", "Ứng Dụng Mobile"]
-        },
-        technologies: {
-          title: "Công Nghệ:",
-          items: ["React", "Node.js", "IoT (Internet Vạn Vật)"]
-        },
-        website: "/minova-pms"
-      },
-      powerControl: {
-        title: "OTA Calculator: Công Cụ Tính Giá Thông Minh Cho Khách Sạn",
-        description: "OTA Calculator (ota.minova.vn) là một công cụ thông minh, được thiết kế chuyên biệt cho ngành khách sạn. Chỉ với vài thao tác, hệ thống giúp đội ngũ kinh doanh dự báo chính xác mức giá cuối cùng khách hàng thấy và số tiền thực nhận sau khi trừ mọi chi phí. Công cụ này loại bỏ hoàn toàn việc tính toán thủ công bằng Excel.",
-        features: {
-          title: "Tính Năng Chính:",
-          items: [
-            "Quản Lý Hoa Hồng OTA",
-            "Tính Giá Hiển Thị & Giá Thu Về",
-            "So Sánh Kịch Bản Giá",
-            "Giao Diện Trực Quan"
-          ]
-        },
-        platforms: {
-          title: "Nền Tảng:",
-          items: ["Ứng Dụng Web"]
-        },
-        technologies: {
-          title: "Công Nghệ:",
-          items: ["React", "Node.js"]
-        },
-        website: "/ota-calculator"
-      },
-      airhub: {
-        title: "Visual-First Booking Engine: Bán Trải Nghiệm, Không Chỉ Bán Phòng",
-        description: "Chúng tôi tái định nghĩa trải nghiệm đặt phòng với concept 'hình ảnh là ưu tiên'. Booking Engine của Mercury (tmha.minova.vn, 69bq.minova.vn) gây ấn tượng thị giác mạnh mẽ ngay từ đầu với một 'Picture Tour' (Tour bằng hình ảnh) lôi cuốn. Sau khi khơi gợi được cảm xúc và mong muốn, hệ thống mới mượt mà dẫn dắt khách hàng đến việc xem các hạng phòng và giá cả trên một giao diện được tối ưu hoàn hảo cho di động.",
-        features: {
-          title: "Tính Năng Chính:",
-          items: [
-            "Ưu Tiên Tour Hình Ảnh",
-            "Giao Diện Tối Ưu Cho Di Động",
-            "Quy Trình Đặt Phòng 3 Bước",
-            "Tích Hợp Cổng Thanh Toán"
-          ]
-        },
-        platforms: {
-          title: "Nền Tảng:",
-          items: ["Ứng Dụng Web (Mobile-First)"]
-        },
-        technologies: {
-          title: "Công Nghệ:",
-          items: ["React", "Node.js"]
-        },
-        website: "https://tmha.minova.vn"
-      },
-      nightlife: {
-        title: "Night Life CRM: Nền Tảng CRM Vận Hành Cho Club & Lounge",
-        description: "Mercury Night Life CRM là nền tảng đa tenant cho venue nightlife, hợp nhất dữ liệu khách, phân khúc, đặt bàn, waitlist và điều phối sàn theo thời gian thực. Hệ thống liên kết vận hành tại chỗ với chiến dịch marketing tuân thủ và chỉ số SLA rõ ràng.",
-        features: {
-          title: "Tính Năng Chính:",
-          items: [
-            "Hồ sơ khách hợp nhất và nhận diện đa kênh",
-            "Đặt bàn, hàng chờ và vận hành bàn theo thời gian thực",
-            "Chiến dịch Email/SMS/WhatsApp có kiểm soát consent",
-            "Bảo mật đa tenant và kiểm toán tuân thủ"
-          ]
-        },
-        platforms: {
-          title: "Nền Tảng:",
-          items: ["Ứng Dụng Web", "Ứng Dụng Mobile Vận Hành"]
-        },
-        technologies: {
-          title: "Công Nghệ:",
-          items: ["Next.js", "PHP API", "MySQL/MariaDB"]
-        },
-        website: "/hospitality/nightclub-crm"
-      },
-      quickshift: {
-        title: "QuickShift: Quản Lý Nhân Sự Thời Vụ AI",
-        description: "Phát triển cho thị trường nhân sự Nhật Bản hợp tác cùng Care Earth Inc., QuickShift là nền tảng quản lý nhân sự thời vụ toàn diện, số hóa toàn bộ quy trình từ OCR bảng chấm công bằng AI, lập lịch ca tự động đến quản lý đơn hàng, xuất hóa đơn và thông báo đa kênh. Hệ thống loại bỏ các quy trình thủ công, giúp doanh nghiệp mở rộng vận hành hiệu quả cho người lao động, khách hàng và quản lý.",
-        features: {
-          title: "Tính Năng Chính:",
-          items: [
-            "OCR Bảng Chấm Công AI (Gemini AI)",
-            "Lập Lịch Tự Động — Auto Shifter",
-            "Quản Lý Đơn Hàng & Hóa Đơn",
-            "Thông Báo Đa Kênh (LINE/Zalo)"
-          ]
-        },
-        platforms: {
-          title: "Nền Tảng:",
-          items: ["Ứng Dụng Web", "Ứng Dụng Di Động"]
-        },
-        technologies: {
-          title: "Công Nghệ:",
-          items: ["Next.js", "Golang (Chi)", "Flutter"]
-        },
-        website: "/quickshift"
-      },
-      atms: {
-        title: "Actiwell ATMS: Quản Lý Huấn Luyện Thể Thao",
-        description: "Actiwell ATMS số hóa toàn bộ vận hành huấn luyện: kiểm tra thể lực chuẩn hóa, tổ chức đợt kiểm tra theo trạm, phân tích chu kỳ huấn luyện và quản trị đa cơ sở. Giải pháp được phát triển phối hợp với Trung tâm Huấn luyện Thể thao Quốc gia Việt Nam.",
-        features: {
-          title: "Tính Năng Chính:",
-          items: [
-            "Chuẩn hóa 30+ bài test theo NSCA",
-            "Quản lý đợt kiểm tra và nhập liệu theo trạm",
-            "Theo dõi chu kỳ huấn luyện (Volume/Intensity)",
-            "Điều hành đa cơ sở từ cấp tỉnh đến cấp quốc gia"
-          ]
-        },
-        platforms: {
-          title: "Nền Tảng:",
-          items: ["Ứng Dụng Web"]
-        },
-        technologies: {
-          title: "Công Nghệ:",
-          items: ["Next.js", "Golang (Gin)", "PostgreSQL"]
-        },
-        website: "/actiwell-atms"
-      },
-      contcal: {
-        title: "ContCal: Tối Ưu Hóa Xếp Container 3D",
-        description: "Hệ thống tối ưu hóa xếp container bằng AI, tối đa hóa sử dụng không gian đến 90%+, giảm chi phí vận chuyển 10-15%, và rút ngắn thời gian lập kế hoạch từ hàng giờ xuống vài phút. Trực quan hóa 3D tương tác với 20+ quy tắc nghiệp vụ tự động cho logistics nội thất.",
-        features: {
-          title: "Tính Năng Chính:",
-          items: [
-            "Xếp Container 3D với Thuật Toán Beam Search",
-            "Trực Quan Hóa Container 3D Tương Tác",
-            "20+ Quy Tắc Nghiệp Vụ & An Toàn Tự Động",
-            "Quản Lý Nhóm Ưu Tiên Đa Điểm Giao"
-          ]
-        },
-        platforms: {
-          title: "Nền Tảng:",
-          items: ["Ứng Dụng Web"]
-        },
-        technologies: {
-          title: "Công Nghệ:",
-          items: ["React", "Go", "Three.js"]
-        },
-        website: "/container-calculator"
-      }
-    },
-    categories: {
-      hrTech: {
-        title: "Giải Pháp HR Tech",
-        description: "Giải pháp chuyển đổi số cho quản lý nhân sự, lập lịch nhân viên và vận hành doanh nghiệp."
-      },
-      sportTech: {
-        title: "Giải Pháp Sport Tech",
-        description: "Nền tảng toàn diện cho chuỗi phòng gym, quản lý fitness và trung tâm huấn luyện thể thao."
-      },
-      hotelTech: {
-        title: "Giải Pháp Hotel Tech",
-        description: "Giải pháp khách sạn thông minh cho quản lý tài sản, hệ thống đặt phòng và vận hành khách sạn."
-      },
-      hospitalityTech: {
-        title: "Nightlife Hospitality",
-        description: "CRM vận hành cho club, lounge và bar với dữ liệu khách, điều phối sàn và tương tác khách hàng tuân thủ."
-      },
-      businessOpt: {
-        title: "Tối Ưu Hóa Kinh Doanh",
-        description: "Công cụ thông minh cho hiệu quả vận hành, tối ưu hóa logistics và quản lý doanh nghiệp đa chức năng."
-      }
-    },
-    cta: {
-      title: "Sẵn Sàng Bắt Đầu Dự Án AI Của Bạn?",
-      description: "Hãy thảo luận cách chúng tôi có thể giúp bạn đạt được mục tiêu chuyển đổi số với các giải pháp AI và công nghệ tiên tiến của chúng tôi.",
-      button: "Khởi Động Dự Án"
-    }
-  },
-
-  // FAQ
-  faq: {
-    title: "Câu Hỏi Thường Gặp",
-    subtitle: "Nhận câu trả lời cho các câu hỏi phổ biến về dịch vụ và quy trình của chúng tôi",
-    stillHaveQuestions: "Vẫn Còn Câu Hỏi?",
-    contactTeam: "Đội ngũ chúng tôi ở đây để giúp bạn hiểu quy trình và trả lời mọi câu hỏi bạn có thể có.",
-    questions: {
-      tvcTypes: {
-        question: "Mercury Solutions Chuyên Về Các Loại Dự Án TVC Nào?",
-        answer: "Mercury Solutions chuyên về nhiều loại dự án TVC bao gồm video thương hiệu doanh nghiệp, truyền thông nội bộ, ra mắt sản phẩm và ghi hình sự kiện. Chúng tôi làm việc trên nhiều ngành khác nhau, tạo nội dung hấp dẫn thúc đẩy kết quả cho các phòng ban HR, Admin và Purchasing."
-      },
-      approach: {
-        question: "Mercury Solutions Tiếp Cận Sản Xuất TVC Như Thế Nào?",
-        answer: "Chúng tôi áp dụng cách tiếp cận chiến lược, hợp tác trong sản xuất TVC. Bắt đầu với tư vấn chuyên sâu, chúng tôi phát triển các khái niệm phù hợp với mục tiêu của bạn, thực hiện với sự xuất sắc kỹ thuật và đảm bảo hậu kỳ chất lượng cao. Mọi dự án đều được hưởng lợi từ chuyên môn end-to-end của chúng tôi."
-      },
-      custom: {
-        question: "Mercury Solutions Có Thể Xử Lý Giải Pháp TVC Tùy Chỉnh Không?",
-        answer: "Chúng tôi tự hào tạo ra các giải pháp TVC tùy chỉnh đáp ứng nhu cầu cụ thể của bạn. Dù bạn cần một loạt video đào tạo, phim thương hiệu doanh nghiệp hay trình diễn sản phẩm, chúng tôi điều chỉnh cách tiếp cận để cung cấp chính xác những gì bạn cần."
-      },
-      equipment: {
-        question: "Mercury Solutions Sử Dụng Thiết Bị Và Công Nghệ Gì?",
-        answer: "Chúng tôi sử dụng thiết bị tiên tiến bao gồm máy quay 4K và 6K, hệ thống ánh sáng tiên tiến và phần mềm hậu kỳ hàng đầu như Davinci Resolve. Khả năng kỹ thuật của chúng tôi đảm bảo đầu ra chất lượng cao nhất cho các dự án TVC của bạn."
-      },
-      timeline: {
-        question: "Một Dự Án TVC Điển Hình Mất Bao Lâu?",
-        answer: "Thời gian dự án thay đổi tùy thuộc vào độ phức tạp và phạm vi. Một video doanh nghiệp đơn giản có thể mất 2-3 tuần, trong khi TVC phức tạp với nhiều địa điểm và hiệu ứng hậu kỳ có thể mất 6-8 tuần. Chúng tôi cung cấp timeline chi tiết trong giai đoạn tư vấn."
-      },
-      difference: {
-        question: "Điều Gì Làm Mercury Solutions Khác Biệt So Với Các Công Ty Sản Xuất TVC Khác?",
-        answer: "Sự kết hợp độc đáo của chuyên môn kỹ thuật, sự xuất sắc sáng tạo và hiểu biết kinh doanh chiến lược làm chúng tôi nổi bật. Chúng tôi không chỉ tạo ra những video đẹp - chúng tôi tạo ra nội dung chiến lược thúc đẩy kết quả kinh doanh và nâng tầm định vị thương hiệu của bạn."
-      },
-      budget: {
-        question: "Phạm vi ngân sách điển hình cho dự án TVC là gì?",
-        answer: "Ngân sách dự án TVC thay đổi đáng kể dựa trên phạm vi, độ phức tạp và yêu cầu sản xuất. Video doanh nghiệp đơn giản thường dao động từ $5,000-$15,000, trong khi sản xuất TVC cao cấp có thể dao động từ $20,000-$100,000+. Chúng tôi cung cấp phân tích chi phí chi tiết trong quá trình tư vấn để đảm bảo tính minh bạch và giá trị."
-      },
-      revisions: {
-        question: "Bao nhiêu lần chỉnh sửa được bao gồm trong dịch vụ TVC của bạn?",
-        answer: "Chúng tôi bao gồm 2-3 vòng chỉnh sửa trong các gói TVC tiêu chuẩn để đảm bảo sự hài lòng hoàn toàn của bạn. Các chỉnh sửa bổ sung có sẵn với mức giá hợp lý. Chúng tôi tin vào phản hồi hợp tác để đạt được sản phẩm cuối cùng hoàn hảo đáp ứng tầm nhìn và mục tiêu của bạn."
-      },
-      delivery: {
-        question: "Bạn giao sản phẩm TVC cuối cùng ở định dạng nào?",
-        answer: "Chúng tôi giao các dự án TVC cuối cùng ở nhiều định dạng bao gồm file HD/4K sẵn sàng phát sóng, phiên bản tối ưu cho web, định dạng mạng xã hội và phiên bản thân thiện với mobile. Chúng tôi đảm bảo tương thích trên tất cả nền tảng và cung cấp thông số kỹ thuật chi tiết cho mỗi định dạng giao hàng."
-      },
-      rights: {
-        question: "Ai sở hữu quyền đối với nội dung TVC sau khi sản xuất?",
-        answer: "Sau khi thanh toán đầy đủ, bạn sở hữu tất cả quyền đối với nội dung TVC cuối cùng. Chúng tôi chỉ giữ quyền để trưng bày công việc trong portfolio của chúng tôi. Chúng tôi cung cấp thỏa thuận cấp phép rõ ràng và có thể thảo luận về quyền độc quyền hoặc điều khoản sử dụng mở rộng dựa trên nhu cầu cụ thể của bạn."
-      }
-    }
-  },
-
-  // TVC Services
-  tvc: {
-    hero: {
-      badge: "Studio Sản Xuất Video",
-      badgeSubtitle: "Thiết bị & đội ngũ chuyên nghiệp",
-      title: "BIẾN ĐỔI CÔNG NGHỆ & QUY MÔ THÀNH LỢI THẾ CẠNH TRANH ĐỘT PHÁ",
-      subtitle: "Mercury Solutions cung cấp giải pháp sản xuất TVC toàn diện, giúp bạn thể hiện tầm vóc thương hiệu, quy trình hiện đại và công nghệ cốt lõi thông qua các thước phim điện ảnh. Chúng tôi không chỉ quay phim, mà còn giúp kể câu chuyện về sự chuyên nghiệp và sức mạnh của công ty bạn, chinh phục đối tác và thu hút nhân tài hàng đầu.",
-      cta: "NHẬN TƯ VẤN & BÁO GIÁ NGAY",
-      partners: "Chúng tôi là đối tác của:",
-      partnershipsDetails: {
-        title: "Đối Tác Chiến Lược",
-        description: "Mercury Solutions tự hào hợp tác với các tập đoàn hàng đầu trong ngành công nghệ và truyền thông",
-        companies: {
-          nakedInc: {
-            name: "Naked Inc",
-            country: "Nhật Bản", 
-            field: "Giải pháp chiếu tương tác",
-            description: "Đối tác chiến lược cho triển khai công nghệ chiếu tương tác tiên tiến"
-          },
-          panasonic: {
-            name: "Panasonic",
-            country: "Việt Nam",
-            field: "Công nghệ điện tử",
-            description: "Đối tác chiến lược trong lĩnh vực giải pháp công nghệ"
-          },
-          fujikin: {
-            name: "Fujikin",
-            country: "Việt Nam", 
-            field: "Công nghệ sản xuất",
-            description: "Đối tác sản xuất TVC công nghệ cao"
-          },
-          jworld: {
-            name: "Jworld Vina",
-            country: "Hàn Quốc",
-            field: "Dịch vụ doanh nghiệp",
-            description: "Đối tác hợp tác trong các dự án TVC doanh nghiệp"
-          }
-        }
-      },
-      stats: {
-        projects: "Dự Án TVC Hoàn Thành",
-        clients: "Khách Hàng Hài Lòng",
-        support: "Hỗ Trợ Sáng Tạo"
-      }
-    },
-    painPoints: {
-      title: "NHÀ MÁY CỦA BẠN RẤT HIỆN ĐẠI, NHƯNG...",
-      points: [
-        "Đối tác chưa thấy rõ quy mô và đầu tư công nghệ của bạn chỉ qua catalog?",
-        "Khách hàng khó hình dung tiêu chuẩn trong quy trình sản xuất và kiểm soát chất lượng?",
-        "Phim giới thiệu cũ không còn phản ánh tầm vóc và văn hóa doanh nghiệp hiện tại?",
-        "Thương hiệu tuyển dụng mờ nhạt, khó thu hút kỹ sư và nhân sự chất lượng?"
-      ],
-      conclusion: "Đã đến lúc nâng cấp câu chuyện thương hiệu bằng hình ảnh."
-    },
-    solution: {
-      title: "Biến Quy Trình Thành Kiệt Tác Nghệ Thuật",
-      description: "Với Mercury Solutions, mọi máy móc hay quy trình đều được biến thành những câu chuyện hình ảnh truyền cảm hứng nâng tầm giá trị thương hiệu.",
-      exploreSolution: "Khám Phá Giải Pháp",
-      services: {
-        factory: {
-          title: "🎥 Quay Phim Giới Thiệu Nhà Máy & Khu Công Nghiệp",
-          description: "Thể hiện quy mô toàn diện, cơ sở hạ tầng và tiềm năng sản xuất."
-        },
-        process: {
-          title: "⚙️ Quay Phim Quy Trình Sản Xuất TVC",
-          description: "Mô tả trực quan, sinh động từng giai đoạn, từ nguyên liệu đến thành phẩm."
-        },
-        technology: {
-          title: "🔬 Phim Công Nghệ & Máy Móc",
-          description: "Nhấn mạnh độ chính xác và hiện đại của dây chuyền sản xuất, robot và công nghệ cốt lõi."
-        },
-        culture: {
-          title: "🤝 Sản Xuất Video Văn Hóa Doanh Nghiệp",
-          description: "Truyền tải lịch sử, giá trị và tinh thần con người tạo nên sức mạnh công ty."
-        }
-      }
-    },
-    portfolio: {
-      title: "Portfolio Của Chúng Tôi",
-      subtitle: "Thể hiện chuyên môn của chúng tôi trên nhiều ngành và loại dự án",
-      description: "Khám phá portfolio các dự án thành công thể hiện chuyên môn của chúng tôi trong việc cung cấp giải pháp sáng tạo trên nhiều ngành với công nghệ tiên tiến.",
-      ourTvcPortfolio: "Portfolio TVC Của Chúng Tôi",
-      scrollToExplore: "Cuộn để khám phá các sản phẩm quảng cáo truyền hình và nội dung video đa dạng của chúng tôi",
-      projects: {
-        corporate: {
-          title: "Phim Thương Hiệu Doanh Nghiệp",
-          description: "Kể chuyện thương hiệu toàn diện cho bản sắc doanh nghiệp và định vị thị trường."
-        },
-        product: {
-          title: "Chiến Dịch Ra Mắt Sản Phẩm",
-          description: "Trình diễn sản phẩm năng động thúc đẩy bán hàng và nhận thức thị trường."
-        },
-        internal: {
-          title: "Truyền Thông Nội Bộ",
-          description: "Nội dung tương tác cho nhân viên và đào tạo củng cố văn hóa công ty."
-        },
-        events: {
-          title: "Ghi Hình & Điểm Nổi Bật Sự Kiện",
-          description: "Tài liệu sự kiện chuyên nghiệp và nội dung quảng bá."
-        },
-        videoPreview: "Xem Trước Dự Án",
-        platform: "Nền Tảng"
-      }
-    },
-    ecosystem: {
-      title: "⚙️ HỆ SINH THÁI SẢN XUẤT CHUYÊN NGHIỆP CỦA CHÚNG TÔI",
-      description: "Để đảm bảo tốc độ và chất lượng, Mercury Solutions vận hành với hệ sinh thái sản xuất toàn diện:",
-      coreTeam: {
-        title: "Đội Ngũ Cốt Lõi:",
-        roles: [
-          {
-            title: "Đạo Diễn",
-            description: "Tư duy sáng tạo với hiểu biết sâu sắc về sản xuất công nghiệp."
-          },
-          {
-            title: "Quay Phim Chính (D.O.P)",
-            description: "Chịu trách nhiệm chất lượng hình ảnh, ánh sáng và góc máy nghệ thuật."
-          },
-          {
-            title: "Người Điều Khiển Máy Quay",
-            description: "Vận hành máy quay chuyên nghiệp, tạo chuyển động mượt mà."
-          },
-          {
-            title: "Phi Công Drone/FPV",
-            description: "Chuyên gia điều khiển drone, mang đến góc quay trên không toàn cảnh và góc quay FPV (First Person View) độc đáo trong không gian nhà máy."
-          },
-          {
-            title: "Chuyên Gia Ánh Sáng & Thiết Bị",
-            description: "Chuyên gia ánh sáng và thiết bị phụ trợ, đảm bảo mọi cảnh quay đạt tiêu chuẩn."
-          },
-          {
-            title: "Biên Tập & Chỉnh Màu",
-            description: "Đội ngũ hậu kỳ tài năng, biến đổi footage thô thành tác phẩm nghệ thuật hoàn chỉnh."
-          }
-        ]
-      },
-      equipment: {
-        title: "Hệ Thống Thiết Bị Hiện Đại:",
-        categories: [
-          {
-            title: "Máy Quay",
-            description: "Máy quay Cinema Line chuyên nghiệp như Sony FX6, FX3, Blackmagic Pocket Cinema Camera 6K Pro... cho chất lượng hình ảnh 4K RAW."
-          },
-          {
-            title: "Ống Kính",
-            description: "Bộ ống kính Cine và ống kính G-Master cao cấp, đảm bảo độ sắc nét và hiệu ứng bokeh nghệ thuật."
-          },
-          {
-            title: "Thiết Bị Ổn Định",
-            description: "Gimbal DJI Ronin RS3 Pro, Steadicam cho các cảnh quay chuyển động mượt mà, uyển chuyển."
-          }
-        ]
-      },
-      droneEquipment: {
-        title: "Flycam & Drone:",
-        items: [
-          {
-            title: "DJI Mavic 3 Pro Cine",
-            description: "Quay phim 4K ProRes, mang đến góc nhìn trên không toàn cảnh cho nhà máy và khu công nghiệp."
-          },
-          {
-            title: "Drone FPV (First Person View)",
-            description: "Tạo các cảnh quay bay tốc độ cao qua dây chuyền sản xuất, mang đến trải nghiệm hình ảnh chưa từng có."
-          }
-        ]
-      },
-      auxiliaryEquipment: {
-        title: "Thiết Bị Phụ Trợ:",
-        items: [
-          "Hệ thống ánh sáng chuyên nghiệp (Aputure, Nanlite).",
-          "Sliders, Dollies, Jib Cranes cho các chuyển động máy quay đa dạng.",
-          "Microphone ghi âm hiện trường và phỏng vấn chuyên nghiệp (Sennheiser, Rode)."
-        ]
-      },
-      callToAction: {
-        title: "🚀 Đã đến lúc câu chuyện về sự chuyên nghiệp và xuất sắc của nhà máy bạn được cả thế giới biết đến.",
-        description: "Hãy để Mercury Solutions giúp bạn tạo ra một bộ phim TVC doanh nghiệp không chỉ để xem, mà còn để tự hào, thuyết phục và chiến thắng.",
-        buttonText: "Liên hệ ngay để được tư vấn chi tiết và báo giá!"
-      }
-    },
-    process: {
-      title: "Quy Trình Chiến Lược Của Chúng Tôi",
-      subtitle: "Phương pháp đã được chứng minh đảm bảo mọi dự án mang lại kết quả xuất sắc",
-      description: "Chúng tôi chuyên tạo nội dung TVC chiến lược nâng tầm hình ảnh thương hiệu và thu hút nhân tài hàng đầu. Cách tiếp cận toàn diện của chúng tôi kết hợp công nghệ tiên tiến với sự xuất sắc sáng tạo.",
-      steps: {
-        consultation: {
-          title: "Tư Vấn Hợp Tác",
-          description: "Phân tích nhu cầu, mục tiêu và đối tượng mục tiêu để xây dựng chiến lược nội dung phù hợp."
-        },
-        concept: {
-          title: "Phát Triển Khái Niệm Chiến Lược",
-          description: "Tạo ý tưởng độc đáo và kịch bản chi tiết truyền tải thông điệp thương hiệu."
-        },
-        production: {
-          title: "Sản Xuất Điện Ảnh",
-          description: "Quay phim chuyên nghiệp với thiết bị cao cấp và đội ngũ giàu kinh nghiệm."
-        },
-        postProduction: {
-          title: "Xuất Sắc Trong Hậu Kỳ",
-          description: "Biên tập, chỉnh màu, hiệu ứng và hoàn thiện sản phẩm cuối cùng."
-        },
-        timeline: "Thời Gian"
-      },
-      summary: {
-        title: "Tổng Quan Quy Trình",
-        subtitle: "Cam kết chất lượng và thời gian",
-        weeks: "Tuần",
-        satisfaction: "Sự Hài Lòng",
-        quality: "Chất Lượng"
-      }
-    },
-    whyUs: {
-      title: "ĐỐI TÁC MARKETING VIDEO ĐÁNG TIN CẬY CHO NGÀNH CÔNG NGHIỆP",
-      features: {
-        speed: {
-          title: "TỐC ĐỘ VƯỢT TRỘI",
-          description: "Quy trình tối ưu, giao phim TVC hoàn chỉnh chỉ trong 1-2 tuần. Tiết kiệm thời gian, hiệu quả tối ưu cho doanh nghiệp."
-        },
-        quality: {
-          title: "CHẤT LƯỢNG ĐIỆN ẢNH",
-          description: "Cam kết chất lượng 4K-6K RAW, màu sắc chân thực, hình ảnh sắc nét, xứng đáng với các thương hiệu lớn."
-        },
-        technology: {
-          title: "CÔNG NGHỆ TIÊN PHONG",
-          description: "Sử dụng Drone, FPV Drone, Gimbal Ronin RS3 Pro, Sony FX Cinema Line để tạo ra các góc máy độc đáo, đột phá."
-        }
-      }
-    },
-    faq: {
-      title: "CÂU HỎI THƯỜNG GẶP VỀ DỊCH VỤ SẢN XUẤT VIDEO TVC",
-      questions: {
-        timeline: {
-          question: "Sản xuất TVC nhà máy mất bao lâu?",
-          answer: "Với quy trình tối ưu, Mercury Solutions có thể hoàn thành toàn bộ quá trình từ tiền sản xuất, sản xuất đến hậu kỳ và giao sản phẩm cuối cùng trong vòng 1-2 tuần, tùy thuộc vào độ phức tạp của dự án."
-        },
-        cost: {
-          question: "Chi phí quay phim giới thiệu doanh nghiệp là bao nhiêu?",
-          answer: "Chi phí phụ thuộc vào nhiều yếu tố: số ngày quay, yêu cầu thiết bị (drone, FPV, hiệu ứng đặc biệt...), độ dài kịch bản. Liên hệ với chúng tôi để nhận báo giá chi tiết và phù hợp nhất với ngân sách của bạn."
-        },
-        location: {
-          question: "Mercury Solutions có nhận quay phim ở các tỉnh khác không?",
-          answer: "Hoàn toàn có. Đội ngũ chúng tôi linh hoạt và sẵn sàng di chuyển đến bất kỳ khu công nghiệp hay nhà máy nào trên toàn quốc để thực hiện dự án."
-        },
-        equipment: {
-          question: "Mercury Solutions sử dụng thiết bị gì để quay phim?",
-          answer: "Chúng tôi sử dụng thiết bị chuyên nghiệp hàng đầu: máy quay Sony FX Cinema Line, drone FPV, gimbal Ronin RS3 Pro, thiết bị ánh sáng chuyên nghiệp để đảm bảo chất lượng 4K-6K RAW."
-        },
-        process: {
-          question: "Quy trình làm việc của Mercury Solutions như thế nào?",
-          answer: "Chúng tôi tuân theo quy trình 5 bước: Tư vấn & Khảo sát hiện trường → Phát triển khái niệm & Viết kịch bản → Sản xuất & Quay phim → Hậu kỳ & Biên tập → Hoàn thiện & Giao hàng cuối cùng."
-        },
-        quality: {
-          question: "Mercury Solutions đảm bảo chất lượng như thế nào?",
-          answer: "Chúng tôi cam kết chất lượng điện ảnh với đội ngũ chuyên nghiệp, thiết bị hiện đại và quy trình kiểm soát chất lượng nghiêm ngặt. Tất cả dự án đều được phê duyệt trước khi giao hàng."
-        },
-        revision: {
-          question: "Có thể chỉnh sửa sau khi hoàn thành không?",
-          answer: "Có, chúng tôi hỗ trợ chỉnh sửa theo yêu cầu của khách hàng. Chúng tôi sẽ gửi bản nháp đầu tiên để bạn xem xét và phản hồi trước khi hoàn thiện sản phẩm cuối cùng."
-        },
-        delivery: {
-          question: "Mercury Solutions giao sản phẩm ở định dạng nào?",
-          answer: "Chúng tôi giao sản phẩm ở nhiều định dạng phù hợp: MP4 cho web/mạng xã hội, MOV cho thuyết trình và các định dạng khác theo yêu cầu cụ thể của khách hàng."
-        }
-      }
-    },
-    cta: {
-      title: "SẴN SÀNG NÂNG TẦM THƯƠNG HIỆU NHÀ MÁY?",
-      subtitle: "Đừng để câu chuyện về công nghệ và con người của bạn bị ẩn khuất. Hãy để chúng tôi giúp bạn kể chúng theo cách ấn tượng nhất.",
-      description: "Điền vào form bên dưới, các chuyên gia Mercury Solutions sẽ liên hệ tư vấn miễn phí và gửi báo giá chi tiết trong vòng 8 giờ làm việc!",
-      form: {
-        name: "Họ Tên*",
-        email: "Email*",
-        phone: "Số Điện Thoại*",
-        company: "Tên Công Ty",
-        requirements: "Yêu cầu của bạn (ví dụ: phim giới thiệu nhà máy 5 phút, quay phim quy trình sản xuất...)",
-        submit: "GỬI YÊU CẦU TƯ VẤN"
-      }
-    },
-    services: {
-      title: "Chúng Tôi Làm Gì",
-      subtitle: "Chúng tôi chuyên tạo nội dung TVC chiến lược nâng tầm hình ảnh thương hiệu và thu hút nhân tài hàng đầu. Cách tiếp cận toàn diện của chúng tôi kết hợp công nghệ tiên tiến với sự xuất sắc sáng tạo.",
-      consultation: {
-        title: "Tư Vấn Hợp Tác",
-        description: "Chúng tôi bắt đầu với tư vấn chuyên sâu để hiểu mục tiêu kinh doanh, đối tượng mục tiêu và định vị thương hiệu của bạn."
-      },
-      concept: {
-        title: "Phát Triển Khái Niệm Chiến Lược",
-        description: "Đội ngũ sáng tạo của chúng tôi phát triển các khái niệm hấp dẫn phù hợp với mục tiêu kinh doanh và thu hút đối tượng mục tiêu."
-      },
-      production: {
-        title: "Sản Xuất Điện Ảnh",
-        description: "Thiết bị tiên tiến và đội ngũ giàu kinh nghiệm đảm bảo tiêu chuẩn sản xuất chất lượng cao nhất."
-      },
-      postProduction: {
-        title: "Hậu Kỳ Bậc Thầy",
-        description: "Biên tập tiên tiến, chỉnh màu và hiệu ứng hình ảnh để tạo nội dung hoàn thiện, chuyên nghiệp."
-      },
-      motionGraphics: {
-        title: "Motion Graphics & VFX",
-        description: "Hoạt ảnh tùy chỉnh và hiệu ứng hình ảnh nâng tầm thông điệp và thu hút đối tượng mục tiêu."
-      },
-      distribution: {
-        title: "Lập Kế Hoạch Truyền Thông & Phân Phối Chiến Lược",
-        description: "Chiến lược phân phối toàn diện để tối đa hóa phạm vi tiếp cận và tác động trên tất cả nền tảng."
-      }
-    },
-    features: {
-      consultation: ["Phân Tích Thương Hiệu", "Lập Kế Hoạch Chiến Lược", "Hướng Dẫn Chuyên Gia", "Đồng Bộ Tầm Nhìn"],
-      concept: ["Phân Tích DNA Thương Hiệu", "Tạo Kể Chuyện", "Đồng Bộ Marketing", "Nội Dung Hướng Hành Động"],
-      production: ["Chất Lượng 4K/6K", "Thiết Bị Chuyên Nghiệp", "Đội Ngũ Chuyên Gia", "Tầm Nhìn Điện Ảnh"],
-      postProduction: ["Biên Tập Chuyên Nghiệp", "Chỉnh Màu", "Thiết Kế Âm Thanh", "Davinci Resolve"],
-      motionGraphics: ["Hoạt Ảnh 2D/3D", "Hiệu Ứng Hình Ảnh", "Hoạt Ảnh Logo", "Infographics"],
-      distribution: ["Lập Kế Hoạch Truyền Thông", "Nhắm Đối Tượng", "Phân Phối Đa Nền Tảng", "Tối Ưu ROI"]
-    },
-    descriptions: {
-      consultation: "Chúng tôi bắt đầu bằng việc hiểu thương hiệu, đối tượng mục tiêu và mục tiêu của bạn. Chúng tôi làm việc chặt chẽ với bạn, lắng nghe chăm chú nhu cầu và đưa ra hướng dẫn chuyên môn.",
-      concept: "Chúng tôi phát triển các khái niệm TVC hấp dẫn vượt ra ngoài kịch bản đơn thuần. Chúng tôi đi sâu vào DNA thương hiệu để tạo ra những câu chuyện phù hợp với mục tiêu marketing của bạn.",
-      production: "Chúng tôi kết hợp chuyên môn kỹ thuật với tầm nhìn nghệ thuật, sử dụng thiết bị tiên tiến (4K, 6K, Full HD) và các chuyên gia giàu kinh nghiệm.",
-      postProduction: "Đội ngũ nội bộ gồm biên tập viên, chỉnh màu và thiết kế âm thanh của chúng tôi tinh chỉnh từng chi tiết bằng phần mềm hàng đầu như Davinci Resolve."
-    }
-  },
-
-  // Process & Technology Page
-  processPage: {
-    hero: {
-      badge: "Phương Pháp Của Chúng Tôi",
-      title1: "Quy Trình",
-      title2: "& Công Nghệ",
-      subtitle: "Khám phá phương pháp phát triển đã được chứng minh và stack công nghệ tiên tiến thúc đẩy các giải pháp của chúng tôi.",
-    },
-    cta: "Xem Quy Trình & Công Nghệ",
-    ctaSection: {
-      title: "Sẵn Sàng Bắt Đầu Dự Án?",
-      description: "Hãy để chúng tôi áp dụng phương pháp đã chứng minh và công nghệ tiên tiến để hiện thực hóa tầm nhìn của bạn.",
-      button: "Liên Hệ Ngay",
-    },
-  },
-
-  // IT Solution Landing Page
-  itPage: {
-    hero: {
-      badge: "Mercury Solution",
-      title1: "Giải Pháp Phần Mềm",
-      title2: "Vận Hành Doanh Nghiệp",
-      subtitle: "Nền tảng chuyên biệt cho khách sạn, quản lý nhân sự, thể thao & thể hình, và logistics — được tin dùng bởi các doanh nghiệp tại Việt Nam và quốc tế.",
-      cta: {
-        explore: "Khám Phá Dịch Vụ",
-        viewProjects: "Xem Dự Án",
-      },
-      stats: {
-        clients: "Khách hàng",
-        projects: "Dự án",
-        satisfaction: "Hài lòng",
-        support: "Hỗ trợ",
-      },
-    },
-    services: {
-      badge: "Dịch vụ AI & TVC Chuyên nghiệp",
-      heading1: "Giải pháp",
-      heading2: "Số Hóa",
-      heading3: "Thúc Đẩy Tăng Trưởng",
-      statsTitle: "Tại Sao Chọn Mercury Solutions?",
-      benefits: {
-        provenTrack: "Thành tích đã được chứng minh",
-        fastDelivery: "Giao hàng nhanh chóng",
-        premiumQuality: "Chất lượng cao cấp",
-      },
-      statsItems: {
-        projects: "Dự án hoàn thành",
-        clients: "Khách hàng hài lòng",
-        awards: "Giải thưởng ngành",
-        support: "Hỗ trợ sẵn sàng",
-      },
-    },
-  },
-
-  // Actiwell Platform Page
-  actiwell: {
-    hero: {
-      badge: "Hệ Sinh Thái Fitness Toàn Diện",
-      title1: "Nền Tảng Actiwell",
-      title2: "Kiến Tạo Tương Lai Ngành Fitness",
-      subtitle: "Mercury Solutions hợp tác chiến lược cùng Attivo International — đơn vị tiên phong với hơn 20 năm dẫn dắt ngành fitness Đông Nam Á — để tạo nên Actiwell, một hệ sinh thái toàn diện thay đổi cách các chuỗi phòng tập vận hành và phát triển.",
-      stats: {
-        apps: "Ứng Dụng Di Động",
-        features: "Tính Năng Cốt Lõi",
-        experience: "Năm Kinh Nghiệm",
-        powered: "Tích Hợp AI",
-      },
-    },
-    partnership: {
-      badge: "Hợp Tác Chiến Lược",
-      title: "Kiến Tạo Bởi Những Người Dẫn Đầu",
-      description: "Actiwell ra đời từ sự hợp tác chiến lược giữa năng lực công nghệ của Mercury Solutions và hiểu biết sâu sắc của Attivo International về thị trường fitness Đông Nam Á.",
-      mercury: {
-        role: "Đối Tác Công Nghệ",
-        description: "Mercury Solutions mang đến năng lực phần mềm tiên tiến, khả năng AI vượt trội và thành tích đã được chứng minh trong việc xây dựng các ứng dụng doanh nghiệp tải cao phục vụ hàng triệu người dùng.",
-      },
-      attivo: {
-        role: "Chuyên Gia Ngành Fitness",
-        description: "Với hơn 20 năm dẫn dắt ngành fitness Đông Nam Á, Attivo International đóng góp chuyên môn lĩnh vực vượt trội, hiểu biết vận hành sâu sắc và sự thấu hiểu toàn diện về nhu cầu phát triển của các chuỗi phòng tập.",
-      },
-    },
-    ecosystem: {
-      badge: "Hệ Sinh Thái Hoàn Chỉnh",
-      title: "Hai Ứng Dụng, Một Nền Tảng Mạnh Mẽ",
-      description: "Actiwell mang đến trải nghiệm liền mạch cho cả hội viên và quản lý thông qua ứng dụng di động và hệ thống quản lý tích hợp.",
-      memberApp: {
-        title: "Ứng Dụng Hội Viên",
-        subtitle: "iOS & Android • Flutter",
-        features: {
-          booking: {
-            title: "Đặt Lịch Thông Minh",
-            desc: "Đặt lịch lớp tập nhóm và buổi tập cá nhân với khả dụng thời gian thực, gợi ý giờ tập bằng AI và xác nhận tức thì.",
-          },
-          checkin: {
-            title: "Check-in Nhanh Chóng",
-            desc: "Check-in liền mạch tại bất kỳ chi nhánh nào với theo dõi lịch sử tất cả các lần đến tập và hoạt động.",
-          },
-          classes: {
-            title: "Khám Phá Lớp Tập",
-            desc: "Duyệt và lọc các lớp tập nhóm, xem hồ sơ huấn luyện viên, đọc đánh giá và tham gia lớp tập tại bất kỳ chi nhánh nào trong chuỗi.",
-          },
-          measurement: {
-            title: "Theo Dõi Chỉ Số Cơ Thể",
-            desc: "Theo dõi chỉ số InBody theo thời gian, xem lịch sử thành phần cơ thể chi tiết và giám sát tiến trình tập luyện qua biểu đồ trực quan.",
-          },
-          reviews: {
-            title: "Đánh Giá & Nhận Xét",
-            desc: "Đánh giá huấn luyện viên và lớp tập sau mỗi buổi, đọc nhận xét từ cộng đồng và góp phần duy trì chất lượng dịch vụ toàn chuỗi.",
-          },
-          notifications: {
-            title: "Thông Báo Thông Minh",
-            desc: "Nhận nhắc nhở đặt lịch, cập nhật lớp tập, cảnh báo hết hạn gói tập và gợi ý cá nhân hóa qua thông báo đẩy.",
-          },
-        },
-      },
-      cms: {
-        title: "Hệ Thống Quản Lý CMS",
-        subtitle: "Bảng Điều Khiển Web • React",
-        features: {
-          customerMgmt: {
-            title: "Quản Lý Khách Hàng",
-            desc: "Hồ sơ hội viên đầy đủ, quản lý nhóm, theo dõi khách tham quan và phân tích vòng đời khách hàng trên một bảng điều khiển tập trung.",
-          },
-          scheduleMgmt: {
-            title: "Quản Lý Lịch Trình",
-            desc: "Quản lý lịch lớp tập, phân công huấn luyện viên, khung giờ đặt PT và sức chứa phòng tập tại tất cả các chi nhánh.",
-          },
-          analytics: {
-            title: "Phân Tích Nâng Cao",
-            desc: "Phân tích doanh thu, xu hướng đặt lịch, mẫu check-in, theo dõi vòng đời hội viên, phễu chuyển đổi và báo cáo hiệu suất nhân viên.",
-          },
-          salesPackages: {
-            title: "Bán Hàng & Gói Tập",
-            desc: "Tạo và quản lý gói hội viên, sản phẩm, phân tầng giá và xử lý đơn hàng với theo dõi thanh toán tích hợp.",
-          },
-          contracts: {
-            title: "Quản Lý Hợp Đồng",
-            desc: "Tạo hợp đồng số, theo dõi gia hạn, quản lý mục tiêu bán hàng và báo cáo doanh thu tự động cho toàn bộ chuỗi.",
-          },
-          multiLocation: {
-            title: "Hỗ Trợ Đa Chi Nhánh",
-            desc: "Quản lý nhiều phòng tập từ một bảng điều khiển với cài đặt riêng theo chi nhánh, phân công nhân viên và so sánh hiệu suất.",
-          },
-        },
-      },
-    },
-    ai: {
-      badge: "Trí Tuệ Nhân Tạo Tích Hợp",
-      title: "Tính Năng AI Độc Quyền",
-      description: "Actiwell ứng dụng trí tuệ nhân tạo để cá nhân hóa hành trình tập luyện, tự động hóa quyết định marketing và tối ưu hóa vận hành kinh doanh.",
-      features: {
-        smartBooking: {
-          title: "Gợi Ý Đặt Lịch Bằng AI",
-          desc: "Gợi ý đặt lịch thông minh dựa trên hành vi khách hàng, ngày hết hạn gói tập, khung giờ tập thường xuyên và sức chứa phòng tập — với chấm điểm ưu tiên để tối đa hóa tương tác.",
-          tags: {
-            expiringPackage: "Gói Sắp Hết Hạn",
-            inactiveCustomer: "Hội Viên Không Hoạt Động",
-            regularSlot: "Khung Giờ Quen",
-            lowCapacity: "Sức Chứa Thấp",
-          },
-        },
-        retention: {
-          title: "AI Giữ Chân Hội Viên",
-          desc: "Nhận diện hội viên có nguy cơ rời bỏ trước khi họ hủy bằng phân tích hành vi, chấm điểm tương tác và chiến dịch tái tương tác tự động.",
-        },
-        revenueOptimize: {
-          title: "Tối Ưu Hóa Doanh Thu",
-          desc: "Phân tích dựa trên AI cho chiến lược giá, gợi ý gói tập, cơ hội bán thêm và chiến dịch marketing có mục tiêu.",
-        },
-        capacityPlanning: {
-          title: "Hoạch Định Sức Chứa Thông Minh",
-          desc: "Dự đoán giờ cao điểm, tối ưu lịch lớp tập và cân bằng khối lượng công việc huấn luyện viên bằng dữ liệu lịch sử và mô hình học máy.",
-        },
-      },
-    },
-    value: {
-      title: "Thúc Đẩy Tăng Trưởng Bền Vững",
-      description: "Actiwell mang lại tác động kinh doanh đo lường được trên mọi khía cạnh vận hành chuỗi phòng tập.",
-      items: {
-        operations: {
-          title: "Tối Ưu Vận Hành",
-          desc: "Tự động hóa báo cáo hàng ngày, số hóa hợp đồng, tập trung quản lý đa chi nhánh và giảm khối lượng công việc thủ công lên đến 60%.",
-        },
-        experience: {
-          title: "Nâng Cao Trải Nghiệm Hội Viên",
-          desc: "Gợi ý bài tập cá nhân hóa, đặt lịch liền mạch, check-in tức thì và giao diện di động đẹp mắt giúp hội viên gắn bó và trung thành.",
-        },
-        revenue: {
-          title: "Tăng Trưởng Doanh Thu Bền Vững",
-          desc: "Phân tích dựa trên dữ liệu, marketing tự động, cải thiện tỷ lệ giữ chân và tối ưu quy trình bán hàng thúc đẩy tăng trưởng doanh thu ổn định.",
-        },
-      },
-    },
-    tech: {
-      title: "Xây Dựng Trên Công Nghệ Hiện Đại",
-      description: "Stack công nghệ cấp doanh nghiệp đảm bảo hiệu suất, khả năng mở rộng và độ tin cậy.",
-      stack: {
-        flutter: "Di Động Đa Nền Tảng",
-        laravel: "Backend API",
-        react: "Bảng Điều Khiển CMS",
-        mysql: "Cơ Sở Dữ Liệu",
-        firebase: "Thông Báo & Phân Tích",
-        docker: "Container Hóa",
-        ai: "Tính Năng Thông Minh",
-        api: "Tầng Tích Hợp",
-      },
-    },
-    screens: {
-      businessApp: {
-        badge: "Ứng Dụng Nhân Viên & Huấn Luyện Viên",
-        title: "Ứng Dụng Doanh Nghiệp Cho Nhân Viên",
-        description: "Ứng dụng di động chuyên dụng cho huấn luyện viên và nhân viên để quản lý lịch trình, theo dõi doanh số, xử lý đặt lịch và giám sát chỉ số cơ thể.",
-      },
-    },
-    demo: {
-      badge: "Trung Tâm Demo",
-      heading: "Trải Nghiệm Nền Tảng Actiwell",
-      directions: "Chỉ Đường",
-      items: {
-        address: {
-          label: "Địa Chỉ Văn Phòng",
-          line1: "Công ty CP Mercury Solutions",
-          line2: "506A Ford Thăng Long, 105 Láng Hạ, Đống Đa, Hà Nội",
-        },
-        hours: {
-          label: "Giờ Demo",
-          value: "Thứ Hai - Thứ Sáu: 9:00 - 18:00 (GMT+7)",
-        },
-        platforms: {
-          label: "Nền Tảng Hỗ Trợ",
-          line1: "iOS & Android (Ứng dụng di động Flutter)",
-          line2: "Web CMS (Bảng điều khiển React)",
-        },
-        security: {
-          label: "Bảo Mật & Tuân Thủ",
-          value: "Mã hóa cấp doanh nghiệp, xác thực JWT, kiểm soát truy cập theo vai trò",
-        },
-        support: {
-          label: "Hỗ Trợ Kỹ Thuật",
-          line1: "Đội ngũ onboarding chuyên trách cho khách hàng mới",
-          line2: "Giám sát hệ thống 24/7 & phản hồi theo cam kết SLA",
-        },
-      },
-    },
-    cta: {
-      title: "Sẵn Sàng Chuyển Đổi Doanh Nghiệp Fitness Của Bạn?",
-      description: "Để Actiwell tối ưu vận hành, nâng cao trải nghiệm hội viên và thúc đẩy tăng trưởng doanh thu bền vững cho chuỗi phòng tập của bạn.",
-      contact: "Liên Hệ Ngay",
-      solutions: "Xem Tất Cả Giải Pháp",
-    },
-  },
-
-  // Minova PMS Page
-  minovaPms: {
-    hero: {
-      badge: "Hệ Thống Quản Lý Khách Sạn Đám Mây",
-      title: "PMS",
-      subtitle: "Quản lý khách sạn toàn diện — từ đặt phòng đến trả phòng. Hỗ trợ đa cơ sở, tích hợp kênh OTA, quản lý buồng phòng thời gian thực, kiểm toán đêm và thanh toán đa cổng.",
-      cta: { explore: "Khám Phá Tính Năng", demo: "Yêu Cầu Demo" },
-      stats: { modules: "Module Chính", models: "Mô Hình Dữ Liệu", properties: "Cơ Sở Hoạt Động", languages: "Ngôn Ngữ" },
-    },
-    modules: {
-      badge: "Các Module",
-      title: "Bộ Giải Pháp",
-      titleAccent: "Vận Hành Khách Sạn",
-      subtitle: "8 module tích hợp bao phủ toàn bộ vòng đời quản lý khách sạn — từ đặt phòng đầu tiên đến hóa đơn cuối cùng.",
-      reservation: { title: "Quản Lý Đặt Phòng", desc: "Vòng đời đặt phòng hoàn chỉnh — tạo, sửa, hủy, danh sách chờ. Xem lịch, theo dõi folio và đặt phòng nhóm đa phòng." },
-      frontDesk: { title: "Lễ Tân", desc: "Check-in, check-out hôm nay, khách đang ở và đăng ký walk-in. Phân phòng nhanh và cập nhật trạng thái khách thời gian thực." },
-      housekeeping: { title: "Quản Lý Buồng Phòng", desc: "Bảng trạng thái phòng trực quan — tình trạng phòng, theo dõi vệ sinh, phân chia theo tầng/cánh. Cập nhật thời gian thực." },
-      nightAudit: { title: "Kiểm Toán Đêm", desc: "Đối soát cuối ngày — xử lý no-show, ghi phí phòng hàng ngày, chuyển ngày kinh doanh và đóng sổ theo cơ sở." },
-      payment: { title: "Thanh Toán", desc: "Đa cổng thanh toán: VNPay QR, ví MoMo, tiền mặt, thẻ tín dụng, chuyển khoản. Theo dõi tiền cọc, hóa đơn và thanh toán tháng." },
-      guestCrm: { title: "CRM Khách Hàng", desc: "Hồ sơ khách đầy đủ — lịch sử lưu trú, sở thích, dị ứng, hạng thành viên, ngôn ngữ ưu tiên. Quản lý gia đình, nhóm và VIP." },
-      channel: { title: "Quản Lý Kênh Phân Phối", desc: "Tích hợp OTA qua Beds24 — đồng bộ giá và phòng trống thời gian thực với Booking.com, Agoda, Expedia và các kênh khác." },
-      reports: { title: "Báo Cáo & Tài Liệu", desc: "Báo cáo công suất, doanh thu, tiền cọc và công nợ. Tự động tạo hóa đơn PDF, phiếu đăng ký, email xác nhận và xuất DOCX." },
-    },
-    guest: {
-      badge: "Trải Nghiệm Khách Hàng",
-      title: "Công Nghệ",
-      titleAccent: "Khách Hàng Thông Minh",
-      subtitle: "Tự check-in, quét giấy tờ AI, trả phòng nhanh QR và thông báo thời gian thực cho ngành hospitality hiện đại.",
-      selfCheckin: { title: "Tự Check-in", desc: "Check-in từng bước — chọn phòng, tải ảnh CCCD với OCR, xác nhận đặt phòng và thanh toán. Quét mã QR." },
-      ocr: { title: "OCR Giấy Tờ AI", desc: "Quét hộ chiếu/CCCD bằng Tesseract.js tự động trích xuất thông tin khách. Giảm 60% thời gian chờ tại lễ tân." },
-      expressCheckout: { title: "Trả Phòng Nhanh", desc: "Khách thanh toán từ phòng qua mã QR — VNPay hoặc MoMo. Không cần xếp hàng tại lễ tân." },
-      notifications: { title: "Thông Báo Thời Gian Thực", desc: "Cập nhật trực tiếp qua Pusher — đặt phòng mới, thông báo check-in, thay đổi trạng thái phòng, xác nhận thanh toán." },
-    },
-    workflow: {
-      badge: "Vòng Đời Đặt Phòng",
-      title: "Hành Trình",
-      titleAccent: "Khách Hàng Toàn Diện",
-      subtitle: "Từ khi khách đặt phòng đến hóa đơn cuối cùng — mọi bước đều được theo dõi, tự động hóa và kiểm toán.",
-      steps: {
-        s1: { title: "Tạo Đặt Phòng", desc: "Khách đặt qua OTA hoặc trực tiếp. Hệ thống tạo folio, phân phòng, tính giá, gửi email xác nhận." },
-        s2: { title: "Check-in", desc: "Lễ tân hoặc kiosk tự phục vụ. Quét CCCD, cấp thẻ phòng, cập nhật trạng thái phòng. Tạo phiếu đăng ký." },
-        s3: { title: "Quản Lý Trong Lưu Trú", desc: "Housekeeping theo dõi trạng thái phòng. Ghi phí mini-bar, dịch vụ. Kiểm kê phòng thời gian thực toàn tầng." },
-        s4: { title: "Kiểm Toán Đêm", desc: "Cuối ngày: ghi phí phòng, xử lý no-show, đối soát thanh toán, chuyển ngày kinh doanh. Tự động và kiểm toán được." },
-        s5: { title: "Check-out & Hóa Đơn", desc: "Tính phí cuối cùng, xử lý thanh toán, tạo hóa đơn PDF. Chuyển phòng cho housekeeping dọn dẹp." },
-        s6: { title: "Báo Cáo & Phân Tích", desc: "Báo cáo công suất, doanh thu, công nợ hàng ngày dạng Excel. Theo dõi hiệu suất kênh. Đối soát tài chính." },
-      },
-    },
-    multiProperty: {
-      badge: "Đa Cơ Sở",
-      title: "Một Nền Tảng,",
-      titleAccent: "Nhiều Cơ Sở",
-      description: "Minova PMS hỗ trợ kiến trúc đa cơ sở phân cấp: Nhà Điều Hành → Chi Nhánh → Cơ Sở. Quản lý khách sạn boutique, resort và chuỗi khách sạn từ một bảng điều khiển với cách ly dữ liệu và phân quyền.",
-      features: [
-        "Bảng điều khiển tập trung tất cả cơ sở",
-        "Cách ly dữ liệu và bảo mật theo chi nhánh",
-        "Nhân viên chuyển đổi giữa các cơ sở",
-        "Báo cáo tổng hợp đa chi nhánh",
-        "Kiểm toán đêm và ngày kinh doanh theo cơ sở",
-      ],
-    },
-    roles: {
-      badge: "Phân Quyền",
-      title: "Phân Quyền",
-      titleAccent: "Chi Tiết",
-      description: "RBAC dựa trên Spatie Permission với kiểm soát truy cập theo module. Mỗi vai trò chỉ được cấp quyền cần thiết.",
-      admin: { title: "Quản Trị / Quản Lý", desc: "Toàn quyền — đặt phòng, thanh toán, báo cáo, kiểm toán đêm, housekeeping và quản lý người dùng." },
-      frontDesk: { title: "Lễ Tân", desc: "Check-in/out, đăng ký walk-in, phân phòng, quản lý khách và xử lý thanh toán." },
-      housekeeping: { title: "Buồng Phòng", desc: "Cập nhật trạng thái phòng, phân công vệ sinh, quản lý tầng/cánh và thiết bị." },
-      receptionist: { title: "Tiếp Tân", desc: "Xem đặt phòng, quản lý lịch, check-in khách và tra cứu khách hàng." },
-    },
-    integrations: {
-      badge: "Tích Hợp",
-      title: "Hệ Sinh Thái",
-      titleAccent: "Kết Nối",
-      ota: { title: "Kênh OTA", desc: "Tích hợp Beds24 đồng bộ thời gian thực với các OTA lớn." },
-      payment: { title: "Cổng Thanh Toán", desc: "Đa cổng thanh toán với hỗ trợ mã QR cho thị trường Việt Nam." },
-      smart: { title: "Công Nghệ Thông Minh", desc: "Tích hợp AI và IoT cho vận hành khách sạn hiện đại." },
-    },
-    tech: {
-      badge: "Công Nghệ",
-      title: "Xây Dựng Với",
-      titleAccent: "Công Nghệ Hiện Đại",
-    },
-    i18n: {
-      title: "Hỗ Trợ Đa Ngôn Ngữ",
-      subtitle: "Quốc tế hóa hoàn toàn cho vận hành khách sạn toàn cầu.",
-    },
-    cta: {
-      title: "Sẵn Sàng Hiện Đại Hóa",
-      titleAccent: "Vận Hành Khách Sạn?",
-      subtitle: "Nhận demo cá nhân hóa Minova PMS phù hợp với quy mô và yêu cầu cơ sở của bạn.",
-      demo: "Yêu Cầu Demo",
-      viewAll: "Xem Tất Cả Giải Pháp",
-    },
-  },
-
-  // OTA Calculator Page
-  otaCalculator: {
-    hero: {
-      badge: "Công Cụ Tối Ưu Doanh Thu",
-      title: "Calculator",
-      subtitle: "So sánh cơ cấu hoa hồng, cách cộng dồn khuyến mãi và doanh thu ròng trên 7+ kênh OTA. Biết chính xác khách sạn nhận được bao nhiêu — trước khi kích hoạt bất kỳ chương trình nào.",
-      cta: { explore: "Khám Phá Tính Năng", access: "Yêu Cầu Truy Cập" },
-      stats: { platforms: "Nền Tảng OTA", discounts: "Loại Khuyến Mãi", methods: "Phương Pháp Tính", languages: "Ngôn Ngữ" },
-    },
-    platforms: {
-      badge: "Nền Tảng Hỗ Trợ",
-      title: "7 Kênh",
-      titleAccent: "OTA Chính",
-      subtitle: "Mỗi nền tảng sử dụng phương pháp tính khuyến mãi khác nhau. OTA Calculator xử lý tất cả với độ chính xác cao.",
-    },
-    methods: {
-      badge: "Công Cụ Tính Toán",
-      title: "4 Phương Pháp",
-      titleAccent: "Tính Toán Khác Nhau",
-      subtitle: "Mỗi OTA cộng dồn khuyến mãi theo cách riêng. Hệ thống tái tạo chính xác công thức của họ để bạn thấy con số thực — không phải ước tính.",
-      multiplicative: { name: "Nhân Dồn", platform: "Booking.com", desc: "Khuyến mãi áp dụng tuần tự — mỗi mức giảm trên giá còn lại. Tổng giảm giá thấp hơn tổng các tỷ lệ riêng lẻ." },
-      additive: { name: "Cộng Dồn", platform: "Agoda, Airbnb, Trip.com, Go2Joy", desc: "Tất cả phần trăm giảm giá được cộng lại, sau đó áp dụng một lần. Đơn giản và minh bạch." },
-      highestOnly: { name: "Chỉ Mức Cao Nhất", platform: "Expedia", desc: "Chỉ áp dụng mức giảm giá cao nhất. Các khuyến mãi khác bị bỏ qua — bảo vệ biên lợi nhuận." },
-      hybrid: { name: "Kết Hợp", platform: "Traveloka", desc: "Chọn giảm giá tốt nhất theo danh mục, sau đó cộng tất cả danh mục. Cân bằng linh hoạt và kiểm soát." },
-    },
-    features: {
-      badge: "Tính Năng",
-      title: "Mọi Thứ Bạn Cần Cho",
-      titleAccent: "Phân Tích Giá",
-      subtitle: "Từ mô phỏng khuyến mãi đến xuất PDF — xây dựng cho quản lý doanh thu cần sự rõ ràng trên các kênh OTA.",
-      comparison: { title: "So Sánh Đa OTA", desc: "Tính toán và so sánh doanh thu ròng trên 7 nền tảng OTA cùng lúc. Xem cạnh nhau tác động hoa hồng." },
-      discounts: { title: "Quản Lý Khuyến Mãi", desc: "40+ loại khuyến mãi trên tất cả OTA — Đặt Sớm, Flash Sale, Genius, Mobile, Địa Lý và nhiều hơn. Bật/tắt với tỷ lệ tùy chỉnh." },
-      direction: { title: "Tính Xuôi & Tính Ngược", desc: "Xuôi: giá gốc → giá hiển thị → khách sạn nhận. Ngược: từ giá hiển thị tính ngược giá gốc và biên lợi nhuận." },
-      rooms: { title: "Quản Lý Loại Phòng", desc: "Tạo loại phòng với giá gốc. Tính toán trên tất cả OTA theo loại phòng cho ma trận doanh thu hoàn chỉnh." },
-      pdf: { title: "Xuất PDF", desc: "Tạo báo cáo chi tiết với bảng so sánh phòng-OTA, các bước tính toán và thông tin phiên. Hỗ trợ PDF đa ngôn ngữ." },
-      precision: { title: "Tính Toán Chính Xác", desc: "Phép tính Decimal.js đảm bảo không sai số dấu phẩy động. Độ chính xác cấp tài chính cho mọi phép tính." },
-    },
-    howItWorks: {
-      badge: "Cách Hoạt Động",
-      title: "Quy Trình",
-      titleAccent: "3 Bước",
-      titleEnd: "Đơn Giản",
-      s1: { title: "Nhập Giá Gốc", desc: "Nhập giá gốc phòng và chọn loại phòng. Chọn hướng tính xuôi hoặc tính ngược." },
-      s2: { title: "Cấu Hình Khuyến Mãi", desc: "Chọn nền tảng OTA, bật chương trình khuyến mãi, tùy chỉnh tỷ lệ và điều chỉnh hoa hồng." },
-      s3: { title: "So Sánh & Xuất", desc: "Xem kết quả cạnh nhau — giá hiển thị, hoa hồng và khách sạn nhận. Xuất báo cáo PDF chi tiết." },
-    },
-    whyChoose: {
-      badge: "Tại Sao Chọn OTA Calculator",
-      title: "Ngừng Đoán,",
-      titleAccent: "Bắt Đầu Tính Toán",
-      revenue: { title: "Minh Bạch Doanh Thu", desc: "Xem chính xác mỗi OTA tốn bao nhiêu. So sánh tác động hoa hồng + khuyến mãi trên từng kênh." },
-      pricing: { title: "Quyết Định Giá Thông Minh", desc: "Thử nghiệm các tổ hợp khuyến mãi trước khi kích hoạt trên OTA. Ngăn ngừa xói mòn biên lợi nhuận." },
-      multiProperty: { title: "Hỗ Trợ Đa Cơ Sở", desc: "Tính toán cho các loại phòng, cơ sở và chiến lược giá khác nhau. Lưu phiên và mẫu để phân tích lặp lại." },
-      compliance: { title: "Tuân Thủ & Kiểm Toán", desc: "Mọi phép tính đều được ghi nhật ký kiểm toán đầy đủ. Xuất báo cáo cho ban quản lý và tuân thủ." },
-    },
-    tech: {
-      badge: "Công Nghệ",
-      title: "Xây Dựng Cho",
-      titleAccent: "Chính Xác & Mở Rộng",
-    },
-    i18n: {
-      title: "Đa Ngôn Ngữ & Đa Tiền Tệ",
-      subtitle: "Hỗ trợ Tiếng Việt, Tiếng Anh, Tiếng Trung với VND, USD, EUR, JPY, CNY.",
-    },
-    cta: {
-      title: "Tối Đa Hóa",
-      titleAccent: "Doanh Thu Mỗi Kênh",
-      subtitle: "Ngừng mất biên lợi nhuận do cộng dồn khuyến mãi ẩn. Sử dụng OTA Calculator để kiểm soát chiến lược giá kênh phân phối.",
-      access: "Yêu Cầu Truy Cập",
-      viewAll: "Xem Tất Cả Giải Pháp",
-    },
-  },
-
-  // ContCal - Container Calculator Page
-  contcal: {
-    hero: {
-      badge: "Công Cụ Tối Ưu Logistics",
-      title1: "Container 3D",
-      title2: "Tối Ưu Xếp Hàng",
-      subtitle: "Tối ưu hóa xếp container bằng AI, tối đa hóa không gian lên 90%+, giảm chi phí vận chuyển 10-15%, và rút ngắn thời gian lập kế hoạch từ hàng giờ xuống vài phút. Được xây dựng cho logistics nội thất với 20+ quy tắc tự động.",
-      cta: { explore: "Khám Phá Tính Năng", demo: "Yêu Cầu Demo" },
-      stats: { utilization: "Tỷ Lệ Sử Dụng", savings: "Giảm Chi Phí", speed: "Thời Gian Tối Ưu", rules: "Quy Tắc Nghiệp Vụ" },
-    },
-    containers: {
-      badge: "Container Hỗ Trợ",
-      title: "Các Loại",
-      titleAccent: "Container Tiêu Chuẩn",
-      subtitle: "Được cấu hình sẵn cho các container vận chuyển tiêu chuẩn với hỗ trợ kích thước tùy chỉnh.",
-      types: {
-        "20std": { name: "20ft Tiêu Chuẩn", dimensions: "5.9m x 2.35m x 2.39m", capacity: "33.2 m3", weight: "21.770 kg" },
-        "40std": { name: "40ft Tiêu Chuẩn", dimensions: "12.03m x 2.35m x 2.39m", capacity: "67.7 m3", weight: "26.780 kg" },
-        "40hc": { name: "40ft High Cube", dimensions: "12.03m x 2.35m x 2.69m", capacity: "76.3 m3", weight: "26.580 kg" },
-      },
-    },
-    rules: {
-      badge: "Hệ Thống Quy Tắc",
-      title: "Tự Động Hóa",
-      titleAccent: "Quy Tắc Nghiệp Vụ",
-      subtitle: "20+ quy tắc được thực thi tự động — từ hướng nệm đến tuân thủ phân bổ trọng lượng. Không sai sót.",
-      categories: {
-        mattress: { name: "Nệm", rules: ["Lớp dưới chỉ đặt dọc", "Lớp trên chỉ đặt ngang", "Giới hạn lớp theo kích thước"] },
-        dining: { name: "Bàn Ghế Ăn", rules: ["Phân bổ trọng lượng (nặng dưới)", "Tuân thủ hướng mũi tên", "3 kịch bản xếp hàng"] },
-        safety: { name: "An Toàn", rules: ["Khoảng cách tối thiểu 1cm", "Kiểm tra tải trọng chèn ép", "Phân tích lan truyền tải"] },
-        weight: { name: "Trọng Lượng", rules: ["Xác nhận CBM", "Giới hạn trọng lượng container", "Trọng lượng trục (tuân thủ IMO)"] },
-      },
-    },
-    features: {
-      badge: "Tính Năng Chính",
-      title: "Mọi Thứ Bạn Cần Cho",
-      titleAccent: "Xếp Hàng Thông Minh",
-      subtitle: "Từ tối ưu AI đến trực quan hóa 3D tương tác — được xây dựng cho đội logistics cần độ chính xác và tốc độ.",
-      beamSearch: { title: "Tối Ưu Beam Search", desc: "Thuật toán Beam Search tiên tiến với sinh Extreme Points và phát hiện va chạm bằng spatial hash. Đạt 90%+ tỷ lệ sử dụng không gian trong dưới 10 giây cho 1.000+ sản phẩm." },
-      visualization: { title: "Trực Quan 3D Tương Tác", desc: "Render container Three.js thời gian thực với điều khiển quỹ đạo, nhiều góc camera, phân loại theo màu, và chế độ điều chỉnh kéo thả." },
-      rulesEngine: { title: "20+ Quy Tắc Nghiệp Vụ", desc: "Tự động thực thi hướng nệm, kịch bản bàn ghế ăn, giới hạn tải chèn ép, phân bổ trọng lượng, và quy tắc tương thích xếp chồng." },
-      priority: { title: "Quản Lý Nhóm Ưu Tiên", desc: "Tối ưu giao hàng nhiều điểm với tối đa 50 nhóm ưu tiên. Ràng buộc xếp/dỡ tuần tự với tường vô hình tùy chọn giữa các nhóm." },
-      weightDist: { title: "Phân Tích Phân Bổ Trọng Lượng", desc: "Tính toán trọng lượng trục, theo dõi trọng tâm, bản đồ nhiệt áp suất bề mặt với độ phân giải 10cm, và khuyến nghị cân bằng tự động." },
-      export: { title: "Xuất Đa Định Dạng", desc: "Tạo hướng dẫn xếp hàng từng bước, kế hoạch xếp Excel, báo cáo PDF, và liên kết chia sẻ công khai — tất cả từ một kết quả tối ưu." },
-    },
-    howItWorks: {
-      badge: "Cách Thức Hoạt Động",
-      title: "Quy Trình",
-      titleAccent: "4 Bước",
-      titleEnd: "Đơn Giản",
-      s1: { title: "Chọn Container", desc: "Chọn 20ft, 40ft, hoặc 40ft High Cube — hoặc tùy chỉnh kích thước cho container đặc biệt." },
-      s2: { title: "Nhập Sản Phẩm", desc: "Tải dữ liệu sản phẩm qua Excel hoặc nhập thủ công. Hỗ trợ danh mục bàn ghế ăn, nệm và nội thất." },
-      s3: { title: "Tối Ưu & Trực Quan", desc: "Tối ưu một cú nhấp với xem trước 3D thời gian thực. Điều chỉnh kéo thả với xác nhận tức thì." },
-      s4: { title: "Xuất & Chia Sẻ", desc: "Tạo hướng dẫn xếp hàng, kế hoạch Excel, hoặc báo cáo PDF. Chia sẻ qua liên kết công khai với đội kho." },
-    },
-    whyChoose: {
-      badge: "Tại Sao Chọn ContCal",
-      title: "Ngừng Lãng Phí Không Gian,",
-      titleAccent: "Bắt Đầu Tối Ưu",
-      cost: { title: "Giảm Chi Phí Vận Chuyển 10-15%", desc: "Xếp hàng thông minh đạt 90%+ tỷ lệ sử dụng container so với 85% trung bình thủ công. Ít container hơn cho cùng khối lượng hàng." },
-      time: { title: "Từ Hàng Giờ Xuống Vài Phút", desc: "Giảm thời gian lập kế hoạch container từ 2-3 giờ xuống dưới 30 phút. Tối ưu hoàn tất trong dưới 10 giây mỗi container." },
-      damage: { title: "Ngăn Ngừa Hư Hại Sản Phẩm", desc: "20+ quy tắc tự động đảm bảo xếp chồng đúng cách, phân bổ trọng lượng, và yêu cầu khoảng cách. Loại bỏ sai sót con người." },
-      roi: { title: "ROI 200% Trong 18 Tháng", desc: "Hoàn vốn trong 6-9 tháng nhờ giảm chi phí vận chuyển, ít hàng hư hại, và tiết kiệm thời gian đáng kể cho đội kho." },
-    },
-    tech: {
-      badge: "Công Nghệ",
-      title: "Xây Dựng Cho",
-      titleAccent: "Hiệu Suất & Chính Xác",
-      items: {
-        frontend: { label: "Frontend", tech: "React 19 · Vite · Tailwind CSS · TypeScript" },
-        engine3d: { label: "Công Cụ 3D", tech: "Three.js · react-three-fiber · @react-three/drei" },
-        backend: { label: "Backend", tech: "Go 1.21 · Gin Framework · Goroutines" },
-        algorithm: { label: "Thuật Toán", tech: "Beam Search · Extreme Points · Spatial Hash · Simulated Annealing" },
-        database: { label: "Cơ Sở Dữ Liệu", tech: "PostgreSQL (pgx) · MongoDB (audit)" },
-        exportTech: { label: "Xuất Dữ Liệu", tech: "Excelize (Excel) · go-pdf (PDF) · Public Links" },
-      },
-    },
-    categories: {
-      title: "Hỗ Trợ Đa Danh Mục",
-      subtitle: "Được tối ưu cho ba danh mục sản phẩm nội thất chính với quy tắc riêng theo danh mục.",
-      dining: "Bàn Ghế Ăn",
-      mattress: "Nệm",
-      hfa: "Nội Thất Gia Đình",
-    },
-    cta: {
-      title: "Tối Đa Hóa",
-      titleAccent: "Tỷ Lệ Sử Dụng Container",
-      subtitle: "Ngừng vận chuyển không khí. Sử dụng ContCal và chuyển đổi quy trình xếp container với tối ưu hóa AI và trực quan hóa 3D thời gian thực.",
-      demo: "Yêu Cầu Demo",
-      viewAll: "Xem Tất Cả Giải Pháp",
-    },
-  },
-
-  // QuickShift Page
-	  quickshift: {
-	    hero: {
-	      badge: "Quản Lý Nhân Lực Bằng AI",
-	      title: "Nền Tảng Quản Lý Nhân Sự Thời Vụ",
-	      subtitle: "Giải pháp quản lý nhân sự thời vụ toàn diện — từ quét bảng chấm công bằng AI, lập lịch tự động đến xuất hóa đơn và thông báo đa kênh. Được xây dựng cho các công ty phái cử nhân sự Nhật Bản.",
-	      carouselWords: ["Quét chấm công AI", "Lập lịch tự động", "Hóa đơn thông minh", "Thông báo đa kênh"],
-	      cta: {
-	        explore: "Khám Phá Module",
-	        apps: "Ứng Dụng Di Động",
-	      },
-      stats: {
-        modules: "Module Chính",
-        apps: "Ứng Dụng Di Động",
-        permissions: "Phân Quyền RBAC",
-        migrations: "Migration CSDL",
-      },
-    },
-    modules: {
-      badge: "Module Nền Tảng",
-      title1: "Tất Cả Những Gì Bạn Cần Để",
-      title2: "Quản Lý Nhân Lực",
-      subtitle: "8 module tích hợp bao phủ toàn bộ quy trình nhân sự thời vụ, từ tiếp nhận đến xuất hóa đơn.",
-      items: {
-        timecardOcr: { title: "OCR Bảng Chấm Công", desc: "Quét bảng chấm công bằng AI sử dụng Gemini AI. Tự động trích xuất giờ làm, tăng ca và nghỉ giải lao từ bảng chấm công giấy với độ chính xác cao." },
-        autoShifter: { title: "Lập Lịch Tự Động", desc: "Công cụ lập lịch AI tự động tạo ca làm tối ưu dựa trên sẵn sàng, kỹ năng, vị trí và quy định lao động." },
-        workOrders: { title: "Đơn Hàng Công Việc", desc: "Quản lý vòng đời đơn hàng hoàn chỉnh — tạo, phân công, theo dõi và đóng. Hỗ trợ đơn hàng định kỳ, mẫu và vận hành đa địa điểm." },
-        workerMgmt: { title: "Quản Lý Nhân Viên", desc: "Hồ sơ nhân viên toàn diện với kỹ năng, chứng chỉ, lịch sẵn sàng, lịch sử hợp đồng và theo dõi hiệu suất." },
-        customerMgmt: { title: "Quản Lý Khách Hàng", desc: "CRM cho khách hàng phái cử — hợp đồng, tùy chọn thanh toán, địa điểm, yêu cầu kỹ năng và lịch sử quan hệ." },
-        dashboard: { title: "Bảng Điều Khiển & Phân Tích", desc: "Bốn bảng điều khiển chuyên biệt: Tổng Quan Vận Hành, Tóm Tắt Tài Chính, Sử Dụng Nhân Viên và Insights Khách Hàng với KPI thời gian thực." },
-        invoicing: { title: "Hóa Đơn & Thanh Toán", desc: "Tạo hóa đơn tự động từ bảng chấm công, mẫu thanh toán tùy chỉnh, theo dõi thanh toán và tích hợp với hệ thống kế toán." },
-        notifications: { title: "Thông Báo Đa Kênh", desc: "Thông báo đẩy qua FCM/APNs, tích hợp LINE, Zalo và WhatsApp cho giao tiếp nhân viên và khách hàng." },
-      },
-    },
-    ai: {
-      badge: "Tích Hợp AI",
-      title1: "Trí Tuệ Nhân Tạo Trong",
-      title2: "Mọi Bước",
-      ocr: {
-        title: "OCR Bảng Chấm Công",
-        desc: "Được hỗ trợ bởi Google Gemini AI, công cụ OCR quét bảng chấm công giấy và tự động trích xuất:",
-        items: ["Giờ làm & tăng ca", "Giờ nghỉ giải lao", "Thời gian bắt đầu/kết thúc", "Nhận dạng nhân viên", "Phát hiện bất thường"],
-      },
-      shifter: {
-        title: "Lập Lịch Tự Động",
-        desc: "Công cụ lập lịch AI xem xét nhiều yếu tố để tạo phân công ca làm tối ưu:",
-        items: ["Kỹ năng & chứng chỉ nhân viên", "Khoảng cách địa lý", "Tuân thủ luật lao động", "Sở thích sẵn sàng", "Thuật toán phân phối công bằng"],
-      },
-    },
-    roles: {
-      badge: "Phân Quyền Theo Vai Trò",
-      title1: "5 Vai Trò,",
-      title2: "63 Quyền Chi Tiết",
-      subtitle: "Kiểm soát truy cập chi tiết đảm bảo mỗi thành viên chỉ thấy đúng những gì họ cần — không hơn, không kém.",
-      items: {
-        superAdmin: { title: "Super Admin", desc: "Toàn quyền hệ thống với cài đặt tổ chức, quản lý người dùng và nhật ký kiểm tra.", permissions: "Tất cả 63 quyền" },
-        admin: { title: "Admin", desc: "Quản lý nhân viên, khách hàng, đơn hàng và hóa đơn trên tất cả chi nhánh.", permissions: "50+ quyền" },
-        manager: { title: "Quản Lý", desc: "Giám sát vận hành hàng ngày, duyệt bảng chấm công, quản lý lịch và tạo báo cáo.", permissions: "35+ quyền" },
-        staff: { title: "Nhân Viên", desc: "Tạo và cập nhật đơn hàng, xử lý bảng chấm công và phân công nhân viên.", permissions: "20+ quyền" },
-        viewer: { title: "Người Xem", desc: "Quyền chỉ xem bảng điều khiển, báo cáo và dữ liệu vận hành.", permissions: "Chỉ xem" },
-      },
-    },
-	    mobile: {
-	      badge: "Ứng Dụng Di Động",
-	      flutterBadge: "Xây dựng với Flutter · Melos monorepo · iOS & Android",
-	      worker: {
-	        title: "Ứng Dụng Nhân Viên",
-	        titleShort: "Nhân viên",
-	        subtitle: "Lịch làm, chấm công & sẵn sàng",
-	        features: [
-	          "Xem ca được phân công với trạng thái thời gian thực và chi tiết địa điểm",
-	          "Gửi bảng chấm công với check-in/out và theo dõi giờ nghỉ",
-          "Đặt sẵn sàng hàng tuần và yêu cầu nghỉ phép",
-          "Nhận thông báo đẩy cho phân công mới và thay đổi lịch",
-          "Xem lịch sử thu nhập và trạng thái thanh toán",
-        ],
-        stats: { loadTime: "Thời gian tải", clockIn: "Check in/out", pushAlerts: "Thông báo đẩy" },
-      },
-	      customer: {
-	        title: "Ứng Dụng Khách Hàng",
-	        titleShort: "Khách hàng",
-	        subtitle: "Đơn hàng, phê duyệt & thanh toán",
-	        features: [
-	          "Tạo và quản lý đơn hàng với yêu cầu kỹ năng nhân viên",
-	          "Theo dõi trạng thái thời gian thực của tất cả nhân viên và địa điểm",
-          "Duyệt hoặc phản đối bảng chấm công với thao tác hàng loạt",
-          "Xem hóa đơn, lịch sử thanh toán và số dư còn lại",
-          "Đánh giá hiệu suất nhân viên và yêu cầu nhân viên ưu tiên",
-        ],
-        stats: { bulkApprove: "Duyệt hàng loạt", orderTracking: "Theo dõi đơn hàng", invoicing: "Hóa đơn" },
-      },
-	      business: {
-	        title: "Ứng Dụng Quản Lý / HR",
-	        titleShort: "Quản lý",
-	        subtitle: "Vận hành, điều phối & phân tích",
-	        features: [
-	          "Bảng điều khiển vận hành thời gian thực với KPI và tỷ lệ lấp đầy",
-	          "Điều phối nhân viên một chạm đến vị trí trống trên các địa điểm",
-          "Tích hợp Auto Shifter cho lịch được tạo bởi AI",
-          "Tổng quan tài chính với theo dõi doanh thu và trạng thái hóa đơn",
-          "Tạo báo cáo vận hành hàng ngày, tuần và tháng",
-        ],
-	        stats: { dashboard: "Bảng điều khiển", autoShifter: "Auto Shifter", export: "Xuất báo cáo" },
-	      },
-	      mock: {
-	        brand: "QuickShift",
-	        worker: {
-	          phoneTitle: "App Nhân Viên",
-	          profileMeta: "Kho · Toàn thời gian",
-	          todayShift: "Ca hôm nay",
-	          statusActive: "Đang làm",
-	          location: "Kho A",
-	          upcoming: "Sắp tới",
-	          upcomingDay1: "Ngày mai",
-	          upcomingDay2: "T4",
-	          timecard: "Chấm công",
-	          timecardDate: "14 Thg 2",
-	          clockIn: "Vào ca",
-	          clockOut: "Ra ca",
-	          worked: "Đã làm",
-	          submit: "Gửi chấm công",
-	        },
-	        customer: {
-	          phoneTitle: "App Khách Hàng",
-	          companyDashboard: "Bảng điều khiển công ty",
-	          activeWorkOrders: "Đơn hàng đang chạy",
-	          status: { inProgress: "Đang thực hiện", pending: "Chờ" },
-	          wo1Desc: "Phân loại kho · 5 nhân viên",
-	          wo2Desc: "Lắp ráp nhà máy · 8 nhân viên",
-	          pendingApprovals: "Chờ phê duyệt",
-	          timecards: "Bảng chấm công",
-	          approveAll: "Duyệt tất cả",
-	          review: "Xem lại",
-	          thisMonth: "Tháng này",
-	          invoiceTotal: "Tổng hóa đơn",
-	          paid: "Đã thanh toán",
-	        },
-	        business: {
-	          phoneTitle: "App Quản Lý",
-	          operationsDashboard: "Bảng điều khiển vận hành",
-	          date: "14/02/2026",
-	          kpi: {
-	            activeWorkers: "Nhân viên hoạt động",
-	            workOrders: "Đơn hàng",
-	            fillRate: "Tỷ lệ lấp đầy",
-	            revenueMtd: "Doanh thu MTD",
-	          },
-	          todaysDispatches: "Điều phối hôm nay",
-	          dispatch: {
-	            statusComplete: "Hoàn tất",
-	            statusOpen: "Còn 1 chỗ",
-	            workersSuffix: "người",
-	          },
-	          actions: { dispatch: "Điều phối", reports: "Báo cáo" },
-	        },
-	      },
-	    },
-    integrations: {
-      badge: "Trung Tâm Tích Hợp",
-      title1: "Kết Nối Với",
-      title2: "Công Cụ Hiện Có",
-      items: {
-        odoo: { name: "Odoo ERP", desc: "Đồng bộ hai chiều cho kế toán, HR và kho hàng" },
-        payment: { name: "Cổng Thanh Toán", desc: "Stripe, PayPay, tự động hóa chuyển khoản ngân hàng" },
-        messaging: { name: "LINE / Zalo / WhatsApp", desc: "Nhắn tin và thông báo đa kênh" },
-        aws: { name: "Hạ Tầng AWS", desc: "EC2, RDS, S3, CloudFront, Lambda, ALB" },
-      },
-    },
-    tech: {
-      badge: "Công Nghệ",
-      title1: "Xây Dựng Với",
-      title2: "Công Nghệ Hiện Đại",
-      items: {
-        cms: { label: "Frontend CMS", tech: "Next.js 16 · React 19 · Tailwind v4 · shadcn/ui" },
-        mobile: { label: "Ứng Dụng Di Động", tech: "Flutter · Melos monorepo · 3 ứng dụng" },
-        backend: { label: "Backend API", tech: "Go (Chi router) · Kiến trúc DDD · PostgreSQL" },
-        ai: { label: "AI / ML", tech: "Google Gemini AI · OCR · Lập Lịch Tự Động" },
-        infra: { label: "Hạ Tầng", tech: "AWS · Docker · Supabase Auth · S3" },
-        db: { label: "Cơ Sở Dữ Liệu", tech: "PostgreSQL · 110+ migration · Redis cache" },
-      },
-    },
-	    cta: {
-	      title: "Sẵn Sàng Số Hóa",
-	      titleAccent: "Quy Trình Phái Cử Nhân Sự?",
-	      subtitle: "Hãy thảo luận về cách QuickShift có thể tối ưu quản lý nhân lực và loại bỏ các quy trình thủ công.",
-	      getStarted: "Bắt Đầu Ngay",
-	      viewAll: "Xem Tất Cả Dự Án",
-	      privacyLink: "Chính sách quyền riêng tư & lựa chọn riêng tư của người dùng",
-	    },
-	  },
-
-  // Actiwell Platform Page
-  actiwellPlatform: {
-    hero: {
-      badge: "Hệ Sinh Thái Fitness Toàn Diện",
-      title1: "Nền Tảng Actiwell",
-      title2: "Kiến Tạo Tương Lai Ngành Fitness",
-      subtitle: "Mercury Solutions đã hợp tác chiến lược với Attivo International — đơn vị dẫn đầu với hơn 20 năm kinh nghiệm trong ngành fitness Đông Nam Á — để tạo ra Actiwell, hệ sinh thái toàn diện giúp chuyển đổi cách các chuỗi phòng gym vận hành và phát triển.",
-      stats: {
-        apps: "Ứng Dụng Di Động",
-        features: "Tính Năng Chính",
-        experience: "Năm Kinh Nghiệm",
-        powered: "Tích Hợp AI",
-      },
-    },
-    partnership: {
-      badge: "Hợp Tác Chiến Lược",
-      title: "Được Xây Dựng Bởi Các Chuyên Gia",
-      description: "Actiwell ra đời từ sự hợp tác chiến lược giữa chuyên môn công nghệ của Mercury Solutions và sự am hiểu sâu sắc về thị trường fitness Đông Nam Á của Attivo International.",
-      mercury: {
-        role: "Đối Tác Công Nghệ",
-        description: "Mercury Solutions mang đến kỹ thuật phần mềm tiên tiến, khả năng AI, và kinh nghiệm xây dựng các ứng dụng doanh nghiệp chịu tải cao phục vụ hàng triệu người dùng.",
-      },
-      attivo: {
-        role: "Chuyên Gia Ngành Fitness",
-        description: "Với hơn 20 năm dẫn đầu trong ngành fitness Đông Nam Á, Attivo International đóng góp chuyên môn ngành, hiểu biết vận hành, và sự thấu hiểu sâu sắc về nhu cầu của các chuỗi phòng gym.",
-      },
-    },
-    ecosystem: {
-      badge: "Hệ Sinh Thái Hoàn Chỉnh",
-      title: "Hai Ứng Dụng, Một Nền Tảng Mạnh Mẽ",
-      description: "Actiwell mang đến trải nghiệm liền mạch cho cả hội viên và quản lý thông qua ứng dụng di động và hệ thống quản lý tích hợp.",
-      memberApp: {
-        title: "Ứng Dụng Hội Viên",
-        subtitle: "iOS & Android · Flutter",
-        features: {
-          booking: {
-            title: "Đặt Lịch Thông Minh",
-            desc: "Đặt lớp tập nhóm và buổi PT với tình trạng real-time, gợi ý thời gian bằng AI, và xác nhận tức thì.",
-          },
-          checkin: {
-            title: "Check-in Nhanh",
-            desc: "Check-in liền mạch tại bất kỳ cơ sở nào với timeline theo dõi tất cả lịch sử tập luyện.",
-          },
-          classes: {
-            title: "Khám Phá Lớp Tập",
-            desc: "Duyệt và lọc lớp tập nhóm, xem hồ sơ HLV, đọc đánh giá, và tham gia lớp tại bất kỳ cơ sở nào trong chuỗi.",
-          },
-          measurement: {
-            title: "Theo Dõi Chỉ Số Cơ Thể",
-            desc: "Theo dõi chỉ số InBody theo thời gian, xem lịch sử thành phần cơ thể chi tiết, và giám sát tiến trình với biểu đồ trực quan.",
-          },
-          reviews: {
-            title: "Đánh Giá & Nhận Xét",
-            desc: "Đánh giá HLV và lớp tập sau mỗi buổi, đọc nhận xét cộng đồng, và giúp duy trì chất lượng dịch vụ.",
-          },
-          notifications: {
-            title: "Thông Báo Thông Minh",
-            desc: "Nhận nhắc lịch đặt, cập nhật lớp tập, cảnh báo hết hạn gói tập, và gợi ý cá nhân hóa qua push notification.",
-          },
-        },
-      },
-      cms: {
-        title: "Hệ Thống Quản Lý CMS",
-        subtitle: "Dashboard Web · React",
-        features: {
-          customerMgmt: {
-            title: "Quản Lý Khách Hàng",
-            desc: "Hồ sơ hội viên đầy đủ, quản lý nhóm, theo dõi khách ghé thăm, và phân tích vòng đời khách hàng trong một dashboard tập trung.",
-          },
-          scheduleMgmt: {
-            title: "Quản Lý Lịch Trình",
-            desc: "Quản lý lịch lớp tập, phân công HLV, slot đặt PT, và sức chứa phòng tập tại tất cả các cơ sở.",
-          },
-          analytics: {
-            title: "Phân Tích Nâng Cao",
-            desc: "Phân tích doanh thu, xu hướng đặt lịch, mô hình check-in, theo dõi vòng đời hội viên, phễu chuyển đổi, và báo cáo hiệu suất nhân viên.",
-          },
-          salesPackages: {
-            title: "Bán Hàng & Gói Tập",
-            desc: "Tạo và quản lý gói hội viên, sản phẩm, bảng giá, và xử lý đơn hàng với theo dõi thanh toán tích hợp.",
-          },
-          contracts: {
-            title: "Quản Lý Hợp Đồng",
-            desc: "Tạo hợp đồng số, theo dõi gia hạn, quản lý mục tiêu doanh số, và báo cáo doanh thu tự động cho toàn chuỗi.",
-          },
-          multiLocation: {
-            title: "Hỗ Trợ Đa Cơ Sở",
-            desc: "Quản lý nhiều phòng tập từ một dashboard với cài đặt riêng theo cơ sở, phân công nhân sự, và so sánh hiệu suất.",
-          },
-        },
-      },
-    },
-    ai: {
-      badge: "Trí Tuệ Nhân Tạo",
-      title: "Tính Năng AI Độc Đáo",
-      description: "Actiwell tận dụng trí tuệ nhân tạo để cá nhân hóa hành trình tập luyện, tự động hóa tiếp thị, và tối ưu hóa vận hành kinh doanh.",
-      features: {
-        smartBooking: {
-          title: "Gợi Ý Đặt Lịch Bằng AI",
-          desc: "Gợi ý đặt lịch thông minh dựa trên hành vi khách hàng, ngày hết hạn gói tập, slot tập thường xuyên, và sức chứa phòng tập — với chấm điểm ưu tiên để tối đa hóa tương tác.",
-          tags: {
-            expiringPackage: "Gói Sắp Hết Hạn",
-            inactiveCustomer: "Hội Viên Không Hoạt Động",
-            regularSlot: "Slot Thường Xuyên",
-            lowCapacity: "Sức Chứa Thấp",
-          },
-        },
-        retention: {
-          title: "AI Giữ Chân Hội Viên",
-          desc: "Nhận diện hội viên có nguy cơ rời bỏ trước khi xảy ra bằng phân tích hành vi, chấm điểm tương tác, và chiến dịch tái tương tác tự động.",
-        },
-        revenueOptimize: {
-          title: "Tối Ưu Doanh Thu",
-          desc: "Insights dựa trên AI cho chiến lược giá, gợi ý gói tập, cơ hội upselling, và chiến dịch marketing có mục tiêu.",
-        },
-        capacityPlanning: {
-          title: "Lập Kế Hoạch Sức Chứa Thông Minh",
-          desc: "Dự đoán giờ cao điểm, tối ưu lịch lớp tập, và cân bằng khối lượng công việc HLV bằng dữ liệu lịch sử và mô hình machine learning.",
-        },
-      },
-    },
-    value: {
-      title: "Thúc Đẩy Tăng Trưởng Bền Vững",
-      description: "Actiwell mang lại tác động kinh doanh đo lường được trên mọi khía cạnh vận hành chuỗi phòng gym.",
-      items: {
-        operations: {
-          title: "Tối Ưu Vận Hành",
-          desc: "Tự động hóa báo cáo hàng ngày, số hóa hợp đồng, tập trung quản lý đa cơ sở, và giảm khối lượng công việc thủ công lên đến 60%.",
-        },
-        experience: {
-          title: "Nâng Cao Trải Nghiệm Hội Viên",
-          desc: "Gợi ý tập luyện cá nhân hóa, đặt lịch liền mạch, check-in tức thì, và trải nghiệm di động đẹp mắt giữ hội viên gắn bó và trung thành.",
-        },
-        revenue: {
-          title: "Tăng Trưởng Doanh Thu Bền Vững",
-          desc: "Insights dựa trên dữ liệu, marketing tự động, cải thiện tỷ lệ giữ chân, và quy trình bán hàng tối ưu thúc đẩy tăng trưởng doanh thu ổn định.",
-        },
-      },
-    },
-    tech: {
-      title: "Xây Dựng Với Công Nghệ Hiện Đại",
-      description: "Nền tảng công nghệ cấp doanh nghiệp đảm bảo hiệu suất, khả năng mở rộng, và độ tin cậy.",
-      stack: {
-        flutter: "Di Động Đa Nền Tảng",
-        laravel: "Backend API",
-        react: "Dashboard CMS",
-        mysql: "Cơ Sở Dữ Liệu",
-        firebase: "Push & Analytics",
-        docker: "Containerization",
-        ai: "Tính Năng Thông Minh",
-        api: "Tầng Tích Hợp",
-      },
-    },
-    screens: {
-      businessApp: {
-        badge: "Ứng Dụng Nhân Viên & HLV",
-        title: "Ứng Dụng Dành Cho Nhân Viên",
-        description: "Ứng dụng di động chuyên dụng cho HLV và nhân viên để quản lý lịch trình, theo dõi doanh số, xử lý đặt lịch, và giám sát chỉ số cơ thể.",
-      },
-    },
-    demo: {
-      badge: "Trung Tâm Demo",
-      heading: "Trải Nghiệm Nền Tảng Actiwell",
-      directions: "Chỉ Đường",
-      items: {
-        address: {
-          label: "Địa Chỉ Văn Phòng",
-          line1: "Công ty CP Mercury Solutions",
-          line2: "506A Ford Thăng Long, 105 Láng Hạ, Đống Đa, Hà Nội",
-        },
-        hours: {
-          label: "Giờ Demo",
-          value: "Thứ 2 - Thứ 6: 9:00 - 18:00 (GMT+7)",
-        },
-        platforms: {
-          label: "Nền Tảng Hỗ Trợ",
-          line1: "iOS & Android (Ứng dụng Flutter)",
-          line2: "Web CMS (Bảng điều khiển React)",
-        },
-        security: {
-          label: "Bảo Mật & Tuân Thủ",
-          value: "Mã hóa cấp doanh nghiệp, xác thực JWT, phân quyền theo vai trò",
-        },
-        support: {
-          label: "Hỗ Trợ Kỹ Thuật",
-          line1: "Đội ngũ onboarding chuyên biệt cho khách hàng mới",
-          line2: "Giám sát hệ thống 24/7 & cam kết SLA",
-        },
-      },
-    },
-    cta: {
-      title: "Sẵn Sàng Chuyển Đổi Kinh Doanh Fitness?",
-      description: "Để Actiwell tối ưu vận hành, nâng cao trải nghiệm hội viên, và thúc đẩy tăng trưởng doanh thu bền vững cho chuỗi phòng gym của bạn.",
-      contact: "Liên Hệ Ngay",
-      solutions: "Xem Tất Cả Giải Pháp",
-    },
-  },
-
-  // Actiwell ATMS Page
-  actiwellAtms: {
-    hero: {
-      badge: "NSCA v3.0 — 35 Môn Thể Thao",
-      title: "Hệ Thống Quản Lý Huấn Luyện Thể Thao",
-      subtitle: "Nền tảng huấn luyện thể thao chuyên nghiệp số hóa quy trình phát triển vận động viên — từ kiểm tra thể lực chuẩn NSCA đến đỉnh cao thành tích.",
-      ctaExplore: "Khám Phá Tính Năng",
-      ctaPortals: "Xem 3 Cổng Quản Trị",
-      stats: {
-        tests: "Bài Test NSCA",
-        categories: "Nhóm Đánh Giá",
-        sports: "Môn Thể Thao",
-        management: "Quản Lý VĐV",
-      }
-    },
-    modules: {
-      sectionLabel: "Tính Năng Toàn Diện",
-      title: "9 Mô-đun Cốt Lõi Cho Huấn Luyện Chuyên Nghiệp",
-      description: "Hệ thống quản lý huấn luyện thể thao hiện đại tích hợp mọi thứ từ đánh giá thể lực đến giáo án chu kỳ và phòng ngừa chấn thương.",
-      items: [
-        { title: "Kiểm Tra Chuẩn NSCA", description: "30+ bài test thể lực theo chuẩn NSCA v3.0 với độ tin cậy CV%, phân loại 5 mức và so sánh dữ liệu chuẩn." },
-        { title: "Quản Lý VĐV 360°", description: "Quản lý toàn diện từ hồ sơ cá nhân, thể lực, tâm lý, dinh dưỡng đến kế hoạch phát triển sự nghiệp và LTAD." },
-        { title: "Giáo Án Chu Kỳ Thông Minh", description: "Thiết kế giáo án huấn luyện theo chu kỳ macro/meso/micro với theo dõi volume-intensity, giám sát ACWR và phát hiện quá tải." },
-        { title: "Quản Lý Buổi Tập", description: "Lên lịch buổi tập, điểm danh, ghi nhận RPE/sRPE và theo dõi xu hướng tham gia theo giáo án." },
-        { title: "Theo Dõi Sức Khỏe & Chấn Thương", description: "Sàng lọc PAR-Q+, theo dõi chấn thương với mốc phục hồi, kiểm tra chống chỉ định và quy trình trở lại thi đấu." },
-        { title: "Quản Lý Dinh Dưỡng", description: "Mẫu bữa ăn theo mục tiêu (Tăng Cơ / Giảm Mỡ / Phục Hồi), theo dõi macronutrient, hồ sơ theo môn và giám sát tuân thủ." },
-        { title: "Quản Lý Tải Lượng HLV", description: "Phân công HLV với tải lượng theo vai trò (Trưởng/Phó/Chuyên Gia), gợi ý thông minh và phòng ngừa quá tải." },
-        { title: "Đợt Kiểm Tra", description: "Tổ chức kiểm tra hàng loạt với lên lịch địa điểm, theo dõi tham gia, ghi kết quả hàng loạt và tạo báo cáo." },
-        { title: "Phân Tích & Báo Cáo", description: "Dashboard đa chiều (tham gia, thành tích, dinh dưỡng, sức khỏe), theo dõi KPI, phân tích xu hướng và xuất PDF/Excel." },
-      ]
-    },
-    testCategories: {
-      sectionLabel: "Nhóm Bài Test NSCA",
-      title: "9 Nhóm",
-      titleSuffix: "với 30+ Bài Test",
-      description: "Hệ thống kiểm tra thể lực toàn diện theo chuẩn NSCA v3.0 với độ tin cậy CV%, dữ liệu chuẩn và phân loại 5 mức.",
-      complianceBadge: "Tuân thủ 100% tiêu chuẩn NSCA v3.0",
-      categories: [
-        { title: "Nhân Trắc Học", tests: ["Chiều Cao", "Cân Nặng", "% Mỡ Cơ Thể", "BMI", "Tỷ Lệ Eo-Hông"] },
-        { title: "Dấu Hiệu Sinh Tồn", tests: ["Nhịp Tim Nghỉ", "Huyết Áp", "Kiểm Tra Chống Chỉ Định"] },
-        { title: "Nhanh Nhẹn", tests: ["Pro Agility 5-10-5", "T-Test", "Illinois Agility", "Nhảy Lục Giác"] },
-        { title: "Sức Mạnh Bùng Nổ", tests: ["Squat Jump", "CMJ", "Bật Nhảy Cao", "Bật Xa Tại Chỗ", "Wingate Test"] },
-        { title: "Tốc Độ", tests: ["Chạy 5m", "Chạy 10m", "Chạy 20m", "40-Yard Dash", "Gõ Chân"] },
-        { title: "Sức Mạnh", tests: ["1RM Đẩy Ngực", "1RM Squat", "1RM Deadlift", "Lực Bóp Tay"] },
-        { title: "Sức Bền Cơ", tests: ["YMCA Bench Press", "Test Chống Đẩy", "Test Gập Bụng", "Ổn Định Core"] },
-        { title: "Tim Mạch", tests: ["YMCA Cycle Test", "Chạy 1.5 Dặm", "Cooper 12 Phút", "Yo-Yo IR1"] },
-        { title: "Linh Hoạt & Thăng Bằng", tests: ["Ngồi Với", "Linh Hoạt Vai", "Đứng Cò", "Y-Balance"] },
-      ]
-    },
-    problemSolution: {
-      sectionLabel: "Vấn Đề & Giải Pháp",
-      titleManual: "Thủ Công",
-      titleAutomated: "Tự Động",
-      problemsTitle: "Vấn Đề Hiện Tại",
-      solutionsTitle: "Giải Pháp ATMS",
-      problems: [
-        { title: "Ghi chép thủ công", detail: "Dữ liệu VĐV phân tán qua Excel, giấy tờ — khó truy xuất và dễ sai sót" },
-        { title: "Không có tiêu chuẩn test thống nhất", detail: "Mỗi HLV đánh giá khác nhau, không có dữ liệu chuẩn để so sánh" },
-        { title: "Đánh giá thể lực chủ quan", detail: "Không có độ tin cậy CV% — không thể phân loại chính xác theo tiêu chuẩn quốc tế" },
-        { title: "Không phát hiện rủi ro chấn thương", detail: "Không theo dõi ACWR hoặc kiểm tra chống chỉ định trong huấn luyện" },
-        { title: "Giáo án chu kỳ thủ công", detail: "Khó lập kế hoạch macro/meso/micro và theo dõi tải lượng huấn luyện" },
-        { title: "Quản lý HLV không hiệu quả", detail: "Không tính toán tải lượng — dễ quá tải hoặc phân công thiếu cho HLV" },
-      ],
-      solutions: [
-        { title: "Hồ sơ VĐV số 360°", detail: "Quản lý toàn diện: hồ sơ, thể lực, tâm lý, dinh dưỡng, LTAD trong một hệ thống" },
-        { title: "Tuân thủ đầy đủ NSCA v3.0", detail: "30+ bài test với độ tin cậy CV%, dữ liệu chuẩn và phân loại 5 mức" },
-        { title: "Phân loại khoa học, khách quan", detail: "Tự động so sánh với chuẩn quốc tế theo giới tính, tuổi và môn thể thao" },
-        { title: "Giám sát ACWR & rủi ro", detail: "Theo dõi tỷ lệ tải cấp tính:mãn tính, kiểm tra chống chỉ định và phát hiện quá tải" },
-        { title: "Giáo án chu kỳ thông minh", detail: "Lập kế hoạch macro/meso/micro với tự động theo dõi volume-intensity" },
-        { title: "Quản lý tải lượng HLV", detail: "Tải lượng theo vai trò (Trưởng/Phó/Chuyên Gia) với phòng ngừa quá tải" },
-      ]
-    },
-    roles: {
-      sectionLabel: "Phân Quyền Theo Vai Trò",
-      title: "Ba Cổng Quản Trị Chuyên Biệt",
-      description: "Phân quyền truy cập rõ ràng phù hợp với từng loại người dùng.",
-      admin: {
-        title: "Cổng Quản Trị",
-        description: "Quản lý toàn hệ thống, cấu hình môn thể thao, phân công HLV-VĐV và giám sát toàn trung tâm.",
-        features: [
-          "Hồ sơ VĐV & HLV toàn trung tâm",
-          "Phân công HLV theo vai trò Trưởng/Phó/Chuyên Gia",
-          "Cấu hình 35 môn thể thao & hồ sơ dinh dưỡng",
-          "Dashboard đa chiều: Trung Tâm/Phòng Ban/Đội/VĐV",
-          "Tổ chức đợt kiểm tra hàng loạt & ghi kết quả",
-          "Báo cáo tổng hợp xuất PDF/Excel",
-        ]
-      },
-      coach: {
-        title: "Cổng HLV",
-        description: "Thực hiện kiểm tra thể lực, quản lý giáo án chu kỳ và theo dõi tiến trình VĐV được phân công.",
-        features: [
-          "Ghi kết quả cho 30+ bài test NSCA",
-          "Thiết kế giáo án macro/meso/micro",
-          "Quản lý buổi tập & giáo án chi tiết",
-          "Giám sát ACWR & theo dõi chấn thương",
-          "Ghi nhận mức tuân thủ dinh dưỡng",
-          "Báo cáo cá nhân cho VĐV được phân công",
-        ]
-      },
-      athlete: {
-        title: "Cổng VĐV",
-        description: "Xem kết quả test cá nhân, theo dõi lịch tập, kế hoạch dinh dưỡng và nhật ký huấn luyện.",
-        features: [
-          "Xem kết quả test với phân loại 5 mức NSCA",
-          "Biểu đồ tiến trình theo thời gian",
-          "Lịch cá nhân & buổi tập sắp tới",
-          "Kế hoạch bữa ăn & theo dõi dinh dưỡng",
-          "Nhật ký tập luyện & ghi chú cá nhân",
-          "Nhận thông báo từ HLV & hệ thống",
-        ]
-      }
-    },
-    workflow: {
-      sectionLabel: "Quy Trình",
-      title: "Quy Trình Đơn Giản, Hiệu Quả Cao",
-      description: "Quy trình huấn luyện khoa học theo tiêu chuẩn quốc tế — từ tiếp nhận đến phân tích.",
-      steps: [
-        { title: "Tiếp Nhận VĐV", description: "Đăng ký hồ sơ, sàng lọc PAR-Q+ và kiểm tra chống chỉ định trước huấn luyện" },
-        { title: "Kiểm Tra Thể Lực", description: "30+ bài test NSCA với độ tin cậy CV% và phân loại 5 mức" },
-        { title: "Giáo Án Chu Kỳ", description: "Lập kế hoạch macro/meso/micro với theo dõi volume-intensity" },
-        { title: "Buổi Tập", description: "Lên lịch buổi tập, điểm danh, ghi RPE/sRPE và giáo án chi tiết" },
-        { title: "Giám Sát Sức Khỏe", description: "Theo dõi chấn thương, giám sát ACWR và quy trình trở lại thi đấu" },
-        { title: "Phân Tích & Báo Cáo", description: "Dashboard đa chiều, theo dõi KPI, phân tích xu hướng và xuất PDF/Excel" },
-      ]
-    },
-    mobileApps: {
-      sectionLabel: "Ứng Dụng Di Động",
-      title: "Ứng Dụng HLV & VĐV",
-      description: "Ứng dụng di động tối ưu cho tablet và điện thoại — ghi kết quả ngay tại sân và theo dõi tiến trình mọi lúc, mọi nơi.",
-      coachApp: {
-        title: "Ứng Dụng HLV",
-        subtitle: "Ghi kết quả test & quản lý buổi tập",
-        features: [
-          "Form test tối ưu cho tablet với 30+ bài test NSCA",
-          "Chế độ trạm cho đợt kiểm tra hàng loạt",
-          "Quản lý buổi tập, điểm danh, RPE/sRPE",
-          "Giáo án chi tiết với format bài tập",
-        ],
-        stats: { formLoad: "Tải form", perResult: "Mỗi kết quả", nscaValid: "NSCA hợp lệ" }
-      },
-      athleteApp: {
-        title: "Ứng Dụng VĐV",
-        subtitle: "Theo dõi tiến trình & nhật ký tập",
-        features: [
-          "Kết quả test với biểu đồ xu hướng tiến trình",
-          "Nhật ký tập hàng ngày: trạng thái, thể lực, tâm trạng",
-          "Ghi bài tập với sets, reps, trọng lượng, RPE",
-          "Thống kê cá nhân: tổng ngày, chuỗi liên tục, xu hướng",
-        ],
-        stats: { createLog: "Tạo nhật ký", editWindow: "Thời gian chỉnh sửa", offline: "Hỗ trợ" }
-      },
-      sharedTitle: "Tính Năng Chung Cho Cả Hai Ứng Dụng",
-      sharedFeatures: [
-        "Thông báo thời gian thực",
-        "Cảnh báo chấn thương < 5 phút",
-        "Đồng bộ dữ liệu tự động",
-        "Tối ưu cho tablet & điện thoại",
-      ]
-    },
-    cta: {
-      title: "Sẵn Sàng Số Hóa Trung Tâm Huấn Luyện?",
-      description: "ATMS mang kiểm tra chuẩn NSCA, giáo án thông minh và huấn luyện dựa trên dữ liệu vào một nền tảng thống nhất.",
-      contact: "Bắt Đầu Ngay",
-      backToItSolution: "Quay Lại IT Solutions"
-    }
-  },
-
-  // TNA System Page
-  tnaSystem: {
-    hero: {
-      badge: "Hệ Thống TNA HRM",
-      title1: "Nền Tảng Nhân Sự & Bảng Lương Số Hóa",
-      title2: "cho Sản Xuất",
-      subtitle: "Quản lý nhân sự toàn diện với chấm công AI, vận hành ca kíp & nghỉ phép, tự động hóa bảng lương và tích hợp kế toán MISA — xây dựng cho doanh nghiệp sản xuất Việt Nam.",
-      cta: {
-        explore: "Khám phá module",
-        viewScreens: "Xem thiết kế màn hình",
-      },
-      stats: {
-        pages: "Trang chức năng",
-        flows: "Quy trình",
-        userRoles: "Vai trò",
-        langs: "Ngôn ngữ",
-      },
-    },
-    core: {
-      title: "Các Module Chức Năng Cốt Lõi",
-      description: "TNA bao phủ toàn bộ vòng đời nhân sự và bảng lương cho đội ngũ sản xuất, từ đầu vào chấm công đến đầu ra kế toán.",
-      modules: {
-        employeeOrg: {
-          title: "Quản Lý Nhân Sự & Tổ Chức",
-          description: "Quản lý hồ sơ nhân viên, cơ cấu phòng ban và phân quyền truy cập theo vai trò cho HR, kế toán lương, quản lý và nhân viên.",
-          bullets: ["Dữ liệu gốc nhân viên", "Sơ đồ phòng ban", "Ma trận vai trò và quyền"]
-        },
-        aiAttendance: {
-          title: "Chấm Công AI",
-          description: "Ghi nhận chấm công thời gian thực bằng camera AI/sinh trắc học và đồng bộ dữ liệu bảng chấm công cho tính lương.",
-          bullets: ["Luồng nhận diện khuôn mặt", "Check-in/out thời gian thực", "Đồng bộ bảng chấm công"]
-        },
-        shiftMgmt: {
-          title: "Ca Làm, Nhóm Ca & Đổi Ca",
-          description: "Cấu hình ca cố định/xoay ca, phân công nhân viên theo nhóm và kiểm soát yêu cầu đổi ca với phê duyệt.",
-          bullets: ["Mẫu ca làm việc", "Phân công theo nhóm", "Quy trình đổi ca"]
-        },
-        leaveOtLate: {
-          title: "Nghỉ Phép, Tăng Ca, Đi Muộn/Về Sớm",
-          description: "Xử lý yêu cầu nghỉ phép, các loại tăng ca và tình huống đi muộn/về sớm với tính toán theo chính sách.",
-          bullets: ["Loại phép và yêu cầu", "Ma trận chính sách tăng ca", "Xử lý đi muộn/về sớm"]
-        },
-        payrollEngine: {
-          title: "Bộ Máy Tính Lương",
-          description: "Tự động hóa tính lương từ gộp đến thực lĩnh với thuế và bảo hiểm theo quy định lao động Việt Nam.",
-          bullets: ["Chạy lương tự động", "Logic thuế và bảo hiểm", "Xuất phiếu lương"]
-        },
-        salaryTemplate: {
-          title: "Thành Phần Lương & Mẫu Lương",
-          description: "Xây dựng mẫu lương tái sử dụng với phụ cấp, khấu trừ và thành phần tính theo công thức.",
-          bullets: ["Thư viện thành phần", "Gán mẫu lương", "Cài đặt lương mặc định"]
-        },
-        bonusDeduction: {
-          title: "Quản Lý Thưởng & Khấu Trừ",
-          description: "Duy trì danh sách thu nhập bổ sung và khấu trừ, áp dụng quy tắc theo cá nhân hoặc hàng loạt, và kiểm tra tác động bảng lương.",
-          bullets: ["Quản lý danh sách thưởng", "Quản lý danh sách khấu trừ", "Kiểm tra tác động lương ròng"]
-        },
-        misaIntegration: {
-          title: "Tích Hợp Kế Toán MISA",
-          description: "Đẩy chứng từ kế toán lương và đồng bộ danh mục nhân viên để tự động hóa kế toán đầu-cuối.",
-          bullets: ["API đồng bộ chứng từ", "Đồng bộ danh mục nhân viên", "Giám sát callback và đồng bộ"]
-        }
-      }
-    },
-    mock: {
-      common: { live: "Trực tiếp" },
-      employeeOrg: {
-        windowTitle: "Nhân Viên / Phòng Ban / Người Dùng",
-        searchEmployee: "Tìm nhân viên",
-        departmentFilter: "Phòng ban",
-        columns: { employee: "Nhân viên", department: "Phòng ban", role: "Vai trò" },
-        sample: { department: "Lắp ráp A", role: "Trưởng phòng HR" }
-      },
-      aiAttendance: {
-        windowTitle: "Chấm Công / Camera AI",
-        realtime: "Thời gian thực",
-        cards: { present: "Có mặt", late: "Đi muộn", noCheckIn: "Chưa chấm công" },
-        events: "Sự kiện Camera",
-        syncing: "Đang đồng bộ",
-        sampleEvent: "Cổng A · Nhận diện khuôn mặt"
-      },
-      shiftMgmt: {
-        windowTitle: "Ca Làm / Nhóm Ca / Đổi Ca",
-        columns: { group: "Nhóm", shift: "Ca", time: "Thời gian", status: "Trạng thái" },
-        lineA: { group: "Dây chuyền A - Ngày thường", shift: "Ca sáng", status: "Đang chạy" },
-        lineB: { group: "Dây chuyền B - Xoay ca", shift: "Ca đêm", status: "Chờ xử lý" }
-      },
-      leaveOtLate: {
-        windowTitle: "Nghỉ Phép / Tăng Ca / Muộn-Sớm",
-        tabs: { leaveRequest: "Yêu cầu nghỉ", overtime: "Tăng ca", lateEarly: "Muộn/Sớm" },
-        rows: {
-          leave: "Nghỉ phép · EMP-01021 · 1 ngày",
-          overtime: "Tăng ca · EMP-00403 · 3.5 giờ",
-          late: "Đi muộn · EMP-00210 · 18 phút"
-        },
-        status: { awaiting: "Chờ duyệt", approved: "Đã duyệt", processed: "Đã xử lý" }
-      },
-      payroll: {
-        windowTitle: "Tính Bảng Lương",
-        rightLabel: "Chạy hàng tháng",
-        period: "Tháng 3/2026",
-        departmentFilter: "Phòng ban",
-        gross: "Lương gộp",
-        net: "Lương thực lĩnh",
-        statusLabel: "Trạng thái tính lương",
-        calculated: "Đã tính"
-      },
-      salaryTemplate: {
-        windowTitle: "Thành Phần Lương / Mẫu",
-        libraryTitle: "Thư viện thành phần",
-        baseSalary: "Lương cơ bản",
-        mealAllowance: "Phụ cấp ăn",
-        insurance: "Bảo hiểm",
-        templateTitle: "Gán mẫu lương",
-        templateName: "Công nhân nhà máy V2",
-        formulaGross: "Gộp = Cơ bản + TC + Thưởng",
-        formulaNet: "Ròng = Gộp - Thuế - BHXH",
-        active: "Đang dùng"
-      },
-      bonusDeduction: {
-        windowTitle: "Danh Sách Thưởng / Khấu Trừ",
-        columns: { item: "Khoản mục", type: "Loại", rule: "Quy tắc", amount: "Số tiền" },
-        rows: {
-          bonusName: "Thưởng chuyên cần",
-          bonusType: "Thưởng",
-          bonusRule: "Cố định hàng tháng",
-          deductionName: "Tạm ứng lương",
-          deductionType: "Khấu trừ",
-          deductionRule: "Theo cá nhân"
-        }
-      },
-      misa: {
-        windowTitle: "Hàng đợi đồng bộ MISA",
-        rightLabel: "API Callback",
-        queueTitle: "Đẩy chứng từ lương",
-        inQueue: "Trong hàng đợi",
-        batchInfo: "Lô: 100 chứng từ · Đơn vị: FUJIKIN-VN",
-        dictionarySync: "Đồng bộ danh mục",
-        voucherCreate: "Tạo chứng từ",
-        callbackStatus: "Trạng thái Callback",
-        done: "Hoàn thành",
-        processing: "Đang xử lý",
-        awaiting: "Chờ xử lý"
-      }
-    },
-    screenDesign: {
-      title: "Thiết Kế Màn Hình TNA CMS",
-      description: "Trực quan hóa từ các module frontend TNA CMS (dashboard, tính lương, cài đặt camera AI) để minh họa cách tổ chức các màn hình vận hành hàng ngày.",
-      cards: {
-        dashboard: "Tổng Quan Dashboard",
-        payroll: "Danh Sách Tính Lương",
-        aiCamera: "Cài Đặt Camera AI"
-      },
-      dashboard: {
-        realtime: "Dashboard / Thời gian thực",
-        attendanceTrend: "Xu hướng chấm công",
-        pendingRequests: "Yêu cầu chờ duyệt",
-        kpi: { totalStaff: "Tổng nhân viên", present: "Có mặt", late: "Đi muộn", onLeave: "Nghỉ phép" },
-        pending: { leave: "Nghỉ phép", shiftChange: "Đổi ca", lateEarly: "Muộn/Sớm" }
-      },
-      payroll: {
-        filterPeriodName: "Tên kỳ lương",
-        filterDateRange: "Khoảng thời gian",
-        columns: { period: "Kỳ lương", status: "Trạng thái", department: "Phòng ban", staff: "Nhân viên" },
-        sample: {
-          period: "Tháng 3/2026",
-          calculated: "Đã tính",
-          approved: "Đã duyệt",
-          draft: "Nháp",
-          assembly: "Lắp ráp",
-          qa: "Kiểm định",
-          warehouse: "Kho"
-        }
-      },
-      aiCamera: {
-        officeLocation: "Văn phòng / Vị trí",
-        provider: "Nhà cung cấp",
-        placeIdToken: "Mã vị trí / Token",
-        activeConfig: "Cấu hình đang hoạt động",
-        connected: "Đã kết nối",
-        workflow: "Lưu / Sửa / Xóa cấu hình",
-        sample: {
-          officeA1: "Nhà máy A - Cổng 1",
-          officeA2: "Nhà máy A - Cổng 2",
-          officeB4: "Nhà máy B - Bãi xuất hàng"
-        }
-      }
-    },
-    workflow: {
-      title: "Quy Trình Vận Hành",
-      steps: [
-        "Thiết lập hệ thống và chính sách (quy định công ty, lịch, mặc định ca)",
-        "Cấu hình cơ cấu lương và mẫu lương",
-        "Tiếp nhận nhân viên với hồ sơ và đăng ký nguồn chấm công",
-        "Thu thập dữ liệu chấm công và vận hành hàng ngày",
-        "Tính lương, kiểm tra và phê duyệt",
-        "Đồng bộ kế toán và thực hiện thanh toán"
-      ]
-    },
-    compliance: {
-      title: "Tuân Thủ & Tích Hợp",
-      p1: "Logic bảng lương bao gồm xử lý thuế và bảo hiểm (BHXH, BHYT, BHTN), hệ số tăng ca tùy chỉnh, và quy tắc phụ cấp/khấu trừ theo chính sách.",
-      p2: "Tích hợp MISA tự động hóa chuyển giao kế toán bằng cách đồng bộ danh mục nhân viên và đẩy chứng từ lương qua API với theo dõi trạng thái callback.",
-      p3: "Kiểm soát truy cập hỗ trợ vận hành theo vai trò cho Quản trị viên, Trưởng phòng HR, Chuyên viên lương, Trưởng bộ phận và Nhân viên."
-    },
-    backToItSolution: "Quay Lại IT Solutions"
-  },
-
-  nightlifePage: {
-    hero: {
-      brand: "Mercury Solutions",
-      title: "Night Life CRM",
-      subtitle: "Nền tảng dữ liệu khách hàng vận hành thực chiến cho club, lounge và bar.",
-      description: "Một bề mặt vận hành thống nhất cho dữ liệu khách, phân khúc, đặt bàn, waitlist và điều phối sàn, đi kèm kiểm soát tuân thủ chặt chẽ và SLA đo lường được.",
-      ctaDemo: "Yêu Cầu Demo Production",
-      ctaFlow: "Xem Luồng Dịch Vụ",
-      imageAlt: "Vận hành venue nightlife",
-    },
-    heroStats: {
-      waitlist: { label: "Waitlist trực tiếp", value: "22 nhóm" },
-      seatTime: { label: "Thời gian xếp chỗ", value: "13 phút" },
-      noShow: { label: "Rủi ro no-show", value: "4 booking" },
-      campaign: { label: "Trạng thái campaign", value: "Chuỗi sau ghé thăm" },
-    },
-    signals: {
-      title: "Tín Hiệu Production",
-      items: {
-        latency: { label: "Độ trễ API (p95)", value: "< 400ms" },
-        operators: { label: "Nhân sự vận hành đồng thời", value: "2,000+" },
-        uptime: { label: "Uptime mục tiêu", value: "99.9%" },
-        tenant: { label: "Mô hình tenant", value: "SaaS đa venue" },
-      },
-    },
-    capabilities: {
-      kicker: "Guest intelligence",
-      title: "Biết rõ từng khách trước lời chào đầu tiên.",
-      description: "Mercury Night Life CRM tập trung identity, intent và engagement để host và marketing cùng hành động trên một nguồn dữ liệu chuẩn.",
-      items: {
-        profile: {
-          title: "Hồ sơ khách hợp nhất",
-          detail: "Hợp nhất định danh qua số điện thoại, email, booking và dòng lịch sử ghé thăm.",
-        },
-        segment: {
-          title: "Phân khúc thông minh",
-          detail: "Tự động gắn thẻ và lưu audience cho no-show recovery, VIP quay lại và nhóm giá trị cao.",
-        },
-        outreach: {
-          title: "Outreach an toàn theo kênh",
-          detail: "Chiến dịch Email, SMS và WhatsApp với kiểm soát consent và suppression riêng theo từng kênh.",
-        },
-      },
-    },
-    context: {
-      kicker: "Ngữ cảnh phục vụ",
-      title: "Xếp chỗ bằng nhận diện thời gian thực, không phải phỏng đoán.",
-      description: "Đội FOH nhìn thấy identity, lịch sử ghé thăm và campaign intent ngay đúng thời điểm họ xếp khách vào bàn.",
-      support: "Ba tín hiệu trực tiếp luôn hiện bên cạnh hình ảnh sàn để phần này đọc như lớp intelligence phục vụ, không phải ảnh nightlife mang tính trang trí.",
-      cardLabel: "Ngữ cảnh trực tiếp",
-      imageAlt: "Quầy host và khu vực phục vụ trong nightclub",
-      cards: {
-        identity: {
-          title: "Nhận diện ngay khung nhìn",
-          detail: "Nhìn thấy hạng VIP, host phụ trách và ghi chú sở thích trước khi bắt đầu chào khách.",
-          alt: "Quầy host với hoạt động khách đến",
-        },
-        history: {
-          title: "Nhịp ghé thăm",
-          detail: "Hiển thị độ gần đây, mô hình chi tiêu và kết quả những lần trước trong khi hàng chờ vẫn đang di chuyển.",
-          alt: "Sàn lounge đông khách trong giờ phục vụ",
-        },
-        intent: {
-          title: "Ý định chiến dịch",
-          detail: "Biết rõ chuỗi recovery, loyalty hay event nào đã kéo khách quay lại tối nay.",
-          alt: "Khoảnh khắc nhóm khách nightlife với bầu không khí quảng bá",
-        },
-      },
-    },
-    flow: {
-      kicker: "Luồng vận hành",
-      title: "Thiết kế cho khung giờ cao điểm.",
-      description: "Một vòng vận hành liên tục từ tra cứu hồ sơ đến campaign sau ghé thăm, tối ưu cho ca đêm mà không cần chuyển ngữ cảnh.",
-      stepLabel: "Bước",
-      items: {
-        intake: {
-          title: "Tiếp nhận tại quầy",
-          detail: "Host tìm hồ sơ trong vài giây và thấy mức chi tiêu, sở thích cùng kết quả các lần trước.",
-        },
-        reservation: {
-          title: "Đặt bàn + waitlist",
-          detail: "Luồng booking và walk-in chạy trong một hàng đợi với trạng thái trực tiếp và xử lý no-show.",
-        },
-        floor: {
-          title: "Phân bàn trên sàn",
-          detail: "Vận hành bàn và bottle service đồng bộ theo thời gian thực trên web và mobile cho staff.",
-        },
-        automation: {
-          title: "Tự động hóa sau ghé thăm",
-          detail: "Tin nhắn kích hoạt theo sự kiện đi kèm attribution của campaign và telemetry giao nhận.",
-        },
-      },
-    },
-    compliance: {
-      kicker: "Bảo mật và tuân thủ",
-      title: "Các lớp kiểm soát đáp ứng yêu cầu procurement doanh nghiệp.",
-      description: "Baseline từ SRS định hình tenant isolation, auditability và xử lý quyền riêng tư xuyên suốt toàn bộ workflow khách hàng và campaign.",
-      points: [
-        "Tenant isolation theo tổ chức và venue",
-        "Phân quyền theo vai trò kèm audit log cho thao tác nhạy cảm",
-        "Workflow consent, export và deletion phù hợp GDPR/CCPA/PDPA",
-        "Tích hợp OpenAPI-first và phân phối sự kiện qua webhook",
-      ],
-    },
-    stack: {
-      title: "Production stack",
-      items: {
-        web: { key: "Web console", value: "Next.js + React" },
-        mobile: { key: "Mobile operations", value: "Flutter iOS/Android" },
-        data: { key: "Tầng dữ liệu", value: "MySQL/MariaDB 10.6+" },
-        comms: { key: "Kênh liên lạc", value: "Email / SMS / WhatsApp" },
-        realtime: { key: "Cập nhật thời gian thực", value: "WebSocket / SSE" },
-        spec: { key: "Kỷ luật đặc tả", value: "OpenAPI 3.0 + Webhooks" },
-      },
-    },
-    cta: {
-      kicker: "Lộ trình triển khai",
-      title: "Đi từ pilot đến production bằng một kế hoạch triển khai thống nhất.",
-      description: "Căn chỉnh data model khách, workflow vận hành và kiểm soát tuân thủ trước khi go-live. Đội Mercury có thể map baseline trên trang này vào rollout của venue chỉ trong một discovery sprint.",
-      primary: "Bắt Đầu Kế Hoạch Production",
-      secondary: "Trao Đổi Với Đội Mercury",
-    },
-    footerPoints: [
-      "Hồ sơ khách và identity graph",
-      "Phân khúc theo rule và chiến dịch",
-      "Vòng vận hành reservation, waitlist và floor",
-      "Vận hành sẵn sàng cho SLA và tuân thủ",
-    ],
-  },
-
-  myarmPage: {
-    hero: {
-      badge: "Nền tảng Mercury triển khai cho MyArms Nhật Bản",
-      title: "Mercury đã xây dựng MyARM thành một hệ thống workflow production cho khách hàng Nhật Bản.",
-      subtitle: "Cho MyArms tại Nhật Bản, Mercury đã triển khai mobile app, backend services và luồng sản phẩm sẵn sàng phát hành của MyARM để vận hành hằng ngày đi qua một hệ thống có kỷ luật.",
-      primaryCta: "Trao đổi với Mercury về hệ thống tương tự",
-      secondaryCta: "Truy cập website chính thức",
-      deviceBadge: "iOS + Android",
-      posterLabel: "Một client delivery thực tế, không phải concept nội bộ",
-      posterSubtext: "Mercury đã triển khai Flutter mobile app, Laravel services và bản phát hành sẵn sàng lên store cho MyArms.",
-    },
-    overview: {
-      eyebrow: "Mercury đã bàn giao gì",
-      title: "Một dự án phần mềm thực tế từ thiết kế workflow đến phát hành production.",
-      body: "MyARM không phải mockup để trưng bày trên homepage của Mercury. Đây là dự án khách hàng mà Mercury Solutions triển khai cho MyArms, bao phủ từ thiết kế workflow, phát triển mobile product, backend services đến đường ra production cho đội ngũ sử dụng thật.",
-    },
-    sections: {
-      jobs: {
-        title: "Mô hình hóa workflow",
-        desc: "Mercury chuyển các yêu cầu vận hành thành cấu trúc jobs và phân công rõ ràng để owner, người thực thi và deadline cùng nằm trong một flow sản phẩm.",
-      },
-      missions: {
-        title: "Hiển thị tiến độ thực thi",
-        desc: "Mission, milestone và áp lực deadline được biến thành các trạng thái sản phẩm có thể theo dõi để quản lý nhìn thấy chuyển động thay vì phải đuổi theo cập nhật thủ công.",
-      },
-      meetings: {
-        title: "Lớp điều phối cộng tác",
-        desc: "Meetings, events và follow-up actions được gắn vào cùng một làn workflow, thể hiện năng lực của Mercury trong việc thiết kế tính năng cộng tác quanh vận hành thực tế.",
-      },
-      library: {
-        title: "Kho tri thức vận hành",
-        desc: "Tài liệu, memo và quy chuẩn được đặt sát quá trình thực thi để sản phẩm giữ ngữ cảnh bên trong workflow thay vì nằm rời bên ngoài.",
-      },
-    },
-    workflow: {
-      eyebrow: "Mercury cấu trúc dự án như thế nào",
-      title: "Yêu cầu nghiệp vụ, product flow, service design và phát hành luôn đi cùng nhau.",
-      steps: {
-        capture: {
-          title: "Bóc tách luồng nghiệp vụ",
-          desc: "Mercury bắt đầu bằng việc chuyển các quy trình vận hành của khách hàng thành product flow cụ thể cho jobs, missions, meetings và tài liệu dùng chung.",
-        },
-        coordinate: {
-          title: "Thiết kế một mặt vận hành chung",
-          desc: "Đội ngũ xây dựng một trải nghiệm thống nhất để nhân sự hiện trường và văn phòng làm việc trên cùng một nguồn sự thật thay vì bị chia cắt qua nhiều công cụ.",
-        },
-        communicate: {
-          title: "Xây đồng thời app và services",
-          desc: "Mercury triển khai mobile client, backend APIs và lớp service dùng chung cùng lúc để dữ liệu, giao tiếp và hành động luôn khớp nhau.",
-        },
-        confirm: {
-          title: "Đưa ra production có kỷ luật",
-          desc: "Phân phối trên store, website chính thức và ranh giới dịch vụ ổn định biến dự án này thành một nền tảng production thay vì một portfolio mockup.",
-        },
-      },
-    },
-    architecture: {
-      eyebrow: "Kiến trúc công nghệ",
-      title: "Flutter ở client. Laravel ở lõi dịch vụ.",
-      body: "Mercury triển khai MyARM với Flutter mobile client, một Laravel backend chuyên biệt và một Laravel common service dùng chung. Kiến trúc này tách lớp giao tiếp với app khỏi các business domain có thể tái sử dụng, giúp hệ thống dễ mở rộng, bảo trì và vận hành hơn.",
-    },
-    stack: {
-      mobile: {
-        title: "Năng lực product engineering với Flutter",
-        desc: "Mercury triển khai client production cho iOS và Android với các module jobs, missions, meetings, notifications và không gian làm việc cá nhân.",
-      },
-      backend: {
-        title: "Triển khai Laravel API",
-        desc: "Một dịch vụ Laravel chuyên biệt xử lý authentication, workflow orchestration, event logic và các API mà app tiêu thụ.",
-      },
-      common: {
-        title: "Thiết kế shared domain service",
-        desc: "Mercury gom các domain rules tái sử dụng và internal APIs vào một common Laravel service thay vì lặp logic ở nhiều runtime.",
-      },
-      notifications: {
-        title: "Sẵn sàng phát hành và phân phối",
-        desc: "Website chính thức cùng App Store và Google Play cho thấy Mercury có thể đi xa hơn phát triển tính năng để chạm tới bản phát hành sẵn sàng ra thị trường.",
-      },
-    },
-    cta: {
-      eyebrow: "Bước tiếp theo",
-      title: "Muốn triển khai một nền tảng workflow mobile-first cho vận hành?",
-      body: "Từ case study MyARM, Mercury có thể giúp bạn chốt yêu cầu, thiết kế kiến trúc Flutter + Laravel và đưa hệ thống vào production với kỷ luật phát hành rõ ràng.",
-      primary: "Yêu cầu tư vấn nền tảng tương tự",
-      secondary: "Mở myarms.jp",
-      iosTitle: "App Store",
-      iosBody: "Quét mã hoặc mở trang phát hành trên iPhone.",
-      androidTitle: "Google Play",
-      androidBody: "Quét mã hoặc mở trang phát hành trên Android.",
-    },
+    ok: "OK"
   },
 
   // Language Selector

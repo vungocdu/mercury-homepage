@@ -23,10 +23,9 @@ export default function LanguageSelector() {
   }, [])
 
   const languages = [
-    { code: 'en', name: translations?.language?.en || 'English', flag: '🇺🇸' },
-    { code: 'vi', name: translations?.language?.vi || 'Tiếng Việt', flag: '🇻🇳' },
-    { code: 'ja', name: translations?.language?.ja || '日本語', flag: '🇯🇵' },
-    { code: 'ko', name: translations?.language?.ko || '한국어', flag: '🇰🇷' },
+    { code: 'en', name: translations.language.en, flag: '🇺🇸' },
+    { code: 'vi', name: translations.language.vi, flag: '🇻🇳' },
+    { code: 'ja', name: translations.language.ja, flag: '🇯🇵' },
   ]
 
   const currentLanguage = languages.find(lang => lang.code === language)
@@ -35,7 +34,7 @@ export default function LanguageSelector() {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-center w-10 h-10 rounded-lg text-foreground hover:text-primary hover:bg-accent transition-all duration-200"
+        className="flex items-center justify-center w-10 h-10 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all duration-200"
         title={`Current language: ${currentLanguage?.name}`}
       >
         <Globe className="w-5 h-5" />
@@ -43,16 +42,16 @@ export default function LanguageSelector() {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-card border border-border rounded-lg shadow-lg z-50">
+        <div className="absolute right-0 mt-2 w-48 bg-white border border-slate-200 rounded-md shadow-[0_0_30px_rgb(94_125_248/0.25)] z-50 overflow-hidden">
           {languages.map((lang) => (
             <button
               key={lang.code}
               onClick={() => {
-                setLanguage(lang.code as 'en' | 'vi' | 'ja' | 'ko')
+                setLanguage(lang.code as 'en' | 'vi' | 'ja')
                 setIsOpen(false)
               }}
-              className={`w-full text-left px-4 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-colors duration-200 flex items-center space-x-2 ${
-                language === lang.code ? 'bg-accent text-accent-foreground' : ''
+              className={`w-full text-left px-4 py-2 text-sm text-slate-800 hover:bg-slate-100 transition-colors duration-200 flex items-center space-x-2 ${
+                language === lang.code ? 'bg-slate-100 text-slate-900' : ''
               }`}
             >
               <span>{lang.flag}</span>

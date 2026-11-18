@@ -1,19 +1,18 @@
 import Hero from '@/components/Hero'
-import HomeProductNav from '@/components/HomeProductNav'
-import ITSolutionSection from '@/components/ITSolutionSection'
-import Contact from '@/components/Contact'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import HomeAbout from '@/components/site/HomeAbout'
+import StatsRings from '@/components/site/StatsRings'
+import ClientsMarquee from '@/components/ClientsMarquee'
+import CtaBand from '@/components/site/CtaBand'
+import PageShell from '@/components/site/PageShell'
 
 export default function Home() {
   return (
-    <main className="min-h-screen professional-bg">
-      <Header />
+    <PageShell>
       <Hero />
-      <HomeProductNav />
-      <ITSolutionSection />
-      <Contact />
-      <Footer />
-    </main>
+      <HomeAbout />
+      <StatsRings />
+      <ClientsMarquee />
+      <CtaBand />
+    </PageShell>
   )
-} 
+}

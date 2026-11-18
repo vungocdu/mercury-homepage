@@ -1,19 +1,15 @@
+const path = require('path')
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Disable static export to allow API routes and server components
-  // output: process.env.NODE_ENV === 'production' ? 'export' : undefined,
   trailingSlash: true,
+  turbopack: {
+    root: path.join(__dirname),
+  },
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'mercurysolutions.vn',
-      },
-    ],
+    remotePatterns: [{ protocol: 'https', hostname: 'minova.vn' }],
     unoptimized: true,
   },
-  // Enable external packages for server components
-  serverExternalPackages: ['resend']
 }
 
-module.exports = nextConfig 
+module.exports = nextConfig

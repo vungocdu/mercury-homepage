@@ -1,0 +1,2068 @@
+### Start the development server
+
+Source: https://github.com/reactjs/react.dev/blob/main/README.md
+
+Start the Next.js development server for react.dev.
+
+```shell
+yarn dev
+```
+
+--------------------------------
+
+### Full React app example with createRoot, index.html, index.js, and App.js
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/reference/react-dom/client/createRoot.md
+
+This example shows a complete React app setup: an HTML file with a root DOM node, an index.js file that creates a root and renders the App component, and an App.js file that defines the App component with a counter. Use this as a starting point for an app fully built with React.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head><title>My app</title></head>
+  <body>
+    <!-- This is the DOM node -->
+    <div id="root"></div>
+  </body>
+</html>
+```
+
+```js
+import { createRoot } from 'react-dom/client';
+import App from './App.js';
+import './styles.css';
+
+const root = createRoot(document.getElementById('root'));
+root.render(<App />);
+```
+
+```js
+import { useState } from 'react';
+
+export default function App() {
+  return (
+    <>
+      <h1>Hello, world!</h1>
+      <Counter />
+    </>
+  );
+}
+
+function Counter() {
+  const [count, setCount] = useState(0);
+  return (
+    <button onClick={() => setCount(count + 1)}>
+      You clicked me {count} times
+    </button>
+  );
+}
+```
+
+--------------------------------
+
+### Complete lifting state up example with MyApp and MyButton
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/index.md
+
+Full working example showing both MyButton components sharing the same count state from MyApp. Clicking either button updates both counts.
+
+```jsx
+import { useState } from 'react';
+
+export default function MyApp() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <div>
+      <h1>Counters that update together</h1>
+      <MyButton count={count} onClick={handleClick} />
+      <MyButton count={count} onClick={handleClick} />
+    </div>
+  );
+}
+
+function MyButton({ count, onClick }) {
+  return (
+    <button onClick={onClick}>
+      Clicked {count} times
+    </button>
+  );
+}
+
+```
+
+```css
+button {
+  display: block;
+  margin-bottom: 5px;
+}
+
+```
+
+--------------------------------
+
+### Navigate to project root
+
+Source: https://github.com/reactjs/react.dev/blob/main/README.md
+
+Change into the react.dev project directory after cloning the repository.
+
+```shell
+cd react.dev
+```
+
+--------------------------------
+
+### Complete example: MyButton and MyApp in Sandpack
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/index.md
+
+This interactive example shows the result of nesting MyButton inside MyApp. It combines the component definition and its usage.
+
+```js
+function MyButton() {
+  return (
+    <button>
+      I'm a button
+    </button>
+  );
+}
+
+export default function MyApp() {
+  return (
+    <div>
+      <h1>Welcome to my app</h1>
+      <MyButton />
+    </div>
+  );
+}
+```
+
+--------------------------------
+
+### Open the local site in browser
+
+Source: https://github.com/reactjs/react.dev/blob/main/README.md
+
+Open http://localhost:3000 in your browser to view the running site.
+
+```shell
+open http://localhost:3000
+```
+
+--------------------------------
+
+### Run all checks
+
+Source: https://github.com/reactjs/react.dev/blob/main/README.md
+
+Run Prettier, ESLint, and type validation to test your changes.
+
+```shell
+yarn check-all
+```
+
+--------------------------------
+
+### Install npm dependencies with yarn
+
+Source: https://github.com/reactjs/react.dev/blob/main/README.md
+
+Install the website's npm dependencies using Yarn Classic.
+
+```shell
+yarn
+```
+
+--------------------------------
+
+### Complete example of re-fetching data with use and Suspense
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/reference/react/use.md
+
+Shows an interactive setup where App initiates data refetches inside startTransition and Albums suspends on the returned Promise using the use API. Includes caching and cache invalidation helpers.
+
+```js
+import { Suspense, useState, useTransition } from 'react';
+import { use } from 'react';
+import { fetchData, refetchData } from './data.js';
+
+export default function App() {
+  const [albumsPromise, setAlbumsPromise] = useState(
+    () => fetchData('/the-beatles/albums')
+  );
+  const [isPending, startTransition] = useTransition();
+
+  function handleRefresh() {
+    startTransition(() => {
+      setAlbumsPromise(refetchData('/the-beatles/albums'));
+    });
+  }
+
+  return (
+    <>
+      <button
+        onClick={handleRefresh}
+        disabled={isPending}
+      >
+        {isPending ? 'Refreshing...' : 'Refresh'}
+      </button>
+      <div style={{ opacity: isPending ? 0.6 : 1 }}>
+        <Suspense fallback={<Loading />}>
+          <Albums albumsPromise={albumsPromise} />
+        </Suspense>
+      </div>
+    </>
+  );
+}
+
+function Albums({ albumsPromise }) {
+  const albums = use(albumsPromise);
+  return (
+    <ul>
+      {albums.map(album => (
+        <li key={album.id}>
+          {album.title} ({album.year})
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function Loading() {
+  return <h2>Loading...</h2>;
+}
+```
+
+```js
+// Note: the way you would do data fetching depends on
+// the framework that you use together with Suspense.
+// Normally, the caching logic would be inside a framework.
+
+let cache = new Map();
+
+export function fetchData(url) {
+  if (!cache.has(url)) {
+    cache.set(url, getData(url));
+  }
+  return cache.get(url);
+}
+
+export function refetchData(url) {
+  cache.delete(url);
+  return fetchData(url);
+}
+
+async function getData(url) {
+  if (url.startsWith('/the-beatles/albums')) {
+    return await getAlbums();
+  } else {
+    throw Error('Not implemented');
+  }
+}
+
+async function getAlbums() {
+  // Add a fake delay to make waiting noticeable.
+  await new Promise(resolve => {
+    setTimeout(resolve, 1000);
+  });
+
+  return [{
+    id: 13,
+    title: 'Let It Be',
+    year: 1970
+  }, {
+    id: 12,
+    title: 'Abbey Road',
+    year: 1969
+  }, {
+    id: 11,
+    title: 'Yellow Submarine',
+    year: 1969
+  }, {
+    id: 10,
+    title: 'The Beatles',
+    year: 1968
+  }, {
+    id: 9,
+    title: 'Magical Mystery Tour',
+    year: 1967
+  }];
+}
+```
+
+```css
+button { margin-bottom: 10px; }
+```
+
+--------------------------------
+
+### package.json for Suspense examples
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/reference/react/Suspense.md
+
+Dependencies for the interactive examples.
+
+```json
+{
+  "dependencies": {
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-scripts": "latest"
+  }
+}
+```
+
+--------------------------------
+
+### Checkout main branch
+
+Source: https://github.com/reactjs/react.dev/blob/main/README.md
+
+Switch to the main branch from any folder in your local react.dev repository.
+
+```shell
+git checkout main
+```
+
+--------------------------------
+
+### Starter App Component for Tic-Tac-Toe
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/tutorial-tic-tac-toe.md
+
+Initial App.js file for the tutorial, rendering a single Square button with an X. Use this as the starting point in CodeSandbox or a local setup.
+
+```js
+export default function Square() {
+  return <button className="square">X</button>;
+}
+```
+
+--------------------------------
+
+### Focus search field challenge setup
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/manipulating-the-dom-with-refs.md
+
+Initial setup consisting of separate App, SearchButton, and SearchInput components before connecting them via refs and event handlers.
+
+```javascript
+import SearchButton from './SearchButton.js';
+import SearchInput from './SearchInput.js';
+
+export default function Page() {
+  return (
+    <>
+      <nav>
+        <SearchButton />
+      </nav>
+      <SearchInput />
+    </>
+  );
+}
+```
+
+```javascript
+export default function SearchButton() {
+  return (
+    <button>
+      Search
+    </button>
+  );
+}
+```
+
+```javascript
+export default function SearchInput() {
+  return (
+    <input
+      placeholder="Looking for something?"
+    />
+  );
+}
+```
+
+```css
+button { display: block; margin-bottom: 10px; }
+```
+
+--------------------------------
+
+### Pull latest main code
+
+Source: https://github.com/reactjs/react.dev/blob/main/README.md
+
+Ensure you have the latest main code before creating a branch.
+
+```shell
+git pull origin main
+```
+
+--------------------------------
+
+### Complete Counter example with useReducer
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/reference/react/useReducer.md
+
+An interactive example demonstrating how a counter component uses useReducer to handle state updates and render the updated UI.
+
+```javascript
+import { useReducer } from 'react';
+
+function reducer(state, action) {
+  if (action.type === 'incremented_age') {
+    return {
+      age: state.age + 1
+    };
+  }
+  throw Error('Unknown action.');
+}
+
+export default function Counter() {
+  const [state, dispatch] = useReducer(reducer, { age: 42 });
+
+  return (
+    <>
+      <button onClick={() => {
+        dispatch({ type: 'incremented_age' })
+      }}>
+        Increment age
+      </button>
+      <p>Hello! You are {state.age}.</p>
+    </>
+  );
+}
+```
+
+```css
+button { display: block; margin-top: 10px; }
+```
+
+--------------------------------
+
+### Defining setup and cleanup logic in useEffect
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/removing-effect-dependencies.md
+
+Specify how to start and stop the Effect by connecting to a chat service and returning a disconnect cleanup function.
+
+```javascript
+const serverUrl = 'https://localhost:1234';
+
+function ChatRoom({ roomId }) {
+  useEffect(() => {
+    const connection = createConnection(serverUrl, roomId);
+    connection.connect();
+    return () => connection.disconnect();
+  	// ...
+}
+```
+
+--------------------------------
+
+### Complete Leaflet map widget portal integration example
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/reference/react-dom/createPortal.md
+
+Full multi-file example showing how to mount a Leaflet map widget and render a React component inside its popup using createPortal.
+
+```json
+{
+  "dependencies": {
+    "leaflet": "1.9.1",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-scripts": "latest",
+    "remarkable": "2.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
+```
+
+```javascript
+import { useRef, useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
+import { createMapWidget, addPopupToMapWidget } from './map-widget.js';
+
+export default function Map() {
+  const containerRef = useRef(null);
+  const mapRef = useRef(null);
+  const [popupContainer, setPopupContainer] = useState(null);
+
+  useEffect(() => {
+    if (mapRef.current === null) {
+      const map = createMapWidget(containerRef.current);
+      mapRef.current = map;
+      const popupDiv = addPopupToMapWidget(map);
+      setPopupContainer(popupDiv);
+    }
+  }, []);
+
+  return (
+    <div style={{ width: 250, height: 250 }} ref={containerRef}>
+      {popupContainer !== null && createPortal(
+        <p>Hello from React!</p>,
+        popupContainer
+      )}
+    </div>
+  );
+}
+```
+
+```javascript
+import 'leaflet/dist/leaflet.css';
+import * as L from 'leaflet';
+
+export function createMapWidget(containerDomNode) {
+  const map = L.map(containerDomNode);
+  map.setView([0, 0], 0);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap'
+  }).addTo(map);
+  return map;
+}
+
+export function addPopupToMapWidget(map) {
+  const popupDiv = document.createElement('div');
+  L.popup()
+    .setLatLng([0, 0])
+    .setContent(popupDiv)
+    .openOn(map);
+  return popupDiv;
+}
+```
+
+```css
+button { margin: 5px; }
+```
+
+--------------------------------
+
+### Create a new branch
+
+Source: https://github.com/reactjs/react.dev/blob/main/README.md
+
+Create a new branch for your changes. Replace the-name-of-my-branch with a suitable name.
+
+```shell
+git checkout -b the-name-of-my-branch
+```
+
+--------------------------------
+
+### Install React and React DOM
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/add-react-to-an-existing-project.md
+
+Installs the react and react-dom packages into your project using npm to prepare for rendering React components.
+
+```shell
+npm install react react-dom
+```
+
+--------------------------------
+
+### CSS for TaskApp example
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/extracting-state-logic-into-a-reducer.md
+
+Styles for the TaskApp example, including button margins and list styling.
+
+```css
+button {
+  margin: 5px;
+}
+li {
+  list-style-type: none;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+```
+
+--------------------------------
+
+### Connect to an external system with useEffect
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/reference/react/useEffect.md
+
+Call useEffect at the top level of your component to connect to an external system. Pass a setup function that connects and returns a cleanup function that disconnects, plus a dependency array with every value used inside those functions. React runs setup on mount, cleanup then setup when dependencies change, and cleanup on unmount; in development it runs setup and cleanup one extra time before setup.
+
+```js
+import { useState, useEffect } from 'react';
+import { createConnection } from './chat.js';
+
+function ChatRoom({ roomId }) {
+  const [serverUrl, setServerUrl] = useState('https://localhost:1234');
+
+  useEffect(() => {
+  	const connection = createConnection(serverUrl, roomId);
+    connection.connect();
+  	return () => {
+      connection.disconnect();
+  	};
+  }, [serverUrl, roomId]);
+  // ...
+}
+```
+
+--------------------------------
+
+### Define an array of products for list rendering
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/index.md
+
+An example array of product objects, each with a title and a unique id. This array is used with the map() function to render a list of components.
+
+```js
+const products = [
+  { title: 'Cabbage', id: 1 },
+  { title: 'Garlic', id: 2 },
+  { title: 'Apple', id: 3 },
+];
+```
+
+--------------------------------
+
+### Install React Compiler using npm
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/react-compiler/installation.md
+
+Installs the React Compiler Babel plugin as a developer dependency using npm.
+
+```bash
+npm install -D babel-plugin-react-compiler@latest
+```
+
+--------------------------------
+
+### Install React Compiler using Yarn
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/react-compiler/installation.md
+
+Installs the React Compiler Babel plugin as a developer dependency using Yarn.
+
+```bash
+yarn add -D babel-plugin-react-compiler@latest
+```
+
+--------------------------------
+
+### Install React Compiler using pnpm
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/react-compiler/installation.md
+
+Installs the React Compiler Babel plugin as a developer dependency using pnpm.
+
+```bash
+pnpm install -D babel-plugin-react-compiler@latest
+```
+
+--------------------------------
+
+### Install react-compiler-runtime
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/reference/react-compiler/compiling-libraries.md
+
+Installs react-compiler-runtime as a dependency to support React versions prior to version 19.
+
+```bash
+npm install react-compiler-runtime@latest
+```
+
+--------------------------------
+
+### Interactive example of reading a Promise with use inside Suspense
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/reference/react/use.md
+
+A complete example showing how to trigger and pass a Promise to a component that resolves it with the `use` API inside a Suspense boundary.
+
+```javascript
+"use client";
+
+import { use, Suspense } from "react";
+
+function Message({ messagePromise }) {
+  const messageContent = use(messagePromise);
+  return <p>Here is the message: {messageContent}</p>;
+}
+
+export function MessageContainer({ messagePromise }) {
+  return (
+    <Suspense fallback={<p>⌛Downloading message...</p>}>
+      <Message messagePromise={messagePromise} />
+    </Suspense>
+  );
+}
+```
+
+```javascript
+import { useState } from "react";
+import { MessageContainer } from "./message.js";
+
+function fetchMessage() {
+  return new Promise((resolve) => setTimeout(resolve, 1000, "⚛️"));
+}
+
+export default function App() {
+  const [messagePromise, setMessagePromise] = useState(null);
+  const [show, setShow] = useState(false);
+  function download() {
+    setMessagePromise(fetchMessage());
+    setShow(true);
+  }
+
+  if (show) {
+    return <MessageContainer messagePromise={messagePromise} />;
+  } else {
+    return <button onClick={download}>Download message</button>;
+  }
+}
+```
+
+```javascript
+import React, { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import './styles.css';
+
+// TODO: update this example to use
+// the Codesandbox Server Component
+// demo environment once it is created
+import App from './App';
+
+const root = createRoot(document.getElementById('root'));
+root.render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
+```
+
+--------------------------------
+
+### Complete example: Avatar component with dynamic styles
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/reference/react-dom/components/common.md
+
+A full example showing an Avatar component that uses className and dynamic style based on user data. Includes App.js, Avatar.js, and styles.css.
+
+```js
+import Avatar from './Avatar.js';
+
+const user = {
+  name: 'Hedy Lamarr',
+  imageUrl: 'https://react.dev/images/docs/scientists/yXOvdOSs.jpg',
+  imageSize: 90,
+};
+
+export default function App() {
+  return <Avatar user={user} />;
+}
+```
+
+```js
+export default function Avatar({ user }) {
+  return (
+    <img
+      src={user.imageUrl}
+      alt={'Photo of ' + user.name}
+      className="avatar"
+      style={{
+        width: user.imageSize,
+        height: user.imageSize
+      }}
+    />
+  );
+}
+```
+
+```css
+.avatar {
+  border-radius: 50%;
+}
+```
+
+--------------------------------
+
+### Complete example: Focus input with ref
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/reference/react-dom/components/common.md
+
+A full example showing how to focus an input when a button is clicked using a ref. The ref is attached to the input, and the button's onClick handler calls focus() on the DOM node.
+
+```js
+import { useRef } from 'react';
+
+export default function Form() {
+  const inputRef = useRef(null);
+
+  function handleClick() {
+    inputRef.current.focus();
+  }
+
+  return (
+    <>
+      <input ref={inputRef} />
+      <button onClick={handleClick}>
+        Focus the input
+      </button>
+    </>
+  );
+}
+```
+
+--------------------------------
+
+### Suspense with nested components example
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/reference/react/Suspense.md
+
+Example showing Biography and Albums fetching data under a single Suspense boundary, so they pop in together. Includes App, ArtistPage, Panel, Biography, Albums, and data fetching logic.
+
+```jsx
+import { useState } from 'react';
+import ArtistPage from './ArtistPage.js';
+
+export default function App() {
+  const [show, setShow] = useState(false);
+  if (show) {
+    return (
+      <ArtistPage
+        artist={{
+          id: 'the-beatles',
+          name: 'The Beatles',
+        }}
+      />
+    );
+  } else {
+    return (
+      <button onClick={() => setShow(true)}>
+        Open The Beatles artist page
+      </button>
+    );
+  }
+}
+```
+
+```jsx
+import { Suspense } from 'react';
+import Albums from './Albums.js';
+import Biography from './Biography.js';
+import Panel from './Panel.js';
+
+export default function ArtistPage({ artist }) {
+  return (
+    <>
+      <h1>{artist.name}</h1>
+      <Suspense fallback={<Loading />}>
+        <Biography artistId={artist.id} />
+        <Panel>
+          <Albums artistId={artist.id} />
+        </Panel>
+      </Suspense>
+    </>
+  );
+}
+
+function Loading() {
+  return <h2>🌀 Loading...</h2>;
+}
+```
+
+```jsx
+export default function Panel({ children }) {
+  return (
+    <section className="panel">
+      {children}
+    </section>
+  );
+}
+```
+
+```jsx
+import {use} from 'react';
+import { fetchData } from './data.js';
+
+export default function Biography({ artistId }) {
+  const bio = use(fetchData(`/${artistId}/bio`));
+  return (
+    <section>
+      <p className="bio">{bio}</p>
+    </section>
+  );
+}
+```
+
+```jsx
+import {use} from 'react';
+import { fetchData } from './data.js';
+
+export default function Albums({ artistId }) {
+  const albums = use(fetchData(`/${artistId}/albums`));
+  return (
+    <ul>
+      {albums.map(album => (
+        <li key={album.id}>
+          {album.title} ({album.year})
+        </li>
+      ))}
+    </ul>
+  );
+}
+```
+
+```js
+// Note: the way you would do data fetching depends on
+// the framework that you use together with Suspense.
+// Normally, the caching logic would be inside a framework.
+
+let cache = new Map();
+
+export function fetchData(url) {
+  if (!cache.has(url)) {
+    cache.set(url, getData(url));
+  }
+  return cache.get(url);
+}
+
+async function getData(url) {
+  if (url === '/the-beatles/albums') {
+    return await getAlbums();
+  } else if (url === '/the-beatles/bio') {
+    return await getBio();
+  } else {
+    throw Error('Not implemented');
+  }
+}
+
+async function getBio() {
+  // Add a fake delay to make waiting noticeable.
+  await new Promise(resolve => {
+    setTimeout(resolve, 1500);
+  });
+
+  return `The Beatles were an English rock band,
+    formed in Liverpool in 1960, that comprised
+    John Lennon, Paul McCartney, George Harrison
+    and Ringo Starr.`;
+}
+
+async function getAlbums() {
+  // Add a fake delay to make waiting noticeable.
+  await new Promise(resolve => {
+    setTimeout(resolve, 3000);
+  });
+
+  return [{
+    id: 13,
+    title: 'Let It Be',
+    year: 1970
+  }, {
+    id: 12,
+    title: 'Abbey Road',
+    year: 1969
+  }, {
+    id: 11,
+    title: 'Yellow Submarine',
+    year: 1969
+  }, {
+    id: 10,
+    title: 'The Beatles',
+    year: 1968
+  }, {
+    id: 9,
+    title: 'Magical Mystery Tour',
+    year: 1967
+  }, {
+    id: 8,
+    title: 'Sgt. Pepper\'s Lonely Hearts Club Band',
+    year: 1967
+  }, {
+    id: 7,
+    title: 'Revolver',
+    year: 1966
+  }, {
+    id: 6,
+    title: 'Rubber Soul',
+    year: 1965
+  }, {
+    id: 5,
+    title: 'Help!',
+    year: 1965
+  }, {
+    id: 4,
+    title: 'Beatles For Sale',
+    year: 1964
+  }, {
+    id: 3,
+    title: 'A Hard Day\'s Night',
+    year: 1964
+  }, {
+    id: 2,
+    title: 'With The Beatles',
+    year: 1963
+  }, {
+    id: 1,
+    title: 'Please Please Me',
+    year: 1963
+  }];
+}
+```
+
+```css
+.bio { font-style: italic; }
+
+.panel {
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  margin-top: 20px;
+  padding: 10px;
+}
+```
+
+--------------------------------
+
+### Video player challenge initial setup
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/manipulating-the-dom-with-refs.md
+
+Initial state-only implementation for toggling a video player before adding a DOM ref.
+
+```jsx
+import { useState, useRef } from 'react';
+
+export default function VideoPlayer() {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  function handleClick() {
+    const nextIsPlaying = !isPlaying;
+    setIsPlaying(nextIsPlaying);
+  }
+
+  return (
+    <>
+      <button onClick={handleClick}>
+        {isPlaying ? 'Pause' : 'Play'}
+      </button>
+      <video width="250">
+        <source
+          src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </>
+  )
+}
+```
+
+```css
+button { display: block; margin-bottom: 20px; }
+```
+
+--------------------------------
+
+### Interactive example of deferred list re-rendering
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/reference/react/useDeferredValue.md
+
+Complete example showing an artificially slowed list component whose re-rendering is deferred so that typing in the input remains smooth and snappy.
+
+```js
+import { useState, useDeferredValue } from 'react';
+import SlowList from './SlowList.js';
+
+export default function App() {
+  const [text, setText] = useState('');
+  const deferredText = useDeferredValue(text);
+  return (
+    <>
+      <input value={text} onChange={e => setText(e.target.value)} />
+      <SlowList text={deferredText} />
+    </>
+  );
+}
+```
+
+```js
+import { memo } from 'react';
+
+const SlowList = memo(function SlowList({ text }) {
+  // Log once. The actual slowdown is inside SlowItem.
+  console.log('[ARTIFICIALLY SLOW] Rendering 250 <SlowItem />');
+
+  let items = [];
+  for (let i = 0; i < 250; i++) {
+    items.push(<SlowItem key={i} text={text} />);
+  }
+  return (
+    <ul className="items">
+      {items}
+    </ul>
+  );
+});
+
+function SlowItem({ text }) {
+  let startTime = performance.now();
+  while (performance.now() - startTime < 1) {
+    // Do nothing for 1 ms per item to emulate extremely slow code
+  }
+
+  return (
+    <li className="item">
+      Text: {text}
+    </li>
+  )
+}
+
+export default SlowList;
+```
+
+```css
+.items {
+  padding: 0;
+  max-height: 300px;
+  overflow: auto;
+}
+
+.item {
+  list-style: none;
+  display: block;
+  height: 40px;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+}
+```
+
+--------------------------------
+
+### CSS styles
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/reference/react/Suspense.md
+
+CSS styles used in the example.
+
+```css
+main {
+  min-height: 200px;
+  padding: 10px;
+}
+
+.layout {
+  border: 1px solid black;
+}
+
+.header {
+  background: #222;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.bio { font-style: italic; }
+
+.panel {
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.glimmer-panel {
+  border: 1px dashed #aaa;
+  background: linear-gradient(90deg, rgba(221,221,221,1) 0%, rgba(255,255,255,1) 100%);
+  border-radius: 6px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.glimmer-line {
+  display: block;
+  width: 60%;
+  height: 20px;
+  margin: 10px;
+  border-radius: 4px;
+  background: #f0f0f0;
+}
+```
+
+--------------------------------
+
+### Write a component starter template
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/your-first-component.md
+
+Starter sandbox template providing a placeholder to write a new custom component from scratch.
+
+```javascript
+// Write your component below!
+
+```
+
+--------------------------------
+
+### Starter code for PackingList and Item components
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/conditional-rendering.md
+
+Initial challenge setup where Item components receive name and numerical importance props without conditional rendering.
+
+```jsx
+function Item({ name, importance }) {
+  return (
+    <li className="item">
+      {name}
+    </li>
+  );
+}
+
+export default function PackingList() {
+  return (
+    <section>
+      <h1>Sally Ride's Packing List</h1>
+      <ul>
+        <Item
+          importance={9}
+          name="Space suit"
+        />
+        <Item
+          importance={0}
+          name="Helmet with a golden leaf"
+        />
+        <Item
+          importance={6}
+          name="Photo of Tam"
+        />
+      </ul>
+    </section>
+  );
+}
+```
+
+--------------------------------
+
+### Push branch to your fork
+
+Source: https://github.com/reactjs/react.dev/blob/main/README.md
+
+Push your branch to your fork remote. Replace my-fork-name and the-name-of-my-branch with your remote and branch names.
+
+```shell
+git push my-fork-name the-name-of-my-branch
+```
+
+--------------------------------
+
+### Preconnecting in an event handler
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/reference/react-dom/preconnect.md
+
+Call preconnect inside an event handler before initiating transitions that require resources from another host, starting connection setup as early as possible.
+
+```javascript
+import { preconnect } from 'react-dom';
+
+function CallToAction() {
+  const onClick = () => {
+    preconnect('http://example.com');
+    startWizard();
+  }
+  return (
+    <button onClick={onClick}>Start Wizard</button>
+  );
+}
+```
+
+--------------------------------
+
+### Passing the initial state directly (inefficient example)
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/reference/react/useState.md
+
+Demonstrates initializing state by invoking createInitialTodos() directly, causing expensive initialization logic to execute on every re-render.
+
+```javascript
+import { useState } from 'react';
+
+function createInitialTodos() {
+  const initialTodos = [];
+  for (let i = 0; i < 50; i++) {
+    initialTodos.push({
+      id: i,
+      text: 'Item ' + (i + 1)
+    });
+  }
+  return initialTodos;
+}
+
+export default function TodoList() {
+  const [todos, setTodos] = useState(createInitialTodos());
+  const [text, setText] = useState('');
+
+  return (
+    <>
+      <input
+        value={text}
+        onChange={e => setText(e.target.value)}
+      />
+      <button onClick={() => {
+        setText('');
+        setTodos([{
+          id: todos.length,
+          text: text
+        }, ...todos]);
+      }}>Add</button>
+      <ul>
+        {todos.map(item => (
+          <li key={item.id}>
+            {item.text}
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+}
+```
+
+--------------------------------
+
+### preinit(href, options)
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/reference/react-dom/preinit.md
+
+Eagerly fetches and evaluates a stylesheet or external script. Scripts execute upon download completion, and stylesheets are inserted into the document immediately.
+
+```APIDOC
+### Function: `preinit(href, options)`
+
+#### Description
+`preinit` lets you eagerly fetch and evaluate a stylesheet or external script.
+
+#### Import
+```js
+import { preinit } from 'react-dom';
+```
+
+#### Parameters
+- **href** (`string`) - Required. The URL of the resource you want to download and execute.
+- **options** (`object`) - Required. Configuration options for preinitializing the resource:
+  - **as** (`string`) - Required. The type of resource. Possible values: `"script"`, `"style"`.
+  - **precedence** (`string`) - Required for stylesheets. Specifies where to insert the stylesheet relative to others. Possible values: `"reset"`, `"low"`, `"medium"`, `"high"`.
+  - **crossOrigin** (`string`) - Optional. The CORS policy to use. Possible values: `"anonymous"`, `"use-credentials"`.
+  - **integrity** (`string`) - Optional. A cryptographic hash of the resource to verify authenticity.
+  - **nonce** (`string`) - Optional. A cryptographic nonce to allow the resource when using a strict Content Security Policy.
+  - **fetchPriority** (`string`) - Optional. Suggests relative fetch priority. Possible values: `"auto"` (default), `"high"`, `"low"`.
+
+#### Returns
+- `void` - `preinit` returns nothing.
+
+#### Usage Examples
+
+##### Preiniting an external script
+```js
+import { preinit } from 'react-dom';
+
+function AppRoot() {
+  preinit("https://example.com/script.js", {as: "script"});
+  return <div>App</div>;
+}
+```
+
+##### Preiniting a stylesheet
+```js
+import { preinit } from 'react-dom';
+
+function AppRoot() {
+  preinit("https://example.com/style.css", {as: "style", precedence: "medium"});
+  return <div>App</div>;
+}
+```
+```
+
+--------------------------------
+
+### Stage and commit changes
+
+Source: https://github.com/reactjs/react.dev/blob/main/README.md
+
+Stage all changes and commit with a message. Replace My message with a descriptive commit message, such as Fix header logo on Android.
+
+```shell
+git add -A && git commit -m "My message"
+```
+
+--------------------------------
+
+### Add your fork as a git remote
+
+Source: https://github.com/reactjs/react.dev/blob/main/README.md
+
+Add your GitHub fork as a remote named my-fork-name. Replace YOUR_USERNAME with your GitHub username. This only needs to be done once.
+
+```shell
+git remote add my-fork-name https://github.com/YOUR_USERNAME/react.dev.git
+```
+
+--------------------------------
+
+### Interactive render prop example with List, Row, and data
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/reference/react/cloneElement.md
+
+Complete implementation demonstrating the render prop alternative across App.js, List.js, Row.js, data.js, and CSS styling.
+
+```javascript
+import List from './List.js';
+import Row from './Row.js';
+import { products } from './data.js';
+
+export default function App() {
+  return (
+    <List
+      items={products}
+      renderItem={(product, isHighlighted) =>
+        <Row
+          key={product.id}
+          title={product.title}
+          isHighlighted={isHighlighted}
+        />
+      }
+    />
+  );
+}
+```
+
+```javascript
+import { useState } from 'react';
+
+export default function List({ items, renderItem }) {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  return (
+    <div className="List">
+      {items.map((item, index) => {
+        const isHighlighted = index === selectedIndex;
+        return renderItem(item, isHighlighted);
+      })}
+      <hr />
+      <button onClick={() => {
+        setSelectedIndex(i =>
+          (i + 1) % items.length
+        );
+      }}>
+        Next
+      </button>
+    </div>
+  );
+}
+```
+
+```javascript
+export default function Row({ title, isHighlighted }) {
+  return (
+    <div className={[
+      'Row',
+      isHighlighted ? 'RowHighlighted' : ''
+    ].join(' ')}>
+      {title}
+    </div>
+  );
+}
+```
+
+```javascript
+export const products = [
+  { title: 'Cabbage', id: 1 },
+  { title: 'Garlic', id: 2 },
+  { title: 'Apple', id: 3 },
+];
+```
+
+```css
+.List {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid grey;
+  padding: 5px;
+}
+
+.Row {
+  border: 2px dashed black;
+  padding: 5px;
+  margin: 5px;
+}
+
+.RowHighlighted {
+  background: #ffa;
+}
+
+button {
+  height: 40px;
+  font-size: 20px;
+}
+```
+
+--------------------------------
+
+### Indicating a Transition with useTransition
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/reference/react/Suspense.md
+
+This example shows how to use useTransition to get an isPending boolean and pass it to a Layout component to visually indicate a pending transition. It includes a Suspense fallback for loading.
+
+```jsx
+import { Suspense, useState, useTransition } from 'react';
+import IndexPage from './IndexPage.js';
+import ArtistPage from './ArtistPage.js';
+import Layout from './Layout.js';
+
+export default function App() {
+  return (
+    <Suspense fallback={<BigSpinner />}>
+      <Router />
+    </Suspense>
+  );
+}
+
+function Router() {
+  const [page, setPage] = useState('/');
+  const [isPending, startTransition] = useTransition();
+
+  function navigate(url) {
+    startTransition(() => {
+      setPage(url);
+    });
+  }
+
+  let content;
+  if (page === '/') {
+    content = (
+      <IndexPage navigate={navigate} />
+    );
+  } else if (page === '/the-beatles') {
+    content = (
+      <ArtistPage
+        artist={{
+          id: 'the-beatles',
+          name: 'The Beatles',
+        }}
+      />
+    );
+  }
+  return (
+    <Layout isPending={isPending}>
+      {content}
+    </Layout>
+  );
+}
+
+function BigSpinner() {
+  return <h2>🌀 Loading...</h2>;
+}
+```
+
+```jsx
+export default function Layout({ children, isPending }) {
+  return (
+    <div className="layout">
+      <section className="header" style={{
+        opacity: isPending ? 0.7 : 1
+      }}>
+        Music Browser
+      </section>
+      <main>
+        {children}
+      </main>
+    </div>
+  );
+}
+```
+
+```jsx
+export default function IndexPage({ navigate }) {
+  return (
+    <button onClick={() => navigate('/the-beatles')}>
+      Open The Beatles artist page
+    </button>
+  );
+}
+```
+
+```jsx
+import { Suspense } from 'react';
+import Albums from './Albums.js';
+import Biography from './Biography.js';
+import Panel from './Panel.js';
+
+export default function ArtistPage({ artist }) {
+  return (
+    <>
+      <h1>{artist.name}</h1>
+      <Biography artistId={artist.id} />
+      <Suspense fallback={<AlbumsGlimmer />}>
+        <Panel>
+          <Albums artistId={artist.id} />
+        </Panel>
+      </Suspense>
+    </>
+  );
+}
+
+function AlbumsGlimmer() {
+  return (
+    <div className="glimmer-panel">
+      <div className="glimmer-line" />
+      <div className="glimmer-line" />
+      <div className="glimmer-line" />
+    </div>
+  );
+}
+```
+
+```jsx
+import {use} from 'react';
+import { fetchData } from './data.js';
+
+export default function Albums({ artistId }) {
+  const albums = use(fetchData(`/${artistId}/albums`));
+  return (
+    <ul>
+      {albums.map(album => (
+        <li key={album.id}>
+          {album.title} ({album.year})
+        </li>
+      ))}
+    </ul>
+  );
+}
+```
+
+```jsx
+import {use} from 'react';
+import { fetchData } from './data.js';
+
+export default function Biography({ artistId }) {
+  const bio = use(fetchData(`/${artistId}/bio`));
+  return (
+    <section>
+      <p className="bio">{bio}</p>
+    </section>
+  );
+}
+```
+
+```jsx
+export default function Panel({ children }) {
+  return (
+    <section className="panel">
+      {children}
+    </section>
+  );
+}
+```
+
+--------------------------------
+
+### Focus search field challenge initial setup
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/manipulating-the-dom-with-refs.md
+
+Initial markup for a search button and input field before wiring up focus with a ref.
+
+```jsx
+export default function Page() {
+  return (
+    <>
+      <nav>
+        <button>Search</button>
+      </nav>
+      <input
+        placeholder="Looking for something?"
+      />
+    </>
+  );
+}
+```
+
+```css
+button { display: block; margin-bottom: 10px; }
+```
+
+--------------------------------
+
+### Create a Server Component reading from the filesystem (CounterContainer)
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/reference/rsc/use-client.md
+
+Does not require 'use client' because it is non-interactive and must run as a Server Component to read from the local filesystem.
+
+```js
+import { readFile } from 'node:fs/promises';
+import Counter from './Counter';
+
+export default async function CounterContainer() {
+  const initialValue = await readFile('/path/to/counter_value');
+  return <Counter initialValue={initialValue} />
+}
+```
+
+--------------------------------
+
+### Render multiple MyButton components with independent state
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/index.md
+
+Each rendered component gets its own state. Clicking one button does not affect the others.
+
+```js
+import { useState } from 'react';
+
+export default function MyApp() {
+  return (
+    <div>
+      <h1>Counters that update separately</h1>
+      <MyButton />
+      <MyButton />
+    </div>
+  );
+}
+
+function MyButton() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Clicked {count} times
+    </button>
+  );
+}
+```
+
+```css
+button {
+  display: block;
+  margin-bottom: 5px;
+}
+```
+
+--------------------------------
+
+### Display a JavaScript variable with curly braces in JSX
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/index.md
+
+Embed a variable from your code into JSX by wrapping it in curly braces. This example displays the value of user.name.
+
+```jsx
+return (
+  <h1>
+    {user.name}
+  </h1>
+);
+```
+
+--------------------------------
+
+### Complete example of rendering a list of items using keyed Fragments
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/reference/react/Fragment.md
+
+Maps over an array of post objects and assigns a key prop to each explicit Fragment container without creating unnecessary wrapper elements in the DOM.
+
+```js
+import { Fragment } from 'react';
+
+const posts = [
+  { id: 1, title: 'An update', body: "It's been a while since I posted..." },
+  { id: 2, title: 'My new blog', body: 'I am starting a new blog!' }
+];
+
+export default function Blog() {
+  return posts.map(post =>
+    <Fragment key={post.id}>
+      <PostTitle title={post.title} />
+      <PostBody body={post.body} />
+    </Fragment>
+  );
+}
+
+function PostTitle({ title }) {
+  return <h1>{title}</h1>
+}
+
+function PostBody({ body }) {
+  return (
+    <article>
+      <p>{body}</p>
+    </article>
+  );
+}
+```
+
+--------------------------------
+
+### Starter code for extracting useInterval
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/reusing-logic-with-custom-hooks.md
+
+Initial setup containing the Counter component, the monolithic `useCounter` implementation, and an empty `useInterval.js` file.
+
+```javascript
+import { useCounter } from './useCounter.js';
+
+export default function Counter() {
+  const count = useCounter(1000);
+  return <h1>Seconds passed: {count}</h1>;
+}
+```
+
+```javascript
+import { useState, useEffect } from 'react';
+
+export function useCounter(delay) {
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => {
+      setCount(c => c + 1);
+    }, delay);
+    return () => clearInterval(id);
+  }, [delay]);
+  return count;
+}
+```
+
+```javascript
+// Write your Hook here!
+```
+
+--------------------------------
+
+### VideoPlayer with missing dependency causing lint error
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/synchronizing-with-effects.md
+
+The Effect uses the isPlaying prop but the dependency array is empty, triggering the error "React Hook useEffect has a missing dependency: 'isPlaying'". This example shows the incorrect setup before fixing the dependency array.
+
+```jsx
+import { useState, useRef, useEffect } from 'react';
+
+function VideoPlayer({ src, isPlaying }) {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    if (isPlaying) {
+      console.log('Calling video.play()');
+      ref.current.play();
+    } else {
+      console.log('Calling video.pause()');
+      ref.current.pause();
+    }
+  }, []); // This causes an error
+
+  return <video ref={ref} src={src} loop playsInline />;
+}
+
+export default function App() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [text, setText] = useState('');
+  return (
+    <>
+      <input value={text} onChange={e => setText(e.target.value)} />
+      <button onClick={() => setIsPlaying(!isPlaying)}>
+        {isPlaying ? 'Pause' : 'Play'}
+      </button>
+      <VideoPlayer
+        isPlaying={isPlaying}
+        src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+      />
+    </>
+  );
+}
+```
+
+```css
+input, button { display: block; margin-bottom: 20px; }
+video { width: 250px; }
+```
+
+--------------------------------
+
+### Reset a detail form - buggy example
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/preserving-and-resetting-state.md
+
+This is an editable contact list. When you select a different contact, the state updates but the form keeps showing the previous contact's details. Fix it so that the form gets reset when the selected contact changes.
+
+```js
+import { useState } from 'react';
+import ContactList from './ContactList.js';
+import EditContact from './EditContact.js';
+
+export default function ContactManager() {
+  const [
+    contacts,
+    setContacts
+  ] = useState(initialContacts);
+  const [
+    selectedId,
+    setSelectedId
+  ] = useState(0);
+  const selectedContact = contacts.find(c =>
+    c.id === selectedId
+  );
+
+  function handleSave(updatedData) {
+    const nextContacts = contacts.map(c => {
+      if (c.id === updatedData.id) {
+        return updatedData;
+      } else {
+        return c;
+      }
+    });
+    setContacts(nextContacts);
+  }
+
+  return (
+    <div>
+      <ContactList
+        contacts={contacts}
+        selectedId={selectedId}
+        onSelect={id => setSelectedId(id)}
+      />
+      <hr />
+      <EditContact
+        initialData={selectedContact}
+        onSave={handleSave}
+      />
+    </div>
+  )
+}
+
+const initialContacts = [
+  { id: 0, name: 'Taylor', email: 'taylor@mail.com' },
+  { id: 1, name: 'Alice', email: 'alice@mail.com' },
+  { id: 2, name: 'Bob', email: 'bob@mail.com' }
+];
+```
+
+```js
+export default function ContactList({
+  contacts,
+  selectedId,
+  onSelect
+}) {
+  return (
+    <section>
+      <ul>
+        {contacts.map(contact =>
+          <li key={contact.id}>
+            <button onClick={() => {
+              onSelect(contact.id);
+            }}>
+              {contact.id === selectedId ?
+                <b>{contact.name}</b> :
+                contact.name
+              }
+            </button>
+          </li>
+        )}
+      </ul>
+    </section>
+  );
+}
+```
+
+--------------------------------
+
+### Set up HTML markup and styling for gallery UI
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/state-a-components-memory.md
+
+Defines the DOM structure and baseline styling for the gallery component example to illustrate manual DOM manipulation.
+
+```html
+<button id="nextButton">
+  Next
+</button>
+<h3 id="header"></h3>
+<button id="moreButton"></button>
+<p id="description"></p>
+<img id="image">
+
+<style>
+* { box-sizing: border-box; }
+body { font-family: sans-serif; margin: 20px; padding: 0; }
+button { display: block; margin-bottom: 10px; }
+</style>
+```
+
+```css
+button { display: block; margin-bottom: 10px; }
+```
+
+--------------------------------
+
+### Implement a TrafficLight component starter
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/state-as-a-snapshot.md
+
+Initial starter component for the traffic light challenge that toggles the walk state on button click.
+
+```js
+import { useState } from 'react';
+
+export default function TrafficLight() {
+  const [walk, setWalk] = useState(true);
+
+  function handleClick() {
+    setWalk(!walk);
+  }
+
+  return (
+    <>
+      <button onClick={handleClick}>
+        Change to {walk ? 'Stop' : 'Walk'}
+      </button>
+      <h1 style={{
+        color: walk ? 'darkgreen' : 'darkred'
+      }}>
+        {walk ? 'Walk' : 'Stop'}
+      </h1>
+    </>
+  );
+}
+```
+
+```css
+h1 { margin-top: 20px; }
+```
+
+--------------------------------
+
+### startTransition syntax
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/reference/react/startTransition.md
+
+Basic signature for calling startTransition with an action callback.
+
+```javascript
+startTransition(action)
+```

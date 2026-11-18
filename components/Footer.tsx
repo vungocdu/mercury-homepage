@@ -1,153 +1,91 @@
-"use client"
+'use client'
 
+import Link from 'next/link'
 import { Mail, Phone, MapPin } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { nav, services, projects, footer, contact } from '@/lib/content'
+import Logo from './site/Logo'
 
 export default function Footer() {
-  const { translations } = useLanguage()
-  const currentYear = new Date().getFullYear()
+  const { l } = useLanguage()
+  const year = new Date().getFullYear()
+
+  const col = 'text-sm text-slate-400 transition-colors hover:text-white'
+  const head = 'eyebrow mb-5 text-slate-200'
 
   return (
-    <footer className="bg-gradient-to-br from-mercury-blue-800 via-mercury-blue-900 to-mercury-blue-950 text-white">
-      <div className="container-custom py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
-            <h3 className="text-3xl font-bold mb-6 text-white">
-              Mercury Solutions
-            </h3>
-            <p className="mb-8 leading-relaxed text-gray-200 text-lg">
-              {translations?.footer?.description || 'Leading provider of AI-powered digital transformation solutions in Vietnam and Southeast Asia.'}
-            </p>
-            
-            <div className="space-y-4">
-              <div className="flex items-center space-x-4">
-                <div className="w-10 h-10 rounded-lg bg-mercury-gold-500/20 flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-mercury-gold-400" />
-                </div>
-                <span className="text-gray-200">
-                  {translations?.contact?.info?.address || '5F, 33/41 Thai Ha, Dong Da, Hanoi'}
-                </span>
-              </div>
-              <div className="flex items-center space-x-4">
-                <div className="w-10 h-10 rounded-lg bg-mercury-gold-500/20 flex items-center justify-center">
-                  <Phone className="w-5 h-5 text-mercury-gold-400" />
-                </div>
-                <span className="text-gray-200">
-                  {translations?.contact?.info?.phone || '024 6663 6480'}
-                </span>
-              </div>
-              <div className="flex items-center space-x-4">
-                <div className="w-10 h-10 rounded-lg bg-mercury-gold-500/20 flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-mercury-gold-400" />
-                </div>
-                <span className="text-gray-200">
-                  {translations?.contact?.info?.email || 'info@mercurysolutions.vn'}
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Services */}
+    <footer className="relative overflow-hidden bg-ink text-white">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#5E7DF8]/60 to-transparent" aria-hidden />
+      <div className="container-custom py-16 lg:py-20">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <h4 className="text-xl font-semibold mb-6 text-white">
-              {translations?.footer?.services || 'Services'}
-            </h4>
-            <ul className="space-y-3">
-              <li>
-                <a href="#projects" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {translations?.services?.ai?.title || 'AI Solutions'}
-                </a>
+            <Logo dark className="h-14" />
+            <p className="mt-6 max-w-xs text-slate-400 leading-relaxed">{l(footer.blurb)}</p>
+            <ul className="mt-6 space-y-3 text-sm text-slate-400">
+              <li className="flex gap-3">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#5E7DF8]" />
+                {l(contact.address)}
               </li>
-              <li>
-                <a href="#projects" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {translations?.services?.web?.title || 'Web Development'}
-                </a>
+              <li className="flex gap-3">
+                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-[#5E7DF8]" />
+                {contact.phone}
               </li>
-              <li>
-                <a href="#projects" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {translations?.services?.mobile?.title || 'Mobile Development'}
-                </a>
-              </li>
-              <li>
-                <a href="#projects" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {translations?.services?.vision?.title || 'Computer Vision'}
-                </a>
-              </li>
-              <li>
-                <a href="#projects" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {translations?.services?.devops?.title || 'DevOps & Cloud'}
-                </a>
-              </li>
-              <li>
-                <a href="/tvc" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {translations?.services?.tvc?.title || 'TVC Production'}
+              <li className="flex gap-3">
+                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-[#5E7DF8]" />
+                <a href={`mailto:${contact.email}`} className="hover:text-white">
+                  {contact.email}
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h4 className="text-xl font-semibold mb-6 text-white">
-              {translations?.footer?.quickLinks || 'Quick Links'}
-            </h4>
+            <h4 className={head}>{l(footer.company)}</h4>
             <ul className="space-y-3">
-              <li>
-                <a href="#home" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {translations?.nav?.home || 'Home'}
-                </a>
-              </li>
-              <li>
-                <a href="#projects" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {translations?.nav?.projects || 'Projects'}
-                </a>
-              </li>
-              <li>
-                <a href="#technology" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {translations?.nav?.technology || 'Technology'}
-                </a>
-              </li>
-              <li>
-                <a href="#process" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {translations?.nav?.process || 'Process'}
-                </a>
-              </li>
-              <li>
-                <a href="/tvc" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  {translations?.nav?.tvcServices || 'TVC Services'}
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="text-gray-200 hover:text-mercury-gold-400 transition-colors duration-300 text-lg">
-                  Liên hệ
-                </a>
-              </li>
+              {nav.map((n) => (
+                <li key={n.href}>
+                  <Link href={n.href} className={col}>
+                    {l(n.label)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className={head}>{l(footer.services)}</h4>
+            <ul className="space-y-3">
+              {services.map((s) => (
+                <li key={s.slug}>
+                  <Link href={`/services/${s.slug}`} className={col}>
+                    {l(s.title)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className={head}>{l(footer.projects)}</h4>
+            <ul className="space-y-3">
+              {projects.map((p) => (
+                <li key={p.slug}>
+                  <Link href={`/work/${p.slug}`} className={col}>
+                    {l(p.name)}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-600 mt-16 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm text-gray-300">
-              {(translations?.footer?.copyright || '© {year} Mercury Solutions. All rights reserved.').replace('{year}', currentYear.toString())}
-            </p>
-            
-            <div className="flex space-x-8">
-              <a href="/privacy" className="text-gray-300 hover:text-mercury-gold-400 transition-colors duration-300 text-sm">
-                {translations?.footer?.privacy || 'Privacy Policy'}
-              </a>
-              <a href="/terms" className="text-gray-300 hover:text-mercury-gold-400 transition-colors duration-300 text-sm">
-                {translations?.footer?.terms || 'Terms of Service'}
-              </a>
-              <a href="#" className="text-gray-300 hover:text-mercury-gold-400 transition-colors duration-300 text-sm">
-                {translations?.footer?.cookies || 'Cookie Policy'}
-              </a>
-            </div>
-          </div>
+        <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-sm text-slate-400 md:flex-row">
+          <p>
+            © {year} Mercury Solutions. {l(footer.rights)}
+          </p>
+          <p className="text-xs">mercurysolutions.vn</p>
         </div>
       </div>
     </footer>
   )
-} 
+}

@@ -1,93 +1,89 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import type { Metadata, Viewport } from 'next'
+import { IBM_Plex_Sans, IBM_Plex_Mono, IBM_Plex_Sans_JP, Space_Grotesk } from 'next/font/google'
 import './globals.css'
-import ScrollIndicator from '@/components/ScrollIndicator'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import Analytics from '@/components/Analytics'
+import JsonLd from '@/components/site/JsonLd'
+import { SITE_URL, organization } from '@/lib/seo'
 
-const inter = Inter({ subsets: ['latin'] })
+const plex = IBM_Plex_Sans({
+  subsets: ['latin', 'vietnamese'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-sans',
+})
+
+const plexMono = IBM_Plex_Mono({
+  subsets: ['latin', 'vietnamese'],
+  weight: ['400', '500'],
+  display: 'swap',
+  variable: '--font-mono',
+})
+
+
+const display = Space_Grotesk({
+  subsets: ['latin', 'latin-ext', 'vietnamese'],
+  weight: ['500', '600', '700'],
+  display: 'swap',
+  variable: '--font-display',
+})
+
+const plexJp = IBM_Plex_Sans_JP({
+  weight: ['400', '500', '700'],
+  display: 'swap',
+  preload: false,
+  variable: '--font-jp',
+})
 
 export const metadata: Metadata = {
   title: {
-    default: 'Mercury Solutions Vietnam | AI Software Development, HR Tech, Sport Tech & Hotel Tech',
-    template: '%s | Mercury Solutions'
+    default: 'Mercury Solutions — Software, AI & Digital Transformation',
+    template: '%s | Mercury Solutions',
   },
-  description: 'Mercury Solutions Vietnam — AI-powered software development company specializing in HR Tech, Sport Tech, Hotel Tech & Business Operations. Custom SaaS platforms, mobile apps, DevOps, cloud solutions, and digital transformation for enterprises across Southeast Asia.',
+  description:
+    'Mercury Solutions builds software, AI & agentic automation, computer vision and digital-transformation solutions for businesses in Vietnam, Japan and Singapore.',
   keywords: [
-    'Mercury Solutions Vietnam',
-    'AI software development',
-    'HR Tech',
-    'Sport Tech',
-    'Hotel Tech',
-    'software development company Vietnam',
-    'DevOps',
-    'cloud solutions',
-    'SaaS platform',
+    'software development Vietnam',
+    'AI agent',
+    'agentic automation',
+    'ERP development',
     'digital transformation',
-    'machine learning',
     'computer vision',
-    'mobile app development',
-    'web development',
-    'enterprise software',
-    'custom software Vietnam',
-    'AI solutions',
-    'workforce management',
-    'property management system',
-    'fitness management software',
-    'Vietnam technology company',
-    'Hanoi software company',
-    'video production',
-    'TVC services'
+    'Meta platform integration',
+    'drone light show',
+    'Mercury Solutions',
   ],
-  authors: [{ name: 'Mercury Solutions Vietnam Company Limited' }],
-  creator: 'Mercury Solutions Vietnam',
-  publisher: 'Mercury Solutions Vietnam',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL('https://www.mercurysolutions.vn'),
-  alternates: {
-    canonical: '/',
-  },
+  authors: [{ name: 'Mercury Solutions' }],
+  creator: 'Mercury Solutions',
+  publisher: 'Mercury Solutions',
+  formatDetection: { email: false, address: false, telephone: false },
+  metadataBase: new URL(SITE_URL),
+  alternates: { canonical: '/' },
+  manifest: '/site.webmanifest',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.mercurysolutions.vn',
-    title: 'Mercury Solutions Vietnam | AI Software Development, HR Tech, Sport Tech & Hotel Tech',
-    description: 'AI-powered software company in Vietnam. Custom HR Tech, Sport Tech, Hotel Tech platforms, DevOps, cloud solutions & digital transformation.',
-    siteName: 'Mercury Solutions Vietnam',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Mercury Solutions Vietnam - AI Software Development Company',
-      },
-    ],
+    alternateLocale: ['vi_VN', 'ja_JP'],
+    url: SITE_URL,
+    title: 'Mercury Solutions — Software, AI & Digital Transformation',
+    description: 'Software, AI & agentic automation, computer vision and digital transformation for businesses in Vietnam, Japan and Singapore.',
+    siteName: 'Mercury Solutions',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Mercury Solutions' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mercury Solutions Vietnam | AI Software Development, HR Tech, Sport Tech & Hotel Tech',
-    description: 'AI-powered software company in Vietnam. Custom HR Tech, Sport Tech, Hotel Tech platforms, DevOps, cloud solutions & digital transformation.',
-    images: ['/og-image.jpg'],
+    title: 'Mercury Solutions — Software, AI & Digital Transformation',
+    description: 'Software, AI & agentic automation, computer vision and digital transformation for businesses in Vietnam, Japan and Singapore.',
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code',
+    googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
 }
+
+export const viewport: Viewport = { themeColor: '#2047F4' }
 
 export default function RootLayout({
   children,
@@ -95,22 +91,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#2047F4" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js" defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js" defer></script>
-      </head>
-      <body className={`${inter.className} bg-background text-foreground`}>
+    <html lang="en" className={`scroll-smooth ${plex.variable} ${plexMono.variable} ${plexJp.variable} ${display.variable}`}>
+      <body className="font-sans bg-background text-foreground">
+        <JsonLd data={[organization, { '@context': 'https://schema.org', '@type': 'WebSite', name: 'Mercury Solutions', url: SITE_URL, inLanguage: ['vi', 'en', 'ja'] }]} />
         <LanguageProvider>
           <Analytics />
-          <ScrollIndicator />
           {children}
         </LanguageProvider>
       </body>

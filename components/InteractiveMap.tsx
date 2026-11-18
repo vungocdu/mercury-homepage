@@ -289,7 +289,7 @@ const InteractiveMap = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
           {/* Map */}
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               {isLoading ? (
                 <div className="h-96 flex items-center justify-center">
                   <p className="text-gray-600">{t('map.loading')}</p>
@@ -303,7 +303,7 @@ const InteractiveMap = () => {
           {/* Contact Info */}
           <div className="space-y-8">
             {/* Office Address */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
+            <div className="bg-white rounded-lg p-6 shadow-lg">
               <h3 className="text-xl font-bold text-gray-900 mb-2">{t('map.officeAddress.title')}</h3>
               <p className="text-gray-600 mb-2">
                 {t('map.officeAddress.address')}
@@ -314,7 +314,7 @@ const InteractiveMap = () => {
             </div>
 
             {/* Contact Details */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
+            <div className="bg-white rounded-lg p-6 shadow-lg">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Contact Information</h3>
               
               <div className="space-y-4">
@@ -337,7 +337,7 @@ const InteractiveMap = () => {
             </div>
 
             {/* Directions */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
+            <div className="bg-white rounded-lg p-6 shadow-lg">
               <h3 className="text-xl font-bold text-gray-900 mb-4">{t('map.directions.title')}</h3>
               <div className="space-y-2 text-sm text-gray-600">
                 <p><strong>Bus:</strong> {t('map.directions.bus')}</p>

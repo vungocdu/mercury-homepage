@@ -13,44 +13,44 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: translations?.faq?.questions?.tvcTypes?.question || 'What types of TVC do you produce?',
-      answer: translations?.faq?.questions?.tvcTypes?.answer || 'We produce various types of TVC including corporate videos, product showcases, and promotional content.'
+      question: translations.faq.questions.tvcTypes.question,
+      answer: translations.faq.questions.tvcTypes.answer
     },
     {
-      question: translations?.faq?.questions?.approach?.question || 'What is your approach to TVC production?',
-      answer: translations?.faq?.questions?.approach?.answer || 'We follow a comprehensive approach from concept development to final delivery.'
+      question: translations.faq.questions.approach.question,
+      answer: translations.faq.questions.approach.answer
     },
     {
-      question: translations?.faq?.questions?.custom?.question || 'Do you offer custom TVC solutions?',
-      answer: translations?.faq?.questions?.custom?.answer || 'We offer fully customized solutions tailored to your specific needs.'
+      question: translations.faq.questions.custom.question,
+      answer: translations.faq.questions.custom.answer
     },
     {
-      question: translations?.faq?.questions?.equipment?.question || 'What equipment do you use?',
-      answer: translations?.faq?.questions?.equipment?.answer || 'We use professional 4K cameras, drones, and state-of-the-art equipment.'
+      question: translations.faq.questions.equipment.question,
+      answer: translations.faq.questions.equipment.answer
     },
     {
-      question: translations?.faq?.questions?.timeline?.question || 'What is the typical timeline?',
-      answer: translations?.faq?.questions?.timeline?.answer || 'Most projects are completed within 1-2 weeks from concept to delivery.'
+      question: translations.faq.questions.timeline.question,
+      answer: translations.faq.questions.timeline.answer
     },
     {
-      question: translations?.faq?.questions?.difference?.question || 'What makes you different?',
-      answer: translations?.faq?.questions?.difference?.answer || 'We combine AI technology with creative storytelling and professional production.'
+      question: translations.faq.questions.difference.question,
+      answer: translations.faq.questions.difference.answer
     },
     {
-      question: translations?.faq?.questions?.budget?.question || 'What is the typical budget?',
-      answer: translations?.faq?.questions?.budget?.answer || 'Budgets vary based on project scope, starting from $5,000 for basic productions.'
+      question: translations.faq.questions.budget.question,
+      answer: translations.faq.questions.budget.answer
     },
     {
-      question: translations?.faq?.questions?.revisions?.question || 'How many revisions are included?',
-      answer: translations?.faq?.questions?.revisions?.answer || 'We include up to 3 rounds of revisions in our standard packages.'
+      question: translations.faq.questions.revisions.question,
+      answer: translations.faq.questions.revisions.answer
     },
     {
-      question: translations?.faq?.questions?.delivery?.question || 'What formats do you deliver?',
-      answer: translations?.faq?.questions?.delivery?.answer || 'We deliver in multiple formats including MP4, MOV, and social media optimized versions.'
+      question: translations.faq.questions.delivery.question,
+      answer: translations.faq.questions.delivery.answer
     },
     {
-      question: translations?.faq?.questions?.rights?.question || 'Who owns the rights?',
-      answer: translations?.faq?.questions?.rights?.answer || 'You own full rights to the final video and all raw footage upon project completion.'
+      question: translations.faq.questions.rights.question,
+      answer: translations.faq.questions.rights.answer
     }
   ]
 
@@ -60,10 +60,10 @@ export default function FAQ() {
         <ClientOnly>
           <TextReveal className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4" style={{ color: 'hsl(var(--text-primary))' }}>
-              {translations?.faq?.title}
+              {translations.faq.title}
             </h2>
             <p className="text-xl max-w-3xl mx-auto" style={{ color: 'hsl(var(--text-secondary))' }}>
-              {translations?.faq?.subtitle}
+              {translations.faq.subtitle}
             </p>
           </TextReveal>
         </ClientOnly>
@@ -118,7 +118,7 @@ export default function FAQ() {
         {/* CTA Section */}
         <ClientOnly>
           <TextReveal className="text-center mt-16" delay={0.5}>
-            <div className="professional-card rounded-2xl p-8" style={{ 
+            <div className="professional-card rounded-lg p-8" style={{ 
               backgroundColor: 'hsl(var(--link-primary))',
               border: '2px solid hsl(var(--card-border))',
               boxShadow: '0 4px 6px -1px rgb(30 58 138 / 0.1), 0 2px 4px -1px rgb(30 58 138 / 0.06)'
@@ -126,14 +126,14 @@ export default function FAQ() {
               <ClientOnly>
                 <TextReveal delay={0.6}>
                   <h3 className="text-2xl font-bold mb-4 text-white">
-                    {translations?.faq?.stillHaveQuestions || "Still Have Questions?"}
+                    {translations.faq.stillHaveQuestions || "Still Have Questions?"}
                   </h3>
                 </TextReveal>
               </ClientOnly>
               <ClientOnly>
                 <TextReveal delay={0.7}>
                   <p className="text-lg mb-6 opacity-90 text-white">
-                    {translations?.faq?.contactTeam || "Our team is here to help you understand our process and answer any questions you may have."}
+                    {translations.faq.contactTeam || "Our team is here to help you understand our process and answer any questions you may have."}
                   </p>
                 </TextReveal>
               </ClientOnly>
@@ -141,7 +141,7 @@ export default function FAQ() {
                 <TextReveal delay={0.8}>
                   <a href="#contact" className="bg-white hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
                      style={{ color: 'hsl(var(--link-primary))' }}>
-                    {translations?.common?.contactUs || 'Contact Us'}
+                    {translations.common.contactUs}
                     <Plus size={20} className="ml-2" />
                   </a>
                 </TextReveal>
