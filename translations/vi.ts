@@ -7,23 +7,28 @@ export const vi = {
     process: "Quy trình",
     projects: "Dự án",
     tvcServices: "Dịch vụ TVC",
-    contact: "Liên hệ",
-    about: "Giới thiệu",
+    contact: "Liên hệ",
     portfolio: "Portfolio",
     ourAdvantage: "Lợi thế của chúng tôi",
     softwareServices: "Dịch vụ phần mềm",
+    about: "Giới thiệu",
+    solutions: "Giải pháp",
+    clients: "Khách hàng",
+    insights: "Góc nhìn",
+    careers: "Tuyển dụng",
+    contactUs: "Liên hệ",
   },
 
   // Hero Section
   hero: {
-    badge: "TVC Professional AI Agent",
+    badge: "Đối tác chuyển đổi số từ năm 2020",
     title: {
       part1: "Next-Gen",
       part2: "AI Technology",
       part3: "Solutions"
     },
-    subtitle: "Mercury Solutions cung cấp dịch vụ AI và chuyển đổi số tiên tiến. Từ computer vision đến tự động hóa thông minh, chúng tôi trao quyền cho doanh nghiệp với các giải pháp công nghệ tiên tiến thúc đẩy đổi mới và hiệu quả.",
-    cta: "Khám phá giải pháp"
+    subtitle: "Mercury Solutions cung cấp giải pháp AI, thị giác máy tính và phần mềm theo yêu cầu, giúp doanh nghiệp tự động hóa, ra quyết định nhanh hơn và tăng trưởng.",
+    cta: "Xem dịch vụ"
   },
 
   // Why Choose Mercury Solutions
@@ -420,7 +425,7 @@ export const vi = {
       badge: "Ứng dụng hiệu suất cao",
       title: "Chúng tôi xuất sắc trong việc xây dựng",
       subtitle: "ứng dụng mobile và web có tải cao",
-      description: "Khám phá portfolio các dự án thành công thể hiện chuyên môn của chúng tôi trong việc cung cấp giải pháp sáng tạo trên nhiều ngành với công nghệ tiên tiến."
+      description: "Một số sản phẩm tiêu biểu chúng tôi đã thiết kế và xây dựng cho khách hàng ở nhiều ngành."
     },
     viewProject: "Xem dự án",
     technologies: "Công nghệ",
@@ -659,6 +664,54 @@ export const vi = {
   },
 
   // Footer
+  home: {
+    eyebrow: "Giới thiệu",
+    title: "Mercury Solutions",
+    intro1: "Thành lập từ năm 2020, Mercury Solutions Việt Nam là công ty công nghệ chuyên cung cấp các giải pháp chuyển đổi số và phát triển phần mềm theo yêu cầu cho doanh nghiệp.",
+    intro2: "Chúng tôi đã đồng hành cùng nhiều khách hàng trong và ngoài nước, bao gồm Nhật Bản, Singapore, Úc cùng nhiều doanh nghiệp và cơ quan nhà nước tại Việt Nam.",
+    direction: {
+      title: "Định hướng",
+      items: [
+        { title: "Tầm nhìn", text: "Trở thành đối tác công nghệ uy tín, tiên phong cung cấp giải pháp số toàn diện cho doanh nghiệp trong và ngoài nước." },
+        { title: "Sứ mệnh", text: "Đồng hành cùng doanh nghiệp trên hành trình chuyển đổi số, mang đến giải pháp sáng tạo, hiệu quả và bền vững." },
+        { title: "Hành động", text: "Lấy khách hàng làm trung tâm, lấy chất lượng làm cam kết và đổi mới sáng tạo làm động lực." },
+      ]
+    },
+    clients: {
+      title: "Khách hàng",
+      text: "Mercury Solutions phục vụ khách hàng tại Việt Nam, Nhật Bản, Singapore và Úc, từ tập đoàn sản xuất, chuỗi fitness, giáo dục mầm non đến cơ quan nhà nước."
+    },
+    cta: {
+      title: "Sẵn sàng đồng hành cùng doanh nghiệp của bạn?",
+      subtitle: "Chia sẻ nhu cầu của bạn, đội ngũ Mercury sẽ tư vấn giải pháp phù hợp."
+    }
+  },
+
+  insights: {
+    badge: "Góc nhìn",
+    title: "Ý tưởng giúp doanh nghiệp tiến xa hơn",
+    subtitle: "Những chia sẻ thực tế từ đội ngũ Mercury về AI, thị giác máy tính và chuyển đổi số.",
+    readMore: "Trao đổi chủ đề này",
+    items: [
+      { category: "AI & Tự động hóa", title: "Bắt đầu ứng dụng AI từ đâu cho doanh nghiệp vừa", excerpt: "Cách chọn bài toán đầu tiên, đo lường ROI và mở rộng an toàn." },
+      { category: "Thị giác máy tính", title: "Thị giác máy tính trong nhà máy", excerpt: "Kiểm tra bằng hình ảnh giúp giảm lỗi và thời gian kiểm tra thủ công trên dây chuyền." },
+      { category: "Chuyển đổi số", title: "Xây dựng ứng dụng web và di động tải cao", excerpt: "Các lựa chọn kiến trúc giúp sản phẩm nhanh và ổn định khi lượng truy cập tăng." },
+    ]
+  },
+
+  careers: {
+    badge: "Tuyển dụng",
+    title: "Cùng xây dựng thế hệ sản phẩm AI tiếp theo",
+    subtitle: "Chúng tôi là đội ngũ kỹ sư và nhà thiết kế yêu thích những bài toán khó. Gia nhập Mercury Solutions để phát triển cùng các dự án thực tế.",
+    perks: [
+      { title: "Tác động thực tế", text: "Phát triển sản phẩm AI và phần mềm được doanh nghiệp khắp châu Á sử dụng." },
+      { title: "Phát triển nhanh", text: "Học hỏi từ kỹ sư giàu kinh nghiệm, sớm có cơ hội dẫn dắt dự án." },
+      { title: "Đội ngũ tuyệt vời", text: "Văn hóa hợp tác, ham học hỏi tại Hà Nội, làm việc linh hoạt." },
+    ],
+    cta: "Gửi CV cho chúng tôi",
+    note: "Chưa có vị trí phù hợp? Hãy gửi CV, chúng tôi luôn muốn gặp người tài."
+  },
+
   footer: {
     description: "Tại Mercury Solutions, chúng tôi tập trung vào thị giác máy tính và triển khai trực quan hóa dữ liệu để cung cấp giải pháp quản lý tốt hơn cho doanh nghiệp từ SMEs đến MNCs.",
     services: "Dịch vụ",
@@ -697,6 +750,7 @@ export const vi = {
 
   // Common
   common: {
+    getConsultation: "Nhận tư vấn",
     learnMore: "Tìm hiểu thêm",
     getStarted: "Bắt đầu",
     contactUs: "Liên hệ chúng tôi",

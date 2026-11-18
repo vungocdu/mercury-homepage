@@ -17,8 +17,10 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        'ibm-plex-sans': ['"IBM Plex Sans"', 'sans-serif'],
-        'sans': ['"IBM Plex Sans"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+        'ibm-plex-sans': ['var(--font-sans)', 'sans-serif'],
+        'display': ['var(--font-display)', 'var(--font-sans)', 'var(--font-jp)', 'sans-serif'],
+        'mono': ['var(--font-mono)', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+        'sans': ['var(--font-sans)', 'var(--font-jp)', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', '"Noto Sans JP"', '"Noto Sans KR"', 'Arial', 'sans-serif'],
       },
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],
@@ -27,10 +29,10 @@ module.exports = {
         'lg': ['1.125rem', { lineHeight: '1.75rem' }],
         'xl': ['1.25rem', { lineHeight: '1.75rem' }],
         '2xl': ['1.5rem', { lineHeight: '2rem' }],
-        '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
-        '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
-        '5xl': ['3rem', { lineHeight: '1' }],
-        '6xl': ['3.75rem', { lineHeight: '1' }],
+        '3xl': ['1.875rem', { lineHeight: '1.3' }],
+        '4xl': ['2.25rem', { lineHeight: '1.3' }],
+        '5xl': ['3rem', { lineHeight: '1.25' }],
+        '6xl': ['3.75rem', { lineHeight: '1.2' }],
         '7xl': ['4.5rem', { lineHeight: '1' }],
         '8xl': ['6rem', { lineHeight: '1' }],
         '9xl': ['8rem', { lineHeight: '1' }],
@@ -50,6 +52,7 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        ink: { DEFAULT: '#070B1F', 2: '#0B1030', 3: '#111845' },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -82,37 +85,38 @@ module.exports = {
           DEFAULT: "hsl(var(--success))",
           foreground: "hsl(var(--success-foreground))",
         },
-        // Mercury Solutions Pantone Colors
+        // Mercury neutrals: cool "ink" scale tinted toward the logo blue
         mercury: {
-          50: "#F8F9FA", // Clean White (Cool Gray 1 C)
-          100: "#F8F9FA", // Clean White
-          200: "#E9ECEF", // Light Gray
-          300: "#DEE2E6", // Medium Light Gray
-          400: "#CED4DA", // Medium Gray
-          500: "#ADB5BD", // Medium Dark Gray
-          600: "#6C757D", // Professional Gray (Cool Gray 9 C)
-          700: "#495057", // Dark Gray
-          800: "#343A40", // Very Dark Gray
-          900: "#212529", // Almost Black
-          950: "#1E3A8A", // Deep Mercury (7461 C)
-          blue: "#2E5BFF", // Mercury Blue (2925 C)
-          gold: "#FFD60A", // Mercury Gold (116 C)
-          white: "#F8F9FA", // Clean White
-          gray: "#6C757D", // Professional Gray
-          deep: "#1E3A8A", // Deep Mercury
+          50: "#F6F7FB",
+          100: "#EEF0F7",
+          200: "#E1E4EF",
+          300: "#CBD0E0",
+          400: "#A3AAC2",
+          500: "#7A829E",
+          600: "#5A6280",
+          700: "#434A66",
+          800: "#2C3250",
+          900: "#1B2038",
+          950: "#0B1030",
+          blue: "#2047F4", // Logo blue
+          gold: "#FFD60A",
+          white: "#F6F7FB",
+          gray: "#5A6280",
+          deep: "#122AA3",
         },
-        // Mercury Blue variations
+        // Mercury Blue: ramp built around the logo colour (500 = #2047F4)
         'mercury-blue': {
-          50: "#E6F0FF",
-          100: "#CCE1FF",
-          200: "#99C3FF",
-          300: "#66A5FF",
-          400: "#3387FF",
-          500: "#2E5BFF", // Mercury Blue (2925 C)
-          600: "#1E3A8A", // Deep Mercury (7461 C)
-          700: "#1A2E6B",
-          800: "#16234C",
-          900: "#11182D",
+          50: "#EEF2FF",
+          100: "#E0E7FF",
+          200: "#C3D0FD",
+          300: "#96ABFB",
+          400: "#5E7DF8",
+          500: "#2047F4",
+          600: "#1736CC",
+          700: "#122AA3",
+          800: "#0E207B",
+          900: "#0A1654",
+          950: "#060E38",
         },
         // Mercury Gold variations
         'mercury-gold': {

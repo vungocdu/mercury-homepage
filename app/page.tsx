@@ -1,27 +1,18 @@
 import Hero from '@/components/Hero'
-import Services from '@/components/Services'
-import TechnologyStack from '@/components/TechnologyStack'
-import Process from '@/components/Process'
-import Projects from '@/components/Projects'
-import WhyChoose from '@/components/WhyChoose'
-import Contact from '@/components/Contact'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import TickerScroll from '@/components/TickerScroll'
+import HomeAbout from '@/components/site/HomeAbout'
+import StatsRings from '@/components/site/StatsRings'
+import ClientsMarquee from '@/components/ClientsMarquee'
+import CtaBand from '@/components/site/CtaBand'
+import PageShell from '@/components/site/PageShell'
 
 export default function Home() {
   return (
-    <main className="min-h-screen professional-bg">
-      <Header />
+    <PageShell>
       <Hero />
-      <Projects />
-      <WhyChoose />
-      <Services />
-      <TechnologyStack />
-      <Process />
-      <TickerScroll />
-      <Contact />
-      <Footer />
-    </main>
+      <HomeAbout />
+      <StatsRings />
+      <ClientsMarquee />
+      <CtaBand />
+    </PageShell>
   )
-} 
+}

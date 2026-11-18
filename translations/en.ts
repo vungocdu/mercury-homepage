@@ -7,23 +7,28 @@ export const en = {
     process: "Process",
     projects: "Projects",
     tvcServices: "TVC Services",
-    contact: "Contact",
-    about: "About",
+    contact: "Contact",
     portfolio: "Portfolio",
     ourAdvantage: "Our Advantage",
     softwareServices: "Software Services",
+    about: "About Us",
+    solutions: "Solutions",
+    clients: "Clients",
+    insights: "Insights",
+    careers: "Careers",
+    contactUs: "Contact Us",
   },
 
   // Hero Section
   hero: {
-    badge: "TVC Professional AI Agent",
+    badge: "Digital transformation partner since 2020",
     title: {
       part1: "Next-Gen",
       part2: "AI Technology",
       part3: "Solutions"
     },
-    subtitle: "Mercury Solutions delivers cutting-edge AI and digital transformation services. From computer vision to intelligent automation, we empower businesses with advanced technology solutions that drive innovation and efficiency.",
-    cta: "Explore Solutions"
+    subtitle: "Mercury Solutions delivers AI, computer vision and custom software that help businesses automate, decide faster and grow.",
+    cta: "Our Services"
   },
 
   // Why Choose Mercury Solutions
@@ -420,7 +425,7 @@ export const en = {
       badge: "High-Performance Applications",
       title: "We excel in building",
       subtitle: "high-load mobile and web applications",
-      description: "Explore our portfolio of successful projects that demonstrate our expertise in delivering innovative solutions across various industries with cutting-edge technology."
+      description: "Selected products we have designed and built for clients across industries."
     },
     viewProject: "View Project",
     technologies: "Technologies",
@@ -659,6 +664,54 @@ export const en = {
   },
 
   // Footer
+  home: {
+    eyebrow: "About Us",
+    title: "Mercury Solutions",
+    intro1: "Founded in 2020, Mercury Solutions Vietnam is a technology company providing digital transformation solutions and custom software development for businesses.",
+    intro2: "We have worked with many clients in Vietnam and abroad, including Japan, Singapore and Australia, as well as many enterprises and government agencies in Vietnam.",
+    direction: {
+      title: "Our Direction",
+      items: [
+        { title: "Vision", text: "To be a trusted technology partner, pioneering comprehensive digital solutions for businesses at home and abroad." },
+        { title: "Mission", text: "To accompany businesses on their digital transformation journey with creative, effective and sustainable solutions." },
+        { title: "Action", text: "Customer-centric, committed to quality, and driven by innovation." },
+      ]
+    },
+    clients: {
+      title: "Our Clients",
+      text: "Mercury Solutions serves clients in Vietnam, Japan, Singapore and Australia, from manufacturing groups and fitness chains to preschool education and government agencies."
+    },
+    cta: {
+      title: "Ready to work with Mercury Solutions?",
+      subtitle: "Tell us what you need and our team will recommend the right solution."
+    }
+  },
+
+  insights: {
+    badge: "Insights",
+    title: "Ideas that move your business forward",
+    subtitle: "Practical perspectives from the Mercury team on AI, computer vision and digital transformation.",
+    readMore: "Discuss this topic",
+    items: [
+      { category: "AI & Automation", title: "Where to start with AI in a mid-size business", excerpt: "A step-by-step view on picking the first use case, measuring ROI and scaling safely." },
+      { category: "Computer Vision", title: "Computer vision on the factory floor", excerpt: "How visual inspection reduces defects and manual checking time in production lines." },
+      { category: "Digital Transformation", title: "Building high-load web and mobile apps", excerpt: "Architecture choices that keep products fast and reliable as traffic grows." },
+    ]
+  },
+
+  careers: {
+    badge: "Careers",
+    title: "Build the next generation of AI products with us",
+    subtitle: "We are a team of engineers and designers who enjoy hard problems. Join Mercury Solutions and grow with real projects for real clients.",
+    perks: [
+      { title: "Real impact", text: "Ship AI and software products used by businesses across Asia." },
+      { title: "Grow fast", text: "Learn from senior engineers, with room to lead projects early." },
+      { title: "Great team", text: "A collaborative, curious culture in Hanoi with flexible working." },
+    ],
+    cta: "Send us your CV",
+    note: "No open role that fits? Send your CV anyway, we always meet talented people."
+  },
+
   footer: {
     description: "At Mercury Solutions, we focus on computer vision and data visualization implementation to provide better management solutions for businesses from SMEs to MNCs.",
     services: "Services",
@@ -697,6 +750,7 @@ export const en = {
 
   // Common
   common: {
+    getConsultation: "Get a Consultation",
     learnMore: "Learn More",
     getStarted: "Get Started",
     contactUs: "Contact Us",

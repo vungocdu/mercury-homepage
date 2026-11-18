@@ -1,115 +1,67 @@
 'use client'
 
-import { Zap, ChevronRight } from 'lucide-react'
-import TextReveal from './TextReveal'
-import ClientOnly from './ClientOnly'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
+import { motion } from 'framer-motion'
 import { useLanguage } from '@/contexts/LanguageContext'
-
-function HeroContent() {
-  const { t } = useLanguage()
-  
-
-
-  return (
-    <div className="container-custom relative z-20">
-      <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] text-center">
-        
-        {/* Content */}
-        <div className="space-y-8 fade-in-up max-w-4xl">
-          <div className="space-y-6">
-            <TextReveal delay={0.1}>
-              <div className="inline-flex items-center space-x-2 professional-card px-4 py-2 rounded-full">
-                <Zap className="w-4 h-4" style={{ color: 'hsl(var(--link-primary))' }} />
-                <span className="text-sm font-medium" style={{ color: 'hsl(var(--text-primary))' }}>
-                  {t('hero.badge')}
-                </span>
-              </div>
-            </TextReveal>
-            
-            <TextReveal delay={0.2}>
-              <h1 className="text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-                <span style={{ color: 'hsl(var(--text-primary))' }}>{t('hero.title.part1')}</span>{' '}
-                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent animate-gradient-x">
-                  {t('hero.title.part2')}
-                </span>{' '}
-                <span className="text-sm font-medium" style={{ color: 'hsl(var(--text-primary))' }}>{t('hero.title.part3')}</span>
-              </h1>
-            </TextReveal>
-            
-            <TextReveal delay={0.3}>
-              <p className="text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto" style={{ color: 'hsl(var(--text-secondary))' }}>
-                {t('hero.subtitle')}
-              </p>
-            </TextReveal>
-          </div>
-
-          {/* CTA Button */}
-          <TextReveal delay={0.4}>
-            <div className="flex justify-center">
-              <a href="#projects" className="btn-secondary group inline-flex items-center justify-center hover:scale-105">
-                {t('hero.cta')}
-                <ChevronRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </div>
-          </TextReveal>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 rounded-full flex justify-center border-mercury-blue-500 shadow-lg">
-          <div className="w-1 h-3 rounded-full mt-2 animate-pulse bg-mercury-blue-500"></div>
-        </div>
-      </div>
-    </div>
-  )
-}
+import { home, ui } from '@/lib/content'
+import GlowArc from './site/GlowArc'
 
 export default function Hero() {
+  const { l } = useLanguage()
+
   return (
-    <section id="home" className="hero-bg-white pt-16 min-h-screen relative overflow-hidden">
-      <ClientOnly fallback={
-        <div className="container-custom relative z-20">
-          <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] text-center">
-            <div className="space-y-8 fade-in-up max-w-4xl">
-              <div className="space-y-6">
-                <div className="inline-flex items-center space-x-2 professional-card px-4 py-2 rounded-full">
-                  <Zap className="w-4 h-4" style={{ color: 'hsl(var(--link-primary))' }} />
-                  <span className="text-sm font-medium" style={{ color: 'hsl(var(--text-primary))' }}>
-                    Mercury Solutions
-                  </span>
-                </div>
-                
-                <h1 className="text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-                  <span style={{ color: 'hsl(var(--text-primary))' }}>Mercury Solutions</span>{' '}
-                  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent animate-gradient-x">
-                    - Data Analysis & Innovative Technologies
-                  </span>
-                </h1>
-                
-                <p className="text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto" style={{ color: 'hsl(var(--text-secondary))' }}>
-                  Mercury Solutions specializes in Data Analysis, Computer Vision, Web Development, Mobile App Development, and innovative technologies.
-                </p>
-              </div>
+    <section className="relative overflow-hidden bg-white pt-28 text-slate-900">
+      {/* volumetric glow rings, top right; masked so there is no hard edge anywhere */}
+      <div className="fade-bottom pointer-events-none absolute -right-[18rem] -top-[22rem] h-[62rem] w-[62rem] max-w-none">
+        <GlowArc className="h-full w-full" />
+      </div>
 
-              <div className="flex justify-center">
-                <a href="#projects" className="btn-secondary group inline-flex items-center justify-center hover:scale-105">
-                  View Our Projects
-                  <ChevronRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                </a>
-              </div>
-            </div>
-          </div>
+      <div className="container-custom relative z-10 pt-10 lg:pt-16">
+        <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="eyebrow mb-4 text-slate-600">
+          Mercury Solutions
+        </motion.p>
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          className="max-w-4xl text-3xl font-bold leading-[1.12] tracking-[0.01em] sm:text-5xl xl:text-[3.6rem]"
+        >
+          <span className="text-gradient-silver">{l(home.title1)}</span>
+          <br className="hidden sm:block" /> <span className="text-gradient-blue">{l(home.title2)}</span>
+        </motion.h1>
 
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div className="w-6 h-10 border-2 rounded-full flex justify-center border-mercury-blue-500 shadow-lg">
-              <div className="w-1 h-3 rounded-full mt-2 animate-pulse bg-mercury-blue-500"></div>
-            </div>
-          </div>
-        </div>
-      }>
-        <HeroContent />
-      </ClientOnly>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.25 }}
+          className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600"
+        >
+          {l(home.subtitle)}
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-9 flex flex-wrap gap-4"
+        >
+          <Link
+            href="/contact"
+            className="group pill-grad inline-flex items-center gap-2 rounded-full border border-white/25 px-7 py-3.5 font-semibold text-white shadow-[0_0_34px_rgb(94_125_248/0.4)] transition hover:-translate-y-0.5"
+          >
+            {l(ui.cta)}
+            <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+          </Link>
+          <Link
+            href="/work"
+            className="inline-flex items-center rounded-full border border-slate-300 bg-white px-7 py-3.5 font-semibold text-slate-900 transition hover:border-[#2047F4] hover:text-[#2047F4]"
+          >
+            {l(ui.viewAllProjects)}
+          </Link>
+        </motion.div>
+
+      </div>
     </section>
   )
-} 
+}

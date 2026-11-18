@@ -1,26 +1,13 @@
 {
-  "name": "Mercury Solutions - Data Analysis & Innovative Technologies",
+  "name": "Mercury Solutions — Software, AI & Digital Transformation",
   "short_name": "Mercury Solutions",
-  "description": "Mercury Solutions specializes in Data Analysis, Computer Vision, Web Development, Mobile App Development, and innovative technologies.",
+  "description": "Software development, AI & agentic automation, computer vision and digital transformation for businesses in Vietnam, Japan and Singapore.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#000000",
   "theme_color": "#2047F4",
   "icons": [
-    {
-      "src": "/favicon-16x16.png",
-      "sizes": "16x16",
-      "type": "image/png"
-    },
-    {
-      "src": "/favicon-32x32.png",
-      "sizes": "32x32",
-      "type": "image/png"
-    },
-    {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
-    }
+    { "src": "/icon.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/apple-icon.png", "sizes": "180x180", "type": "image/png" }
   ]
-} 
+}

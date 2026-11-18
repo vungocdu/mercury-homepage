@@ -7,23 +7,28 @@ export const ko = {
     process: "프로세스",
     projects: "프로젝트",
     tvcServices: "TVC 서비스",
-    contact: "연락처",
-    about: "회사 소개",
+    contact: "연락처",
     portfolio: "포트폴리오",
     ourAdvantage: "우리의 장점",
     softwareServices: "소프트웨어 서비스",
+    about: "회사 소개",
+    solutions: "솔루션",
+    clients: "고객사",
+    insights: "인사이트",
+    careers: "채용",
+    contactUs: "문의하기",
   },
 
   // Hero Section
   hero: {
-    badge: "TVC Professional AI Agent",
+    badge: "2020년부터 함께한 디지털 전환 파트너",
     title: {
       part1: "Next-Gen",
       part2: "AI Technology",
       part3: "Solutions"
     },
-    subtitle: "Mercury Solutions는 최첨단 AI와 디지털 변환 서비스를 제공합니다. 컴퓨터 비전부터 지능형 자동화까지, 혁신과 효율성을 촉진하는 고급 기술 솔루션으로 기업에 힘을 실어줍니다.",
-    cta: "솔루션 탐색"
+    subtitle: "Mercury Solutions는 AI, 컴퓨터 비전, 맞춤형 소프트웨어로 기업의 자동화, 빠른 의사결정, 성장을 돕습니다.",
+    cta: "서비스 보기"
   },
 
   // Why Choose Mercury Solutions
@@ -420,7 +425,7 @@ export const ko = {
       badge: "고성능 애플리케이션",
       title: "우리는 구축에 뛰어납니다",
       subtitle: "고부하 모바일 및 웹 애플리케이션",
-      description: "최첨단 기술로 다양한 산업에 혁신적인 솔루션을 제공하는 전문성을 보여주는 성공한 프로젝트 포트폴리오를 탐색해 보세요."
+      description: "다양한 산업의 고객을 위해 설계하고 구축한 대표 제품입니다."
     },
     viewProject: "프로젝트 보기",
     technologies: "기술",
@@ -659,6 +664,54 @@ export const ko = {
   },
 
   // Footer
+  home: {
+    eyebrow: "회사 소개",
+    title: "Mercury Solutions",
+    intro1: "2020년에 설립된 Mercury Solutions Vietnam은 기업을 위한 디지털 전환 솔루션과 맞춤형 소프트웨어 개발을 제공하는 기술 기업입니다.",
+    intro2: "일본, 싱가포르, 호주를 비롯한 국내외 다양한 고객과 베트남의 여러 기업 및 정부 기관과 함께해 왔습니다.",
+    direction: {
+      title: "우리의 방향",
+      items: [
+        { title: "비전", text: "국내외 기업에 종합적인 디지털 솔루션을 선도적으로 제공하는 신뢰받는 기술 파트너가 됩니다." },
+        { title: "미션", text: "창의적이고 효율적이며 지속 가능한 솔루션으로 기업의 디지털 전환 여정을 함께합니다." },
+        { title: "행동", text: "고객 중심, 품질에 대한 약속, 혁신을 원동력으로 삼습니다." },
+      ]
+    },
+    clients: {
+      title: "고객사",
+      text: "Mercury Solutions는 베트남, 일본, 싱가포르, 호주의 고객에게 제조 그룹, 피트니스 체인, 유아 교육부터 정부 기관까지 서비스를 제공합니다."
+    },
+    cta: {
+      title: "Mercury Solutions와 함께하시겠어요?",
+      subtitle: "필요한 내용을 알려 주시면 맞는 솔루션을 제안해 드립니다."
+    }
+  },
+
+  insights: {
+    badge: "인사이트",
+    title: "비즈니스를 앞으로 이끄는 아이디어",
+    subtitle: "AI, 컴퓨터 비전, 디지털 전환에 대한 Mercury 팀의 실용적인 관점.",
+    readMore: "이 주제 상담하기",
+    items: [
+      { category: "AI·자동화", title: "중견기업은 AI를 어디서 시작할까", excerpt: "첫 활용 사례 선정, ROI 측정, 안전한 확장 방법을 단계별로 안내합니다." },
+      { category: "컴퓨터 비전", title: "공장에서의 컴퓨터 비전", excerpt: "영상 검사로 불량과 수작업 검사 시간을 줄이는 방법." },
+      { category: "디지털 전환", title: "고부하 웹·모바일 앱 구축", excerpt: "트래픽이 늘어도 빠르고 안정적인 제품을 위한 아키텍처 선택." },
+    ]
+  },
+
+  careers: {
+    badge: "채용",
+    title: "차세대 AI 제품을 함께 만들어요",
+    subtitle: "어려운 문제를 즐기는 엔지니어와 디자이너 팀입니다. 실제 프로젝트로 Mercury Solutions와 함께 성장하세요.",
+    perks: [
+      { title: "실질적인 임팩트", text: "아시아 전역의 기업이 사용하는 AI·소프트웨어 제품을 만듭니다." },
+      { title: "빠른 성장", text: "시니어 엔지니어에게 배우고 일찍 프로젝트를 이끌 기회가 있습니다." },
+      { title: "훌륭한 팀", text: "하노이에서 협력적이고 호기심 넘치는 문화, 유연 근무." },
+    ],
+    cta: "이력서 보내기",
+    note: "맞는 포지션이 없어도 이력서를 보내주세요."
+  },
+
   footer: {
     description: "Mercury Solutions에서는 SME부터 MNC까지 기업에 더 나은 관리 솔루션을 제공하기 위한 컴퓨터 비전과 데이터 시각화 구현에 중점을 둡니다.",
     services: "서비스",
@@ -697,6 +750,7 @@ export const ko = {
 
   // Common
   common: {
+    getConsultation: "상담 받기",
     learnMore: "더 알아보기",
     getStarted: "시작하기",
     contactUs: "연락처",

@@ -118,7 +118,7 @@ export default function FAQ() {
         {/* CTA Section */}
         <ClientOnly>
           <TextReveal className="text-center mt-16" delay={0.5}>
-            <div className="professional-card rounded-2xl p-8" style={{ 
+            <div className="professional-card rounded-lg p-8" style={{ 
               backgroundColor: 'hsl(var(--link-primary))',
               border: '2px solid hsl(var(--card-border))',
               boxShadow: '0 4px 6px -1px rgb(30 58 138 / 0.1), 0 2px 4px -1px rgb(30 58 138 / 0.06)'

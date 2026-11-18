@@ -1,11 +1,15 @@
+const path = require('path')
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: 'export', // Disabled for Next.js 15 compatibility
   trailingSlash: true,
+  turbopack: {
+    root: path.join(__dirname),
+  },
   images: {
-    domains: ['minova.vn'],
+    remotePatterns: [{ protocol: 'https', hostname: 'minova.vn' }],
     unoptimized: true,
   },
 }
 
-module.exports = nextConfig 
+module.exports = nextConfig
