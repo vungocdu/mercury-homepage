@@ -1,24 +1,27 @@
 import { applicationDefault, getApps, initializeApp } from 'firebase-admin/app'
 import { FieldValue, Timestamp, getFirestore } from 'firebase-admin/firestore'
-import { ExternalAccountClient } from 'google-auth-library'
+import { ExternalAccountClient, GoogleAuth } from 'google-auth-library'
+import { Firestore } from '@google-cloud/firestore'
 import { getVercelOidcToken } from '@vercel/oidc'
 import type { TrialStore } from './handler'
 
+let federatedDb: Firestore | undefined
 function db() {
   const projectId = process.env.GCP_PROJECT_ID || 'mercury-homepage'
   const audience = process.env.GCP_WIF_AUDIENCE
   const email = process.env.GCP_SERVICE_ACCOUNT_EMAIL
-  if (!getApps().some(a => a.name === 'trial')) {
-    const credential = audience && email ? {
-      async getAccessToken() {
+  if (audience && email) {
+    if (!federatedDb) {
         const auth = ExternalAccountClient.fromJSON({ type: 'external_account', audience, subject_token_type: 'urn:ietf:params:oauth:token-type:jwt', token_url: 'https://sts.googleapis.com/v1/token', service_account_impersonation_url: `https://iamcredentials.googleapis.com/v1/projects/-/serviceAccounts/${email}:generateAccessToken`, subject_token_supplier: { getSubjectToken: () => getVercelOidcToken() } })
         if (!auth) throw new Error('Missing federation configuration')
-        const token = await auth.getAccessToken()
-        if (!token.token) throw new Error('Missing access token')
-        return { access_token: token.token, expires_in: 300 }
-      },
-    } : applicationDefault()
-    initializeApp({ projectId, credential }, 'trial')
+        // Firebase Admin accepts only ADC/certificate credentials for Firestore.
+        // Supply the federation client directly to the Google Cloud client.
+        federatedDb = new Firestore({ projectId, auth: new GoogleAuth({ authClient: auth, projectId }) })
+    }
+    return federatedDb
+  }
+  if (!getApps().some(a => a.name === 'trial')) {
+    initializeApp({ projectId, credential: applicationDefault() }, 'trial')
   }
   return getFirestore(getApps().find(a => a.name === 'trial')!)
 }
