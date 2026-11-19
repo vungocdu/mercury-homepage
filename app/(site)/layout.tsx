@@ -3,6 +3,8 @@ import { IBM_Plex_Sans, IBM_Plex_Mono, IBM_Plex_Sans_JP, Space_Grotesk } from 'n
 import '../globals.css'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import Analytics from '@/components/Analytics'
+import { Analytics as VercelAnalytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import JsonLd from '@/components/site/JsonLd'
 import { SITE_URL, organization } from '@/lib/seo'
 
@@ -98,7 +100,9 @@ export default function RootLayout({
           <Analytics />
           {children}
         </LanguageProvider>
+        <VercelAnalytics />
+        <SpeedInsights />
       </body>
     </html>
   )
-} 
+}

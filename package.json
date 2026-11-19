@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "@google-cloud/firestore": "^9.4.1",
+    "@vercel/analytics": "^2.0.1",
     "@vercel/oidc": "^4.0.9",
+    "@vercel/speed-insights": "^2.1.0",
     "clsx": "^2.0.0",
     "firebase-admin": "^14.5.1",
     "framer-motion": "^12.23.12",
