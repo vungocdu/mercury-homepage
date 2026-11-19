@@ -1,7 +1,5 @@
-import { applicationDefault, getApps, initializeApp } from 'firebase-admin/app'
-import { FieldValue, Timestamp, getFirestore } from 'firebase-admin/firestore'
 import { ExternalAccountClient, GoogleAuth } from 'google-auth-library'
-import { Firestore } from '@google-cloud/firestore'
+import { Firestore, FieldValue, Timestamp } from '@google-cloud/firestore'
 import { getVercelOidcToken } from '@vercel/oidc'
 import type { TrialStore } from './handler'
 
@@ -20,10 +18,7 @@ function db() {
     }
     return federatedDb
   }
-  if (!getApps().some(a => a.name === 'trial')) {
-    initializeApp({ projectId, credential: applicationDefault() }, 'trial')
-  }
-  return getFirestore(getApps().find(a => a.name === 'trial')!)
+  return federatedDb ??= new Firestore({ projectId })
 }
 export const firestoreTrialStore: TrialStore = {
   async save(id, input, fingerprint, buckets) {
