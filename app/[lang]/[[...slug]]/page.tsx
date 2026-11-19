@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (raw !== 'vi' && raw !== 'ja') return {}
   const lang = raw; const path = slug.join('/'); const { title, description } = content(lang, path)
   if (!title || !paths.includes(path)) return {}
-  return { title, description, alternates: { canonical: `${SITE_URL}/${lang}/${path ? `${path}/` : ''}`, languages: localeAlternates(path) }, openGraph: { title: `${title} | Mercury Solutions`, description, url: `${SITE_URL}/${lang}/${path ? `${path}/` : ''}`, locale: lang === 'vi' ? 'vi_VN' : 'ja_JP' }, ...(path === 'insights' ? { robots: { index: false, follow: true } } : {}) }
+  return { title, description, alternates: { canonical: `${SITE_URL}/${lang}/${path ? `${path}/` : ''}`, languages: localeAlternates(path) }, openGraph: { title: `${title} | Mercury Solutions`, description, url: `${SITE_URL}/${lang}/${path ? `${path}/` : ''}`, locale: lang === 'vi' ? 'vi_VN' : 'ja_JP' } }
 }
 export default async function LocalePage({ params }: Props) {
   const { lang: raw, slug = [] } = await params
@@ -49,7 +49,7 @@ export default async function LocalePage({ params }: Props) {
   if (!paths.includes(path)) notFound()
   const { title, description, service, project } = content(lang, path)
   if (!path) return <Home />
-  const page = service ? <ServiceDetail slug={service.slug} /> : project ? <WorkDetail slug={project.slug} /> : path === 'about' ? <AboutPage /> : path === 'services' ? <ServicesPage /> : path === 'work' ? <WorkPage /> : path === 'careers' ? <CareersPage /> : path === 'contact' ? <ContactPage /> : <InsightsPage />
+  const page = service ? <ServiceDetail slug={service.slug} /> : project ? <WorkDetail slug={project.slug} /> : path === 'about' ? <AboutPage /> : path === 'services' ? <ServicesPage /> : path === 'work' ? <WorkPage /> : path === 'careers' ? <CareersPage /> : path === 'contact' ? <ContactPage /> : <InsightsPage language={lang} />
   const prefix = `/${lang}`
   const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [ { '@type': 'ListItem', position: 1, name: lang === 'vi' ? 'Trang chủ' : 'ホーム', item: `${SITE_URL}${prefix}/` }, { '@type': 'ListItem', position: 2, name: service ? (lang === 'vi' ? 'Dịch vụ' : 'サービス') : (lang === 'vi' ? 'Dự án' : '導入事例'), item: `${SITE_URL}${prefix}/${service ? 'services' : 'work'}/` }, { '@type': 'ListItem', position: 3, name: title, item: `${SITE_URL}${prefix}/${path}/` } ] }
   return <PageShell>{(service || project) && <JsonLd data={[{ '@context': 'https://schema.org', '@type': service ? 'Service' : 'CreativeWork', name: title, description, url: `${SITE_URL}/${lang}/${path}/`, inLanguage: lang, ...(service ? { provider: { '@type': 'Organization', name: 'Mercury Solutions', url: SITE_URL } } : { creator: { '@type': 'Organization', name: 'Mercury Solutions', url: SITE_URL } }) }, breadcrumb]} />}{page}</PageShell>

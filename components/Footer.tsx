@@ -5,6 +5,7 @@ import { Mail, Phone, MapPin } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { nav, services, projects, footer, contact } from '@/lib/content'
 import Logo from './site/Logo'
+import { LINKEDIN_COMPANY_URL } from '@/lib/brand'
 
 export default function Footer() {
   const { l } = useLanguage()
@@ -36,6 +37,7 @@ export default function Footer() {
                   {contact.email}
                 </a>
               </li>
+              <li><a href={LINKEDIN_COMPANY_URL} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 hover:text-white">Mercury Solutions · LinkedIn ↗</a></li>
             </ul>
           </div>
 

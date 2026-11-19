@@ -18,3 +18,11 @@
 - [HMB ERP](https://www.mercurysolutions.vn/work/hmb-erp/): ERP for a pharmaceutical group.
 - [Actiwell](https://www.mercurysolutions.vn/work/actiwell/): Fitness management and member experience.
 - [TNA at Fujikin](https://www.mercurysolutions.vn/work/tna-fujikin/): Attendance, shifts and payroll integration.
+
+## Practical guides
+- [Vietnamese guides](https://www.mercurysolutions.vn/vi/insights/): ERP scope, attendance workflows and software selection.
+- [Japanese guides](https://www.mercurysolutions.vn/ja/insights/): Order and inventory unification, journal CSV preparation and food lot records.
+
+## Mercury ERP trial
+- [Japanese trial request](https://www.mercurysolutions.vn/erp-trial/): Request a manually prepared account; 30-day trial begins at activation.
+- [Vietnamese trial request](https://www.mercurysolutions.vn/erp-trial/vi/): Vietnamese trial information and request form.

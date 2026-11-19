@@ -51,7 +51,7 @@ export default function LanguageSelector() {
               key={lang.code}
               onClick={() => {
                 const original = pathname.replace(/^\/(vi|ja)(?=\/|$)/, '') || '/'
-                const path = /^\/(tvc|admin)(\/|$)/.test(original) ? '/' : original
+                const path = /^\/insights\/[^/]+/.test(original) && lang.code !== language ? '/insights/' : /^\/(tvc|admin)(\/|$)/.test(original) ? '/' : original
                 router.push(lang.code === 'en' ? path : `/${lang.code}${path === '/' ? '/' : path}`)
                 setIsOpen(false)
               }}

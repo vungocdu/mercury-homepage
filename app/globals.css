@@ -1068,3 +1068,10 @@ footer.bg-ink { background: #0B1030; }
 @media (prefers-reduced-motion: reduce) {
   .cta-floor, .cube-spin, .cta-sway { animation: none !important; }
 }
+
+/* Article spacing lives outside container-custom: its padding shorthand resets utilities. */
+.article-page { padding-block: 7rem 5rem; }
+.article-page > .article-content { max-width: 56rem; }
+@media (min-width: 640px) { .article-page { padding-top: 8rem; } }
+.theme-black .article-page p { color: #334155; }
+.article-page :is(h1, h2, h3) { scroll-margin-top: 6rem; }

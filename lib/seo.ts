@@ -1,3 +1,4 @@
+import { LINKEDIN_COMPANY_URL, SUPPORT_EMAIL } from './brand'
 export const SITE_URL = 'https://www.mercurysolutions.vn'
 
 /** Absolute URL with the trailing slash this site uses (next.config trailingSlash: true). */
@@ -11,7 +12,8 @@ export const organization = {
   logo: `${SITE_URL}/images/logo/mercury-logo.png`,
   description:
     'Mercury Solutions builds software, AI & agentic automation, computer vision and digital-transformation solutions for businesses in Vietnam, Japan and Singapore.',
-  email: 'info@mercury-solutions.vn',
+  email: SUPPORT_EMAIL,
+  sameAs: [LINKEDIN_COMPANY_URL],
   address: {
     '@type': 'PostalAddress',
     streetAddress: '33 Ngo 41 Thai Ha, Trung Liet, Dong Da',

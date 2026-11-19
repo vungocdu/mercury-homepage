@@ -6,15 +6,21 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check:folders": "node scripts/check-folder-names.mjs",
+    "test:trial": "tsx --test tests/trial-requests.test.ts"
   },
   "dependencies": {
+    "@vercel/oidc": "^4.0.9",
     "clsx": "^2.0.0",
+    "firebase-admin": "^14.5.1",
     "framer-motion": "^12.23.12",
+    "google-auth-library": "^11.3.4",
     "lucide-react": "^0.536.0",
     "next": "^16.1.6",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "server-only": "^0.0.1",
     "tailwind-merge": "^2.0.0"
   },
   "devDependencies": {
@@ -27,6 +33,7 @@
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "tailwindcss-animate": "^1.0.7",
+    "tsx": "^4.23.15",
     "typescript": "^5"
   }
 }

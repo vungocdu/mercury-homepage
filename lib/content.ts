@@ -827,7 +827,7 @@ export const contact = {
   ),
   hours: x('Thứ 2 - Thứ 6: 8:00 - 18:00 · Thứ 7: 9:00 - 13:00', 'Mon - Fri: 8:00 AM - 6:00 PM · Sat: 9:00 AM - 1:00 PM', '月-金: 8:00-18:00 · 土: 9:00-13:00'),
   phone: '+84 24 1234 5678',
-  email: 'info@mercury-solutions.vn',
+  email: 'info@mercurysolutions.vn',
   form: {
     name: x('Họ và tên', 'Full name', 'お名前'),
     company: x('Công ty', 'Company', '会社名'),
