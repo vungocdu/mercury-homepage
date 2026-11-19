@@ -37,6 +37,7 @@ export async function handleTrialRequest(request: Request, options: { enabled: b
       category: /permission/i.test(message) ? 'permission' : /credential|token|auth/i.test(message) ? 'authentication' : 'storage',
       permission: message.match(/datastore\.[a-zA-Z.]+/)?.[0],
       oauth: message.match(/invalid_grant|invalid_target|invalid_request|unauthorized_client|access_denied/)?.[0],
+      diagnostic: message.split('\n')[0].replace(/https?:\/\/\S+|[A-Za-z0-9_+/.=-]{40,}|[\w.+-]+@[\w.-]+/g, '[redacted]').slice(0, 300),
     })
     return reply({ error: 'unavailable' }, 503)
   }
