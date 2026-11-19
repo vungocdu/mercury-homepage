@@ -28,5 +28,16 @@ export async function handleTrialRequest(request: Request, options: { enabled: b
     if (result === 'limited') return reply({ error: 'rate_limit' }, 429)
     if (result === 'conflict') return reply({ error: 'request_id_conflict' }, 409)
     return reply({ requestId: key, status: 'received' }, result === 'created' ? 201 : 200)
-  } catch { return reply({ error: 'unavailable' }, 503) }
+  } catch (error) {
+    // Record diagnostic codes only; never log submitted data, credentials or tokens.
+    const e = error as { code?: string | number; message?: string }
+    const message = e.message || ''
+    console.error('trial_store_unavailable', {
+      code: typeof e.code === 'number' ? e.code : undefined,
+      category: /permission/i.test(message) ? 'permission' : /credential|token|auth/i.test(message) ? 'authentication' : 'storage',
+      permission: message.match(/datastore\.[a-zA-Z.]+/)?.[0],
+      oauth: message.match(/invalid_grant|invalid_target|invalid_request|unauthorized_client|access_denied/)?.[0],
+    })
+    return reply({ error: 'unavailable' }, 503)
+  }
 }
