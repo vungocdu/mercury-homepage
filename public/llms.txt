@@ -1,0 +1,20 @@
+# Mercury Solutions
+
+> Mercury Solutions develops software, AI and automation, computer vision and digital transformation solutions for businesses.
+
+## Company
+- [About Mercury Solutions](https://www.mercurysolutions.vn/about/): Company vision, mission and markets.
+- [Contact](https://www.mercurysolutions.vn/contact/): Contact information and consultation request.
+
+## Services
+- [Services](https://www.mercurysolutions.vn/services/): Overview of Mercury's capabilities.
+- [Software development](https://www.mercurysolutions.vn/services/software-development/): Software platforms and applications for businesses.
+- [AI and automation](https://www.mercurysolutions.vn/services/ai-automation/): AI and automation use cases.
+- [Digital transformation](https://www.mercurysolutions.vn/services/digital-transformation/): Digital workflows and systems.
+- [Computer vision](https://www.mercurysolutions.vn/services/computer-vision/): Computer vision solutions.
+
+## Project case studies
+- [Projects](https://www.mercurysolutions.vn/work/): Project portfolio by industry.
+- [HMB ERP](https://www.mercurysolutions.vn/work/hmb-erp/): ERP for a pharmaceutical group.
+- [Actiwell](https://www.mercurysolutions.vn/work/actiwell/): Fitness management and member experience.
+- [TNA at Fujikin](https://www.mercurysolutions.vn/work/tna-fujikin/): Attendance, shifts and payroll integration.

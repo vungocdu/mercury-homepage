@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { IBM_Plex_Sans, IBM_Plex_Mono, IBM_Plex_Sans_JP, Space_Grotesk } from 'next/font/google'
-import './globals.css'
+import '../globals.css'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import Analytics from '@/components/Analytics'
 import JsonLd from '@/components/site/JsonLd'
@@ -86,15 +86,15 @@ export const metadata: Metadata = {
 export const viewport: Viewport = { themeColor: '#2047F4' }
 
 export default function RootLayout({
-  children,
+  children, language = 'en',
 }: {
-  children: React.ReactNode
+  children: React.ReactNode; language?: 'en' | 'vi' | 'ja'
 }) {
   return (
-    <html lang="en" className={`scroll-smooth ${plex.variable} ${plexMono.variable} ${plexJp.variable} ${display.variable}`}>
+    <html lang={language} className={`scroll-smooth ${plex.variable} ${plexMono.variable} ${plexJp.variable} ${display.variable}`}>
       <body className="font-sans bg-background text-foreground">
         <JsonLd data={[organization, { '@context': 'https://schema.org', '@type': 'WebSite', name: 'Mercury Solutions', url: SITE_URL, inLanguage: ['vi', 'en', 'ja'] }]} />
-        <LanguageProvider>
+        <LanguageProvider key={language} initialLanguage={language}>
           <Analytics />
           {children}
         </LanguageProvider>

@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import Link from '@/components/site/LocalizedLink'
 import { ChevronRight } from 'lucide-react'
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion'
 import { useRef, type ReactNode } from 'react'

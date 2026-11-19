@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import Link from '@/components/site/LocalizedLink'
 import Image from 'next/image'
 import { ArrowRight, ArrowLeft, LayoutDashboard, Clock, ClipboardCheck, Calculator, Gift, ReceiptText, UserSquare, ShieldCheck, Building2, Lock, Smartphone, Cloud, FileSignature } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'

@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import Link from '@/components/site/LocalizedLink'
 import { ArrowRight, Mail } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { ui, contact } from '@/lib/content'

@@ -49,21 +49,8 @@ const translations: Record<Language, typeof en> = {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<Language>('en')
-
-  useEffect(() => {
-    // Get language from localStorage or default to 'en'
-    try {
-      const savedLanguage = localStorage.getItem('language') as Language
-      if (savedLanguage && ['en', 'vi', 'ja'].includes(savedLanguage)) {
-        setLanguageState(savedLanguage)
-      }
-    } catch (error) {
-      // Fallback to 'en' if localStorage is not available
-      console.warn('localStorage not available, using default language')
-    }
-  }, [])
+export function LanguageProvider({ children, initialLanguage = 'en' }: { children: React.ReactNode; initialLanguage?: Language }) {
+  const [language, setLanguageState] = useState<Language>(initialLanguage)
 
   useEffect(() => {
     document.documentElement.lang = language
@@ -130,11 +117,6 @@ export function useLanguageClient() {
 
 // Main hook - uses server fallback for SSR
 export function useLanguage() {
-  // Check if we're on the server
-  if (typeof window === 'undefined') {
-    return serverFallback
-  }
-
   const context = useContext(LanguageContext)
   if (context === undefined) {
     // Return server-side fallback

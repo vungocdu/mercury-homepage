@@ -2,11 +2,11 @@
 
 import { Play, Camera, Edit3, Zap, Users, Award, Clock, Video, Lightbulb, Target, Sparkles, Star, ArrowRight, Factory, Settings, Users2, Film } from 'lucide-react'
 import { motion } from 'framer-motion'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
-import TrackingButton from '../../components/TrackingButton'
-import TickerScroll from '../../components/TickerScroll'
-import { useLanguage } from '../../contexts/LanguageContext'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import TrackingButton from '@/components/TrackingButton'
+import TickerScroll from '@/components/TickerScroll'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function TVCPageClient() {
   const { translations } = useLanguage()

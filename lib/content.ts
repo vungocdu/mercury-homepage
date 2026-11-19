@@ -73,8 +73,8 @@ export const services: Service[] = [
       'Web・モバイル・受託ソフトウェア開発、ERPおよび業務アプリケーション。'
     ),
     intro: x(
-      'Mercury thiết kế và xây dựng ứng dụng web, mobile và phần mềm theo yêu cầu — từ hệ thống ERP tập trung đến ứng dụng trải nghiệm khách hàng — với quy trình rõ ràng và kiến trúc dễ mở rộng.',
-      'Mercury designs and builds web, mobile and custom software — from centralised ERP systems to customer-facing apps — with a clear delivery process and an architecture that scales.',
+      'Mercury phát triển phần mềm theo yêu cầu cho doanh nghiệp, từ hệ thống ERP tập trung đến ứng dụng web và mobile phục vụ khách hàng. Chúng tôi đồng hành từ thiết kế đến triển khai, với kiến trúc hỗ trợ mở rộng.',
+      'Mercury builds custom software for businesses, from centralised ERP systems to web and mobile applications for customers. We support delivery from design through deployment with an architecture built to scale.',
       'Mercuryは、基幹ERPから顧客向けアプリまで、Web・モバイル・受託ソフトウェアを明確な開発プロセスと拡張しやすい設計で構築します。'
     ),
     items: [

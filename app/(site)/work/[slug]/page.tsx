@@ -1,3 +1,4 @@
+import { localeAlternates } from '@/lib/locale-seo'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import PageShell from '@/components/site/PageShell'
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${p.name.en} — ${p.cluster.en} Case Study`,
     description: `${p.tagline.en}. ${p.overview.en}`.slice(0, 158),
     openGraph: { title: `${p.name.en} — ${p.tagline.en}`, url: abs(`/work/${p.slug}`) },
-    alternates: { canonical: `/work/${p.slug}/` },
+    alternates: { canonical: `/work/${p.slug}/`, languages: localeAlternates(`work/${p.slug}`) },
   }
 }
 

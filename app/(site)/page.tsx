@@ -1,3 +1,5 @@
+import { localeAlternates } from '@/lib/locale-seo'
+export const metadata = { alternates: { canonical: '/', languages: localeAlternates('') } }
 import Hero from '@/components/Hero'
 import HomeAbout from '@/components/site/HomeAbout'
 import StatsRings from '@/components/site/StatsRings'

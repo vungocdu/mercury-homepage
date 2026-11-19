@@ -2,10 +2,13 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { ChevronDown, Globe } from 'lucide-react'
+import { usePathname, useRouter } from 'next/navigation'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function LanguageSelector() {
-  const { language, setLanguage, translations } = useLanguage()
+  const { language, translations } = useLanguage()
+  const pathname = usePathname()
+  const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
@@ -47,7 +50,9 @@ export default function LanguageSelector() {
             <button
               key={lang.code}
               onClick={() => {
-                setLanguage(lang.code as 'en' | 'vi' | 'ja')
+                const original = pathname.replace(/^\/(vi|ja)(?=\/|$)/, '') || '/'
+                const path = /^\/(tvc|admin)(\/|$)/.test(original) ? '/' : original
+                router.push(lang.code === 'en' ? path : `/${lang.code}${path === '/' ? '/' : path}`)
                 setIsOpen(false)
               }}
               className={`w-full text-left px-4 py-2 text-sm text-slate-800 hover:bg-slate-100 transition-colors duration-200 flex items-center space-x-2 ${
